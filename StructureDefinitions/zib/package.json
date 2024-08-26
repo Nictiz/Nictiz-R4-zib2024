@@ -1,0 +1,27 @@
+{
+	"name": "nictiz.fhir.nl.r4.zib2024",
+	"version": "0.0.1",
+	"homepage": "https://zibs.nl/wiki/HCIM_Release_2024(EN)",
+	"title": "FHIR implementation of zibs 2024",
+	"description": "NL package of FHIR R4 conformance resources for zib (Zorginformatiebouwstenen, Clinical Information Models) release 2024.",
+	"dependencies": {
+		"hl7.fhir.r4.core": "4.0.x"
+	},
+	"fhirVersions": [
+		"4.0.0"
+	],
+	"keywords": [
+		"nl",
+		"Nictiz",
+		"zib", "Zorginformatiebouwsteen",
+		"Clinical Information Model", "CIM"
+	],
+	"author": "Nictiz",
+	"maintainers": [
+		{
+			"name": "Nictiz",
+			"url": "https://www.nictiz.nl"
+		}
+	],
+	"license": "CC0-1.0"
+}
