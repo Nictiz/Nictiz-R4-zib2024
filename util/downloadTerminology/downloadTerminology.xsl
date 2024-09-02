@@ -263,7 +263,7 @@
 
         <xsl:choose>
             <xsl:when test="(for $uri in $uriAttributes return contains(base-uri($uri), '/zib/')) != false()">
-                <xsl:value-of>../../vocabulary/zib/generated</xsl:value-of>
+                <xsl:value-of>../../vocabulary/zib/generated/</xsl:value-of>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of>../../vocabulary/nl-core/generated/</xsl:value-of>
