@@ -1,22 +1,26 @@
 main branch: origin/main
 ignored issues: known-issues.yml
 igs:
-  - StructureDefinitions
-  - vocabulary
+  - zib
+  - nl-core
 script dir: util/qa
 
 patterns:
-  zib profiles: StructureDefinitions/zib/zib-*.xml
-  zib extensions: StructureDefinitions/zib/ext-*.*.xml
-  nl-core profiles: StructureDefinitions/nl-core/nl-core-*.xml
-  nl-core extensions: StructureDefinitions/nl-core/ext-*.*.xml
+  zib profiles: zib/StructureDefinitions/zib-*.xml
+  zib extensions: zib/StructureDefinitions/ext-*.*.xml
+  nl-core profiles: nl-core/StructureDefinitions/nl-core-*.xml
+  nl-core extensions: nl-core/StructureDefinitions/ext-*.*.xml
   other profiles:
-  - StructureDefinitions/zib/*.xml
-  - StructureDefinitions/nl-core/*.xml
-  conceptmaps: vocabulary/**/ConceptMap-*.xml
-  terminology: vocabulary/**/terminology/*.xml
-  SearchParameters: SearchParameters/*.xml
-  examples: examples/*.xml
+  - zib/StructureDefinitions/*.xml
+  - nl-core/StructureDefinitions/*.xml
+  conceptmaps:
+  - zib/vocabulary/**/ConceptMap-*.xml
+  - nl-core/vocabulary/**/ConceptMap-*.xml
+  terminology:
+  - zib/vocabulary/**/*.xml
+  - nl-core/vocabulary/**/*.xml
+  SearchParameters: nl-core/SearchParameters/*.xml
+  examples: nl-core/examples/*.xml
 
 steps:
   validate zib profiles:

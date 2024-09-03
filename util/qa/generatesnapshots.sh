@@ -50,10 +50,10 @@ fi
 flattened=$(mktemp -d)
 cd $flattened
 
-cp $work_dir/StructureDefinitions/zib/package.json .
-cp $work_dir/StructureDefinitions/zib/fhirpkg.lock.json .
-cp $work_dir/StructureDefinitions/zib/*.xml .
-cp $work_dir/StructureDefinitions/nl-core/*.xml .
+cp $work_dir/zib/package.json .
+cp $work_dir/zib/fhirpkg.lock.json .
+cp $work_dir/zib/StructureDefinitions/*.xml .
+cp $work_dir/nl-core/StructureDefinitions/*.xml .
 
 # Make sure dependencies are in place
 echo "> initializing Firely Terminal"
