@@ -2,7 +2,7 @@
 
 This folder contains some utilities for zib2024 profiling.
 
-## qa
+## QA
 
 This folders contains the pieces to run the automated QA tools. These tools are used in the configured Github actions (configured in `.github/actions/*.yml` from the root of this repo). To use them manually:
 * Make sure Docker is running.
@@ -35,4 +35,4 @@ These scripts are standalone XSL files that operate without an XML source. They 
 
 ## updateNarratives
 
-Tooling to add or re-generate the narratives for all resources in the "examples" folder, using the [Nictiz Narrative Generator](https://github.com/Nictiz/HL7-mappings/tree/master/fhir-narrativegenerator). This tool requires ANT to be installed.
+Tooling to add or re-generate the narratives for all resources in the "nl-core/examples" folder, using the [Nictiz Narrative Generator](https://github.com/Nictiz/HL7-mappings/tree/master/fhir-narrativegenerator). This tool requires ANT to be installed. To use: run "updateNarratives.bat".
