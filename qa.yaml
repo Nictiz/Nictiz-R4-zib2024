@@ -16,7 +16,13 @@ patterns:
   conceptmaps:
   - zib/vocabulary/**/ConceptMap-*.xml
   - nl-core/vocabulary/**/ConceptMap-*.xml
-  terminology:
+  codesystems:
+  - zib/vocabulary/**/CodeSystem-*.xml
+  - nl-core/vocabulary/**/CodeSystem-*.xml
+  valuesets:
+  - zib/vocabulary/**/ValueSet-*.xml
+  - nl-core/vocabulary/**/ValueSet-*.xml
+  other terminology:
   - zib/vocabulary/**/*.xml
   - nl-core/vocabulary/**/*.xml
   SearchParameters: nl-core/SearchParameters/*.xml
@@ -47,9 +53,15 @@ steps:
     description: Validate the ConceptMaps using the profile for ConceptMaps
     patterns: conceptmaps
     profile: "http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-ConceptMaps"
+  validate CodeSystems:
+    description: Validate CodeSystem resources
+    patterns: codesystems
+  validate ValueSets:
+    description: Validate ValueSet resources
+    patterns: valuesets
   validate other terminology:
     description: Validate the other terminology resources
-    patterns: terminology
+    patterns: other terminology
   validate SearchParameters:
     description: Validate SearchParameters
     patterns: SearchParameters
