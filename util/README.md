@@ -5,7 +5,7 @@ This folder contains some utilities for zib2024 profiling.
 ## QA
 
 This folders contains the pieces to run the automated QA tools. These tools are used in the configured Github actions (configured in `.github/actions/*.yml` from the root of this repo). To use them manually:
-* Make sure Docker is running.
+* Make sure Docker or Podman is running (when using Podman, enable Docker compatibility mode and install the Podman Compose extension).
 * Start the batch scripts "qa.bat"
 * Point your webbrowser at http://localhost:9000. This will give you a menu of the checks that you can perform.
 
