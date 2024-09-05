@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-HealthProfessional-Practitioner" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-Practitioner" />
   <name value="ZibHealthProfessionalPractitioner" />
   <title value="zib HealthProfessional Practitioner" />
@@ -19,7 +17,7 @@
     </telecom>
   </contact>
   <description value="A health professional is a person who is authorized to perform actions in the field of individual healthcare." />
-  <purpose value="This Practitioner resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) HealthProfessional v3.5 (2020)](https://zibs.nl/wiki/HealthProfessional-v3.5(2020EN))." />
+  <purpose value="This Practitioner resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) HealthProfessional v4.0 (2020)](https://zibs.nl/wiki/HealthProfessional-v4.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -204,6 +202,10 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
       </type>
+    </element>
+    <element id="Practitioner.gender.extension:genderCodelist.url">
+      <path value="Practitioner.gender.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
     </element>
     <element id="Practitioner.gender.extension:genderCodelist.value[x]">
       <path value="Practitioner.gender.extension.value[x]" />
