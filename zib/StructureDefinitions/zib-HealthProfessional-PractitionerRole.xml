@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-HealthProfessional-PractitionerRole" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole" />
   <name value="ZibHealthProfessionalPractitionerRole" />
   <title value="zib HealthProfessional PractitionerRole" />
@@ -81,7 +79,7 @@
       <path value="PractitionerRole.specialty" />
       <sliceName value="specialty" />
       <short value="Specialty" />
-      <definition value="Health professional’s medical specialty. This refers to the recognized medical specialties as stated in the BIG Act. For example general practitioner or cardiologist." />
+      <definition value="Health professional's medical specialty. This refers to the recognized medical specialties as stated in the BIG Act. For example general practitioner or cardiologist." />
       <comment value="The zib concept Specialty is mapped to a slice on the `.specialty` element instead of the element itself so that other terminology can be used next to the terminology required by the zib." />
       <alias value="Specialisme" />
       <max value="1" />
@@ -105,7 +103,7 @@
         <rules value="open" />
       </slicing>
       <short value="ContactInformation" />
-      <definition value="Health professional’s telephone number(s) or e-mail address(es) that are specific to the role/location/service." />
+      <definition value="Health professional's telephone number(s) or e-mail address(es)." />
       <comment value="The cardinality mismatch between the zib (`0..1`) and FHIR (`0..*`) is explained by the containers TelephoneNumbers (`0..*`) and EmailAddresses (`0..*`) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers." />
       <alias value="Contactgegevens" />
       <mapping>
