@@ -254,10 +254,6 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
       </type>
     </element>
-    <element id="Address.country.extension:countryCode.url">
-      <path value="Address.country.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
-    </element>
     <element id="Address.country.extension:countryCode.value[x]">
       <path value="Address.country.extension.value[x]" />
       <short value="Country" />
