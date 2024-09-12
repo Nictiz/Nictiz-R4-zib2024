@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-AnatomicalLocation-BodyStructure" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
+  <name value="ZibAnatomicalLocationBodyStructure" />
+  <title value="zib AnatomicalLocation BodyStructure" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An anatomical location specifies the location (e.g. foot) and laterality (e.g. left) of a body part." />
+  <purpose value="This BodyStructure resource represents the complete Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) AnatomicalLocation v1.0.3 (2024)](https://zibs.nl/wiki/AnatomicalLocation-v1.0.3(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
+    <uri value="https://zibs.nl/wiki/AnatomicalLocation-v1.0.3(2024EN)" />
+    <name value="zib AnatomicalLocation-v1.0.3(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="BodyStructure" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="BodyStructure">
+      <path value="BodyStructure" />
+      <definition value="The zib AnatomicalLocation is mapped to both a profile on CodeableConcept (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation&gt;) and this BodyStructure profile. While the CodeableConcept profile covers anatomical location, the BodyStructure resource is used to capture both the location and its laterality.&#xA;&#xA;When laterality is required, this BodyStructure profile should be used. In cases where laterality is either unnecessary or embedded within the location code, the CodeableConcept can be used within the resource.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both the BodyStructure resource and the CodeableConcept in host resources, as either mechanism may be employed. Providing systems can select the appropriate mechanism based on their data requirements." />
+      <mapping>
+        <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
+        <map value="NL-CM:20.7.4" />
+        <comment value="AnatomicalLocation" />
+      </mapping>
+    </element>
+    <element id="BodyStructure.location">
+      <path value="BodyStructure.location" />
+      <short value="Location" />
+      <definition value="Localisation on/in the body." />
+      <alias value="Locatie" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
+        <map value="NL-CM:20.7.4" />
+        <comment value="Location" />
+      </mapping>
+    </element>
+    <element id="BodyStructure.locationQualifier">
+      <path value="BodyStructure.locationQualifier" />
+      <short value="Laterality" />
+      <definition value="Laterality adds information about the body side to the anatomic location, e.g. left." />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
+        <map value="NL-CM:20.7.3" />
+        <comment value="Laterality" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
