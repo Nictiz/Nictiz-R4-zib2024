@@ -18,7 +18,7 @@
          <start value="2024-04-15T00:00:00+00:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://acceptance.art-decor.org/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.5.3--20240415000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.5.3--20240415000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
