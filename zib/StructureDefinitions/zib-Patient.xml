@@ -18,8 +18,8 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.&#xD;&#xA;Nationality is used as an indication of the country of citizenship. &#xD;&#xA;Marital status is a person’s formal position as defined by the Dutch civil code. There is a distinction between marriage and civil union.&#xD;&#xA;Linguistic proficiency is the ability to express oneself in a certain language and understand statements made in that language. This includes both oral and written communication." />
-  <purpose value="This Patient resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Patient v4.3 (2024)](https://zibs.nl/wiki/Patient-v4.3(2024EN)). It also includes [zib Nationality v3.0 (2024)](https://zibs.nl/wiki/Nationality-v3.0(2024EN)), [zib MaritalStatus v3.2 (2024)](https://zibs.nl/wiki/MaritalStatus-v3.2(2024EN)) and [zib LanguageProficiency v4.0 (2024)](https://zibs.nl/wiki/LanguageProficiency-v4.0(2024EN))." />
+  <description value="A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient." />
+  <purpose value="This Patient resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Patient v4.3 (2024)](https://zibs.nl/wiki/Patient-v4.3(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -28,34 +28,9 @@
     <name value="zib Patient-v4.3(2024EN)" />
   </mapping>
   <mapping>
-    <identity value="zib-nationality-v3.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/Nationality-v3.0(2024EN)" />
-    <name value="zib Nationality-v3.0(2024EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-maritalstatus-v3.2-2024EN" />
-    <uri value="https://zibs.nl/wiki/MaritalStatus-v3.2(2024EN)" />
-    <name value="zib MaritalStatus-v3.2(2024EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-languageproficiency-v4.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/LanguageProficiency-v4.0(2024EN)" />
-    <name value="zib LanguageProficiency-v4.0(2024EN)" />
-  </mapping>
-  <mapping>
     <identity value="zib-contactinformation-v1.3.1-2024EN" />
     <uri value="https://zibs.nl/wiki/ContactInformation-v1.3.1(2024EN)" />
     <name value="zib ContactInformation-v1.3.1(2024EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-contactperson-v4.1-2024EN" />
-    <uri value="https://zibs.nl/wiki/ContactPerson-v4.1(2024EN)" />
-    <name value="zib ContactPerson-v4.1(2024EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-payer-v4.1.-2024EN" />
-    <uri value="https://zibs.nl/wiki/Payer-v4.1(2024EN)" />
-    <name value="zib Payer-v4.1(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -73,34 +48,6 @@
         <comment value="Patient" />
       </mapping>
     </element>
-    <element id="Patient.extension:nationality">
-      <path value="Patient.extension" />
-      <sliceName value="nationality" />
-      <comment value="Due to the nature of the nationality core extension (which allows for a period to be placed next to the nationality and thus allows for different nationalities over time), the cardinality of the extension is left at `0..*` instead of the zib cardinality of `0..1`." />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/patient-nationality" />
-      </type>
-    </element>
-    <element id="Patient.extension:nationality.extension:code">
-      <path value="Patient.extension.extension" />
-      <sliceName value="code" />
-    </element>
-    <element id="Patient.extension:nationality.extension:code.value[x]">
-      <path value="Patient.extension.extension.value[x]" />
-      <short value="Nationality" />
-      <definition value="Indicates the country of citizenship." />
-      <alias value="Nationaliteit" />
-      <binding>
-        <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20200901000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-nationality-v3.0-2024EN" />
-        <map value="NL-CM:7.6.3" />
-        <comment value="Nationality" />
-      </mapping>
-    </element>
     <element id="Patient.extension:genderIdentity">
       <path value="Patient.extension" />
       <sliceName value="genderIdentity" />
@@ -112,6 +59,9 @@
     </element>
     <element id="Patient.extension:genderIdentity.value[x]">
       <path value="Patient.extension.value[x]" />
+      <short value="GenderIdentity" />
+      <definition value="The gender with which the person identifies." />
+      <alias value="GenderIdentiteit" />
       <mapping>
         <identity value="zib-patient-v4.3-2024EN" />
         <map value="NL-CM:0.1.34" />
@@ -152,19 +102,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="NameInformation / PayerName" />
+      <short value="NameInformation" />
       <definition value="Patient's full name." />
       <alias value="Naamgegevens" />
-      <alias value="BetalerNaam" />
       <mapping>
-        <identity value="zib-patient-v4.3-2040EN" />
+        <identity value="zib-patient-v4.3-2024EN" />
         <map value="NL-CM:0.1.6" />
         <comment value="NameInformation" />
-      </mapping>
-      <mapping>
-        <identity value="zib-payer-v4.1-2024EN" />
-        <map value="NL-CM:1.1.5" />
-        <comment value="PayerName" />
       </mapping>
     </element>
     <element id="Patient.name:nameInformation">
@@ -205,11 +149,6 @@
       <mapping>
         <identity value="zib-contactinformation-v1.3.1-2024EN" />
         <map value="NL-CM:20.6.1" />
-        <comment value="ContactInformation" />
-      </mapping>
-      <mapping>
-        <identity value="zib-payer-v4.1-2024EN" />
-        <map value="NL-CM:1.1.12" />
         <comment value="ContactInformation" />
       </mapping>
     </element>
@@ -270,7 +209,7 @@
       <binding>
         <strength value="required" />
         <description value="GeslachtCodelijst" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-patient-v4.3-2024EN" />
@@ -338,7 +277,9 @@
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
+      <short value="AddressInformation" />
       <definition value="Patient's address information." />
+      <alias value="Adresgegevens" />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />
@@ -347,27 +288,6 @@
         <identity value="zib-patient-v4.3-2024EN" />
         <map value="NL-CM:0.1.4" />
         <comment value="AddressInformation" />
-      </mapping>
-      <mapping>
-        <identity value="zib-payer-v4.1-2024EN" />
-        <map value="NL-CM:1.1.17" />
-        <comment value="AddressInformation" />
-      </mapping>
-    </element>
-    <element id="Patient.maritalStatus">
-      <path value="Patient.maritalStatus" />
-      <short value="MaritalStatus" />
-      <definition value="A person’s marital status according to the terms and definition in the Dutch civil code." />
-      <alias value="BurgerlijkeStaat" />
-      <binding>
-        <strength value="required" />
-        <description value="BurgerlijkeStaatCodelijst" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20200901000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-maritalstatus-v3.2-2024EN" />
-        <map value="NL-CM:7.9.2" />
-        <comment value="MaritalStatus" />
       </mapping>
     </element>
     <element id="Patient.multipleBirth[x]">
@@ -395,265 +315,24 @@
         <comment value="MultipleBirthIndicator" />
       </mapping>
     </element>
-    <element id="Patient.contact">
-      <path value="Patient.contact" />
-      <short value="Contact" />
-      <comment value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource is used to capture information about any person that is related to the patient, using the profile &lt;http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson&gt;.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable. The zib-ContactPerson can be referenced using the extension in `contact:contactPerson`." />
-      <alias value="Contactpersoon" />
-      <mapping>
-        <identity value="zib-contactperson-v4.1-2024EN" />
-        <map value="NL-CM:3.1.1" />
-        <comment value="Contact" />
-      </mapping>
-    </element>
-    <element id="Patient.contact.extension:contactPerson">
-      <path value="Patient.contact.extension" />
-      <sliceName value="contactPerson" />
-      <max value="1" />
+    <element id="Patient.multipleBirth[x]:multipleBirthInteger">
+      <path value="Patient.multipleBirth[x]" />
+      <sliceName value="multipleBirthInteger" />
+      <short value="MultipleBirthSequence" />
+      <definition value="The birth number in the sequence of a multiple birth. The first birth is given value 1. The middle birth in a triplet birth would be given value 2 and the third birth would have value 3. If multiple birth order is filled then the value of the MultipleIndicator must be &quot;True&quot;." />
+      <alias value="Meerlingvolgorde" />
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/patient-relatedPerson" />
-      </type>
-    </element>
-    <element id="Patient.contact.extension:contactPerson.value[x]">
-      <path value="Patient.contact.extension.value[x]" />
-      <short value="Contact" />
-      <definition value="Reference to a [zib-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson) instance containing the full details for the current contact." />
-      <alias value="Contactpersoon" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson" />
+        <code value="integer" />
       </type>
       <mapping>
-        <identity value="zib-contactperson-v4.1-2024EN" />
-        <map value="NL-CM:3.1.1" />
-        <comment value="Contact" />
-      </mapping>
-    </element>
-    <element id="Patient.contact.relationship">
-      <path value="Patient.contact.relationship" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Patient.contact.relationship:role">
-      <path value="Patient.contact.relationship" />
-      <sliceName value="role" />
-      <short value="Role" />
-      <definition value="Defines the role of the contact in relation to the patient." />
-      <alias value="Rol" />
-      <binding>
-        <strength value="required" />
-        <description value="RolCodelijst" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20200901000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-contactperson-v4.1-2024EN" />
-        <map value="NL-CM:3.1.2" />
-        <comment value="Role" />
-      </mapping>
-    </element>
-    <element id="Patient.contact.relationship:relationship">
-      <path value="Patient.contact.relationship" />
-      <sliceName value="relationship" />
-      <short value="Relationship" />
-      <definition value="Defines the contact’s familial relationship to the patient." />
-      <alias value="Relatie" />
-      <binding>
-        <strength value="required" />
-        <description value="RelatieCodelijst" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20200901000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-contactperson-v4.1-2024EN" />
-        <map value="NL-CM:3.1.3" />
-        <comment value="Relationship" />
-      </mapping>
-    </element>
-    <element id="Patient.contact.name">
-      <path value="Patient.contact.name" />
-      <definition value="Full name of the contact." />
-      <comment value="This element can and should not completely capture the NameInformation concept from zib ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full name information should instead be captured using an instance of [zib-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
-      <type>
-        <code value="HumanName" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NameInformation" />
-      </type>
-      <mapping>
-        <identity value="zib-contactperson-v4.1-2024EN" />
-        <map value="NL-CM:3.1.4" />
-        <comment value="NameInformation" />
-      </mapping>
-    </element>
-    <element id="Patient.contact.telecom">
-      <path value="Patient.contact.telecom" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <short value="ContactInformation" />
-      <definition value="The contact’s telephone number and/or e-mail address." />
-      <comment value="The cardinality mismatch between the zib (`0..1`) and FHIR (`0..*`) is explained by the containers TelephoneNumbers (`0..*`) and EmailAddresses (`0..*`) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers." />
-      <alias value="Contactgegevens" />
-      <mapping>
-        <identity value="zib-contactperson-v4.1-2024EN" />
-        <map value="NL-CM:3.1.6" />
-        <comment value="ContactInformation" />
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.35" />
+        <comment value="MultipleBirthSequence" />
       </mapping>
       <mapping>
-        <identity value="zib-contactinformation-v1.3.1-2024EN" />
-        <map value="NL-CM:20.6.1" />
-        <comment value="ContactInformation" />
-      </mapping>
-    </element>
-    <element id="Patient.contact.telecom:telephoneNumbers">
-      <path value="Patient.contact.telecom" />
-      <sliceName value="telephoneNumbers" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelephoneNumbers" />
-      </type>
-    </element>
-    <element id="Patient.contact.telecom:emailAddresses">
-      <path value="Patient.contact.telecom" />
-      <sliceName value="emailAddresses" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-EmailAddresses" />
-      </type>
-    </element>
-    <element id="Patient.contact.address">
-      <path value="Patient.contact.address" />
-      <definition value="Contact’s address information." />
-      <comment value="This element can and should not completely capture the AddressInformation concept from zib ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full address information should instead be captured using an instance of [zib-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
-      <type>
-        <code value="Address" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />
-      </type>
-      <mapping>
-        <identity value="zib-contactperson-v4.1-2024EN" />
-        <map value="NL-CM:3.1.5" />
-        <comment value="AddressInformation" />
-      </mapping>
-    </element>
-    <element id="Patient.communication">
-      <path value="Patient.communication" />
-      <short value="LanguageProficiency" />
-      <alias value="Taalvaardigheid" />
-      <mapping>
-        <identity value="zib-languageproficiency-v4.0-2024EN" />
-        <map value="NL-CM:7.12.1" />
-        <comment value="LanguageProficiency" />
-      </mapping>
-    </element>
-    <element id="Patient.communication.extension:languageControl">
-      <path value="Patient.communication.extension" />
-      <sliceName value="languageControl" />
-      <short value="LanguageControlListening / LanguageControlSpeaking / LanguageControlReading" />
-      <definition value="The ability to understand spoken text in the language in question.&#xD;&#xA;The ability to express oneself in spoken language.&#xD;&#xA;The ability to understand written text in he language in question." />
-      <comment value="The zib concepts LanguageControlListening, LanguageControlReading, LanguageControlSpeaking are captured using a core extension from the R4 FHIR specification. Each of these three concepts is encoded as a copy of the extension, typed using the code in the type slice according to the following mapping:&#xD;&#xA;* LanguageControlListening maps to code 'RSP' (Received spoken)&#xD;&#xA;* LanguageControlReading maps to code 'RWR' (Received written)&#xD;&#xA;* LanguageControlSpeaking maps to code 'ESP' (Expressed spoken)" />
-      <alias value="TaalvaardigheidBegrijpen" />
-      <alias value="TaalvaardigheidSpreken" />
-      <alias value="TaalvaardigheidLezen" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/patient-proficiency" />
-      </type>
-      <mapping>
-        <identity value="zib-languageproficiency-v4.0-2024EN" />
-        <map value="NL-CM:7.12.6" />
-        <comment value="LanguageControlListening" />
-      </mapping>
-      <mapping>
-        <identity value="zib-languageproficiency-v4.0-2024EN" />
-        <map value="NL-CM:7.12.7" />
-        <comment value="LanguageControlSpeaking" />
-      </mapping>
-      <mapping>
-        <identity value="zib-languageproficiency-v4.0-2024EN" />
-        <map value="NL-CM:7.12.8" />
-        <comment value="LanguageControlReading" />
-      </mapping>
-    </element>
-    <element id="Patient.communication.extension:languageControl.extension">
-      <path value="Patient.communication.extension.extension" />
-      <min value="2" />
-    </element>
-    <element id="Patient.communication.extension:languageControl.extension:level">
-      <path value="Patient.communication.extension.extension" />
-      <sliceName value="level" />
-      <min value="1" />
-    </element>
-    <element id="Patient.communication.extension:languageControl.extension:level.value[x]">
-      <path value="Patient.communication.extension.extension.value[x]" />
-      <comment value="The zib ValueSets TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidSprekenCodelijst and TaalvaardigheidLezenCodelijst are equal to the default FHIR ValueSet." />
-      <binding>
-        <strength value="required" />
-      </binding>
-    </element>
-    <element id="Patient.communication.extension:languageControl.extension:type">
-      <path value="Patient.communication.extension.extension" />
-      <sliceName value="type" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Patient.communication.extension:communicationDetails">
-      <path value="Patient.communication.extension" />
-      <sliceName value="communicationDetails" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.CommunicationDetails" />
-      </type>
-    </element>
-    <element id="Patient.communication.extension:communicationDetails.url">
-      <path value="Patient.communication.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.CommunicationDetails" />
-    </element>
-    <element id="Patient.communication.extension:comment">
-      <path value="Patient.communication.extension" />
-      <sliceName value="comment" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-Comment" />
-      </type>
-    </element>
-    <element id="Patient.communication.extension:comment.url">
-      <path value="Patient.communication.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-Comment" />
-    </element>
-    <element id="Patient.communication.extension:comment.value[x]">
-      <path value="Patient.communication.extension.value[x]" />
-      <short value="Comment" />
-      <definition value="A comment on the linguistic proficiency. When using sign language, this field can be used to clarify, for example, which sign language is used. This can be informative, as there is not always a one-to-one relationship between the spoken language and sign language." />
-      <alias value="Toelichting" />
-      <mapping>
-        <identity value="zib-languageproficiency-v4.0-2024EN" />
-        <map value="NL-CM:7.12.5" />
-        <comment value="Comment" />
-      </mapping>
-    </element>
-    <element id="Patient.communication.language">
-      <path value="Patient.communication.language" />
-      <short value="CommunicationLanguage" />
-      <definition value="The language of communication." />
-      <alias value="CommunicatieTaal" />
-      <binding>
-        <strength value="required" />
-        <description value="CommunicatieTaalCodelijst" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.12.2--20200901000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-languageproficiency-v4.0-2024EN" />
-        <map value="NL-CM:7.12.3" />
-        <comment value="CommunicationLanguage" />
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.31" />
+        <comment value="MultipleBirthIndicator" />
       </mapping>
     </element>
   </differential>
