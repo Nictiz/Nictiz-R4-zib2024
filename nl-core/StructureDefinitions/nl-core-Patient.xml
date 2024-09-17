@@ -25,11 +25,6 @@
     <uri value="https://zibs.nl/wiki/Patient-v4.3(2024EN)" />
     <name value="zib Patient-v4.3(2024EN)" />
   </mapping>
-  <mapping>
-    <identity value="zib-contactinformation-v1.3.1-2024EN" />
-    <uri value="https://zibs.nl/wiki/ContactInformation-v1.3.1(2024EN)" />
-    <name value="zib ContactInformation-v1.3.1(2024EN)" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />

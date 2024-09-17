@@ -4,7 +4,6 @@
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Patient" />
-  <version value="0.0.1" />
   <name value="ZibPatient" />
   <title value="zib Patient" />
   <status value="draft" />
@@ -26,11 +25,6 @@
     <identity value="zib-patient-v4.3-2024EN" />
     <uri value="https://zibs.nl/wiki/Patient-v4.3(2024EN)" />
     <name value="zib Patient-v4.3(2024EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-contactinformation-v1.3.1-2024EN" />
-    <uri value="https://zibs.nl/wiki/ContactInformation-v1.3.1(2024EN)" />
-    <name value="zib ContactInformation-v1.3.1(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -62,6 +56,10 @@
       <short value="GenderIdentity" />
       <definition value="The gender with which the person identifies." />
       <alias value="GenderIdentiteit" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.2--20240415000000" />
+      </binding>
       <mapping>
         <identity value="zib-patient-v4.3-2024EN" />
         <map value="NL-CM:0.1.34" />
@@ -144,11 +142,6 @@
       <mapping>
         <identity value="zib-patient-v4.3-2024EN" />
         <map value="NL-CM:0.1.5" />
-        <comment value="ContactInformation" />
-      </mapping>
-      <mapping>
-        <identity value="zib-contactinformation-v1.3.1-2024EN" />
-        <map value="NL-CM:20.6.1" />
         <comment value="ContactInformation" />
       </mapping>
     </element>
@@ -277,9 +270,7 @@
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
-      <short value="AddressInformation" />
       <definition value="Patient's address information." />
-      <alias value="Adresgegevens" />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />
