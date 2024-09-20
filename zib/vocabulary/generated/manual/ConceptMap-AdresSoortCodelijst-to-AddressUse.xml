@@ -1,5 +1,5 @@
 <ConceptMap xmlns="http://hl7.org/fhir">
-    <id value="AdresSoortCodelijst-to-AddressType"/>
+    <id value="AdresSoortCodelijst-to-AddressUse"/>
     <text>
         <status value="empty"/>
         <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
@@ -7,10 +7,9 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
         <valueBoolean value="false"/>
     </extension>
-    <url value="http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType"/>
-    <version value="0.0.1"/>
-    <name value="AdresSoortCodelijst_to_AddressType"/>
-    <title value="AdresSoortCodelijst to AddressType"/>
+    <url value="http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse"/>
+    <name value="AdresSoortCodelijst_to_AddressUse"/>
+    <title value="AdresSoortCodelijst to AddressUse"/>
     <status value="draft"/>
     <publisher value="Nictiz"/>
     <contact>
@@ -21,56 +20,57 @@
         <use value="work"/>
       </telecom>
     </contact>
-    <description value="Maps AddressType codes as found in the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) AddressInformation v1.2 (2024)](https://zibs.nl/wiki/AddressInformation-v1.2(2024EN)) to `Address.type` codes as found in FHIR R4."/>
+    <description value="Maps AddressType codes as found in the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) AddressInformation v1.2 (2024)](https://zibs.nl/wiki/AddressInformation-v1.2(2024EN)) to `Address.use` codes as found in FHIR R4."/>
     <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
     <sourceCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.5.3--20240415000000"/>
-    <targetCanonical value="http://hl7.org/fhir/ValueSet/address-type"/>
+    <targetCanonical value="http://hl7.org/fhir/ValueSet/address-use"/>
     <group>
         <!-- 2.16.840.1.113883.5.1119 -->
         <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
-        <target value="http://hl7.org/fhir/address-type"/>
+        <target value="http://hl7.org/fhir/address-use"/>
         <element>
             <code value="PST"/>
             <target>
-                <code value="postal"/>
-                <equivalence value="equal"/>
+                <equivalence value="unmatched"/>
+                <comment value="PST: Postal Address/Postadres. Postal addresses are marked in Address.type = 'postal'."/>
             </target>
         </element>
         <element>
             <code value="HP"/>
             <target>
-                <code value="both"/>
-                <equivalence value="equivalent"/>
-                <comment value="HP: Primary Home/Officieel adres. An address that is both physical and postal. Use in conjunction with Address.use = 'home'. In exceptional cases, the HP address is not the primary postal address, but nevertheless 'both' is the most suitable type to differentiate HP from PHYS."/>
+                <code value="home"/>
+                <equivalence value="subsumes"/>
+                <comment value="HP: Primary Home/Officieel adres. A communication address at a home. Use in conjunction with Address.type = 'both'."/>
             </target>
         </element>
         <element>
             <code value="PHYS"/>
             <target>
-                <code value="physical"/>
-                <equivalence value="equivalent"/>
-                <comment value="PHYS: Visit Address/Woon-/verblijfadres. A physical address that can be visited. Use in conjunction with Address.use = 'home'."/>
+                <code value="home"/>
+                <equivalence value="subsumes"/>
+                <comment value="PHYS: Visit Address/Woon-/verblijfadres. A communication address at a home. Use in conjunction with Address.type = 'physical'."/>
             </target>
         </element>
         <element>
             <code value="TMP"/>
             <target>
-                <equivalence value="unmatched"/>
-                <comment value="Temporary Address/Tijdelijk adres. Use Address.use = 'temp'."/>
+                <code value="temp"/>
+                <equivalence value="equal"/>
             </target>
         </element>
         <element>
             <code value="WP"/>
             <target>
-                <equivalence value="unmatched"/>
-                <comment value="Work Place/Werkadres. Use Address.use = 'work'. A work place could be postal/physical or both. Which it is, is not known from the zib AddressInformation."/>
+                <code value="work"/>
+                <equivalence value="equal"/>
             </target>
         </element>
         <element>
             <code value="HV"/>
             <target>
-                <equivalence value="unmatched"/>
-                <comment value="HV: Vacation Home/Vakantie adres. A physical address that can be visited."/>
+                <code value="temp"/>
+                <equivalence value="wider"/>
+                <comment value="HV: Vacation Home/Vakantie adres. Any temporary address."/>
             </target>
         </element>
     </group>
