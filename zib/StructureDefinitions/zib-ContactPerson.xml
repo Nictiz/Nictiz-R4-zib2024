@@ -33,7 +33,7 @@
   <mapping>
     <identity value="zib-payer-v4.1-2024EN" />
     <uri value="https://zibs.nl/wiki/Payer-v4.1(2024EN)" />
-    <name value="zib Payer-v4.1(2020EN)" />
+    <name value="zib Payer-v4.1(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -70,7 +70,7 @@
       <alias value="Rol" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-contactperson-v4.1-2024EN" />
@@ -86,7 +86,7 @@
       <alias value="Relatie" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-contactperson-v4.1-2024EN" />
