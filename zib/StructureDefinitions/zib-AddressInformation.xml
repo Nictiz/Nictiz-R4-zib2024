@@ -177,7 +177,7 @@
       <comment value="The mapping of zib AddressInformation on the FHIR Address datatype is the result of compatibility with HL7v3, which is the format that a lot of healthcare data in the Netherlands is stored in. As a result of this, the coded zib HouseNumberIndication concept (CD datatype) is mapped to a FHIR string datatype with a constraint added (the value can only be 'by' or 'to' or 'OTH')." />
       <alias value="AanduidingBijNummer" />
       <constraint>
-        <key value="houseNumberIndication" />
+        <key value="zib-AddressInformation-1" />
         <severity value="error" />
         <human value="Must have value 'by' or 'to' or 'OTH'" />
         <expression value="$this in ('by' | 'to' | 'OTH')" />
