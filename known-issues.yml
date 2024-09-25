@@ -4,9 +4,36 @@
 
 issues should occur: true
 
+zib-HealthcareProvider:
+  zib deviations:
+    Location.address:
+      - datatype: Address instead of a reference
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+      - cardinality: 0..1 instead of 0..*
+        reason: The cardinality mismatch between the zib (0..*) and FHIR (0..1) is explained by the restriction of FHIR to limit the Location.address to a physical address while the zib allows for other types of addresses (e.g. a postal address). Other types of addresses than a physical address are given in Organization.address which is referenced by Location.managingOrganization. More documentation can be found at https://github.com/Nictiz/Nictiz-R4-zib2020/issues/38.
+    Location.telecom:
+      - cardinality: 0..* instead of 0..1
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib part ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+    Location.telecom*:
+      - datatype: ContactPoint instead of a reference
+        reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource. Because the FHIR profile for ContactInformation consists of two parts the root concept of ContactInformation is mapped on .telecom.
+
+unmapped zib concepts:
+  - NL-CM:17.2.10: HealthcareProvider.LocationNumber
+    reason: This zib concept is problematic to map cleanly to FHIR and it has been deemed too uncommon in practice to warrant an extension.
+
+
 ---
 # The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
 # shortcomings in tooling, the used terminology server, etc.
 # These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
 
 issues should occur: false
+
+zib-HealthcareProvider:
+  ignored issues:
+    Location.address:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The required short description is given by the datatype profile, so it is absent from the differential.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The required alias is given by the datatype profile, so it is absent from the differential.
