@@ -9,7 +9,6 @@
     <valueBoolean value="false"/>
   </extension>
   <url value="http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender"/>
-  <version value="0.0.1"/>
   <name value="GeslachtCodelijst_to_AdministrativeGender"/>
   <title value="GeslachtCodelijst to AdministrativeGender"/>
   <status value="draft"/>
