@@ -190,10 +190,6 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
       </type>
     </element>
-    <element id="Patient.gender.extension:genderCodelist.url">
-      <path value="Patient.gender.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
-    </element>
     <element id="Patient.gender.extension:genderCodelist.value[x]">
       <path value="Patient.gender.extension.value[x]" />
       <short value="Gender" />
