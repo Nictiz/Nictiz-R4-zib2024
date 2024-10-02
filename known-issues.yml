@@ -30,10 +30,3 @@ unmapped zib concepts:
 
 issues should occur: false
 
-zib-HealthcareProvider:
-  ignored issues:
-    Location.address:
-      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
-        reason: The required short description is given by the datatype profile, so it is absent from the differential.
-      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
-        reason: The required alias is given by the datatype profile, so it is absent from the differential.
