@@ -61,12 +61,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <comment value="Please note that the zib concept 'Role' is currently mapped to a slice on RelatedPerson.relationship. The current FHIR build includes a new element specifically designed for 'Role', which is expected to be a better fit. Once the next formal release (R6) incorporates this element, a decision can be made to adopt it via a pre-adopt extension and move the mapping accordingly." />
     </element>
     <element id="RelatedPerson.relationship:role">
       <path value="RelatedPerson.relationship" />
       <sliceName value="role" />
       <short value="Role" />
-      <definition value="Defines the role of the contact in relation to the patient." />
+      <definition value="Specifies the role of the contact in relation to the patient." />
       <alias value="Rol" />
       <binding>
         <strength value="required" />
@@ -82,7 +83,7 @@
       <path value="RelatedPerson.relationship" />
       <sliceName value="relationship" />
       <short value="Relationship" />
-      <definition value="Defines the contact’s familial relationship to the patient." />
+      <definition value="Specifies the relevant family or social relationship to the patient." />
       <alias value="Relatie" />
       <binding>
         <strength value="required" />
@@ -103,10 +104,10 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="NameInformation / PayerName" />
-      <definition value="Full name of the contact." />
-      <alias value="Naamgegevens" />
+      <short value="PayerName / NameInformation" />
+      <definition value="* Full name of the paying person or organization (legal entity).&#xD;&#xA;* Full name of the contact." />
       <alias value="BetalerNaam" />
+      <alias value="Naamgegevens" />
       <mapping>
         <identity value="zib-contactperson-v4.1-2024EN" />
         <map value="NL-CM:3.1.4" />
@@ -145,7 +146,7 @@
         <rules value="open" />
       </slicing>
       <short value="ContactInformation" />
-      <definition value="The contact’s telephone number and/or e-mail address." />
+      <definition value="* The contact's telephone number and/or e-mail address.&#xD;&#xA;* The payer's telephone number and/or e-mail address." />
       <comment value="The cardinality mismatch between the zib (`0..1`) and FHIR (`0..*`) is explained by the containers TelephoneNumbers (`0..*`) and EmailAddresses (`0..*`) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers." />
       <alias value="Contactgegevens" />
       <mapping>
@@ -182,7 +183,9 @@
     </element>
     <element id="RelatedPerson.address">
       <path value="RelatedPerson.address" />
-      <definition value="Contact’s address information." />
+      <short value="AddressInformation" />
+      <definition value="* The payer's address information.&#xD;&#xA;* Contact's address information." />
+      <alias value="Adresgegevens" />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />
