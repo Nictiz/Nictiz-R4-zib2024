@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ext-LanguageProfiency.Comment" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProfiency.Comment" />
+  <name value="ExtLanguageProfiencyComment" />
+  <title value="ext LanguageProfiency.Comment" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-languageproficiency-v4.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/LanguageProficiency-v4.0(2024EN)" />
+    <name value="zib LanguageProficiency-v4.0(2024EN)" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Patient.communication" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProfiency.Comment" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="Comment" />
+      <alias value="Toelichting" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
