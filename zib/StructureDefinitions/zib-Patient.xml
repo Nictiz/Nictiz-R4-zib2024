@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-Patient" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Patient" />
+  <name value="ZibPatient" />
+  <title value="zib Patient" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient." />
+  <purpose value="This Patient resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Patient v4.3 (2024)](https://zibs.nl/wiki/Patient-v4.3(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-patient-v4.3-2024EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v4.3(2024EN)" />
+    <name value="zib Patient-v4.3(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <short value="Patient" />
+      <alias value="Patient" />
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.1" />
+        <comment value="Patient" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:genderIdentity">
+      <path value="Patient.extension" />
+      <sliceName value="genderIdentity" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Patient.extension:genderIdentity.value[x]">
+      <path value="Patient.extension.value[x]" />
+      <short value="GenderIdentity" />
+      <definition value="The gender with which the person identifies." />
+      <alias value="GenderIdentiteit" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.2--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.34" />
+        <comment value="GenderIdentity" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="PatientIdentificationNumber" />
+      <definition value="The patient’s identification number. In transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers for example." />
+      <alias value="Identificatienummer" />
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.7" />
+        <comment value="PatientIdentificationNumber" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier:bsn">
+      <path value="Patient.identifier" />
+      <sliceName value="bsn" />
+      <patternIdentifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
+      </patternIdentifier>
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="use" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="NameInformation" />
+      <definition value="Patient's full name." />
+      <alias value="Naamgegevens" />
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.6" />
+        <comment value="NameInformation" />
+      </mapping>
+    </element>
+    <element id="Patient.name:nameInformation">
+      <path value="Patient.name" />
+      <sliceName value="nameInformation" />
+      <max value="2" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NameInformation" />
+      </type>
+    </element>
+    <element id="Patient.name:nameInformation-GivenName">
+      <path value="Patient.name" />
+      <sliceName value="nameInformation-GivenName" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NameInformation.GivenName" />
+      </type>
+    </element>
+    <element id="Patient.telecom">
+      <path value="Patient.telecom" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="ContactInformation" />
+      <definition value="Patient’s telephone number(s) or e-mail address(es)." />
+      <comment value="The cardinality mismatch between the zib (`0..1`) and FHIR (`0..*`) is explained by the containers TelephoneNumbers (`0..*`) and EmailAddresses (`0..*`) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers." />
+      <alias value="Contactgegevens" />
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.5" />
+        <comment value="ContactInformation" />
+      </mapping>
+    </element>
+    <element id="Patient.telecom:telephoneNumbers">
+      <path value="Patient.telecom" />
+      <sliceName value="telephoneNumbers" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelephoneNumbers" />
+      </type>
+    </element>
+    <element id="Patient.telecom:emailAddresses">
+      <path value="Patient.telecom" />
+      <sliceName value="emailAddresses" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-EmailAddresses" />
+      </type>
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <short value="Gender" />
+      <definition value="Patient’s administrative gender." />
+      <alias value="Geslacht" />
+      <binding>
+        <strength value="required" />
+        <description value="Use ConceptMap GeslachtCodelijst-to-AdministrativeGender to translate terminology from the functional model to profile terminology in ValueSet AdministrativeGender." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender" />
+          </extension>
+        </valueSet>
+      </binding>
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.9" />
+        <comment value="Gender" />
+      </mapping>
+    </element>
+    <element id="Patient.gender.extension:genderCodelist">
+      <path value="Patient.gender.extension" />
+      <sliceName value="genderCodelist" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
+      </type>
+    </element>
+    <element id="Patient.gender.extension:genderCodelist.value[x]">
+      <path value="Patient.gender.extension.value[x]" />
+      <short value="Gender" />
+      <definition value="Patient’s administrative gender." />
+      <alias value="Geslacht" />
+      <binding>
+        <strength value="required" />
+        <description value="GeslachtCodelijst" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.9" />
+        <comment value="Gender" />
+      </mapping>
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <short value="DateOfBirth" />
+      <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted." />
+      <alias value="Geboortedatum" />
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.10" />
+        <comment value="DateOfBirth" />
+      </mapping>
+    </element>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.deceased[x]:deceasedBoolean">
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedBoolean" />
+      <short value="DeathIndicator" />
+      <definition value="An indication stating whether the patient has died." />
+      <alias value="OverlijdensIndicator" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.32" />
+        <comment value="DeathIndicator" />
+      </mapping>
+    </element>
+    <element id="Patient.deceased[x]:deceasedDateTime">
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedDateTime" />
+      <short value="DateOfDeath" />
+      <definition value="The date on which the patient died. A ‘vague’ date, such as only the year, is permitted." />
+      <comment value="The zib recognizes both the DeathIndicator (boolean) and DateOfDeath (datetime) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if deceasedDateTime is present and has a value, its value can be mapped to DateOfDeath and DeathIndicator is assumed to be true." />
+      <alias value="DatumOverlijden" />
+      <alias value="OverlijdensIndicator" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.33" />
+        <comment value="DateOfDeath" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.32" />
+        <comment value="DeathIndicator" />
+      </mapping>
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <definition value="Patient's address information." />
+      <type>
+        <code value="Address" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />
+      </type>
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.4" />
+        <comment value="AddressInformation" />
+      </mapping>
+    </element>
+    <element id="Patient.multipleBirth[x]">
+      <path value="Patient.multipleBirth[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.multipleBirth[x]:multipleBirthBoolean">
+      <path value="Patient.multipleBirth[x]" />
+      <sliceName value="multipleBirthBoolean" />
+      <short value="MultipleBirthIndicator" />
+      <definition value="An indication stating whether the patient is of a multiple birth." />
+      <alias value="MeerlingIndicator" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.31" />
+        <comment value="MultipleBirthIndicator" />
+      </mapping>
+    </element>
+    <element id="Patient.multipleBirth[x]:multipleBirthInteger">
+      <path value="Patient.multipleBirth[x]" />
+      <sliceName value="multipleBirthInteger" />
+      <short value="MultipleBirthSequence" />
+      <definition value="The birth number in the sequence of a multiple birth. The first birth is given value 1. The middle birth in a triplet birth would be given value 2 and the third birth would have value 3. If multiple birth order is filled then the value of the MultipleIndicator must be &quot;True&quot;." />
+      <alias value="Meerlingvolgorde" />
+      <type>
+        <code value="integer" />
+      </type>
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.35" />
+        <comment value="MultipleBirthSequence" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v4.3-2024EN" />
+        <map value="NL-CM:0.1.31" />
+        <comment value="MultipleBirthIndicator" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
