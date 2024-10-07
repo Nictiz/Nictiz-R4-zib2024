@@ -1,0 +1,33 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen.Morphology" />
+  <name value="ZibLaboratoryTestResultSpecimenMorphology" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/LaboratoryTestResult-v7.0(2024EN)" />
+    <name value="zib LaboratoryTestResult-v7.0(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="BodyStructure" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="BodyStructure.morphology.coding">
+      <path value="BodyStructure.morphology.coding" />
+      <short value="Morphology" />
+      <definition value="Morphology describes morphological abnormalities of the anatomical location where the material is taken, for example wound, ulcer." />
+      <alias value="Morfologie" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.13--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+        <map value="NL-CM:13.1.28" />
+        <comment value="Morfology" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
