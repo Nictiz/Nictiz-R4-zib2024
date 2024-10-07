@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-ContactPerson" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson" />
   <name value="ZibContactPerson" />
   <title value="zib ContactPerson" />
@@ -19,23 +17,23 @@
     </telecom>
   </contact>
   <description value="A contact is a person not being a healthcare professional who is involved in the patient’s care, such as family members, caregivers, mental caretakers, guardians and legal representatives.&#xD;&#xA;&#xD;&#xA;In addition to identification information such as the name, address and contact information can also be entered. The relationship to the patient and the role this person has can be entered as well." />
-  <purpose value="This RelatedPerson resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) ContactPerson v3.4 (2020)](https://zibs.nl/wiki/ContactPerson-v3.4(2020EN))." />
+  <purpose value="This RelatedPerson resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) ContactPerson v4.1 (2024)](https://zibs.nl/wiki/ContactPerson-v4.1(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-contactperson-v3.4-2020EN" />
-    <uri value="https://zibs.nl/wiki/ContactPerson-v3.4(2020EN)" />
-    <name value="zib ContactPerson-v3.4(2020EN)" />
+    <identity value="zib-contactperson-v4.1-2024EN" />
+    <uri value="https://zibs.nl/wiki/ContactPerson-v4.1(2024EN)" />
+    <name value="zib ContactPerson-v4.1(2024EN)" />
   </mapping>
   <mapping>
-    <identity value="zib-contactinformation-v1.2-2020EN" />
-    <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)" />
-    <name value="zib ContactInformation-v1.2(2020EN)" />
+    <identity value="zib-contactinformation-v1.3.1-2024EN" />
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.3.1(2024EN)" />
+    <name value="zib ContactInformation-v1.3.1(2024EN)" />
   </mapping>
   <mapping>
-    <identity value="zib-payer-v3.1.1-2020EN" />
-    <uri value="https://zibs.nl/wiki/Payer-v3.1.1(2020EN)" />
-    <name value="zib Payer-v3.1.1(2020EN)" />
+    <identity value="zib-payer-v4.1-2024EN" />
+    <uri value="https://zibs.nl/wiki/Payer-v4.1(2024EN)" />
+    <name value="zib Payer-v4.1(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -49,7 +47,7 @@
       <comment value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource, and therefore this profile, is used to capture information about any person that is related to the patient.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable." />
       <alias value="Contactpersoon" />
       <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
+        <identity value="zib-contactperson-v4.1-2024EN" />
         <map value="NL-CM:3.1.1" />
         <comment value="Contact" />
       </mapping>
@@ -75,7 +73,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
+        <identity value="zib-contactperson-v4.1-2024EN" />
         <map value="NL-CM:3.1.2" />
         <comment value="Role" />
       </mapping>
@@ -91,7 +89,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
+        <identity value="zib-contactperson-v4.1-2024EN" />
         <map value="NL-CM:3.1.3" />
         <comment value="Relationship" />
       </mapping>
@@ -110,12 +108,12 @@
       <alias value="Naamgegevens" />
       <alias value="BetalerNaam" />
       <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
+        <identity value="zib-contactperson-v4.1-2024EN" />
         <map value="NL-CM:3.1.4" />
         <comment value="NameInformation" />
       </mapping>
       <mapping>
-        <identity value="zib-payer-v3.1.1-2020EN" />
+        <identity value="zib-payer-v4.1-2024EN" />
         <map value="NL-CM:1.1.5" />
         <comment value="PayerName" />
       </mapping>
@@ -151,17 +149,17 @@
       <comment value="The cardinality mismatch between the zib (`0..1`) and FHIR (`0..*`) is explained by the containers TelephoneNumbers (`0..*`) and EmailAddresses (`0..*`) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers." />
       <alias value="Contactgegevens" />
       <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
+        <identity value="zib-contactperson-v4.1-2024EN" />
         <map value="NL-CM:3.1.6" />
         <comment value="ContactInformation" />
       </mapping>
       <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <identity value="zib-contactinformation-v1.3.1-2024EN" />
         <map value="NL-CM:20.6.1" />
         <comment value="ContactInformation" />
       </mapping>
       <mapping>
-        <identity value="zib-payer-v3.1.1-2020EN" />
+        <identity value="zib-payer-v4.1-2024EN" />
         <map value="NL-CM:1.1.12" />
         <comment value="ContactInformation" />
       </mapping>
@@ -190,12 +188,12 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />
       </type>
       <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
+        <identity value="zib-contactperson-v4.1-2024EN" />
         <map value="NL-CM:3.1.5" />
         <comment value="AddressInformation" />
       </mapping>
       <mapping>
-        <identity value="zib-payer-v3.1.1-2020EN" />
+        <identity value="zib-payer-v4.1-2024EN" />
         <map value="NL-CM:1.1.17" />
         <comment value="AddressInformation" />
       </mapping>
