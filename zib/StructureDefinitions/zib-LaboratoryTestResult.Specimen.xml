@@ -113,6 +113,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen-BodyStructure" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
       </type>
     </element>
     <element id="Specimen.container.extension:specimenNumberExtension">
