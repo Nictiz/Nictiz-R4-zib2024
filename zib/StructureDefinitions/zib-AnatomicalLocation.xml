@@ -37,15 +37,14 @@
       <definition value="Localisation on/in the body." />
       <comment value="In cases where only the location is required, or where laterality is embedded within the location code, this CodeableConcept can be used within the resource. However, when laterality needs to be explicitly recorded, the BodyStructure resource should be used, referenced through the BodyStructure Reference within this CodeableConcept. If the BodyStructure reference is used, this CodeableConcept should either remain empty or align with the BodyStructure. element.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both this CodeableConcept and the BodyStructure resource, as either mechanism may be employed. The rationale for this is that, in many cases, only the location will be required, simplifying the FHIR recording process for sending systems." />
       <alias value="Locatie" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
+      </binding>
       <mapping>
         <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
         <map value="NL-CM:20.7.4" />
         <comment value="Location" />
-      </mapping>
-      <mapping>
-        <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
-        <map value="NL-CM:20.7.4" />
-        <comment value="AnatomicalLocation" />
       </mapping>
     </element>
     <element id="CodeableConcept.extension:bodyStructureReference">
@@ -62,14 +61,8 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
       </type>
-    </element>
-    <element id="CodeableConcept.coding">
-      <path value="CodeableConcept.coding" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>
