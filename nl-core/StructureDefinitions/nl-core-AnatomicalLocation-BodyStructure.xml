@@ -19,10 +19,10 @@
     </telecom>
   </contact>
   <description value="An anatomical location specifies the location (e.g. foot) and laterality (e.g. left) of a body part." />
-  <purpose value="A derived profile from [zib-AnatomicalLocation-BodyStructure](http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure) to provide a version better suited for implementation purposes." />
+  <purpose value="A derived profile from [zib-AnatomicalLocation-BodyStructure](http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
-  <kind value="complex-type" />
+  <kind value="resource" />
   <abstract value="false" />
   <type value="BodyStructure" />
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
