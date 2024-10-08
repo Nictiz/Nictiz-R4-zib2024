@@ -4,9 +4,37 @@
 
 issues should occur: true
 
+zib-HealthcareProvider:
+  zib deviations:
+    Location.address:
+      - datatype: Address instead of a reference
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+      - cardinality: 0..1 instead of 0..*
+        reason: The cardinality mismatch between the zib (0..*) and FHIR (0..1) is explained by the restriction of FHIR to limit the Location.address to a physical address while the zib allows for other types of addresses (e.g. a postal address). Other types of addresses than a physical address are given in Organization.address which is referenced by Location.managingOrganization.
+    Location.telecom:
+      - cardinality: 0..* instead of 0..1
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib part ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+    Location.telecom*:
+      - datatype: ContactPoint instead of a reference
+        reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource. Because the FHIR profile for ContactInformation consists of two parts the root concept of ContactInformation is mapped on .telecom.
+
+unmapped zib concepts:
+  - NL-CM:17.2.10: HealthcareProvider.LocationNumber
+    reason: This zib concept is problematic to map cleanly to FHIR and it has been deemed too uncommon in practice to warrant an extension.
+
+
 ---
 # The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
 # shortcomings in tooling, the used terminology server, etc.
 # These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
 
 issues should occur: false
+
+zib-AddressInformation:
+  zib deviations:
+    Address.line.extension:houseNumberIndication.value[x]:
+      - datatype: string instead of CD
+        reason: The mapping of zib AddressInformation on the FHIR Address datatype is the result of compatibility with HL7v3, which is the format that a lot of healthcare data in the Netherlands is stored in. As a result of this, the zib concept HouseNumberIndication with CD datatype is mapped to a FHIR string datatype with a constraint added (the value can only be 'by' or 'to' or 'OTH').
+    Address.line.extension:*.value[x]:
+      - cardinality: 1..1 instead of 0..1
+        reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
