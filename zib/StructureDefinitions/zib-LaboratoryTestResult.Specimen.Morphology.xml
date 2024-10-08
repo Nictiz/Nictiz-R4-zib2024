@@ -1,7 +1,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-LaboratoryTestResult.Specimen.Morphology" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen.Morphology" />
-  <name value="ZibLaboratoryTestResultSpecimenMorphology" />
+  <id value="zib-LaboratoryTestResult.Specimen-BodyStructure" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen-BodyStructure" />
+  <name value="ZibLaboratoryTestResultSpecimenBodyStructure" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -15,6 +15,10 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
   <derivation value="constraint" />
   <differential>
+    <element id="BodyStructure">
+      <path value="BodyStructure" />
+      <definition value="The zib AnatomicalLocation is mapped to both a profile on CodeableConcept (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation&gt;) and this BodyStructure profile. While the CodeableConcept profile covers anatomical location, the BodyStructure resource is used to capture both the location and its laterality.&#xA;&#xA;When laterality or morphology are required, this BodyStructure profile should be used. In cases where laterality or morphology are not needed or are embedded within the location code, the CodeableConcept can be used within the resource.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both the BodyStructure resource and the CodeableConcept in host resources, as either mechanism may be employed. Providing systems can select the appropriate mechanism based on their data requirements." />
+    </element>
     <element id="BodyStructure.morphology">
       <path value="BodyStructure.morphology" />
       <short value="Morphology" />
