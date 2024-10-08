@@ -1,4 +1,5 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-LaboratoryTestResult.Specimen.Morphology" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen.Morphology" />
   <name value="ZibLaboratoryTestResultSpecimenMorphology" />
   <status value="draft" />
@@ -14,8 +15,8 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
   <derivation value="constraint" />
   <differential>
-    <element id="BodyStructure.morphology.coding">
-      <path value="BodyStructure.morphology.coding" />
+    <element id="BodyStructure.morphology">
+      <path value="BodyStructure.morphology" />
       <short value="Morphology" />
       <definition value="Morphology describes morphological abnormalities of the anatomical location where the material is taken, for example wound, ulcer." />
       <alias value="Morfologie" />

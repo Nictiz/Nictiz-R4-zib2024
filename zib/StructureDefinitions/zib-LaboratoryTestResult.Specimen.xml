@@ -111,7 +111,6 @@
       <path value="Specimen.collection.bodySite.extension.value[x]" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen.Morphology" />
       </type>
     </element>

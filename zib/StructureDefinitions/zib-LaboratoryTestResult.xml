@@ -219,6 +219,10 @@
       <short value="TestResult" />
       <definition value="The test result. Depending on the type of test, the result will consist of a value with a unit or a coded value (ordinal or nominal)." />
       <alias value="TestUitslag" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.17--20240415000000" />
+      </binding>
       <mapping>
         <identity value="zib-laboratorytestresult-v7.0-2024EN" />
         <map value="NL-CM:13.1.10" />
@@ -302,7 +306,7 @@
       <definition value="The test method used to obtain the result." />
       <alias value="Testmethode" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.4--20240415000000" />
       </binding>
       <mapping>
