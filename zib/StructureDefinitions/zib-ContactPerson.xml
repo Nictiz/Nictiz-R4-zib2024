@@ -56,13 +56,17 @@
       <path value="RelatedPerson.extension" />
       <sliceName value="comment" />
       <max value="1" />
-    </element>
-    <element id="RelatedPerson.extension:comment.url">
-      <path value="RelatedPerson.extension.url" />
-      <fixedUri value="http://hl7.org/fhir/StructureDefinition/note" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/note" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="RelatedPerson.extension:comment.value[x]">
       <path value="RelatedPerson.extension.value[x]" />
+    </element>
+    <element id="RelatedPerson.extension:comment.value[x].text">
+      <path value="RelatedPerson.extension.value[x].text" />
       <short value="Comment" />
       <definition value="Additional information about the contact. For example, information such as 'the father is also a medical doctor' can be included here. In addition, if the contact works at an organization, the organization can be mentioned here. If the organization is listed as a contact and no actual contact is known, this can also be stated here. In this case, the name information can be left blank." />
       <alias value="Toelichting" />
