@@ -26,17 +26,19 @@
     <name value="zib AnatomicalLocation-v1.0.3(2024EN)" />
   </mapping>
   <kind value="resource" />
-  <abstract value="false" />
+  <abstract value="true" />
   <type value="BodyStructure" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
   <derivation value="constraint" />
   <differential>
     <element id="BodyStructure">
       <path value="BodyStructure" />
+      <short value="AnatomicalLocation" />
       <definition value="The zib AnatomicalLocation is mapped to both a profile on CodeableConcept (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation&gt;) and this BodyStructure profile. While the CodeableConcept profile covers anatomical location, the BodyStructure resource is used to capture both the location and its laterality.&#xA;&#xA;When laterality is required, this BodyStructure profile should be used. In cases where laterality is either unnecessary or embedded within the location code, the CodeableConcept can be used within the resource.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both the BodyStructure resource and the CodeableConcept in host resources, as either mechanism may be employed. Providing systems can select the appropriate mechanism based on their data requirements." />
+      <alias value="AnatomischeLocatie" />
       <mapping>
         <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
-        <map value="NL-CM:20.7.4" />
+        <map value="NL-CM:20.7.1" />
         <comment value="AnatomicalLocation" />
       </mapping>
     </element>
@@ -59,6 +61,7 @@
       <path value="BodyStructure.locationQualifier" />
       <short value="Laterality" />
       <definition value="Laterality adds information about the body side to the anatomic location, e.g. left." />
+      <alias value="Lateraliteit" />
       <max value="1" />
       <binding>
         <strength value="required" />
