@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-AnatomicalLocation-BodyStructure" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation-BodyStructure" />
   <name value="NlcoreAnatomicalLocationBodyStructure" />
   <title value="nl core AnatomicalLocation BodyStructure" />
@@ -30,6 +28,7 @@
   <differential>
     <element id="BodyStructure">
       <path value="BodyStructure" />
+      <definition value="The nl-core AnatomicalLocation is mapped to both a profile on CodeableConcept (&lt;http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation&gt;) and this BodyStructure profile. While the CodeableConcept profile covers anatomical location, the BodyStructure resource is used to capture both the location and its laterality.&#xA;&#xA;When laterality is required, this BodyStructure profile should be used. In cases where laterality is either unnecessary or embedded within the location code, the CodeableConcept can be used within the resource.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both the BodyStructure resource and the CodeableConcept in host resources, as either mechanism may be employed. Providing systems can select the appropriate mechanism based on their data requirements." />
       <alias value="nl-core-AnatomicalLocation-BodyStructure" />
     </element>
   </differential>
