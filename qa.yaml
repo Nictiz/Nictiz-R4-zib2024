@@ -27,6 +27,7 @@ patterns:
   - nl-core/vocabulary/**/*.xml
   SearchParameters: nl-core/SearchParameters/*.xml
   examples: nl-core/examples/*.xml
+  release notes: release-notes.md
 
 steps:
   validate zib profiles:
@@ -87,3 +88,6 @@ steps:
   check nl-core overrides:
     patterns: nl-core profiles
     script: nl-core-overrides.sh
+  check release notes:
+    patterns: release notes
+    script: ReleaseNotes.py
