@@ -1,4 +1,4 @@
 ## ContactPerson (zib-ContactPerson)
-* `.relationship` ; textual ; Added guidance for `RelatedPerson.relationship:role` ; ZIBFHIR-73
-* `.extension:comment` ; extension ; Added note for comment ; ZIBFHIR-97
-* `.binding.valueSet,` ; terminology ; Changed codes in RoleCodelist ; ZIB-1470
+* `.extension:comment` ; extension ; Added Note for Comment ; ZIB-947, ZIBFHIR-97
+* `.relationship:role` ; textual ; Added guidance for Role mapping ; ZIBFHIR-73
+* `.relationship:role` ; terminology ; Changed codes in RoleCodelist ; ZIB-1470
