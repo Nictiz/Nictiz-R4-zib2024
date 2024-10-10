@@ -29,14 +29,19 @@ class Profile:
             if category not in ["mapping", "textual", "terminology", "cardinality", "extension", "type", "reference", "slicing", "constraint"]:
                 raise ParserException(f"Invalid category '{category}'")
             self.category = category
-        
+    
+    class Remark:
+        def __init__(self, description, issues):
+            self.description = description
+            self.issues = issues
+
     def __init__(self, name):
         self.name = name
         self.changes = []
         self.open_change = None
 
-    def addRemark(self, remark):
-        self.changes.append(remark)
+    def addRemark(self, description, *issues):
+        self.changes.append(Profile.Remark(description, issues))
 
     def addPartialChange(self, path):
         if self.open_change:
@@ -97,9 +102,15 @@ class Zib:
                     str += "<td>" + "<br />".join([f"<code>{path}</code>" for path in change.paths]) + "</td>"
                     str += "<td>" + change.category + "</td>"
                     str += "<td>" + re.sub("`(.*?)`", "<code>\\1</code>", change.description) + "</td>"
+                elif isinstance(change, Profile.Remark):
+                    if len(change.issues) == 0:
+                        cols = 3
+                    else:
+                        cols = 4
+                    str += f"<tr><td colspan='{cols}'>{change.description}</td></tr>"
+
+                if len(change.issues):
                     str += "<td>" + ", ".join([f"<a href='https://bits.nictiz.nl/issues/{issue}'>{issue}</a>" for issue in change.issues]) + "</td>"
-                elif type(change) == str:
-                    str += f"<tr><td colspan='4'>{change}</td></tr>"
                 str += "</tr>\n"
 
         str += "</table>\n"
@@ -150,7 +161,8 @@ class Parser:
                     self._error("no JIRA issue keys are provided")
                 self._getCurrProfile().addChange(path, category, description, issues)
             case ["*", *general_remark]:
-                self._getCurrProfile().addRemark(" ".join(general_remark))
+                description, issues = self._splitTextAndIssues(general_remark)
+                self._getCurrProfile().addRemark(description, *issues)
             case []:
                 pass
             case _:
