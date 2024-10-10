@@ -142,22 +142,39 @@ class Parser:
                     self._error(f"incorrectly formatted profile name: {profile_name}")
             case ["###", profile_name]:
                 self._getCurrentZib().addProfile(profile_name)
-            case ["*", general_remark]:
-                self._getCurrProfile().addRemark(general_remark)
             case ["*", path, ";"]:
                 self._getCurrProfile().addPartialChange(path)
             case ["*", path, ";", category, ";", *rest]:
-                try:
-                    index = rest.index(";")
-                except ValueError:
-                    self._error(f"incorrectly formatted line")
-                description = " ".join(rest[0:index])
-                tickets = rest[index + 1:]
-                self._getCurrProfile().addChange(path, category, description, *tickets)
+                description, issues = self._splitTextAndIssues(rest)
+                if len(issues) == 0:
+                    self._error("no JIRA issue keys are provided")
+                self._getCurrProfile().addChange(path, category, description, issues)
+            case ["*", *general_remark]:
+                self._getCurrProfile().addRemark(" ".join(general_remark))
             case []:
                 pass
             case _:
                 self._error(f"incorrectly formatted line")
+
+    def _splitTextAndIssues(self, rest):
+        """ Split the remainder of a line, containing a description and optionally issue keys.
+            Returns the description and a list of issue keys. If no issues are provided, an empty list is returned.
+        """
+        try:
+            index = rest.index(";")
+            description_parts = rest[:index]
+            issues = []
+            for issue in rest[index + 1:]:
+                issue = issue.replace(",", "")
+                if not re.match("[A-Z]+-[0-9]+", issue):
+                    self._error(f"Incorrectly formatted issue key '{issue}'")
+                issues.append(issue)
+        except ValueError:
+            description_parts = rest
+            issues = []
+
+        description = " ".join(description_parts)
+        return description, issues
 
     def _getCurrentZib(self):
         if not len(self.zibs):
