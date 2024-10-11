@@ -5,4 +5,4 @@
 * `.extension:bodyStructureReference` ; mapping ; Moved mapping of Laterality to `BodyStructure.locationQualifier` ; ZIBFHIR-113
 
 ### zib-AnatomicalLocation-BodyStructure
-* New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension (ZIBFHIR-113).
+* New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
