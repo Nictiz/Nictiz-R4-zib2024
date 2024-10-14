@@ -63,6 +63,7 @@
     <element id="Observation.extension:copyIndicator">
       <path value="Observation.extension" />
       <sliceName value="copyIndicator" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CopyIndicator" />
