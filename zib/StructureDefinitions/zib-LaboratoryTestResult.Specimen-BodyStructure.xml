@@ -22,6 +22,11 @@
     <uri value="https://zibs.nl/wiki/LaboratoryTestResult-v7.0(2024EN)" />
     <name value="zib LaboratoryTestResult-v7.0(2024EN)" />
   </mapping>
+  <mapping>
+    <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
+    <uri value="https://zibs.nl/wiki/AnatomicalLocation-v1.0.3(2024EN)" />
+    <name value="zib AnatomicalLocation-v1.0.3(2024EN)" />
+  </mapping>
   <kind value="resource" />
   <abstract value="true" />
   <type value="BodyStructure" />
