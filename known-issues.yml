@@ -4,9 +4,30 @@
 
 issues should occur: true
 
+zib-Payer.InsuranceCompany:
+  zib deviations:
+    Coverage.payor:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of the zib concept InsuranceCompany (0..1) mismatches FHIR (1..1). Between the zib concepts InsuranceCompany and PayerPerson, a minimum of 1 must be selected. If one uses the zib-Payer.InsuranceCompany profile, the choice has been made to apply the InsuranceCompany concept, therefore a cardinality of 1..1 can be used.
+
+zib-Payer.PayerPerson:
+  zib deviations:
+    Coverage.extension:bankInformation:
+      - datatype: Extension instead of Container
+        reason: The (complex) extension acts as a container for three subextensions that each contain a zib subconcept.
+    Coverage.payor:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of the zib concept PayerPerson (0..1) mismatches FHIR (1..1). Between the zib concepts InsuranceCompany and PayerPerson, a minimum of 1 must be selected. If one uses the zib-Payer.PayerPerson profile, the choice has been made to apply the PayerPerson concept, therefore a cardinality of 1..1 can be used.
+
 ---
 # The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
 # shortcomings in tooling, the used terminology server, etc.
 # These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
 
 issues should occur: false
+
+zib-Payer.InsuranceCompany:
+  ignored issues:
+    Coverage.payor:
+      - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
+        reason: The definition of the zib concept InsuranceCompany, which is the root of a container, does not contain a meaningful definition. 
