@@ -4,6 +4,12 @@
 
 issues should occur: true
 
+ext-LanguageProficiency.CommunicationDetails:
+  zib deviations:
+    Extension.value[x]:
+      - cardinality: 0..1 instead of 0..*
+        reason: FHIR restricts Extension.value to a max cardinality of 0..1. To use it more than once, the extension is added 0..* in the hosting element.
+
 zib-Patient:
   zib deviations:
     Patient.name*:
@@ -26,7 +32,7 @@ zib-Patient:
       - short: DateOfDeath instead of DateOfDeath / DeathIndicator
         reason: This element is mapped to two zib concepts, DateOfDeath and DeathIndicator. However, the latter is implicit -- although the zib recognizes both concepts, FHIR supports populating just one of them, thus DeathIndicator is assumed to be true when DateOfDeath is populated. For clarity reasons, the .deceasedDateTime slice has only DateOfDeath mapped to it.
       - datatype: dateTime instead of boolean
-        reason: The boolean expected by DeathIndicator is only assumed; see the explanation above.
+        reason: The boolean expected by DeathIndicator is only assumed; see the explanation above.    
     Patient.multipleBirth[x]:multipleBirthInteger:
       - short: MultipleBirthSequence instead of MultipleBirthSequence / MultipleBirthIndicator
         reason: This element is mapped to two zib concepts, MultipleBirthSequence and MultipleBirthIndicator. However, the latter is implicit -- although the zib recognizes both concepts, FHIR supports populating just one of them, thus MultipleBirthIndicator is assumed to be true when MultipleBirthSequence is populated. For clarity reasons, the .multipleBirthInteger slice has only MultipleBirthSequence mapped to it.
