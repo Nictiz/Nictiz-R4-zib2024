@@ -19,6 +19,11 @@ zib-Payer.PayerPerson:
       - cardinality: 1..1 instead of 0..1
         reason: The cardinality of the zib concept PayerPerson (0..1) mismatches FHIR (1..1). Between the zib concepts InsuranceCompany and PayerPerson, a minimum of 1 must be selected. If one uses the zib-Payer.PayerPerson profile, the choice has been made to apply the PayerPerson concept, therefore a cardinality of 1..1 can be used.
 
+zib-Payer.Organization:
+  zib deviations:
+    Organization.telecom:
+      - cardinality: 0..* instead of 0..1
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib part ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
 ---
 # The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
 # shortcomings in tooling, the used terminology server, etc.

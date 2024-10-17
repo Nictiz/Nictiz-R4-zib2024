@@ -97,7 +97,6 @@
       <short value="ContactInformation" />
       <definition value="The payer’s telephone number and/or e-mail address." />
       <alias value="Contactgegevens" />
-      <max value="1" />
       <mapping>
         <identity value="zib-payer-v4.1-2024EN" />
         <map value="NL-CM:1.1.12" />
