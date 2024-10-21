@@ -7,7 +7,7 @@
 * `.extension:bodyStructureReference` ; mapping ; Moved mapping of Laterality to `BodyStructure.locationQualifier`; ZIBFHIR-113
 
 ### zib-AnatomicalLocation-BodyStructure
-* New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension (ZIBFHIR-113).
+* New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension ; ZIBFHIR-113
 
 ## AddressInformation (zib-AddressInformation)
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Adjusted zib-AddressInformation-1 for HouseNumberIndication ; ZIB-2218
@@ -29,7 +29,7 @@
 * `Observation` ; textual ; Removed guidance for Requester ; ZIB-1269
 * `.method` ; terminology ; Binding strength changed from Required to Extensible and changed codes in TestMethodCodelist ; ZIB-1958
 * `.value[x]` ; terminology ; Added valueset TestResultCodelist ; ZIB-1442, ZIB-1293 , ZIB-1274
-* `.interpretation:resultFlags` ; cardinality ; Changed max cardinality from 0..* to 0..1 ; ZIB-1072
+* `.interpretation:resultFlags` ; cardinality ; Changed max cardinality from * to 1 ; ZIB-1072
 
 ### zib-LaboratoryTestResult.Specimen
 * `.collection.collected[x]:collectedDateTime` ; mapping ; Removed mapping of CollectionDateTime ; ZIB-2239
@@ -43,4 +43,4 @@
 * `.receivedTime` ; mapping ; Removed mapping of ReceivedDateTime ; ZIB-2239
 
 ### zib-LaboratoryTestResult.Specimen-BodyStructure
-* New profile that maps morphology to a native FHIR element inside the BodyStructure resource instead of a custom extension (ZIBFHIR-113).
+* New profile that maps morphology to a native FHIR element inside the BodyStructure resource instead of a custom extension ; ZIBFHIR-113
