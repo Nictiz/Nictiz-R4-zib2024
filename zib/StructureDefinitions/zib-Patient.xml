@@ -56,16 +56,6 @@
     <uri value="https://zibs.nl/wiki/Payer-v4.1(2024EN)" />
     <name value="zib Payer-v4.1(2024EN)" />
   </mapping>
-  <mapping>
-    <identity value="zib-addressinformation-v1.2-2024EN" />
-    <uri value="https://zibs.nl/wiki/AddressInformation-v1.2(2024EN)" />
-    <name value="zib AddressInformation-v1.2(2024EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-nameinformation-v1.1.1-2024EN" />
-    <uri value="https://zibs.nl/wiki/NameInformation-v1.1.1(2024EN)" />
-    <name value="zib NameInformation-v1.1.1(2024EN)" />
-  </mapping>
   <kind value="resource" />
   <abstract value="true" />
   <type value="Patient" />
@@ -187,17 +177,11 @@
       <path value="Patient.name" />
       <sliceName value="nameInformation" />
       <short value="NameInformation" />
-      <alias value="Naamgegevens" />
       <max value="2" />
       <type>
         <code value="HumanName" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NameInformation" />
       </type>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1.1-2024EN" />
-        <map value="NL-CM:20.4.1" />
-        <comment value="NameInformation" />
-      </mapping>
     </element>
     <element id="Patient.name:nameInformation-GivenName">
       <path value="Patient.name" />
@@ -378,11 +362,6 @@
         <map value="NL-CM:1.1.17" />
         <comment value="AddressInformation" />
       </mapping>
-      <mapping>
-        <identity value="zib-addressinformation-v1.2-2024EN" />
-        <map value="NL-CM:20.5.1" />
-        <comment value="AddressInformation" />
-      </mapping>
     </element>
     <element id="Patient.maritalStatus">
       <path value="Patient.maritalStatus" />
@@ -540,11 +519,6 @@
         <map value="NL-CM:3.1.4" />
         <comment value="NameInformation" />
       </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1.1-2024EN" />
-        <map value="NL-CM:20.4.1" />
-        <comment value="NameInformation" />
-      </mapping>
     </element>
     <element id="Patient.contact.telecom">
       <path value="Patient.contact.telecom" />
@@ -599,11 +573,6 @@
       <mapping>
         <identity value="zib-contactperson-v4.1-2024EN" />
         <map value="NL-CM:3.1.5" />
-        <comment value="AddressInformation" />
-      </mapping>
-      <mapping>
-        <identity value="zib-addressinformation-v1.2-2024EN" />
-        <map value="NL-CM:20.5.1" />
         <comment value="AddressInformation" />
       </mapping>
     </element>
