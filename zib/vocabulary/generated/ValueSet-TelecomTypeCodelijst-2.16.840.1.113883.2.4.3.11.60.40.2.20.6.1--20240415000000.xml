@@ -45,7 +45,7 @@
    <immutable value="false"/>
    <compose>
       <include>
-         <system value="http://decor.nictiz.nl/fhir/CodeSystem/2.16.840.1.113883.2.4.3.11.60.40.4.22.1--20240415000000"/>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                <valueString value="Vast telefoonnummer"/>
