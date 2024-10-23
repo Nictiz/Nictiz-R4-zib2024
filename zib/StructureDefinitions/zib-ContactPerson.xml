@@ -84,13 +84,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <comment value="Please note that the zib concept 'Role' is currently mapped to a slice on RelatedPerson.relationship. The current FHIR build includes a new element specifically designed for 'Role', which is expected to be a better fit. Once the next formal release (R6) incorporates this element, a decision can be made to adopt it via a pre-adopt extension and move the mapping accordingly." />
     </element>
     <element id="RelatedPerson.relationship:role">
       <path value="RelatedPerson.relationship" />
       <sliceName value="role" />
       <short value="Role" />
       <definition value="Specifies the role of the contact in relation to the patient." />
+      <comment value="Please note that the zib concept 'Role' is currently mapped to a slice on RelatedPerson.relationship. The current FHIR build includes a new element specifically designed for 'Role', which is expected to be a better fit. Once the next formal release (R6) incorporates this element, a decision can be made to adopt it via a pre-adopt extension and move the mapping accordingly." />
       <alias value="Rol" />
       <binding>
         <strength value="required" />
