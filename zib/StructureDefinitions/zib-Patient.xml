@@ -645,12 +645,12 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.CommunicationDetails" />
       </type>
     </element>
-    <element id="Patient.communication.extension:extLanguageProfiencyComment">
+    <element id="Patient.communication.extension:comment">
       <path value="Patient.communication.extension" />
-      <sliceName value="extLanguageProfiencyComment" />
+      <sliceName value="comment" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProfiency.Comment" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.Comment" />
       </type>
       <isModifier value="false" />
     </element>
