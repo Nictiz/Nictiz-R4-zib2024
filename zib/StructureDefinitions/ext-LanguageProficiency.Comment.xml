@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="This extension provides a method to extend the LanguageProficiency profile with a comment element." />
-  <purpose value="This extension represents the LanguageProficiency Comment concept (NL-CM:7.12.5) of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) LanguageProficiency v4.0 (2024)](https://zibs.nl/wiki/LanguageProficiency-v4.0(2024EN))." />
+  <purpose value="This extension represents the Comment concept (NL-CM:7.12.5) of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) LanguageProficiency v4.0 (2024)](https://zibs.nl/wiki/LanguageProficiency-v4.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -35,6 +35,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.Comment" />
