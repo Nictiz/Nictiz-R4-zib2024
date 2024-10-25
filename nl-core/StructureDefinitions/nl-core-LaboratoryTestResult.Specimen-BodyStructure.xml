@@ -33,6 +33,7 @@
   <differential>
     <element id="BodyStructure">
       <path value="BodyStructure" />
+      <definition value="The nl-core AnatomicalLocation is mapped to both a profile on CodeableConcept (&lt;http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation&gt;) and this BodyStructure profile. While the CodeableConcept profile covers anatomical location, the BodyStructure resource is used to capture both the location and its laterality.&#xA;&#xA;When laterality and/or morphology are required, this BodyStructure profile should be used. In cases where laterality and morphology are not needed, the CodeableConcept `Specimen.collection.bodySite` can be used within the resource `nl-core-LaboratoryTestResult.Specimen`.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both the BodyStructure resource and the CodeableConcept in host resources, as either mechanism may be employed. Providing systems can select the appropriate mechanism based on their data requirements." />
       <alias value="nl-core-LaboratoryTestResult.Specimen-BodyStructure" />
     </element>
   </differential>
