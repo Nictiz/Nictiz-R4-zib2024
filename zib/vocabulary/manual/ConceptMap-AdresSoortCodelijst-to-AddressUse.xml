@@ -70,7 +70,7 @@
             <target>
                 <code value="temp"/>
                 <equivalence value="wider"/>
-                <comment value="HV: Vacation Home/Vakantie adres. Any temporary address."/>
+                <comment value="HV: Vacation Home/Vakantieadres. A physical address that can be visited, but is only used temporarily."/>
             </target>
         </element>
     </group>
