@@ -27,7 +27,7 @@
    <version value="2024-04-15T00:00:00"/>
    <name value="TelecomTypeCodelijst"/>
    <title value="TelecomTypeCodelijst"/>
-   <status value="draft"/>
+   <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
@@ -51,7 +51,7 @@
                <valueString value="Vast telefoonnummer"/>
             </extension>
             <code value="LL"/>
-            <display value="Land Line"/>
+            <display value="Vaste lijn"/>
             <designation>
                <language value="en-US"/>
                <use>
