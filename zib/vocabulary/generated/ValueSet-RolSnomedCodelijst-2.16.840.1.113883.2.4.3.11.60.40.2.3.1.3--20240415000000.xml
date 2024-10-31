@@ -27,7 +27,7 @@
    <version value="2024-04-15T00:00:00"/>
    <name value="RolSnomedCodelijst"/>
    <title value="RolSnomedCodelijst"/>
-   <status value="draft"/>
+   <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
@@ -62,7 +62,7 @@
                <valueString value="Eerste contactpersoon"/>
             </extension>
             <code value="300481000146102"/>
-            <display value="First contact person"/>
+            <display value="Eerste contactpersoon"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -87,7 +87,7 @@
                <valueString value="Secundair contactpersoon"/>
             </extension>
             <code value="300531000146100"/>
-            <display value="Second contact person"/>
+            <display value="Secundair contactpersoon"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -112,7 +112,7 @@
                <valueString value="Curator"/>
             </extension>
             <code value="1269519005"/>
-            <display value="Deputy"/>
+            <display value="Curator"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -137,7 +137,7 @@
                <valueString value="Mentor"/>
             </extension>
             <code value="300561000146109"/>
-            <display value="Personal welfare deputy"/>
+            <display value="Mentor"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -162,7 +162,7 @@
                <valueString value="Schriftelijk gemachtigde zorg en behandeling"/>
             </extension>
             <code value="310141000146103"/>
-            <display value="Holder of medical power of attorney"/>
+            <display value="Schriftelijk gemachtigde zorg en behandeling"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -187,7 +187,7 @@
                <valueString value="Bewindvoerder"/>
             </extension>
             <code value="300551000146106"/>
-            <display value="Property and financial affairs deputy"/>
+            <display value="Bewindvoerder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -212,7 +212,7 @@
                <valueString value="Zaakwaarnemer"/>
             </extension>
             <code value="300591000146104"/>
-            <display value="Representative managing another's affairs"/>
+            <display value="Zaakwaarnemer"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -237,7 +237,7 @@
                <valueString value="Schriftelijk gemachtigde financieel"/>
             </extension>
             <code value="300581000146101"/>
-            <display value="Holder of financial power of attorney"/>
+            <display value="Schriftelijk financieel gemachtigde"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -262,7 +262,7 @@
                <valueString value="Vertegenwoordiger bij wilsonbekwaamheid"/>
             </extension>
             <code value="310391000146105"/>
-            <display value="Representative in case of mental incapacity"/>
+            <display value="Wettelijke vertegenwoordiger bij wilsonbekwaamheid"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -287,7 +287,7 @@
                <valueString value="Voogd"/>
             </extension>
             <code value="394619001"/>
-            <display value="Guardian"/>
+            <display value="Voogd"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -312,7 +312,7 @@
                <valueString value="Wettelijk vertegenwoordiger op grond van ouderlijk gezag"/>
             </extension>
             <code value="310401000146108"/>
-            <display value="Legal advocate based on parental authority"/>
+            <display value="Ouderlijk gezag"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -337,7 +337,7 @@
                <valueString value="Mantelzorger"/>
             </extension>
             <code value="407542009"/>
-            <display value="Informal caregiver"/>
+            <display value="Mantelzorger"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -362,7 +362,7 @@
                <valueString value="Geestelijk verzorger"/>
             </extension>
             <code value="768733004"/>
-            <display value="Spiritual advisor"/>
+            <display value="Geestelijk adviseur"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -387,7 +387,7 @@
                <valueString value="Tolk"/>
             </extension>
             <code value="40570005"/>
-            <display value="Interpreter"/>
+            <display value="Tolk"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -412,7 +412,7 @@
                <valueString value="Advocaat"/>
             </extension>
             <code value="12877000"/>
-            <display value="Lawyer"/>
+            <display value="Advocaat"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -437,7 +437,7 @@
                <valueString value="Docent"/>
             </extension>
             <code value="106304008"/>
-            <display value="Teacher"/>
+            <display value="Leraar"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -462,7 +462,7 @@
                <valueString value="Patiëntvertrouwenspersoon"/>
             </extension>
             <code value="300601000146109"/>
-            <display value="Patient confidant"/>
+            <display value="Vertrouwenspersoon"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -487,7 +487,7 @@
                <valueString value="Werkgever"/>
             </extension>
             <code value="394571004"/>
-            <display value="Employer"/>
+            <display value="Werkgever"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -512,7 +512,7 @@
                <valueString value="Begeleider"/>
             </extension>
             <code value="300491000146100"/>
-            <display value="Companionr"/>
+            <display value="Begeleider niet vanuit zorginstelling"/>
             <designation>
                <language value="en-US"/>
                <use>

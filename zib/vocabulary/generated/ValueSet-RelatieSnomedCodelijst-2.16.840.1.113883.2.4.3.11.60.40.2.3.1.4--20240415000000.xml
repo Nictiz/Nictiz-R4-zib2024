@@ -27,7 +27,7 @@
    <version value="2024-04-15T00:00:00"/>
    <name value="RelatieSnomedCodelijst"/>
    <title value="RelatieSnomedCodelijst"/>
-   <status value="draft"/>
+   <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
@@ -63,7 +63,7 @@
                <valueString value="Adoptie broer"/>
             </extension>
             <code value="17925003"/>
-            <display value="Adoptive brother"/>
+            <display value="Adoptiebroer"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -88,7 +88,7 @@
                <valueString value="Adoptiekind (x)"/>
             </extension>
             <code value="393547004"/>
-            <display value="Adopted child"/>
+            <display value="Geadopteerd kind"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -113,7 +113,7 @@
                <valueString value="Adoptievader"/>
             </extension>
             <code value="609005"/>
-            <display value="Adoptive father"/>
+            <display value="Adoptievader"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -138,7 +138,7 @@
                <valueString value="Adoptiemoeder"/>
             </extension>
             <code value="21464003"/>
-            <display value="Adoptive mother"/>
+            <display value="Adoptiemoeder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -163,7 +163,7 @@
                <valueString value="Adoptieouder (x)"/>
             </extension>
             <code value="41953004"/>
-            <display value="Adoptive parent"/>
+            <display value="Adoptieouder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -188,7 +188,7 @@
                <valueString value="Adoptie broer of zus"/>
             </extension>
             <code value="79508001"/>
-            <display value="Adoptive sibling"/>
+            <display value="Adoptiebroer of adoptiezus"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -213,7 +213,7 @@
                <valueString value="Adoptie zus"/>
             </extension>
             <code value="76022008"/>
-            <display value="Adoptive sister"/>
+            <display value="Adoptiezus"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -238,7 +238,7 @@
                <valueString value="Tante"/>
             </extension>
             <code value="25211005"/>
-            <display value="Aunt"/>
+            <display value="Tante"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -263,7 +263,7 @@
                <valueString value="Broer"/>
             </extension>
             <code value="70924004"/>
-            <display value="Brother"/>
+            <display value="Broer"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -291,7 +291,7 @@
                <valueString value="Zwager"/>
             </extension>
             <code value="300461000146105"/>
-            <display value="Brother-in-law"/>
+            <display value="Zwager"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -316,7 +316,7 @@
                <valueString value="Neef/nicht, zoon/dochter van oom/tante"/>
             </extension>
             <code value="55538000"/>
-            <display value="Cousin"/>
+            <display value="Neef of nicht"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -341,7 +341,7 @@
                <valueString value="Dochter"/>
             </extension>
             <code value="66089001"/>
-            <display value="Daughter"/>
+            <display value="Dochter"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -366,7 +366,7 @@
                <valueString value="Schoondochter"/>
             </extension>
             <code value="1258961002"/>
-            <display value="Daughter-in-law"/>
+            <display value="Schoondochter"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -391,7 +391,7 @@
                <valueString value="Partner"/>
             </extension>
             <code value="262043009"/>
-            <display value="Partner in relationship"/>
+            <display value="Levenspartner"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -416,7 +416,7 @@
                <valueString value="Geregistreerd partner"/>
             </extension>
             <code value="414043009"/>
-            <display value="Domestic partner"/>
+            <display value="Geregistreerde partner"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -466,7 +466,7 @@
                <valueString value="Vader"/>
             </extension>
             <code value="66839005"/>
-            <display value="Father"/>
+            <display value="Vader"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -491,7 +491,7 @@
                <valueString value="Schoonvader"/>
             </extension>
             <code value="5171000124108"/>
-            <display value="Father-in-law"/>
+            <display value="Schoonvader"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -516,7 +516,7 @@
                <valueString value="Pleegdochter"/>
             </extension>
             <code value="31831004"/>
-            <display value="Foster daughter"/>
+            <display value="Pleegdochter"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -541,7 +541,7 @@
                <valueString value="Pleegvaderh"/>
             </extension>
             <code value="8458002"/>
-            <display value="Foster father"/>
+            <display value="Pleegvader"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -566,7 +566,7 @@
                <valueString value="Pleegmoeder"/>
             </extension>
             <code value="38265003"/>
-            <display value="Foster mother"/>
+            <display value="Pleegmoeder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -591,7 +591,7 @@
                <valueString value="Pleegzoon"/>
             </extension>
             <code value="12241003"/>
-            <display value="Foster son"/>
+            <display value="Pleegzoon"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -616,7 +616,7 @@
                <valueString value="Pleegkind (x)"/>
             </extension>
             <code value="39062003"/>
-            <display value="Foster child"/>
+            <display value="Pleegkind"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -641,7 +641,7 @@
                <valueString value="Pleegouder (x)"/>
             </extension>
             <code value="90921004"/>
-            <display value="Foster parent"/>
+            <display value="Pleegouder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -666,7 +666,7 @@
                <valueString value="Vriend(in)/kennis"/>
             </extension>
             <code value="48385004"/>
-            <display value="Acquaintance"/>
+            <display value="Kennis"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -691,7 +691,7 @@
                <valueString value="Kleinkind (x)"/>
             </extension>
             <code value="86372007"/>
-            <display value="Grandchild"/>
+            <display value="Kleinkind"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -716,7 +716,7 @@
                <valueString value="Kleindochter"/>
             </extension>
             <code value="44181008"/>
-            <display value="Granddaughter"/>
+            <display value="Kleindochter"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -741,7 +741,7 @@
                <valueString value="Opa"/>
             </extension>
             <code value="34871008"/>
-            <display value="Grandfather"/>
+            <display value="Grootvader"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -766,7 +766,7 @@
                <valueString value="Oma"/>
             </extension>
             <code value="113157001"/>
-            <display value="Grandmother"/>
+            <display value="Grootmoeder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -791,7 +791,7 @@
                <valueString value="Grootouder (x)"/>
             </extension>
             <code value="38312007"/>
-            <display value="Grandparent"/>
+            <display value="Grootouder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -816,7 +816,7 @@
                <valueString value="Kleinzoon"/>
             </extension>
             <code value="70578009"/>
-            <display value="Grandson"/>
+            <display value="Kleinzoon"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -841,7 +841,7 @@
                <valueString value="Overgrootvader"/>
             </extension>
             <code value="50261002"/>
-            <display value="Great grandfather"/>
+            <display value="Overgrootvader"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -866,7 +866,7 @@
                <valueString value="Overgrootmoeder"/>
             </extension>
             <code value="78652007"/>
-            <display value="Great grandmother"/>
+            <display value="Overgrootmoeder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -891,7 +891,7 @@
                <valueString value="Echtgenoot"/>
             </extension>
             <code value="127849001"/>
-            <display value="Husband"/>
+            <display value="Echtgenoot"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -916,7 +916,7 @@
                <valueString value="Moeder"/>
             </extension>
             <code value="72705000"/>
-            <display value="Mother"/>
+            <display value="Moeder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -941,7 +941,7 @@
                <valueString value="Schoonmoeder"/>
             </extension>
             <code value="5181000124106"/>
-            <display value="Mother-in-law"/>
+            <display value="Schoonmoeder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -966,7 +966,7 @@
                <valueString value="Buur"/>
             </extension>
             <code value="427568008"/>
-            <display value="Neighbor"/>
+            <display value="Buurman of buurvrouw"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -991,7 +991,7 @@
                <valueString value="Neef, zoon van broer/zus"/>
             </extension>
             <code value="47801002"/>
-            <display value="Male cousin"/>
+            <display value="Neef"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1016,7 +1016,7 @@
                <valueString value="Nicht, dochter van broer/zus"/>
             </extension>
             <code value="2959006"/>
-            <display value="Female cousin"/>
+            <display value="Nicht"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1041,7 +1041,7 @@
                <valueString value="Ouder (x)"/>
             </extension>
             <code value="40683002"/>
-            <display value="Parent"/>
+            <display value="Ouder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1066,7 +1066,7 @@
                <valueString value="Schoonouder (x)"/>
             </extension>
             <code value="5161000124101"/>
-            <display value="Parent in-law"/>
+            <display value="Schoonouder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1091,7 +1091,7 @@
                <valueString value="Huisgenoot"/>
             </extension>
             <code value="300521000146102"/>
-            <display value="Roommate"/>
+            <display value="Huisgenoot"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1116,7 +1116,7 @@
                <valueString value="Kind van hetzelfde ouderpaar (x)"/>
             </extension>
             <code value="375005"/>
-            <display value="Sibling"/>
+            <display value="Broer of zus"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1141,7 +1141,7 @@
                <valueString value="Zus"/>
             </extension>
             <code value="27733009"/>
-            <display value="Sister"/>
+            <display value="Zus"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1169,7 +1169,7 @@
                <valueString value="Schoonzus"/>
             </extension>
             <code value="300471000146104"/>
-            <display value="Sister-in-law"/>
+            <display value="Schoonzus"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1194,7 +1194,7 @@
                <valueString value="Zoon"/>
             </extension>
             <code value="65616008"/>
-            <display value="Son"/>
+            <display value="Zoon"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1219,7 +1219,7 @@
                <valueString value="Schoonzoon"/>
             </extension>
             <code value="1258960001"/>
-            <display value="Son-in-law"/>
+            <display value="Schoonzoon"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1244,7 +1244,7 @@
                <valueString value="Huwelijkspartner"/>
             </extension>
             <code value="127848009"/>
-            <display value="Spouse"/>
+            <display value="Echtgenoot of echtgenote"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1269,7 +1269,7 @@
                <valueString value="Stiefbroer"/>
             </extension>
             <code value="76087000"/>
-            <display value="Stepbrother"/>
+            <display value="Stiefbroer"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1294,7 +1294,7 @@
                <valueString value="Stiefkind"/>
             </extension>
             <code value="86764008"/>
-            <display value="Stepchild"/>
+            <display value="Stiefkind"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1319,7 +1319,7 @@
                <valueString value="Stiefdochter"/>
             </extension>
             <code value="22573006"/>
-            <display value="Stepdaughter"/>
+            <display value="Stiefdochter"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1344,7 +1344,7 @@
                <valueString value="Stiefvader"/>
             </extension>
             <code value="30578000"/>
-            <display value="Stepfather"/>
+            <display value="Stiefvader"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1369,7 +1369,7 @@
                <valueString value="Stiefmoeder"/>
             </extension>
             <code value="65412001"/>
-            <display value="Stepmother"/>
+            <display value="Stiefmoeder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1394,7 +1394,7 @@
                <valueString value="Stiefouder (x)"/>
             </extension>
             <code value="74128007"/>
-            <display value="Stepparent"/>
+            <display value="Stiefouder"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1419,7 +1419,7 @@
                <valueString value="Stiefbroer of stiefzus (x)"/>
             </extension>
             <code value="88510002"/>
-            <display value="Stepsibling"/>
+            <display value="Stiefbroer of stiefzus"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1444,7 +1444,7 @@
                <valueString value="Stiefzus"/>
             </extension>
             <code value="46363003"/>
-            <display value="Stepsister"/>
+            <display value="Stiefzus"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1469,7 +1469,7 @@
                <valueString value="Stiefzoon"/>
             </extension>
             <code value="8674003"/>
-            <display value="Stepson"/>
+            <display value="Stiefzoon"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1494,7 +1494,7 @@
                <valueString value="Oom"/>
             </extension>
             <code value="38048003"/>
-            <display value="Uncle"/>
+            <display value="Oom"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -1519,7 +1519,7 @@
                <valueString value="Echtgenote"/>
             </extension>
             <code value="127850001"/>
-            <display value="Wife"/>
+            <display value="Echtgenote"/>
             <designation>
                <language value="en-US"/>
                <use>
