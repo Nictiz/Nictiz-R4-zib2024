@@ -326,9 +326,8 @@
       <sliceName value="deceasedDateTime" />
       <short value="DateOfDeath" />
       <definition value="The date on which the patient died. A ‘vague’ date, such as only the year, is permitted." />
-      <comment value="The zib recognizes both the DeathIndicator (boolean) and DateOfDeath (datetime) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if deceasedDateTime is present and has a value, its value can be mapped to DateOfDeath and DeathIndicator is assumed to be true." />
+      <comment value="The zib recognizes both the DeathIndicator (boolean) and DateOfDeath (dateTime) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if `.deceasedDateTime` is present and has a value, its value can be mapped to DateOfDeath, and DeathIndicator is assumed to be _true_." />
       <alias value="DatumOverlijden" />
-      <alias value="OverlijdensIndicator" />
       <type>
         <code value="dateTime" />
       </type>
@@ -340,7 +339,7 @@
       <mapping>
         <identity value="zib-patient-v4.3-2024EN" />
         <map value="NL-CM:0.1.32" />
-        <comment value="DeathIndicator" />
+        <comment value="DeathIndicator (implicit, main mapping is on Patient.multipleBirthBoolean)" />
       </mapping>
     </element>
     <element id="Patient.address">
@@ -409,6 +408,7 @@
       <sliceName value="multipleBirthInteger" />
       <short value="MultipleBirthSequence" />
       <definition value="The birth number in the sequence of a multiple birth. The first birth is given value 1. The middle birth in a triplet birth would be given value 2 and the third birth would have value 3. If multiple birth order is filled then the value of the MultipleIndicator must be &quot;True&quot;." />
+      <comment value="The zib recognizes both the MultipleBirthIndicator (boolean) and MultipleBirthSequence (integer) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if `.multipleBirthInteger` is present and has a value, its value can be mapped to MultipleBirthSequence, and MultipleBirthIndicator is assumed to be _true_." />
       <alias value="Meerlingvolgorde" />
       <type>
         <code value="integer" />
@@ -421,7 +421,7 @@
       <mapping>
         <identity value="zib-patient-v4.3-2024EN" />
         <map value="NL-CM:0.1.31" />
-        <comment value="MultipleBirthIndicator" />
+        <comment value="MultipleBirthIndicator (implicit, main mapping is on Patient.multipleBirthBoolean)" />
       </mapping>
     </element>
     <element id="Patient.contact">
