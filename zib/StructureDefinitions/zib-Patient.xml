@@ -591,7 +591,7 @@
       <sliceName value="languageControl" />
       <short value="LanguageControlListening / LanguageControlSpeaking / LanguageControlReading" />
       <definition value="The ability to understand spoken text in the language in question.&#xD;&#xA;The ability to express oneself in spoken language.&#xD;&#xA;The ability to understand written text in he language in question." />
-      <comment value="The zib concepts LanguageControlListening, LanguageControlReading, LanguageControlSpeaking are captured using a core extension from the R4 FHIR specification. Each of these three concepts is encoded as a copy of the extension, typed using the code in the type slice according to the following mapping:&#xD;&#xA;* LanguageControlListening maps to code 'RSP' (Received spoken)&#xD;&#xA;* LanguageControlReading maps to code 'RWR' (Received written)&#xD;&#xA;* LanguageControlSpeaking maps to code 'ESP' (Expressed spoken)" />
+      <comment value="The zib concepts LanguageControlListening, LanguageControlReading, LanguageControlSpeaking are captured using a core extension from the R4 FHIR specification. Each of these three concepts is encoded as a copy of the extension, typed using the code in the type slice according to the following mapping:&#xD;&#xA;* LanguageControlListening maps to code _RSP_ (Received spoken)&#xD;&#xA;* LanguageControlReading maps to code _RWR_ (Received written)&#xD;&#xA;* LanguageControlSpeaking maps to code _ESP_ (Expressed spoken)" />
       <alias value="TaalvaardigheidBegrijpen" />
       <alias value="TaalvaardigheidSpreken" />
       <alias value="TaalvaardigheidLezen" />
@@ -629,6 +629,7 @@
       <comment value="The zib ValueSets TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidSprekenCodelijst and TaalvaardigheidLezenCodelijst are equal to the default FHIR ValueSet." />
       <binding>
         <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.12.3--20240415000000" />
       </binding>
     </element>
     <element id="Patient.communication.extension:languageControl.extension:type">
