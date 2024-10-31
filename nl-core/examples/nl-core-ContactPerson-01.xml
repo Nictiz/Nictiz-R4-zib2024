@@ -11,9 +11,14 @@
         <a href="tel:+31611234567">+31611234567</a> (Tel), <a href="mailto:giesput@myweb.nl">giesput@myweb.nl</a> (E-mail Werk)</div>
       <div>1e Jacob van Campenstr 15, 1012 NX Hoogmade Kaag en Braassem, Nederland (Privé Post / Bezoek)</div>
       <div>
-        <span title="Eerste contactpersoon (300481000146102 - SNOMED CT)">Eerste contactpersoon</span>, <span title="Dochter (66089001 - SNOMED CT)">Dochter</span> van </div>
+        <span title="Eerste contactpersoon (300481000146102 - SNOMED CT)">Eerste contactpersoon</span>, <span title="Dochter (66089001 - SNOMED CT)">Dochter</span> van Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen</div>
     </div>
   </text>
+  <patient>
+    <reference value="Patient/nl-core-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </patient>
   <relationship>
     <coding>
       <system value="http://snomed.info/sct"/>
