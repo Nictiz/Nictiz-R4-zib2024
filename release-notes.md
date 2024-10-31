@@ -6,7 +6,8 @@
 * `ContactPoint` ; textual ; Added guidance for NumberType ; ZIB-1652
 * `.extension:comment` ; extension ; Replaced extension ExtComment with ContactPointComment on zib-ContactInformation-TelephoneNumbers ; ZIBFHIR-97
 * `.extension:purpose` ; extension ; Added ContactPointPurpose for NumberType ; ZIBFHIR-129
-* `.use` ; terminology ; Added guidance for mapping of _EC_ in ConceptMap NummerSoortCodelijst-to-ContactInformation-TelephoneNumbersUse ; ZIB-1652 
+* `.use` ; terminology ; Added guidance for mapping of _EC_ in ConceptMap NummerSoortCodelijst-to-ContactInformation-TelephoneNumbersUse ; ZIB-1652
+
 ### zib-ContactInformation-EmailAddresses, nl-core-ContactInformation-EmailAddresses
 * No significant changes
 
@@ -22,3 +23,8 @@
 
 ### zib-NameInformation.GivenName, nl-core-NameInformation.GivenName
 * No significant changes
+
+## Patient (zib-Patient)
+* `.extension:genderIdentity.value[x]` ; extension ; Added GenderIdentity for GenderIdentity ; ZIB-1693
+* `.gender` ; terminology ; Added guidance in GeslachtCodelijst-to-AdministrativeGender ConceptMap ; ZIB-1239
+* `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence ; ZIB-1670

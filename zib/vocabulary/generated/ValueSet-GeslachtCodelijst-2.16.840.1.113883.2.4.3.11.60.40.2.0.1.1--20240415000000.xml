@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.20.6.2--20240415000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20240415000000"/>
    <meta>
       <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
@@ -18,15 +18,15 @@
          <start value="2024-04-15T00:00:00+00:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.2--20240415000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20240415000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.20.6.2"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1"/>
    </identifier>
    <version value="2024-04-15T00:00:00"/>
-   <name value="NummerSoortCodelijst"/>
-   <title value="NummerSoortCodelijst"/>
+   <name value="GeslachtCodelijst"/>
+   <title value="GeslachtCodelijst"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
@@ -41,11 +41,27 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="NummerSoortCodelijst"/>
+   <description value="GeslachtCodelijst"/>
    <immutable value="false"/>
    <compose>
       <include>
          <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Onbekend, Genderneutraal, X"/>
+            </extension>
+            <code value="UNK"/>
+            <display value="Unknown"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Unknown"/>
+            </designation>
+         </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                <valueString value="Anders"/>
@@ -55,13 +71,13 @@
          </concept>
       </include>
       <include>
-         <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Privé telefoonnummer"/>
+               <valueString value="Ongedifferentieerd"/>
             </extension>
-            <code value="HP"/>
-            <display value="Primary Home"/>
+            <code value="UN"/>
+            <display value="Undifferentiated"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -69,15 +85,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Primary Home"/>
+               <value value="Undifferentiated"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Tijdelijk telefoonnummer"/>
+               <valueString value="Man"/>
             </extension>
-            <code value="TMP"/>
-            <display value="Temporary Address"/>
+            <code value="M"/>
+            <display value="Male"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -85,15 +101,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Temporary Address"/>
+               <value value="Male"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Zakelijk telefoonnummer"/>
+               <valueString value="Vrouw, V"/>
             </extension>
-            <code value="WP"/>
-            <display value="Work Place"/>
+            <code value="F"/>
+            <display value="Female"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -101,23 +117,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Work Place"/>
-            </designation>
-         </concept>
-         <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Spoednummer"/>
-            </extension>
-            <code value="EC"/>
-            <display value="Emergencycontact"/>
-            <designation>
-               <language value="en-US"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="Emergencycontact"/>
+               <value value="Female"/>
             </designation>
          </concept>
       </include>
