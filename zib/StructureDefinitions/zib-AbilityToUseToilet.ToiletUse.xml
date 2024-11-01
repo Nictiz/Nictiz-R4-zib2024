@@ -17,13 +17,13 @@
     </telecom>
   </contact>
   <description value="Coordinating and realizing urination or defecation, such as indicating the need, getting into the right position, finding and reaching a suitable spot, manipulating clothing before and after urination, and cleaning up (the body) afterwards." />
-  <purpose value="This Observation resource represents the ToiletUse concept (NL-CM:4.22.6) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) AbilityToUseToilet v3.1.1 (2020)](https://zibs.nl/wiki/AbilityToUseToilet-v3.1.1(2020EN))." />
+  <purpose value="This Observation resource represents the ToiletUse concept (NL-CM:4.22.6) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) AbilityToUseToilet v3.1.1 (2024)](https://zibs.nl/wiki/AbilityToUseToilet-v3.1.1(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-abilitytousetoilet-v3.1.1-2020EN" />
-    <uri value="https://zibs.nl/wiki/AbilityToUseToilet-v3.1.1(2020EN)" />
-    <name value="zib AbilityToUseToilet-v3.1.1(2020EN)" />
+    <identity value="zib-abilitytousetoilet-v3.1.1-2024EN" />
+    <uri value="https://zibs.nl/wiki/AbilityToUseToilet-v3.1.1(2024EN)" />
+    <name value="zib AbilityToUseToilet-v3.1.1(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -57,7 +57,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.22.4--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-abilitytousetoilet-v3.1.1-2020EN" />
+        <identity value="zib-abilitytousetoilet-v3.1.1-2024EN" />
         <map value="NL-CM:4.22.6" />
         <comment value="ToiletUse" />
       </mapping>
