@@ -10,3 +10,9 @@ issues should occur: true
 # These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
 
 issues should occur: false
+
+zib-AbilityToUseToilet:
+  zib deviations:
+      Observation:
+      - short: AbilityToUseToilet instead of ToiletUseAbility
+        reason: The root of the zib is called "ToiletUseAbility" (which is incorrect), even though the zib itself is called "AbilityToUseToilet".
