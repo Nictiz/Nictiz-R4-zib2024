@@ -62,6 +62,21 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
       </type>
     </element>
+    <element id="Encounter.participant:responsibleHealthProfessional">
+      <path value="Encounter.participant" />
+      <sliceName value="responsibleHealthProfessional" />
+    </element>
+    <element id="Encounter.participant:responsibleHealthProfessional.individual">
+      <path value="Encounter.participant.individual" />
+      <short value="Persons involved in the encounter other than the patient" />
+      <definition value="Persons involved in the encounter other than the patient." />
+      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+      </type>
+    </element>
     <element id="Encounter.reasonReference:problem">
       <path value="Encounter.reasonReference" />
       <sliceName value="problem" />

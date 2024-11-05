@@ -4,9 +4,31 @@
 
 issues should occur: true
 
+pattern-NlCoreHealthProfessionalReference:
+  ignored issues:
+    StructureDefinition:
+      - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
+        reason: The title is shown in the hosting profiles as the name of the datatype. "zib HealthProfessional Reference" is more descriptive than the title according to the profiling guidelines ("pattern NlCoreHealthProfessionalReference").
+
+pattern-ZibHealthProfessionalReference:
+  ignored issues:
+    StructureDefinition:
+      - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
+        reason: The title is shown in the hosting profiles as the name of the datatype. "zib HealthProfessional Reference" is more descriptive than the title according to the profiling guidelines ("pattern ZibHealthProfessionalReference").
+
+
 ---
 # The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
 # shortcomings in tooling, the used terminology server, etc.
 # These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
 
 issues should occur: false
+
+zib-Encounter:
+  ignored issues:
+    Encounter.participant:healthProfessional.individual:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice."
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
+    Encounter.participant:responsibleHealthProfessional.individual:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice."
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
