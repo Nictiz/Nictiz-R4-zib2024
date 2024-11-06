@@ -16,8 +16,8 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This extension provides a method to extend the LanguageProficiency profile with a comment element." />
-  <purpose value="This extension represents the Comment concept (NL-CM:7.12.5) of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) LanguageProficiency v4.0 (2024)](https://zibs.nl/wiki/LanguageProficiency-v4.0(2024EN))." />
+  <description value="An extension to provide a comment on the linguistic proficiency. When using sign language, this field can be used to clarify, for example, which sign language is used. This can be informative, as there is not always a one-to-one relationship between the spoken language and sign language." />
+  <purpose value="This extension represents the Comment concept of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) LanguageProficiency v4.0 (2024)](https://zibs.nl/wiki/LanguageProficiency-v4.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
