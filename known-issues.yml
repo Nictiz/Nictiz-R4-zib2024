@@ -8,10 +8,10 @@ zib-NameInformation:
   zib deviations:
     HumanName.prefix:
       - cardinality: 0..* instead of 0..1
-        reason: Both prefix and suffix are mapped to the "titles" concept from the zib. There's a mismatch however in the way this information is represented in the zib and in FHIR. The mapping is documented in the profile.
+        reason: Both prefix and suffix are mapped to the Titles concept from the zib. There's a mismatch however in the way this information is represented in the zib and in FHIR. The mapping is documented in the profile.
     HumanName.suffix:
       - cardinality: 0..* instead of 0..1
-        reason: Both prefix and suffix are mapped to the "titles" concept from the zib. There's a mismatch however in the way this information is represented in the zib and in FHIR. The mapping is documented in the profile.
+        reason: Both prefix and suffix are mapped to the Titles concept from the zib. There's a mismatch however in the way this information is represented in the zib and in FHIR. The mapping is documented in the profile.
     HumanName.given:
       - short: FirstName / Initial
         reason: The zib defines both the complete list of first names and of initials as a single string. In FHIR this is done fundamentally different, by using separate names. Hence, the short has been changed to the singular form.
