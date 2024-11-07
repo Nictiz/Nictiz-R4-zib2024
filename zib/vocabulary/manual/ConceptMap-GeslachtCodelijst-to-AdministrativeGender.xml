@@ -25,7 +25,6 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <targetCanonical value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
   <group>
-    <!-- 2.16.840.1.113883.5.1 -->
     <source value="http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"/>
     <target value="http://hl7.org/fhir/administrative-gender"/>
     <element>
@@ -52,7 +51,6 @@
     </element>
   </group>
   <group>
-    <!-- 2.16.840.1.113883.5.1008 -->
     <source value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
     <target value="http://hl7.org/fhir/administrative-gender"/>
     <element>

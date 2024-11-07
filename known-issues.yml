@@ -20,7 +20,7 @@ zib-Patient:
         reason: The name information according to zib NameInformation may be split up over multiple instances of Patient.name.
     Patient.telecom*:
       - datatype: ContactPoint instead of a reference
-        reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
     Patient.telecom:
       - cardinality: 0..* instead of 0..1
         for: NL-CM:0.1.5 (Patient.ContactInformation)
