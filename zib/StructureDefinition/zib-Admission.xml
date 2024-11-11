@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-Admission" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/Zib-Admission" />
+  <name value="ZibAdmission" />
+  <title value="zib Admission" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="The stay of a patient or client in a healthcare facility in the context of a (partial) admission or emergency room visit. A (partial) admission is the entire or partial stay of a patient or client in a department equipped for nursing in a health care institution, for example, an inpatient ward, day care unit, emergency care, or observatory. This HCIM therefore applies to a whole admission, part of an admission, or emergency room visit in both past and present." />
+  <purpose value="This Admission resource represents the Dutch [zib (&amp;#39;Zorginformatiebouwsteen&amp;#39;, i.e. Health and Care Information Model) Admission v2.0 (2024)](https://zibs.nl/wiki/Admission-v2.0(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-admission-v2.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/Admission-v2.0(2024EN)" />
+    <name value="zib Admission-v2.0(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+  <derivation value="constraint" />
+</StructureDefinition>
