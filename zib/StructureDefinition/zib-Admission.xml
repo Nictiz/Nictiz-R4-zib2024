@@ -1,31 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-Admission" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/Zib-Admission" />
-  <name value="ZibAdmission" />
-  <title value="zib Admission" />
-  <status value="draft" />
-  <publisher value="Nictiz" />
+  <id value="zib-Admission"/>
+  <text>
+    <status value="empty"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/Zib-Admission"/>
+  <name value="ZibAdmission"/>
+  <title value="zib Admission"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
   <contact>
-    <name value="Nictiz" />
+    <name value="Nictiz"/>
     <telecom>
-      <system value="url" />
-      <value value="https://www.nictiz.nl" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="https://www.nictiz.nl"/>
+      <use value="work"/>
     </telecom>
   </contact>
-  <description value="The stay of a patient or client in a healthcare facility in the context of a (partial) admission or emergency room visit. A (partial) admission is the entire or partial stay of a patient or client in a department equipped for nursing in a health care institution, for example, an inpatient ward, day care unit, emergency care, or observatory. This HCIM therefore applies to a whole admission, part of an admission, or emergency room visit in both past and present." />
-  <purpose value="This Admission resource represents the Dutch [zib (&amp;#39;Zorginformatiebouwsteen&amp;#39;, i.e. Health and Care Information Model) Admission v2.0 (2024)](https://zibs.nl/wiki/Admission-v2.0(2024EN))." />
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-  <fhirVersion value="4.0.1" />
+  <description value="The stay of a patient or client in a healthcare facility in the context of a (partial) admission or emergency room visit. A (partial) admission is the entire or partial stay of a patient or client in a department equipped for nursing in a health care institution, for example, an inpatient ward, day care unit, emergency care, or observatory. This HCIM therefore applies to a whole admission, part of an admission, or emergency room visit in both past and present."/>
+  <purpose value="This Admission resource represents the Dutch [zib (&amp;#39;Zorginformatiebouwsteen&amp;#39;, i.e. Health and Care Information Model) Admission v2.0 (2024)](https://zibs.nl/wiki/Admission-v2.0(2024EN))."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+  <fhirVersion value="4.0.1"/>
   <mapping>
-    <identity value="zib-admission-v2.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/Admission-v2.0(2024EN)" />
-    <name value="zib Admission-v2.0(2024EN)" />
+    <identity value="zib-admission-v2.0-2024EN"/>
+    <uri value="https://zibs.nl/wiki/Admission-v2.0(2024EN)"/>
+    <name value="zib Admission-v2.0(2024EN)"/>
   </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Encounter" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
-  <derivation value="constraint" />
+  <kind value="resource"/>
+  <abstract value="true"/>
+  <type value="Encounter"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Encounter.serviceType">
+      <path value="Encounter.serviceType"/>
+      <short value="CareType"/>
+      <definition value="The type of care that has been or will be provided to the patient during the (partial) admission. This is related, among other things, to the severity category of the care."/>
+      <alias value="ZorgType"/>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.2"/>
+        <comment value="CareType"/>
+      </mapping>
+    </element>
+    <element id="Encounter.period.start">
+      <path value="Encounter.period.start"/>
+      <short value="StartDateTime"/>
+      <definition value="Date and time when the (partial) admission will start or was started."/>
+      <alias value="BeginDatumTijd"/>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.3"/>
+        <comment value="StartDateTime"/>
+      </mapping>
+    </element>
+    <element id="Encounter.period.end">
+      <path value="Encounter.period.end"/>
+      <short value="EndDateTime"/>
+      <definition value="Date and time on which the (partial) admission ended. For a future or ongoing admission, the end date can be empty."/>
+      <alias value="EindDatumTijd"/>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.4"/>
+        <comment value="EndDateTime"/>
+      </mapping>
+    </element>
+    <element id="Encounter.reasonCode">
+      <path value="Encounter.reasonCode"/>
+      <short value="TiggerForAdmission"/>
+      <definition value="The specific reason for the admission in relation to the diagnosis and/or treatment of the problem."/>
+      <alias value="AanleidingOpname"/>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.7"/>
+        <comment value="TiggerForAdmission"/>
+      </mapping>
+    </element>
+    <element id="Encounter.reasonReference">
+      <path value="Encounter.reasonReference"/>
+      <short value="Problem"/>
+      <definition value="The main problem to which the (partial) admission relates."/>
+      <alias value="Probleem"/>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.6"/>
+        <comment value="Problem"/>
+      </mapping>
+    </element>
+    <element id="Encounter.hospitalization.admitSource">
+      <path value="Encounter.hospitalization.admitSource"/>
+      <short value="Origin"/>
+      <definition value="Location where the patient comes from prior to the (partial) admission. This will mainly be used at the start of hospitalisation."/>
+      <alias value="Herkomst"/>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.9"/>
+        <comment value="Origin"/>
+      </mapping>
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition">
+      <path value="Encounter.hospitalization.dischargeDisposition"/>
+      <short value="Destination"/>
+      <definition value="Location where the patient will go after the (partial) admission. This will mainly be used at the end of hospitalization."/>
+      <alias value="Bestemming"/>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.10"/>
+        <comment value="Destination"/>
+      </mapping>
+    </element>
+    <element id="Encounter.location.location">
+      <path value="Encounter.location.location"/>
+      <short value="CareFacility"/>
+      <definition value="The physical location of the healthcare provider where the (partial) admission has taken place or will take place."/>
+      <alias value="ZorgInstelling"/>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.13"/>
+        <comment value="CareFacility"/>
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>
