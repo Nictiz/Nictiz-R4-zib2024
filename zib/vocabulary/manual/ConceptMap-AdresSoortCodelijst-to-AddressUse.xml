@@ -31,7 +31,7 @@
             <code value="PST"/>
             <target>
                 <equivalence value="unmatched"/>
-                <comment value="PST: Postal Address/Postadres. Use Address.type = 'postal'."/>
+                <comment value="Postal address. Use Address.type = 'postal'."/>
             </target>
         </element>
         <element>
@@ -39,7 +39,7 @@
             <target>
                 <code value="home"/>
                 <equivalence value="subsumes"/>
-                <comment value="HP: Primary Home/Officieel adres. A communication address at a home. Use in conjunction with Address.type = 'both'."/>
+                <comment value="Primary home. A communication address at a home. Use in conjunction with Address.type = 'both'."/>
             </target>
         </element>
         <element>
@@ -47,7 +47,7 @@
             <target>
                 <code value="home"/>
                 <equivalence value="subsumes"/>
-                <comment value="PHYS: Visit Address/Woon-/verblijfadres. A communication address at a home. Use in conjunction with Address.type = 'physical'."/>
+                <comment value="Visit address. A communication address at a home. Use in conjunction with Address.type = 'physical'."/>
             </target>
         </element>
         <element>
@@ -69,7 +69,7 @@
             <target>
                 <code value="temp"/>
                 <equivalence value="wider"/>
-                <comment value="HV: Vacation Home/Vakantieadres. A physical address that can be visited, but is only used temporarily."/>
+                <comment value="Vacation home. A physical address that can be visited, but is only used temporarily."/>
             </target>
         </element>
     </group>
