@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-AddressInformation" />
   <text>
-    <status value="empty" />
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />
   <name value="ZibAddressInformation" />
   <title value="zib AddressInformation" />
@@ -177,7 +175,7 @@
       <path value="Address.line.extension.value[x]" />
       <short value="HouseNumberIndication" />
       <definition value="The indication used for addresses which do not consist of the usual street name and house number." />
-      <comment value="The mapping of zib AddressInformation on the FHIR Address datatype is the result of compatibility with HL7v3, which is the format that a lot of healthcare data in the Netherlands is stored in. As a result of this, the coded zib HouseNumberIndication concept (CD datatype) is mapped to a FHIR string datatype. &#xD;&#xA;&#xD;&#xA;This element is populated as follows:&#xD;&#xA;* If the HouseNumberIndication has value _by_ or _to_, that value is used.&#xD;&#xA;* If the HouseNumberIndication has value _OTH_&#xD;&#xA;  * and the actual value associated with _OTH_ is known, the actual value is used.&#xD;&#xA;  * and the actual value associated with _OTH_ is not known, _OTH_ is used." />
+      <comment value="The mapping of zib AddressInformation on the FHIR Address datatype is the result of compatibility with HL7v3, which is the format that a lot of healthcare data in the Netherlands is stored in. As a result of this, the coded zib HouseNumberIndication concept (CD datatype) is mapped to a FHIR string datatype. &#xD;&#xA;&#xD;&#xA;This element is populated as follows:&#xD;&#xA;&#xD;&#xA;* If the HouseNumberIndication has value _by_ or _to_, that value is used.&#xD;&#xA;* If the HouseNumberIndication has value _OTH_&#xD;&#xA;  * and the actual value associated with _OTH_ is known, the actual value is used.&#xD;&#xA;  * and the actual value associated with _OTH_ is not known, _OTH_ is used." />
       <alias value="AanduidingBijNummer" />
       <mapping>
         <identity value="zib-addressinformation-v1.2-2024EN" />
