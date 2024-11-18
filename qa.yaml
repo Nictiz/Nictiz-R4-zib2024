@@ -26,7 +26,7 @@ patterns:
   - zib/vocabulary/**/*.xml
   - nl-core/vocabulary/**/*.xml
   SearchParameters: nl-core/SearchParameters/*.xml
-  examples: nl-core/examples/*.xml
+  examples: examples/*.xml
   release notes: release-notes.md
 
 steps:
