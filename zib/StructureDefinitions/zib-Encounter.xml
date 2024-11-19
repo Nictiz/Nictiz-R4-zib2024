@@ -58,7 +58,7 @@
       <mapping>
         <identity value="zib-encounter-v6.0-2024EN" />
         <map value="NL-CM:15.1.3" />
-        <comment value="DateTime (implicit, main mapping is on `Encounter.period`)" />
+        <comment value="DateTime (implicit, main mapping is on Encounter.period.start)" />
       </mapping>
     </element>
     <element id="Encounter.class">
