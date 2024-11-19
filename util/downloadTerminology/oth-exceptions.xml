@@ -1,0 +1,11 @@
+<!--
+    List of ValueSet URLs where OTH should be removed.
+    These ValueSets contain OTH in ART-DECOR due to a bug in the zib tooling where it cannot always be specified
+    precisely if OTH should be present or not.
+    See https://nictiz.atlassian.net/browse/ZIBFHIR2024-338 for a detailed list of ValueSets where OTH should be
+    removed.
+-->
+
+<oth-exceptions>
+    <url></url>
+</oth-exceptions>

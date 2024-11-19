@@ -6,11 +6,18 @@
     xmlns="http://hl7.org/fhir"
     exclude-result-prefixes="#all"
     version="2.0">
-    
+
     <xd:doc scope="stylesheet">
         <xd:desc>Rewrite downloaded terminology resources where needed.</xd:desc>
     </xd:doc>
     
+    <!-- Load a list of canonical URLs of ValueSets where OTH should be removed -->
+    <xsl:param name="othExceptions" as="xs:string*">
+        <xsl:for-each select="document('oth-exceptions.xml')/oth-exceptions/*">
+            <xsl:value-of select="text()"/>
+        </xsl:for-each>
+    </xsl:param> 
+
     <xsl:template match="node()|@*" mode="rewrite">
         <xsl:copy>
             <xsl:apply-templates select="node()|@*" mode="rewrite"/>
@@ -57,4 +64,9 @@
     <xsl:template match="f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod']/f:valuePeriod/f:start" mode="rewrite">
         <start value="{replace(./@value, '[\+-][0-9]{2}:[0-9]{2}', '+00:00')}"/>
     </xsl:template>
+
+    <!-- Remove 'OTH' concepts if the canonical URL of the ValueSet is in the list. If OTH is the only concept in an include element, remove that altogether. -->
+    <xsl:template match="f:include[count(f:concept) = 1 and f:concept/f:code/@value = 'OTH' and index-of($othExceptions, string(ancestor::f:ValueSet/f:url/@value))]" mode="rewrite"/>
+    <xsl:template match="f:concept[f:code/@value = 'OTH' and index-of($othExceptions, string(ancestor::f:ValueSet/f:url/@value))]" mode="rewrite"/>
+
 </xsl:stylesheet>
