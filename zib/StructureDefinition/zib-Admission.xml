@@ -1,210 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-Admission" />
+  <id value="zib-Admission"/>
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/Zib-Admission" />
-  <name value="ZibAdmission" />
-  <title value="zib Admission" />
-  <status value="draft" />
-  <publisher value="Nictiz" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Admission"/>
+  <name value="ZibAdmission"/>
+  <title value="zib Admission"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
   <contact>
-    <name value="Nictiz" />
+    <name value="Nictiz"/>
     <telecom>
-      <system value="url" />
-      <value value="https://www.nictiz.nl" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="https://www.nictiz.nl"/>
+      <use value="work"/>
     </telecom>
   </contact>
-  <description value="The stay of a patient or client in a healthcare facility in the context of a (partial) admission or emergency room visit. A (partial) admission is the entire or partial stay of a patient or client in a department equipped for nursing in a health care institution, for example, an inpatient ward, day care unit, emergency care, or observatory. This HCIM therefore applies to a whole admission, part of an admission, or emergency room visit in both past and present." />
-  <purpose value="This Admission resource represents the Dutch [zib (&amp;#39;Zorginformatiebouwsteen&amp;#39;, i.e. Health and Care Information Model) Admission v2.0 (2024)](https://zibs.nl/wiki/Admission-v2.0(2024EN))." />
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-  <fhirVersion value="4.0.1" />
+  <description value="The stay of a patient or client in a healthcare facility in the context of a (partial) admission or emergency room visit. A (partial) admission is the entire or partial stay of a patient or client in a department equipped for nursing in a health care institution, for example, an inpatient ward, day care unit, emergency care, or observatory. This HCIM therefore applies to a whole admission, part of an admission, or emergency room visit in both past and present."/>
+  <purpose value="This Admission resource represents the Dutch [zib (&amp;#39;Zorginformatiebouwsteen&amp;#39;, i.e. Health and Care Information Model) Admission v2.0 (2024)](https://zibs.nl/wiki/Admission-v2.0(2024EN))."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+  <fhirVersion value="4.0.1"/>
   <mapping>
-    <identity value="zib-admission-v2.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/Admission-v2.0(2024EN)" />
-    <name value="zib Admission-v2.0(2024EN)" />
+    <identity value="zib-admission-v2.0-2024EN"/>
+    <uri value="https://zibs.nl/wiki/Admission-v2.0(2024EN)"/>
+    <name value="zib Admission-v2.0(2024EN)"/>
   </mapping>
-  <kind value="resource" />
-  <abstract value="true" />
-  <type value="Encounter" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
-  <derivation value="constraint" />
+  <kind value="resource"/>
+  <abstract value="true"/>
+  <type value="Encounter"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Encounter.status">
-      <path value="Encounter.status" />
-      <comment value="This element is implictly mapped to the zib concepts NL-CM:15.4.3 (StartDateTime) and NL-CM:15.4.4 (EndDateTime). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;When StartDateTime is in the future, .status will usually be set to planned.&#xD;&#xA;When StartDateTime is in the past and EndDateTime is present and in the future, .status will usually be set to in-progress.&#xD;&#xA;When EndDateTime is present and in the past, .status will usually be set to finished.&#xD;&#xA;When EndDateTime is not present, this means it was a point-in-time admission and .status will usually be set to finished.&#xD;&#xA;When a system is unable to infer the status from the StartDateTime and EndDateTime, .status will be set to unknown.&#xD;&#xA;The unknown code is not to be used to convey other statuses. The unknown code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.&#xD;&#xA;&#xD;&#xA;This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." />
+      <path value="Encounter.status"/>
+      <comment value="This element is implictly mapped to the zib concepts NL-CM:15.4.3 (StartDateTime) and NL-CM:15.4.4 (EndDateTime). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;When StartDateTime is in the future, .status will usually be set to planned.&#xD;&#xA;When StartDateTime is in the past and EndDateTime is present and in the future, .status will usually be set to in-progress.&#xD;&#xA;When EndDateTime is present and in the past, .status will usually be set to finished.&#xD;&#xA;When EndDateTime is not present, this means it was a point-in-time admission and .status will usually be set to finished.&#xD;&#xA;When a system is unable to infer the status from the StartDateTime and EndDateTime, .status will be set to unknown.&#xD;&#xA;The unknown code is not to be used to convey other statuses. The unknown code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.&#xD;&#xA;&#xD;&#xA;This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.3" />
-        <comment value="StartDateTime (implicit, main mapping is on Encounter.period.start)" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.3"/>
+        <comment value="StartDateTime (implicit, main mapping is on Encounter.period.start)"/>
       </mapping>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.4" />
-        <comment value="EndDateTime (implicit, main mapping is on Encounter.period.start)" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.4"/>
+        <comment value="EndDateTime (implicit, main mapping is on Encounter.period.start)"/>
       </mapping>
     </element>
     <element id="Encounter.serviceType">
-      <path value="Encounter.serviceType" />
-      <short value="CareType" />
-      <definition value="The type of care that has been or will be provided to the patient during the (partial) admission. This is related, among other things, to the severity category of the care." />
-      <alias value="ZorgType" />
+      <path value="Encounter.serviceType"/>
+      <short value="CareType"/>
+      <definition value="The type of care that has been or will be provided to the patient during the (partial) admission. This is related, among other things, to the severity category of the care."/>
+      <alias value="ZorgType"/>
       <binding>
-        <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.5--20240415000000" />
+        <strength value="extensible"/>
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.5--20240415000000"/>
       </binding>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.2" />
-        <comment value="CareType" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.2"/>
+        <comment value="CareType"/>
       </mapping>
     </element>
     <element id="Encounter.participant">
-      <path value="Encounter.participant" />
+      <path value="Encounter.participant"/>
       <slicing>
         <discriminator>
-          <type value="profile" />
-          <path value="individual.resolve()" />
+          <type value="profile"/>
+          <path value="individual.resolve()"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="Encounter.participant:responsibleHealthProfessional">
-      <path value="Encounter.participant" />
-      <sliceName value="responsibleHealthProfessional" />
-      <max value="1" />
+      <path value="Encounter.participant"/>
+      <sliceName value="responsibleHealthProfessional"/>
+      <max value="1"/>
     </element>
     <element id="Encounter.participant:responsibleHealthProfessional.type">
-      <path value="Encounter.participant.type" />
-      <short value="HealthProfessionalRole" />
-      <definition value="The role the health professional fulfils in the healthcare process. For health professionals, this could be for example attender, referrer or performer." />
-      <alias value="ZorgverlenerRol" />
-      <min value="1" />
-      <max value="1" />
+      <path value="Encounter.participant.type"/>
+      <short value="HealthProfessionalRole"/>
+      <definition value="The role the health professional fulfils in the healthcare process. For health professionals, this could be for example attender, referrer or performer."/>
+      <alias value="ZorgverlenerRol"/>
+      <min value="1"/>
+      <max value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType" />
-          <code value="RESP" />
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+          <code value="RESP"/>
         </coding>
       </patternCodeableConcept>
       <mapping>
-        <identity value="zib-healthprofessional-v4.0-2024EN" />
-        <map value="NL-CM:17.1.5" />
-        <comment value="HealthProfessionalRole" />
+        <identity value="zib-healthprofessional-v4.0-2024EN"/>
+        <map value="NL-CM:17.1.5"/>
+        <comment value="HealthProfessionalRole"/>
       </mapping>
     </element>
-    <element id="Encounter.participant.individual">
-      <path value="Encounter.participant.individual" />
+    <element id="Encounter.participant:responsibleHealthProfessional.individual">
+      <path value="Encounter.participant.individual"/>
+      <short value="ResponsibleHealthProfessional"/>
+      <definition value="The health professional who is responsible during the (partial) admission. The information about the health professional can also include the specialism and role of the health professional."/>
+      <alias value="VerantwoordelijkBehandelaar"/>
       <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole" />
+        <code value="Reference"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole"/>
       </type>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.12" />
-        <comment value="ResponsibleHealthProfessional" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.12"/>
+        <comment value="ResponsibleHealthProfessional"/>
       </mapping>
     </element>
     <element id="Encounter.period.start">
-      <path value="Encounter.period.start" />
-      <short value="StartDateTime" />
-      <definition value="Date and time when the (partial) admission will start or was started." />
-      <alias value="BeginDatumTijd" />
+      <path value="Encounter.period.start"/>
+      <short value="StartDateTime"/>
+      <definition value="Date and time when the (partial) admission will start or was started."/>
+      <alias value="BeginDatumTijd"/>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.3" />
-        <comment value="StartDateTime" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.3"/>
+        <comment value="StartDateTime"/>
       </mapping>
     </element>
     <element id="Encounter.period.end">
-      <path value="Encounter.period.end" />
-      <short value="EndDateTime" />
-      <definition value="Date and time on which the (partial) admission ended. For a future or ongoing admission, the end date can be empty." />
-      <alias value="EindDatumTijd" />
+      <path value="Encounter.period.end"/>
+      <short value="EndDateTime"/>
+      <definition value="Date and time on which the (partial) admission ended. For a future or ongoing admission, the end date can be empty."/>
+      <alias value="EindDatumTijd"/>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.4" />
-        <comment value="EndDateTime" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.4"/>
+        <comment value="EndDateTime"/>
       </mapping>
     </element>
     <element id="Encounter.reasonCode">
-      <path value="Encounter.reasonCode" />
-      <short value="TiggerForAdmission" />
-      <definition value="The specific reason for the admission in relation to the diagnosis and/or treatment of the problem." />
-      <alias value="AanleidingOpname" />
-      <max value="1" />
+      <path value="Encounter.reasonCode"/>
+      <short value="TiggerForAdmission"/>
+      <definition value="The specific reason for the admission in relation to the diagnosis and/or treatment of the problem."/>
+      <alias value="AanleidingOpname"/>
+      <max value="1"/>
       <binding>
-        <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.1--20240415000000" />
+        <strength value="extensible"/>
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.1--20240415000000"/>
       </binding>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.7" />
-        <comment value="TiggerForAdmission" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.7"/>
+        <comment value="TiggerForAdmission"/>
       </mapping>
     </element>
     <element id="Encounter.reasonReference">
-      <path value="Encounter.reasonReference" />
-      <short value="Problem" />
-      <definition value="The main problem to which the (partial) admission relates." />
-      <alias value="Probleem" />
-      <max value="1" />
+      <path value="Encounter.reasonReference"/>
+      <short value="Problem"/>
+      <definition value="The main problem to which the (partial) admission relates."/>
+      <alias value="Probleem"/>
+      <max value="1"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem"/>
       </type>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.6" />
-        <comment value="Problem" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.6"/>
+        <comment value="Problem"/>
       </mapping>
     </element>
     <element id="Encounter.hospitalization.admitSource">
-      <path value="Encounter.hospitalization.admitSource" />
-      <short value="Origin" />
-      <definition value="Location where the patient comes from prior to the (partial) admission. This will mainly be used at the start of hospitalisation." />
-      <alias value="Herkomst" />
+      <path value="Encounter.hospitalization.admitSource"/>
+      <short value="Origin"/>
+      <definition value="Location where the patient comes from prior to the (partial) admission. This will mainly be used at the start of hospitalisation."/>
+      <alias value="Herkomst"/>
       <binding>
-        <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.3--20240415000000" />
+        <strength value="extensible"/>
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.3--20240415000000"/>
       </binding>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.9" />
-        <comment value="Origin" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.9"/>
+        <comment value="Origin"/>
       </mapping>
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition">
-      <path value="Encounter.hospitalization.dischargeDisposition" />
-      <short value="Destination" />
-      <definition value="Location where the patient will go after the (partial) admission. This will mainly be used at the end of hospitalization." />
-      <alias value="Bestemming" />
+      <path value="Encounter.hospitalization.dischargeDisposition"/>
+      <short value="Destination"/>
+      <definition value="Location where the patient will go after the (partial) admission. This will mainly be used at the end of hospitalization."/>
+      <alias value="Bestemming"/>
       <binding>
-        <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.2--20240415000000" />
+        <strength value="extensible"/>
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.2--20240415000000"/>
       </binding>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.10" />
-        <comment value="Destination" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.10"/>
+        <comment value="Destination"/>
       </mapping>
     </element>
     <element id="Encounter.location.location">
-      <path value="Encounter.location.location" />
-      <short value="CareFacility" />
-      <definition value="The physical location of the healthcare provider where the (partial) admission has taken place or will take place." />
-      <alias value="ZorgInstelling" />
+      <path value="Encounter.location.location"/>
+      <short value="CareFacility"/>
+      <definition value="The physical location of the healthcare provider where the (partial) admission has taken place or will take place."/>
+      <alias value="ZorgInstelling"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthcareProvider" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthcareProvider"/>
       </type>
       <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.13" />
-        <comment value="CareFacility" />
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.13"/>
+        <comment value="CareFacility"/>
       </mapping>
     </element>
   </differential>

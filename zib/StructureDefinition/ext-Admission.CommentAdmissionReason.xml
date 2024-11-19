@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ext-Admission.CommentAdmissionReason"/>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ext-Admission.CommentAdmissionReason"/>
+  <name value="ExtAdmissionCommentAdmissionReason"/>
+  <title value="ext Admission.CommentAdmissionReason"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
+  <contact>
+    <name value="Nictiz"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nictiz.nl"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Comment on the reason for the (partial) admission, insofar as this cannot be sufficiently expressed in the other elements."/>
+  <purpose value="This extension represents the CommentAdmissionReason concept (NL-CM:15.4.8) of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Admission v2.0 (2024)](https://zibs.nl/wiki/Admission -v2.0(2024EN))."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="zib-admission-v2.0-2024EN"/>
+    <uri value="https://zibs.nl/wiki/Admission-v2.0(2024EN)"/>
+    <name value="zib Admission-v2.0(2024EN)"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Encounter.reasonCode"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-Admission.CommentAdmissionReason"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <short value="CommentAdmissionReason"/>
+      <definition value="Comment on the reason for the (partial) admission, insofar as this cannot be sufficiently expressed in the other elements."/>
+      <alias value="ToelichtingRedenOpname"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN"/>
+        <map value="NL-CM:15.4.8"/>
+        <comment value="CommentAdmissionReason"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
