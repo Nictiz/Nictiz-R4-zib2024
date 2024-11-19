@@ -5,12 +5,12 @@
 * `.participant:responsibleHealthProfessional.individual` ; mapping ; Added mapping of ResponsibleHealthProfessional::HealthProfessional ; ZIB-1104
 * `.period.start` ; mapping ; Added mapping of StartDateTime ; ZIB-1104
 * `.period.end` ; mapping ; Added mapping of EndDateTime ; ZIB-1104
-* `.reasonReference`; mapping ; Added mapping of Problem ; ZIB-1104
 * `.reasonCode`; mapping ; Added mapping of TriggerForAdmission ; ZIB-1104
 
 * `.reasonCode.text` ; mapping ; Added mapping of CommentAdmissionReason ; ZIB-1104
 * `.reasonCode.extension:commentAdmissionReason` ; mapping ; Added mapping of CommentAdmissionReason ; ZIB-1104
 
+* `.reasonReference`; mapping ; Added mapping of Problem ; ZIB-1104
 * `.hospitalization.admitSource` ; mapping ; Added mapping of Origin ; ZIB-1104
 * `.hospitalization.dischargeDisposition` ; Added mapping of Destination ; ZIB-1104
 * `.extension:AdmissionScope` ; Added mapping of AdmissionScope ; ZIB-1104
