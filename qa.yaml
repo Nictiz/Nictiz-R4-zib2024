@@ -27,6 +27,7 @@ patterns:
   - nl-core/vocabulary/**/*.xml
   SearchParameters: nl-core/SearchParameters/*.xml
   examples: examples/*.xml
+  release notes: release-notes.md
 
 steps:
   validate zib profiles:
@@ -90,3 +91,6 @@ steps:
   check zib mapping inheritance:
     patterns: nl-core profiles
     script: inherit-mapping-declarations.py
+  check release notes:
+    patterns: release notes
+    script: ReleaseNotes.py
