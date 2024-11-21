@@ -6,8 +6,13 @@
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst en LandISOCodelijst). ; ZIB-2218
 
 ## NameInformation
-### zib-NameInformation, nl-core-NameInformation
+### zib-NameInformation
 * No significant changes.
+
+### nl-core-NameInformation
+* All changes from the zib profile.
+* `HumanName` ; constraint ; Renamed nl-core-NameInformation-01 to nl-core-NameInformation-1. ; ZIBFHIR-141
+* `.family` ; constraint ; Renamed nl-core-NameInformation-02 to nl-core-NameInformation-2. ; ZIBFHIR-141
 
 ### zib-NameInformation.GivenName, nl-core-NameInformation.GivenName
 * No significant changes.
