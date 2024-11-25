@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ext-TimeInterval.RelativeStartTime" />
+  <url value="https://example.org/fhir/StructureDefinition/ext-TimeInterval.RelativeStartTime" />
+  <name value="ExtTimeIntervalRelativeStartTime" />
+  <title value="ext TimeInterval.RelativeStartTime" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An extension to provide the RelativeStartTime concept of zib TimeInterval." />
+  <purpose value="This extension can be used to represent the RelativeStartTime concept of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TimeInterval v1.3 (2024)](https://zibs.nl/wiki/TimeInterval-v1.3(2024EN)).&#xD;&#xA;&#xD;&#xA;Please note: this extension should not be added to profiles in isolation, but via either the [zib-TimeInterval](http://nictiz.nl/fhir/StructureDefinition/zib-TimeInterval) profile or the [ext-TimeInterval.Period](http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period) extension. See the documentation on these resources for more information." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-timeinterval-v1.3-2024EN" />
+    <uri value="https://zibs.nl/wiki/TimeInterval-v1.3(2024EN)" />
+    <name value="zib TimeInterval-v1.3(2024EN)" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Period.start" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://example.org/fhir/StructureDefinition/ext-TimeInterval.RelativeStartTime" />
+    </element>
+  </differential>
+</StructureDefinition>
