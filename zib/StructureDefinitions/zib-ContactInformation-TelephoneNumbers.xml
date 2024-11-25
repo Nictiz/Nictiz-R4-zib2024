@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Contact information includes a person's telephone numbers en e-mail addresses." />
+  <description value="The telephone numbers of a person or an organization." />
   <purpose value="This ContactPoint resource represents the TelephoneNumbers concept of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) ContactInformation v1.3.1 (2024)](https://zibs.nl/wiki/ContactInformation-v1.3.1(2024EN)).&#xD;&#xA;&#xD;&#xA;For the entire zib, the complementary profile [zib-ContactInformation-EmailAddresses](http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-EmailAddresses) should be used. Both profiles can be added in a slice with the discriminator set to `profile`/`$this`." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
@@ -34,7 +34,7 @@
     <element id="ContactPoint">
       <path value="ContactPoint" />
       <short value="TelephoneNumbers" />
-      <comment value="Implementation of the TelephoneNumbers concept of zib ContactInformation.&#xD;&#xA;&#xD;&#xA;Please note that, although the zib concepts TelecomType and NumberType are functionally equivalent to the FHIR concepts `ContactPoint.system` and `ContactPoint.use` respectively, a mismatch occurs on the concept of mobile phone numbers; the zib uses the first concept and FHIR the second. For this reason, the ValueSet on `ContactPoint.system` is too narrow and the zib code will need to be communicated using the ext-CodeSpecification extension. &#xD;&#xA;&#xD;&#xA;Moreover, the NumberType contains an emergency contact concept which cannot be cleanly mapped using the ContactPointUse ValueSet on `ContactPoint.use`, as it entails more specific information on a standard work telephone number. While the CodeSpecification extension is typically used for conveying such granular information, this profile recognizes the suitability of the ContactPoint Purpose extension introduced in R5 and preadopts it here instead." />
+      <comment value="Implementation of the TelephoneNumbers concept of zib ContactInformation.&#xD;&#xA;&#xD;&#xA;Please note that, although the zib concepts TelecomType and NumberType are functionally equivalent to the FHIR concepts `ContactPoint.system` and `ContactPoint.use` respectively, a mismatch occurs on the concept of mobile phone numbers; the zib uses the first concept and FHIR the second. For this reason, the ValueSet on `ContactPoint.system` is too narrow and the zib code will need to be communicated using the [ext-CodeSpecification](http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification) extension. &#xD;&#xA;&#xD;&#xA;Moreover, the NumberType contains an emergency contact concept which cannot be cleanly mapped using the ContactPointUse ValueSet on `ContactPoint.use`, as it entails more specific information on a standard work telephone number. While the ext-CodeSpecification extension is typically used for conveying such granular information, this profile recognizes the suitability of the [contactpoint-purpose](http://hl7.org/fhir/StructureDefinition/contactpoint-purpose) extension introduced in R5 and preadopts it here instead." />
       <alias value="Telefoonnummers" />
       <mapping>
         <identity value="zib-contactinformation-v1.3.1-2024EN" />
@@ -68,7 +68,6 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/contactpoint-purpose" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="ContactPoint.extension:purpose.value[x]">
       <path value="ContactPoint.extension.value[x]" />
@@ -145,7 +144,7 @@
       <path value="ContactPoint.use" />
       <short value="NumberType" />
       <definition value="NumberType indicates whether the number is a landline, temporary, work telephone number." />
-      <comment value="Whenever the NumberType is _EC_, use the contactpoint-purpose extension to convey the NumberType and populate this element with _work_. The functional model typically relies on the CodeSpecification extension for conveying more detailed information. However, since R5 already provides an extension for the purpose of a ContactPoint, it is pre-adopted in this profile instead." />
+      <comment value="Whenever the NumberType is _EC_, use the [contactpoint-purpose](http://hl7.org/fhir/StructureDefinition/contactpoint-purpose) extension to convey the NumberType and populate this element with _work_. The functional model typically relies on the [ext-CodeSpecification](http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification) extension for conveying more detailed information. However, since R5 already provides an extension for the purpose of a ContactPoint, it is preadopted in this profile instead." />
       <alias value="NummerSoort" />
       <binding>
         <strength value="required" />
