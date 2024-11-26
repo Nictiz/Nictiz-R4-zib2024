@@ -37,6 +37,12 @@
       <definition value="Localisation on/in the body." />
       <comment value="In cases where only the anatomical location need to be conveyed, or where laterality is embedded within the location code, this CodeableConcept can be used within the resource. However, when laterality needs to be explicitly recorded, the BodyStructure resource should be used, referenced through the BodyStructure Reference within this CodeableConcept. If the BodyStructure reference is used, this CodeableConcept should either remain empty or align with the `BodyStructure.location` element.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both this CodeableConcept and the BodyStructure resource, as either mechanism may be employed. The rationale for this is that, in many cases, only the location will be required, simplifying the FHIR recording process for sending systems." />
       <alias value="Locatie" />
+      <constraint>
+        <key value="zib-AnatomicalLocation-1" />
+        <severity value="error" />
+        <human value="If a code is used to represent an anatomical location, at least one code must be present from the code systems bound to the location concept." />
+        <expression value="descendants().where($this.is(Coding)).exists() implies descendants().where($this.is(Coding)).where(system = 'http://snomed.info/sct' or system = 'urn:oid:2.16.840.1.113883.6.43.1').exists()" />
+      </constraint>
       <mapping>
         <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
         <map value="NL-CM:20.7.4" />
@@ -70,6 +76,7 @@
         <rules value="open" />
       </slicing>
       <comment value="A deviation from our general profiling has been implemented in this profile. Slicing has been applied to `CodeableConcept.coding` to enable the use of the `BodyStructure` reference extension without requiring a populated coded value. This approach facilitates scenarios where only the Laterality element needs to be conveyed.&#xA;&#xA;The decision was made due to the Location concept’s required binding strength. If the required binding were applied on the CodeableConcept, it would mandate a coded value. This slicing approach ensures flexibility while maintaining compliance with the required binding constraints for Location." />
+      <condition value="zib-AnatomicalLocation-1" />
     </element>
     <element id="CodeableConcept.coding:location">
       <path value="CodeableConcept.coding" />
