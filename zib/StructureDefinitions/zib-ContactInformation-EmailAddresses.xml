@@ -51,7 +51,7 @@
     <element id="ContactPoint.value">
       <path value="ContactPoint.value" />
       <short value="EmailAddress" />
-      <definition value="The person's e-mail address." />
+      <definition value="The e-mail address of the person or the organization." />
       <alias value="EmailAdres" />
       <mapping>
         <identity value="zib-contactinformation-v1.3.1-2024EN" />
