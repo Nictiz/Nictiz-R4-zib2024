@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="An anatomical location specifies the location (e.g. foot) and laterality (e.g. left) of a body part." />
-  <purpose value="This CodeableConcept resource represents Location concept of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) AnatomicalLocation v1.0.3 (2024)](https://zibs.nl/wiki/AnatomicalLocation-v1.0.3(2024EN)). The zib AnatomicalLocation is mapped to both a profile on BodyStructure (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure&gt;) and this CodeableConcept profile. The CodeableConcept handles the representation of the location, while the BodyStructure profile covers both location and laterality.&#xD;&#xA;&#xD;&#xA;Profilers can use this profile in places where zib AnatomicalLocation is instantiated. In addition to using this profile, the binding should be set to ValueSet &quot;LocatieCodelijsten&quot; (&lt;http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000&gt;) with a binding strength of _required_." />
+  <purpose value="This CodeableConcept resource represents Location concept of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) AnatomicalLocation v1.0.3 (2024)](https://zibs.nl/wiki/AnatomicalLocation-v1.0.3(2024EN)). The zib AnatomicalLocation is mapped to both a profile on BodyStructure (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure&gt;) and this CodeableConcept profile. The CodeableConcept handles the representation of the location, while the BodyStructure profile covers both location and laterality.&#xD;&#xA;&#xD;&#xA;Profilers can use this profile in places where zib AnatomicalLocation is instantiated." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -59,6 +59,34 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
       </type>
+    </element>
+    <element id="CodeableConcept.coding">
+      <path value="CodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <comment value="A deviation from our general profiling has been implemented in this profile. Slicing has been applied to `CodeableConcept.coding` to enable the use of the `BodyStructure` reference extension without requiring a populated coded value. This approach facilitates scenarios where only the Laterality element needs to be conveyed.&#xA;&#xA;The decision was made due to the Location concept’s required binding strength. If the required binding were applied on the CodeableConcept, it would mandate a coded value. This slicing approach ensures flexibility while maintaining compliance with the required binding constraints for Location." />
+    </element>
+    <element id="CodeableConcept.coding:location">
+      <path value="CodeableConcept.coding" />
+      <sliceName value="location" />
+      <short value="Location" />
+      <definition value="Location on/in the body." />
+      <alias value="Locatie" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
+        <map value="NL-CM:20.7.4" />
+        <comment value="Location" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
