@@ -22,7 +22,7 @@
 * No significant changes.
 
 ### zib-DevelopmentChild.ToiletTrainednessFeces, nl-core-DevelopmentChild.ToiletTrainednessFeces
-* `.code` ; terminology ; Pattern changed from  http://snomed.info/sct#275818006 to http://snomed.info/sct#129008009. ; ZIB-1765
+* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#275818006 to http://snomed.info/sct#129008009. ; ZIB-1765
 
 ### zib-DevelopmentChild.ToiletTrainednessUrine, nl-core-DevelopmentChild.ToiletTrainednessUrine
 * `.code` ; terminology ; Pattern changed from http://snomed.info/sct#275819003 to http://snomed.info/sct#129009001. ; ZIB-2271
