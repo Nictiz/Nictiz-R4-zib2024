@@ -88,6 +88,9 @@ steps:
   check nl-core overrides:
     patterns: nl-core profiles
     script: nl-core-overrides.sh
+  check zib mapping inheritance:
+    patterns: nl-core profiles
+    script: inherit-mapping-declarations.py
   check release notes:
     patterns: release notes
     script: ReleaseNotes.py
