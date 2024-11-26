@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ConceptMap xmlns="http://hl7.org/fhir">
     <id value="TelecomType-to-ContactInformation-TelephoneNumbersSystem" />
   <text>
@@ -21,7 +20,7 @@
             <use value="work" />
         </telecom>
     </contact>
-    <description value="Maps TelecomType codes as found in the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) ContactInformation v1.2 (2020)](https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)) to `ContactPoint.system` codes as found in FHIR R4.&#xD;&#xA;&#xD;&#xA;Note: The id and in addition, the canonical, name and title of this ConceptMap deviate from the guidelines ('Codelijst' is removed') because it would overflow the 64 character limit."/>
+    <description value="Maps TelecomType codes as found in the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) ContactInformation v1.3.1 (2024)](https://zibs.nl/wiki/ContactInformation-v1.3.1(2024EN)) to &lt;http://hl7.org/fhir/ValueSet/contact-point-system&gt; as found in `ContactPoint.system` in FHIR R4.&#xD;&#xA;&#xD;&#xA;Note: The `.id` and in addition, the `.url`, `.name` and `.title` of this ConceptMap deviate from the guidelines ('Codelijst' is removed) because it would overflow the 64-character limit."/>
     <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
     <sourceCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20240415000000"/>
     <targetCanonical value="http://nictiz.nl/fhir/ValueSet/ContactInformation-TelephoneNumbersSystem"/>
@@ -33,7 +32,7 @@
             <target>
                 <code value="phone"/>
                 <equivalence value="subsumes"/>
-                <comment value="LL: land line/vast telefoonnummer. Phone: any voice phone, land or mobile."/>
+                <comment value="'LL' is a land line, while 'phone' is any phone used for voice calls, either landline or mobile."/>
             </target>
         </element>
         <element>
@@ -45,7 +44,6 @@
         </element>
     </group>
     <group>
-        <!-- 2.16.840.1.113883.5.1119 -->
         <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse" />
         <target value="http://hl7.org/fhir/contact-point-system" />
         <element>
@@ -53,7 +51,7 @@
             <target>
                 <code value="phone"/>
                 <equivalence value="subsumes"/>
-                <comment value="MC: mobile contact/mobiel telefoonnummer. Phone: any voice phone, land or mobile."/>
+                <comment value="'MC' is a mobile contact, while 'phone' is any phone used for voice calls, either landline or mobile."/>
             </target>
         </element>
         <element>
