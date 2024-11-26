@@ -132,7 +132,7 @@
     <element id="ContactPoint.value">
       <path value="ContactPoint.value" />
       <short value="TelephoneNumber" />
-      <definition value="The person's telephone number." />
+      <definition value="The telephone number of the person or the organization." />
       <alias value="Telefoonnummer" />
       <mapping>
         <identity value="zib-contactinformation-v1.3.1-2024EN" />
