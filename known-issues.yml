@@ -15,12 +15,6 @@ zib-AddressInformation:
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
-    ContactPoint.extension:comment.value[x]:
-    - cardinality: 0..* instead of 0..1
-      reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib.
-    ContactPoint.extension:purpose.value[x]:
-    - cardinality: 0..* instead of 0..1
-      reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib.
     ContactPoint.system:
     - cardinality: 1..1 instead of 0..1
       reason: Although TelecomType and NumberType are optional in the zib, ContactPoint.system is used to identify the TelephoneNumbers concept itself when this datatype is added to a profile. If only a telephone number is given without TelecomType and NumberType, it will fall in the default slice of the sliced element with datatype ContactPoint.
@@ -57,3 +51,17 @@ zib-NameInformation.GivenName:
 
 issues should occur: false
 
+zib-ContactInformation-TelephoneNumbers:
+  zib deviations:
+    ContactPoint.extension:comment.value[x]:
+    - cardinality: 0..* (effective) instead of 0..1
+      reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
+    ContactPoint.extension:purpose.value[x]:
+    - cardinality: 0..* (effective) instead of 0..1
+      reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
+
+zib-NameInformation:
+  zib deviations:
+    HumanName.extension:nameUsage.value[x]:
+    - cardinality: 0..* (effective) instead of 0..1
+      reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
