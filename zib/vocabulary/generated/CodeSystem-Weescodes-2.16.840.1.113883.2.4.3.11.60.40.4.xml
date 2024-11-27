@@ -1,0 +1,137 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.4"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/CodeSystem"/>-->
+   </meta>
+   <language value="nl-NL"/>
+   <text>
+      <status value="empty"/>
+      <div xmlns="http://www.w3.org/1999/xhtml" lang="nl-NL" xml:lang="nl-NL">Definitie-resources zijn niet voorzien van een narrative. Een menselijk leesbare versie is te vinden via de implementation guide(s) waarin deze resource gebruikt wordt.</div>
+   </text>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2024-04-15T00:00:00+00:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
+   </identifier>
+   <version value="2024-04-15T00:00:00"/>
+   <name value="Weescodes"/>
+   <title value="NL-CM-CS"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Registratie aan de bron"/>
+   <contact>
+      <name value="Registratie aan de bron"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.registratieaandebron.nl"/>
+      </telecom>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.zibs.nl"/>
+      </telecom>
+   </contact>
+   <description value="NL-CM-CS"/>
+   <caseSensitive value="false"/>
+   <content value="complete"/>
+   <count value="5"/>
+   <property>
+      <code value="status"/>
+      <uri value="http://hl7.org/fhir/concept-properties#status"/>
+      <description value="A code that indicates the status of the concept. Values found in this version of the code system are: active"/>
+      <type value="code"/>
+   </property>
+   <concept>
+      <code value="APNA"/>
+      <display value="Toediener niet beschikbaar"/>
+      <definition value="Toediener niet aanwezig [DEPRECATED]"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Administration performer not available"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="FORGOT"/>
+      <display value="Vergeten toe te dienen"/>
+      <definition value="Vergeten toe te dienen [DEPRECATED]"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Forgotten to administer"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="GeenGeloof"/>
+      <display value="Geen geloof"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="No religion"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Humanist"/>
+      <display value="Humanist"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Humanist"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Mormoon"/>
+      <display value="Mormoon"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Mormon"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+</CodeSystem>
