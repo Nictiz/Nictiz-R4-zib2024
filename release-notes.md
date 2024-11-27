@@ -5,6 +5,9 @@
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst en LandISOCodelijst). ; ZIB-2218
 
+## LifeStance (zib-LifeStance, nl-core-LifeStance)
+* No significant changes.
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
