@@ -17,13 +17,13 @@
     </telecom>
   </contact>
   <description value="WorkSituation describes the extent to which and in what way the patient participates in the workforce. Work is meant in the broadest sense of the word: activities that contribute to the person themselves, their environment or society. This includes both paid and unpaid work." />
-  <purpose value="This Observation resource represents the WorkSituation concept (NL-CM:18.6.4) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) ParticipationInSociety-v3.1(2020EN)](https://zibs.nl/wiki/ParticipationInSociety-v3.1(2020EN))." />
+  <purpose value="This Observation resource represents the WorkSituation concept (NL-CM:18.6.4) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) ParticipationInSociety-v3.1(2024EN)](https://zibs.nl/wiki/ParticipationInSociety-v3.1(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-participationinsociety-v3.1-2020EN" />
-    <uri value="https://zibs.nl/wiki/ParticipationInSociety-v3.1(2020EN)" />
-    <name value="zib ParticipationInSociety-v3.1(2020EN)" />
+    <identity value="zib-participationinsociety-v3.1-2024EN" />
+    <uri value="https://zibs.nl/wiki/ParticipationInSociety-v3.1(2024EN)" />
+    <name value="zib ParticipationInSociety-v3.1(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -53,7 +53,7 @@
         <code value="string" />
       </type>
       <mapping>
-        <identity value="zib-participationinsociety-v3.1-2020EN" />
+        <identity value="zib-participationinsociety-v3.1-2024EN" />
         <map value="NL-CM:18.6.4" />
         <comment value="WorkSituation" />
       </mapping>

@@ -16,3 +16,6 @@
 
 ### zib-NameInformation.GivenName, nl-core-NameInformation.GivenName
 * No significant changes.
+
+## ParticipationInSociety (zib-ParticipationInSociety, nl-core-ParticipationInSociety)
+* No significant changes
