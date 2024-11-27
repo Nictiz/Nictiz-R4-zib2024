@@ -50,3 +50,12 @@ zib-AddressInformation:
     Address.line.extension:*.value[x]:
       - cardinality: 1..1 instead of 0..1
         reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
+
+nl-core-BodyHeight-*:
+  ignored issues:
+    Observation.value.ofType(Quantity).code:
+      - message: The value provided ('cm') is not in the value set 'Body Length Units'
+        reason: In absence of a terminology server, the Validator cannot check if 'cm' is a valid UCUM unit and raises an error.
+    Observation.component[*].value.*:
+      - message: None of the codings provided are in the value set 'Vital Signs Units'
+        reason: The Validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
