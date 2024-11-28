@@ -64,18 +64,18 @@ zib-Patient:
     Patient.telecom:
       - cardinality: 0..* instead of 0..1
         for: NL-CM:0.1.5 (Patient.ContactInformation)
-        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib part ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
     Patient.address:
       - datatype: Address instead of a reference
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
     Patient.deceased[x]:deceasedDateTime:
       - short: DateOfDeath instead of DateOfDeath / DeathIndicator
-        reason: This element is mapped to two zib concepts, DateOfDeath and DeathIndicator. However, the latter is implicit -- although the zib recognizes both concepts, FHIR supports populating just one of them, thus DeathIndicator is assumed to be true when DateOfDeath is populated. For clarity reasons, the .deceasedDateTime slice has only DateOfDeath mapped to it.
+        reason: This element is mapped to two zib concepts, DateOfDeath and DeathIndicator. However, the latter is implicit; although the zib recognizes both concepts, FHIR supports populating just one of them, thus DeathIndicator is assumed to be 'true' when DateOfDeath is populated. For clarity reasons, the .deceasedDateTime slice has only DateOfDeath mapped to it.
       - datatype: dateTime instead of boolean
-        reason: The boolean expected by DeathIndicator is only assumed; see the explanation above.    
+        reason: The boolean expected by DeathIndicator is only assumed; see the explanation above.
     Patient.multipleBirth[x]:multipleBirthInteger:
       - short: MultipleBirthSequence instead of MultipleBirthSequence / MultipleBirthIndicator
-        reason: This element is mapped to two zib concepts, MultipleBirthSequence and MultipleBirthIndicator. However, the latter is implicit -- although the zib recognizes both concepts, FHIR supports populating just one of them, thus MultipleBirthIndicator is assumed to be true when MultipleBirthSequence is populated. For clarity reasons, the .multipleBirthInteger slice has only MultipleBirthSequence mapped to it.
+        reason: This element is mapped to two zib concepts, MultipleBirthSequence and MultipleBirthIndicator. However, the latter is implicit; although the zib recognizes both concepts, FHIR supports populating just one of them, thus MultipleBirthIndicator is assumed to be 'true' when MultipleBirthSequence is populated. For clarity reasons, the .multipleBirthInteger slice has only MultipleBirthSequence mapped to it.
       - datatype: integer instead of boolean
         reason: The boolean expected by MultipleBirthIndicator is only assumed; see the explanation above.
 
@@ -105,6 +105,6 @@ zib-Patient:
   ignored issues:
     Patient.address:
       - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
-        reason: The short description is defined on the datatype profile and not repeated in the differential.
+        reason: The short description is defined on the datatype profile and is not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
-        reason: The alias is defined on the datatype profile and not repeated in the differential.
+        reason: The alias is defined on the datatype profile and is not repeated in the differential.
