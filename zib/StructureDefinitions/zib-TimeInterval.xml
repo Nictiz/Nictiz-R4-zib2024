@@ -21,7 +21,7 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-timeinterval-v1.0-2024EN" />
+    <identity value="zib-timeinterval-v1.3-2024EN" />
     <uri value="https://zibs.nl/wiki/TimeInterval-v1.3(2024EN)" />
     <name value="zib TimeInterval-v1.3(2024EN)" />
   </mapping>
@@ -36,7 +36,7 @@
       <short value="TimeInterval" />
       <alias value="TijdsInterval" />
       <mapping>
-        <identity value="zib-timeinterval-v1.0-2024EN" />
+        <identity value="zib-timeinterval-v1.3-2024EN" />
         <map value="NL-CM:20.3.1" />
         <comment value="TimeInterval" />
       </mapping>
@@ -55,7 +55,7 @@
       <definition value="The start date and time of the interval." />
       <alias value="StartDatumTijd" />
       <mapping>
-        <identity value="zib-timeinterval-v1.0-2024EN" />
+        <identity value="zib-timeinterval-v1.3-2024EN" />
         <map value="NL-CM:20.3.2" />
         <comment value="StartDateTime" />
       </mapping>
@@ -66,18 +66,9 @@
       <definition value="Textual representation of a start time associated with an event for which the time is not yet fixed or known. For example &quot;Start the day after discharge from hospital&quot;." />
       <type>
         <code value="Extension" />
-        <profile value="https://example.org/fhir/StructureDefinition/ext-TimeInterval.RelativeStartTime" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.RelativeStartTime" />
       </type>
       <isModifier value="false" />
-    </element>
-    <element id="Period.start.extension:relativeStartTime.value[x]">
-      <path value="Period.start.extension.value[x]" />
-      <alias value="RelatieveStartTijd" />
-      <mapping>
-        <identity value="zib-timeinterval-v1.0-2024EN" />
-        <map value="NL-CM:20.3.7" />
-        <comment value="RelativeStartTime" />
-      </mapping>
     </element>
     <element id="Period.end">
       <path value="Period.end" />
@@ -85,7 +76,7 @@
       <definition value="The end date and time of the interval." />
       <alias value="EindDatumTijd" />
       <mapping>
-        <identity value="zib-timeinterval-v1.0-2024EN" />
+        <identity value="zib-timeinterval-v1.3-2024EN" />
         <map value="NL-CM:20.3.3" />
         <comment value="EndDateTime" />
       </mapping>
@@ -96,18 +87,9 @@
       <definition value="Textual representation of an end time associated with an event for which the time is not yet fixed or known. For example &quot;Stop the day before operation&quot;." />
       <type>
         <code value="Extension" />
-        <profile value="https://example.org/fhir/StructureDefinition/ext-TimeInterval.RelativeEndTime" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.RelativeEndTime" />
       </type>
       <isModifier value="false" />
-    </element>
-    <element id="Period.end.extension:relativeEndTime.value[x]">
-      <path value="Period.end.extension.value[x]" />
-      <alias value="RelatieveEindTijd" />
-      <mapping>
-        <identity value="zib-timeinterval-v1.0-2024EN" />
-        <map value="NL-CM:20.3.8" />
-        <comment value="RelativeEndTime" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>

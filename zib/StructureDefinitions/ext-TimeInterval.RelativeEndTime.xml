@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ext-TimeInterval.RelativeEndTime" />
-  <url value="https://example.org/fhir/StructureDefinition/ext-TimeInterval.RelativeEndTime" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.RelativeEndTime" />
   <name value="ExtTimeIntervalRelativeEndTime" />
   <title value="ext TimeInterval.RelativeEndTime" />
   <status value="draft" />
@@ -33,9 +33,27 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://example.org/fhir/StructureDefinition/ext-TimeInterval.RelativeEndTime" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.RelativeEndTime" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="RelativeEndTime" />
+      <definition value="Textual representation of an end time associated with an event for which the timing is not yet fixed. For example &quot;Stop the day before operation&quot;." />
+      <alias value="RelatieveEindTijd" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="zib-timeinterval-v1.3-2024EN" />
+        <map value="NL-CM:20.3.8" />
+        <comment value="RelativeEndTime" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

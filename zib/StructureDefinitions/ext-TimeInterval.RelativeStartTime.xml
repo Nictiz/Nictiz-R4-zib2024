@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ext-TimeInterval.RelativeStartTime" />
-  <url value="https://example.org/fhir/StructureDefinition/ext-TimeInterval.RelativeStartTime" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.RelativeStartTime" />
   <name value="ExtTimeIntervalRelativeStartTime" />
   <title value="ext TimeInterval.RelativeStartTime" />
   <status value="draft" />
@@ -33,9 +33,27 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://example.org/fhir/StructureDefinition/ext-TimeInterval.RelativeStartTime" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.RelativeStartTime" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="RelativeStartTime" />
+      <definition value="Textual representation of a start time associated with an event for which the time is not fixed or known. For example &quot;Start the day after discharge from hospital&quot;." />
+      <alias value="RelatieveStartTijd" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="zib-timeinterval-v1.3-2024EN" />
+        <map value="NL-CM:20.3.7" />
+        <comment value="RelativeStartTime" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
