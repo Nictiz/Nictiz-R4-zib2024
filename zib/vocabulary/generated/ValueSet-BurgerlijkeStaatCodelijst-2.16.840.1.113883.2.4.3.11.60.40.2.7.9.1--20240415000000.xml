@@ -27,7 +27,7 @@
    <version value="2024-04-15T00:00:00"/>
    <name value="BurgerlijkeStaatCodelijst"/>
    <title value="BurgerlijkeStaatCodelijst"/>
-   <status value="draft"/>
+   <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
@@ -52,6 +52,15 @@
             </extension>
             <code value="OTH"/>
             <display value="Other"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Other"/>
+            </designation>
          </concept>
       </include>
       <include>

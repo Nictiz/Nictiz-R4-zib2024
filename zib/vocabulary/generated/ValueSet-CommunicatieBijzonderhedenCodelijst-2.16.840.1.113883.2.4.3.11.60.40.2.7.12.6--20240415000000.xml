@@ -27,7 +27,7 @@
    <version value="2024-04-15T00:00:00"/>
    <name value="CommunicatieBijzonderhedenCodelijst"/>
    <title value="CommunicatieBijzonderhedenCodelijst"/>
-   <status value="draft"/>
+   <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
@@ -62,7 +62,7 @@
                <valueString value="Gebruikt gebarentaal"/>
             </extension>
             <code value="442389001"/>
-            <display value="Sign language"/>
+            <display value="Gebarentaal"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -87,7 +87,7 @@
                <valueString value="Gebruikt Brailleschrift"/>
             </extension>
             <code value="445510001"/>
-            <display value="Braille language"/>
+            <display value="Braille"/>
             <designation>
                <language value="en-US"/>
                <use>

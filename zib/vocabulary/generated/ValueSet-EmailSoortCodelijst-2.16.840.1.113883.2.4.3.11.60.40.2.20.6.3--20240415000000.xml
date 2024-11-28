@@ -1,6 +1,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20240415000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.20.6.3--20240415000000"/>
    <meta>
+      <lastUpdated value="2024-11-28T08:35:00Z"/>
       <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -18,15 +19,15 @@
          <start value="2024-04-15T00:00:00+00:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20240415000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.3--20240415000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.20.6.3"/>
    </identifier>
    <version value="2024-04-15T00:00:00"/>
-   <name value="NationaliteitCodelijst"/>
-   <title value="NationaliteitCodelijst"/>
+   <name value="EmailSoortCodelijst"/>
+   <title value="EmailSoortCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
@@ -41,20 +42,42 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="GBA Tabel 32 (Nationaliteitentabel) - All values"/>
+   <description value="Changes compared to prerelease 2024:         &#xA;* Removed: code OTH (NullFlavor)"/>
    <immutable value="false"/>
    <compose>
       <include>
-         <system value="urn:oid:2.16.840.1.113883.2.4.4.16.32"/>
-      </include>
-      <include>
-         <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Anders"/>
+               <valueString value="Privé e-mailadres"/>
             </extension>
-            <code value="OTH"/>
-            <display value="Other"/>
+            <code value="HP"/>
+            <display value="Primary Home"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Primary Home"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Zakelijk e-mailadres"/>
+            </extension>
+            <code value="WP"/>
+            <display value="Work Place"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Work Place"/>
+            </designation>
          </concept>
       </include>
    </compose>
