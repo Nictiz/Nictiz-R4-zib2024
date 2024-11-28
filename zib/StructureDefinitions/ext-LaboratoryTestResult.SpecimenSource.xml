@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ext-LaboratoryTestResult.SpecimenSource" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResultSpecimenSource" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResult.SpecimenSource" />
   <name value="ExtLaboratoryTestResultSpecimenSource" />
   <title value="ext LaboratoryTestResult.SpecimenSource" />
   <status value="draft" />
@@ -35,12 +37,12 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResultSpecimenSource" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResult.SpecimenSource" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <short value="SpecimenSource" />
-      <definition value="If the material is not collected directly from the patient but comes from a patient-related object, &lt;i&gt;e.g.&lt;/i&gt; a cathetertip, this source of material can be recorded here." />
+      <definition value="If the material is not collected directly from the patient but comes from a patient-related object, e.g. a cathetertip, this source of material can be recorded here." />
       <alias value="BronMonster" />
       <type>
         <code value="CodeableConcept" />
