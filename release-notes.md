@@ -5,6 +5,17 @@
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst en LandISOCodelijst). ; ZIB-2218
 
+## ContactInformation 
+### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
+* `ContactPoint` ; textual ; Added guidance for NumberType. ; ZIB-1652
+* `.extension:comment` ; extension ; Replaced extension ExtComment with ContactPointComment. ; ZIBFHIR-97
+* `.extension:purpose` ; extension ; Added ContactPointPurpose for NumberType. ; ZIB-1652, ZIBFHIR-129
+* `.use` ; terminology ; Added mappings in NummerSoortCodelijst_to_ContactInformation_TelephoneNumbersUse. ; ZIB-1652
+* `.use` ; textual ; Added guidance for NumberType. ; ZIB-1652
+
+### zib-ContactInformation-EmailAddresses, nl-core-ContactInformation-EmailAddresses
+* No significant changes.
+
 ## LanguageProficiency (zib-Patient, nl-core-Patient)
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in LanguageControlListeningCodelist, LanguageControlSpeakingCodelist and LanguageControlReadingCodelist. ; ZIB-1877
 * `.communication.extension:comment` ; extension ; Replaced the extension `ext-Comment` with the extension `ext-LanguageProficiency.Comment`. ; ZIBFHIR-97
