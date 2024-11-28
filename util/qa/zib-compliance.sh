@@ -29,6 +29,7 @@ if [[ ! -f $tools_dir/zib-compliance-fhir/index.js ]]; then
   git clone -b action --depth 1 https://github.com/pieter-edelman-nictiz/zib-compliance-fhir.git $tools_dir/zib-compliance-fhir
   cd $tools_dir/zib-compliance-fhir
   npm install
+  cd $work_dir
 
   if [[ $write_github == 1 ]]; then
     echo "::endgroup::"
@@ -37,8 +38,8 @@ fi
 
 exit_code=0
 
-echo "Generating snapshots"
-source $script_dir/generatesnapshots.sh $@
+#echo "Generating snapshots"
+#source $script_dir/generatesnapshots.sh $@
 
 if [ $? == 0 ]; then
     if [[ $changed_only == 0 ]]; then
@@ -46,7 +47,7 @@ if [ $? == 0 ]; then
     else
       check_missing="none"
     fi
-    node $tools_dir/zib-compliance-fhir/index.js -m util/qa/zibs2024.max -z 2024 -l 2 --check-missing=$check_missing -f text --fail-at warning --zib-overrides known-issues.yml $snapshots/*json
+    node $tools_dir/zib-compliance-fhir/index.js -m util/qa/zibs2024.max -z 2024 -l 2 --check-missing=$check_missing -f text --fail-at warning --zib-overrides known-issues.yml $@
 else
     echo -e "\033[0;33mThere was an error during snapshot generation. Re-run with the --debug option to see the output.\033[0m"
     echo "Skipping zib compliance check."
