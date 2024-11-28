@@ -13,6 +13,18 @@
 
 ### zib-AnatomicalLocation-BodyStructure, nl-core-AnatomicalLocation-BodyStructure
 * New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
+
+## ContactInformation 
+### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
+* `ContactPoint` ; textual ; Added guidance for NumberType. ; ZIB-1652
+* `.extension:comment` ; extension ; Replaced extension ExtComment with ContactPointComment. ; ZIBFHIR-97
+* `.extension:purpose` ; extension ; Added ContactPointPurpose for NumberType. ; ZIB-1652, ZIBFHIR-129
+* `.use` ; terminology ; Added mappings in NummerSoortCodelijst_to_ContactInformation_TelephoneNumbersUse. ; ZIB-1652
+* `.use` ; textual ; Added guidance for NumberType. ; ZIB-1652
+
+### zib-ContactInformation-EmailAddresses, nl-core-ContactInformation-EmailAddresses
+* No significant changes.
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
