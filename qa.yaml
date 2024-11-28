@@ -26,7 +26,8 @@ patterns:
   - zib/vocabulary/**/*.xml
   - nl-core/vocabulary/**/*.xml
   SearchParameters: nl-core/SearchParameters/*.xml
-  examples: nl-core/examples/*.xml
+  examples: examples/*.xml
+  release notes: release-notes.md
 
 steps:
   validate zib profiles:
@@ -73,6 +74,7 @@ steps:
     patterns:
       - zib profiles
       - zib extensions
+    snapshots: json
     script: zib-compliance.sh
   check resource ids:
     description: Check if the .id matches the name of the file
@@ -86,4 +88,8 @@ steps:
     script: check-id.sh
   check nl-core overrides:
     patterns: nl-core profiles
-    script: nl-core-overrides.sh
+    snapshots: json
+    script: nl-core-overrides.py
+  check release notes:
+    patterns: release notes
+    script: ReleaseNotes.py
