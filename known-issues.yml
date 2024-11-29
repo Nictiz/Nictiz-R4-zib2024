@@ -147,7 +147,7 @@ issues should occur: false
 nl-core-Patient-*:
   ignored issues:
     Patient.communication[0].language:
-      - message: None of the codings provided are in the value set 'CommunicatieTaalCodelijst'
+      - message: No code provided, and a code is required from the value set 'CommunicatieTaalCodelijst'
         reason: The terminology servers used don't know this code system and wrongly conclude that this is an invalid code.
 
 zib-ContactInformation-TelephoneNumbers:
@@ -172,3 +172,13 @@ zib-Patient:
         reason: The short description is defined on the datatype profile and is not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and is not repeated in the differential.
+    Patient.contact.name:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The short description is defined on the datatype profile and not repeated in the differential.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The alias is defined on the datatype profile and not repeated in the differential.
+    Patient.contact.address:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The short description is defined on the datatype profile and not repeated in the differential.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The alias is defined on the datatype profile and not repeated in the differential.
