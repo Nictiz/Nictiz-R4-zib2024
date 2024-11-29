@@ -609,10 +609,10 @@
     </element>
     <element id="Patient.communication.extension:languageControl.extension:level.value[x]">
       <path value="Patient.communication.extension.extension.value[x]" />
-      <comment value="Note that only the TaalvaardigheidBegrijpenCodelijst value set is bound on this element. This causes no issues, as the TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst value sets contain the same codes as the former value set." />
+      <comment value="Since the concepts LanguageControlListening, LanguageControlSpeaking and LanguageControlReading each are bound to a different value set in the zib LanguageProficiency, and only one value set may be bound to this element, a combined value set has been created that is referenced here. This causes no issues, as the three value sets contain the same codes." />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.12.3--20240415000000" />
+        <valueSet value="http://nictiz.nl/fhir/ValueSet/TaalvaardigheidCodelijsten" />
       </binding>
     </element>
     <element id="Patient.communication.extension:languageControl.extension:type">
