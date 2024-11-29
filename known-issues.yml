@@ -55,18 +55,33 @@ zib-Patient:
     Patient.extension:nationality.extension:code.value[x]:
       - cardinality: 1..1 instead of 0..1
         reason: Zib Nationality is implemented using the complex core extension patient-nationality. The .value[x] element representing the concept Nationality has a 1..1 cardinality, but the "code" part of the extension itself is 0..1, making the cardinality effectively 0..1 as required by the zib.
-    Patient.name*:
+    Patient.name:
       - datatype: HumanName instead of Reference
         reason: A name in FHIR is represented using the HumanName datatype, not as a separate resource.
-    Patient.name:
       - cardinality: 0..* instead of 0..1
         reason: The name information according to zib NameInformation may be split up over multiple instances of Patient.name.
+    Patient.name:nameInformation:
+      - datatype: HumanName instead of rootconcept
+        reason: A name in FHIR is represented using the HumanName datatype, not as a separate resource.
     Patient.telecom:
       - datatype: ContactPoint instead of Reference
+        for: NL-CM:0.1.5 (Patient.ContactInformation)
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+      - datatype: ContactPoint instead of Reference
+        for: NL-CM:1.1.12 (Payer.ContactInformation)
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+      - datatype: ContactPoint instead of rootconcept
+        for: NL-CM:20.6.1 (ContactInformation)
         reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
       - cardinality: 0..* instead of 0..1
-        for: NL-CM:0.1.5 (Patient.ContactInformation), NL-CM:1.1.12 (Payer.ContactInformation)
+        for: NL-CM:0.1.5 (Patient.ContactInformation)
         reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+      - cardinality: 0..* instead of 0..1
+        for: NL-CM:1.1.12 (Payer.ContactInformation)
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+    Patient.telecom:*:
+      - datatype: ContactPoint instead of container
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
     Patient.deceased[x]:deceasedDateTime:
       - short: DateOfDeath instead of DateOfDeath / DeathIndicator
         reason: This element is mapped to two zib concepts, DateOfDeath and DeathIndicator. However, the latter is implicit; although the zib recognizes both concepts, FHIR supports populating just one of them, thus DeathIndicator is assumed to be 'true' when DateOfDeath is populated. For clarity reasons, the .deceasedDateTime slice has only DateOfDeath mapped to it.
@@ -81,21 +96,30 @@ zib-Patient:
       - datatype: integer instead of boolean
         reason: The boolean expected by MultipleBirthIndicator is only assumed; see the explanation above.
     Patient.contact:
-      - datatype: BackboneElement instead of Reference
+      - datatype: BackboneElement instead of rootconcept
         reason: The zib ContactPerson _may_ be represented as Patient.contact. There is a different use case as well, where the ContactPerson is implemented using a RelatedPerson resource.
     Patient.contact.extension:contactPerson.value[x]:
       - datatype: Reference instead of rootconcept
         reason: This is an additional reference to a separate zib-ContactPerson (RelatedPerson) instance, next to the information in Patient.contact. Patient.contact and RelatedPerson can both be used to capture the information from zib-ContactPerson, but each are used within a different context. Information may therefore be duplicated; this is the recommended way.
     Patient.contact.name:
       - datatype: HumanName instead of Reference
+        for: NL-CM:3.1.4 (ContactPerson.NameInformation)
         reason: A name in FHIR is represented using the HumanName datatype, not as a separate resource.
       - datatype: HumanName instead of rootconcept
+        for: NL-CM:20.4.1 (NameInformation)
         reason: A name in FHIR is represented using the HumanName datatype, not as a separate resource.
     Patient.contact.telecom:
       - datatype: ContactPoint instead of Reference
+        for: NL-CM:3.1.6 (ContactPerson.ContactInformation)
+        reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+      - datatype: ContactPoint instead of rootconcept
+        for: NL-CM:20.6.1 (ContactInformation)
         reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource.
       - cardinality: 0..* instead of 0..1
         reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+    Patient.contact.telecom:*:
+      - datatype: ContactPoint instead of container
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
     Patient.contact.address:
       - datatype: Address instead of Reference
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
@@ -119,6 +143,12 @@ zib-Patient:
 # These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
 
 issues should occur: false
+
+nl-core-Patient-*:
+  ignored issues:
+    Patient.communication[0].language:
+      - message: None of the codings provided are in the value set 'CommunicatieTaalCodelijst'
+        reason: The terminology servers used don't know this code system and wrongly conclude that this is an invalid code.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
