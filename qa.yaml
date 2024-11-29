@@ -3,6 +3,7 @@ ignored issues: known-issues.yml
 igs:
   - zib
   - nl-core
+  - util/qa
 script dir: util/qa
 
 patterns:
@@ -70,6 +71,11 @@ steps:
   validate examples:
     description: Validate examples using the generic FHIR validation rules
     patterns: examples
+  additional package checks:
+    description: Additional profile checks specifically for this package
+    patterns:
+    - zib profiles
+    profile: "http://nictiz.nl/fhir/StructureDefinition/zib2024-PackageChecks"
   check zib compliance:
     patterns:
       - zib profiles
