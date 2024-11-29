@@ -19,7 +19,9 @@
           <a href="tel:+31611234567">+31611234567</a> (Tel Privé), <a href="mailto:giesput@myweb.nl">giesput@myweb.nl</a> (E-mail Werk), 1e Jacob van Campenstr 15, 1012 NX Hoogmade Kaag en Braassem, Nederland (Privé Post / Bezoek)</div>
       </div>
       <ul>
-        <li>Nederlands</li>
+        <li>
+          <span title="Other (OTH - http://terminology.hl7.org/CodeSystem/v3-NullFlavor)">Other</span>
+        </li>
       </ul>
     </div>
   </text>
@@ -331,9 +333,11 @@
       <valueString value="Bij gesprek met arts zoon uitnodigen voor vertalen"/>
     </extension>
     <language>
-      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor">
-        <valueCode value="OTH"/>
-      </extension>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+        <code value="OTH"/>
+        <display value="Other"/>
+      </coding>
       <text value="Nederlands"/>
     </language>
   </communication>
