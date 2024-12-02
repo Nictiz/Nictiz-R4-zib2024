@@ -1,0 +1,75 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="AdresSoortCodelijst-to-AddressType"/>
+    <text>
+        <status value="empty"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+    </text>
+    <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+        <valueBoolean value="false"/>
+    </extension>
+    <url value="http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType"/>
+    <name value="AdresSoortCodelijst_to_AddressType"/>
+    <title value="AdresSoortCodelijst to AddressType"/>
+    <status value="draft"/>
+    <publisher value="Nictiz"/>
+    <contact>
+      <name value="Nictiz"/>
+      <telecom>
+        <system value="url" />
+        <value value="https://www.nictiz.nl" />
+        <use value="work"/>
+      </telecom>
+    </contact>
+    <description value="Maps AddressType codes as found in the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) AddressInformation v1.2 (2024)](https://zibs.nl/wiki/AddressInformation-v1.2(2024EN)) to &lt;http://hl7.org/fhir/ValueSet/address-type&gt; as found in `Address.type` in FHIR R4."/>
+    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+    <sourceCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.5.3--20240415000000"/>
+    <targetCanonical value="http://hl7.org/fhir/ValueSet/address-type"/>
+    <group>
+        <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+        <target value="http://hl7.org/fhir/address-type"/>
+        <element>
+            <code value="PST"/>
+            <target>
+                <code value="postal"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="HP"/>
+            <target>
+                <code value="both"/>
+                <equivalence value="equivalent"/>
+                <comment value="Primary home. An address that is both physical and postal. Use in conjunction with Address.use = 'home'. In exceptional cases, the 'HP' address is not the primary postal address, but nevertheless 'both' is the most suitable type to differentiate 'HP' from 'PHYS'."/>
+            </target>
+        </element>
+        <element>
+            <code value="PHYS"/>
+            <target>
+                <code value="physical"/>
+                <equivalence value="equivalent"/>
+                <comment value="Visit address. A physical address that can be visited. Use in conjunction with Address.use = 'home'."/>
+            </target>
+        </element>
+        <element>
+            <code value="TMP"/>
+            <target>
+                <equivalence value="unmatched"/>
+                <comment value="Temporary address. Use Address.use = 'temp'."/>
+            </target>
+        </element>
+        <element>
+            <code value="WP"/>
+            <target>
+                <equivalence value="unmatched"/>
+                <comment value="Work place. Use Address.use = 'work'. A work place could be postal, physical or both. Which it is, is not known from the zib AddressInformation."/>
+            </target>
+        </element>
+        <element>
+            <code value="HV"/>
+            <target>
+                <equivalence value="unmatched"/>
+                <comment value="Vacation home. A physical address that can be visited."/>
+            </target>
+        </element>
+    </group>
+</ConceptMap>
