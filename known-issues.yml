@@ -4,13 +4,6 @@
 
 issues should occur: true
 
----
-# The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
-# shortcomings in tooling, the used terminology server, etc.
-# These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
-
-issues should occur: false
-
 zib-AddressInformation:
   zib deviations:
     Address.line.extension:houseNumberIndication.value[x]:
@@ -19,3 +12,56 @@ zib-AddressInformation:
     Address.line.extension:*.value[x]:
       - cardinality: 1..1 instead of 0..1
         reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
+
+zib-ContactInformation-TelephoneNumbers:
+  zib deviations:
+    ContactPoint.system:
+    - cardinality: 1..1 instead of 0..1
+      reason: Although TelecomType and NumberType are optional in the zib, ContactPoint.system is used to identify the TelephoneNumbers concept itself when this datatype is added to a profile. If only a telephone number is given without TelecomType and NumberType, it will fall in the default slice of the sliced element with datatype ContactPoint.
+
+zib-NameInformation:
+  zib deviations:
+    HumanName.prefix:
+      - cardinality: 0..* instead of 0..1
+        reason: Both prefix and suffix are mapped to the Titles concept from the zib. There's a mismatch however in the way this information is represented in the zib and in FHIR. The mapping is documented in the profile.
+    HumanName.suffix:
+      - cardinality: 0..* instead of 0..1
+        reason: Both prefix and suffix are mapped to the Titles concept from the zib. There's a mismatch however in the way this information is represented in the zib and in FHIR. The mapping is documented in the profile.
+    HumanName.given:
+      - short: FirstName / Initial
+        reason: The zib defines both the complete list of first names and of initials as a single string. In FHIR this is done fundamentally different, by using separate names. Hence, the short has been changed to the singular form.
+      - alias: first name,middle name,Voornaam,Initiaal
+        reason: The first two initials are provided by FHIR. For the singular form of the latter two, see the remark above.
+      - cardinality: 0..* instead of 0..1
+        reason: See the remark above.
+    HumanName.family.extension:*.value[x]:
+      - cardinality: 1..1 instead of 0..1
+        reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
+
+zib-NameInformation.GivenName:
+  zib deviations:
+    HumanName.given:
+      - cardinality: 1..* instead of 0..1
+        reason: The GivenName is optional according to the zib, but when this datatype profile is used, a name should be provided.
+
+---
+# The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
+# shortcomings in tooling, the used terminology server, etc.
+# These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
+
+issues should occur: false
+
+zib-ContactInformation-TelephoneNumbers:
+  zib deviations:
+    ContactPoint.extension:comment.value[x]:
+    - cardinality: 0..* instead of 0..1
+      reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
+    ContactPoint.extension:purpose.value[x]:
+    - cardinality: 0..* instead of 0..1
+      reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
+
+zib-NameInformation:
+  zib deviations:
+    HumanName.extension:nameUsage.value[x]:
+    - cardinality: 0..* instead of 0..1
+      reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
