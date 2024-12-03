@@ -1,5 +1,3 @@
-# Nictiz-R4-Zib2024 Release Notes
-
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
 * `.extension:addressType.value[x]` ; terminology ; Changed codes in AdresSoortCodelijst. ; ZIB-2218
 * `.line.extension:houseNumberLetter-houseNumberAddition.value[x]` ; textual ; Moved guidance for HouseNumberLetter and HouseNumberAddition from `.definition` to `.comment`, added zib concept definitions to `.definition`. ; ZIBFHIR-142
@@ -19,9 +17,12 @@
 * No significant changes.
 
 ## HealthcareProvider
-### zib-HealthcareProvider-Organization
+### zib-HealthcareProvider-Organization, nl-core-HealthcareProvider-Organization
 * `.type:organizationType` ; terminology ; Changed codes in OrganizationTypeCodelist; ZIB-1559, ZIB-1927
 * `.type:departmentSpecialty` ; terminology ; Changed codes in DepartmentSpecialtyCodelist; ZIB-1665
+
+### zib-HealthcareProvider, nl-core-HealthcareProvider
+* No significant changes.
 
 ## NameInformation
 ### zib-NameInformation
