@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-ContactPerson" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson" />
   <name value="ZibContactPerson" />
   <title value="zib ContactPerson" />
@@ -46,7 +44,7 @@
     <element id="RelatedPerson">
       <path value="RelatedPerson" />
       <short value="Contact" />
-      <comment value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource, and therefore this profile, is used to capture information about any person that is related to the patient.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable." />
+      <comment value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource, and therefore this profile, is used to capture information about any person that is related to the patient.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` element.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable." />
       <alias value="Contactpersoon" />
       <mapping>
         <identity value="zib-contactperson-v4.1-2024EN" />
@@ -92,7 +90,7 @@
       <sliceName value="role" />
       <short value="Role" />
       <definition value="Specifies the role of the contact in relation to the patient." />
-      <comment value="Please note that the zib concept 'Role' is currently mapped to a slice on RelatedPerson.relationship. The current FHIR build includes a new element specifically designed for 'Role', which is expected to be a better fit. Once the next formal release (R6) incorporates this element, a decision can be made to adopt it via a pre-adopt extension and move the mapping accordingly." />
+      <comment value="Please note that the zib concept Role is currently mapped to a slice on `.relationship`. The current FHIR build includes a new element specifically designed for the role of a related person, which is expected to be a better fit. Once the next formal release (R6) incorporates this element, a decision can be made to adopt it via a preadopt extension and move the mapping accordingly." />
       <alias value="Rol" />
       <binding>
         <strength value="required" />
@@ -130,7 +128,7 @@
         <rules value="open" />
       </slicing>
       <short value="NameInformation / PayerName" />
-      <definition value="* Full name of the contact.&#xD;&#xA;* Full name of the paying person or organization (legal entity)." />
+      <definition value="Full name of the contact." />
       <alias value="Naamgegevens" />
       <alias value="BetalerNaam" />
       <mapping>
@@ -171,7 +169,7 @@
         <rules value="open" />
       </slicing>
       <short value="ContactInformation" />
-      <definition value="* The contact's telephone number and/or e-mail address.&#xD;&#xA;* The payer's telephone number and/or e-mail address." />
+      <definition value="The contact's telephone number and/or e-mail address." />
       <comment value="The cardinality mismatch between the zib (`0..1`) and FHIR (`0..*`) is explained by the containers TelephoneNumbers (`0..*`) and EmailAddresses (`0..*`) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers." />
       <alias value="Contactgegevens" />
       <mapping>
@@ -208,7 +206,7 @@
     </element>
     <element id="RelatedPerson.address">
       <path value="RelatedPerson.address" />
-      <definition value="* Contact's address information.&#xD;&#xA;* The payer's address information." />
+      <definition value="Contact's address information." />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />
