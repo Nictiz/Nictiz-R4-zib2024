@@ -18,8 +18,8 @@
 
 ## HealthcareProvider
 ### zib-HealthcareProvider-Organization, nl-core-HealthcareProvider-Organization
-* `.type:organizationType` ; terminology ; Changed codes in OrganizationTypeCodelist; ZIB-1559, ZIB-1927
-* `.type:departmentSpecialty` ; terminology ; Changed codes in DepartmentSpecialtyCodelist; ZIB-1665
+* `.type:organizationType` ; terminology ; Changed codes in OrganizationTypeCodelist ; ZIB-1559, ZIB-1927
+* `.type:departmentSpecialty` ; terminology ; Changed codes in DepartmentSpecialtyCodelist ; ZIB-1665
 
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
 * No significant changes.
