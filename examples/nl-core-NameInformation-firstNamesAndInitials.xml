@@ -1,6 +1,6 @@
 <Patient xmlns="http://hl7.org/fhir">
   <!-- An example of a situation where just the first official name is fully known while for the additional first 
-        names just an initial is known. . -->
+        names just an initial is known. -->
   <id value="nl-core-NameInformation-firstNamesAndInitials"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
@@ -39,7 +39,7 @@
       </extension>
     </given>
   </name>
-  <!-- The given name (roepnaam) is communicated using an additional .name instance with .name.use set to usual -->
+  <!-- The given name (roepnaam) is communicated using an additional .name instance with .name.use set to usual. -->
   <name>
     <use value="usual"/>
     <given value="Henk"/>

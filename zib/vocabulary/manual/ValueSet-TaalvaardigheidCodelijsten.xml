@@ -1,0 +1,27 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="TaalvaardigheidCodelijsten"/>
+    <text>
+        <status value="empty"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+    </text>
+    <url value="http://nictiz.nl/fhir/ValueSet/TaalvaardigheidCodelijsten"/>
+    <version value="2024-04-15T00:00:00"/>
+    <name value="TaalvaardigheidCodelijsten"/>
+    <title value="TaalvaardigheidCodelijsten"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <description value="Value set combining the distinct value sets that the zib LanguageProficiency binds to the concepts LanguageControlListening, LanguageControlSpeaking and LanguageControlReading. This value set as such does not exist in the zib but facilitates referencing all these value sets at the same time."/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.12.3--20240415000000"/>
+        </include>
+        <include>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.12.4--20240415000000"/>
+        </include>
+        <include>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.12.5--20240415000000"/>
+        </include>
+    </compose>
+</ValueSet>
