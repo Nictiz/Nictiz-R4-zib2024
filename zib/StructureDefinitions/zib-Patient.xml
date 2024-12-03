@@ -465,6 +465,7 @@
       <sliceName value="role" />
       <short value="Role" />
       <definition value="Specifies the role of the contact in relation to the patient." />
+      <comment value="Please note that the zib concept Role is currently mapped to a slice on `.contact.relationship`. The current FHIR build includes a new element specifically designed for the role of a related person, which is expected to be a better fit. Once the next formal release (R6) incorporates this element, a decision can be made to adopt it via a preadopt extension and move the mapping accordingly." />
       <alias value="Rol" />
       <binding>
         <strength value="required" />
