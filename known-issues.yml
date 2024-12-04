@@ -21,17 +21,27 @@ zib-ContactInformation-TelephoneNumbers:
 
 zib-HealthcareProvider:
   zib deviations:
-    Location.address:
-      - datatype: Address instead of a reference
-        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
-      - cardinality: 0..1 instead of 0..*
-        reason: The cardinality mismatch between the zib (0..*) and FHIR (0..1) is explained by the restriction of FHIR to limit the Location.address to a physical address while the zib allows for other types of addresses (e.g. a postal address). Other types of addresses than a physical address are given in Organization.address which is referenced by Location.managingOrganization.
     Location.telecom:
       - cardinality: 0..* instead of 0..1
-        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib part ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
-    Location.telecom*:
-      - datatype: ContactPoint instead of a reference
-        reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource. Because the FHIR profile for ContactInformation consists of two parts the root concept of ContactInformation is mapped on .telecom.
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+      - datatype: ContactPoint instead of Reference
+        for: NL-CM:17.2.6 (HealthcareProvider.ContactInformation)
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+      - datatype: ContactPoint instead of rootconcept
+        for: NL-CM:20.6.1 (ContactInformation)
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+    Location.telecom:*:
+      - datatype: ContactPoint instead of container
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement
+    Location.address:
+      - cardinality: 0..1 instead of 0..*
+        reason: The cardinality mismatch between the zib (0..*) and FHIR (0..1) is explained by the restriction of FHIR to limit the Location.address to a physical address while the zib allows for other types of addresses (e.g. a postal address). Other types of addresses than a physical address are given in Organization.address which is referenced by Location.managingOrganization.
+      - datatype: Address instead of Reference
+        for: NL-CM:17.2.5 (HealthcareProvider.AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+      - datatype: Address instead of rootconcept
+        for: NL-CM:20.5.1 (AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
 
 zib-NameInformation:
   zib deviations:
