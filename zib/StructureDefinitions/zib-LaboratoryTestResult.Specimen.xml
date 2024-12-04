@@ -90,13 +90,13 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResultSpecimenSource" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResult.SpecimenSource" />
       </type>
       <isModifier value="false" />
     </element>
     <element id="Specimen.collection.extension:specimenSource.url">
       <path value="Specimen.collection.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResultSpecimenSource" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResult.SpecimenSource" />
     </element>
     <element id="Specimen.collection.bodySite">
       <path value="Specimen.collection.bodySite" />
