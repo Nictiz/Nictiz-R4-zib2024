@@ -94,6 +94,10 @@
       </type>
       <isModifier value="false" />
     </element>
+    <element id="Specimen.collection.extension:specimenSource.url">
+      <path value="Specimen.collection.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResultSpecimenSource" />
+    </element>
     <element id="Specimen.collection.bodySite">
       <path value="Specimen.collection.bodySite" />
       <short value="Location / AnatomicalLocation" />
@@ -122,8 +126,8 @@
       <path value="Specimen.collection.bodySite.extension.value[x]" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen-BodyStructure" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen-BodyStructure" />
       </type>
     </element>
     <element id="Specimen.container.extension:specimenNumberExtension">

@@ -21,9 +21,9 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-laboratorytestresult-v5.1-2022EN" />
-    <uri value="https://zibs.nl/wiki/LaboratoryTestResult-v5.1(2022EN)" />
-    <name value="zib LaboratoryTestResult-v5.1(2022EN)" />
+    <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/LaboratoryTestResult-v7.0(2024EN)" />
+    <name value="zib LaboratoryTestResult-v7.0(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -63,13 +63,17 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation" />
       </type>
     </element>
-    <element id="Specimen.container.type">
-      <path value="Specimen.container.type" />
-      <mapping>
-        <identity value="zib-laboratorytestresult-v5.1-2022EN" />
-        <map value="NL-CM:13.1.21" />
-        <comment value="ContainerType" />
-      </mapping>
+    <element id="Specimen.collection.bodySite.extension:bodyStructureReference">
+      <path value="Specimen.collection.bodySite.extension" />
+      <sliceName value="bodyStructureReference" />
+    </element>
+    <element id="Specimen.collection.bodySite.extension:bodyStructureReference.value[x]">
+      <path value="Specimen.collection.bodySite.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-LaboratoryTestResult.Specimen-BodyStructure" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
