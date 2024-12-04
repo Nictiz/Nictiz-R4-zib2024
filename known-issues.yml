@@ -4,6 +4,12 @@
 
 issues should occur: true
 
+zib-AbilityToUseToilet:
+  zib deviations:
+      Observation:
+      - short: AbilityToUseToilet instead of ToiletUseAbility
+        reason: The root of the zib is called "ToiletUseAbility" (which is incorrect), even though the zib itself is called "AbilityToUseToilet".
+
 zib-AddressInformation:
   zib deviations:
     Address.line.extension:houseNumberIndication.value[x]:
