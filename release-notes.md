@@ -16,6 +16,9 @@
 ### zib-ContactInformation-EmailAddresses, nl-core-ContactInformation-EmailAddresses
 * No significant changes.
 
+## HealthProfessional (zib-HealthProfessional, nl-core-HealthProfessional)
+* No significant changes.
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
