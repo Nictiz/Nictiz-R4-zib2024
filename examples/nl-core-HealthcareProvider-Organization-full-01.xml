@@ -11,7 +11,7 @@
         <tbody>
           <tr>
             <th>Naam</th>
-            <td/>
+            <td>Erasmus Universitair Medisch Centrum</td>
           </tr>
           <tr>
             <th>Type</th>
@@ -57,6 +57,7 @@
       <display value="Ziekenhuis"/>
     </coding>
   </type>
+  <name value="Erasmus Universitair Medisch Centrum"/>
   <telecom>
     <system value="phone"/>
     <value value="+31107040704"/>
