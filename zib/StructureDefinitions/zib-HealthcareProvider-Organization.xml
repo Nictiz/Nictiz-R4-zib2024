@@ -34,7 +34,7 @@
     <element id="Organization">
       <path value="Organization" />
       <short value="HealthcareProvider" />
-      <comment value="The zib HealthcareProvider is mapped to this Organization profile and a profile on Location(&lt;http://nictiz.nl/fhir/StructureDefinition/zib-HealthcareProvider&gt;). The Location profile acts as the focal resource of the HealthcareProvider because most references to this zib are concerned about the recording of the physical location where the care to patient/client takes place rather than the organizational information. Often there's no clear distinction between an organizational structure and a physical location. As a rule of thumb, locations are always used for recording where a service occurs, and hence where encounters and observations take place.&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this profile, using the `Organization.partOf` element to refer to their parent organization. The physical location is captured using the zib-HealthcareProvider profile, which refers this profile at the appropriate level in the hierarchy." />
+      <comment value="The zib HealthcareProvider is mapped to this Organization profile and a profile on Location (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-HealthcareProvider&gt;). The Location profile acts as the focal resource of the HealthcareProvider because most references to this zib are concerned about the recording of the physical location where the care to patient/client takes place rather than the organizational information. Often there's no clear distinction between an organizational structure and a physical location. As a rule of thumb, locations are always used for recording where a service occurs, and hence where encounters and observations take place.&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this profile, using the `.partOf` element to refer to their parent organization. The physical location is captured using the zib-HealthcareProvider profile, which refers this profile at the appropriate level in the hierarchy." />
       <alias value="Zorgaanbieder" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.6-2024EN" />
@@ -52,7 +52,7 @@
         <rules value="open" />
       </slicing>
       <short value="HealthcareProviderIdentificationNumber" />
-      <definition value="The organization’s identification number. For Dutch healthcare providers, the URA number or the AGB number is used, if possible. Depending on the context other ID's are also possible. For foreign or non-affiliated healthcare providers, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization." />
+      <definition value="The organization's identification number. For Dutch healthcare providers, the URA number or the AGB number is used, if possible. Depending on the context other IDs are also possible. For foreign or non-affiliated healthcare providers, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization." />
       <alias value="ZorgaanbiederIdentificatienummer" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.6-2024EN" />
@@ -88,7 +88,7 @@
       <path value="Organization.type" />
       <sliceName value="departmentSpecialty" />
       <short value="DepartmentSpecialty" />
-      <definition value="The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed." />
+      <definition value="The specialty of the healthcare provider's department. The departmental specialty can be filled in if further indication of the healthcare provider is needed." />
       <alias value="AfdelingSpecialisme" />
       <max value="1" />
       <binding>
