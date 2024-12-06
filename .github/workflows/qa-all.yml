@@ -1,5 +1,7 @@
 name: Profile QA - full repository
-on: [pull_request]
+on:
+  pull_request:
+    types: [ready_for_review]
 
 jobs:
   nictiz-r4-qa-full:
@@ -11,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Zib2024 QA
-        uses: Nictiz/Nictiz-tooling-R4-QA@6.3.0
+        uses: Nictiz/Nictiz-tooling-R4-QA@6.4.0
         with:
           changed-only: false
           verbosity-level: warning
