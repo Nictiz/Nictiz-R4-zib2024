@@ -19,6 +19,30 @@ zib-ContactInformation-TelephoneNumbers:
     - cardinality: 1..1 instead of 0..1
       reason: Although TelecomType and NumberType are optional in the zib, ContactPoint.system is used to identify the TelephoneNumbers concept itself when this datatype is added to a profile. If only a telephone number is given without TelecomType and NumberType, it will fall in the default slice of the sliced element with datatype ContactPoint.
 
+zib-HealthcareProvider:
+  zib deviations:
+    Location.telecom:
+      - cardinality: 0..* instead of 0..1
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+      - datatype: ContactPoint instead of Reference
+        for: NL-CM:17.2.6 (HealthcareProvider.ContactInformation)
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+      - datatype: ContactPoint instead of rootconcept
+        for: NL-CM:20.6.1 (ContactInformation)
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+    Location.telecom:*:
+      - datatype: ContactPoint instead of container
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement
+    Location.address:
+      - cardinality: 0..1 instead of 0..*
+        reason: The cardinality mismatch between the zib (0..*) and FHIR (0..1) is explained by the restriction of FHIR to limit the Location.address to a physical address while the zib allows for other types of addresses (e.g. a postal address). Other types of addresses than a physical address are given in Organization.address which is referenced by Location.managingOrganization.
+      - datatype: Address instead of Reference
+        for: NL-CM:17.2.5 (HealthcareProvider.AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+      - datatype: Address instead of rootconcept
+        for: NL-CM:20.5.1 (AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+
 zib-NameInformation:
   zib deviations:
     HumanName.prefix:
@@ -44,6 +68,10 @@ zib-NameInformation.GivenName:
       - cardinality: 1..* instead of 0..1
         reason: The GivenName is optional according to the zib, but when this datatype profile is used, a name should be provided.
 
+unmapped zib concepts:
+  - NL-CM:17.2.10: HealthcareProvider.LocationNumber
+    reason: This zib concept is problematic to map cleanly to FHIR and it has been deemed too uncommon in practice to warrant an extension.
+
 ---
 # The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
 # shortcomings in tooling, the used terminology server, etc.
@@ -52,13 +80,21 @@ zib-NameInformation.GivenName:
 issues should occur: false
 
 zib-ContactInformation-TelephoneNumbers:
-  zib deviations:
+  zib deviations:    
     ContactPoint.extension:comment.value[x]:
     - cardinality: 0..* instead of 0..1
       reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
     ContactPoint.extension:purpose.value[x]:
     - cardinality: 0..* instead of 0..1
       reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
+
+zib-HealthcareProvider:
+  ignored issues:
+    Location.address:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The required short description is given by the datatype profile, so it is absent from the differential.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The required alias is given by the datatype profile, so it is absent from the differential.   
 
 zib-NameInformation:
   zib deviations:
