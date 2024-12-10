@@ -1,4 +1,8 @@
-## AbilityToDrink (zib-AbilityToDrink, nl-core-AbilityToDrink)
+## AbilityToDrink
+### zib-AbilityToDrink, nl-core-AbilityToDrink
+* No significant changes
+
+### zib-AbilityToDrink.DrinkingLimitations, nl-core-AbilityToDrink.DrinkingLimitations
 * No significant changes
 
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
