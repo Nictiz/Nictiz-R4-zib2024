@@ -24,6 +24,15 @@
 * `.relationship:relationship` ; textual ; Changed definition of Relationship. ; ZIB-1556
 * `.relationship:relationship` ; terminology ; Changed value set from RelatieCodelijst to RelatieSnomedCodelijst. ; ZIB-1180, ZIB-1438, ZIB-1495, ZIB-1486, ZIB-1556, ZIB-1616, ZIB-1770, ZIB-1789, ZIB-1941, ZIB-2008
 
+## HealthcareProvider
+### zib-HealthcareProvider-Organization, nl-core-HealthcareProvider-Organization
+* `.type:organizationType` ; terminology ; Changed codes in OrganisatieTypeCodelijst. ; ZIB-1559, ZIB-1927
+* `.type:departmentSpecialty` ; terminology ; Changed codes in AfdelingSpecialismeCodelijst. ; ZIB-2218
+* `.type:departmentSpecialty` ; textual ; Changed definition of DepartmentSpecialty. ; ZIB-1665
+
+### zib-HealthcareProvider, nl-core-HealthcareProvider
+* No significant changes.
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
