@@ -43,7 +43,12 @@ zib-NameInformation.GivenName:
     HumanName.given:
       - cardinality: 1..* instead of 0..1
         reason: The GivenName is optional according to the zib, but when this datatype profile is used, a name should be provided.
-
+      
+ext-TimeIntervalDuration.value:
+  zib deviations:
+    Extension.value[x]:
+      - message: TijdsDuur instead of tijdsDuur
+        reason: The zib concept name "tijdsDuur" is incorrect, concept names should begin with a capital letter.
 ---
 # The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
 # shortcomings in tooling, the used terminology server, etc.
