@@ -163,9 +163,7 @@
     </element>
     <element id="Practitioner.address">
       <path value="Practitioner.address" />
-      <short value="AddressInformation" />
       <definition value="Health professional's address information." />
-      <alias value="Adresgegevens" />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />
@@ -203,10 +201,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
       </type>
-    </element>
-    <element id="Practitioner.gender.extension:genderCodelist.url">
-      <path value="Practitioner.gender.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
     </element>
     <element id="Practitioner.gender.extension:genderCodelist.value[x]">
       <path value="Practitioner.gender.extension.value[x]" />
