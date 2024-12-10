@@ -1,3 +1,10 @@
+## AbilityToDrink
+### zib-AbilityToDrink, nl-core-AbilityToDrink
+* No significant changes
+
+### zib-AbilityToDrink.DrinkingLimitations, nl-core-AbilityToDrink.DrinkingLimitations
+* No significant changes
+
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
 * `.extension:addressType.value[x]` ; terminology ; Changed codes in AdresSoortCodelijst. ; ZIB-2218
 * `.line.extension:houseNumberLetter-houseNumberAddition.value[x]` ; textual ; Moved guidance for HouseNumberLetter and HouseNumberAddition from `.definition` to `.comment`, added zib concept definitions to `.definition`. ; ZIBFHIR-142
