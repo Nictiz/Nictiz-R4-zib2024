@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="A health professional is a person who is authorized to perform actions in the field of individual healthcare." />
-  <purpose value="This Practitioner resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) HealthProfessional v4.0 (2024)](https://zibs.nl/wiki/HealthProfessional-v4.0(2024EN))." />
+  <purpose value="This Practitioner resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) HealthProfessional v4.0 (2024)](https://zibs.nl/wiki/HealthProfessional-v4.0(2024EN)).&#xD;&#xA;&#xD;&#xA;To implement the entire zib, the complementary profile [zib-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole) should be used." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -57,7 +57,7 @@
         <rules value="open" />
       </slicing>
       <short value="HealthProfessionalIdentificationNumber" />
-      <definition value="The health professional identification number is a number that uniquely identifies the health professional.The following numbers are used in the Netherlands: 1. UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry. 2. VEKTIS AGB-Z. Identifies health professionals and healthcare organizations 3. BIG-ID. The ID of the health professional listed in the BIG-Register. This information is not readily available for foreign health professionals." />
+      <definition value="The health professional identification number is a number that uniquely identifies the health professional.&#xD;&#xA;&#xD;&#xA;The following numbers are used in the Netherlands:&#xD;&#xA;1. UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry.&#xD;&#xA;2. VEKTIS AGB-Z. Identifies health professionals and healthcare organizations.&#xD;&#xA;3. BIG-ID. The ID of the health professional listed in the BIG-Register. &#xD;&#xA;&#xD;&#xA;This information is not readily available for foreign health professionals." />
       <alias value="ZorgverlenerIdentificatienummer" />
       <mapping>
         <identity value="zib-healthprofessional-v4.0-2024EN" />
