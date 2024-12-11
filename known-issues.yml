@@ -115,7 +115,8 @@ zib-NameInformation.GivenName:
 ext-TimeIntervalDuration.value:
   zib deviations:
     Extension.value[x]:
-      - message: TijdsDuur instead of tijdsDuur
+      - alias: TijdsDuur instead of tijdsDuur
+        for: NL-CM:20.3.4 (Extension.value[x])
         reason: The zib concept name "tijdsDuur" is incorrect, concept names should begin with a capital letter. This will be fixed in a next version of the zibs (ZIB-2551).
 
 unmapped zib concepts:
