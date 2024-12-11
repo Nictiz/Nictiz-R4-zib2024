@@ -35,15 +35,15 @@
 
 ## IllnessPerception 
 ### zib-IllnessPerception, nl-core-IllnessPerception 
-* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#363910003 to http://snomed.info/sct#159971000146104 ; ZIB-1600
+* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#363910003 to http://snomed.info/sct#159971000146104. ; ZIB-1600
 
-### zib-IllnessPerception.PatientIllnessInsight, nl-core-IllnessPerception.PatientIllnessInsight
+### zib-IllnessPerception.CopingWithIllnessByFamily, nl-core-IllnessPerception.CopingWithIllnessByFamily 
 * No significant changes.
 
 ### zib-IllnessPerception.CopingWithIllnessByPatient, nl-core-IllnessPerception.CopingWithIllnessByPatient 
 * No significant changes.
 
-### zib-IllnessPerception.CopingWithIllnessByFamily, nl-core-IllnessPerception.CopingWithIllnessByFamily 
+### zib-IllnessPerception.PatientIllnessInsight, nl-core-IllnessPerception.PatientIllnessInsight
 * No significant changes.
 
 ## NameInformation

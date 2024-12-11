@@ -16,8 +16,8 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The description of how the family deals with the patient’s illness or health problem." />
-  <purpose value="This Observation resource represents the CopingWithIllnessByFamiliy concept of (NL-CM:18.5.5) Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) IllnessPerception v3.2 (2024)](https://zibs.nl/wiki/IllnessPerception-v3.2(2024EN))." />
+  <description value="The description of how the family deals with the patient's illness or health problem." />
+  <purpose value="This Observation resource represents the CopingWithIllnessByFamily concept (NL-CM:18.5.5) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) IllnessPerception v3.2 (2024)](https://zibs.nl/wiki/IllnessPerception-v3.2(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -48,7 +48,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="CopingWithIllnessByFamily" />
-      <definition value="The description of how the family deals with the patient’s illness or health problem." />
+      <definition value="The description of how the family deals with the patient's illness or health problem." />
       <alias value="OmgaanMetZiekteprocesDoorNaasten" />
       <type>
         <code value="string" />
