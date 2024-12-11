@@ -112,7 +112,7 @@ zib-NameInformation.GivenName:
       - cardinality: 1..* instead of 0..1
         reason: The GivenName is optional according to the zib, but when this datatype profile is used, a name should be provided.
       
-ext-TimeIntervalDuration.value:
+ext-TimeInterval.Duration:
   zib deviations:
     Extension.value[x]:
       - alias: TijdsDuur instead of tijdsDuur
