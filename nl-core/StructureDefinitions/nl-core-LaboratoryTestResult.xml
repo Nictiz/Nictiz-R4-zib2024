@@ -25,11 +25,6 @@
     <uri value="https://zibs.nl/wiki/LaboratoryTestResult-v7.0(2024EN)" />
     <name value="zib LaboratoryTestResult-v7.0(2024EN)" />
   </mapping>
-  <mapping>
-    <identity value="lu-dataset-laboratory-exchange-20210222" />
-    <uri value="https://decor.nictiz.nl/ad/#/lu-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.25.1.2/2021-02-22T00:00:00" />
-    <name value="ART-DECOR Dataset Lab Exchange 20210222T00:00:00" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
@@ -51,40 +46,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-LaboratoryTestResult" />
       </type>
-    </element>
-    <element id="Observation.extension:edifactReferenceNumber">
-      <path value="Observation.extension" />
-      <sliceName value="edifactReferenceNumber" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-EdifactReferenceNumber" />
-      </type>
-    </element>
-    <element id="Observation.extension:copyIndicator">
-      <path value="Observation.extension" />
-      <sliceName value="copyIndicator" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CopyIndicator" />
-      </type>
-    </element>
-    <element id="Observation.extension:copyIndicator.url">
-      <path value="Observation.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-CopyIndicator" />
-    </element>
-    <element id="Observation.identifier">
-      <path value="Observation.identifier" />
-      <mapping>
-        <identity value="lu-dataset-laboratory-exchange-20210222" />
-        <map value="lu-concept-v2-4296" />
-        <comment value="LaboratoriumUitslagIdentificatie" />
-      </mapping>
-      <mapping>
-        <identity value="lu-dataset-laboratory-exchange-20210222" />
-        <map value="lu-concept-v2-4298" />
-        <comment value="TestIdentificatie" />
-      </mapping>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />

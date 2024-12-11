@@ -35,12 +35,18 @@
 * No significant changes.
 
 ## LaboratoryTestResult
-### zib-LaboratoryTestResult, nl-core-LaboratoryTestResult
+### zib-LaboratoryTestResult 
 * `Observation` ; textual ; Removed guidance for InterpretationMethod ; ZIB-1292
 * `Observation` ; textual ; Removed guidance for Requester ; ZIB-1269
 * `.method` ; terminology ; Binding strength changed from Required to Extensible and changed codes in TestMethodCodelist ; ZIB-1958
 * `.value[x]` ; terminology ; Added valueset TestResultCodelist ; ZIB-1442, ZIB-1293, ZIB-1274
 * `.interpretation:resultFlags` ; cardinality ; Changed max cardinality from * to 1 ; ZIB-1072
+
+### nl-core-LaboratoryTestResult
+* `.identfier` ; mapping ; Removed mapping of LaboratoriumUitslagIdentificatie and TestIdentificatie ; ZIBFHIR-152
+* `.extension:edifactReferenceNumber` ; extension ; Removed ext-EdifactReferenceNumber ; ZIBFHIR-152
+* `.extension:copyIndicator` ; extension ; Removed ext-copyIndicator ; ZIBFHIR-152
+
 
 ### zib-LaboratoryTestResult.Specimen, nl-core-LaboratoryTestResult.Specimen
 * `.collection.collected[x]:collectedDateTime` ; mapping ; Removed mapping of CollectionDateTime ; ZIB-2239
@@ -53,7 +59,7 @@
 * `.collection.bodySite.extension:morphology` ; mapping ; Moved mapping of Morphology to `BodyStructure.morphology` ; ZIBFHIR-113
 * `.receivedTime` ; mapping ; Removed mapping of ReceivedDateTime ; ZIB-2239
 
-### zib-LaboratoryTestResult.Specimen-BodyStructure, 
+### zib-LaboratoryTestResult.Specimen-BodyStructure, nl-core-LaboratoryTestResult.Specimen-BodyStructure
 * New profile that maps morphology to a native FHIR element inside the BodyStructure resource instead of a custom extension ; ZIBFHIR-113
 
 ## NameInformation
