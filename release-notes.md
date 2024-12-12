@@ -1,5 +1,5 @@
 ## AbilityToEat (zib-AbilityToEat, nl-core-AbilityToEat)
-* No significant changes
+* No significant changes.
 
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
 * `.extension:addressType.value[x]` ; terminology ; Changed codes in AdresSoortCodelijst. ; ZIB-2218
