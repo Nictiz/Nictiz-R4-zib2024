@@ -1,7 +1,7 @@
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="nl-core-AbilityToEat-01"/>
+  <id value="nl-core-AbilityToEat.EatingLimitations-01-01"/>
   <meta>
-    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AbilityToEat"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AbilityToEat.EatingLimitations"/>
   </meta>
   <text>
     <status value="extensions"/>
@@ -15,10 +15,10 @@
           </tr>
           <tr>
             <td>
-              <span title="vermogen tot eten (288883002 - SNOMED CT)">vermogen tot eten</span>
+              <span title="vaardigheid betreffende eten (288843005 - SNOMED CT)">vaardigheid betreffende eten</span>
             </td>
             <td>
-              <span title="Hulp nodig bij eten (129033007 - SNOMED CT)">Hulp nodig bij eten</span>
+              <span title="Moeite met in stukken snijden van voedsel (289078003 - SNOMED CT)">Moeite met in stukken snijden van voedsel</span>
             </td>
           </tr>
         </tbody>
@@ -29,8 +29,8 @@
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="288883002"/>
-      <display value="vermogen tot eten"/>
+      <code value="288843005"/>
+      <display value="vaardigheid betreffende eten"/>
     </coding>
   </code>
   <subject>
@@ -41,18 +41,8 @@
   <valueCodeableConcept>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="129033007"/>
-      <display value="Hulp nodig bij eten"/>
+      <code value="289078003"/>
+      <display value="Moeite met in stukken snijden van voedsel"/>
     </coding>
   </valueCodeableConcept>
-  <hasMember>
-    <reference value="Observation/nl-core-AbilityToEat.EatingLimitations-01-01"/>
-    <type value="Observation"/>
-    <display value="Eating limitations, Moeite met in stukken snijden van voedsel"/>
-  </hasMember>
-  <hasMember>
-    <reference value="Observation/nl-core-AbilityToEat.EatingLimitations-01-02"/>
-    <type value="Observation"/>
-    <display value="Eating limitations, Moeite met hanteren van eetgerei bij zelfstandig eten"/>
-  </hasMember>
 </Observation>
