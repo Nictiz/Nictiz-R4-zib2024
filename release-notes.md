@@ -1,4 +1,8 @@
-## AbilityToEat (zib-AbilityToEat, nl-core-AbilityToEat)
+## AbilityToEat 
+### zib-AbilityToEat, nl-core-AbilityToEat
+* No significant changes.
+
+### zib-AbilityToEat.EatingLimitations, nl-core-AbilityToEat.EatingLimitations
 * No significant changes.
 
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
