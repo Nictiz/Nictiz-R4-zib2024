@@ -1,5 +1,12 @@
-## AbilityToUseToilet (zib-AbilityToUseToilet, nl-core-AbilityToUseToilet)
-* No significant changes
+## AbilityToUseToilet 
+### zib-AbilityToUseToilet, nl-core-AbilityToUseToilet
+* No significant changes.
+
+### zib-AbilityToUseToilet.MenstrualCare, nl-core-AbilityToUseToilet.MenstrualCare
+* No significant changes.
+
+### zib-AbilityToUseToilet.ToiletUse, nl-core-AbilityToUseToilet.ToiletUse
+* No significant changes.
 
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
 * `.extension:addressType.value[x]` ; terminology ; Changed codes in AdresSoortCodelijst. ; ZIB-2218
