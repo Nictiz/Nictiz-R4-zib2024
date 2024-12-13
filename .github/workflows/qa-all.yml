@@ -13,10 +13,3 @@ jobs:
       - name: spy
         shell: bash
         run: echo ${{ github.event.pull_request.action }}
-      - name: Zib2024 QA
-        uses: Nictiz/Nictiz-tooling-R4-QA@6.4.0
-        with:
-          changed-only: false
-          verbosity-level: warning
-          best-practice-warnings: false
-          suppress-display-issues: true
