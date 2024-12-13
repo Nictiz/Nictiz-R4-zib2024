@@ -4,6 +4,24 @@
 
 issues should occur: true
 
+pattern-NlCoreHealthProfessionalReference:
+  ignored issues:
+    StructureDefinition:
+      - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
+        reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern NlCoreHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
+
+pattern-ZibHealthProfessionalReference:
+  ignored issues:
+    StructureDefinition:
+      - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
+        reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern ZibHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
+
+zib-AbilityToEat.EatingLimitations:
+  zib deviations:
+      Observation.value[x]:valueCodeableConcept:
+      - cardinality: 0..1 instead of 0..*
+        reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
+
 ext-LanguageProficiency.CommunicationDetails:
   zib deviations:
     Extension.value[x]:
@@ -273,18 +291,6 @@ unmapped zib concepts:
 # These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
 
 issues should occur: false
-
-pattern-NlCoreHealthProfessionalReference:
-  ignored issues:
-    StructureDefinition:
-      - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
-        reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern NlCoreHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
-
-pattern-ZibHealthProfessionalReference:
-  ignored issues:
-    StructureDefinition:
-      - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
-        reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern ZibHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:    
