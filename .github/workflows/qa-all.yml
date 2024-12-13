@@ -1,11 +1,10 @@
 name: Profile QA - full repository
-on:
-  pull_request:
-    types: [ready_for_review]
+on: [pull_request]
 
 jobs:
   nictiz-r4-qa-full:
     name: Loose QA on the entire repo
+    if: ${{ github.event.pull_request.draft == false}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
