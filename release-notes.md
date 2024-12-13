@@ -1,5 +1,5 @@
 ## AbilityToWashOneself (zib-AbilityToWashOneself, nl-core-AbilityToWashOneself)
-* No significant changes
+* No significant changes.
 
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
 * `.extension:addressType.value[x]` ; terminology ; Changed codes in AdresSoortCodelijst. ; ZIB-2218
