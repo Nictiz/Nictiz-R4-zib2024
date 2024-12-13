@@ -34,7 +34,7 @@
 * `.type:departmentSpecialty` ; textual ; Changed definition of DepartmentSpecialty. ; ZIB-1665
 
 ## HealthProfessional 
-### zib-HealthProfessional, nl-core-HealthProfessional
+### zib-HealthProfessional-Practitioner, nl-core-HealthProfessional-Practitioner
 * `.identifier` ; textual ; Changed definition of HealthProfessionalIdentificationNumber. ; ZIB-1673
 * `.gender` ; textual ; Changed definition of Gender. ; ZIB-1256, ZIB-1368
 
