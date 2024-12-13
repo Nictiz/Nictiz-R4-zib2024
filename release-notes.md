@@ -38,7 +38,7 @@
 * `.identifier` ; textual ; Changed definition of HealthProfessionalIdentificationNumber. ; ZIB-1673
 * `.gender` ; textual ; Changed definition of Gender. ; ZIB-1256, ZIB-1368
 
-### zib-HealthProfessional, nl-core-HealthProfessional-PractitionerRole
+### zib-HealthProfessional-PractitionerRole, nl-core-HealthProfessional-PractitionerRole
 * `.specialty:specialty` ; terminology ; Changed codes in SpecialismeCodelijsten (SpecialismeAGBCodelijst and SpecialismeUZICodelijst). ; ZIB-2218
 
 ## NameInformation
