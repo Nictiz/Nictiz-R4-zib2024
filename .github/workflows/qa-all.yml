@@ -1,7 +1,5 @@
 name: Profile QA - full repository
-on:
-  pull_request:
-    types: [ready_for_review, changed]
+on: [push, pull_request]
 
 jobs:
   nictiz-r4-qa-full:
