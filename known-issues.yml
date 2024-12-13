@@ -274,6 +274,18 @@ unmapped zib concepts:
 
 issues should occur: false
 
+pattern-NlCoreHealthProfessionalReference:
+  ignored issues:
+    StructureDefinition:
+      - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
+        reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern NlCoreHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
+
+pattern-ZibHealthProfessionalReference:
+  ignored issues:
+    StructureDefinition:
+      - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
+        reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern ZibHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
+
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:    
     ContactPoint.extension:comment.value[x]:
