@@ -1,5 +1,4 @@
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
-* `.extension:addressType.value[x]` ; terminology ; Changed codes in AdresSoortCodelijst. ; ZIB-2218
 * `.line.extension:houseNumberLetter-houseNumberAddition.value[x]` ; textual ; Moved guidance for HouseNumberLetter and HouseNumberAddition from `.definition` to `.comment`, added zib concept definitions to `.definition`. ; ZIBFHIR-142
 * `.line.extension:houseNumberIndication.value[x]` ; textual ; Added guidance for HouseNumberIndication. ; ZIB-2218
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
@@ -24,6 +23,12 @@
 * `.relationship:relationship` ; textual ; Changed definition of Relationship. ; ZIB-1556
 * `.relationship:relationship` ; terminology ; Changed value set from RelatieCodelijst to RelatieSnomedCodelijst. ; ZIB-1180, ZIB-1438, ZIB-1495, ZIB-1486, ZIB-1556, ZIB-1616, ZIB-1770, ZIB-1789, ZIB-1941, ZIB-2008
 
+### zib-Patient, nl-core-Patient
+* `.contact.relationship:role` ; textual ; Added guidance for Role. ; ZIBFHIR-73
+* `.contact.relationship:role` ; terminology ; Changed value set from RolCodelijst to RolSnomedCodelijst. ; ZIB-1180, ZIB-1470, ZIB-1481, ZIB-1496, ZIB-1556, ZIB-1616, ZIB-1789, ZIB-2008, ZIB-2211
+* `.contact.relationship:relationship` ; textual ; Changed definition of Relationship. ; ZIB-1556
+* `.contact.relationship:relationship` ; terminology ; Changed value set from RelatieCodelijst to RelatieSnomedCodelijst. ; ZIB-1180, ZIB-1438, ZIB-1495, ZIB-1486, ZIB-1556, ZIB-1616, ZIB-1770, ZIB-1789, ZIB-1941, ZIB-2008
+
 ## HealthcareProvider
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
 * No significant changes.
@@ -41,6 +46,14 @@
 ### zib-HealthProfessional-PractitionerRole, nl-core-HealthProfessional-PractitionerRole
 * `.specialty:specialty` ; terminology ; Changed codes in SpecialismeCodelijsten (SpecialismeAGBCodelijst and SpecialismeUZICodelijst). ; ZIB-2218
 
+## LanguageProficiency (zib-Patient, nl-core-Patient)
+* `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877
+* `.communication.extension:comment` ; extension ; Replaced extension ExtComment with ExtLanguageProficiencyComment. ; ZIBFHIR-97
+* `.communication.language` ; terminology ; Changed codes in CommunicatieTaalCodelijst. ; ZIB-2218
+
+## MaritalStatus (zib-Patient, nl-core-Patient)
+* `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
@@ -52,3 +65,11 @@
 
 ### zib-NameInformation.GivenName, nl-core-NameInformation.GivenName
 * No significant changes.
+
+## Nationality (zib-Patient, nl-core-Patient)
+* No significant changes.
+
+## Patient (zib-Patient, nl-core-Patient)
+* `.extension:genderIdentity.value[x]` ; extension ; Added extension genderIdentity for GenderIdentity. ; ZIB-1693
+* `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
+* `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
