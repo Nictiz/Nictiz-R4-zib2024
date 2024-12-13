@@ -12,7 +12,7 @@
     <!-- Show (optional) warnings to 'validate' content of profile -->
     <xsl:param name="showWarnings" select="true()"/>
 
-    <!-- If metadata are present, overwrite them with values from the DECOR defintions file -->
+    <!-- If metadata are present, overwrite them with values from the DECOR definitions file -->
     <xsl:param name="overwrite" select="true()"/>
 
     <!-- Zib decor project file -->
