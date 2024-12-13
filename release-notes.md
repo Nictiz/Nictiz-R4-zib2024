@@ -2,7 +2,7 @@
 * `.line.extension:houseNumberLetter-houseNumberAddition.value[x]` ; textual ; Moved guidance for HouseNumberLetter and HouseNumberAddition from `.definition` to `.comment`, added zib concept definitions to `.definition`. ; ZIBFHIR-142
 * `.line.extension:houseNumberIndication.value[x]` ; textual ; Added guidance for HouseNumberIndication. ; ZIB-2218
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
-* `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst en LandISOCodelijst). ; ZIB-2218
+* `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
@@ -30,13 +30,21 @@
 * `.contact.relationship:relationship` ; terminology ; Changed value set from RelatieCodelijst to RelatieSnomedCodelijst. ; ZIB-1180, ZIB-1438, ZIB-1495, ZIB-1486, ZIB-1556, ZIB-1616, ZIB-1770, ZIB-1789, ZIB-1941, ZIB-2008
 
 ## HealthcareProvider
+### zib-HealthcareProvider, nl-core-HealthcareProvider
+* No significant changes.
+
 ### zib-HealthcareProvider-Organization, nl-core-HealthcareProvider-Organization
 * `.type:organizationType` ; terminology ; Changed codes in OrganisatieTypeCodelijst. ; ZIB-1559, ZIB-1927
 * `.type:departmentSpecialty` ; terminology ; Changed codes in AfdelingSpecialismeCodelijst. ; ZIB-2218
 * `.type:departmentSpecialty` ; textual ; Changed definition of DepartmentSpecialty. ; ZIB-1665
 
-### zib-HealthcareProvider, nl-core-HealthcareProvider
-* No significant changes.
+## HealthProfessional 
+### zib-HealthProfessional-Practitioner, nl-core-HealthProfessional-Practitioner
+* `.identifier` ; textual ; Changed definition of HealthProfessionalIdentificationNumber. ; ZIB-1673
+* `.gender` ; textual ; Changed definition of Gender. ; ZIB-1256, ZIB-1368
+
+### zib-HealthProfessional-PractitionerRole, nl-core-HealthProfessional-PractitionerRole
+* `.specialty:specialty` ; terminology ; Changed codes in SpecialismeCodelijsten (SpecialismeAGBCodelijst and SpecialismeUZICodelijst). ; ZIB-2218
 
 ## LanguageProficiency (zib-Patient, nl-core-Patient)
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877

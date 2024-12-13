@@ -67,7 +67,7 @@ zib-ContactPerson:
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
       - datatype: Address instead of rootconcept
         for: NL-CM:20.5.1 (AddressInformation)
-        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.        
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
 
 zib-HealthcareProvider:
   zib deviations:
@@ -92,6 +92,53 @@ zib-HealthcareProvider:
       - datatype: Address instead of rootconcept
         for: NL-CM:20.5.1 (AddressInformation)
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+
+zib-HealthProfessional-Practitioner:
+  zib deviations:
+    Practitioner.name:
+      - cardinality: 0..* instead of 0..1
+        reason: The name information according to zib NameInformation may be split up over multiple instances of Practitioner.name.
+      - datatype: HumanName instead of Reference
+        reason: A name in FHIR is represented using the HumanName datatype, not as a separate resource.
+    Practitioner.name:nameInformation:
+      - datatype: HumanName instead of rootconcept
+        reason: A name in FHIR is represented using the HumanName datatype, not as a separate resource.
+    Practitioner.telecom:
+      - cardinality: 0..* instead of 0..1
+        for: NL-CM:17.1.8 (HealthProfessional.ContactInformation)
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+      - datatype: ContactPoint instead of Reference
+        for: NL-CM:17.1.8 (HealthProfessional.ContactInformation)
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+      - datatype: ContactPoint instead of rootconcept
+        for: NL-CM:20.6.1 (ContactInformation)
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+    Practitioner.telecom:*:
+      - datatype: ContactPoint instead of container
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
+    Practitioner.address:
+      - datatype: Address instead of Reference
+        for: NL-CM:17.1.7 (HealthProfessional.AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+      - datatype: Address instead of rootconcept
+        for: NL-CM:20.5.1 (AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+
+zib-HealthProfessional-PractitionerRole:
+  zib deviations:
+    PractitionerRole.telecom:
+      - cardinality: 0..* instead of 0..1
+        for: NL-CM:17.1.8 (HealthProfessional.ContactInformation)
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+      - datatype: ContactPoint instead of Reference
+        for: NL-CM:17.1.8 (HealthProfessional.ContactInformation)
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+      - datatype: ContactPoint instead of rootconcept
+        for: NL-CM:20.6.1 (ContactInformation)
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+    PractitionerRole.telecom*:
+      - datatype: ContactPoint instead of container
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
 
 zib-NameInformation:
   zib deviations:
@@ -250,7 +297,15 @@ zib-HealthcareProvider:
       - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
         reason: The required short description is given by the datatype profile, so it is absent from the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
-        reason: The required alias is given by the datatype profile, so it is absent from the differential.   
+        reason: The required alias is given by the datatype profile, so it is absent from the differential.
+
+zib-HealthProfessional-Practitioner:
+  ignored issues:
+    Practitioner.address:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The required short description is given by the datatype profile, so it is absent from the differential.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The required alias is given by the datatype profile, so it is absent from the differential.
 
 zib-NameInformation:
   zib deviations:
