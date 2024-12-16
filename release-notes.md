@@ -105,6 +105,9 @@
 ## Nationality (zib-Patient, nl-core-Patient)
 * No significant changes.
 
+## NutritionAdvice (zib-NutritionAdvice, nl-core-NutritionAdvice)
+* No significant changes.
+
 ## Patient (zib-Patient, nl-core-Patient)
 * `.extension:genderIdentity.value[x]` ; extension ; Added extension genderIdentity for GenderIdentity. ; ZIB-1693
 * `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
