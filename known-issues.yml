@@ -298,8 +298,19 @@ unmapped zib concepts:
 
 issues should occur: false
 
+nl-core-*:
+  ignored issues:
+    Observation:
+      - message: "Best Practice Recommendation: In general, all observations should have a performer"
+        reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
+      - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
+        reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
+    Observation.hasMember[*]:
+      - message: This element does not match any known slice defined in the profile
+        reason: The validator is unable to resolve references on disk, so it is unable to match reference slices
+
 zib-ContactInformation-TelephoneNumbers:
-  zib deviations:    
+  zib deviations:
     ContactPoint.extension:comment.value[x]:
       - cardinality: 0..* instead of 0..1
         reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
