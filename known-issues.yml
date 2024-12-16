@@ -24,13 +24,13 @@ pattern-ZibHealthProfessionalReference:
 
 zib-AbilityToEat.EatingLimitations:
   zib deviations:
-      Observation.value[x]:valueCodeableConcept:
+    Observation.value[x]:valueCodeableConcept:
       - cardinality: 0..1 instead of 0..*
         reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
 
 zib-AbilityToUseToilet:
   zib deviations:
-      Observation:
+    Observation:
       - short: AbilityToUseToilet instead of ToiletUseAbility
         reason: The root of the zib is called "ToiletUseAbility" (which is incorrect), even though the zib itself is called "AbilityToUseToilet".
 
