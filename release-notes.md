@@ -1,3 +1,6 @@
+## AbilityToDressOneself (zib-AbilityToDressOneself, nl-core-AbilityToDressOneself)
+* No significant changes.
+
 ## AbilityToEat 
 ### zib-AbilityToEat, nl-core-AbilityToEat
 * No significant changes.
