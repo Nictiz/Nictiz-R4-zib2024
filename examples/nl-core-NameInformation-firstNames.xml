@@ -10,7 +10,7 @@
       <div>Hendrik Johan Willem Schemer</div>
     </div>
   </text>
-  <!-- The official name information is communicated in a .name instance with .name.use set to "official" -->
+  <!-- The official name information is communicated in a .name instance with .name.use set to "official". -->
   <name>
     <use value="official"/>
     <!-- The rendered name of the person -->
@@ -38,7 +38,7 @@
       </extension>
     </given>
   </name>
-  <!-- The given name (roepnaam) is communicated using an additional .name instance with .name.use set to "usual" -->
+  <!-- The given name (roepnaam) is communicated using an additional .name instance with .name.use set to "usual". -->
   <name>
     <use value="usual"/>
     <given value="Henk"/>
