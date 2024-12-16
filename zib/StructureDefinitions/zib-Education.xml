@@ -19,13 +19,13 @@
     </telecom>
   </contact>
   <description value="Education indicates the highest level of education achieved." />
-  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Education v3.2 (2020)](https://zibs.nl/wiki/Education-v3.2(2020EN))." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Education v3.3 (2024)](https://zibs.nl/wiki/education-v3.3(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-education-v3.2-2020EN" />
-    <uri value="https://zibs.nl/wiki/Education-v3.2(2020EN)" />
-    <name value="zib Education-v3.2(2020EN)" />
+    <identity value="zib-education-v3.3-2024EN" />
+    <uri value="https://zibs.nl/wiki/education-v3.3(2024EN)" />
+    <name value="zib education-v3.3(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -66,7 +66,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.9--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-education-v3.2-2020EN" />
+        <identity value="zib-education-v3.3-2024EN" />
         <map value="NL-CM:7.10.2" />
         <comment value="SchoolType" />
       </mapping>
@@ -81,7 +81,7 @@
       <definition value="If deemed relevant, a specification of the degree program can be provided by means of an explanation (e.g.: patient is in medical school)." />
       <alias value="Toelichting" />
       <mapping>
-        <identity value="zib-education-v3.2-2020EN" />
+        <identity value="zib-education-v3.3-2024EN" />
         <map value="NL-CM:7.10.3" />
         <comment value="Comment" />
       </mapping>
