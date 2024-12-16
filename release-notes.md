@@ -5,6 +5,16 @@
 ### zib-AbilityToEat.EatingLimitations, nl-core-AbilityToEat.EatingLimitations
 * No significant changes.
 
+## AbilityToUseToilet 
+### zib-AbilityToUseToilet, nl-core-AbilityToUseToilet
+* No significant changes.
+
+### zib-AbilityToUseToilet.MenstrualCare, nl-core-AbilityToUseToilet.MenstrualCare
+* No significant changes.
+
+### zib-AbilityToUseToilet.ToiletUse, nl-core-AbilityToUseToilet.ToiletUse
+* No significant changes.
+
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
 * `.line.extension:houseNumberLetter-houseNumberAddition.value[x]` ; textual ; Moved guidance for HouseNumberLetter and HouseNumberAddition from `.definition` to `.comment`, added zib concept definitions to `.definition`. ; ZIBFHIR-142
 * `.line.extension:houseNumberIndication.value[x]` ; textual ; Added guidance for HouseNumberIndication. ; ZIB-2218
