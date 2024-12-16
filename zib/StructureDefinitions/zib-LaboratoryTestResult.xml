@@ -216,18 +216,46 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="TestResult" />
       <definition value="The test result. Depending on the type of test, the result will consist of a value with a unit or a coded value (ordinal or nominal)." />
       <alias value="TestUitslag" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.17--20240415000000" />
-      </binding>
       <mapping>
         <identity value="zib-laboratorytestresult-v7.0-2024EN" />
         <map value="NL-CM:13.1.10" />
         <comment value="TestResult" />
       </mapping>
+    </element>
+    <element id="Observation.value[x]:valueString">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueQuantity">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.17--20240415000000" />
+      </binding>
     </element>
     <element id="Observation.interpretation">
       <path value="Observation.interpretation" />
