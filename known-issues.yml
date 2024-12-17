@@ -303,8 +303,6 @@ nl-core-*:
     "*.address[*].country.extension[*].value.ofType(CodeableConcept).coding[*].display":
       - message: Wrong Display Name 'Nederland' for urn:iso:std:iso:3166#NL. Valid display is 'Netherlands' (for the language(s) 'en')
         reason: A valid Dutch display value is used instead of an English one.
-      - message: "'Nederland' is the default display; the code system urn:oid:2.16.840.1.113883.2.4.4.16.34 has no Display Names for the language en"
-        reason: A valid Dutch display value is used instead of an English one.
     "*.address[*].extension[*].value.ofType(CodeableConcept).coding[*].display":
       - message: Wrong Display Name 'Visit Address' for http://terminology.hl7.org/CodeSystem/v3-AddressUse#PHYS. Valid display is 'physical visit address' (en) (for the language(s) 'en')
         reason: This core display value is redefined by the ValueSet, but this isn't properly recognized by the validator.
@@ -316,15 +314,6 @@ nl-core-*:
         reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
-    Observation.hasMember[*]:
-      - message: This element does not match any known slice defined in the profile
-        reason: The validator is unable to resolve references on disk, so it is unable to match reference slices
-
-nl-core-ContactPerson-*:
-  ignored issues:
-    RelatedPerson.relationship[*]:
-      - message: None of the codings provided are in the value set 'Patient relationship type' (http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype|4.0.1), and a coding is recommended to come from this value set
-        reason: Instead of the preferred core binding, the value sets from the zib are used.
 
 nl-core-ContactPerson-full-02:
   ignored issues:
@@ -342,41 +331,6 @@ nl-core-HealthcareProvider-Organization-*:
     Organization.type[*].coding[*].system:
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
         reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
-    Organization.type[*].coding[*].display:
-      - message: "'Ziekenhuis' is the default display; the code system http://nictiz.nl/fhir/NamingSystem/organization-type has no Display Names for the language en"
-        reason: A valid Dutch display value is used instead of an English one.
-
-nl-core-HealthProfessional-PractitionerRole-*:
-  ignored issues:
-    PractitionerRole.specialty[*]:
-      - message: None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1), and a coding is recommended to come from this value set
-        reason: Instead of the preferred core binding, the value set from the zib is used.
-    PractitionerRole.specialty[*].coding[*].display:
-      - message: "'Neuroloog' is the default display; the code system http://fhir.nl/fhir/NamingSystem/uzi-rolcode has no Display Names for the language en"
-        reason: A valid Dutch display value is used instead of an English one.
-
-nl-core-Patient-*:
-  ignored issues:
-    Patient.extension[*].extension[*].value.ofType(CodeableConcept).coding[*].display:
-      - message: "'Nederlandse' is the default display; the code system urn:oid:2.16.840.1.113883.2.4.4.16.32 has no Display Names for the language en"
-        reason: A valid Dutch display value is used instead of an English one.
-    Patient.communication[*].extension[*].extension[*].value.ofType(Coding):
-      - message: The Coding provided (urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1#MLOOS) was not found in the value set 'LanguageAbilityProficiency' (http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency|3.0.0), and a code is recommended to come from this value set.
-        reason: Instead of the preferred core binding, the value sets from the zib are used.
-      - message: The Coding provided (urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1#MOEITE) was not found in the value set 'LanguageAbilityProficiency' (http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency|3.0.0), and a code is recommended to come from this value set.
-        reason: Instead of the preferred core binding, the value sets from the zib are used.
-      - message: The Coding provided (urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1#GEEN) was not found in the value set 'LanguageAbilityProficiency' (http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency|3.0.0), and a code is recommended to come from this value set.
-        reason: Instead of the preferred core binding, the value sets from the zib are used.
-    Patient.communication[*].extension[*].extension[*].value.ofType(Coding).display:
-      - message: "'Moeiteloos' is the default display; the code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1 has no Display Names for the language en"
-        reason: A valid Dutch display value is used instead of an English one.
-      - message: "'Met moeite' is the default display; the code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1 has no Display Names for the language en"
-        reason: A valid Dutch display value is used instead of an English one.
-      - message: "'Geen beheersing' is the default display; the code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1 has no Display Names for the language en"
-        reason: A valid Dutch display value is used instead of an English one.
-    Patient.communication[*].language:
-      - message: None of the codings provided are in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages|4.0.1), and a coding is recommended to come from this value set
-        reason: Instead of the preferred core binding, the value set from the zib is used.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
