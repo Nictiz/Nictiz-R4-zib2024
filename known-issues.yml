@@ -93,6 +93,12 @@ zib-ContactPerson:
         for: NL-CM:20.5.1 (AddressInformation)
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
 
+zib-HeadCircumference:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: The FHIR profiles are expected to implement zib cardinalities as conceptual cardinalities, but HL7 Vital Signs profiel requires the .effective[x]:effectiveDateTime element to be present. This aligns with the intention of the zib, as the DateTime concept is required for zib Headcircumference.   
+
 zib-HealthcareProvider:
   zib deviations:
     Location.telecom:
