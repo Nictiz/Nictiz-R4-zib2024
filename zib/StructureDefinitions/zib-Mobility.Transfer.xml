@@ -17,13 +17,13 @@
     </telecom>
   </contact>
   <description value="A transfer is moving from one surface to another without changing the body’s position, such as sliding across a couch or moving from the bed to a chair." />
-  <purpose value="This Observation resource represents the Transfer concept (NL-CM:4.3.5) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Mobility v3.3 (2020)](https://zibs.nl/wiki/Mobility-v3.3(2020EN))." />
+  <purpose value="This Observation resource represents the Transfer concept (NL-CM:4.3.5) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Mobility v3.3.1 (2024)](https://zibs.nl/wiki/Mobility-v3.3.1(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-mobility-v3.3-2020EN" />
-    <uri value="https://zibs.nl/wiki/Mobility-v3.3(2020EN)" />
-    <name value="zib Mobility-v3.3(2020EN)" />
+    <identity value="zib-mobility-v3.3.1-2024EN" />
+    <uri value="https://zibs.nl/wiki/Mobility-v3.3.1(2024EN)" />
+    <name value="zib Mobility-v3.3.1(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -58,7 +58,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.3.7--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-mobility-v3.3-2020EN" />
+        <identity value="zib-mobility-v3.3.1-2024EN" />
         <map value="NL-CM:4.3.5" />
         <comment value="Transfer" />
       </mapping>
