@@ -16,6 +16,12 @@ pattern-NlCoreHealthProfessionalReference:
       - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
         reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern NlCoreHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
 
+pattern-VitalSigns:
+  ignored issues:
+    Observation.category:VSCat:
+      - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
+        reason: This slice name is adopted from the Vital Signs profile.
+
 pattern-ZibHealthProfessionalReference:
   ignored issues:
     StructureDefinition:
@@ -42,6 +48,12 @@ zib-AddressInformation:
     Address.line.extension:*.value[x]:
       - cardinality: 1..1 instead of 0..1
         reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
+
+zib-BodyHeight:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
@@ -307,7 +319,7 @@ nl-core-*:
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
     Observation.hasMember[*]:
       - message: This element does not match any known slice defined in the profile
-        reason: The validator is unable to resolve references on disk, so it is unable to match reference slices
+        reason: The validator is unable to resolve references on disk, so it is unable to match reference slices.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
