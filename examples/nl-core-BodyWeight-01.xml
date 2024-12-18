@@ -1,53 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-   <id value="nl-core-BodyWeight-01"/>
-   <meta>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-BodyWeight"/>
-   </meta>
-   <status value="final"/>
-   <category>
+  <id value="nl-core-BodyWeight-01"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-BodyWeight"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Categorie: <span title="Vital Signs (vital-signs - http://terminology.hl7.org/CodeSystem/observation-category)">Vital Signs</span>, Status: definitief</caption>
+        <tbody>
+          <tr>
+            <th>Bepalingdatum/tijd</th>
+            <td>8 augustus 2023</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <th>Waarde</th>
+          </tr>
+          <tr>
+            <td>
+              <span title="Lichaamsgewicht (29463-7 - LOINC)">Lichaamsgewicht</span>
+            </td>
+            <td>72 kg</td>
+          </tr>
+          <tr>
+            <td>
+              <span title="staat van kleding (248159006 - SNOMED CT)">staat van kleding</span>
+            </td>
+            <td>
+              <span title="Volledig gekleed met schoenen (220131000146107 - SNOMED CT)">Volledig gekleed met schoenen</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="29463-7"/>
+      <display value="Lichaamsgewicht"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-full-01"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </subject>
+  <effectiveDateTime value="2023-08-08"/>
+  <valueQuantity>
+    <value value="72"/>
+    <unit value="kg"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="kg"/>
+  </valueQuantity>
+  <note>
+    <text value="Linker been geamputeerd boven de knie"/>
+  </note>
+  <component>
+    <code>
       <coding>
-         <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-         <code value="vital-signs"/>
-         <display value="Vital Signs"/>
+        <system value="http://snomed.info/sct"/>
+        <code value="248159006"/>
+        <display value="staat van kleding"/>
       </coding>
-   </category>
-   <code>
+    </code>
+    <valueCodeableConcept>
       <coding>
-         <system value="http://loinc.org"/>
-         <code value="29463-7"/>
-         <display value="Body weight"/>
+        <system value="http://snomed.info/sct"/>
+        <code value="220131000146107"/>
+        <display value="Volledig gekleed met schoenen"/>
       </coding>
-   </code>
-   <subject>
-      <reference value="Patient/nl-core-Patient-full-01"/>
-      <type value="Patient"/>
-      <display value="Patient, Peter Jan (PeJe) Jansen"/>
-   </subject>
-   <effectiveDateTime value="2023-08-08"/>
-   <valueQuantity>
-      <value value="72"/>
-      <unit value="kg"/>
-      <system value="http://unitsofmeasure.org"/>
-      <code value="kg"/>
-   </valueQuantity>
-   <note>
-      <text value="Linker been geamputeerd boven de knie"/>
-   </note>
-   <component>
-      <code>
-         <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="248159006"/>
-            <display value="State of dress"/>
-         </coding>
-      </code>
-      <valueCodeableConcept>
-         <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="220131000146107"/>
-            <display value="Volledig gekleed met schoenen"/>
-         </coding>
-      </valueCodeableConcept>
-   </component>
+    </valueCodeableConcept>
+  </component>
 </Observation>
