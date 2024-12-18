@@ -19,13 +19,13 @@
           </tr>
           <tr>
             <td>
-              <span title="Body height (8302-2 - LOINC)">Body height</span>
+              <span title="Lichaamslengte (8302-2 - LOINC)">Lichaamslengte</span>
             </td>
             <td>153 cm</td>
           </tr>
           <tr>
             <td>
-              <span title="Body position for height measurement (425260001 - SNOMED CT)">Body position for height measurement</span>
+              <span title="lichaamshouding voor bepalen van lengte (425260001 - SNOMED CT)">lichaamshouding voor bepalen van lengte</span>
             </td>
             <td>
               <span title="Staande positie (10904000 - SNOMED CT)">Staande positie</span>
@@ -47,7 +47,7 @@
     <coding>
       <system value="http://loinc.org"/>
       <code value="8302-2"/>
-      <display value="Body height"/>
+      <display value="Lichaamslengte"/>
     </coding>
   </code>
   <subject>
@@ -70,7 +70,7 @@
       <coding>
         <system value="http://snomed.info/sct"/>
         <code value="425260001"/>
-        <display value="Body position for height measurement"/>
+        <display value="lichaamshouding voor bepalen van lengte"/>
       </coding>
     </code>
     <valueCodeableConcept>
