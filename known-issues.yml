@@ -28,6 +28,12 @@ pattern-ZibHealthProfessionalReference:
       - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
         reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern ZibHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
 
+ValueSet-BodyWeight-Units:
+  ignored issues:
+    ValueSet.compose.include[0]:
+      - message: "There are multiple different potential matches for the url 'http://unitsofmeasure.org'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '3.0.1', found versions: 2009-10-14T12:00:00, 3.0.1"
+        reason: It is not necessary to fix the UCUM version. Moreover, this is also not done in core ValueSets that consist of UCUM codes (such as http://hl7.org/fhir/ValueSet/ucum-vitals-common).
+
 zib-AbilityToEat.EatingLimitations:
   zib deviations:
     Observation.value[x]:valueCodeableConcept:
