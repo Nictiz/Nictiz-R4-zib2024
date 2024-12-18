@@ -4,7 +4,7 @@
 * a family name built from the person's last name and the last name of her partner
 * a scientific title.
 
-This example is about Ms. Johanna Petronelle Maria van Putten, commonly known as "Jo", who has a PhD. When she married
+This example is about Ms. Johanna Petronella Maria van Putten, commonly known as "Jo", who has a PhD. When she married
 Mr. van der Giessen, she adopted the last name of her partner, and added her own last name to it.
 --><Patient xmlns="http://hl7.org/fhir">
   <id value="nl-core-NameInformation-complete"/>
@@ -23,7 +23,7 @@ Mr. van der Giessen, she adopted the last name of her partner, and added her own
         set to "official". -->
   <name>
     <!-- The extension is used to indicate that the person's family name is built up from the partner's last name 
-           followed by the person's own last name -->
+           followed by the person's own last name. -->
     <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
       <valueCode value="NL3"/>
     </extension>
