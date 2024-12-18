@@ -321,6 +321,12 @@ nl-core-*:
       - message: This element does not match any known slice defined in the profile
         reason: The validator is unable to resolve references on disk, so it is unable to match reference slices.
 
+nl-core-BodyHeight-*:
+  ignored issues:
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Lichaamslengte' for http://loinc.org#8302-2. There are no valid display names found for language(s) 'en'. Default display is 'Body height'
+        reason: A valid Dutch display value is used instead of an English one.
+
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
     ContactPoint.extension:comment.value[x]:

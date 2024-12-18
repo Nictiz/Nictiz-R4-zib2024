@@ -29,6 +29,7 @@
 
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
+* `.value[x]` ; terminology ; Changed value set from BodyLengthUnits to BodyHeightUnits. ; ZIB-1887
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
