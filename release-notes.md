@@ -28,7 +28,7 @@
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
 
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
-* No significant changes.
+* `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
