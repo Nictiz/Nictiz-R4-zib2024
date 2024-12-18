@@ -4,11 +4,23 @@
 
 issues should occur: true
 
+ext-LanguageProficiency.CommunicationDetails:
+  zib deviations:
+    Extension.value[x]:
+      - cardinality: 0..1 instead of 0..*
+        reason: FHIR restricts Extension.value to a max cardinality of 0..1. To use it more than once, the extension is added 0..* in the hosting element.
+
 pattern-NlCoreHealthProfessionalReference:
   ignored issues:
     StructureDefinition:
       - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
         reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern NlCoreHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
+
+pattern-VitalSigns:
+  ignored issues:
+    Observation.category:VSCat:
+      - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
+        reason: This slice name is adopted from the Vital Signs profile.
 
 pattern-ZibHealthProfessionalReference:
   ignored issues:
@@ -18,15 +30,15 @@ pattern-ZibHealthProfessionalReference:
 
 zib-AbilityToEat.EatingLimitations:
   zib deviations:
-      Observation.value[x]:valueCodeableConcept:
+    Observation.value[x]:valueCodeableConcept:
       - cardinality: 0..1 instead of 0..*
         reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
 
-ext-LanguageProficiency.CommunicationDetails:
+zib-AbilityToUseToilet:
   zib deviations:
-    Extension.value[x]:
-      - cardinality: 0..1 instead of 0..*
-        reason: FHIR restricts Extension.value to a max cardinality of 0..1. To use it more than once, the extension is added 0..* in the hosting element.
+    Observation:
+      - short: AbilityToUseToilet instead of ToiletUseAbility
+        reason: The root of the zib is called "ToiletUseAbility" (which is incorrect), even though the zib itself is called "AbilityToUseToilet".
 
 zib-AddressInformation:
   zib deviations:
@@ -36,6 +48,12 @@ zib-AddressInformation:
     Address.line.extension:*.value[x]:
       - cardinality: 1..1 instead of 0..1
         reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
+
+zib-BodyHeight:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
@@ -292,8 +310,19 @@ unmapped zib concepts:
 
 issues should occur: false
 
+nl-core-*:
+  ignored issues:
+    Observation:
+      - message: "Best Practice Recommendation: In general, all observations should have a performer"
+        reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
+      - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
+        reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
+    Observation.hasMember[*]:
+      - message: This element does not match any known slice defined in the profile
+        reason: The validator is unable to resolve references on disk, so it is unable to match reference slices.
+
 zib-ContactInformation-TelephoneNumbers:
-  zib deviations:    
+  zib deviations:
     ContactPoint.extension:comment.value[x]:
       - cardinality: 0..* instead of 0..1
         reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.

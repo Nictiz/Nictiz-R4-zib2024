@@ -1,3 +1,6 @@
+## AbilityToDressOneself (zib-AbilityToDressOneself, nl-core-AbilityToDressOneself)
+* No significant changes.
+
 ## AbilityToEat 
 ### zib-AbilityToEat, nl-core-AbilityToEat
 * No significant changes.
@@ -5,11 +8,27 @@
 ### zib-AbilityToEat.EatingLimitations, nl-core-AbilityToEat.EatingLimitations
 * No significant changes.
 
+## AbilityToUseToilet 
+### zib-AbilityToUseToilet, nl-core-AbilityToUseToilet
+* No significant changes.
+
+### zib-AbilityToUseToilet.MenstrualCare, nl-core-AbilityToUseToilet.MenstrualCare
+* No significant changes.
+
+### zib-AbilityToUseToilet.ToiletUse, nl-core-AbilityToUseToilet.ToiletUse
+* No significant changes.
+
+## AbilityToWashOneself (zib-AbilityToWashOneself, nl-core-AbilityToWashOneself)
+* No significant changes.
+
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
 * `.line.extension:houseNumberLetter-houseNumberAddition.value[x]` ; textual ; Moved guidance for HouseNumberLetter and HouseNumberAddition from `.definition` to `.comment`, added zib concept definitions to `.definition`. ; ZIBFHIR-142
 * `.line.extension:houseNumberIndication.value[x]` ; textual ; Added guidance for HouseNumberIndication. ; ZIB-2218
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
+
+## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
+* `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
