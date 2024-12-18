@@ -7,7 +7,7 @@
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
-        <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Categorie: <span title="Vital Signs (vital-signs - http://terminology.hl7.org/CodeSystem/observation-category)">Vital Signs</span>, Status: definitief</caption>
+        <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Vital Signs (vital-signs - http://terminology.hl7.org/CodeSystem/observation-category)">Vital Signs</span>, Status: definitief</caption>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
@@ -51,9 +51,9 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/nl-core-Patient-full-01"/>
+    <reference value="Patient/nl-core-Patient-01"/>
     <type value="Patient"/>
-    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
   </subject>
   <effectiveDateTime value="2023-08-08"/>
   <valueQuantity>
