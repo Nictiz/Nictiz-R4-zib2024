@@ -61,7 +61,7 @@
       <definition value="A comment on the patient’s mobility." />
       <alias value="Toelichting" />
       <mapping>
-        <identity value="zib-mobility-v3.3-2020EN" />
+        <identity value="zib-mobility-v3.3.1-2024EN" />
         <map value="NL-CM:4.3.16" />
         <comment value="Comment" />
       </mapping>
