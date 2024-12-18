@@ -4,6 +4,18 @@
 
 issues should occur: true
 
+BodyHeight-Units:
+  ignored issues:
+    ValueSet.compose.include[0]:
+      - message: "There are multiple different potential matches for the url 'http://unitsofmeasure.org'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '3.0.1', found versions: 2009-10-14T12:00:00, 3.0.1"
+        reason: It is not necessary to fix the UCUM version. Moreover, this is also not done in core ValueSets that consist of UCUM codes (such as http://hl7.org/fhir/ValueSet/ucum-vitals-common).
+
+BodyWeight-Units:
+  ignored issues:
+    ValueSet.compose.include[0]:
+      - message: "There are multiple different potential matches for the url 'http://unitsofmeasure.org'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '3.0.1', found versions: 2009-10-14T12:00:00, 3.0.1"
+        reason: It is not necessary to fix the UCUM version. Moreover, this is also not done in core ValueSets that consist of UCUM codes (such as http://hl7.org/fhir/ValueSet/ucum-vitals-common).
+
 ext-LanguageProficiency.CommunicationDetails:
   zib deviations:
     Extension.value[x]:
@@ -318,7 +330,7 @@ issues should occur: false
 
 nl-core-*:
   ignored issues:
-    "*.address[*].country.extension[*].value.ofType(CodeableConcept).coding[*].display":
+    "*.address*.country.extension[*].value.ofType(CodeableConcept).coding[*].display":
       - message: Wrong Display Name 'Nederland' for urn:iso:std:iso:3166#NL. Valid display is 'Netherlands' (for the language(s) 'en')
         reason: A valid Dutch display value is used instead of an English one.
     "*.address[*].extension[*].value.ofType(CodeableConcept).coding[*].display":
