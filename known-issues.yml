@@ -344,6 +344,12 @@ nl-core-HealthcareProvider-Organization-*:
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
         reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
 
+nl-core-BodyHeight-*:
+  ignored issues:
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Lichaamslengte' for http://loinc.org#8302-2. There are no valid display names found for language(s) 'en'. Default display is 'Body height'
+        reason: A valid Dutch display value is used instead of an English one.
+
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
     ContactPoint.extension:comment.value[x]:
