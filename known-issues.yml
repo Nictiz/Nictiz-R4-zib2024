@@ -345,6 +345,18 @@ nl-core-*:
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
 
+nl-core-BodyHeight-*:
+  ignored issues:
+    Observation.component[*].code:
+      - message: None of the codings provided are in the value set 'Vital Signs Units'
+        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
+
+nl-core-BodyWeight-*:
+  ignored issues:
+    Observation.component[*].code:
+      - message: None of the codings provided are in the value set 'Vital Signs Units'
+        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
+
 nl-core-ContactPerson-full-02:
   ignored issues:
     RelatedPerson.address[0].line[0].extension[1].value.ofType(string):
