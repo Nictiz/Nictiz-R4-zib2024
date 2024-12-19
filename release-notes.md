@@ -33,7 +33,7 @@
 
 ## BodyWeight (zib-BodyWeight, nl-core-BodyWeight)
 * `.value[x]` ; textual ; Changed definition of WeightValue. ; ZIB-1886
-* `.value[x]` ; terminology ; Renamed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIB-1886
+* `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIB-1886
 * `.component:clothing.value[x]` ; terminology ; Changed codes in KledingCodelijst. ; ZIB-1704
 
 ## ContactInformation 
