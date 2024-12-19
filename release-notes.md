@@ -51,7 +51,7 @@
 * `.relationship:relationship` ; terminology ; Changed value set from RelatieCodelijst to RelatieSnomedCodelijst. ; ZIB-1180, ZIB-1438, ZIB-1495, ZIB-1486, ZIB-1556, ZIB-1616, ZIB-1770, ZIB-1789, ZIB-1941, ZIB-2008
 
 ## Education (zib-Education, nl-core-Education)
-* No significant changes.
+* `.value[x]` ; terminology ; Changed value set from SchoolTypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
 
 ## Patient
 ### zib-Patient, nl-core-Patient
