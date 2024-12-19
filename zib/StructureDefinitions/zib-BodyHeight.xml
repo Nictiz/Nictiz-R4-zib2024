@@ -86,7 +86,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/ucum-bodylength" />
+        <valueSet value="http://nictiz.nl/fhir/ValueSet/BodyHeight-Units" />
       </binding>
       <mapping>
         <identity value="zib-bodyheight-v3.1.2-2024EN" />
