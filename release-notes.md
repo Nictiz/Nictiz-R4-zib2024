@@ -112,7 +112,17 @@
 ## Nationality (zib-Patient, nl-core-Patient)
 * No significant changes.
 
-## ParticipationInSociety (zib-ParticipationInSociety, nl-core-ParticipationInSociety)
+## ParticipationInSociety
+### zib-ParticipationInSociety, nl-core-ParticipationInSociety
+* No significant changes.
+
+### zib-ParticipationInSociety.Hobby, nl-core-ParticipationInSociety.Hobby
+* No significant changes.
+
+### zib-ParticipationInSociety.SocialNetwork, nl-core-ParticipationInSociety.SocialNetwork
+* No significant changes.
+
+### zib-ParticipationInSociety.WorkSituation, nl-core-ParticipationInSociety.WorkSituation
 * No significant changes.
 
 ## Patient (zib-Patient, nl-core-Patient)
