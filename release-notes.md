@@ -94,6 +94,9 @@
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218
 
+## LifeStance (zib-LifeStance, nl-core-LifeStance)
+* No significant changes.
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
