@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Patient’s life stance (philosophy of life) and/or religion." />
+  <description value="Patient's life stance (philosophy of life) and/or religion." />
   <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) LifeStance v3.2.1 (2024)](https://zibs.nl/wiki/LifeStance-v3.2.1(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
@@ -34,7 +34,7 @@
     <element id="Observation">
       <path value="Observation" />
       <short value="LifeStance" />
-      <comment value="Please note: a core extension exists to communicate the religious affiliations of a Patient: &lt;http://hl7.org/fhir/StructureDefinition/patient-religion&gt;. However, zib LifeStance covers more than just religious affiliations of a Patient (although in actuality the core extension also covers more than just religious affiliations). For this reason, the core extension cannot faithfully represent zib LifeStance. The use of the core extension in addition to this profile is not prohibited, as long as the values don't contradict each other." />
+      <comment value="Please note: the core [patient-religion](http://hl7.org/fhir/StructureDefinition/patient-religion) extension exists to communicate the religious affiliations of a Patient. However, zib LifeStance covers more than just religious affiliations of a Patient (although in actuality the core extension also covers more than just religious affiliations). For this reason, the core extension cannot faithfully represent zib LifeStance. The use of the core extension in addition to this profile is not prohibited, as long as the values don't contradict each other." />
       <alias value="Levensovertuiging" />
       <mapping>
         <identity value="zib-lifestance-v3.2.1-2024EN" />
