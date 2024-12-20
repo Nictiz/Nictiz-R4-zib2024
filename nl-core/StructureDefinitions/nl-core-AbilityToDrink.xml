@@ -33,7 +33,7 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <comment value="The DrinkingLimitations concept (NL-CM:4.8.4) is represented using distinct Observation resources, using profile [nl-core-AbilityToDrink.DrinkingLimitations](http://nictiz.nl/fhir/StructureDefinition/nl-core-AbilityToDrink.DrinkingLimitations). It is referenced from this resource using `Observation.hasMember`." />
+      <comment value="The DrinkingLimitations concept (NL-CM:4.8.4) is represented using a distinct Observation resource, using profile [nl-core-AbilityToDrink.DrinkingLimitations](http://nictiz.nl/fhir/StructureDefinition/nl-core-AbilityToDrink.DrinkingLimitations). It is referenced from this resource using `Observation.hasMember`." />
       <alias value="nl-core-AbilityToDrink" />
     </element>
     <element id="Observation.subject">
