@@ -1,6 +1,13 @@
 ## AbilityToDressOneself (zib-AbilityToDressOneself, nl-core-AbilityToDressOneself)
 * No significant changes.
 
+## AbilityToDrink
+### zib-AbilityToDrink, nl-core-AbilityToDrink
+* No significant changes.
+
+### zib-AbilityToDrink.DrinkingLimitations, nl-core-AbilityToDrink.DrinkingLimitations
+* No significant changes.
+
 ## AbilityToEat 
 ### zib-AbilityToEat, nl-core-AbilityToEat
 * No significant changes.
