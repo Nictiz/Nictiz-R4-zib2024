@@ -71,7 +71,7 @@
     <element id="Organization.name">
       <path value="Organization.name" />
       <short value="OrganizationName / PayerName" />
-      <definition value="Full, official name of the healthcare insurance company or paying organization. If the UZOVI number is entered as an identification number, this will be the name as listed in the UZOVI register and the name which is returned in the Check for Right to Insurance (COV)." />
+      <definition value="* Full, official name of the healthcare insurance company. If the UZOVI number is entered as an identification number, this will be the name as listed in the UZOVI register and the name which is returned in the Check for Right to Insurance (COV).&#xD;&#xA;* Full name of the paying person or organization (legal entity)." />
       <alias value="OrganisatieNaam" />
       <alias value="BetalerNaam" />
       <mapping>
@@ -95,7 +95,7 @@
         <rules value="open" />
       </slicing>
       <short value="ContactInformation" />
-      <definition value="The payer’s telephone number and/or e-mail address." />
+      <definition value="The payer's telephone number and/or e-mail address." />
       <alias value="Contactgegevens" />
       <mapping>
         <identity value="zib-payer-v4.1-2024EN" />
@@ -121,7 +121,7 @@
     </element>
     <element id="Organization.address">
       <path value="Organization.address" />
-      <definition value="The payer’s address information." />
+      <definition value="The payer's address information." />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />

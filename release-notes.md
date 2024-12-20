@@ -152,4 +152,4 @@
 * `.type` ; terminology ; Changed codes in VerzekeringssoortCodelijst. ; ZIB-2218
 
 ### zib-Payer-Organization, nl-core-Payer-Organization
-* `.telecom` ; cardinality ; Changed max cardinality from * to 1. ; ZIB-1834
+* No significant changes.
