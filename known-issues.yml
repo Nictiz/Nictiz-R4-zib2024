@@ -10,6 +10,12 @@ ext-LanguageProficiency.CommunicationDetails:
       - cardinality: 0..1 instead of 0..*
         reason: FHIR restricts Extension.value to a max cardinality of 0..1. To use it more than once, the extension is added 0..* in the hosting element.
 
+nl-core-ContactPerson-full-02:
+  ignored issues:
+    RelatedPerson.address[0].line[0].extension[1].value.ofType(string):
+      - message: value should not start or finish with whitespace ' De Groene Draeck'
+        reason: To communicate a HouseNumberAddition without a HouseNumberLetter, a leading space is used.
+
 pattern-NlCoreHealthProfessionalReference:
   ignored issues:
     StructureDefinition:
@@ -353,12 +359,6 @@ nl-core-*:
         reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
-
-nl-core-ContactPerson-full-02:
-  ignored issues:
-    RelatedPerson.address[0].line[0].extension[1].value.ofType(string):
-      - message: value should not start or finish with whitespace ' De Groene Draeck'
-        reason: To communicate a HouseNumberAddition a leading space is used.
 
 nl-core-HealthcareProvider-Organization-*:
   ignored issues:
