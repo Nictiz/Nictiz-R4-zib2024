@@ -10,6 +10,10 @@
         <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
         <tbody>
           <tr>
+            <th>Bepalingdatum/tijd</th>
+            <td>1 november 2024 - 3 november 2024</td>
+          </tr>
+          <tr>
             <th>Code</th>
             <th>Waarde</th>
           </tr>
@@ -36,6 +40,10 @@
     <type value="Patient"/>
     <display value="Patient, Peter Jan (PeJe) Jansen"/>
   </subject>
+  <effectivePeriod>
+    <start value="2024-11-01"/>
+    <end value="2024-11-03"/>
+  </effectivePeriod>
   <valueQuantity>
     <value value="1250"/>
     <unit value="ml"/>
