@@ -16,6 +16,12 @@ pattern-NlCoreHealthProfessionalReference:
       - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
         reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern NlCoreHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
 
+pattern-VitalSigns:
+  ignored issues:
+    Observation.category:VSCat:
+      - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
+        reason: This slice name is adopted from the Vital Signs profile.
+
 pattern-ZibHealthProfessionalReference:
   ignored issues:
     StructureDefinition:
@@ -42,6 +48,12 @@ zib-AddressInformation:
     Address.line.extension:*.value[x]:
       - cardinality: 1..1 instead of 0..1
         reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
+
+zib-BodyHeight:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
@@ -311,14 +323,43 @@ issues should occur: false
 
 nl-core-*:
   ignored issues:
+    "*.address[*].country.extension[*].value.ofType(CodeableConcept).coding[*].display":
+      - message: Wrong Display Name 'Nederland' for urn:iso:std:iso:3166#NL. Valid display is 'Netherlands' (for the language(s) 'en')
+        reason: A valid Dutch display value is used instead of an English one.
+    "*.address[*].extension[*].value.ofType(CodeableConcept).coding[*].display":
+      - message: Wrong Display Name 'Visit Address' for http://terminology.hl7.org/CodeSystem/v3-AddressUse#PHYS. Valid display is 'physical visit address' (en) (for the language(s) 'en')
+        reason: This core display value is redefined by the ValueSet, but this isn't properly recognized by the validator.
+    "*.telecom[*].extension[*].value.ofType(CodeableConcept).coding[*].display":
+      - message: Wrong Display Name 'Emergencycontact' for http://terminology.hl7.org/CodeSystem/v3-AddressUse#EC. Valid display is 'emergency contact' (en) (for the language(s) 'en')
+        reason: This core display value is redefined by the ValueSet, but this isn't properly recognized by the validator.
     Observation:
       - message: "Best Practice Recommendation: In general, all observations should have a performer"
         reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
-    Observation.hasMember[*]:
-      - message: This element does not match any known slice defined in the profile
-        reason: The validator is unable to resolve references on disk, so it is unable to match reference slices
+
+nl-core-ContactPerson-full-02:
+  ignored issues:
+    RelatedPerson.address[0].line[0].extension[1].value.ofType(string):
+      - message: value should not start or finish with whitespace ' De Groene Draeck'
+        reason: To communicate a HouseNumberAddition a leading space is used.
+
+nl-core-HealthcareProvider-Organization-*:
+  ignored issues:
+    Organization.type[*]:
+      - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20240415000000|2024-04-15T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.6.7 was not found
+        reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20240415000000|2024-04-15T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.6.7 was not found
+        reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
+    Organization.type[*].coding[*].system:
+      - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
+        reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
+
+nl-core-BodyHeight-*:
+  ignored issues:
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Lichaamslengte' for http://loinc.org#8302-2. There are no valid display names found for language(s) 'en'. Default display is 'Body height'
+        reason: A valid Dutch display value is used instead of an English one.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
