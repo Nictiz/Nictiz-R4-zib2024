@@ -59,6 +59,16 @@
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
 
+## FluidBalance
+### zib-FluidBalance, nl-core-FluidBalance
+* No significant changes.
+
+### zib-FluidBalance.FluidTotalIn, nl-core-FluidBalance.FluidTotalIn
+* No significant changes.
+
+### zib-FluidBalance.FluidTotalOut, nl-core-FluidBalance.FluidTotalOut
+* No significant changes.
+
 ## HealthcareProvider
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
 * No significant changes.
