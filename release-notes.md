@@ -1,42 +1,8 @@
-## AbilityToDressOneself (zib-AbilityToDressOneself, nl-core-AbilityToDressOneself)
-* No significant changes.
-
-## AbilityToDrink
-### zib-AbilityToDrink, nl-core-AbilityToDrink
-* No significant changes.
-
-### zib-AbilityToDrink.DrinkingLimitations, nl-core-AbilityToDrink.DrinkingLimitations
-* No significant changes.
-
-## AbilityToEat 
-### zib-AbilityToEat, nl-core-AbilityToEat
-* No significant changes.
-
-### zib-AbilityToEat.EatingLimitations, nl-core-AbilityToEat.EatingLimitations
-* No significant changes.
-
-## AbilityToUseToilet 
-### zib-AbilityToUseToilet, nl-core-AbilityToUseToilet
-* No significant changes.
-
-### zib-AbilityToUseToilet.MenstrualCare, nl-core-AbilityToUseToilet.MenstrualCare
-* No significant changes.
-
-### zib-AbilityToUseToilet.ToiletUse, nl-core-AbilityToUseToilet.ToiletUse
-* No significant changes.
-
-## AbilityToWashOneself (zib-AbilityToWashOneself, nl-core-AbilityToWashOneself)
-* No significant changes.
-
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
 * `.line.extension:houseNumberLetter-houseNumberAddition.value[x]` ; textual ; Moved guidance for HouseNumberLetter and HouseNumberAddition from `.definition` to `.comment`, added zib concept definitions to `.definition`. ; ZIBFHIR-142
 * `.line.extension:houseNumberIndication.value[x]` ; textual ; Added guidance for HouseNumberIndication. ; ZIB-2218
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
-
-## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
-* `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
-* `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
@@ -66,16 +32,6 @@
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
 
-## FluidBalance
-### zib-FluidBalance, nl-core-FluidBalance
-* No significant changes.
-
-### zib-FluidBalance.FluidTotalIn, nl-core-FluidBalance.FluidTotalIn
-* No significant changes.
-
-### zib-FluidBalance.FluidTotalOut, nl-core-FluidBalance.FluidTotalOut
-* No significant changes.
-
 ## HealthcareProvider
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
 * No significant changes.
@@ -92,19 +48,6 @@
 
 ### zib-HealthProfessional-PractitionerRole, nl-core-HealthProfessional-PractitionerRole
 * `.specialty:specialty` ; terminology ; Changed codes in SpecialismeCodelijsten (SpecialismeAGBCodelijst and SpecialismeUZICodelijst). ; ZIB-2218
-
-## IllnessPerception 
-### zib-IllnessPerception, nl-core-IllnessPerception 
-* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#363910003 to http://snomed.info/sct#159971000146104. ; ZIB-1600
-
-### zib-IllnessPerception.CopingWithIllnessByFamily, nl-core-IllnessPerception.CopingWithIllnessByFamily 
-* No significant changes.
-
-### zib-IllnessPerception.CopingWithIllnessByPatient, nl-core-IllnessPerception.CopingWithIllnessByPatient 
-* No significant changes.
-
-### zib-IllnessPerception.PatientIllnessInsight, nl-core-IllnessPerception.PatientIllnessInsight
-* No significant changes.
 
 ## LanguageProficiency (zib-Patient, nl-core-Patient)
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877
@@ -127,19 +70,6 @@
 * No significant changes.
 
 ## Nationality (zib-Patient, nl-core-Patient)
-* No significant changes.
-
-## ParticipationInSociety
-### zib-ParticipationInSociety, nl-core-ParticipationInSociety
-* No significant changes.
-
-### zib-ParticipationInSociety.Hobby, nl-core-ParticipationInSociety.Hobby
-* No significant changes.
-
-### zib-ParticipationInSociety.SocialNetwork, nl-core-ParticipationInSociety.SocialNetwork
-* No significant changes.
-
-### zib-ParticipationInSociety.WorkSituation, nl-core-ParticipationInSociety.WorkSituation
 * No significant changes.
 
 ## Patient (zib-Patient, nl-core-Patient)
