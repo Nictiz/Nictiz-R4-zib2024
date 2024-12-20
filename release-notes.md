@@ -129,6 +129,9 @@
 ## Nationality (zib-Patient, nl-core-Patient)
 * No significant changes.
 
+## NutritionAdvice (zib-NutritionAdvice, nl-core-NutritionAdvice)
+* No significant changes.
+
 ## ParticipationInSociety
 ### zib-ParticipationInSociety, nl-core-ParticipationInSociety
 * No significant changes.
