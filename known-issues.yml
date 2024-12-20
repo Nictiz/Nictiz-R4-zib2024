@@ -407,8 +407,8 @@ zib-HealthProfessional-Practitioner:
 zib-NameInformation:
   zib deviations:
     HumanName.extension:nameUsage.value[x]:
-    - cardinality: 0..* instead of 0..1
-      reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
+      - cardinality: 0..* instead of 0..1
+        reason: The cardinality of the extension itself is 0..1, making the effective cardinality 0..1 as required by the zib. It seems the QA tooling does not take into account the cardinality of the extension element itself.
 
 zib-Patient:
   ignored issues:

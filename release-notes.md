@@ -142,7 +142,7 @@
 
 ## Payer 
 ### zib-Payer.InsuranceCompany, nl-core-Payer.InsuranceCompany
-* `.type` ; terminology ; Changed codes in InsuranceTypeCodelist. ; ZIB-2218
+* `.type` ; terminology ; Changed codes in VerzekeringssoortCodelijst. ; ZIB-2218
 
 ### zib-Payer-Organization, nl-core-Payer-Organization
 * `.telecom` ; cardinality ; Changed max cardinality from * to 1. ; ZIB-1834
