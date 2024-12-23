@@ -18,7 +18,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy.&#xD;&#xA;&#xD;&#xA;A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems:&#xD;&#xA; &#xD;&#xA;A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia&#xD;&#xA;&#xD;&#xA;A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth;&#xD;&#xA;&#xD;&#xA;A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.&#xD;&#xA;&#xD;&#xA;A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.&#xD;&#xA;&#xD;&#xA;A complication: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics." />
+  <description value="A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy.&#xD;&#xA;&#xD;&#xA;A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems:&#xD;&#xA; &#xD;&#xA;A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia.&#xD;&#xA;&#xD;&#xA;A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth.&#xD;&#xA;&#xD;&#xA;A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.&#xD;&#xA;&#xD;&#xA;A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.&#xD;&#xA;&#xD;&#xA;A complication: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics." />
   <purpose value="This Condition resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Problem v4.7 (2024)](https://zibs.nl/wiki/Problem-v4.7(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
@@ -103,7 +103,7 @@
       <binding>
         <strength value="required" />
         <description value="In addition to a coding from this ValueSet, the corresponding coding from the FHIR base ValueSet SHALL be communicated. The ConceptMap &lt;http://nictiz.nl/fhir/ConceptMap/VerificatieStatusCodelijst-to-ConditionVerificationStatus&gt; can be used to relate these two ValueSets." />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.4--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.4--20240415000000" />
       </binding>
     </element>
     <element id="Condition.category">
@@ -125,7 +125,7 @@
       <max value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-problem-v4.7-2024EN" />
@@ -140,7 +140,7 @@
       <alias value="ProbleemNaam" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-problem-v4.7-2024EN" />
@@ -148,28 +148,29 @@
         <comment value="ProblemName" />
       </mapping>
     </element>
-    <element id="Condition.code.extension:furtherSpecificationProblemName">
-      <path value="Condition.code.extension" />
-      <sliceName value="furtherSpecificationProblemName" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-Problem.FurtherSpecificationProblemName" />
-      </type>
+    <element id="Condition.code.text">
+      <path value="Condition.code.text" />
+      <short value="FurtherSpecificationProblemName" />
+      <definition value="Further specification of problem name when it is recorded via a thesaurus or code system in which the required level of detail is not (yet) available." />
+      <alias value="NadereSpecificatieProbleemNaam" />
+      <mapping>
+        <identity value="zib-problem-v4.7-2024EN" />
+        <map value="NL-CM:5.1.13" />
+        <comment value="FurtherSpecificationProblemName" />
+      </mapping>
     </element>
     <element id="Condition.bodySite">
       <path value="Condition.bodySite" />
       <short value="Location / ProblemAnatomicalLocation" />
       <definition value="Anatomical location which is the focus of the problem." />
       <alias value="ProbleemAnatomischeLocatie" />
-      <max value="1" />
       <type>
         <code value="CodeableConcept" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-problem-v4.7-2024EN" />
@@ -234,7 +235,7 @@
     <element id="Condition.note.text">
       <path value="Condition.note.text" />
       <short value="Comment" />
-      <definition value="Comment by the one who determined or updated the Problem." />
+      <definition value="Comment on the Problem that is determined." />
       <alias value="Toelichting" />
       <mapping>
         <identity value="zib-problem-v4.7-2024EN" />
