@@ -326,11 +326,22 @@ zib-Payer.PayerPerson:
       - cardinality: 1..1 instead of 0..1
         reason: The cardinality of the zib concept PayerPerson (0..1) mismatches FHIR (1..1). Between the zib concepts InsuranceCompany and PayerPerson, a minimum of 1 must be selected. If one uses the zib-Payer.PayerPerson profile, the choice has been made to apply the PayerPerson concept, therefore a cardinality of 1..1 can be used.
 
-zib-Payer.Organization:
+zib-Payer-Organization:
   zib deviations:
     Organization.telecom:
+      - datatype: ContactPoint instead of a reference
+        reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource. Because the FHIR profile for ContactInformation consists of two parts, the root concept of the ContactInformation is mapped on .telecom.
       - cardinality: 0..* instead of 0..1
         reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib part ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+    Organization.telecom:telephoneNumbers:
+      - datatype: ContactPoint instead of Container
+        reason: Zib container concept TelephoneNumbers of ContactInformation is represented using the ContactPoint datatype in FHIR, not as a seperate container. Because the FHIR profile for ContactInformation consists of two parts, the root concept of the ContactInformation is mapped on .telecom.
+    Organization.telecom:emailAddresses:
+      - datatype: ContactPoint instead of Container
+        reason: Zib container concept EmailAddresses of ContactInformation is represented using the ContactPoint datatype in FHIR, not as a seperate container. Because the FHIR profile for ContactInformation consists of two parts, the root concept of the ContactInformation is mapped on .telecom.  
+    Organization.address:
+      - datatype: Address instead of a reference
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
 
 unmapped zib concepts:
   - NL-CM:17.2.10: HealthcareProvider.LocationNumber
@@ -439,3 +450,11 @@ zib-Payer.InsuranceCompany:
     Coverage.payor:
       - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
         reason: The definition of the zib concept InsuranceCompany, which is the root of a container, does not contain a meaningful definition.
+
+zib-Payer-Organization:
+  ignored issues:
+    Organization.address:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The short description is defined on the datatype profile and not repeated in the differential.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The alias is defined on the datatype profile and not repeated in the differential.
