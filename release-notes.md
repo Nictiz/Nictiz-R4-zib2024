@@ -15,6 +15,9 @@
 ### zib-AbilityToEat.EatingLimitations, nl-core-AbilityToEat.EatingLimitations
 * No significant changes.
 
+## AbilityToGroom (zib-AbilityToGroom, nl-core-AbilityToGroom)
+* No significant changes
+
 ## AbilityToUseToilet 
 ### zib-AbilityToUseToilet, nl-core-AbilityToUseToilet
 * No significant changes.
