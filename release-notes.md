@@ -1,12 +1,22 @@
 ## AbilityToDressOneself (zib-AbilityToDressOneself, nl-core-AbilityToDressOneself)
 * No significant changes.
 
+## AbilityToDrink
+### zib-AbilityToDrink, nl-core-AbilityToDrink
+* No significant changes.
+
+### zib-AbilityToDrink.DrinkingLimitations, nl-core-AbilityToDrink.DrinkingLimitations
+* No significant changes.
+
 ## AbilityToEat 
 ### zib-AbilityToEat, nl-core-AbilityToEat
 * No significant changes.
 
 ### zib-AbilityToEat.EatingLimitations, nl-core-AbilityToEat.EatingLimitations
 * No significant changes.
+
+## AbilityToGroom (zib-AbilityToGroom, nl-core-AbilityToGroom)
+* No significant changes
 
 ## AbilityToUseToilet 
 ### zib-AbilityToUseToilet, nl-core-AbilityToUseToilet
@@ -29,6 +39,7 @@
 
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
+* `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
@@ -58,6 +69,19 @@
 * `.contact.relationship:role` ; terminology ; Changed value set from RolCodelijst to RolSnomedCodelijst. ; ZIB-1180, ZIB-1470, ZIB-1481, ZIB-1496, ZIB-1556, ZIB-1616, ZIB-1789, ZIB-2008, ZIB-2211
 * `.contact.relationship:relationship` ; textual ; Changed definition of Relationship. ; ZIB-1556
 * `.contact.relationship:relationship` ; terminology ; Changed value set from RelatieCodelijst to RelatieSnomedCodelijst. ; ZIB-1180, ZIB-1438, ZIB-1495, ZIB-1486, ZIB-1556, ZIB-1616, ZIB-1770, ZIB-1789, ZIB-1941, ZIB-2008
+
+## Education (zib-Education, nl-core-Education)
+* `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
+
+## FluidBalance
+### zib-FluidBalance, nl-core-FluidBalance
+* No significant changes.
+
+### zib-FluidBalance.FluidTotalIn, nl-core-FluidBalance.FluidTotalIn
+* No significant changes.
+
+### zib-FluidBalance.FluidTotalOut, nl-core-FluidBalance.FluidTotalOut
+* No significant changes.
 
 ## HealthcareProvider
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
@@ -110,6 +134,19 @@
 * No significant changes.
 
 ## Nationality (zib-Patient, nl-core-Patient)
+* No significant changes.
+
+## ParticipationInSociety
+### zib-ParticipationInSociety, nl-core-ParticipationInSociety
+* No significant changes.
+
+### zib-ParticipationInSociety.Hobby, nl-core-ParticipationInSociety.Hobby
+* No significant changes.
+
+### zib-ParticipationInSociety.SocialNetwork, nl-core-ParticipationInSociety.SocialNetwork
+* No significant changes.
+
+### zib-ParticipationInSociety.WorkSituation, nl-core-ParticipationInSociety.WorkSituation
 * No significant changes.
 
 ## Patient (zib-Patient, nl-core-Patient)

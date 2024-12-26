@@ -80,6 +80,7 @@
       <path value="Observation.value[x]" />
       <short value="HeightValue" />
       <definition value="The element contains the value of the measured body height. In the Netherlands, length is expressed in metres (m) or centimetres (cm).&#xD;&#xA;&#xD;&#xA;Body height is the height of the human body from heel to scalp, generally measured when standing. Body height is measured in a stretched, horizontal position for very small children or patients that are unable to stand." />
+      <comment value="Even though the zib states that in the Netherlands, body height is expressed in metres or centimetres, only the latter is allowed to be communicated via this profile based on the bound value set. Doing so ensures that instances of this profile are compatible with the [HL7 Vital Signs BodyHeight profile](http://hl7.org/fhir/StructureDefinition/bodyheight). If a body height recorded in metres is to be communicated, its value should first be converted to centimetres." />
       <alias value="LengteWaarde" />
       <type>
         <code value="Quantity" />
