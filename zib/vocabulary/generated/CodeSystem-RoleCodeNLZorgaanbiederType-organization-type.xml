@@ -11,7 +11,7 @@
    </text>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
-         <start value="2023-04-14T00:00:00+00:00"/>
+         <start value="2024-11-14T22:13:01+00:00"/>
       </valuePeriod>
    </extension>
    <url value="http://nictiz.nl/fhir/NamingSystem/organization-type"/>
@@ -20,7 +20,7 @@
       <system value="urn:ietf:rfc:3986"/>
       <value value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
    </identifier>
-   <version value="2023-04-14T00:00:00"/>
+   <version value="2024-11-14T22:13:01"/>
    <name value="RoleCodeNLZorgaanbiederType"/>
    <title value="RoleCodeNL - zorgaanbiedertype (organisaties)"/>
    <status value="active"/>
@@ -33,7 +33,7 @@
          <value value="https://www.nictiz.nl"/>
       </telecom>
    </contact>
-   <description value="Dit codesysteem bevat concepten die het roltype bepaalt van een organisatie die als zorgaanbieder optreedt. Het is een invulling van het HL7v3 vocabulairedomein “RoleCode” en wel specifiek het concept “AssignedRoleType”. &#xA;* 2017-02-08: Toegevoegd BRA (Brandwondencentrum) en DIA (Dialysecentrum) op verzoek RIVM.&#xA;* 2017-12-20 Level van Openbare apotheek gecorrigeerd van 1 naar 2&#xA;* 2018-03-21 Na wijzigingsverzoek codes A1 voor Apotheekinstelling en H1 voor Huisartsinstelling van A (Astract) naar S (Specializable) omgezet zodat deze toepasbaar worden op dit niveau&#xA;* 2020-05-18 Toegevoegd code K4 voor Kraamzorg na wijzigingsverzoek (https://bits.nictiz.nl/browse/ZIB-1171)&#xA;* 2020-07-16 Toegevoegd code H2 voor Hospice na wijzigingsverzoek van zib-centrum (https://bits.nictiz.nl/browse/ZIB-1171)&#xA;* 2020-11-11 Toegevoegd code GC voor Geboortecentrum na wijzigingsverzoek van Geboortezorg (https://bits.nictiz.nl/browse/GZ-333)&#xA;* 2022-04-25 Toegevoegd code JZ voor Jeugdzorg, G1 voor Verslavingszorg, en F1 voor Fysiotherapiepraktijk na wijzigingsverzoek van Zibcentrum (https://bits.nictiz.nl/browse/ZIB-1559)&#xA;* 2022-06-30 Toegevoegd code TD voor Trombosedienst na wijzigingsverzoek van Laboratoriumuitwisseling&#xA;* 2022-07-07 Toegevoegd code TA1, TA2 voor Tandartspraktijken, ZG Zorggroep en SC Specialistisch Centrum na wijzigingsverzoeken van VZVZ&#xA;* 2022-09-10 Toegevoegd code AMB Ambulancezorg na wijzigingsverzoek van VZVZ&#xA;* 2022-12-21 Wijzigingen naar aanleiding harmonisatie Mitz, Vektis AGB en Patiënttermen in samenspraak met VZVZ, Patiëntenfederatie, Vecozo en Vektis                     &#xA;    *"/>
+   <description value="Dit codesysteem bevat concepten die het roltype bepaalt van een organisatie die als zorgaanbieder optreedt. Het is een invulling van het HL7v3 vocabulairedomein “RoleCode” en wel specifiek het concept “AssignedRoleType”. &#xA;* 2017-02-08 Toegevoegd BRA (Brandwondencentrum) en DIA (Dialysecentrum) op verzoek RIVM.&#xA;* 2017-12-20 Level van Openbare apotheek gecorrigeerd van 1 naar 2&#xA;* 2018-03-21 Na wijzigingsverzoek codes A1 voor Apotheekinstelling en H1 voor Huisartsinstelling van A (Astract) naar S (Specializable) omgezet zodat deze toepasbaar worden op dit niveau&#xA;* 2020-05-18 Toegevoegd code K4 voor Kraamzorg na wijzigingsverzoek (https://bits.nictiz.nl/browse/ZIB-1171)&#xA;* 2020-07-16 Toegevoegd code H2 voor Hospice na wijzigingsverzoek van zib-centrum (https://bits.nictiz.nl/browse/ZIB-1171)&#xA;* 2020-11-11 Toegevoegd code GC voor Geboortecentrum na wijzigingsverzoek van Geboortezorg (https://bits.nictiz.nl/browse/GZ-333)&#xA;* 2022-04-25 Toegevoegd code JZ voor Jeugdzorg, G1 voor Verslavingszorg, en F1 voor Fysiotherapiepraktijk na wijzigingsverzoek van Zibcentrum (https://bits.nictiz.nl/browse/ZIB-1559)&#xA;* 2022-06-30 Toegevoegd code TD voor Trombosedienst na wijzigingsverzoek van Laboratoriumuitwisseling&#xA;* 2022-07-07 Toegevoegd code TA1, TA2 voor Tandartspraktijken, ZG Zorggroep en SC Specialistisch Centrum na wijzigingsverzoeken van VZVZ&#xA;* 2022-09-10 Toegevoegd code AMB Ambulancezorg na wijzigingsverzoek van VZVZ&#xA;* 2022-12-21 Wijzigingen naar aanleiding harmonisatie Mitz, Vektis AGB en Patiënttermen in samenspraak met VZVZ, Patiëntenfederatie, Vecozo en Vektis&#xA;* 2024-11-14 Wijzigingen naar aanleiding van CAB: weergavenamen bij code AMB veranderd van Ambulancezorg naar Regionale ambulancevoorzieningen"/>
    <copyright value="Nictiz"/>
    <caseSensitive value="false"/>
    <content value="complete"/>
@@ -49,6 +49,12 @@
       <uri value="http://hl7.org/fhir/concept-properties#effectiveDate"/>
       <description value="The date at which the concept was status was last changed. This is calculated based on the highest of 'creation date', 'expiration date', and 'official release date'"/>
       <type value="dateTime"/>
+   </property>
+   <property>
+      <code value="inactive"/>
+      <uri value="http://hl7.org/fhir/concept-properties#inactive"/>
+      <description value="True if the concept is not considered active - e.g. not a valid concept any more and not approved for current use. Property type is boolean, default value is false"/>
+      <type value="boolean"/>
    </property>
    <property>
       <code value="notSelectable"/>
@@ -450,6 +456,10 @@
       <property>
          <code value="effectiveDate"/>
          <valueDateTime value="2022-12-21"/>
+      </property>
+      <property>
+         <code value="inactive"/>
+         <valueBoolean value="true"/>
       </property>
       <property>
          <code value="parent"/>
@@ -1211,7 +1221,7 @@
    <concept>
       <code value="SC"/>
       <display value="Specialistisch Centrum"/>
-      <definition value="Categorale instellingen/ziekenhuizen (MSZ-instellingen voor een specifieke diagnose/ziekte of patiëntengroep). Het zijn geen (algemene) ziekenhuizen en ook geen zelfstandige klinieken (ZBC’s). Voorbeelden: St Maartenskliniek: behandelt patiënten met aandoeningen aan het bewegingsapparaat&#xA;                        Antonie van Leeuwenziekenhuis: behandelt kankerpatiënten&#xA;                        Prinses Maxima Centrum: behandelt kinderen met kanker&#xA;                        SEIN: behandelt patiënten met epilepsie"/>
+      <definition value="Categorale instellingen/ziekenhuizen (MSZ-instellingen voor een specifieke diagnose/ziekte of patiëntengroep). Het zijn geen (algemene) ziekenhuizen en ook geen zelfstandige klinieken (ZBC’s). Voorbeelden: &#xA;                        St Maartenskliniek: behandelt patiënten met aandoeningen aan het bewegingsapparaat&#xA;                        Antonie van Leeuwenziekenhuis: behandelt kankerpatiënten&#xA;                        Prinses Maxima Centrum: behandelt kinderen met kanker&#xA;                        SEIN: behandelt patiënten met epilepsie"/>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1852,7 +1862,7 @@
    </concept>
    <concept>
       <code value="AMB"/>
-      <display value="Ambulancezorg"/>
+      <display value="Regionale ambulancevoorzieningen"/>
       <designation>
          <language value="nl-NL"/>
          <use>
@@ -1860,7 +1870,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
          </use>
-         <value value="Ambulancediensten"/>
+         <value value="Regionale ambulancevoorzieningen"/>
       </designation>
       <property>
          <code value="status"/>

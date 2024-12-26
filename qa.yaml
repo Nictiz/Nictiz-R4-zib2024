@@ -96,6 +96,9 @@ steps:
     patterns: nl-core profiles
     snapshots: json
     script: nl-core-overrides.py
+  check zib mapping inheritance:
+    patterns: nl-core profiles
+    script: inherit-mapping-declarations.py
   check release notes:
     patterns: release notes
     script: ReleaseNotes.py
