@@ -158,11 +158,8 @@
 * `.extension:genderIdentity.value[x]` ; extension ; Added extension genderIdentity for GenderIdentity. ; ZIB-1693
 * `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
-<<<<<<< HEAD
 
 ## Problem (zib-Problem, nl-core-Problem)
-* `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst ; ZIB-1477, ZIB-2087, ZIB-1575
+* `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-2087, ZIB-1575
 * `.code.text.` ; mapping ; Moved mapping from `.code.extension:furtherSpecificationProblemName`. ; ZIBFHIR-145
 * `.bodySite` ; cardinality ; Changed max cardinality from 1 to *. ; ZIB-1433
-=======
->>>>>>> zib-AnatomicalLocation
