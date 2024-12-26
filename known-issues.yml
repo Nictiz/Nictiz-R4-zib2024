@@ -316,6 +316,8 @@ zib-Problem:
     Condition.bodySite:
       - datatype: CodeableConcept instead of a reference
         reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept and as a reference to BodyStructure, therefore the datatype is not a Reference. Therefore its concepts and constraints are added inline too.
+      - NL-CM:20.7.4: 0..* instead of 0..1
+        reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept and as a reference to BodyStructure. For the CodeableConcept implementation, the cardinality is set to 0..* that allow for multiple instances of AnatomicalLocation which is in accordance with the zib Problem.    
 
 unmapped zib concepts:
   - NL-CM:17.2.10: HealthcareProvider.LocationNumber
