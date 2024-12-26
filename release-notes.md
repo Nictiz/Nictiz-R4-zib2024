@@ -160,6 +160,6 @@
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
 
 ## Problem (zib-Problem, nl-core-Problem)
-* `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-2087, ZIB-1575
+* `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-1575, ZIB-2087
 * `.code.text.` ; mapping ; Moved mapping from `.code.extension:furtherSpecificationProblemName`. ; ZIBFHIR-145
 * `.bodySite` ; cardinality ; Changed max cardinality from 1 to *. ; ZIB-1433
