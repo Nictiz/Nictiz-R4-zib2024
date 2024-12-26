@@ -159,7 +159,7 @@
     </element>
     <element id="Condition.bodySite">
       <path value="Condition.bodySite" />
-      <short value="ProblemAnatomicalLocation" />
+      <short value="ProblemAnatomicalLocation / Location" />
       <definition value="Anatomical location which is the focus of the problem." />
       <alias value="ProbleemAnatomischeLocatie" />
       <type>
