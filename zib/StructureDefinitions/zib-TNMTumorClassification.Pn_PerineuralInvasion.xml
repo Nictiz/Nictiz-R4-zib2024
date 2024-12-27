@@ -1,70 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-TNMTumorClassification.Pn_PerineuralInvasion" />
+  <id value="zib-TNMTumorClassification.Pn_PerineuralInvasion"/>
   <text>
     <status value="empty"/>
     <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
   </text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.Pn_PerineuralInvasion" />
-  <name value="ZibTNMTumorClassificationPn_PerineuralInvasion" />
-  <title value="zib TNMTumorClassification.Pn_PerineuralInvasion" />
-  <status value="draft" />
-  <publisher value="Nictiz" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.Pn_PerineuralInvasion"/>
+  <name value="ZibTNMTumorClassificationPn_PerineuralInvasion"/>
+  <title value="zib TNMTumorClassification.Pn_PerineuralInvasion"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
   <contact>
-    <name value="Nictiz" />
+    <name value="Nictiz"/>
     <telecom>
-      <system value="url" />
-      <value value="https://www.nictiz.nl" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="https://www.nictiz.nl"/>
+      <use value="work"/>
     </telecom>
   </contact>
-  <description value="Presence or absence of perineural invasion, the Pn-category. It concerns an additional description within the TNM classification that is determined by a pathologist." />
-  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-  <fhirVersion value="4.0.1" />
+  <description value="Presence or absence of perineural invasion, the Pn-category. It concerns an additional description within the TNM classification that is determined by a pathologist."/>
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+  <fhirVersion value="4.0.1"/>
   <mapping>
-    <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN)" />
-    <name value="zib TNMTumorClassification-v4.0(2024EN)" />
+    <identity value="zib-TNMTumorClassification-v4.0-2024EN"/>
+    <uri value="https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN)"/>
+    <name value="zib TNMTumorClassification-v4.0(2024EN)"/>
   </mapping>
-  <kind value="resource" />
-  <abstract value="true" />
-  <type value="Observation" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
-  <derivation value="constraint" />
+  <kind value="resource"/>
+  <abstract value="true"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Observation">
-      <path value="Observation" />
-      <short value="TNMTumorClassification.Pn_PerineuralInvasion" />
+      <path value="Observation"/>
+      <short value="TNMTumorClassification.Pn_PerineuralInvasion"/>
     </element>
     <element id="Observation.code">
-      <path value="Observation.code" />
+      <path value="Observation.code"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="371513001" />
+          <system value="http://snomed.info/sct"/>
+          <code value="371513001"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Observation.value[x]">
-      <path value="Observation.value[x]" />
+      <path value="Observation.value[x]"/>
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="$this" />
+          <type value="type"/>
+          <path value="$this"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueCodeableConcept" />
+      <path value="Observation.value[x]"/>
+      <sliceName value="valueCodeableConcept"/>
+      <short value="Pn_PerineuralInvasion"/>
+      <definition value="Presence or absence of perineural invasion, the Pn-category. It concerns an additional description within the TNM classification that is determined by a pathologist."/>
+      <alias value="Pn_PerineuraleInvasie"/>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.7" />
+        <identity value="zib-TNMTumorClassification-v4.0-2024EN"/>
+        <map value="NL-CM:4.27.7"/>
+        <comment value="Pn_PerineuralInvasion"/>
       </mapping>
     </element>
   </differential>
