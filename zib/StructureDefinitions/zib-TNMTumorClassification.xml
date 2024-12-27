@@ -66,7 +66,7 @@
       <path value="Observation.effective[x]"/>
       <sliceName value="effectiveDateTime"/>
       <short value="DateOfTNMClassification"/>
-      <definition value="&#xA;                        &#xA;                    "/>
+      <definition value="The date on which the TNM Classification (the value) was established. This may be a later date than the date(s) of study(s) on which the classification was determined."/>
       <alias value="DatumTNMClassificatie"/>
       <type>
         <code value="dateTime"/>
@@ -140,6 +140,70 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.DistantMetastasis"/>
+      </type>
+    </element>
+    <element id="Observation.hasMember:regionalLymphnodes">
+      <path value="Observation.hasMember"/>
+      <sliceName value="regionalLymphnodes"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.RegionalLymphnodes"/>
+      </type>
+    </element>
+    <element id="Observation.hasMember:primaryTumor">
+      <path value="Observation.hasMember"/>
+      <sliceName value="primaryTumor"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor"/>
+      </type>
+    </element>
+    <element id="Observation.hasMember:l_LymphaticInvasion">
+      <path value="Observation.hasMember"/>
+      <sliceName value="l_LymphaticInvasion"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.L_LymphaticInvasion"/>
+      </type>
+    </element>
+    <element id="Observation.hasMember:pn_PerineuralInvasion">
+      <path value="Observation.hasMember"/>
+      <sliceName value="pn_PerineuralInvasion"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.Pn_PerineuralInvasion"/>
+      </type>
+    </element>
+    <element id="Observation.hasMember:v_VenousInvasion">
+      <path value="Observation.hasMember"/>
+      <sliceName value="v_VenousInvasion"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.V_VenousInvasion"/>
+      </type>
+    </element>
+    <element id="Observation.hasMember:anatomicalStage">
+      <path value="Observation.hasMember"/>
+      <sliceName value="anatomicalStage"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.AnatomicalStage"/>
+      </type>
+    </element>
+    <element id="Observation.hasMember:prognosticStage">
+      <path value="Observation.hasMember"/>
+      <sliceName value="prognosticStage"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrognosticStage"/>
+      </type>
+    </element>
+    <element id="Observation.hasMember:r_ResidualTumor">
+      <path value="Observation.hasMember"/>
+      <sliceName value="r_ResidualTumor"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.R_ResidualTumor"/>
       </type>
     </element>
   </differential>
