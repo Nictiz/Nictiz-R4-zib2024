@@ -5,23 +5,108 @@ hide circle
 
 title Profile relationships TNMTumorClassification
 
-
-class .AnatomicalStage
-class .DistantMetastasis.AnatomicalLocation
-class .DistantMetastasis
-class .L_LymphaticInvasion
-class .Pn_PerineuralInvasion
-class .PrimaryTumor.Abnormality.G_HistopathologicalGrade
-class .PrimaryTumor.Abnormality.AnatomicalLocation
-class .PrimaryTumor.Abnormality
-class .PrimaryTumor.m_NumberOfPrimaryTumors
-class .PrimaryTumor
-class .PrognosticStage
-class .R_ResidualTumor
-class .RegionalLymphnodes
-class .RegionalLymphnodes.AnatomicalLocation
-class .V_VenousInvasion
 class TNMTumorClassification
+  {
+    + code = SCT#399390009
+    --
+    + DateOfTNMClassification
+    + IntegratedTNMValue
+    + Explanation
+    + TNMVersion
+  }
+class .AnatomicalStage
+  {
+    + code = SCT#399390009 !!
+    --
+    + AnatomicalStage
+  }
+class .DistantMetastasis.AnatomicalLocation
+  {
+    + code = SCT#385421009
+    --
+    + AnatomicalLocation
+  }
+class .DistantMetastasis
+  {
+    + code = SCT#27708005
+    --
+    + M_DistantMetastasis
+  }
+class .L_LymphaticInvasion
+  {
+    + code = SCT#395715009
+    --
+    + L_LymphaticInvasion
+  }
+class .Pn_PerineuralInvasion
+  {
+    + code = SCT#371513001
+    --
+    + Pn_PerineuralInvasion
+  }
+class .PrimaryTumor.Abnormality.G_HistopathologicalGrade
+  {
+    + code = SCT#371469007
+    --
+    + G_HistopathologicalGrading
+  }
+class .PrimaryTumor.Abnormality.AnatomicalLocation
+  {
+    BodyStructure
+   --
+    + AnatomicalLocation
+    + Morphology
+  }
+class .PrimaryTumor.Abnormality
+  {
+    + code = SCT#372087000
+    --
+    + IsPrimaryTumor
+    + AbnormalityNumber
+  }
+class .PrimaryTumor.m_NumberOfPrimaryTumors
+  {
+    + code = SCT#133641000146103
+    --
+    + m_NumberOfPrimaryTumors
+  }
+class .PrimaryTumor
+  {
+    + code = SCT#78873005
+    --
+    + T_PrimaireTumor
+  }
+class .PrognosticStage
+  {
+    + code = SCT#399390009 !!
+    --
+    + PrognosticStage
+  }
+class .R_ResidualTumor
+  {
+    + code = SCT#17964000
+    --
+    + R_ResidualTumor
+  }
+class .RegionalLymphnodes
+  {
+    + code = SCT#301855007
+    --
+    + N_RegionalLymphnodes
+  }
+class .RegionalLymphnodes.AnatomicalLocation
+  {
+    + code = SCT#397440000
+    --
+    + AnatomicalLocation
+    + Location
+  }
+class .V_VenousInvasion
+  {
+    + code = SCT#371493002
+    --
+    + V_VenousInvasion
+  }
 
 
 TNMTumorClassification --> .DistantMetastasis : ".hasMember"
@@ -40,6 +125,5 @@ TNMTumorClassification --> .R_ResidualTumor : ".hasMember"
 .PrimaryTumor --> .PrimaryTumor.m_NumberOfPrimaryTumors : ".hasMember"
 .PrimaryTumor.Abnormality --> .PrimaryTumor.Abnormality.AnatomicalLocation : ".bodysite:extension:bodyStructure"
 .PrimaryTumor.Abnormality --> .PrimaryTumor.Abnormality.G_HistopathologicalGrade : ".hasMember"
-
 
 @enduml

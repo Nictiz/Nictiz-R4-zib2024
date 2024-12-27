@@ -71,7 +71,8 @@
       <alias value="Locatie"/>
       <alias value="AnatomischeLocatie"/>
       <type>
-        <code value="CodeableConcept"/>
+        <code value="CodeableConcept" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
       </type>
       <mapping>
         <identity value="zib-TNMTumorClassification-v4.0-2024EN"/>
