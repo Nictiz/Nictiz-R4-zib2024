@@ -1,0 +1,45 @@
+@startuml
+set namespaceSeparator none
+skin rose
+hide circle
+
+title Profile relationships TNMTumorClassification
+
+
+class .AnatomicalStage
+class .DistantMetastasis.AnatomicalLocation
+class .DistantMetastasis
+class .L_LymphaticInvasion
+class .Pn_PerineuralInvasion
+class .PrimaryTumor.Abnormality.G_HistopathologicalGrade
+class .PrimaryTumor.Abnormality.AnatomicalLocation
+class .PrimaryTumor.Abnormality
+class .PrimaryTumor.m_NumberOfPrimaryTumors
+class .PrimaryTumor
+class .PrognosticStage
+class .R_ResidualTumor
+class .RegionalLymphnodes
+class .RegionalLymphnodes.AnatomicalLocation
+class .V_VenousInvasion
+class TNMTumorClassification
+
+
+TNMTumorClassification --> .DistantMetastasis : ".hasMember"
+TNMTumorClassification --> .RegionalLymphnodes : ".hasMember"
+TNMTumorClassification --> .PrimaryTumor : ".hasMember"
+TNMTumorClassification --> .L_LymphaticInvasion : ".hasMember"
+TNMTumorClassification --> .Pn_PerineuralInvasion : ".hasMember"
+TNMTumorClassification --> .V_VenousInvasion : ".hasMember"
+TNMTumorClassification --> .AnatomicalStage : ".hasMember"
+TNMTumorClassification --> .PrognosticStage : ".hasMember"
+TNMTumorClassification --> .R_ResidualTumor : ".hasMember"
+
+.DistantMetastasis --> .DistantMetastasis.AnatomicalLocation : ".hasMember"
+.RegionalLymphnodes --> .RegionalLymphnodes.AnatomicalLocation : ".hasMember"
+.PrimaryTumor --> .PrimaryTumor.Abnormality : ".hasMember"
+.PrimaryTumor --> .PrimaryTumor.m_NumberOfPrimaryTumors : ".hasMember"
+.PrimaryTumor.Abnormality --> .PrimaryTumor.Abnormality.AnatomicalLocation : ".bodysite:extension:bodyStructure"
+.PrimaryTumor.Abnormality --> .PrimaryTumor.Abnormality.G_HistopathologicalGrade : ".hasMember"
+
+
+@enduml
