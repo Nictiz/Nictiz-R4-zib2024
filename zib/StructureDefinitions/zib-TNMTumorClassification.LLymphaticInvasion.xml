@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-TNMTumorClassification.RResidualTumor" />
+  <id value="zib-TNMTumorClassification.LLymphaticInvasion" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.R_ResidualTumor" />
-  <name value="ZibTNMTumorClassificationR_ResidualTumor" />
-  <title value="zib TNMTumorClassification.R_ResidualTumor" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.LLymphaticInvasion" />
+  <name value="ZibTNMTumorClassificationLLymphaticInvasion" />
+  <title value="zib TNMTumorClassification.LLymphaticInvasion" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -16,12 +16,12 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Presence or absence of Residual Tumor after treatment, the R-category. This may relate to the primary tumor and its local or regional spread, but may also include distant metastases.The specific usage should be indicated by the user in the comment field." />
+  <description value="Presence or absence of tissue invasion absence of lymphatic invasion, the L-category. It concerns an additional description within the TNM classification that is determined by a pathologist." />
   <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+    <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
     <uri value="https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN)" />
     <name value="zib TNMTumorClassification-v4.0(2024EN)" />
   </mapping>
@@ -33,14 +33,14 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <short value="TNMTumorClassification.R_ResidualTumor" />
+      <short value="TNMTumorClassification.LLymphaticInvasion" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="17964000" />
+          <code value="395715009" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -57,20 +57,20 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
-      <short value="R_ResidualTumor" />
-      <definition value="Presence or absence of Residual Tumor after treatment, the R-category." />
-      <alias value="R_ResidueleTumor" />
+      <short value="L_LymphaticInvasion" />
+      <definition value="Presence or absence of tissue invasion absence of lymphatic invasion, the L-category. It concerns an additional description within the TNM classification that is determined by a pathologist." />
+      <alias value="L_LymfatischeInvasie" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.52--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.53--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.11" />
-        <comment value="R_ResidualTumor" />
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.6" />
+        <comment value="L_LymphaticInvasion" />
       </mapping>
     </element>
   </differential>

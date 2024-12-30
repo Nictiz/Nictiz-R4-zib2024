@@ -21,7 +21,7 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+    <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
     <uri value="https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN)" />
     <name value="zib TNMTumorClassification-v4.0(2024EN)" />
   </mapping>
@@ -37,7 +37,7 @@
       <definition value="Container of the DistantMetastasis concept.This container contains all data elements of the DistantMetastasis concept." />
       <alias value="AfstandsMetastasen" />
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
         <map value="NL-CM:4.27.25" />
         <comment value="DistantMetastasis" />
       </mapping>
@@ -72,7 +72,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
       </type>
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
         <map value="NL-CM:4.27.28" />
         <comment value="AnatomicalLocation" />
       </mapping>

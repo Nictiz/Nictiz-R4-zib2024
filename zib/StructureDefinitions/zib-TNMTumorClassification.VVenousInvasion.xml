@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-TNMTumorClassification.Pn_PerineuralInvasion" />
+  <id value="zib-TNMTumorClassification.VVenousInvasion" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.Pn_PerineuralInvasion" />
-  <name value="ZibTNMTumorClassificationPn_PerineuralInvasion" />
-  <title value="zib TNMTumorClassification.Pn_PerineuralInvasion" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.VVenousInvasion" />
+  <name value="ZibTNMTumorClassificationVVenousInvasion" />
+  <title value="zib TNMTumorClassification.VVenousInvasion" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -16,12 +16,12 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Presence or absence of perineural invasion, the Pn-category. It concerns an additional description within the TNM classification that is determined by a pathologist." />
+  <description value="Presence or absence of venous invasion, the V-category. It concerns an additional description within the TNM classification that is determined by a pathologist." />
   <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+    <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
     <uri value="https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN)" />
     <name value="zib TNMTumorClassification-v4.0(2024EN)" />
   </mapping>
@@ -33,14 +33,14 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <short value="TNMTumorClassification.Pn_PerineuralInvasion" />
+      <short value="TNMTumorClassification.V_VenousInvasion" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="371513001" />
+          <code value="371493002" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -57,20 +57,20 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
-      <short value="Pn_PerineuralInvasion" />
-      <definition value="Presence or absence of perineural invasion, the Pn-category. It concerns an additional description within the TNM classification that is determined by a pathologist." />
-      <alias value="Pn_PerineuraleInvasie" />
+      <short value="V_VenousInvasion" />
+      <definition value="Presence or absence of venous invasion, the V-category. It concerns an additional description within the TNM classification that is determined by a pathologist." />
+      <alias value="V_VeneuzeInvasie" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.54--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.55--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.7" />
-        <comment value="Pn_PerineuralInvasion" />
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.8" />
+        <comment value="V_VenousInvasion" />
       </mapping>
     </element>
   </differential>

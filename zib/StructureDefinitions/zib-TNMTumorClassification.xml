@@ -21,7 +21,7 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+    <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
     <uri value="https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN)" />
     <name value="zib TNMTumorClassification-v4.0(2024EN)" />
   </mapping>
@@ -36,7 +36,7 @@
       <short value="TNMTumorClassification" />
       <alias value="TNMTumorClassificatie" />
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
         <map value="NL-CM:4.27.1" />
         <comment value="TNMTumorClassification" />
       </mapping>
@@ -70,7 +70,7 @@
         <code value="dateTime" />
       </type>
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
         <map value="NL-CM:4.27.2" />
         <comment value="DateOfTNMClassification" />
       </mapping>
@@ -95,7 +95,7 @@
         <code value="string" />
       </type>
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
         <map value="NL-CM:4.27.4" />
         <comment value="IntegratedTNMValue" />
       </mapping>
@@ -106,7 +106,7 @@
       <definition value="Comments regarding interpretation of the TNMTumorClassification." />
       <alias value="Toelichting" />
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
         <map value="NL-CM:4.27.5" />
         <comment value="Explanation" />
       </mapping>
@@ -121,7 +121,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.6--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
         <map value="NL-CM:4.27.3" />
         <comment value="TNMVersion" />
       </mapping>
@@ -165,7 +165,7 @@
       <sliceName value="l_LymphaticInvasion" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.L_LymphaticInvasion" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.LLymphaticInvasion" />
       </type>
     </element>
     <element id="Observation.hasMember:pn_PerineuralInvasion">
@@ -173,7 +173,7 @@
       <sliceName value="pn_PerineuralInvasion" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.Pn_PerineuralInvasion" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PnPerineuralInvasion" />
       </type>
     </element>
     <element id="Observation.hasMember:v_VenousInvasion">
@@ -181,7 +181,7 @@
       <sliceName value="v_VenousInvasion" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.V_VenousInvasion" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.VVenousInvasion" />
       </type>
     </element>
     <element id="Observation.hasMember:anatomicalStage">
@@ -205,7 +205,7 @@
       <sliceName value="r_ResidualTumor" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.R_ResidualTumor" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.RResidualTumor" />
       </type>
     </element>
   </differential>
