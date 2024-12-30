@@ -35,6 +35,7 @@
       <path value="Observation" />
       <short value="PrimaryTumor" />
       <definition value="Container of the PrimaryTumor concept.This container contains all data elements of the PrimaryTumor concept." />
+      <comment value="Several concepts of zib TNMTumorClassification.PrimaryTumor are represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`." />
       <alias value="PrimaireTumor" />
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
@@ -93,6 +94,7 @@
     <element id="Observation.hasMember:abnormality">
       <path value="Observation.hasMember" />
       <sliceName value="abnormality" />
+      <definition value="The Abnormality concept (NL-CM:4.27.15) of zib TNMTumorClassification, represented as a distinct Observation resource." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.Abnormality" />
@@ -101,6 +103,8 @@
     <element id="Observation.hasMember:m_NumberOfPrimaryTumors">
       <path value="Observation.hasMember" />
       <sliceName value="m_NumberOfPrimaryTumors" />
+      <definition value="The m_NumberOfPrimaryTumors concept (NL-CM:4.27.13) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors" />

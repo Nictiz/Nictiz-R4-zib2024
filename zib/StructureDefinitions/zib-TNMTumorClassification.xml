@@ -34,6 +34,7 @@
     <element id="Observation">
       <path value="Observation" />
       <short value="TNMTumorClassification" />
+      <comment value="Several concepts of zib TNMTumorClassification are represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`." />
       <alias value="TNMTumorClassificatie" />
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
@@ -143,6 +144,8 @@
     <element id="Observation.hasMember:distantMetastasis">
       <path value="Observation.hasMember" />
       <sliceName value="distantMetastasis" />
+      <definition value="The DistantMetastasis concept (NL-CM:4.27.25) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.DistantMetastasis" />
@@ -151,6 +154,8 @@
     <element id="Observation.hasMember:regionalLymphnodes">
       <path value="Observation.hasMember" />
       <sliceName value="regionalLymphnodes" />
+      <definition value="The RegionalLymphnodes concept (NL-CM:4.27.21) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.RegionalLymphnodes" />
@@ -159,6 +164,8 @@
     <element id="Observation.hasMember:primaryTumor">
       <path value="Observation.hasMember" />
       <sliceName value="primaryTumor" />
+      <definition value="The PrimaryTumor concept (NL-CM:4.27.12) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor" />
@@ -167,6 +174,8 @@
     <element id="Observation.hasMember:l_LymphaticInvasion">
       <path value="Observation.hasMember" />
       <sliceName value="l_LymphaticInvasion" />
+      <definition value="The L_LymphaticInvasion concept (NL-CM:4.27.6) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.LLymphaticInvasion" />
@@ -175,6 +184,8 @@
     <element id="Observation.hasMember:pn_PerineuralInvasion">
       <path value="Observation.hasMember" />
       <sliceName value="pn_PerineuralInvasion" />
+      <definition value="The Pn_PerineuralInvasion concept (NL-CM:4.27.7) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PnPerineuralInvasion" />
@@ -183,6 +194,8 @@
     <element id="Observation.hasMember:v_VenousInvasion">
       <path value="Observation.hasMember" />
       <sliceName value="v_VenousInvasion" />
+      <definition value="The V_VenousInvasion concept (NL-CM:4.27.8) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.VVenousInvasion" />
@@ -191,6 +204,8 @@
     <element id="Observation.hasMember:anatomicalStage">
       <path value="Observation.hasMember" />
       <sliceName value="anatomicalStage" />
+      <definition value="The AnatomicalStage concept (NL-CM:4.27.9) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.AnatomicalStage" />
@@ -199,6 +214,8 @@
     <element id="Observation.hasMember:prognosticStage">
       <path value="Observation.hasMember" />
       <sliceName value="prognosticStage" />
+      <definition value="The PrognosticStage concept (NL-CM:4.27.10) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrognosticStage" />
@@ -207,6 +224,8 @@
     <element id="Observation.hasMember:r_ResidualTumor">
       <path value="Observation.hasMember" />
       <sliceName value="r_ResidualTumor" />
+      <definition value="The R_ResidualTumor concept (NL-CM:4.27.11) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.RResidualTumor" />
