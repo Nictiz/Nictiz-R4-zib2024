@@ -1,99 +1,101 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-TNMTumorClassification.RegionalLymphnodes"/>
+  <id value="zib-TNMTumorClassification.RegionalLymphnodes" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.RegionalLymphnodes"/>
-  <name value="ZibTNMTumorClassificationRegionalLymphnodes"/>
-  <title value="zib TNMTumorClassification.RegionalLymphnodes"/>
-  <status value="draft"/>
-  <publisher value="Nictiz"/>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.RegionalLymphnodes" />
+  <name value="ZibTNMTumorClassificationRegionalLymphnodes" />
+  <title value="zib TNMTumorClassification.RegionalLymphnodes" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
   <contact>
-    <name value="Nictiz"/>
+    <name value="Nictiz" />
     <telecom>
-      <system value="url"/>
-      <value value="https://www.nictiz.nl"/>
-      <use value="work"/>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
     </telecom>
   </contact>
-  <description value="Staging result of the presence or absence of regional lymph nodes metastasis, the N-category of the TNM classification."/>
-  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))."/>
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-  <fhirVersion value="4.0.1"/>
+  <description value="Staging result of the presence or absence of regional lymph nodes metastasis, the N-category of the TNM classification." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-TNMTumorClassification-v4.0-2024EN"/>
-    <uri value="https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN)"/>
-    <name value="zib TNMTumorClassification-v4.0(2024EN)"/>
+    <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN)" />
+    <name value="zib TNMTumorClassification-v4.0(2024EN)" />
   </mapping>
-  <kind value="resource"/>
-  <abstract value="true"/>
-  <type value="Observation"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
-  <derivation value="constraint"/>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
   <differential>
     <element id="Observation">
-      <path value="Observation"/>
-      <short value="RegionalLymphnodes"/>
-      <definition value="Container of the RegionalLymphnodes concept.This container contains all data elements of the RegionalLymphnodes concept."/>
-      <alias value="RegionaleLymfeklieren"/>
+      <path value="Observation" />
+      <short value="RegionalLymphnodes" />
+      <definition value="Container of the RegionalLymphnodes concept.This container contains all data elements of the RegionalLymphnodes concept." />
+      <alias value="RegionaleLymfeklieren" />
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN"/>
-        <map value="NL-CM:4.27.21"/>
-        <comment value="RegionalLymphnodes"/>
+        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.21" />
+        <comment value="RegionalLymphnodes" />
       </mapping>
     </element>
     <element id="Observation.code">
-      <path value="Observation.code"/>
+      <path value="Observation.code" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct"/>
-          <code value="301855007"/>
+          <system value="http://snomed.info/sct" />
+          <code value="301855007" />
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Observation.value[x]">
-      <path value="Observation.value[x]"/>
+      <path value="Observation.value[x]" />
       <slicing>
         <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
+          <type value="type" />
+          <path value="$this" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.value[x]"/>
-      <sliceName value="valueCodeableConcept"/>
-      <short value="N_RegionalLymphnodes"/>
-      <definition value="Staging result of the presence or absence of regional lymph nodes metastasis, the N-category of the TNM classification."/>
-      <alias value="N_RegionaleLymfeklieren"/>
+      <path value="Observation.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <short value="N_RegionalLymphnodes" />
+      <definition value="Staging result of the presence or absence of regional lymph nodes metastasis, the N-category of the TNM classification." />
+      <alias value="N_RegionaleLymfeklieren" />
       <type>
-        <code value="CodeableConcept"/>
+        <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.15--20240415000000" />
+      </binding>
       <mapping>
-        <identity value="zib-TNMTumorClassification-v4.0-2024EN"/>
-        <map value="NL-CM:4.27.22"/>
-        <comment value="N_RegionalLymphnodes"/>
+        <identity value="zib-TNMTumorClassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.22" />
+        <comment value="N_RegionalLymphnodes" />
       </mapping>
     </element>
     <element id="Observation.hasMember">
-      <path value="Observation.hasMember"/>
+      <path value="Observation.hasMember" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="resolve()"/>
+          <type value="profile" />
+          <path value="resolve()" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
     </element>
     <element id="Observation.hasMember:anatomicalLocation">
-      <path value="Observation.hasMember"/>
-      <sliceName value="anatomicalLocation"/>
+      <path value="Observation.hasMember" />
+      <sliceName value="anatomicalLocation" />
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.RegionalLymphnodes.AnatomicalLocation"/>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.RegionalLymphnodes.AnatomicalLocation" />
       </type>
     </element>
   </differential>
