@@ -64,7 +64,7 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
-      <short value="AnatomicalLocation" />
+      <short value="AnatomicalLocation / Location" />
       <definition value="Contains the localization(s) of distant metastasis, caused by the primary tumor." />
       <alias value="AnatomischeLocatie" />
       <type>

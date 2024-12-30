@@ -100,6 +100,10 @@
         <comment value="IntegratedTNMValue" />
       </mapping>
     </element>
+    <element id="Observation.note">
+      <path value="Observation.note" />
+      <max value="1" />
+    </element>
     <element id="Observation.note.text">
       <path value="Observation.note.text" />
       <short value="Explanation" />
