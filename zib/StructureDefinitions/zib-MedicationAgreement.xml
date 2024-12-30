@@ -28,7 +28,7 @@
       <name value="zib MedicationAgreement-v3.0(2024EN)"/>
    </mapping>
    <kind value="resource"/>
-   <abstract value="false"/>
+   <abstract value="true"/>
    <type value="MedicationRequest"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
    <derivation value="constraint"/>
