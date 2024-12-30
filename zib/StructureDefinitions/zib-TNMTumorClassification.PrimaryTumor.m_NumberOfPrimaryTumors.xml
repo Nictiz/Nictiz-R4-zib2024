@@ -3,9 +3,9 @@
   <id value="zib-TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.m_NumberOfPrimaryTumors" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors" />
   <name value="ZibTNMTumorClassificationPrimaryTumormNumberOfPrimaryTumors" />
-  <title value="zib TNMTumorClassification.PrimaryTumor.m_NumberOfPrimaryTumors" />
+  <title value="zib TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>

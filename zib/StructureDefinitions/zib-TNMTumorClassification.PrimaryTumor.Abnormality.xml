@@ -70,6 +70,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.Abnormality.Location" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
       </type>
     </element>
     <element id="Observation.hasMember">
