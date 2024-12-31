@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-BloodPressure" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-BloodPressure" />
   <name value="NlcoreBloodPressure" />
   <title value="nl core BloodPressure" />
@@ -43,6 +41,18 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+    </element>
+    <element id="Observation.bodySite.extension:bodyStructureReference">
+      <path value="Observation.bodySite.extension" />
+      <sliceName value="bodyStructureReference" />
+    </element>
+    <element id="Observation.bodySite.extension:bodyStructureReference.value[x]">
+      <path value="Observation.bodySite.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-BloodPressure.AnatomicalLocation" />
       </type>
     </element>
   </differential>

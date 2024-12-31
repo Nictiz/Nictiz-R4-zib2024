@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-BloodPressure.AnatomicalLocation" />
+  <id value="nl-core-BloodPressure.AnatomicalLocation" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure.AnatomicalLocation" />
-  <name value="ZibBloodPressureAnatomicalLocation" />
-  <title value="zib BloodPressure.AnatomicalLocation" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-BloodPressure.AnatomicalLocation" />
+  <name value="NlCoreBloodPressureAnatomicalLocation" />
+  <title value="nl core BloodPressure.AnatomicalLocation" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -31,19 +31,9 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
   <derivation value="constraint" />
   <differential>
-    <element id="BodyStructure.location">
-      <path value="BodyStructure.location" />
-      <definition value="Localisation on/in the body." />
-      <alias value="Locatie" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20240415000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-bloodpressure-v5.0-2024EN" />
-        <map value="NL-CM:20.7.4" />
-        <comment value="Location" />
-      </mapping>
+    <element id="BodyStructure">
+      <path value="BodyStructure" />
+     <alias value="nl-core-BloodPressure.AnatomicalLocation" />
     </element>
   </differential>
 </StructureDefinition>
