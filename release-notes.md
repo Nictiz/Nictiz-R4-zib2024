@@ -37,6 +37,17 @@
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
 
+## BloodPressure 
+### zib-BloodPressure, nl-core-BloodPressure
+`.bodySite` ; terminology; Changed codes in MeetLocatieCodelijst. ; ZIB-1713, ZIB-1813
+`.bodySite` ; mapping : Added mapping of AnatomicalLocation. ; ZIB-1713
+`.method` ; terminology; Changed codes in MeetmethodeCodelijst. ; ZIB-2036
+`.component:diastolicEndpoint.value[x]` ; terminology ; Changed codes in DiastolischEindpuntCodelijst. ; ZIB-2218
+`.component:cuffType.value[x]` ; terminology ; Changed codes in ManchetTypeCodelijst. ; ZIB-2218
+
+### zib-BloodPressure.AnatomicalLocation, nl-core-BloodPressure
+* A new profile that applies zib BloodPressure constraints to the Location concept within AnatomicalLocation (ZIB-1731).
+
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
