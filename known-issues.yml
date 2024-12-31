@@ -10,6 +10,12 @@ ext-LanguageProficiency.CommunicationDetails:
       - cardinality: 0..1 instead of 0..*
         reason: FHIR restricts Extension.value to a max cardinality of 0..1. To use it more than once, the extension is added 0..* in the hosting element.
 
+ext-MedicationAgreement.AdditionalInformation:
+  zib deviations:
+    Extension.value[x]:
+      - cardinality: 0..1 instead of 0..*
+        reason: FHIR restricts Extension.value to a max cardinality of 0..1. To use it more than once, the extension is added 0..* in the hosting element.
+
 nl-core-ContactPerson-full-02:
   ignored issues:
     RelatedPerson.address[0].line[0].extension[1].value.ofType(string):
