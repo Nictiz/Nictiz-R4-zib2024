@@ -78,18 +78,6 @@
             <comment value="PeriodOfUse"/>
          </mapping>
       </element>
-      <element id="MedicationRequest.extension:registrationDateTime">
-         <path value="MedicationRequest.extension"/>
-         <sliceName value="registrationDateTime"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-RegistrationDateTime"/>
-         </type>
-      </element>
-      <element id="MedicationRequest.extension:registrationDateTime.value[x]">
-         <path value="MedicationRequest.extension.value[x]"/>
-         <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive). Registration date + time are required (order of the registrations must be clear in cases with multiple registrations on one day)."/>
-      </element>
       <element id="MedicationRequest.modifierExtension:stopType">
          <path value="MedicationRequest.modifierExtension"/>
          <sliceName value="stopType"/>
