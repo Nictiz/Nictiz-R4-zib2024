@@ -141,6 +141,9 @@
 ## Nationality (zib-Patient, nl-core-Patient)
 * No significant changes.
 
+## O2Saturation (zib-O2Saturation, nl-core-O2Saturation)
+* `.bodySite` ; mapping ; Added mapping of MeasuringLocation::AnatomicalLocation. ; ZIB-1217
+
 ## ParticipationInSociety
 ### zib-ParticipationInSociety, nl-core-ParticipationInSociety
 * No significant changes.

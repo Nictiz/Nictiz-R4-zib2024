@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-O2Saturation" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-O2Saturation" />
   <name value="ZibO2Saturation" />
   <title value="zib O2Saturation" />
@@ -113,6 +111,25 @@
         <identity value="zib-o2saturation-v4.0-2024EN" />
         <map value="NL-CM:12.10.4" />
         <comment value="Comment" />
+      </mapping>
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <short value="MeasuringLocation" />
+      <definition value="Anatomical location where the SpO2 is measured." />
+      <alias value="Meetlocatie" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-o2saturation-v4.0-2024EN" />
+        <map value="NL-CM:12.10.6" />
+        <comment value="MeasuringLocation" />
       </mapping>
     </element>
     <element id="Observation.component">
