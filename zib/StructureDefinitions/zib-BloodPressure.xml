@@ -119,55 +119,15 @@
       <short value="AnatomicalLocation / Location" />
       <definition value="Anatomical location where the blood pressure was measured." />
       <comment value="The HL7 Vital Signs IG suggests to use an additional observation coded with LOINC _41904-4_ (Blood pressure site) for this information. However, `Observation.bodySite` is deemed a more appropriate approach in this profile." />
-      <alias value="Locatie" />
-      <alias value="nl-core-AnatomicalLocation" />
       <alias value="AnatomischeLocatie" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="Codes describing anatomical locations. May include laterality." />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20240415000000" />
       </binding>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="CE/CNE/CWE" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="CD" />
-      </mapping>
-      <mapping>
-        <identity value="orim" />
-        <map value="fhir:CodeableConcept rdfs:subClassOf dt:CD" />
-      </mapping>
-      <mapping>
-        <identity value="sct-concept" />
-        <map value="&lt; 123037004 |Body structure|" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="OBX-20" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="targetSiteCode" />
-      </mapping>
-      <mapping>
-        <identity value="sct-attr" />
-        <map value="718497002 |Inherent location|" />
-      </mapping>
-      <mapping>
-        <identity value="zib-anatomicallocation-v1.0.3-2024EN" />
-        <map value="NL-CM:20.7.4" />
-        <comment value="Location" />
-      </mapping>
       <mapping>
         <identity value="zib-bloodpressure-v5.0-2024EN" />
         <map value="NL-CM:12.4.12" />
