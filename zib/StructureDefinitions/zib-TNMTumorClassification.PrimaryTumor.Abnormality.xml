@@ -54,7 +54,9 @@
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
+      <short value="AnatomicalLocation / Location" />
       <definition value="The Morphology concept (NL-CM:4.27.17) of zib TNMTumorClassification is represented using distinct BodyStructure resources because . These are referenced from this current resource and are referenced on `bodySite.extension:bodyStructureReference`." />
+      <alias value="AnatomicalLocation" />
       <type>
         <code value="CodeableConcept" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
@@ -77,7 +79,7 @@
       <path value="Observation.bodySite.extension.value[x]" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.Abnormality.Location" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumorClassification.PrimaryTumor.Abnormality.Location" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
       </type>
     </element>

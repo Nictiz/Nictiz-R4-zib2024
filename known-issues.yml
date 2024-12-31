@@ -321,6 +321,13 @@ zib-TNMTumorClassification.DistantMetastasis.AnatomicalLocation:
         for: NL-CM:4.27.28 (TNMTumorClassification.DistantMetastasis.AnatomicalLocation)
         reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept and as a reference to BodyStructure, therefore the datatype is not a Reference. Therefore its concepts and constraints are added inline too.
 
+zib-TNMTumorClassification.PrimaryTumor.Abnormality:
+  zib deviations:
+    Observation.value[x]:valueCodeableConcept:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:4.27.20 (TNMTumorClassification.PrimaryTumor.Abnormality.AnatomicalLocation)
+        reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept and as a reference to BodyStructure, therefore the datatype is not a Reference. Therefore its concepts and constraints are added inline too.
+
 zib-TNMTumorClassification.RegionalLymphnodes.AnatomicalLocation:
  zib deviations:
     Observation.value[x]:valueCodeableConcept:
