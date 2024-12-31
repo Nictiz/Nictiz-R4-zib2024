@@ -70,7 +70,7 @@
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
 
 ## EpisodeOfCare (zib-EpisodeOfCare, nl-core-EpisodeOfCare)
-* `.extension:comment` ; extension ; Added Note for Comment. ;  ZIBFHIR-97
+* `.extension:comment` ; extension ; Added Note for Comment. ; ZIBFHIR-97
 
 ## FluidBalance
 ### zib-FluidBalance, nl-core-FluidBalance
