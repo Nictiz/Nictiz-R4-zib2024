@@ -56,7 +56,7 @@
       <path value="Observation.bodySite" />
       <short value="AnatomicalLocation / Location" />
       <definition value="The Morphology concept (NL-CM:4.27.17) of zib TNMTumorClassification is represented using distinct BodyStructure resources because . These are referenced from this current resource and are referenced on `bodySite.extension:bodyStructureReference`." />
-      <alias value="AnatomicalLocation" />
+      <alias value="AnatomischeLocatie" />
       <type>
         <code value="CodeableConcept" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
