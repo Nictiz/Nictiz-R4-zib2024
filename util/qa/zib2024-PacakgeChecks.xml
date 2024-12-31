@@ -30,7 +30,7 @@
         <key value="Zib2024PackageChecks-01" />
         <severity value="error" />
         <human value="When applying data type profile zib-AnatomicalLocation, the associated ValueSet should be bound" />
-        <expression value="'http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation' in type.profile implies binding.valueSet in ('http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000'|'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20240415000000')" />
+        <expression value="'http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation' in differential.element.type.profile implies differential.element.binding.where(valueSet = 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000' or valueSet ='http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20240415000000').exists()" />
       </constraint>
       <constraint>
         <key value="Zib2024PackageChecks-02" />
