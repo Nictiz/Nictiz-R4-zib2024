@@ -68,9 +68,9 @@
     <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
       <sliceName value="effectiveDateTime" />
-      <short value="O2SaturationDateTime" />
+      <short value="SpO2SaturationDateTime" />
       <definition value="The moment (date and time) of the SpO2 measurement." />
-      <alias value="O2SaturatieDatumTijd" />
+      <alias value="SpO2SaturatieDatumTijd" />
       <type>
         <code value="dateTime" />
       </type>
@@ -115,7 +115,7 @@
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
-      <short value="MeasuringLocation" />
+      <short value="MeasuringLocation / Location" />
       <definition value="Anatomical location where the SpO2 is measured." />
       <alias value="Meetlocatie" />
       <type>
