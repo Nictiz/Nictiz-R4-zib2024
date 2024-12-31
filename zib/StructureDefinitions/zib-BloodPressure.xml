@@ -116,19 +116,57 @@
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
-      <short value="MeasuringLocation" />
+      <short value="AnatomicalLocation / Location" />
       <definition value="Anatomical location where the blood pressure was measured." />
       <comment value="The HL7 Vital Signs IG suggests to use an additional observation coded with LOINC _41904-4_ (Blood pressure site) for this information. However, `Observation.bodySite` is deemed a more appropriate approach in this profile." />
-      <alias value="MeetLocatie" />
+      <alias value="Locatie" />
+      <alias value="AnatomischeLocatie" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
+      </type>
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="zib-AnatomicalLocation-01" />
+        <severity value="error" />
+        <human value="If the anatomical location is represented using a code (instead of or in addition to the BodyStructure reference), this coding must come from zib ValueSet LocatieCodelijst or zib ValueSet LocatieICD-O-3Codelijst. Additional codings are allowed." />
+        <expression value="children().where($this.is(Coding)).exists() implies children().where($this.is(Coding)).where(system = 'http://snomed.info/sct' or system = 'urn:oid:2.16.840.1.113883.6.43.1').exists()" />
+        <source value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
+      </constraint>
       <binding>
         <strength value="extensible" />
+        <description value="Codes describing anatomical locations. May include laterality." />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-bloodpressure-v5.0-2024EN" />
-        <map value="NL-CM:12.4.10" />
-        <comment value="MeasuringLocation" />
+        <map value="NL-CM:12.4.12" />
+        <comment value="AnatomicalLocation" />
       </mapping>
+      <mapping>
+        <identity value="zib-bloodpressure-v5.0-2024EN" />
+        <map value="NL-CM:20.7.4" />
+        <comment value="Location" />
+      </mapping>
+    </element>
+    <element id="Observation.bodySite.extension:bodyStructureReference">
+      <path value="Observation.bodySite.extension" />
+      <sliceName value="bodyStructureReference" />
+    </element>
+    <element id="Observation.bodySite.extension:bodyStructureReference.value[x]">
+      <path value="Observation.bodySite.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure.AnatomicalLocation" />
+      </type>
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />

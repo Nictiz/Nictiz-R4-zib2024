@@ -54,7 +54,7 @@
 `.component:diastolicEndpoint.value[x]` ; terminology ; Changed codes in DiastolischEindpuntCodelijst. ; ZIB-2218
 `.component:cuffType.value[x]` ; terminology ; Changed codes in ManchetTypeCodelijst. ; ZIB-2218
 
-### zib-BloodPressure.AnatomicalLocation, nl-core-BloodPressure
+### zib-BloodPressure.AnatomicalLocation, nl-core-BloodPressure.AnatomicalLocation
 * A new profile that applies zib BloodPressure constraints to the Location concept within AnatomicalLocation (ZIB-1731).
 
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
