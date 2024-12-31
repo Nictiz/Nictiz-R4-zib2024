@@ -48,8 +48,9 @@
 
 ## BloodPressure 
 ### zib-BloodPressure, nl-core-BloodPressure
-* `.bodySite` ; terminology ; Changed codes in MeetLocatieCodelijst. ; ZIB-1713, ZIB-1813
-* `.bodySite` ; mapping ; Added mapping of AnatomicalLocation. ; ZIB-1713
+* `.bodySite` ; terminology; Changed codes in MeetLocatieCodelijst. ; ZIB-1731, ZIB-1813
+* `.bodySite` ; mapping : Removed mapping of MeasuringLocation. ; ZIB-1731
+* `.bodySite` ; mapping : Added mapping of AnatomicalLocation. ; ZIB-1731
 * `.method` ; terminology ; Changed codes in MeetmethodeCodelijst. ; ZIB-2036
 * `.component:diastolicEndpoint.value[x]` ; terminology ; Changed codes in DiastolischEindpuntCodelijst. ; ZIB-2218
 * `.component:cuffType.value[x]` ; terminology ; Changed codes in ManchetTypeCodelijst. ; ZIB-2218
