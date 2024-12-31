@@ -311,6 +311,23 @@ zib-Patient:
       - cardinality: 1..1 instead of 0..1
         reason: The FHIR profiles are expected to implement zib cardinalities as conceptual cardinalities, but FHIR requires the .language element to be present. This aligns with the intention of the zib, as the Language concept is required for zib LanguageProficiency to make sense.
 
+zib-TNMTumorClassification.DistantMetastasis.AnatomicalLocation:
+  zib deviations:
+    Observation.value[x]:valueCodeableConcept:
+      - cardinality: 0..1 instead of 0..*
+        for: NL-CM:4.27.28 (TNMTumorClassification.DistantMetastasis.AnatomicalLocation)
+        reason: The mapping is placed on Observation.value[x] which is 0..1, but is referenced through a .hasMember element that is 0..* in the TNMTumorClassification.DistantMetastasis profile, making the effective cardinality 0..* as required by the zib.
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:4.27.28 (TNMTumorClassification.DistantMetastasis.AnatomicalLocation)
+        reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept and as a reference to BodyStructure, therefore the datatype is not a Reference. Therefore its concepts and constraints are added inline too.
+
+zib-TNMTumorClassification.RegionalLymphnodes.AnatomicalLocation:
+ zib deviations:
+    Observation.value[x]:valueCodeableConcept:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:4.27.24 (TNMTumorClassification.RegionalLymphnodes.AnatomicalLocation)
+        reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept and as a reference to BodyStructure, therefore the datatype is not a Reference. Therefore its concepts and constraints are added inline too.
+
 unmapped zib concepts:
   - NL-CM:17.2.10: HealthcareProvider.LocationNumber
     reason: This zib concept is problematic to map cleanly to FHIR and it has been deemed too uncommon in practice to warrant an extension.

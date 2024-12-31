@@ -33,14 +33,7 @@
   <differential>
     <element id="BodyStructure">
       <path value="BodyStructure" />
-      <short value="AnatomicalLocation"/>
       <definition value="Contains the localization(s) of the primary tumor, which (i.a.) determines the assignment of the TNM classification to the tumor." />
-      <alias value="AnatomischeLocatie"/>
-      <mapping>
-        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.20" />
-        <comment value="AnatomicalLocation" />
-      </mapping>
     </element>
     <element id="BodyStructure.morphology">
       <path value="BodyStructure.morphology" />

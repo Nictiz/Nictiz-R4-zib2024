@@ -36,11 +36,6 @@
       <short value="AnatomicalLocation" />
       <definition value="Contains the localization(s) of the positive regional lymph nodes, caused by the primary tumor." />
       <alias value="AnatomischeLocatie" />
-      <mapping>
-        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.24" />
-        <comment value="AnatomicalLocation" />
-      </mapping>
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
