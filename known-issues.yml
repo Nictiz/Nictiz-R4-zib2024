@@ -67,11 +67,9 @@ zib-BloodPressure:
       - datatype: CodeableConcept instead of Reference
         for: NL-CM:12.4.12 (BloodPressure.BloodPressureLocation)
         reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept and as a reference to BodyStructure, therefore the datatype is not a Reference. Therefore its concepts and constraints are added inline too.
-
-zib-BodyHeight:
-  zib deviations:
     Observation.effective[x]:effectiveDateTime:
       - cardinality: 1..1 instead of 0..1
+        for: NL-CM:12.4.5 (BloodPressure.BloodPressureDateTime)
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
 zib-ContactInformation-TelephoneNumbers:
@@ -367,13 +365,13 @@ zib-BloodPressure:
       - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
         reason: The slices "SystolicBP" and "DiastolicBP" start with an uppercase letter to align with the HL7 Vital Signs profile.
 
-zib-zib-BloodPressure.AnatomicalLocation:
+zib-BloodPressure.AnatomicalLocation:
   ignored issues:
     BodyStructure.location:
       - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
         reason: The short description is defined on the datatype profile and is not repeated in the differential. BloodPressure.BloodPressureLocation contains identical values as AntatomicalLocation.Location.
-      - message: "'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
-        reason: The alias is defined on the datatype profile and is not repeated in the differential. BloodPressure.BloodPressureLocation contains identical values as AntatomicalLocation.Location.
+      - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
+        reason: The definition is defined on the datatype profile and is not repeated in the differential. BloodPressure.BloodPressureLocation contains identical values as AntatomicalLocation.Location.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and is not repeated in the differential. BloodPressure.BloodPressureLocation contains identical values as AntatomicalLocation.Location.
 
