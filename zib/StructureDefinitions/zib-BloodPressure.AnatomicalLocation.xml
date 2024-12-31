@@ -33,8 +33,6 @@
   <differential>
     <element id="BodyStructure.location">
       <path value="BodyStructure.location" />
-      <definition value="Localisation on/in the body." />
-      <alias value="Locatie" />
       <binding>
         <strength value="required" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20240415000000" />

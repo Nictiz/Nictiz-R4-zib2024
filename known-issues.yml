@@ -61,6 +61,13 @@ zib-AddressInformation:
       - cardinality: 1..1 instead of 0..1
         reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
 
+zib-BloodPressure:
+  zib deviations:
+    Observation.bodySite:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:12.4.12 (BloodPressure.BloodPressureLocation)
+        reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept and as a reference to BodyStructure, therefore the datatype is not a Reference. Therefore its concepts and constraints are added inline too.
+
 zib-BodyHeight:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
@@ -352,6 +359,10 @@ nl-core-HealthcareProvider-Organization-*:
 
 zib-BloodPressure:
   ignored issues:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: found 1..1 instead of 0..
+        for: NL-CM:12.4.5 (BloodPressure.BloodPressureDateTime)
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
     Observation.component:*BP:
       - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
         reason: The slices "SystolicBP" and "DiastolicBP" start with an uppercase letter to align with the HL7 Vital Signs profile.
