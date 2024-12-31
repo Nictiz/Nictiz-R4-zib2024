@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="ext-MedicationAgreement.StopType"/>
+   <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+   </text>
+   <url value="http://nictiz.nl/fhir/StructureDefinition/ext-MedicationAgreement.StopType"/>
+   <name value="ExtMedicationAgreementStopType"/>
+   <title value="ext MedicationAgreement.StopType"/>
+   <status value="active"/>
+   <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.nictiz.nl"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="An extension to provide the manner in which medication is discontinued (temporary or definitive)."/>
+   <purpose value="This extension represents the MedicationAgreementStopType concept of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) MedicationAgreement v3.0 (2024)](https://zibs.nl/wiki/MedicationAgreement-v3.0(2024EN))." />
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="zib-medicationagreement-v3.0-2024EN"/>
+      <uri value="https://zibs.nl/wiki/MedicationAgreement-v3.0(2024EN)"/>
+      <name value="zib MedicationAgreement-v3.0(2024EN)"/>
+   </mapping>
+   <kind value="complex-type"/>
+   <abstract value="false"/>
+   <context>
+      <type value="element"/>
+      <expression value="MedicationRequest"/>
+   </context>
+   <type value="Extension"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Extension">
+         <path value="Extension"/>
+         <definition value="This MedicationAgreementStopType modifier extension works differently than the `.status` element of resources because it has a different meaning. The `.status` element usually represents the status of the resource at the moment of exchanging the resource. This means that over the lifetime of a resource, the status may change (and is very much related to use period). That – in itself – makes solely mapping MedicationAgreementStopType (which may never change in an instance) to `.status` not suitable.&#xD;&#xA;&#xD;&#xA;For example: suppose you want the patient to stop taking medication definitively three days from today. This is a stop medication agreement with a StopType of _definitive_. However today, tomorrow and the day after tomorrow the `.status` of this medication agreement is _active_ and only after the end date of the usage period the `.status` should be _stopped_. Status and StopType are simply not the same thing."/>
+         <max value="1"/>
+         <isModifier value="true"/>
+         <isModifierReason value="This element is labeled as a modifier because MedicationAgreementStopType contains codes that mark the resource as no longer active."/>
+      </element>
+      <element id="Extension.url">
+         <path value="Extension.url"/>
+         <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-MedicationAgreement.StopType"/>
+      </element>
+      <element id="Extension.value[x]">
+         <path value="Extension.value[x]"/>
+         <short value="MedicationAgreementStopType"/>
+         <definition value="Stop type, the manner in which this medication is discontinued or canceled (temporary, definitive or canceled)."/>
+         <alias value="MedicatieafspraakStopType"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+         <binding>
+            <strength value="extensible"/>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.6.1--20240415000000"/>
+         </binding>
+         <mapping>
+            <identity value="zib-medicationagreement-v3.0-2024EN"/>
+            <map value="NL-CM:9.6.19954"/>
+            <comment value="MedicationAgreementStopType"/>
+         </mapping>
+      </element>
+   </differential>
+</StructureDefinition>
