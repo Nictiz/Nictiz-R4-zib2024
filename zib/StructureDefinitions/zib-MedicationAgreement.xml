@@ -43,15 +43,15 @@
             <comment value="MedicationAgreement"/>
          </mapping>
       </element>
-      <element id="MedicationRequest.extension:medicationAgreementAdditionalInformation">
+      <element id="MedicationRequest.extension:additionalInformation">
          <path value="MedicationRequest.extension"/>
-         <sliceName value="medicationAgreementAdditionalInformation"/>
+         <sliceName value="additionalInformation"/>
          <type>
             <code value="Extension"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-MedicationAgreement.MedicationAgreementAdditionalInformation"/>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-MedicationAgreement.AdditionalInformation"/>
          </type>
       </element>
-      <element id="MedicationRequest.extension:medicationAgreementAdditionalInformation.value[x]">
+      <element id="MedicationRequest.extension:additionalInformation.value[x]">
          <path value="MedicationRequest.extension.value[x]"/>
       </element>
       <element id="MedicationRequest.extension:periodOfUse">
@@ -95,22 +95,11 @@
          <sliceName value="stopType"/>
          <type>
             <code value="Extension"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-StopType"/>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-MedicationAgreement.StopType"/>
          </type>
       </element>
       <element id="MedicationRequest.modifierExtension:stopType.value[x]">
          <path value="MedicationRequest.modifierExtension.value[x]"/>
-         <short value="MedicationAgreementStopType"/>
-         <alias value="MedicatieafspraakStopType"/>
-         <binding>
-            <strength value="extensible"/>
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.6.1--20240415000000"/>
-         </binding>
-         <mapping>
-            <identity value="zib-medicationagreement-v3.0-2024EN"/>
-            <map value="NL-CM:9.6.19954"/>
-            <comment value="MedicationAgreementStopType"/>
-         </mapping>
       </element>
       <element id="MedicationRequest.status">
          <path value="MedicationRequest.status"/>
