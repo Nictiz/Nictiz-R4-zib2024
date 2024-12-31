@@ -100,19 +100,6 @@
         <comment value="AnatomicalLocation" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.extension:laterality">
-      <path value="Condition.bodySite.extension" />
-      <sliceName value="laterality" />
-    </element>
-    <element id="Condition.bodySite.extension:laterality.value[x]">
-      <path value="Condition.bodySite.extension.value[x]" />
-      <comment value="Please note: this concept represents Laterality concept of both zibs AnatomicalLocation and Burnwound. These concepts are exactly the same: the concept in zib Burnwound is a remnant that was left in error when the concept was migrated to zib AnatomicalLocation. See [ZIB-1951](https://nictiz.atlassian.net/issues/ZIB-1951) for more information." />
-      <mapping>
-        <identity value="zib-burnwound-v4.1-2024EN" />
-        <map value="NL-CM:19.4.10" />
-        <comment value="Laterality" />
-      </mapping>
-    </element>
     <element id="Condition.onset[x]">
       <path value="Condition.onset[x]" />
       <slicing>

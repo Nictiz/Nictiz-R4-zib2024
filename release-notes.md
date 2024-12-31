@@ -50,6 +50,31 @@
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
 
+## BurnWound
+### zib-BurnWound, nl-core-BurnWound
+* .bodySite.extension:laterality.value[x] ; maping ; Removed mapping of Laterality ; ZIB-1951
+
+### zib-BurnWound.Extent, nl-core-BurnWound.Extent
+* No significant changes.
+
+### zib-wounds.WoundCharacteristics, nl-core-wounds.WoundCharacteristics
+* No significant changes.
+
+### zib-wounds.WoundWidth, nl-core-wounds.WoundWidth
+* No significant changes.
+
+### zib-wounds.WoundLength, nl-core-wounds.WoundLength
+* No significant changes.
+
+### zib-wounds.WoundImage, nl-core-wounds.WoundImage
+* No significant changes.
+
+### zib-wounds.WoundDepth, nl-core-wounds.WoundDepth
+* No significant changes.
+
+### zib-wounds.DateOfLastDressingChange, nl-core-wounds.DateOfLastDressingChange
+* No significant changes.
+
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
 * `ContactPoint` ; textual ; Added guidance for NumberType. ; ZIB-1652
