@@ -19,13 +19,13 @@
     </telecom>
   </contact>
   <description value="The period in which a health problem, such as a complaint or illness, receives attention from a care provider. During this period the designation of this health problem can change due to evolving insight and/or the progress of the illness. An episode of care serves as a context for all data related to the health problem." />
-  <purpose value="This EpisodeOfCare resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) EpisodeOfCare v1.0 (2020)](https://zibs.nl/wiki/EpisodeOfCare-v1.0(2024EN))." />
+  <purpose value="This EpisodeOfCare resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) EpisodeOfCare v1.0 (2024)](https://zibs.nl/wiki/EpisodeOfCare-v1.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="zib-episodeofcare-v1.0-2024EN" />
     <uri value="https://zibs.nl/wiki/EpisodeOfCare-v1.0(2024EN)" />
-    <name value="zib EpisodeOfCare-v1.0(20204EN)" />
+    <name value="zib EpisodeOfCare-v1.0(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
