@@ -54,25 +54,6 @@
       <element id="MedicationRequest.extension:medicationAgreementAdditionalInformation.value[x]">
          <path value="MedicationRequest.extension.value[x]"/>
       </element>
-      <element id="MedicationRequest.extension:instructionsForUse">
-         <path value="MedicationRequest.extension"/>
-         <sliceName value="instructionsForUse"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-InstructionsForUse"/>
-         </type>
-      </element>
-      <element id="MedicationRequest.extension:instructionsForUse.value[x]">
-         <path value="MedicationRequest.extension.value[x]"/>
-         <short value="Description"/>
-         <definition value="Instructions for the use of the medication, e.g. dose and route of administration."/>
-         <alias value="Omschrijving"/>
-         <mapping>
-            <identity value="zib-medicationagreement-v3.0-2024EN"/>
-            <map value="NL-CM:9.6.23240"/>
-            <comment value="Description"/>
-         </mapping>
-      </element>
       <element id="MedicationRequest.extension:periodOfUse">
          <path value="MedicationRequest.extension"/>
          <sliceName value="periodOfUse"/>
@@ -278,6 +259,21 @@
             <identity value="zib-medicationagreement-v3.0-2024EN"/>
             <map value="NL-CM:9.6.22273"/>
             <comment value="Comment"/>
+         </mapping>
+      </element>
+      <element id="MedicationRequest.dosageInstruction">
+         <path value="MedicationRequest.dosageInstruction"/>
+         <short value="InstructionsForUse"/>
+         <definition value="Instructions for the use of the medication, e.g. dose and route of administration."/>
+         <alias value="Gebruiksinstructie"/>
+         <type>
+            <code value="Dosage"/>
+            <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse"/>
+         </type>
+         <mapping>
+            <identity value="zib-medicationagreement-v3.0-2024EN"/>
+            <map value="NL-CM:9.6.23240"/>
+            <comment value="InstructionsForUse"/>
          </mapping>
       </element>
    </differential>
