@@ -37,9 +37,43 @@
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
 
+## AnatomicalLocation 
+### zib-AnatomicalLocation, nl-core-AnatomicalLocation
+* `CodeableConcept` ; textual ; Refined guidance for Location and Laterality ; ZIBFHIR-113
+* `.extension:bodyStructureReference` ; extension ; Replaced ExtAnatomicalLocationLaterality with BodyStructureReference for Laterality ; ZIBFHIR-113
+* `.extension:bodyStructureReference` ; mapping ; Moved mapping of Laterality to `BodyStructure.locationQualifier` ; ZIBFHIR-113
+
+### zib-AnatomicalLocation-BodyStructure, nl-core-AnatomicalLocation-BodyStructure
+* New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
+
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
+
+## BurnWound
+### zib-BurnWound, nl-core-BurnWound
+* `.bodySite.extension:laterality.value[x]` ; maping ; Removed mapping of Laterality ; ZIB-1951
+
+### zib-BurnWound.Extent, nl-core-BurnWound.Extent
+* No significant changes.
+
+### zib-wounds.WoundCharacteristics, nl-core-wounds.WoundCharacteristics
+* No significant changes.
+
+### zib-wounds.WoundWidth, nl-core-wounds.WoundWidth
+* No significant changes.
+
+### zib-wounds.WoundLength, nl-core-wounds.WoundLength
+* No significant changes.
+
+### zib-wounds.WoundImage, nl-core-wounds.WoundImage
+* No significant changes.
+
+### zib-wounds.WoundDepth, nl-core-wounds.WoundDepth
+* No significant changes.
+
+### zib-wounds.DateOfLastDressingChange, nl-core-wounds.DateOfLastDressingChange
+* No significant changes.
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
@@ -149,3 +183,66 @@
 * `.extension:genderIdentity.value[x]` ; extension ; Added extension genderIdentity for GenderIdentity. ; ZIB-1693
 * `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
+
+## PressureUlcer
+### zib-PressureUlcer, nl-core-PressureUlcer
+* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#399912005 to http://snomed.info/sct#1163215007. ; ZIB-1765
+* `.stage.summary` ; terminology ; Changed codes in DecubitusCategorieCodelijst. ; ZIB-1482, ZIB-2218
+
+### zib-wounds.WoundCharacteristics, nl-core-wounds.WoundCharacteristics
+* No significant changes.
+
+### zib-wounds.WoundWidth, nl-core-wounds.WoundWidth
+* No significant changes.
+
+### zib-wounds.WoundLength, nl-core-wounds.WoundLength
+* No significant changes.
+
+### zib-wounds.WoundImage, nl-core-wounds.WoundImage
+* No significant changes.
+
+### zib-wounds.WoundDepth, nl-core-wounds.WoundDepth
+* No significant changes.
+
+### zib-wounds.DateOfLastDressingChange, nl-core-wounds.DateOfLastDressingChange
+* No significant changes.
+
+## Wound
+### zib-Wound, nl-core-Wound
+* `.code` ; terminology ; Changed codes in WondSoortCodelijst. ; ZIB-2042
+
+### zib-Wound.WoundTissue, nl-core-Wound.WoundTissue
+* No significant changes.
+
+### zib-Wound.WoundMoisture, nl-core-Wound.WoundMoisture
+* No significant changes.
+
+### zib-Wound.WoundInfection, nl-core-Wound.WoundInfection
+* No significant changes.
+
+### zib-Wound.Drain, nl-core-Wound.Drain
+* No significant changes.
+
+### zib-Wound.Drain.Product, nl-core-Wound.Drain.Product
+* No significant changes.
+
+### zib-Wound.WoundEdge, nl-core-Wound.WoundEdge
+* No significant changes.
+
+### zib-wounds.WoundCharacteristics, nl-core-wounds.WoundCharacteristics
+* No significant changes.
+
+### zib-wounds.WoundWidth, nl-core-wounds.WoundWidth
+* No significant changes.
+
+### zib-wounds.WoundLength, nl-core-wounds.WoundLength
+* No significant changes.
+
+### zib-wounds.WoundImage, nl-core-wounds.WoundImage
+* No significant changes.
+
+### zib-wounds.WoundDepth, nl-core-wounds.WoundDepth
+* No significant changes.
+
+### zib-wounds.DateOfLastDressingChange, nl-core-wounds.DateOfLastDressingChange
+* No significant changes.
