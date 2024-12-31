@@ -35,7 +35,7 @@
       <path value="Observation" />
       <alias value="nl-core-TNMTumorClassification.PrimaryTumor" />
     </element>
-     <element id="Observation.subject">
+    <element id="Observation.subject">
       <path value="Observation.subject" />
       <type>
         <code value="Reference" />
@@ -45,16 +45,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
-    </element>
-    <element id="Observation.hasMember">
-      <path value="Observation.hasMember" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="Observation.hasMember:abnormality">
       <path value="Observation.hasMember" />

@@ -33,7 +33,7 @@
   <differential>
     <element id="BodyStructure">
       <path value="BodyStructure" />
-      <alias value="nl-core-TNMTumorClassification.PrimaryTumor.Abnormality.Location"/>
+      <alias value="nl-core-TNMTumorClassification.PrimaryTumor.Abnormality.Location" />
     </element>
   </differential>
 </StructureDefinition>

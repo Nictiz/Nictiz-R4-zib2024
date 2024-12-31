@@ -33,9 +33,9 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <alias value="nl-core-TNMTumorClassification.RegionalLymphnodes.AnatomicalLocation" />  
+      <alias value="nl-core-TNMTumorClassification.RegionalLymphnodes.AnatomicalLocation" />
     </element>
-     <element id="Observation.subject">
+    <element id="Observation.subject">
       <path value="Observation.subject" />
       <type>
         <code value="Reference" />
@@ -49,15 +49,10 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
-     <type>
+      <type>
         <code value="CodeableConcept" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation" />
       </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="TODO - the ValueSet needs to be adjusted to link to the more specific location codelijsten." />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>
