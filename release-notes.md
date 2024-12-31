@@ -41,6 +41,9 @@
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
 
+## BodyTemperature (zib-BodyTemperature, nl-core-BodyTemperature)
+* No significant changes.
+
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
 * `ContactPoint` ; textual ; Added guidance for NumberType. ; ZIB-1652
