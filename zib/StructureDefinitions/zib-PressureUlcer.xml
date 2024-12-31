@@ -49,7 +49,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="399912005" />
+          <code value="1163215007" />
         </coding>
       </patternCodeableConcept>
     </element>
