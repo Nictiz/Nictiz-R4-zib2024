@@ -360,12 +360,22 @@ nl-core-HealthcareProvider-Organization-*:
 zib-BloodPressure:
   ignored issues:
     Observation.effective[x]:effectiveDateTime:
-      - cardinality: found 1..1 instead of 0..
+      - cardinality: found 1..1 instead of 0..1
         for: NL-CM:12.4.5 (BloodPressure.BloodPressureDateTime)
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
     Observation.component:*BP:
       - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
         reason: The slices "SystolicBP" and "DiastolicBP" start with an uppercase letter to align with the HL7 Vital Signs profile.
+
+zib-zib-BloodPressure.AnatomicalLocation:
+  ignored issues:
+    BodyStructure.location:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The short description is defined on the datatype profile and is not repeated in the differential. BloodPressure.BloodPressureLocation contains identical values as AntatomicalLocation.Location.
+      - message: "'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
+        reason: The alias is defined on the datatype profile and is not repeated in the differential. BloodPressure.BloodPressureLocation contains identical values as AntatomicalLocation.Location.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The alias is defined on the datatype profile and is not repeated in the differential. BloodPressure.BloodPressureLocation contains identical values as AntatomicalLocation.Location.
 
 nl-core-BodyHeight-*:
   ignored issues:
