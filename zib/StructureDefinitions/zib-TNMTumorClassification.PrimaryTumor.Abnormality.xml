@@ -35,6 +35,7 @@
       <path value="Observation" />
       <short value="Abnormality" />
       <definition value="Container of the Abnormality concept.This container contains all data elements of the Abnormality concept." />
+      <comment value="The G_HistopathologicalGrading concept (NL-CM:4.27.18) of zib TNMTumorClassification is represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`.&#xD;&#xA;&#xD;&#xA;The Morphology concept (NL-CM:4.27.17) of zib TNMTumorClassification is represented using distinct BodyStructure resources. These are referenced from this current resource and are referenced on `Observation.bodySite.extension:bodyStructureReference`." />
       <alias value="Afwijking" />
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
@@ -51,19 +52,21 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.bodySite.extension">
-      <path value="Observation.bodySite.extension" />
-      <min value="1" />
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <definition value="The Morphology concept (NL-CM:4.27.17) of zib TNMTumorClassification is represented using distinct BodyStructure resources because . These are referenced from this current resource and are referenced on `bodySite.extension:bodyStructureReference`." />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
+      </binding>
     </element>
     <element id="Observation.bodySite.extension:bodyStructureReference">
       <path value="Observation.bodySite.extension" />
       <sliceName value="bodyStructureReference" />
-      <min value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
-      </type>
-      <isModifier value="false" />
     </element>
     <element id="Observation.bodySite.extension:bodyStructureReference.value[x]">
       <path value="Observation.bodySite.extension.value[x]" />
@@ -86,6 +89,7 @@
     <element id="Observation.hasMember:g_HistopathologicalGrading">
       <path value="Observation.hasMember" />
       <sliceName value="g_HistopathologicalGrading" />
+      <definition value="The G_HistopathologicalGrading concept (NL-CM:4.27.18) of zib TNMTumorClassification, represented as a distinct Observation resource." />
       <max value="1" />
       <type>
         <code value="Reference" />

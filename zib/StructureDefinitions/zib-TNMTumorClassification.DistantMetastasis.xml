@@ -34,7 +34,8 @@
     <element id="Observation">
       <path value="Observation" />
       <short value="DistantMetastasis" />
-      <definition value="Container of the DistantMetastasis concept.This container contains all data elements of the DistantMetastasis concept." />
+      <definition value="Container of the DistantMetastasis concept. This container contains all data elements of the DistantMetastasis concept." />
+      <comment value="The AnatomicalLocation concept (NL-CM:4.27.28) of zib TNMTumorClassification is represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`." />
       <alias value="AfstandsMetastasen" />
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
@@ -93,6 +94,7 @@
     <element id="Observation.hasMember:anatomicalLocation">
       <path value="Observation.hasMember" />
       <sliceName value="anatomicalLocation" />
+      <definition value="The AnatomicalLocation concept (NL-CM:4.27.28) of zib TNMTumorClassification, represented as a distinct Observation resource." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.DistantMetastasis.AnatomicalLocation" />
