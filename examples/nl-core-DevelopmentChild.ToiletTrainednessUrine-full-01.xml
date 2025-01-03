@@ -1,0 +1,53 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="nl-core-DevelopmentChild.ToiletTrainednessUrine-full-01"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-DevelopmentChild.ToiletTrainednessUrine"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
+        <tbody>
+          <tr>
+            <th>Bepalingdatum/tijd</th>
+            <td>26 december 2024</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <th>Waarde</th>
+          </tr>
+          <tr>
+            <td>
+              <span title="blaascontrole (129009001 - SNOMED CT)">blaascontrole</span>
+            </td>
+            <td>
+              <span title="Volledige blaascontrole op kinderleeftijd uitsluitend overdag (29261000146107 - SNOMED CT)">Volledige blaascontrole op kinderleeftijd uitsluitend overdag</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="129009001"/>
+      <display value="blaascontrole"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-full-01"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </subject>
+  <effectiveDateTime value="2024-12-26"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="29261000146107"/>
+      <display value="Volledige blaascontrole op kinderleeftijd uitsluitend overdag"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>
