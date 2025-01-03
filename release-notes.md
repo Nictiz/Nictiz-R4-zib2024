@@ -41,6 +41,10 @@
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
 
+## ComfortScale (zib-ComfortScale, nl-core-ComfortScale)
+* `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-1839
+* `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-1839
+
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
 * `ContactPoint` ; textual ; Added guidance for NumberType. ; ZIB-1652
