@@ -91,14 +91,14 @@
       <path value="Observation.value[x]" />
       <sliceName value="valueInteger" />
       <short value="TotalScore" />
-      <definition value="The total score is the sum of all the individual scores. The total score has a range from 0 - 35." />
+      <definition value="The total score is the sum of all the individual scores. The total score has a range from 0 - 30." />
       <comment value="The individual scores are communicated using the different `Observation.component` slices. The ordinal values of these indivdual scores, which are used to calculate the total score, are defined by the underlying code system and are registered in the ValueSet resources bound on these slices, using the [ordinalValue](http://hl7.org/fhir/StructureDefinition/ordinalValue) extension." />
       <alias value="TotaalScore" />
       <type>
         <code value="integer" />
       </type>
       <minValueInteger value="0" />
-      <maxValueInteger value="35" />
+      <maxValueInteger value="30" />
       <mapping>
         <identity value="zib-comfortscale-v1.2-2024EN" />
         <map value="NL-CM:12.12.2" />
