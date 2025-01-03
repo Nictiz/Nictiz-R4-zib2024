@@ -154,7 +154,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.1--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.1--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-comfortscale-v1.2-2024EN" />
@@ -186,7 +186,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.2--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.2--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-comfortscale-v1.2-2024EN" />
@@ -218,7 +218,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.3--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.3--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-comfortscale-v1.2-2024EN" />
@@ -250,7 +250,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.4--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.4--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-comfortscale-v1.2-2024EN" />
@@ -282,7 +282,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.5--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.5--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-comfortscale-v1.2-2024EN" />
@@ -314,7 +314,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.6--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.6--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-comfortscale-v1.2-2024EN" />
@@ -346,7 +346,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.7--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.12.7--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-comfortscale-v1.2-2024EN" />
