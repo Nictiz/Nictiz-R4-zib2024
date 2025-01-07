@@ -8,29 +8,10 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
         <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
-        <tfoot>
-          <tr>
-            <td colspan="2">Ontwikkeling is afgelopen jaar verbeterd.</td>
-          </tr>
-        </tfoot>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
             <td>26 december 2024</td>
-          </tr>
-          <tr>
-            <th>Onderliggende observaties:</th>
-            <td>
-              <ul>
-                <li>Zindelijkheid Urine: Volledige blaascontrole op kinderleeftijd uitsluitend overdag</li>
-                <li>Zindelijkheid Feces: Incidenteel ontlastingsverlies op kinderleeftijd</li>
-                <li>Leeftijd eerste menstruatie: 13 jaar</li>
-                <li>Ontwikkeling motoriek: In staat om zelfstandig te lopen</li>
-                <li>Ontwikkeling sociaal: In staat om vrienden te maken</li>
-                <li>Ontwikkeling taal: Spreekt begrijpelijk voor vreemden</li>
-                <li>Ontwikkeling verstandelijk: In staat om abstract te denken</li>
-              </ul>
-            </td>
           </tr>
           <tr>
             <th>Code</th>
@@ -66,36 +47,36 @@
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.ToiletTrainednessUrine-full-01"/>
     <type value="Observation"/>
-    <display value="Zindelijkheid Urine: Volledige blaascontrole op kinderleeftijd uitsluitend overdag"/>
+    <display value="Toilet trainedness urine, Volledige blaascontrole op kinderleeftijd uitsluitend overdag"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.ToiletTrainednessFeces-full-01"/>
     <type value="Observation"/>
-    <display value="Zindelijkheid Feces: Incidenteel ontlastingsverlies op kinderleeftijd"/>
+    <display value="Toilet trainedness feces, Incidenteel ontlastingsverlies op kinderleeftijd"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.AgeFirstMenstruation-full-01"/>
     <type value="Observation"/>
-    <display value="Leeftijd eerste menstruatie: 13 jaar"/>
+    <display value="Age first menstruation, 13 jaar"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.DevelopmentLocomotion-full-01"/>
     <type value="Observation"/>
-    <display value="Ontwikkeling motoriek: In staat om zelfstandig te lopen"/>
+    <display value="Development locomotion, In staat om zelfstandig te lopen"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.DevelopmentSocial-full-01"/>
     <type value="Observation"/>
-    <display value="Ontwikkeling sociaal: In staat om vrienden te maken"/>
+    <display value="Development social, In staat om vrienden te maken"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.DevelopmentLinguistics-full-01"/>
     <type value="Observation"/>
-    <display value="Ontwikkeling taal: Spreekt begrijpelijk voor vreemden"/>
+    <display value="Development linguistics, Spreekt begrijpelijk voor vreemden"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.DevelopmentCognition-full-01"/>
     <type value="Observation"/>
-    <display value="Ontwikkeling verstandelijk: In staat om abstract te denken"/>
+    <display value="Development cognition, In staat om abstract te denken"/>
   </hasMember>
 </Observation>

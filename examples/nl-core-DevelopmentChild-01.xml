@@ -8,28 +8,10 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
         <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption>
-        <tfoot>
-          <tr>
-            <td colspan="2">Kind is heel beweeglijk</td>
-          </tr>
-        </tfoot>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
             <td>19 december 2016</td>
-          </tr>
-          <tr>
-            <th>Onderliggende observaties:</th>
-            <td>
-              <ul>
-                <li>Zindelijkheid Urine: Geen blaascontrole op kinderleeftijd</li>
-                <li>Zindelijkheid Feces: Geen controle over defecatie op kinderleeftijd</li>
-                <li>Ontwikkeling motoriek: In staat om zich op te trekken tot staan vanuit zithouding</li>
-                <li>Ontwikkeling sociaal: In staat om 'geven en nemen' te spelen</li>
-                <li>Ontwikkeling taal: In staat om korte dagelijks gebruikte zinnen te begrijpen</li>
-                <li>Ontwikkeling verstandelijk: In staat om gevolgen van eigen gedrag te herkennen</li>
-              </ul>
-            </td>
           </tr>
           <tr>
             <th>Code</th>
@@ -65,31 +47,31 @@
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.ToiletTrainednessUrine-01"/>
     <type value="Observation"/>
-    <display value="Zindelijkheid Urine: Geen blaascontrole op kinderleeftijd"/>
+    <display value="Toilet trainedness urine, Geen blaascontrole op kinderleeftijd"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.ToiletTrainednessFeces-01"/>
     <type value="Observation"/>
-    <display value="Zindelijkheid Feces: Geen controle over defecatie op kinderleeftijd"/>
+    <display value="Toilet trainedness feces, Geen controle over defecatie op kinderleeftijd"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.DevelopmentLocomotion-01"/>
     <type value="Observation"/>
-    <display value="Ontwikkeling motoriek: In staat om zich op te trekken tot staan vanuit zithouding"/>
+    <display value="Development locomotion, In staat om zich op te trekken tot staan vanuit zithouding"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.DevelopmentSocial-01"/>
     <type value="Observation"/>
-    <display value="Ontwikkeling sociaal: In staat om 'geven en nemen' te spelen"/>
+    <display value="Development social, In staat om 'geven en nemen' te spelen"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.DevelopmentLinguistics-01"/>
     <type value="Observation"/>
-    <display value="Ontwikkeling taal: In staat om korte dagelijks gebruikte zinnen te begrijpen"/>
+    <display value="Development linguistics, In staat om korte dagelijks gebruikte zinnen te begrijpen"/>
   </hasMember>
   <hasMember>
     <reference value="Observation/nl-core-DevelopmentChild.DevelopmentCognition-01"/>
     <type value="Observation"/>
-    <display value="Ontwikkeling verstandelijk: In staat om gevolgen van eigen gedrag te herkennen"/>
+    <display value="Development cognition, In staat om gevolgen van eigen gedrag te herkennen"/>
   </hasMember>
 </Observation>
