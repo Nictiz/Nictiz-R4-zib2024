@@ -16,6 +16,15 @@ nl-core-ContactPerson-full-02:
       - message: value should not start or finish with whitespace ' De Groene Draeck'
         reason: To communicate a HouseNumberAddition without a HouseNumberLetter, a leading space is used.
 
+nl-core-Payer-Organization-02:
+  ignored issues:
+    Organization.telecom[0]:
+      - message: "Constraint failed: org-3: 'The telecom of an organization can never be of use 'home'' (defined in http://hl7.org/fhir/StructureDefinition/Organization)"
+        reason: Payer.person is always modelled inline with the profile nl-core-Payer-Organization in FHIR, which is why Payer.person will not pass this constraint. The example provided by the zib is correct. 
+    Organization.address[0]:
+      - message: "Constraint failed: org-2: 'An address of an organization can never be of use 'home'' (defined in http://hl7.org/fhir/StructureDefinition/Organization)"
+        reason: Payer.person is always modelled inline with the profile nl-core-Payer-Organization in FHIR, which is why Payer.person will not pass this constraint. The example provided by the zib is correct.   
+
 pattern-NlCoreHealthProfessionalReference:
   ignored issues:
     StructureDefinition:
@@ -370,15 +379,6 @@ nl-core-*:
         reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
-
-nl-core-Payer-Organization-02:
-  ignored issues:
-    Organization.telecom[0]:
-      - message: "Constraint failed: org-3: 'The telecom of an organization can never be of use 'home'' (defined in http://hl7.org/fhir/StructureDefinition/Organization)"
-        reason: Payer.person is always modelled inline with the profile nl-core-Payer-Organization in FHIR, which is why Payer.person will not pass this constraint. The example provided by the zib is correct. 
-    Organization.address[0]:
-      - message: "Constraint failed: org-2: 'An address of an organization can never be of use 'home'' (defined in http://hl7.org/fhir/StructureDefinition/Organization)"
-        reason: Payer.person is always modelled inline with the profile nl-core-Payer-Organization in FHIR, which is why Payer.person will not pass this constraint. The example provided by the zib is correct.   
 
 nl-core-HealthcareProvider-Organization-*:
   ignored issues:
