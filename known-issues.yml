@@ -356,6 +356,12 @@ nl-core-BodyHeight-*:
       - message: Wrong Display Name 'Lichaamslengte' for http://loinc.org#8302-2. There are no valid display names found for language(s) 'en'. Default display is 'Body height'
         reason: A valid Dutch display value is used instead of an English one.
 
+nl-core-DevelopmentChild.AgeFirstMenstruation-*:
+  ignored issues:
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Leeftijd bij eerste menstruatie' for http://loinc.org#42798-9. There are no valid display names found for language(s) 'en'. Default display is 'Age at menarche'
+        reason: A valid Dutch display value is used instead of an English one.
+
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
     ContactPoint.extension:comment.value[x]:
