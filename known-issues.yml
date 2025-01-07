@@ -343,6 +343,15 @@ zib-Payer-Organization:
       - datatype: Address instead of a reference
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
 
+nl-core-Payer-Organization-02:
+  zib deviations:
+    Organization.telecom[0]:
+      - message: "Constraint failed: org-3: 'The telecom of an organization can never be of use 'home''"
+        reason: Payer.person is always modelled inline with the profile nl-core-Payer-Organization in FHIR, which is why Payer.person will not pass this constraint. The example provided by the zib is correct. 
+    Organization.address[0]:
+      - message: "Constraint failed: org-2: 'An address of an organization can never be of use 'home''"
+        reason: Payer.person is always modelled inline with the profile nl-core-Payer-Organization in FHIR, which is why Payer.person will not pass this constraint. The example provided by the zib is correct. 
+
 unmapped zib concepts:
   - NL-CM:17.2.10: HealthcareProvider.LocationNumber
     reason: This zib concept is problematic to map cleanly to FHIR and it has been deemed too uncommon in practice to warrant an extension.
