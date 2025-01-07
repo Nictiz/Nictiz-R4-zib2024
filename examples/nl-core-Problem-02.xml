@@ -13,7 +13,7 @@
           <tr>
             <th>Code</th>
             <td>
-              <span title="Nefrotisch syndroom (52254009 - SNOMED CT)">Nefrotisch syndroom</span>
+              <span title="nefrotisch syndroom (0000009675 - 2.16.840.1.113883.2.4.3.120.5.1)">nefrotisch syndroom</span>
             </td>
           </tr>
           <tr>
@@ -52,9 +52,9 @@
   </category>
   <code>
     <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="52254009"/>
-      <display value="Nefrotisch syndroom"/>
+      <system value="urn:oid:2.16.840.1.113883.2.4.3.120.5.1"/>
+      <code value="0000009675"/>
+      <display value="nefrotisch syndroom"/>
     </coding>
     <text value="Met proliferatief glomerulonefritis"/>
   </code>

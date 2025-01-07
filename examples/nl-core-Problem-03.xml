@@ -18,7 +18,7 @@
           <tr>
             <th>Code</th>
             <td>
-              <span title="Polsfractuur (31641000146105 - SNOMED CT)">Polsfractuur</span>
+              <span title="Fractuur van overige en niet gespecificeerde delen van pols en hand; gesloten (S62.80 - sid/icd-10-nl)">Fractuur van overige en niet gespecificeerde delen van pols en hand; gesloten</span>
             </td>
           </tr>
           <tr>
@@ -61,9 +61,9 @@
   </category>
   <code>
     <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="31641000146105"/>
-      <display value="Polsfractuur"/>
+      <system value="http://hl7.org/fhir/sid/icd-10-nl"/>
+      <code value="S62.80"/>
+      <display value="Fractuur van overige en niet gespecificeerde delen van pols en hand; gesloten"/>
     </coding>
   </code>
   <bodySite>

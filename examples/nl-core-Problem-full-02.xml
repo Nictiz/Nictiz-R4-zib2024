@@ -1,5 +1,5 @@
 <Condition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-Problem-full-01"/>
+  <id value="nl-core-Problem-full-02"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"/>
   </meta>
@@ -68,6 +68,13 @@
     <text value="Gaat samen met HIV en pneuomocystis infectie."/>
   </code>
   <bodySite>
+    <extension url="http://hl7.org/fhir/StructureDefinition/bodySite">
+      <valueReference>
+        <reference value="BodyStructure/nl-core-Problem-full-02-AnatomicalLocation-01"/>
+        <type value="BodyStructure"/>
+        <display value="Anatomical location, Entire bone of femur, Links"/>
+      </valueReference>
+    </extension>
     <coding>
       <system value="http://snomed.info/sct"/>
       <code value="731698002"/>
@@ -75,6 +82,13 @@
     </coding>
   </bodySite>
   <bodySite>
+    <extension url="http://hl7.org/fhir/StructureDefinition/bodySite">
+      <valueReference>
+        <reference value="BodyStructure/nl-core-Problem-full-02-AnatomicalLocation-02"/>
+        <type value="BodyStructure"/>
+        <display value="Anatomical location, Entire lymph node of thorax, Bilateraal"/>
+      </valueReference>
+    </extension>
     <coding>
       <system value="http://snomed.info/sct"/>
       <code value="196374005"/>
