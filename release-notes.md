@@ -16,7 +16,7 @@
 * No significant changes.
 
 ## AbilityToGroom (zib-AbilityToGroom, nl-core-AbilityToGroom)
-* No significant changes
+* No significant changes.
 
 ## AbilityToUseToilet 
 ### zib-AbilityToUseToilet, nl-core-AbilityToUseToilet
@@ -70,6 +70,28 @@
 * `.contact.relationship:relationship` ; textual ; Changed definition of Relationship. ; ZIB-1556
 * `.contact.relationship:relationship` ; terminology ; Changed value set from RelatieCodelijst to RelatieSnomedCodelijst. ; ZIB-1180, ZIB-1438, ZIB-1495, ZIB-1486, ZIB-1556, ZIB-1616, ZIB-1770, ZIB-1789, ZIB-1941, ZIB-2008
 
+## DevelopmentChild
+### zib-DevelopmentChild, nl-core-DevelopmentChild
+* No significant changes.
+
+### zib-DevelopmentChild.AgeFirstMenstruation, nl-core-DevelopmentChild.AgeFirstMenstruation
+* No significant changes.
+
+### zib-DevelopmentChild.DevelopmentCognition, nl-core-DevelopmentChild.DevelopmentCognition
+* No significant changes.
+
+### zib-DevelopmentChild.DevelopmentLinguistics, nl-core-DevelopmentChild.DevelopmentLinguistics
+* No significant changes.
+
+### zib-DevelopmentChild.DevelopmentLocomotion, nl-core-DevelopmentChild.DevelopmentLocomotion
+* No significant changes.
+
+### zib-DevelopmentChild.ToiletTrainednessFeces, nl-core-DevelopmentChild.ToiletTrainednessFeces
+* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#275818006 to http://snomed.info/sct#129008009. ; ZIB-1765
+
+### zib-DevelopmentChild.ToiletTrainednessUrine, nl-core-DevelopmentChild.ToiletTrainednessUrine
+* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#275819003 to http://snomed.info/sct#129009001. ; ZIB-2271
+
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
 
@@ -117,6 +139,9 @@
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877
 * `.communication.extension:comment` ; extension ; Replaced extension ExtComment with ExtLanguageProficiencyComment. ; ZIBFHIR-97
 * `.communication.language` ; terminology ; Changed codes in CommunicatieTaalCodelijst. ; ZIB-2218
+
+## LifeStance (zib-LifeStance, nl-core-LifeStance)
+* `Observation` ; mapping ; Renamed mapping from LifeStanceRC to LifeStance. ; ZIB-2578
 
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218
