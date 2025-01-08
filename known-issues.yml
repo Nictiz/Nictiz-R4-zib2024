@@ -10,6 +10,12 @@ ext-LanguageProficiency.CommunicationDetails:
       - cardinality: 0..1 instead of 0..*
         reason: FHIR restricts Extension.value to a max cardinality of 0..1. To use it more than once, the extension is added 0..* in the hosting element.
 
+nl-core-ContactPerson-full-02:
+  ignored issues:
+    RelatedPerson.address[0].line[0].extension[1].value.ofType(string):
+      - message: value should not start or finish with whitespace ' De Groene Draeck'
+        reason: To communicate a HouseNumberAddition without a HouseNumberLetter, a leading space is used.
+
 pattern-NlCoreHealthProfessionalReference:
   ignored issues:
     StructureDefinition:
@@ -27,6 +33,12 @@ pattern-ZibHealthProfessionalReference:
     StructureDefinition:
       - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
         reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern ZibHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
+
+zib-AbilityToDrink.DrinkingLimitations:
+  zib deviations:
+    Observation.value[x]:valueCodeableConcept:
+      - cardinality: 0..1 instead of 0..*
+        reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
 
 zib-AbilityToEat.EatingLimitations:
   zib deviations:
@@ -327,12 +339,6 @@ nl-core-*:
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
 
-nl-core-ContactPerson-full-02:
-  ignored issues:
-    RelatedPerson.address[0].line[0].extension[1].value.ofType(string):
-      - message: value should not start or finish with whitespace ' De Groene Draeck'
-        reason: To communicate a HouseNumberAddition a leading space is used.
-
 nl-core-HealthcareProvider-Organization-*:
   ignored issues:
     Organization.type[*]:
@@ -348,6 +354,12 @@ nl-core-BodyHeight-*:
   ignored issues:
     Observation.code.coding[*].display:
       - message: Wrong Display Name 'Lichaamslengte' for http://loinc.org#8302-2. There are no valid display names found for language(s) 'en'. Default display is 'Body height'
+        reason: A valid Dutch display value is used instead of an English one.
+
+nl-core-DevelopmentChild.AgeFirstMenstruation-*:
+  ignored issues:
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Leeftijd bij eerste menstruatie' for http://loinc.org#42798-9. There are no valid display names found for language(s) 'en'. Default display is 'Age at menarche'
         reason: A valid Dutch display value is used instead of an English one.
 
 zib-ContactInformation-TelephoneNumbers:
