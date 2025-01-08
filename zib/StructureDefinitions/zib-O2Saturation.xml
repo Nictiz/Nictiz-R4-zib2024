@@ -149,7 +149,6 @@
     </element>
     <element id="Observation.component:extraOxygenAdministration.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (SNOMED 266702001) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1476](https://bits.nictiz.nl/browse/ZIB-1476) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
