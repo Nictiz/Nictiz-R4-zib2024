@@ -1,4 +1,4 @@
-# Nictiz-R4-Zib2020/util
+# Nictiz-R4-Zib2024/util
 
 This folder contains some utilities for zib2024 profiling.
 
@@ -29,10 +29,10 @@ The ART-DECOR definitions file (zib2024bbr-decor.xml) can be retrieved from the 
 
 ## downloadTerminology
 
-This folder contains an xslt scripts that loops through all resources in the `resources` folder, finds relevant canonicals for ValueSets and systems for CodeSystems, and downloads these terminology resources from ART-DECOR to `resources/zib/terminology` and `resources/nl-core/terminology` respectively.
+This folder contains an xslt script (downloadTerminology.xsl) that loops through all resources, finds relevant canonicals for ValueSets and systems for CodeSystems, and downloads these terminology resources from ART-DECOR to "zib/vocabulary/generated" and "nl-core/vocabulary/generated" respectively.
 
-These scripts are standalone XSL files that operate without an XML source. They can be executed by selecting the XSL file as the XML source within Oxygen, or by calling the XSL using Saxon using the `-xsl:downloadTerminology.xsl -it:main` command line flags.
+The scripts in this folder are standalone XSL files that operate without an XML source. They can be executed by selecting the XSL file as the XML source within Oxygen, or by calling the XSL using Saxon using the `-xsl:downloadTerminology.xsl -it:main` command line flags.
 
 ## updateNarratives
 
-Tooling to add or re-generate the narratives for all resources in the "nl-core/examples" folder, using the [Nictiz Narrative Generator](https://github.com/Nictiz/HL7-mappings/tree/master/fhir-narrativegenerator). This tool requires ANT to be installed. To use: run "updateNarratives.bat".
+Tooling to add or re-generate the narratives for all resources in the "examples" folder, using the [Nictiz Narrative Generator](https://github.com/Nictiz/HL7-mappings/tree/master/fhir-narrativegenerator). This tool requires ANT to be installed. To use: run "updateNarratives.bat".
