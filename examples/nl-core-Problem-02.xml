@@ -7,13 +7,13 @@
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
-        <caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Interpretatie van diagnose (282291009 - SNOMED CT)">Interpretatie van diagnose</span>, Status: <span title="Active (active - HL7 condition-clinical)">Active</span> / <span title="Provisional (provisional - HL7 condition-ver-status)">Provisional</span>
+        <caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Interpretatie van diagnose (282291009 - SNOMED CT)">Interpretatie van diagnose</span>, Status: <span title="Active (active - http://terminology.hl7.org/CodeSystem/condition-clinical)">Active</span> / <span title="Provisional (provisional - http://terminology.hl7.org/CodeSystem/condition-ver-status)">Provisional</span>
         </caption>
         <tbody>
           <tr>
             <th>Code</th>
             <td>
-              <span title="nefrotisch syndroom (0000009675 - 2.16.840.1.113883.2.4.3.120.5.1)">nefrotisch syndroom</span>
+              <span title="Nefrotisch syndroom (0000009675 - 2.16.840.1.113883.2.4.3.120.5.1)">Nefrotisch syndroom</span>
             </td>
           </tr>
           <tr>
@@ -54,7 +54,7 @@
     <coding>
       <system value="urn:oid:2.16.840.1.113883.2.4.3.120.5.1"/>
       <code value="0000009675"/>
-      <display value="nefrotisch syndroom"/>
+      <display value="Nefrotisch syndroom"/>
     </coding>
     <text value="Met proliferatief glomerulonefritis"/>
   </code>

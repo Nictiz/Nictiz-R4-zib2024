@@ -7,11 +7,11 @@
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
-        <caption>Aandoening. Subject: Patient, Peter Jan (PeJe) Jansen. Categorie: <span title="Klinische bevinding (404684003 - SNOMED CT)">Klinische bevinding</span>, Status: <span title="Inactive (inactive - HL7 condition-clinical)">Inactive</span> / <span title="Confirmed (confirmed - HL7 condition-ver-status)">Confirmed</span>
+        <caption>Aandoening. Subject: Patient, Peter Jan (PeJe) Jansen. Categorie: <span title="Klinische bevinding (404684003 - SNOMED CT)">Klinische bevinding</span>, Status: <span title="Inactive (inactive - http://terminology.hl7.org/CodeSystem/condition-clinical)">Inactive</span> / <span title="Confirmed (confirmed - http://terminology.hl7.org/CodeSystem/condition-ver-status)">Confirmed</span>
         </caption>
         <tfoot>
           <tr>
-            <td colspan="2">Ziekte beloop wordt steeds erger.</td>
+            <td colspan="2">Ziektebeloop wordt steeds erger.</td>
           </tr>
         </tfoot>
         <tbody>
@@ -72,13 +72,13 @@
       <valueReference>
         <reference value="BodyStructure/nl-core-Problem-full-02-AnatomicalLocation-01"/>
         <type value="BodyStructure"/>
-        <display value="Anatomical location, Entire bone of femur, Links"/>
+        <display value="Anatomical location, Gehele bot van femur, Links"/>
       </valueReference>
     </extension>
     <coding>
       <system value="http://snomed.info/sct"/>
       <code value="731698002"/>
-      <display value="Entire bone of femur"/>
+      <display value="Gehele bot van femur"/>
     </coding>
   </bodySite>
   <bodySite>
@@ -86,13 +86,13 @@
       <valueReference>
         <reference value="BodyStructure/nl-core-Problem-full-02-AnatomicalLocation-02"/>
         <type value="BodyStructure"/>
-        <display value="Anatomical location, Entire lymph node of thorax, Bilateraal"/>
+        <display value="Anatomical location, Gehele lymfeklier van thorax, Bilateraal"/>
       </valueReference>
     </extension>
     <coding>
       <system value="http://snomed.info/sct"/>
       <code value="196374005"/>
-      <display value="Entire lymph node of thorax"/>
+      <display value="Gehele lymfeklier van thorax"/>
     </coding>
   </bodySite>
   <subject>
@@ -103,6 +103,6 @@
   <onsetDateTime value="2024-11-12"/>
   <abatementDateTime value="2024-11-18"/>
   <note>
-    <text value="Ziekte beloop wordt steeds erger."/>
+    <text value="Ziektebeloop wordt steeds erger."/>
   </note>
 </Condition>
