@@ -60,10 +60,6 @@
 * `.relationship:relationship` ; textual ; Changed definition of Relationship. ; ZIB-1556
 * `.relationship:relationship` ; terminology ; Changed value set from RelatieCodelijst to RelatieSnomedCodelijst. ; ZIB-1180, ZIB-1438, ZIB-1495, ZIB-1486, ZIB-1556, ZIB-1616, ZIB-1770, ZIB-1789, ZIB-1941, ZIB-2008
 
-## HeadCircumference (zib-HeadCircumference, nl-core-HeadCircumference)
-* No significant changes.
-
-## Patient
 ### zib-Patient, nl-core-Patient
 * `.contact.relationship:role` ; textual ; Added guidance for Role. ; ZIBFHIR-73
 * `.contact.relationship:role` ; terminology ; Changed value set from RolCodelijst to RolSnomedCodelijst. ; ZIB-1180, ZIB-1470, ZIB-1481, ZIB-1496, ZIB-1556, ZIB-1616, ZIB-1789, ZIB-2008, ZIB-2211
@@ -104,6 +100,10 @@
 
 ### zib-FluidBalance.FluidTotalOut, nl-core-FluidBalance.FluidTotalOut
 * No significant changes.
+
+## HeadCircumference (zib-HeadCircumference, nl-core-HeadCircumference)
+* `.value[x]` ; textual ; Changed definition of HeadCircumferenceMeasurement. ; ZIBFHIR-178
+* `.value[x]` ; terminology ; Added required binding to BodyLengthUnits. ; ZIBFHIR-178
 
 ## HealthcareProvider
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
