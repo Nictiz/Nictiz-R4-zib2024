@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.33.1--20240415000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.32.5--20240415000000"/>
    <meta>
       <lastUpdated value="2024-11-28T08:35:00Z"/>
       <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
@@ -19,15 +19,15 @@
          <start value="2024-04-15T00:00:00+00:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.33.1--20240415000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.32.5--20240415000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.33.1"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.32.5"/>
    </identifier>
    <version value="2024-04-15T00:00:00"/>
-   <name value="UiterlijkeVerzorgingCodelijst"/>
-   <title value="UiterlijkeVerzorgingCodelijst"/>
+   <name value="OntwikkelingTaalCodelijst"/>
+   <title value="OntwikkelingTaalCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
@@ -50,10 +50,10 @@
          <system value="http://snomed.info/sct"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Onafhankelijk"/>
+               <valueString value="Brabbelt"/>
             </extension>
-            <code value="704437004"/>
-            <display value="In staat tot zelfstandige uiterlijke verzorging"/>
+            <code value="258116008"/>
+            <display value="Brabbelt"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -61,7 +61,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Independent for personal grooming"/>
+               <value value="Speech babble"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -70,15 +70,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="In staat tot zelfstandige uiterlijke verzorging"/>
+               <value value="Brabbelt"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Hulp nodig"/>
+               <valueString value="Begrijpt korte dagelijks gebruikte zinnen"/>
             </extension>
-            <code value="27941000146109"/>
-            <display value="Hulp nodig bij uiterlijke verzorging"/>
+            <code value="26261000146103"/>
+            <display value="In staat om korte dagelijks gebruikte zinnen te begrijpen"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -86,7 +86,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Needs help with personal grooming"/>
+               <value value="Able to comprehend short daily used sentences"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -95,15 +95,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Hulp nodig bij uiterlijke verzorging"/>
+               <value value="In staat om korte dagelijks gebruikte zinnen te begrijpen"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Volledig afhankelijk"/>
+               <valueString value="Spreekt korte dagelijks gebruikte zinnen"/>
             </extension>
-            <code value="704436008"/>
-            <display value="Niet in staat tot uiterlijke verzorging"/>
+            <code value="26341000146105"/>
+            <display value="In staat om korte dagelijks gebruikte zinnen te spreken"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -111,7 +111,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Unable to perform personal grooming activity"/>
+               <value value="Able to speak short daily used sentences"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -120,7 +120,57 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Niet in staat tot uiterlijke verzorging"/>
+               <value value="In staat om korte dagelijks gebruikte zinnen te spreken"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Is verstaanbaar voor bekenden"/>
+            </extension>
+            <code value="26361000146106"/>
+            <display value="Spreekt begrijpelijk voor kennissen"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Speaks intelligibly for acquaintances"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Spreekt begrijpelijk voor kennissen"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Is verstaanbaar voor onbekenden"/>
+            </extension>
+            <code value="26371000146100"/>
+            <display value="Spreekt begrijpelijk voor vreemden"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Speaks intelligibly for strangers"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Spreekt begrijpelijk voor vreemden"/>
             </designation>
          </concept>
       </include>
