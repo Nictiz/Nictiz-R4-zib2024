@@ -101,6 +101,10 @@
 ### zib-FluidBalance.FluidTotalOut, nl-core-FluidBalance.FluidTotalOut
 * No significant changes.
 
+## HeadCircumference (zib-HeadCircumference, nl-core-HeadCircumference)
+* `.value[x]` ; textual ; Changed definition of HeadCircumferenceMeasurement. ; ZIBFHIR-178
+* `.value[x]` ; terminology ; Added required binding to BodyLengthUnits. ; ZIBFHIR-178
+
 ## HealthcareProvider
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
 * No significant changes.
