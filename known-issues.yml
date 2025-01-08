@@ -433,5 +433,10 @@ nl-core-Problem-*:
     Condition.code.coding[*].system:
       - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icd-10-nl' could not be found, so the code cannot be validated
         reason: This code system represents the ICD-10-NL, which the default terminology server is unable to check.
+      - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.120.5.1' could not be found, so the code cannot be validated
+        reason: This code system represents the DHD, which the default terminology server is unable to check.
+    Condition.code:
       - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icd-10-nl| was not found
         reason: This code system represents the ICD-10-NL, which the default terminology server is unable to check.
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.120.5.1| was not found
+        reason: This code system represents the DHD, which the default terminology server is unable to check.
