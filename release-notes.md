@@ -136,11 +136,11 @@
 * `.communication.extension:comment` ; extension ; Replaced extension ExtComment with ExtLanguageProficiencyComment. ; ZIBFHIR-97
 * `.communication.language` ; terminology ; Changed codes in CommunicatieTaalCodelijst. ; ZIB-2218
 
+## LifeStance (zib-LifeStance, nl-core-LifeStance)
+* `Observation` ; mapping ; Renamed mapping from LifeStanceRC to LifeStance. ; ZIB-2578
+
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218
-
-## LifeStance (zib-LifeStance, nl-core-LifeStance)
-* No significant changes.
 
 ## NameInformation
 ### zib-NameInformation
