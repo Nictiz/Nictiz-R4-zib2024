@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.33.1--20240415000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.32.2--20240415000000"/>
    <meta>
       <lastUpdated value="2024-11-28T08:35:00Z"/>
       <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
@@ -19,15 +19,15 @@
          <start value="2024-04-15T00:00:00+00:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.33.1--20240415000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.32.2--20240415000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.33.1"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.32.2"/>
    </identifier>
    <version value="2024-04-15T00:00:00"/>
-   <name value="UiterlijkeVerzorgingCodelijst"/>
-   <title value="UiterlijkeVerzorgingCodelijst"/>
+   <name value="ZindelijkheidFecesCodelijst"/>
+   <title value="ZindelijkheidFecesCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
@@ -50,10 +50,10 @@
          <system value="http://snomed.info/sct"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Onafhankelijk"/>
+               <valueString value="Niet zindelijk"/>
             </extension>
-            <code value="704437004"/>
-            <display value="In staat tot zelfstandige uiterlijke verzorging"/>
+            <code value="26421000146106"/>
+            <display value="Geen controle over defecatie op kinderleeftijd"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -61,7 +61,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Independent for personal grooming"/>
+               <value value="No control of bowel - child"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -70,15 +70,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="In staat tot zelfstandige uiterlijke verzorging"/>
+               <value value="Geen controle over defecatie op kinderleeftijd"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Hulp nodig"/>
+               <valueString value="Af en toe een ongelukje"/>
             </extension>
-            <code value="27941000146109"/>
-            <display value="Hulp nodig bij uiterlijke verzorging"/>
+            <code value="26441000146100"/>
+            <display value="Incidenteel ontlastingsverlies op kinderleeftijd"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -86,7 +86,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Needs help with personal grooming"/>
+               <value value="Occasional bowel accident - child"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -95,15 +95,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Hulp nodig bij uiterlijke verzorging"/>
+               <value value="Incidenteel ontlastingsverlies op kinderleeftijd"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Volledig afhankelijk"/>
+               <valueString value="Volledig zindelijk"/>
             </extension>
-            <code value="704436008"/>
-            <display value="Niet in staat tot uiterlijke verzorging"/>
+            <code value="26401000146103"/>
+            <display value="Volledige controle over defecatie op kinderleeftijd"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -111,7 +111,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Unable to perform personal grooming activity"/>
+               <value value="Full control of bowel - child"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -120,7 +120,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Niet in staat tot uiterlijke verzorging"/>
+               <value value="Volledige controle over defecatie op kinderleeftijd"/>
             </designation>
          </concept>
       </include>

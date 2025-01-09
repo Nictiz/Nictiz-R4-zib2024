@@ -117,6 +117,12 @@ zib-ContactPerson:
         for: NL-CM:20.5.1 (AddressInformation)
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
 
+zib-HeadCircumference:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+
 zib-HealthcareProvider:
   zib deviations:
     Location.telecom:
@@ -354,6 +360,12 @@ nl-core-BodyHeight-*:
   ignored issues:
     Observation.code.coding[*].display:
       - message: Wrong Display Name 'Lichaamslengte' for http://loinc.org#8302-2. There are no valid display names found for language(s) 'en'. Default display is 'Body height'
+        reason: A valid Dutch display value is used instead of an English one.
+
+nl-core-DevelopmentChild.AgeFirstMenstruation-*:
+  ignored issues:
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Leeftijd bij eerste menstruatie' for http://loinc.org#42798-9. There are no valid display names found for language(s) 'en'. Default display is 'Age at menarche'
         reason: A valid Dutch display value is used instead of an English one.
 
 zib-ContactInformation-TelephoneNumbers:

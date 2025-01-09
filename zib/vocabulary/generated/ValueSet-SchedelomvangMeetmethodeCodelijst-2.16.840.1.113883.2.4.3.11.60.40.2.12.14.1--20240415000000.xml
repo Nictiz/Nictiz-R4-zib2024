@@ -1,7 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.33.1--20240415000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.12.14.1--20240415000000"/>
    <meta>
-      <lastUpdated value="2024-11-28T08:35:00Z"/>
       <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -19,15 +18,15 @@
          <start value="2024-04-15T00:00:00+00:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.33.1--20240415000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.14.1--20240415000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.33.1"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.14.1"/>
    </identifier>
    <version value="2024-04-15T00:00:00"/>
-   <name value="UiterlijkeVerzorgingCodelijst"/>
-   <title value="UiterlijkeVerzorgingCodelijst"/>
+   <name value="SchedelomvangMeetmethodeCodelijst"/>
+   <title value="SchedelomvangMeetmethodeCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
@@ -42,18 +41,28 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="Changes compared to prerelease 2024:         &#xA;* Removed: code OTH (NullFlavor)"/>
+   <description value="SchedelomvangMeetmethodeCodelijst"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Anders"/>
+            </extension>
+            <code value="OTH"/>
+            <display value="Other"/>
+         </concept>
+      </include>
+      <include>
          <system value="http://snomed.info/sct"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Onafhankelijk"/>
+               <valueString value="Meten van schedelomvang m.b.v. meetlint"/>
             </extension>
-            <code value="704437004"/>
-            <display value="In staat tot zelfstandige uiterlijke verzorging"/>
+            <code value="31551000146109"/>
+            <display value="Bepalen van schedelomtrek met meetlint"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -61,7 +70,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Independent for personal grooming"/>
+               <value value="Measurement of skull circumference with measuring tape"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -70,15 +79,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="In staat tot zelfstandige uiterlijke verzorging"/>
+               <value value="Bepalen van schedelomtrek met meetlint"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Hulp nodig"/>
+               <valueString value="Meten van schedelomvang m.b.v. echografisch onderzoek"/>
             </extension>
-            <code value="27941000146109"/>
-            <display value="Hulp nodig bij uiterlijke verzorging"/>
+            <code value="31561000146107"/>
+            <display value="Bepalen van schedelomtrek met echografie"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -86,7 +95,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Needs help with personal grooming"/>
+               <value value="Ultrasound measurement of skull circumference"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -95,32 +104,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Hulp nodig bij uiterlijke verzorging"/>
-            </designation>
-         </concept>
-         <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Volledig afhankelijk"/>
-            </extension>
-            <code value="704436008"/>
-            <display value="Niet in staat tot uiterlijke verzorging"/>
-            <designation>
-               <language value="en-US"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="Unable to perform personal grooming activity"/>
-            </designation>
-            <designation>
-               <language value="nl-NL"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="Niet in staat tot uiterlijke verzorging"/>
+               <value value="Bepalen van schedelomtrek met echografie"/>
             </designation>
          </concept>
       </include>
