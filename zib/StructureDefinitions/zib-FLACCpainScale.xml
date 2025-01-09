@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-FLACCpainScale" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-FLACCpainScale" />
   <name value="ZibFLACCpainScale" />
   <title value="zib FLACCpainScale" />
@@ -147,7 +145,7 @@
     <element id="Observation.component:face.value[x]">
       <path value="Observation.component.value[x]" />
       <short value="Face" />
-      <definition value="Observation Faces;&#xD;&#xA;The extent to which the child’s expression on the face is tensed, grimace, tension of jaws." />
+      <definition value="Observation face: the extent to which the child’s expression on the face is tensed, grimace, tension of jaws" />
       <alias value="Gezicht" />
       <type>
         <code value="CodeableConcept" />
@@ -275,7 +273,7 @@
     <element id="Observation.component:consolability.value[x]">
       <path value="Observation.component.value[x]" />
       <short value="Consolability" />
-      <definition value="Observation Consolability: the extent to which the child is consolable." />
+      <definition value="Observation consolability: the extent to which the child is consolable." />
       <alias value="Troostbaar" />
       <type>
         <code value="CodeableConcept" />
