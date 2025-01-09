@@ -37,6 +37,16 @@
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
 
+## ApgarScore 
+### zib-ApgarScore-1Minute, nl-core-ApgarScore-1Minute
+* No significant changes.
+
+### zib-ApgarScore-5Minute, nl-core-ApgarScore-5Minute
+* No significant changes.
+
+### zib-ApgarScore-10Minute, nl-core-ApgarScore-10Minute
+* No significant changes.
+
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887

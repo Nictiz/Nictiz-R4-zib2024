@@ -61,6 +61,12 @@ zib-AddressInformation:
       - cardinality: 1..1 instead of 0..1
         reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
 
+zib-ApgarScore-*Minute:
+  zib deviations:
+    Observation.component:muscleToneScore.value[x]:
+      - short: MuscleToneScore instead of MusleToneScore
+        reason: The zib concept name "MusleToneScore" is an incorrect translation of the Dutch name into English.
+        
 zib-BodyHeight:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
