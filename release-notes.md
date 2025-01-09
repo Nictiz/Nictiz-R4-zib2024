@@ -110,6 +110,10 @@
 ### zib-FluidBalance.FluidTotalOut, nl-core-FluidBalance.FluidTotalOut
 * No significant changes.
 
+## HeadCircumference (zib-HeadCircumference, nl-core-HeadCircumference)
+* `.value[x]` ; textual ; Changed definition of HeadCircumferenceMeasurement. ; ZIBFHIR-178
+* `.value[x]` ; terminology ; Added required binding to BodyLengthUnits. ; ZIBFHIR-178
+
 ## HealthcareProvider
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
 * No significant changes.
@@ -144,6 +148,9 @@
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877
 * `.communication.extension:comment` ; extension ; Replaced extension ExtComment with ExtLanguageProficiencyComment. ; ZIBFHIR-97
 * `.communication.language` ; terminology ; Changed codes in CommunicatieTaalCodelijst. ; ZIB-2218
+
+## LifeStance (zib-LifeStance, nl-core-LifeStance)
+* `Observation` ; mapping ; Renamed mapping from LifeStanceRC to LifeStance. ; ZIB-2578
 
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218
