@@ -321,11 +321,12 @@ zib-Problem:
   zib deviations:
     Condition.bodySite:
       - datatype: CodeableConcept instead of a reference
-        reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept and as a reference to BodyStructure, therefore the datatype is not a Reference. Therefore its concepts and constraints are added inline too.
+        for: NL-CM:5.1.14 (Problem.ProblemAnatomicalLocation)
+        reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
       - cardinality: 0..* instead of 0..1
-        for: NL-CM:20.7.4 (Condition.bodySite)
-        reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept and as a reference to BodyStructure. For the CodeableConcept implementation, the cardinality is set to 0..* that allow for multiple instances of AnatomicalLocation which is in accordance with the zib Problem.
- 
+        for: NL-CM:20.7.4 (AnatomicalLocation.Location)
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the fact that both the ProblemAnatomicalLocation concept from zib Problem and the Location concept from zib AnatomicalLocation are mapped on the same level in FHIR. Setting the cardinality to 0..* allows for multiple instances of AnatomicalLocation, which is in accordance with zib Problem.
+
 unmapped zib concepts:
   - NL-CM:17.2.10: HealthcareProvider.LocationNumber
     reason: This zib concept is problematic to map cleanly to FHIR and it has been deemed too uncommon in practice to warrant an extension.
@@ -336,6 +337,14 @@ unmapped zib concepts:
 # These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
 
 issues should occur: false
+
+2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000:
+  ignored issues:
+    ValueSet.compose.include[*]:
+      - message: "There are multiple different potential matches for the url 'http://hl7.org/fhir/sid/icd-10-nl'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '2009-10-07T12:00:00', found versions: 2.1.1, 2009-10-07T12:00:00"
+        reason: The fact that there are multiple matches for the url results in no issue, since the correct version is used nonetheless.
+      - message: "There are multiple different potential matches for the url 'http://hl7.org/fhir/sid/icf-nl'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '2010-11-16T12:00:00', found versions: 1.0.0, 2010-11-16T12:00:00"
+        reason: The fact that there are multiple matches for the url results in no issue, since the correct version is used nonetheless.
 
 nl-core-*:
   ignored issues:
@@ -376,6 +385,19 @@ nl-core-DevelopmentChild.AgeFirstMenstruation-*:
     Observation.code.coding[*].display:
       - message: Wrong Display Name 'Leeftijd bij eerste menstruatie' for http://loinc.org#42798-9. There are no valid display names found for language(s) 'en'. Default display is 'Age at menarche'
         reason: A valid Dutch display value is used instead of an English one.
+
+nl-core-Problem-*:
+  ignored issues:
+    Condition.code:
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icd-10-nl| was not found
+        reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.120.5.1| was not found
+        reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
+    Condition.code.coding[*].system:
+      - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icd-10-nl' could not be found, so the code cannot be validated
+        reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.120.5.1' could not be found, so the code cannot be validated
+        reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
@@ -433,16 +455,3 @@ zib-Patient:
         reason: The short description is defined on the datatype profile and not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and not repeated in the differential.
-
-nl-core-Problem-*:
-  ignored issues:
-    Condition.code.coding[*].system:
-      - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icd-10-nl' could not be found, so the code cannot be validated
-        reason: This code system represents the ICD-10-NL, which the default terminology server is unable to check.
-      - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.120.5.1' could not be found, so the code cannot be validated
-        reason: This code system represents the DHD, which the default terminology server is unable to check.
-    Condition.code:
-      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icd-10-nl| was not found
-        reason: This code system represents the ICD-10-NL, which the default terminology server is unable to check.
-      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.120.5.1| was not found
-        reason: This code system represents the DHD, which the default terminology server is unable to check.
