@@ -20,10 +20,10 @@ nl-core-Payer-Organization-02:
   ignored issues:
     Organization.telecom[0]:
       - message: "Constraint failed: org-3: 'The telecom of an organization can never be of use 'home'' (defined in http://hl7.org/fhir/StructureDefinition/Organization)"
-        reason: Payer.person is always modelled inline with the profile nl-core-Payer-Organization in FHIR, which is why Payer.person will not pass this constraint. The example provided by the zib is correct. 
+        reason: The zib container Payer.PayerPerson is mapped to a Coverage, as well as either a Patient, RelatedPerson or Organization. Since the zib officially does not support references to the zibs Patient or ContactPerson, a PayerPerson in zib instances is assumed to conform to the nl-core-Payer-Organization profile and is transformed to an Organization resource accordingly. In this case the PayerPerson in the underlying zib instance actually aligns with the nl-core-ContactPerson profile (in which a telecom of 'home' is perfectly valid), resulting in the failed constraint.
     Organization.address[0]:
       - message: "Constraint failed: org-2: 'An address of an organization can never be of use 'home'' (defined in http://hl7.org/fhir/StructureDefinition/Organization)"
-        reason: Payer.person is always modelled inline with the profile nl-core-Payer-Organization in FHIR, which is why Payer.person will not pass this constraint. The example provided by the zib is correct.   
+        reason: The zib container Payer.PayerPerson is mapped to a Coverage, as well as either a Patient, RelatedPerson or Organization. Since the zib officially does not support references to the zibs Patient or ContactPerson, a PayerPerson in zib instances is assumed to conform to the nl-core-Payer-Organization profile and is transformed to an Organization resource accordingly. In this case the PayerPerson in the underlying zib instance actually aligns with the nl-core-ContactPerson profile (in which an address of 'home' is perfectly valid), resulting in the failed constraint.
 
 pattern-NlCoreHealthProfessionalReference:
   ignored issues:
@@ -335,7 +335,7 @@ zib-Payer.InsuranceCompany:
 zib-Payer.PayerPerson:
   zib deviations:
     Coverage.extension:bankInformation:
-      - datatype: Extension instead of Container
+      - datatype: Extension instead of container
         reason: The (complex) extension acts as a container for three subextensions that each contain a zib subconcept.
     Coverage.payor:
       - cardinality: 1..1 instead of 0..1
@@ -344,18 +344,19 @@ zib-Payer.PayerPerson:
 zib-Payer-Organization:
   zib deviations:
     Organization.telecom:
-      - datatype: ContactPoint instead of a reference
-        reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource. Because the FHIR profile for ContactInformation consists of two parts, the root concept of the ContactInformation is mapped on .telecom.
       - cardinality: 0..* instead of 0..1
-        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib part ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
-    Organization.telecom:telephoneNumbers:
-      - datatype: ContactPoint instead of Container
-        reason: Zib container concept TelephoneNumbers of ContactInformation is represented using the ContactPoint datatype in FHIR, not as a seperate container. Because the FHIR profile for ContactInformation consists of two parts, the root concept of the ContactInformation is mapped on .telecom.
-    Organization.telecom:emailAddresses:
-      - datatype: ContactPoint instead of Container
-        reason: Zib container concept EmailAddresses of ContactInformation is represented using the ContactPoint datatype in FHIR, not as a seperate container. Because the FHIR profile for ContactInformation consists of two parts, the root concept of the ContactInformation is mapped on .telecom.  
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+      - datatype: ContactPoint instead of Reference
+        reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+    Organization.telecom:*:
+      - datatype: ContactPoint instead of container
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
     Organization.address:
-      - datatype: Address instead of a reference
+      - datatype: Address instead of Reference
+        for: NL-CM:1.1.17 (Payer.AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+      - datatype: Address instead of rootconcept
+        for: NL-CM:20.5.1 (AddressInformation)
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
 
 unmapped zib concepts:
@@ -470,7 +471,7 @@ zib-Payer.InsuranceCompany:
   ignored issues:
     Coverage.payor:
       - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
-        reason: The definition of the zib concept InsuranceCompany, which is the root of a container, does not contain a meaningful definition.
+        reason: The mapping is to a zib container, which doesn't have a useful description if implemented in a profile.
 
 zib-Payer-Organization:
   ignored issues:
