@@ -180,8 +180,11 @@
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
 
 ## Payer 
+### zib-Payer-Organization, nl-core-Payer-Organization
+* No significant changes.
+
 ### zib-Payer.InsuranceCompany, nl-core-Payer.InsuranceCompany
 * `.type` ; terminology ; Changed codes in VerzekeringssoortCodelijst. ; ZIB-2218
 
-### zib-Payer-Organization, nl-core-Payer-Organization
+### zib-Payer.PayerPerson, nl-core-Payer.PayerPerson
 * No significant changes.

@@ -326,21 +326,6 @@ zib-Patient:
       - cardinality: 1..1 instead of 0..1
         reason: The FHIR profiles are expected to implement zib cardinalities as conceptual cardinalities, but FHIR requires the .language element to be present. This aligns with the intention of the zib, as the Language concept is required for zib LanguageProficiency to make sense.
 
-zib-Payer.InsuranceCompany:
-  zib deviations:
-    Coverage.payor:
-      - cardinality: 1..1 instead of 0..1
-        reason: The cardinality of the zib concept InsuranceCompany (0..1) mismatches FHIR (1..1). Between the zib concepts InsuranceCompany and PayerPerson, a minimum of 1 must be selected. If one uses the zib-Payer.InsuranceCompany profile, the choice has been made to apply the InsuranceCompany concept, therefore a cardinality of 1..1 can be used.
-
-zib-Payer.PayerPerson:
-  zib deviations:
-    Coverage.extension:bankInformation:
-      - datatype: Extension instead of container
-        reason: The (complex) extension acts as a container for three subextensions that each contain a zib subconcept.
-    Coverage.payor:
-      - cardinality: 1..1 instead of 0..1
-        reason: The cardinality of the zib concept PayerPerson (0..1) mismatches FHIR (1..1). Between the zib concepts InsuranceCompany and PayerPerson, a minimum of 1 must be selected. If one uses the zib-Payer.PayerPerson profile, the choice has been made to apply the PayerPerson concept, therefore a cardinality of 1..1 can be used.
-
 zib-Payer-Organization:
   zib deviations:
     Organization.telecom:
@@ -358,6 +343,21 @@ zib-Payer-Organization:
       - datatype: Address instead of rootconcept
         for: NL-CM:20.5.1 (AddressInformation)
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+
+zib-Payer.InsuranceCompany:
+  zib deviations:
+    Coverage.payor:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of the zib concept InsuranceCompany (0..1) mismatches FHIR (1..1). Between the zib concepts InsuranceCompany and PayerPerson, a minimum of 1 must be selected. If one uses the zib-Payer.InsuranceCompany profile, the choice has been made to apply the InsuranceCompany concept, therefore a cardinality of 1..1 can be used.
+
+zib-Payer.PayerPerson:
+  zib deviations:
+    Coverage.extension:bankInformation:
+      - datatype: Extension instead of container
+        reason: The (complex) extension acts as a container for three subextensions that each contain a zib subconcept.
+    Coverage.payor:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of the zib concept PayerPerson (0..1) mismatches FHIR (1..1). Between the zib concepts InsuranceCompany and PayerPerson, a minimum of 1 must be selected. If one uses the zib-Payer.PayerPerson profile, the choice has been made to apply the PayerPerson concept, therefore a cardinality of 1..1 can be used.
 
 unmapped zib concepts:
   - NL-CM:17.2.10: HealthcareProvider.LocationNumber
@@ -467,12 +467,6 @@ zib-Patient:
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and not repeated in the differential.
 
-zib-Payer.InsuranceCompany:
-  ignored issues:
-    Coverage.payor:
-      - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
-        reason: The mapping is to a zib container, which doesn't have a useful description if implemented in a profile.
-
 zib-Payer-Organization:
   ignored issues:
     Organization.address:
@@ -480,3 +474,9 @@ zib-Payer-Organization:
         reason: The short description is defined on the datatype profile and not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and not repeated in the differential.
+
+zib-Payer.InsuranceCompany:
+  ignored issues:
+    Coverage.payor:
+      - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
+        reason: The mapping is to a zib container, which doesn't have a useful description if implemented in a profile.
