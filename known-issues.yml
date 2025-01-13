@@ -393,6 +393,12 @@ nl-core-BodyWeight-*:
       - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
         reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
 
+nl-core-DevelopmentChild.AgeFirstMenstruation-*:
+  ignored issues:
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Leeftijd bij eerste menstruatie' for http://loinc.org#42798-9. There are no valid display names found for language(s) 'en'. Default display is 'Age at menarche'
+        reason: A valid Dutch display value is used instead of an English one.
+
 nl-core-HealthcareProvider-Organization-*:
   ignored issues:
     Organization.type[*]:
@@ -403,12 +409,6 @@ nl-core-HealthcareProvider-Organization-*:
     Organization.type[*].coding[*].system:
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
         reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
-
-nl-core-DevelopmentChild.AgeFirstMenstruation-*:
-  ignored issues:
-    Observation.code.coding[*].display:
-      - message: Wrong Display Name 'Leeftijd bij eerste menstruatie' for http://loinc.org#42798-9. There are no valid display names found for language(s) 'en'. Default display is 'Age at menarche'
-        reason: A valid Dutch display value is used instead of an English one.
 
 nl-core-Problem-*:
   ignored issues:
@@ -422,6 +422,12 @@ nl-core-Problem-*:
         reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.120.5.1' could not be found, so the code cannot be validated
         reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
+
+nl-core-Problem-full-03:
+  ignored issues:
+    Condition.bodySite[0]:
+      - message: No code provided, and a code should be provided from the value set 'LocatieCodelijsten' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000|2024-04-15T00:00:00)
+        reason: This example contains no code on .bodySite, since the functional example has an AnatomicalLocation for which only the Laterality is specified (which is part of the BodyStructure resource referenced here). This is no issue since the binding is extensible.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
