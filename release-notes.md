@@ -37,6 +37,16 @@
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
 
+## AnatomicalLocation 
+### zib-AnatomicalLocation, nl-core-AnatomicalLocation
+* `CodeableConcept` ; textual ; Added guidance for Location and Laterality. ; ZIBFHIR-113
+* `CodeableConcept` ; constraint ; Added zib-AnatomicalLocation-01 for Location. ; ZIBFHIR-113
+* `.extension:bodyStructureReference` ; extension ; Replaced ExtAnatomicalLocationLaterality with BodyStructureReference for Laterality. ; ZIBFHIR-113
+* `.extension:bodyStructureReference` ; mapping ; Moved mapping of Laterality to `BodyStructure.locationQualifier`. ; ZIBFHIR-113
+
+### zib-AnatomicalLocation-BodyStructure, nl-core-AnatomicalLocation-BodyStructure
+* New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
+
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
