@@ -37,9 +37,24 @@
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
 
+## AnatomicalLocation 
+### zib-AnatomicalLocation, nl-core-AnatomicalLocation
+* `CodeableConcept` ; textual ; Added guidance for Location and Laterality. ; ZIBFHIR-113
+* `CodeableConcept` ; constraint ; Added zib-AnatomicalLocation-01 for Location. ; ZIBFHIR-113
+* `.extension:bodyStructureReference` ; extension ; Replaced ExtAnatomicalLocationLaterality with BodyStructureReference for Laterality. ; ZIBFHIR-113
+* `.extension:bodyStructureReference` ; mapping ; Moved mapping of Laterality to `BodyStructure.locationQualifier`. ; ZIBFHIR-113
+
+### zib-AnatomicalLocation-BodyStructure, nl-core-AnatomicalLocation-BodyStructure
+* New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
+
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
+
+## BodyWeight (zib-BodyWeight, nl-core-BodyWeight)
+* `.value[x]` ; textual ; Changed definition of WeightValue. ; ZIB-1886
+* `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIB-1886
+* `.component:clothing.value[x]` ; terminology ; Changed codes in KledingCodelijst. ; ZIB-1704
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
@@ -188,3 +203,10 @@
 
 ### zib-Payer.PayerPerson, nl-core-Payer.PayerPerson
 * No significant changes.
+
+## Problem (zib-Problem, nl-core-Problem)
+* `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-1575, ZIB-2087, ZIB-2218
+* `.code.text` ; mapping ; Moved mapping of FurtherSpecificationProblemName from `.code.extension:furtherSpecificationProblemName.value[x]`. ; ZIBFHIR-145
+* `.bodySite` ; cardinality ; Changed max cardinality from 1 to *. ; ZIB-1433
+* `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
+* `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
