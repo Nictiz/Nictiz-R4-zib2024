@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.32.6--20240415000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.12.1.1--20240415000000"/>
    <meta>
       <lastUpdated value="2024-11-28T08:35:00Z"/>
       <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
@@ -19,15 +19,15 @@
          <start value="2024-04-15T00:00:00+00:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.32.6--20240415000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.1.1--20240415000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.32.6"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.1.1"/>
    </identifier>
    <version value="2024-04-15T00:00:00"/>
-   <name value="OntwikkelingVerstandelijkCodelijst"/>
-   <title value="OntwikkelingVerstandelijkCodelijst"/>
+   <name value="KledingCodelijst"/>
+   <title value="KledingCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
@@ -46,14 +46,130 @@
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
+      <inactive value="true"/>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.8.1"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Zonder kleding."/>
+            </extension>
+            <code value="UNDRESSED"/>
+            <display value="Niet gekleed"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Undressed"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Niet gekleed"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Lichte kleding/ondergoed [Kleding die niet significant het gewicht beïnvloedt.]"/>
+            </extension>
+            <code value="MINIMAL"/>
+            <display value="Minimaal gekleed"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Minimal dressed"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Minimaal gekleed"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Volledig gekleed, inclusief schoenen [Kleren die een significante bijdrage hebben aan het gewicht, inclusief schoenen.]"/>
+            </extension>
+            <code value="FULL"/>
+            <display value="Volledig gekleed"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Fully dressed"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Volledig gekleed"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+               <valueBoolean value="true"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Luier [Individu draagt alleen een luier - zou significant aan het gewicht kunnen bijdragen.] [DEPRECATED]"/>
+            </extension>
+            <code value="DIAPER"/>
+            <display value="Luier"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Diaper"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Luier"/>
+            </designation>
+         </concept>
+      </include>
       <include>
          <system value="http://snomed.info/sct"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Kan abstract denken"/>
+               <valueString value="Zonder kleding."/>
             </extension>
-            <code value="281136009"/>
-            <display value="In staat om abstract te denken"/>
+            <code value="248160001"/>
+            <display value="Ontkleed"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -61,7 +177,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Able to think abstractly"/>
+               <value value="Undressed"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -70,15 +186,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="In staat om abstract te denken"/>
+               <value value="Ontkleed"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Kan zelf problemen oplossen"/>
+               <valueString value="Lichte kleding/ondergoed [Kleding die niet significant het gewicht beïnvloedt.]"/>
             </extension>
-            <code value="716433009"/>
-            <display value="In staat om probleem op te lossen"/>
+            <code value="220121000146105"/>
+            <display value="Minimale kleding"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -86,7 +202,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Able to problem solve"/>
+               <value value="Minimal clothing"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -95,15 +211,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="In staat om probleem op te lossen"/>
+               <value value="Minimale kleding"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Heeft brede interesse"/>
+               <valueString value="Volledig gekleed, inclusief schoenen [Kleren die een significante bijdrage hebben aan het gewicht, inclusief schoenen.]"/>
             </extension>
-            <code value="26381000146103"/>
-            <display value="Brede interesse"/>
+            <code value="220131000146107"/>
+            <display value="Volledig gekleed met schoenen"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -111,7 +227,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Wide level of interest"/>
+               <value value="Fully dressed including shoes"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -120,15 +236,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Brede interesse"/>
+               <value value="Volledig gekleed met schoenen"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Heeft inzicht in gevolgen van eigen gedrag"/>
+               <valueString value="Volledig gekleed, zonder schoenen [Kleren die een significante bijdrage hebben aan het gewicht, zonder schoenen.]"/>
             </extension>
-            <code value="26311000146109"/>
-            <display value="In staat om gevolgen van eigen gedrag te herkennen"/>
+            <code value="1156252001"/>
+            <display value="Op blote voeten"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -136,7 +252,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Able to recognize consequences of behaviour"/>
+               <value value="Barefoot"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -145,32 +261,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="In staat om gevolgen van eigen gedrag te herkennen"/>
-            </designation>
-         </concept>
-         <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Kan beredeneerde keuzes maken"/>
-            </extension>
-            <code value="304687006"/>
-            <display value="In staat om beredeneerde keuzes te maken"/>
-            <designation>
-               <language value="en-US"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="Able to make considered choices"/>
-            </designation>
-            <designation>
-               <language value="nl-NL"/>
-               <use>
-                  <system value="http://snomed.info/sct"/>
-                  <code value="900000000000013009"/>
-                  <display value="Synonym"/>
-               </use>
-               <value value="In staat om beredeneerde keuzes te maken"/>
+               <value value="Op blote voeten"/>
             </designation>
          </concept>
       </include>
