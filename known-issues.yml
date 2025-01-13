@@ -4,23 +4,17 @@
 
 issues should occur: true
 
-BodyHeight-Units:
-  ignored issues:
-    ValueSet.compose.include[0]:
-      - message: "There are multiple different potential matches for the url 'http://unitsofmeasure.org'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '3.0.1', found versions: 2009-10-14T12:00:00, 3.0.1"
-        reason: It is not necessary to fix the UCUM version. Moreover, this is also not done in core ValueSets that consist of UCUM codes (such as http://hl7.org/fhir/ValueSet/ucum-vitals-common).
-
-BodyWeight-Units:
-  ignored issues:
-    ValueSet.compose.include[0]:
-      - message: "There are multiple different potential matches for the url 'http://unitsofmeasure.org'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '3.0.1', found versions: 2009-10-14T12:00:00, 3.0.1"
-        reason: It is not necessary to fix the UCUM version. Moreover, this is also not done in core ValueSets that consist of UCUM codes (such as http://hl7.org/fhir/ValueSet/ucum-vitals-common).
-
 ext-LanguageProficiency.CommunicationDetails:
   zib deviations:
     Extension.value[x]:
       - cardinality: 0..1 instead of 0..*
         reason: FHIR restricts Extension.value to a max cardinality of 0..1. To use it more than once, the extension is added 0..* in the hosting element.
+
+nl-core-ContactPerson-full-02:
+  ignored issues:
+    RelatedPerson.address[0].line[0].extension[1].value.ofType(string):
+      - message: value should not start or finish with whitespace ' De Groene Draeck'
+        reason: To communicate a HouseNumberAddition without a HouseNumberLetter, a leading space is used.
 
 pattern-NlCoreHealthProfessionalReference:
   ignored issues:
@@ -39,6 +33,12 @@ pattern-ZibHealthProfessionalReference:
     StructureDefinition:
       - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
         reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern ZibHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
+
+zib-AbilityToDrink.DrinkingLimitations:
+  zib deviations:
+    Observation.value[x]:valueCodeableConcept:
+      - cardinality: 0..1 instead of 0..*
+        reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
 
 zib-AbilityToEat.EatingLimitations:
   zib deviations:
@@ -122,6 +122,12 @@ zib-ContactPerson:
       - datatype: Address instead of rootconcept
         for: NL-CM:20.5.1 (AddressInformation)
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+
+zib-HeadCircumference:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
 zib-HealthcareProvider:
   zib deviations:
@@ -347,33 +353,15 @@ nl-core-*:
 
 nl-core-BodyHeight-*:
   ignored issues:
-    Observation.code:
-      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
-        reason: The code used is the magic LOINC code for body height, hence this issue should not arise.
     Observation.code.coding[*].display:
       - message: Wrong Display Name 'Lichaamslengte' for http://loinc.org#8302-2. There are no valid display names found for language(s) 'en'. Default display is 'Body height'
         reason: A valid Dutch display value is used instead of an English one.
-    Observation.component[*].code:
-      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
-        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
 
 nl-core-BodyWeight-*:
   ignored issues:
-    Observation.code:
-      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
-        reason: The code used is the magic LOINC code for body weight, hence this issue should not arise.
     Observation.code.coding[*].display:
       - message: Wrong Display Name 'Lichaamsgewicht' for http://loinc.org#29463-7. There are no valid display names found for language(s) 'en'. Default display is 'Body weight'
         reason: A valid Dutch display value is used instead of an English one.
-    Observation.component[*].code:
-      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
-        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
-
-nl-core-ContactPerson-full-02:
-  ignored issues:
-    RelatedPerson.address[0].line[0].extension[1].value.ofType(string):
-      - message: value should not start or finish with whitespace ' De Groene Draeck'
-        reason: To communicate a HouseNumberAddition a leading space is used.
 
 nl-core-HealthcareProvider-Organization-*:
   ignored issues:
@@ -385,6 +373,12 @@ nl-core-HealthcareProvider-Organization-*:
     Organization.type[*].coding[*].system:
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
         reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
+
+nl-core-DevelopmentChild.AgeFirstMenstruation-*:
+  ignored issues:
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Leeftijd bij eerste menstruatie' for http://loinc.org#42798-9. There are no valid display names found for language(s) 'en'. Default display is 'Age at menarche'
+        reason: A valid Dutch display value is used instead of an English one.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
