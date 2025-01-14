@@ -256,6 +256,10 @@
         <comment value="Destination" />
       </mapping>
     </element>
+    <element id="Encounter.location">
+      <path value="Encounter.location" />
+      <max value="1" />
+    </element>
     <element id="Encounter.location.location">
       <path value="Encounter.location.location" />
       <short value="CareFacility" />
