@@ -25,6 +25,11 @@
     <uri value="https://zibs.nl/wiki/Admission-v2.0(2024EN)" />
     <name value="zib Admission-v2.0(2024EN)" />
   </mapping>
+  <mapping>
+    <identity value="zib-healthprofessional-v4.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v4.0(2024EN)" />
+    <name value="zib HealthProfessional-v4.0(2024EN)" />
+  </mapping>
   <kind value="resource" />
   <abstract value="true" />
   <type value="Encounter" />
@@ -33,7 +38,13 @@
   <differential>
     <element id="Encounter">
       <path value="Encounter" />
+      <short value="Admission" />
       <alias value="Opname" />
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN" />
+        <map value="NL-CM:15.4.1" />
+        <comment value="Admission" />
+      </mapping>
     </element>
     <element id="Encounter.extension:extAdmissionCommentAdmissionReason">
       <path value="Encounter.extension" />
@@ -197,11 +208,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.6" />
-        <comment value="Problem" />
-      </mapping>
     </element>
     <element id="Encounter.reasonReference:problem">
       <path value="Encounter.reasonReference" />

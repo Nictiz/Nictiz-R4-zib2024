@@ -429,6 +429,12 @@ nl-core-Problem-full-03:
       - message: No code provided, and a code should be provided from the value set 'LocatieCodelijsten' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000|2024-04-15T00:00:00)
         reason: This example contains no code on .bodySite, since its functional counterpart contains an AnatomicalLocation for which only the Laterality is specified (which is mapped to the BodyStructure resource referenced here). This is no issue since the binding is extensible.
 
+zib-Admission:
+  ignored issues:
+    Encounter.participant:responsibleHealthProfessional.individual:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice."
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
+
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
     ContactPoint.extension:comment.value[x]:
