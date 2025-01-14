@@ -55,6 +55,21 @@
         <comment value="EndDateTime (implicit, main mapping is on Encounter.period.end)" />
       </mapping>
     </element>
+    <element id="Encounter.class">
+      <path value="Encounter.class" />
+      <short value="AdmissionScope" />
+      <definition value="AdmissionScope indicates whether it is a overall admission or a partial admission." />
+      <alias value="OpnameScope" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.4--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN" />
+        <map value="NL-CM:15.4.11" />
+        <comment value="AdmissionScope" />
+      </mapping>
+    </element>
     <element id="Encounter.serviceType">
       <path value="Encounter.serviceType" />
       <short value="CareType" />
