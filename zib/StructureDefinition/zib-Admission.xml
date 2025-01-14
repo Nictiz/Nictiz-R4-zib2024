@@ -31,6 +31,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
   <derivation value="constraint" />
   <differential>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <alias value="Opname" />
+    </element>
     <element id="Encounter.extension:extAdmissionCommentAdmissionReason">
       <path value="Encounter.extension" />
       <sliceName value="extAdmissionCommentAdmissionReason" />
