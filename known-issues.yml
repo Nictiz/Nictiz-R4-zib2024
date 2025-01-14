@@ -73,6 +73,12 @@ zib-BodyHeight:
       - cardinality: 1..1 instead of 0..1
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
+zib-BodyWeight:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
     ContactPoint.system:
@@ -122,6 +128,12 @@ zib-ContactPerson:
       - datatype: Address instead of rootconcept
         for: NL-CM:20.5.1 (AddressInformation)
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+
+zib-HeadCircumference:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
 zib-HealthcareProvider:
   zib deviations:
@@ -317,6 +329,16 @@ zib-Patient:
       - cardinality: 1..1 instead of 0..1
         reason: The FHIR profiles are expected to implement zib cardinalities as conceptual cardinalities, but FHIR requires the .language element to be present. This aligns with the intention of the zib, as the Language concept is required for zib LanguageProficiency to make sense.
 
+zib-Problem:
+  zib deviations:
+    Condition.bodySite:
+      - datatype: CodeableConcept instead of a reference
+        for: NL-CM:5.1.14 (Problem.ProblemAnatomicalLocation)
+        reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
+      - cardinality: 0..* instead of 0..1
+        for: NL-CM:20.7.4 (AnatomicalLocation.Location)
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the fact that both the ProblemAnatomicalLocation concept from zib Problem and the Location concept from zib AnatomicalLocation are mapped on the same level in FHIR. Setting the cardinality to 0..* allows for multiple instances of AnatomicalLocation, which is in accordance with zib Problem.
+
 unmapped zib concepts:
   - NL-CM:17.2.10: HealthcareProvider.LocationNumber
     reason: This zib concept is problematic to map cleanly to FHIR and it has been deemed too uncommon in practice to warrant an extension.
@@ -328,9 +350,17 @@ unmapped zib concepts:
 
 issues should occur: false
 
+2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000:
+  ignored issues:
+    ValueSet.compose.include[*]:
+      - message: "There are multiple different potential matches for the url 'http://hl7.org/fhir/sid/icd-10-nl'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '2009-10-07T12:00:00', found versions: 2.1.1, 2009-10-07T12:00:00"
+        reason: The fact that there are multiple matches for the url results in no issue, since the correct version is used nonetheless.
+      - message: "There are multiple different potential matches for the url 'http://hl7.org/fhir/sid/icf-nl'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '2010-11-16T12:00:00', found versions: 1.0.0, 2010-11-16T12:00:00"
+        reason: The fact that there are multiple matches for the url results in no issue, since the correct version is used nonetheless.
+
 nl-core-*:
   ignored issues:
-    "*.address[*].country.extension[*].value.ofType(CodeableConcept).coding[*].display":
+    "*.address*.country.extension[*].value.ofType(CodeableConcept).coding[*].display":
       - message: Wrong Display Name 'Nederland' for urn:iso:std:iso:3166#NL. Valid display is 'Netherlands' (for the language(s) 'en')
         reason: A valid Dutch display value is used instead of an English one.
     "*.address[*].extension[*].value.ofType(CodeableConcept).coding[*].display":
@@ -345,6 +375,36 @@ nl-core-*:
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
 
+nl-core-BodyHeight-*:
+  ignored issues:
+    Observation.code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code used is the magic LOINC code for body height, hence this issue should not arise.
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Lichaamslengte' for http://loinc.org#8302-2. There are no valid display names found for language(s) 'en'. Default display is 'Body height'
+        reason: A valid Dutch display value is used instead of an English one.
+    Observation.component[*].code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
+
+nl-core-BodyWeight-*:
+  ignored issues:
+    Observation.code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code used is the magic LOINC code for body weight, hence this issue should not arise.
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Lichaamsgewicht' for http://loinc.org#29463-7. There are no valid display names found for language(s) 'en'. Default display is 'Body weight'
+        reason: A valid Dutch display value is used instead of an English one.
+    Observation.component[*].code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
+
+nl-core-DevelopmentChild.AgeFirstMenstruation-*:
+  ignored issues:
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Leeftijd bij eerste menstruatie' for http://loinc.org#42798-9. There are no valid display names found for language(s) 'en'. Default display is 'Age at menarche'
+        reason: A valid Dutch display value is used instead of an English one.
+
 nl-core-HealthcareProvider-Organization-*:
   ignored issues:
     Organization.type[*]:
@@ -356,11 +416,24 @@ nl-core-HealthcareProvider-Organization-*:
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
         reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
 
-nl-core-BodyHeight-*:
+nl-core-Problem-*:
   ignored issues:
-    Observation.code.coding[*].display:
-      - message: Wrong Display Name 'Lichaamslengte' for http://loinc.org#8302-2. There are no valid display names found for language(s) 'en'. Default display is 'Body height'
-        reason: A valid Dutch display value is used instead of an English one.
+    Condition.code:
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icd-10-nl| was not found
+        reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.120.5.1| was not found
+        reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
+    Condition.code.coding[*].system:
+      - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icd-10-nl' could not be found, so the code cannot be validated
+        reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.120.5.1' could not be found, so the code cannot be validated
+        reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
+
+nl-core-Problem-full-03:
+  ignored issues:
+    Condition.bodySite[0]:
+      - message: No code provided, and a code should be provided from the value set 'LocatieCodelijsten' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000|2024-04-15T00:00:00)
+        reason: This example contains no code on .bodySite, since its functional counterpart contains an AnatomicalLocation for which only the Laterality is specified (which is mapped to the BodyStructure resource referenced here). This is no issue since the binding is extensible.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
