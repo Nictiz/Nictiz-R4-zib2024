@@ -38,7 +38,7 @@
   <differential>
     <element id="Encounter">
       <path value="Encounter" />
-      <alias value="nl-core-Encounter" />
+      <alias value="nl-core-Admission" />
     </element>
     <element id="Encounter.subject">
       <path value="Encounter.subject" />
