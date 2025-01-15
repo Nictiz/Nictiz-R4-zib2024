@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConceptMap xmlns="http://hl7.org/fhir">
-    <id value="EncounterTypeCodelist-to-ActEncounterCode"/>
+    <id value="ContactTypeCodelist-to-ActEncounterCode"/>
     <text>
         <status value="empty"/>
         <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
@@ -8,9 +8,9 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
         <valueBoolean value="false"/>
     </extension>
-    <url value="http://nictiz.nl/fhir/ConceptMap/EncounterTypeCodelist-to-ActEncounterCode"/>
-    <name value="EncounterTypeCodelist_to_ActEncounterCode"/>
-    <title value="EncounterTypeCodelist to ActEncounterCode"/>
+    <url value="http://nictiz.nl/fhir/ConceptMap/ContactTypeCodelijst-to-ActEncounterCode"/>
+    <name value="ContactTypeCodelijst_to_ActEncounterCode"/>
+    <title value="ContactTypeCodelijst to ActEncounterCode"/>
     <status value="draft"/>
     <publisher value="Nictiz"/>
     <contact>
