@@ -28,17 +28,16 @@
     <group>
         <source value="http://snomed.info/sct"/>
         <target value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
-        <!--   <element>
+        <element>
         <code value="225390008"/>
             <display value="Triage"/>
             <target>
                 <code value="PRENC"/>
-                <display value="pre-admission / emergency"/>
+                <display value="pre-admission"/>
                 <equivalence value="inexact"/>
-                <comment value="bij meer info dan valt het onder emergency"/>
+                <comment value="Missing additional information as this may also occur in an Emergency encounter"/>
             </target>
         </element>
-        -->
         <element>
             <code value="105251000146109"/>
             <display value="First consultation with outpatient"/>
@@ -93,7 +92,7 @@
                 <equivalence value="subsumes"/>
             </target>
         </element>
-        <!--   <element>
+        <element>
             <code value="180211000146101"/>
             <display value="Primary care encounter with consulted physician"/>
             <target>
@@ -102,7 +101,7 @@
                 <equivalence value="unmatch"/>
                 <comment value=" missing info about whereabouts of patient and what method of contact is uesd between physicians"/>
             </target>
-        </element> -->
+        </element> 
         <element>
             <code value="182770003"/>
             <display value="Pre-anesthetic assessment"/>
