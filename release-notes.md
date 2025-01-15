@@ -111,7 +111,7 @@
 * `.status` ; textual ; Refined guidance for DateTime ; ZIB-1545, ZIB-1104
 * `.class` ; textual ; Renamed from ContactType to EncounterType ; ZIB-1428
 * `.class` ; terminology ; Changed codes in EncounterTypeCodelist ; ZIB-1906
-* `.type` ; mapping; Added mapping of EncounterSetting ; ZIB-1545, ZIB-1104
+* `.type` ; mapping ; Added mapping of EncounterSetting ; ZIB-1545, ZIB-1104
 * `.participant:responsibleHealthProfessional.individual` ; slicing ; Added ResponsableHealthProfessional to a slice ; ZIB-1545, ZIB-1104
 * `.period.start` ; textual ; Renamed from StartDateTime to DateTime ; ZIB-1545, ZIB-1104
 * `.period.end` ; mapping ; Removed mapping of EndDateTime ; ZIB-1545, ZIB-1104

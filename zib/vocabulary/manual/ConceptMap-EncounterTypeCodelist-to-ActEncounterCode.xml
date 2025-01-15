@@ -96,10 +96,8 @@
             <code value="180211000146101"/>
             <display value="Primary care encounter with consulted physician"/>
             <target>
-                <code value=""/>
-                <display value=""/>
-                <equivalence value="unmatch"/>
-                <comment value=" missing info about whereabouts of patient and what method of contact is uesd between physicians"/>
+                <equivalence value="unmatched"/>
+                <comment value="missing info about whereabouts of patient and what method of contact is used between physicians"/>
             </target>
         </element> 
         <element>
