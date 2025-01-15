@@ -200,3 +200,9 @@
 * `.bodySite` ; cardinality ; Changed max cardinality from 1 to *. ; ZIB-1433
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
 * `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
+
+## TimeInterval (zib-TimeInterval, nl-core-TimeInterval)
+* `.start.extension:relativeStartTime.value[x]` ; mapping ; Added mapping of RelativeStartTime. ; ZIB-2148
+* `.start` ; textual ; Renamed from startDateTime to StartDateTime. ; ZIB-1756
+* `.end.extension:relativeEndTime.value[x]` ; mapping ; Added mapping of RelativeEndTime. ; ZIB-2148
+* `.end` ; textual ; Renamed from endDateTime to EndDateTime. ; ZIB-1756
