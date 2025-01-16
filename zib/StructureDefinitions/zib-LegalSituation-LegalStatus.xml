@@ -63,7 +63,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="303186005" />
+          <code value="8625004" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -75,7 +75,7 @@
       <min value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.17.1--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.17.1--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-legalsituation-v5.0-2024EN" />
