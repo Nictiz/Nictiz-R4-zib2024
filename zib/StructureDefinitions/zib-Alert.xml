@@ -41,7 +41,7 @@
         <key value="zib-Alert-1" />
         <severity value="error" />
         <human value="One concept from Condition::Concern and AlertName must be selected. If Flag.code contains a code from AlertNaamCodelijst, Flag.extension:condition SHALL not exist." />
-        <expression value="code.memberOf('http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.3.2--20200901000000') implies extension.where(url = 'http://hl7.org/fhir/StructureDefinition/flag-detail').exists().not()" />
+        <expression value="code.memberOf('http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.3.2--20240415000000') implies extension.where(url = 'http://hl7.org/fhir/StructureDefinition/flag-detail').exists().not()" />
       </constraint>
       <constraint>
         <key value="zib-Alert-2" />
@@ -133,7 +133,7 @@
       <max value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.3.1--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.3.1--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-alert-v4.2-2024EN" />
@@ -168,7 +168,7 @@
       <condition value="zib-Alert-1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.3.2--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.148.11.38--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-alert-v4.2-2024EN" />
