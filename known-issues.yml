@@ -333,6 +333,13 @@ zib-Problem:
         for: NL-CM:20.7.4 (AnatomicalLocation.Location)
         reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the fact that both the ProblemAnatomicalLocation concept from zib Problem and the Location concept from zib AnatomicalLocation are mapped on the same level in FHIR. Setting the cardinality to 0..* allows for multiple instances of AnatomicalLocation, which is in accordance with zib Problem.
 
+zib-SkinDisorder:
+  zib deviations:
+    Condition.bodySite:
+      - datatype: CodeableConcept instead of a reference
+        for: NL-CM_19.3.9 (Condition.bodySite)
+        reason: The referenced zib AnatomicalLocation is profiled on a datatype level and not a resource. Therefore it cannot be referenced, rather its concepts and constraints are added inline. This element conforms to the zib AnatomicalLocation.
+
 unmapped zib concepts:
   - NL-CM:17.2.10: HealthcareProvider.LocationNumber
     reason: This zib concept is problematic to map cleanly to FHIR and it has been deemed too uncommon in practice to warrant an extension.
