@@ -253,7 +253,7 @@
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Vertegenwoordiging bij wilsombekwaamheid"/>
+               <valueString value="Vertegenwoordiging bij wilsonbekwaamheid"/>
             </extension>
             <code value="30"/>
             <display value="Vertegenwoordiging bij wilsonbekwaamheid"/>
