@@ -125,8 +125,16 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
       </type>
       <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="minimum" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20240415000000" />
+          </extension>
+        </extension>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-bloodpressure-v5.0-2024EN" />
