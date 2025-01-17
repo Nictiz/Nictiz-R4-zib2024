@@ -176,6 +176,11 @@
 ## Nationality (zib-Patient, nl-core-Patient)
 * No significant changes.
 
+## O2Saturation (zib-O2Saturation, nl-core-O2Saturation)
+* `.effective[x]:effectiveDateTime` ; mapping ; Renamed mapping from O2SaturationDateTime to SpO2SaturationDateTime. ; ZIB-1217
+* `.bodySite` ; mapping ; Added mapping of MeasuringLocation. ; ZIB-1217
+* `.component:extraOxygenAdministration.code` ; textual ; Removed guidance for ExtraOxygenAdministration. ; ZIB-1217, ZIB-1476
+
 ## ParticipationInSociety
 ### zib-ParticipationInSociety, nl-core-ParticipationInSociety
 * No significant changes.
