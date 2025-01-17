@@ -7,12 +7,7 @@
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
-        <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Vital Signs (vital-signs - HL7 observation-category)">Vital Signs</span>, Status: definitief</caption>
-        <tfoot>
-          <tr>
-            <td colspan="2">Stijgt snel bij aanspreken</td>
-          </tr>
-        </tfoot>
+        <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Vital Signs (vital-signs - http://terminology.hl7.org/CodeSystem/observation-category)">Vital Signs</span>, Status: definitief</caption>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
@@ -24,7 +19,7 @@
           </tr>
           <tr>
             <td>
-              <span title="Oxygen saturation in Arterial blood (2708-6 - LOINC)">Oxygen saturation in Arterial blood</span>
+              <span title="Zuurstofverzadiging in arterieel bloed (2708-6 - LOINC)">Zuurstofverzadiging in arterieel bloed</span>
             </td>
             <td>92 %</td>
           </tr>
@@ -50,12 +45,12 @@
     <coding>
       <system value="http://loinc.org"/>
       <code value="2708-6"/>
-      <display value="Oxygen saturation in Arterial blood"/>
+      <display value="Zuurstofverzadiging in arterieel bloed"/>
     </coding>
     <coding>
       <system value="http://loinc.org"/>
       <code value="59408-5"/>
-      <display value="Oxygen saturation in Arterial blood by Pulse oximetry"/>
+      <display value="Zuurstofverzadiging in arterieel bloed d.m.v. pulsoxymetrie"/>
     </coding>
   </code>
   <subject>
