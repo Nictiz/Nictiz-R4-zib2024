@@ -150,6 +150,14 @@
 ### zib-IllnessPerception.PatientIllnessInsight, nl-core-IllnessPerception.PatientIllnessInsight
 * No significant changes.
 
+## LegalSituation 
+### zib-LegalSituation-LegalStatus, nl-core-LegalSituation-LegalStatus
+* `.category:legalStatusCode` ; terminology ; Pattern changed from http://snomed.info/sct#303186005 to http://snomed.info/sct#8625004. ; ZIB-2272
+* `.code` ; terminology ; Changed codes in LegalStatusCodelist. ; ZIB-1357, ZIB-1504, ZIB-2218
+
+### zib-LegalSituation-Representation, nl-core-LegalSituation-Representation
+* `.code` ; terminology ; Changed codes in RepresentationCodelist. ; ZIB-1480, ZIB-2099, ZIB-2218
+
 ## LanguageProficiency (zib-Patient, nl-core-Patient)
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877
 * `.communication.extension:comment` ; extension ; Replaced extension ExtComment with ExtLanguageProficiencyComment. ; ZIBFHIR-97
