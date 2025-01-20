@@ -46,16 +46,6 @@
         <comment value="Admission" />
       </mapping>
     </element>
-    <element id="Encounter.extension:extAdmissionCommentAdmissionReason">
-      <path value="Encounter.extension" />
-      <sliceName value="extAdmissionCommentAdmissionReason" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-Admission.CommentAdmissionReason" />
-      </type>
-      <isModifier value="false" />
-    </element>
     <element id="Encounter.status">
       <path value="Encounter.status" />
       <comment value="This element is implictly mapped to the zib concepts NL-CM:15.4.3 (StartDateTime) and NL-CM:15.4.4 (EndDateTime). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;When StartDateTime is in the future, .status will usually be set to planned.&#xD;&#xA;When StartDateTime is in the past and EndDateTime is present and in the future, .status will usually be set to in-progress.&#xD;&#xA;When EndDateTime is present and in the past, .status will usually be set to finished.&#xD;&#xA;When EndDateTime is not present, this means it was a point-in-time admission and .status will usually be set to finished.&#xD;&#xA;When a system is unable to infer the status from the StartDateTime and EndDateTime, .status will be set to unknown.&#xD;&#xA;The unknown code is not to be used to convey other statuses. The unknown code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.&#xD;&#xA;&#xD;&#xA;This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." />
@@ -184,6 +174,7 @@
     </element>
     <element id="Encounter.reasonCode.text">
       <path value="Encounter.reasonCode.text" />
+      <short value="CommentAdmissionReason" />
       <definition value="Comment on the reason for the (partial) admission, insofar as this cannot be sufficiently expressed in the other elements." />
       <alias value="ToelichtingRedenOpname" />
       <mapping>
