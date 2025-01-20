@@ -38,7 +38,7 @@
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
 
 ## Admission (zib-Admission, nl-core-Admission)
-* New profile of zib Admission on StructureDefinition Encounter.
+* New profile of zib Admission on resource Encounter.
 
 ## AnatomicalLocation 
 ### zib-AnatomicalLocation, nl-core-AnatomicalLocation
