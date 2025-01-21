@@ -165,6 +165,7 @@
     <element id="Encounter.reasonCode">
       <path value="Encounter.reasonCode" />
       <short value="TriggerForAdmission" />
+      <definition value="The specific reason for the admission in relation to the diagnosis and/or treatment of the problem." />
       <alias value="AanleidingOpname" />
       <max value="1" />
       <binding>
