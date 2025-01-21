@@ -164,23 +164,11 @@
     </element>
     <element id="Encounter.reasonCode">
       <path value="Encounter.reasonCode" />
-      <slicing>
-        <discriminator>
-          <type value="exists" />
-          <path value="text" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Encounter.reasonCode:triggerForAdmisson">
-      <path value="Encounter.reasonCode" />
-      <sliceName value="triggerForAdmisson" />
       <short value="TriggerForAdmission" />
-      <definition value="The specific reason for the admission in relation to the diagnosis and/or treatment of the problem." />
       <alias value="AanleidingOpname" />
       <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.1--20240415000000" />
       </binding>
       <mapping>
@@ -189,21 +177,11 @@
         <comment value="TriggerForAdmission" />
       </mapping>
     </element>
-    <element id="Encounter.reasonCode:triggerForAdmisson.text">
-      <path value="Encounter.reasonCode.text" />
-      <min value="1" />
-    </element>
-    <element id="Encounter.reasonCode:commentAdmissionReason">
-      <path value="Encounter.reasonCode" />
-      <sliceName value="commentAdmissionReason" />
-      <max value="1" />
-    </element>
-    <element id="Encounter.reasonCode:commentAdmissionReason.text">
+    <element id="Encounter.reasonCode.text">
       <path value="Encounter.reasonCode.text" />
       <short value="CommentAdmissionReason" />
       <definition value="Comment on the reason for the (partial) admission, insofar as this cannot be sufficiently expressed in the other elements." />
       <alias value="ToelichtingRedenOpname" />
-      <min value="1" />
       <mapping>
         <identity value="zib-admission-v2.0-2024EN" />
         <map value="NL-CM:15.4.8" />
