@@ -52,15 +52,6 @@
         <comment value="Encounter" />
       </mapping>
     </element>
-    <element id="Encounter.extension:extEncounterCommentEncounterReason">
-      <path value="Encounter.extension" />
-      <sliceName value="extEncounterCommentEncounterReason" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-Encounter.CommentEncounterReason" />
-      </type>
-      <isModifier value="false" />
-    </element>
     <element id="Encounter.status">
       <path value="Encounter.status" />
       <comment value="This element is implictly mapped to the zib concept NL-CM:15.1.3 (DateTime). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;* When DateTime is in the future, `.status` will usually be set to _planned_.&#xD;&#xA;* When DateTime is in the past, `.status` will usually be set to _finished_.&#xD;&#xA;* When a system is unable to infer the status from DateTime, `.status` will be set to _unknown_.&#xD;&#xA;&#xD;&#xA;The _unknown_ code is not to be used to convey other statuses.  The _unknown_ code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.&#xA;&#xA;This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." />
@@ -211,29 +202,29 @@
     </element>
     <element id="Encounter.reasonCode">
       <path value="Encounter.reasonCode" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Encounter.reasonCode:reason">
-      <path value="Encounter.reasonCode" />
-      <sliceName value="reason" />
       <short value="Reason" />
       <definition value="Main reason for the encounter within the context of the health problem." />
       <alias value="AanleidingContact" />
       <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.1.3--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-encounter-v6.0-2024EN" />
         <map value="NL-CM:15.1.20" />
         <comment value="Reason" />
+      </mapping>
+    </element>
+    <element id="Encounter.reasonCode.text">
+      <path value="Encounter.reasonCode.text" />
+      <short value="CommentEncounterReason" />
+      <definition value="Comment on the reason for the encounter, insofar as this cannot be sufficiently expressed in the other elements." />
+      <alias value="ToelichtingRedenContact" />
+      <mapping>
+        <identity value="zib-encounter-v6.0-2024EN" />
+        <map value="NL-CM:15.1.17" />
+        <comment value="CommentEncounterReason" />
       </mapping>
     </element>
     <element id="Encounter.reasonReference">

@@ -117,7 +117,7 @@
 * `.period.end` ; mapping ; Removed mapping of EndDateTime ; ZIB-1545, ZIB-1104
 * `.reasonCode` ; mapping ; Added mapping of Reason ; ZIB-1545, ZIB-1104
 * `.reasonCode:deviatingResult` ; mapping ; Removed mapping of DeviatingResult ; ZIB-1545, ZIB-1104
-* `.reasonCode.extension:commentEncounterReason` ; mapping ; Moved mapping of CommentEncounterReason from `.reasonCode:deviatingResult.extension:commentEncounterReason` ; ZIB-1545, ZIB-1104
+* `.reasonCode.extension:commentEncounterReason` ; mapping ; Removed mapping of CommentEncounterReason ; ZIB-1545, ZIB-1104
 * `.reasonReference:procedure` ; mapping ; Removed mapping of Procedure ; ZIB-1545, ZIB-1104
 * `.hospitalization.admitSource` ; mapping ; Removed mapping of Origin ; ZIB-1545, ZIB-1104
 * `.hospitalization.dischargeDisposition` ; mapping ; Removed mapping of Destination ; ZIB-1545, ZIB-1104, ZIB-1824
