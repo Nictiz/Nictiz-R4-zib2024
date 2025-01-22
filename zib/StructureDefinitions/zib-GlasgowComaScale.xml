@@ -19,13 +19,13 @@
     </telecom>
   </contact>
   <description value="Fifteen-point scale for expressing a person’s level of consciousness, from fully awake to deep unconsciousness, in a number: the so-called EMV score.&#xD;&#xA;The Glasgow Coma Scale score or EMV (Eye-Motor-Verbal) score is a scale to measure the extent of consciousness, based on eye, verbal and motor responses to specific prescribed sound and pain stimuli." />
-  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) GlasgowComaScale v3.2 (2020)](https://zibs.nl/wiki/GlasgowComaScale-v3.2(2020EN))." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) GlasgowComaScale v3.4 (2024)](https://zibs.nl/wiki/GlasgowComaScale-v3.4(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-glasgowcomascale-v3.2-2020EN" />
-    <uri value="https://zibs.nl/wiki/GlasgowComaScale-v3.2(2020EN)" />
-    <name value="zib GlasgowComaScale-v3.2(2020EN)" />
+    <identity value="zib-glasgowcomascale-v3.4-2024EN" />
+    <uri value="https://zibs.nl/wiki/GlasgowComaScale-v3.4(2024EN)" />
+    <name value="zib GlasgowComaScale-v3.4(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -38,7 +38,7 @@
       <short value="GlasgowComaScale" />
       <alias value="GlasgowComaScale" />
       <mapping>
-        <identity value="zib-glasgowcomascale-v3.2-2020EN" />
+        <identity value="zib-glasgowcomascale-v3.4-2024EN" />
         <map value="NL-CM:12.8.1" />
         <comment value="GlasgowComaScale" />
       </mapping>
@@ -72,7 +72,7 @@
         <code value="dateTime" />
       </type>
       <mapping>
-        <identity value="zib-glasgowcomascale-v3.2-2020EN" />
+        <identity value="zib-glasgowcomascale-v3.4-2024EN" />
         <map value="NL-CM:12.8.8" />
         <comment value="GlasgowComaScaleDateTime" />
       </mapping>
@@ -99,7 +99,7 @@
       <minValueInteger value="3" />
       <maxValueInteger value="15" />
       <mapping>
-        <identity value="zib-glasgowcomascale-v3.2-2020EN" />
+        <identity value="zib-glasgowcomascale-v3.4-2024EN" />
         <map value="NL-CM:12.8.10" />
         <comment value="TotalScore" />
       </mapping>
@@ -114,7 +114,7 @@
       <definition value="Comment on (the context of) the EMV score measurement, such as any problems or factors that may influence interpretation." />
       <alias value="Toelichting" />
       <mapping>
-        <identity value="zib-glasgowcomascale-v3.2-2020EN" />
+        <identity value="zib-glasgowcomascale-v3.4-2024EN" />
         <map value="NL-CM:12.8.9" />
         <comment value="Comment" />
       </mapping>
@@ -156,7 +156,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.1--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-glasgowcomascale-v3.2-2020EN" />
+        <identity value="zib-glasgowcomascale-v3.4-2024EN" />
         <map value="NL-CM:12.8.2" />
         <comment value="GCS_Eyes" />
       </mapping>
@@ -188,7 +188,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.5--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-glasgowcomascale-v3.2-2020EN" />
+        <identity value="zib-glasgowcomascale-v3.4-2024EN" />
         <map value="NL-CM:12.8.4" />
         <comment value="GCS_Motor" />
       </mapping>
@@ -220,7 +220,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.6--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-glasgowcomascale-v3.2-2020EN" />
+        <identity value="zib-glasgowcomascale-v3.4-2024EN" />
         <map value="NL-CM:12.8.6" />
         <comment value="GCS_Verbal" />
       </mapping>
@@ -252,7 +252,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.6--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-glasgowcomascale-v3.2-2020EN" />
+        <identity value="zib-glasgowcomascale-v3.4-2024EN" />
         <map value="NL-CM:12.8.11" />
         <comment value="ConditionsDuringMeasurement" />
       </mapping>
