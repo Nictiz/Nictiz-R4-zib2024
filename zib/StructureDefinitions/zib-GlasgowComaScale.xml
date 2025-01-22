@@ -153,7 +153,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.1--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.1--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-glasgowcomascale-v3.4-2024EN" />
@@ -185,7 +185,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.5--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.5--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-glasgowcomascale-v3.4-2024EN" />
@@ -217,7 +217,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.6--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.6--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-glasgowcomascale-v3.4-2024EN" />
@@ -249,7 +249,7 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.6--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.6--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-glasgowcomascale-v3.4-2024EN" />
