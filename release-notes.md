@@ -163,7 +163,7 @@
 
 ## MUSTScore (zib-MUSTScore, nl-core-MUSTScore)
 * `Observation` ; constraint ; Added zib-MUSTScore-1 for TotalScore ; ZIBFHIR-200
-* `Observation` ; constraint ; Added zib-MUSTScore-2 for BMIScore, WeightLossScore and IllnessScore ; ZIBFHIR200
+* `Observation` ; constraint ; Added zib-MUSTScore-2 for BMIScore, WeightLossScore and IllnessScore ; ZIBFHIR-200
 
 ## NameInformation
 ### zib-NameInformation
