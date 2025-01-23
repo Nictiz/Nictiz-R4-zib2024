@@ -59,7 +59,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-BloodPressure.AnatomicalLocation" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-BloodPressure.AnatomicalLocation-BodyStructure" />
       </type>
     </element>
   </differential>

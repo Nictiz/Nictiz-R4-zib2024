@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-BloodPressure.AnatomicalLocation" />
+  <id value="zib-BloodPressure.AnatomicalLocation-BodyStructure" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure.AnatomicalLocation" />
-  <name value="ZibBloodPressureAnatomicalLocation" />
-  <title value="zib BloodPressure.AnatomicalLocation" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure.AnatomicalLocation-BodyStructure" />
+  <name value="ZibBloodPressureAnatomicalLocationBodyStructure" />
+  <title value="zib BloodPressure.AnatomicalLocation BodyStructure" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -34,8 +34,10 @@
     <element id="BodyStructure.location">
       <path value="BodyStructure.location" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet">
+          <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20240415000000" />
+        </extension>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-bloodpressure-v5.0-2024EN" />

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-BloodPressure.AnatomicalLocation" />
+  <id value="nl-core-BloodPressure.AnatomicalLocation-BodyStructure" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-BloodPressure.AnatomicalLocation" />
-  <name value="NlcoreBloodPressureAnatomicalLocation" />
-  <title value="nl core BloodPressure.AnatomicalLocation" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-BloodPressure.AnatomicalLocation-BodyStructure" />
+  <name value="NlcoreBloodPressureAnatomicalLocationBodyStructure" />
+  <title value="nl core BloodPressure.AnatomicalLocation BodyStructure" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="Anatomical location where the blood pressure was measured." />
-  <purpose value="A derived profile from [zib-BloodPressure.AnatomicalLocation](http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure.AnatomicalLocation) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />
+  <purpose value="A derived profile from [zib-BloodPressure.AnatomicalLocation-BodyStructure](http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure.AnatomicalLocation-BodyStructure) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -34,7 +34,7 @@
     <element id="BodyStructure">
       <path value="BodyStructure" />
       <definition value="AnatomicalLocation is mapped to both a profile on CodeableConcept (&lt;http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation&gt;) and this BodyStructure profile. &#xA;&#xA;When it is required to convey a discrete Laterality (NL-CM:20.7.3) next to (or in absence of) the Location (NL-CM:20.7.4), this BodyStructure profile should be used and referenced from the relevant resource. In cases where Laterality is either unnecessary or embedded within the location code itself, it can be conveyed directly in the relevant resource.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both the BodyStructure resource and the CodeableConcept in host resources, as either mechanism may be employed. Providing systems can select the appropriate mechanism based on their data requirements." />
-      <alias value="nl-core-BloodPressure.AnatomicalLocation" />
+      <alias value="nl-core-BloodPressure.AnatomicalLocation-BodyStructure" />
     </element>
   </differential>
 </StructureDefinition>
