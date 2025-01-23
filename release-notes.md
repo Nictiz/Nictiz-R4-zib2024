@@ -219,3 +219,7 @@
 * `.bodySite` ; cardinality ; Changed max cardinality from 1 to *. ; ZIB-1433
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
 * `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
+
+ ## SNAQrcScore (zib-SNAQrcScore , nl-core-SNAQrcScore)
+ * `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-2058
+ * `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-2058
