@@ -550,7 +550,7 @@
       <element id="Dosage.maxDosePerPeriod">
          <path value="Dosage.maxDosePerPeriod"/>
          <short value="MaximumDose"/>
-         <definition value="A MaximumDose maximizes (in time) the usage of a drug in an 'as needed' prescription.Permitted units for the duration: minute, hour, day, week, year"/>
+         <definition value="A MaximumDose maximizes (in time) the usage of a drug in an 'as needed' prescription. Permitted units for the duration: minute, hour, day, week, year"/>
          <alias value="MaximaleDosering"/>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
