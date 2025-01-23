@@ -397,13 +397,14 @@ nl-core-BloodPressure-*:
     Observation.code.coding[*].display:
       - message: Wrong Display Name 'Bloeddruk panel waarvan alle leden optioneel in arterieel vaatstelsel' for http://loinc.org#85354-9. There are no valid display names found for language(s) 'en'. Default display is 'Blood pressure panel with all children optional'
         reason: A valid Dutch display value is used instead of an English one.
+    Observation.component[*].code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
+    Observation.component[*].code.coding[*].display:
       - message: Wrong Display Name 'Intravasculaire systolische bloeddruk in arterieel vaatstelsel' for http://loinc.org#8480-6. There are no valid display names found for language(s) 'en'. Default display is 'Systolic blood pressure'
         reason: A valid Dutch display value is used instead of an English one.
       - message: Wrong Display Name 'Intravasculaire diastolische bloeddruk in arterieel vaatstelsel' for http://loinc.org#8462-4. There are no valid display names found for language(s) 'en'. Default display is 'Diastolic blood pressure'
         reason: A valid Dutch display value is used instead of an English one.
-    Observation.component[*].code:
-      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
-        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
 
 nl-core-BodyHeight-*:
   ignored issues:
