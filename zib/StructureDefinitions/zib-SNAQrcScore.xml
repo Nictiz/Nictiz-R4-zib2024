@@ -169,7 +169,7 @@
       <condition value="zib-SNAQrcScore-2" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.29.1--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.29.1--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-snaqrcscore-v1.3-2024EN" />
@@ -205,7 +205,7 @@
       <condition value="zib-SNAQrcScore-2" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.29.2--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.29.2--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-snaqrcscore-v1.3-2024EN" />
@@ -241,7 +241,7 @@
       <condition value="zib-SNAQrcScore-2" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.29.3--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.29.3--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-snaqrcscore-v1.3-2024EN" />
@@ -277,7 +277,7 @@
       <condition value="zib-SNAQrcScore-2" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.29.4--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.29.4--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-snaqrcscore-v1.3-2024EN" />
