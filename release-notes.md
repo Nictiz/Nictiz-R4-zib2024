@@ -52,6 +52,8 @@
 * Changed description of BloodPressure. ; ZIB-2112, ZIB-2589
 * `.bodySite` ; mapping ; Renamed mapping from MeasuringLocation to AnatomicalLocation. ; ZIB-1731
 * `.bodySite` ; terminology ; Changed codes in MeetLocatieCodelijst. ; ZIB-1731, ZIB-1813
+* `.bodySite` ; terminology ; Changed value set from MeetLocatieCodelijst to LocatieCodelijsten. ; ZIBFHIR-192
+* `.bodySite` ; terminology ; Added MeetLocatieCodelijst as minimum allowable value set. ; ZIBFHIR-192
 * `.method` ; terminology ; Changed codes in MeetmethodeCodelijst. ; ZIB-2036
 * `.component:diastolicEndpoint.value[x]` ; terminology ; Changed codes in DiastolischEindpuntCodelijst. ; ZIB-2218
 * `.component:cuffType.value[x]` ; terminology ; Changed codes in ManchetTypeCodelijst. ; ZIB-2218
