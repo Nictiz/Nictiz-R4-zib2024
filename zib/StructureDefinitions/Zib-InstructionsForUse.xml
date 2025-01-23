@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
    <id value="zib-InstructionsForUse"/>
    <text>
-    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+      <status value="empty"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+   </text>
    <url value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse"/>
    <name value="ZibInstructionsForUse"/>
    <title value="zib InstructionsForUse"/>
@@ -31,7 +33,7 @@
       <name value="zib Range-v1.0.1(2024EN)"/>
    </mapping>
    <kind value="complex-type"/>
-   <abstract value="false"/>
+   <abstract value="true"/>
    <type value="Dosage"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Dosage"/>
    <derivation value="constraint"/>
@@ -39,6 +41,7 @@
       <element id="Dosage">
          <path value="Dosage"/>
          <short value="DosingInstructions"/>
+         <definition value="Dosing instructions"/>
          <comment value="This element _mostly_ represents the DosingInstructions container from zib InstructionsForUse, but also includes the AdditionalInstructions and RouteOfAdministration concepts, which are normally placed on the same level as this container. As a result, these concepts are **duplicated** in every repetition of this element, even though these concepts should be present just once according to the zib.&#xD;&#xA;&#xD;&#xA;This element does not contain a mapping to the Dosage container from zib InstructionsForUse. However, all child concepts of the Dosage concept are mapped. If an instance of zib container DosingInstructions contains multiple Dosage containers, each of these results in a separate instance of the FHIR Dosage data type conforming to this profile, wherein `.sequence` (zib concept SequenceNumber) and `.timing.repeat.bounds[x]:boundsDuration` (zib concept DoseDuration) are equal."/>
          <alias value="Doseerinstructie"/>
          <mapping>
@@ -86,7 +89,7 @@
          <short value="AdditionalInstructions"/>
          <definition value="The additional instructions contain extra guidance on the use of the current prescription. &#xD;&#xA;&#xD;&#xA;This includes all instructions for use. The text can come from the original “paper&#34; medication prescription, but can also be generated from the coded information. This concept may contain more information than what is structurally coded, but may not conflict with it. The instructions may not conflict with other components of the request for administration. The instructions can also refer to an existing protocol. The texts in the G-standard that can support this attribute are included in table 362 and are a copy of the texts from the general practitioner' standard 'NHG-tabel Gebruiksvoorschrift' which are included in the CIM. These texts can be used to structure this concept."/>
          <comment value="Please note that in contrast to the zib, this AdditionalInstructions concept is grouped under the DosingInstructions concept. This `.additionalInstruction` element shall have the same value when there are multiple DosingInstructions."/>
-         <alias value="AanvullendeInstructie"/>
+         <alias value="AanvullendeInstructies"/>
          <binding>
             <strength value="extensible"/>
             <description value="NHG Table 25 for additional instructions for use"/>
@@ -158,8 +161,8 @@
          <definition value="Usually, frequency comprises both amount and a specific time unit (minute, hour, day, week, month, or year), such as `3 times a day`, but it can occur without the time unit (single use). This is represented by this `.count` element and optionally `.countMax` if a range should be represented.&#xD;&#xA;&#xD;&#xA;A reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)."/>
          <comment value="Notes on the zib concepts Frequency and Interval:&#xA;1. An interval (in FHIR) is just a normal frequency of 1 (combined with a period based on the interval length) and is represented in FHIR as just another frequency using `.frequency` (set to 1), `.period` and `.periodUnit`. However, the zib differentiates between the two concepts in the timing precision (the Interval concept defines precise intervals while the Frequency concept defines approximate intervals). When the interval is precise, this is communicated using the extension in `.extension:timingExact`.&#xA;2. On the other hand, the zib Frequency concept might be used to express a single-use, non-repeating series by omitting the time unit. In FHIR, this is _not_ represented as a frequency, but with the `.count` element.&#xA;3. Lastly, the Frequency concept may be used to express either a single nominal value or a range. A range is represented by respectively setting the minimum and maximum value to `.frequency` and `.frequencyMax`, or to `.count` and `.countMax` for single-use events. A nominal value is expressed by setting its value to `.frequency` or to `.count` for single-use events, and leaving `.frequencyMax` and `.countMax` unpopulated.&#xA;&#xA;In summary:&#xA;* zib concept Frequency:&#xA;    * With time unit:&#xA;        * Nominal value: `.frequency`, `.period` and `.periodUnit`&#xA;        * Range: `.frequency`, `.frequencyMax`, `.period` and `.periodUnit`&#xA;    * Without time unit:&#xA;        * Nominal value: `.count`&#xA;        * Range: `.count` and `.countMax`&#xA;* zib concept Interval: `.frequency` (set to 1), `.period`, `.periodUnit` and `.extension:timingExact` (set to _true_)"/>
          <alias value="Frequentie"/>
-         <alias value="nominaleWaarde"/>
          <alias value="minimumWaarde"/>
+         <alias value="nominaleWaarde"/>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
             <map value="NL-CM:9.12.19949"/>
@@ -251,8 +254,8 @@
          <short value="Frequency / maximumValue"/>
          <definition value="If present, indicates that the frequency is a range - so to repeat between [frequency] and [frequencyMax] times within the period or period range.&#xD;&#xA;&#xD;&#xA;If the `.extension:timingExact` element is absent or set to _false_, a reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics). &#xA;&#xA;If the `.extension:timingExact` element is present and set to _true_, the times can be chosen freely, but distribution throughout the day is more precise, and the interval between times is important (e.g. in the case of antibiotics). In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)."/>
          <comment value="Notes on the zib concepts Frequency and Interval:&#xA;1. An interval (in FHIR) is just a normal frequency of 1 (combined with a period based on the interval length) and is represented in FHIR as just another frequency using `.frequency` (set to 1), `.period` and `.periodUnit`. However, the zib differentiates between the two concepts in the timing precision (the Interval concept defines precise intervals while the Frequency concept defines approximate intervals). When the interval is precise, this is communicated using the extension in `.extension:timingExact`.&#xA;2. On the other hand, the zib Frequency concept might be used to express a single-use, non-repeating series by omitting the time unit. In FHIR, this is _not_ represented as a frequency, but with the `.count` element.&#xA;3. Lastly, the Frequency concept may be used to express either a single nominal value or a range. A range is represented by respectively setting the minimum and maximum value to `.frequency` and `.frequencyMax`, or to `.count` and `.countMax` for single-use events. A nominal value is expressed by setting its value to `.frequency` or to `.count` for single-use events, and leaving `.frequencyMax` and `.countMax` unpopulated.&#xA;&#xA;In summary:&#xA;* zib concept Frequency:&#xA;    * With time unit:&#xA;        * Nominal value: `.frequency`, `.period` and `.periodUnit`&#xA;        * Range: `.frequency`, `.frequencyMax`, `.period` and `.periodUnit`&#xA;    * Without time unit:&#xA;        * Nominal value: `.count`&#xA;        * Range: `.count` and `.countMax`&#xA;* zib concept Interval: `.frequency` (set to 1), `.period`, `.periodUnit` and `.extension:timingExact` (set to _true_)"/>
-         <alias value="maximumWaarde"/>
          <alias value="Frequentie"/>
+         <alias value="maximumWaarde"/>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
             <map value="NL-CM:9.12.19949"/>
@@ -335,7 +338,7 @@
       </element>
       <element id="Dosage.timing.repeat.when">
          <path value="Dosage.timing.repeat.when"/>
-         <short value="TimeOfDay"/>
+         <short value="DayPart"/>
          <definition value="Daypart: morning, afternoon, evening, night."/>
          <comment value="If there's a `.timeOfDay`, there cannot be a `.when`, or vice versa."/>
          <alias value="Dagdeel"/>
@@ -351,7 +354,7 @@
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
             <map value="NL-CM:9.12.19953"/>
-            <comment value="TimeOfDay"/>
+            <comment value="DayPart"/>
          </mapping>
       </element>
       <element id="Dosage.asNeeded[x]">
@@ -533,7 +536,7 @@
          <path value="Dosage.doseAndRate.rate[x]"/>
          <sliceName value="rateQuantity"/>
          <short value="nominalValue"/>
-         <definition value="The nominal value of the quantity."/>
+         <definition value="The nominal value of the quantity. This element can not be used in combination with a minimum and maximum value"/>
          <alias value="nominaleWaarde"/>
          <type>
             <code value="Quantity"/>
@@ -547,7 +550,7 @@
       <element id="Dosage.maxDosePerPeriod">
          <path value="Dosage.maxDosePerPeriod"/>
          <short value="MaximumDose"/>
-         <definition value="A maximum dose maximizes (in time) the usage of a drug in an 'as needed' prescription."/>
+         <definition value="A MaximumDose maximizes (in time) the usage of a drug in an 'as needed' prescription.Permitted units for the duration: minute, hour, day, week, year"/>
          <alias value="MaximaleDosering"/>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
