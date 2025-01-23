@@ -35,13 +35,19 @@
   <differential>
     <element id="Coverage">
       <path value="Coverage" />
-      <short value="Payer" />
-      <comment value="The zib Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These two containers cannot be profiled within one profile because they both require mapping different concepts on elements such as `.payor` and `.type`.&#xD;&#xA;&#xD;&#xA;The zib container Payer.PayerPerson is mapped to this Coverage profile and uses the profile [zib-Patient](http://nictiz.nl/fhir/StructureDefinition/zib-Patient), [zib-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson) or [zib-Payer-Organization](http://nictiz.nl/fhir/StructureDefinition/zib-Payer-Organization) to capture the PayerName, AddressInformation and ContactInformation concepts. These profiles are referenced using the `.payor` element." />
+      <short value="Payer / PayerPerson" />
+      <comment value="The zib Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These two containers cannot be profiled within one profile because they both require mapping different concepts on elements such as `.payor` and `.type`.&#xD;&#xA;&#xD;&#xA;The zib container Payer.PayerPerson is mapped to this Coverage profile and profiles on Patient (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-Patient&gt;), RelatedPerson (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson&gt;) and Organization (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-Payer-Organization&gt;) to capture the PayerName, AddressInformation and ContactInformation. These profiles are referenced using the `.payor` element." />
       <alias value="Betaler" />
+      <alias value="BetalerPersoon" />
       <mapping>
         <identity value="zib-payer-v4.1-2024EN" />
         <map value="NL-CM:1.1.1" />
         <comment value="Payer" />
+      </mapping>
+      <mapping>
+        <identity value="zib-payer-v4.1-2024EN" />
+        <map value="NL-CM:1.1.2" />
+        <comment value="PayerPerson" />
       </mapping>
     </element>
     <element id="Coverage.extension:bankInformation">
@@ -68,10 +74,7 @@
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
-      <short value="PayerPerson" />
-      <definition value="In the PayerPerson concept a person is a natural person or a juridical person, such as an organization, municipality, etc." />
-      <comment value="If the resource referenced is conformant to one of the target zib profiles, these profiles provide a mapping to the relevant zib Payer concepts. If it is not conformant to one of these zib profiles, it SHALL have at least the following FHIR elements filled to be compliant with the subsequent zib Payer concepts:&#xD;&#xA;* `name.text` - PayerPerson::PayerName (NL-CM:1.1.5)&#xD;&#xA;* `address` - AddressInformation (NL-CM:1.1.17)&#xD;&#xA;* `telecom` - ContactInformation (NL-CM:1.1.12)" />
-      <alias value="BetalerPersoon" />
+      <comment value="If the resource referenced is conformant to one of the target zib profiles, these profiles provide a mapping to the relevant zib Payer concepts. If it is not conformant to one of these zib profiles, it SHALL have at least the following FHIR elements filled to be compliant with the subsequent zib Payer concepts:&#xD;&#xA;* `.name.text` - PayerPerson.PayerName (NL-CM:1.1.5)&#xD;&#xA;* `.address` - AddressInformation (NL-CM:1.1.17)&#xD;&#xA;* `.telecom` - ContactInformation (NL-CM:1.1.12)" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -82,11 +85,6 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Patient" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson" />
       </type>
-      <mapping>
-        <identity value="zib-payer-v4.1-2024EN" />
-        <map value="NL-CM:1.1.2" />
-        <comment value="PayerPerson" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>

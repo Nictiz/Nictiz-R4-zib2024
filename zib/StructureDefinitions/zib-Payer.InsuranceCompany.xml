@@ -33,14 +33,20 @@
   <differential>
     <element id="Coverage">
       <path value="Coverage" />
-      <short value="Payer / Insurance" />
-      <comment value="The zib Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These two containers cannot be profiled within one profile because they both require mapping different concepts on elements such as `.payor` and `.type`.&#xD;&#xA;&#xD;&#xA;The zib container Payer.InsuranceCompany is mapped to this Coverage profile and a profile on Organization (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-Payer-Organization&gt;) to capture the OrganizationName, IdentificationNumber, AddressInformation and ContactInformation. The zib-Payer-Organization profile is referenced using the `.payor` element." />
+      <short value="Payer / InsuranceCompany / Insurance" />
+      <comment value="The zib Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These two containers cannot be profiled within one profile because they both require mapping different concepts on elements such as `.payor` and `.type`.&#xD;&#xA;&#xD;&#xA;The zib container Payer.InsuranceCompany is mapped to this Coverage profile and a profile on Organization (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-Payer-Organization&gt;) to capture the OrganizationName, IdentificationNumber, AddressInformation and ContactInformation. The zib-Payer-Organization profile is referenced using the `.payor` element.&#xD;&#xA;&#xD;&#xA;If multiple insurances at the same insurance company need to be communicated (corresponding to multiple instantiated Insurance (NL-CM:1.1.8) concepts), this profile needs to be instantiated once for each insurance. All other data related to the insurance company that is not specific to a single insurance, such as the `.subscriberId` or the reference to the Organization resource on `.payor`, is duplicated in each of these instances.&#xD;&#xA;&#xD;&#xA;Note that this profile is called zib-Payer.InsuranceCompany since the zib Payer views data on the payment of supplied care from the perspective of the payers (such as insurance companies). On the other hand, the Coverage resource is constructed from the perspective of an insurance (plan). Hence, even though the name zib-Payer.Insurance would make more sense semantically (especially in the case of multiple insurances at the same insurance company), it is chosen to use the current name instead to align with the hierarchy of the zib data model." />
       <alias value="Betaler" />
+      <alias value="Verzekeraar" />
       <alias value="Verzekering" />
       <mapping>
         <identity value="zib-payer-v4.1-2024EN" />
         <map value="NL-CM:1.1.1" />
         <comment value="Payer" />
+      </mapping>
+      <mapping>
+        <identity value="zib-payer-v4.1-2024EN" />
+        <map value="NL-CM:1.1.3" />
+        <comment value="InsuranceCompany" />
       </mapping>
       <mapping>
         <identity value="zib-payer-v4.1-2024EN" />
@@ -112,8 +118,6 @@
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
-      <short value="InsuranceCompany" />
-      <alias value="Verzekeraar" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -122,11 +126,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer-Organization" />
       </type>
-      <mapping>
-        <identity value="zib-payer-v4.1-2024EN" />
-        <map value="NL-CM:1.1.3" />
-        <comment value="InsuranceCompany" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>

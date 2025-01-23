@@ -218,13 +218,15 @@
 
 ## Payer 
 ### zib-Payer-Organization, nl-core-Payer-Organization
-* No significant changes.
+* `Organization` ; mapping ; Removed mapping of InsuranceCompany. ; ZIBFHIR-196
 
 ### zib-Payer.InsuranceCompany, nl-core-Payer.InsuranceCompany
+* `Coverage` ; mapping ; Moved mapping of InsuranceCompany from `.payor`. ; ZIBFHIR-196
+* `Coverage` ; textual ; Added guidance for Insurance. ; ZIBFHIR-196
 * `.type` ; terminology ; Changed codes in VerzekeringssoortCodelijst. ; ZIB-2218
 
 ### zib-Payer.PayerPerson, nl-core-Payer.PayerPerson
-* No significant changes.
+* `Coverage` ; mapping ; Moved mapping of PayerPerson from `.payor`. ; ZIBFHIR-196
 
 ## Problem (zib-Problem, nl-core-Problem)
 * `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-1575, ZIB-2087, ZIB-2218
