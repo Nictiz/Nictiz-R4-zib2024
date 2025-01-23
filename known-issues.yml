@@ -70,10 +70,6 @@ zib-BloodPressure:
     Observation.effective[x]:effectiveDateTime:
       - cardinality: 1..1 instead of 0..1
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
-  ignored issues:
-    Observation.component:*BP:
-      - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
-        reason: The slices SystolicBP and DiastolicBP start with an uppercase letter to align with the HL7 Vital Signs profile.
 
 zib-BodyHeight:
   zib deviations:
@@ -392,6 +388,22 @@ nl-core-*:
         reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
+
+nl-core-BloodPressure-*:
+  ignored issues:
+    Observation.code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code used is the magic LOINC code for blood pressure, hence this issue should not arise.
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Bloeddruk panel waarvan alle leden optioneel in arterieel vaatstelsel' for http://loinc.org#85354-9. There are no valid display names found for language(s) 'en'. Default display is 'Blood pressure panel with all children optional'
+        reason: A valid Dutch display value is used instead of an English one.
+      - message: Wrong Display Name 'Intravasculaire systolische bloeddruk in arterieel vaatstelsel' for http://loinc.org#8480-6. There are no valid display names found for language(s) 'en'. Default display is 'Systolic blood pressure'
+        reason: A valid Dutch display value is used instead of an English one.
+      - message: Wrong Display Name 'Intravasculaire diastolische bloeddruk in arterieel vaatstelsel' for http://loinc.org#8462-4. There are no valid display names found for language(s) 'en'. Default display is 'Diastolic blood pressure'
+        reason: A valid Dutch display value is used instead of an English one.
+    Observation.component[*].code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
 
 nl-core-BodyHeight-*:
   ignored issues:
