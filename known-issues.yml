@@ -77,6 +77,12 @@ zib-BodyHeight:
       - cardinality: 1..1 instead of 0..1
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
+zib-BodyTemperature:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+
 zib-BodyWeight:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
@@ -417,6 +423,15 @@ nl-core-BodyHeight-*:
     Observation.component[*].code:
       - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
         reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
+
+nl-core-BodyTemperature-*:
+  ignored issues:
+    Observation.code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code used is the magic LOINC code for body temperature, hence this issue should not arise.
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Lichaamstemperatuur' for http://loinc.org#8310-5. There are no valid display names found for language(s) 'en'. Default display is 'Body temperature'
+        reason: A valid Dutch display value is used instead of an English one.
 
 nl-core-BodyWeight-*:
   ignored issues:

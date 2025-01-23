@@ -65,9 +65,12 @@
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
 
+## BodyTemperature (zib-BodyTemperature, nl-core-BodyTemperature)
+* `.value[x]` ; terminology ; Added required binding to BodyTemperatureUnits. ; ZIBFHIR-178
+
 ## BodyWeight (zib-BodyWeight, nl-core-BodyWeight)
 * `.value[x]` ; textual ; Changed definition of WeightValue. ; ZIB-1886
-* `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIB-1886
+* `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIBFHIR-178
 * `.component:clothing.value[x]` ; terminology ; Changed codes in KledingCodelijst. ; ZIB-1704
 
 ## ContactInformation 
