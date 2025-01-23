@@ -38,14 +38,14 @@
       <constraint>
         <key value="zib-MUSTScore-1" />
         <severity value="error" />
-        <human value="If the BMIScore, WeightLossScore and IllnessScore concepts have not been entered, then the TotalScore is required." />
-        <expression value="component.empty() implies value.ofType(integer).exists()" />
+        <human value="If one of the component codes is present, all SHALL be present." />
+        <expression value="component.where(code.coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1' and code.coding.code.subsetOf('4005003'|'4005004'|'4005005')).count().subsetOf(0|3)" />
       </constraint>
       <constraint>
         <key value="zib-MUSTScore-2" />
         <severity value="error" />
-        <human value="If one individual score is entered, all three individual scores must be entered." />
-        <expression value="component.empty() or (component.code.coding.where(system = 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1' and code = '4005003').exists() and component.code.coding.where(system = 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1' and code = '4005004').exists() and component.code.coding.where(system = 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1' and code = '4005005').exists())" />
+        <human value="If the component codes are not all present, the value SHALL be present." />
+        <expression value="value.empty().not() or component.where(code.coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1' and code.coding.code.subsetOf('4005003'|'4005004'|'4005005')).count()=3" />
       </constraint>
       <mapping>
         <identity value="zib-mustscore-v3.1.1-2024EN" />
@@ -109,7 +109,7 @@
       </type>
       <minValueInteger value="0" />
       <maxValueInteger value="6" />
-      <condition value="zib-MUSTScore-1" />
+      <condition value="zib-MUSTScore-2" />
       <mapping>
         <identity value="zib-mustscore-v3.1.1-2024EN" />
         <map value="NL-CM:4.5.2" />
