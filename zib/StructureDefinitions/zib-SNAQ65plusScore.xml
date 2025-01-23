@@ -36,12 +36,6 @@
       <short value="SNAQ65+Score" />
       <alias value="SNAQ65+Score" />
       <constraint>
-        <key value="zib-SNAQ65PlusScore-1" />
-        <severity value="error" />
-        <human value="If one of the component codes is present, all SHALL be present." />
-        <expression value="component.where(code.coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1' and code.coding.code.subsetOf('4030003'|'4030008'|'4030004'|'4030005')).count().subsetOf(0|4)" />
-      </constraint>
-      <constraint>
         <key value="zib-SNAQ65PlusScore-2" />
         <severity value="error" />
         <human value="If the component codes are not all present, the value SHALL be present." />
@@ -101,14 +95,14 @@
       <path value="Observation.value[x]" />
       <sliceName value="valueInteger" />
       <short value="TotalScore" />
-      <definition value="The total score is the sum of all the individual scores. The total score has a range from 0 - 5. The relation between the value of the total score and the color outcome of the score tool is:&#xD;&#xA;* 0-1 = green&#xD;&#xA;* 2 = orange&#xD;&#xA;* 3 and higher = red." />
+      <definition value="The total score is the sum of all the individual scores. The total score has a range from 0 - 3. The relation between the value of the total score and the color outcome of the score tool is:&#xD;&#xA;* 0-1 = green&#xD;&#xA;* 2 = orange&#xD;&#xA;* 3 and higher = red." />
       <comment value="The individual scores are communicated using the different `Observation.component` slices. The ordinal values of these indivdual scores, which are used to calculate the total score, are defined by the underlying code system and are registered in the ValueSet resources bound on these slices, using the [ordinalValue](http://hl7.org/fhir/StructureDefinition/ordinalValue) extension." />
       <alias value="TotaalScore" />
       <type>
         <code value="integer" />
       </type>
       <minValueInteger value="0" />
-      <maxValueInteger value="5" />
+      <maxValueInteger value="3" />
       <condition value="zib-SNAQ65PlusScore-2" />
       <mapping>
         <identity value="zib-snaq65plusscore-v1.3-2024EN" />
@@ -145,7 +139,6 @@
       <path value="Observation.component" />
       <sliceName value="weightLossScore" />
       <max value="1" />
-      <condition value="zib-SNAQ65PlusScore-1" />
       <condition value="zib-SNAQ65PlusScore-2" />
     </element>
     <element id="Observation.component:weightLossScore.code">
@@ -165,7 +158,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <condition value="zib-SNAQ65PlusScore-1" />
       <condition value="zib-SNAQ65PlusScore-2" />
       <binding>
         <strength value="required" />
@@ -181,7 +173,6 @@
       <path value="Observation.component" />
       <sliceName value="upperarmCircumference" />
       <max value="1" />
-      <condition value="zib-SNAQ65PlusScore-1" />
       <condition value="zib-SNAQ65PlusScore-2" />
     </element>
     <element id="Observation.component:upperarmCircumference.code">
@@ -201,7 +192,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <condition value="zib-SNAQ65PlusScore-1" />
       <condition value="zib-SNAQ65PlusScore-2" />
       <binding>
         <strength value="required" />
@@ -217,7 +207,6 @@
       <path value="Observation.component" />
       <sliceName value="appetiteScore" />
       <max value="1" />
-      <condition value="zib-SNAQ65PlusScore-1" />
       <condition value="zib-SNAQ65PlusScore-2" />
     </element>
     <element id="Observation.component:appetiteScore.code">
@@ -237,7 +226,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <condition value="zib-SNAQ65PlusScore-1" />
       <condition value="zib-SNAQ65PlusScore-2" />
       <binding>
         <strength value="required" />
@@ -253,7 +241,6 @@
       <path value="Observation.component" />
       <sliceName value="exerciseScore" />
       <max value="1" />
-      <condition value="zib-SNAQ65PlusScore-1" />
       <condition value="zib-SNAQ65PlusScore-2" />
     </element>
     <element id="Observation.component:exerciseScore.code">
@@ -273,7 +260,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <condition value="zib-SNAQ65PlusScore-1" />
       <condition value="zib-SNAQ65PlusScore-2" />
       <binding>
         <strength value="required" />
