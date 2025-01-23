@@ -62,7 +62,7 @@
          <alias value="Criterium"/>
          <binding>
             <strength value="required"/>
-            <valueSet value="https://decor.nictiz.nl/fhir/4.0/zib2024bbr-/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4--20240415000000"/>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4--20240415000000"/>
          </binding>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
@@ -84,13 +84,13 @@
       <element id="Dosage.additionalInstruction">
          <path value="Dosage.additionalInstruction"/>
          <short value="AdditionalInstructions"/>
-         <definition value="The additional instructions contain extra guidance on the use of the current prescription. &#xD;&#xA;&#xD;&#xA;This includes all instructions for use. The text can come from the original “paper&#34; medication prescription, but can also be generated from the coded information. This concept may contain more information than what is structurally coded, but may not conflict with it. The instructions may not conflict with other components of the request for administration. The instructions can also refer to an existing protocol. The texts in the G-standard that can support this attribute are included in table 362 where the texts from the general practitioner' standard 'NHG-tabel Gebruiksvoorschrift' are included. These texts can be used to structure this concept."/>
+         <definition value="The additional instructions contain extra guidance on the use of the current prescription. &#xD;&#xA;&#xD;&#xA;This includes all instructions for use. The text can come from the original “paper&#34; medication prescription, but can also be generated from the coded information. This concept may contain more information than what is structurally coded, but may not conflict with it. The instructions may not conflict with other components of the request for administration. The instructions can also refer to an existing protocol. The texts in the G-standard that can support this attribute are included in table 362 and are a copy of the texts from the general practitioner' standard 'NHG-tabel Gebruiksvoorschrift' which are included in the CIM. These texts can be used to structure this concept."/>
          <comment value="Please note that in contrast to the zib, this AdditionalInstructions concept is grouped under the DosingInstructions concept. This `.additionalInstruction` element shall have the same value when there are multiple DosingInstructions."/>
          <alias value="AanvullendeInstructie"/>
          <binding>
             <strength value="extensible"/>
             <description value="NHG Table 25 for additional instructions for use"/>
-            <valueSet value="https://decor.nictiz.nl/fhir/4.0/zib2024bbr-/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.5--20240415000000"/>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.5--20240415000000"/>
          </binding>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
@@ -119,7 +119,7 @@
       </element>
       <element id="Dosage.timing.repeat.extension:timingExact.value[x]">
          <path value="Dosage.timing.repeat.extension.value[x]"/>
-         <definition value="Indicates that the timing as specified by `.frequency`, `.period` and `.periodUnit` should be strictly interpreted. This is the case when the zib concept Interval is expressed using these elements (as opposed to the zib concept Frequency).&#xD;&#xA;&#xD;&#xA;The times can be chosen freely, but distribution throughout the day is more precise, and the interval between times is important (e.g. in the case of antibiotics). In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)."/>
+         <definition value="Indicates that the timing as specified by `.frequency`, `.period` and `.periodUnit` should be strictly interpreted. This is the case when the zib concept Interval (minute or hour) is expressed using these elements (as opposed to the zib concept Frequency).&#xD;&#xA;&#xD;&#xA;The times can be chosen freely, but distribution throughout the day is more precise, and the interval between times is important (e.g. in the case of antibiotics). In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)."/>
          <comment value="Notes on the zib concepts Frequency and Interval:&#xA;1. An interval (in FHIR) is just a normal frequency of 1 (combined with a period based on the interval length) and is represented in FHIR as just another frequency using `.frequency` (set to 1), `.period` and `.periodUnit`. However, the zib differentiates between the two concepts in the timing precision (the Interval concept defines precise intervals while the Frequency concept defines approximate intervals). When the interval is precise, this is communicated using the extension in `.extension:timingExact`.&#xA;2. On the other hand, the zib Frequency concept might be used to express a single-use, non-repeating series by omitting the time unit. In FHIR, this is _not_ represented as a frequency, but with the `.count` element.&#xA;3. Lastly, the Frequency concept may be used to express either a single nominal value or a range. A range is represented by respectively setting the minimum and maximum value to `.frequency` and `.frequencyMax`, or to `.count` and `.countMax` for single-use events. A nominal value is expressed by setting its value to `.frequency` or to `.count` for single-use events, and leaving `.frequencyMax` and `.countMax` unpopulated.&#xA;&#xA;In summary:&#xA;* zib concept Frequency:&#xA;    * With time unit:&#xA;        * Nominal value: `.frequency`, `.period` and `.periodUnit`&#xA;        * Range: `.frequency`, `.frequencyMax`, `.period` and `.periodUnit`&#xA;    * Without time unit:&#xA;        * Nominal value: `.count`&#xA;        * Range: `.count` and `.countMax`&#xA;* zib concept Interval: `.frequency` (set to 1), `.period`, `.periodUnit` and `.extension:timingExact` (set to _true_)"/>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
@@ -141,7 +141,7 @@
          <path value="Dosage.timing.repeat.bounds[x]"/>
          <sliceName value="boundsDuration"/>
          <short value="DoseDuration"/>
-         <definition value="The intended time duration for these dosing instructions, e.g. 5 days or 8 weeks. &#xD;&#xA;In the case of medication for an indefinite period, the dosing duration is left empty in the last dosing instruction."/>
+         <definition value="The intended time duration for these dosing instructions in hours, days, weeks and years, e.g. 5 days or 8 weeks. &#xD;&#xA;In the case of medication for an indefinite period, the dosing duration is left empty in the last dosing instruction."/>
          <alias value="Doseerduur"/>
          <type>
             <code value="Duration"/>
@@ -155,7 +155,7 @@
       <element id="Dosage.timing.repeat.count">
          <path value="Dosage.timing.repeat.count"/>
          <short value="Frequency / minimumValue / nominalValue"/>
-         <definition value="Usually, frequency comprises both amount and time unit (3 times a day), but it can occur without the time unit (single use). This is represented by this `.count` element and optionally `.countMax` if a range should be represented.&#xD;&#xA;&#xD;&#xA;A reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)."/>
+         <definition value="Usually, frequency comprises both amount and a specific time unit (minute, hour, day, week, month, or year), such as `3 times a day`, but it can occur without the time unit (single use). This is represented by this `.count` element and optionally `.countMax` if a range should be represented.&#xD;&#xA;&#xD;&#xA;A reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)."/>
          <comment value="Notes on the zib concepts Frequency and Interval:&#xA;1. An interval (in FHIR) is just a normal frequency of 1 (combined with a period based on the interval length) and is represented in FHIR as just another frequency using `.frequency` (set to 1), `.period` and `.periodUnit`. However, the zib differentiates between the two concepts in the timing precision (the Interval concept defines precise intervals while the Frequency concept defines approximate intervals). When the interval is precise, this is communicated using the extension in `.extension:timingExact`.&#xA;2. On the other hand, the zib Frequency concept might be used to express a single-use, non-repeating series by omitting the time unit. In FHIR, this is _not_ represented as a frequency, but with the `.count` element.&#xA;3. Lastly, the Frequency concept may be used to express either a single nominal value or a range. A range is represented by respectively setting the minimum and maximum value to `.frequency` and `.frequencyMax`, or to `.count` and `.countMax` for single-use events. A nominal value is expressed by setting its value to `.frequency` or to `.count` for single-use events, and leaving `.frequencyMax` and `.countMax` unpopulated.&#xA;&#xA;In summary:&#xA;* zib concept Frequency:&#xA;    * With time unit:&#xA;        * Nominal value: `.frequency`, `.period` and `.periodUnit`&#xA;        * Range: `.frequency`, `.frequencyMax`, `.period` and `.periodUnit`&#xA;    * Without time unit:&#xA;        * Nominal value: `.count`&#xA;        * Range: `.count` and `.countMax`&#xA;* zib concept Interval: `.frequency` (set to 1), `.period`, `.periodUnit` and `.extension:timingExact` (set to _true_)"/>
          <alias value="Frequentie"/>
          <alias value="nominaleWaarde"/>
@@ -166,12 +166,12 @@
             <comment value="Frequency (single use only)"/>
          </mapping>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.2"/>
             <comment value="minimumValue"/>
          </mapping>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.4"/>
             <comment value="nominalValue"/>
          </mapping>
@@ -179,7 +179,7 @@
       <element id="Dosage.timing.repeat.countMax">
          <path value="Dosage.timing.repeat.countMax"/>
          <short value="Frequency / maximumValue"/>
-         <definition value="Usually, frequency comprises both amount and time unit (3 times a day), but it can occur without the time unit (single use). This is represented by the `.count` element and optionally `.countMax` if a range should be represented.&#xD;&#xA;&#xD;&#xA;A reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)."/>
+         <definition value="Usually, frequency comprises both amount and a specific time unit (minute, hour, day, week, month, or year), such as `3 times a day`, but it can occur without the time unit (single use). This is represented by the `.count` element and optionally `.countMax` if a range should be represented.&#xD;&#xA;&#xD;&#xA;A reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)."/>
          <comment value="Notes on the zib concepts Frequency and Interval:&#xA;1. An interval (in FHIR) is just a normal frequency of 1 (combined with a period based on the interval length) and is represented in FHIR as just another frequency using `.frequency` (set to 1), `.period` and `.periodUnit`. However, the zib differentiates between the two concepts in the timing precision (the Interval concept defines precise intervals while the Frequency concept defines approximate intervals). When the interval is precise, this is communicated using the extension in `.extension:timingExact`.&#xA;2. On the other hand, the zib Frequency concept might be used to express a single-use, non-repeating series by omitting the time unit. In FHIR, this is _not_ represented as a frequency, but with the `.count` element.&#xA;3. Lastly, the Frequency concept may be used to express either a single nominal value or a range. A range is represented by respectively setting the minimum and maximum value to `.frequency` and `.frequencyMax`, or to `.count` and `.countMax` for single-use events. A nominal value is expressed by setting its value to `.frequency` or to `.count` for single-use events, and leaving `.frequencyMax` and `.countMax` unpopulated.&#xA;&#xA;In summary:&#xA;* zib concept Frequency:&#xA;    * With time unit:&#xA;        * Nominal value: `.frequency`, `.period` and `.periodUnit`&#xA;        * Range: `.frequency`, `.frequencyMax`, `.period` and `.periodUnit`&#xA;    * Without time unit:&#xA;        * Nominal value: `.count`&#xA;        * Range: `.count` and `.countMax`&#xA;* zib concept Interval: `.frequency` (set to 1), `.period`, `.periodUnit` and `.extension:timingExact` (set to _true_)"/>
          <alias value="Frequentie"/>
          <alias value="maximumWaarde"/>
@@ -189,7 +189,7 @@
             <comment value="Frequency"/>
          </mapping>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.3"/>
             <comment value="maximumValue"/>
          </mapping>
@@ -197,7 +197,7 @@
       <element id="Dosage.timing.repeat.duration">
          <path value="Dosage.timing.repeat.duration"/>
          <short value="DurationOfAdministration"/>
-         <definition value="The duration of administration defines the length of time during which the drug is administered and is mainly used in the slow parenteral administration of fluids. The `durationUnit` defines the time unit."/>
+         <definition value="The duration of administration defines the length of time during which the drug is administered and is mainly used in the slow parenteral administration of fluids. The `durationUnit` defines the time unit (second, minute, hour or day)."/>
          <alias value="Toedieningsduur"/>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
@@ -208,7 +208,7 @@
       <element id="Dosage.timing.repeat.durationUnit">
          <path value="Dosage.timing.repeat.durationUnit"/>
          <short value="DurationOfAdministration"/>
-         <definition value="The units of time, in UCUM units, for the duration of administration of time during which the drug is administered."/>
+         <definition value="The units of time, in UCUM units (second, minute, hour or day), for the duration of administration of time during which the drug is administered."/>
          <alias value="Toedieningsduur"/>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
@@ -231,12 +231,12 @@
             <comment value="Frequency"/>
          </mapping>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.2"/>
             <comment value="minimumValue"/>
          </mapping>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.4"/>
             <comment value="nominalValue"/>
          </mapping>
@@ -259,7 +259,7 @@
             <comment value="Frequency"/>
          </mapping>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.3"/>
             <comment value="maximumValue"/>
          </mapping>
@@ -324,7 +324,7 @@
       <element id="Dosage.timing.repeat.timeOfDay">
          <path value="Dosage.timing.repeat.timeOfDay"/>
          <short value="AdministrationTime"/>
-         <definition value="The time of administration is a specific time of day (on the clock). This time usually isn’t (intended to be) exact. There can be multiple administering times in one day. &#xD;&#xA;&#xD;&#xA;The ideal time of administration can also be entered as a time of day (morning, afternoon, evening, night-time). The administration time is then to be left empty, and the time of day can be entered in the TimeOfDay concept."/>
+         <definition value="The time of administration is a specific time of day (on the clock). This time usually isn’t (intended to be) exact. There can be multiple administering times in one day. &#xD;&#xA;&#xD;&#xA;The ideal time of administration can also be entered as a daypart (morning, afternoon, evening, night-time). The administration time is then to be left empty, and the daypart can be entered in the TimeOfDay concept."/>
          <comment value="If there's a `.timeOfDay`, there cannot be a `.when`, or vice versa."/>
          <alias value="Toedientijd"/>
          <mapping>
@@ -336,7 +336,7 @@
       <element id="Dosage.timing.repeat.when">
          <path value="Dosage.timing.repeat.when"/>
          <short value="TimeOfDay"/>
-         <definition value="Time of day: morning, afternoon, evening, night."/>
+         <definition value="Daypart: morning, afternoon, evening, night."/>
          <comment value="If there's a `.timeOfDay`, there cannot be a `.when`, or vice versa."/>
          <alias value="Dagdeel"/>
          <binding>
@@ -375,55 +375,12 @@
          </type>
          <binding>
             <strength value="required"/>
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4--20200901000000"/>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4--20240415000000"/>
          </binding>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
             <map value="NL-CM:9.12.19945"/>
             <comment value="Condition"/>
-         </mapping>
-      </element>
-      <element id="Dosage.asNeeded[x]:asNeededCodeableConcept.text">
-         <path value="Dosage.asNeeded[x].text"/>
-         <mapping>
-            <identity value="mp-dataset-mp9-300-beta3-20240229"/>
-            <map value="mp-dataelement9x-272"/>
-            <comment value="Description"/>
-         </mapping>
-         <mapping>
-            <identity value="mp-dataset-mp9-300-beta4-20241118"/>
-            <map value="mp-dataelement9x-272"/>
-            <comment value="Description"/>
-         </mapping>
-         <mapping>
-            <identity value="mp-dataset-mp9-300-beta3-20240229"/>
-            <map value="mp-dataelement9x-677"/>
-            <comment value="Description"/>
-         </mapping>
-         <mapping>
-            <identity value="mp-dataset-mp9-300-beta4-20241118"/>
-            <map value="mp-dataelement9x-677"/>
-            <comment value="Description"/>
-         </mapping>
-         <mapping>
-            <identity value="mp-dataset-mp9-300-beta3-20240229"/>
-            <map value="mp-dataelement9x-582"/>
-            <comment value="Description"/>
-         </mapping>
-         <mapping>
-            <identity value="mp-dataset-mp9-300-beta4-20241118"/>
-            <map value="mp-dataelement9x-582"/>
-            <comment value="Description"/>
-         </mapping>
-         <mapping>
-            <identity value="mp-dataset-mp9-300-beta3-20240229"/>
-            <map value="mp-dataelement9x-514"/>
-            <comment value="Description"/>
-         </mapping>
-         <mapping>
-            <identity value="mp-dataset-mp9-300-beta4-20241118"/>
-            <map value="mp-dataelement9x-514"/>
-            <comment value="Description"/>
          </mapping>
       </element>
       <element id="Dosage.route">
@@ -434,7 +391,7 @@
          <alias value="Toedieningsweg"/>
          <binding>
             <strength value="required"/>
-            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.1--20200901000000"/>
+            <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.1--20240415000000"/>
          </binding>
          <mapping>
             <identity value="zib-instructionsforuse-v3.0-2024EN"/>
@@ -489,7 +446,7 @@
             <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-GstdSimpleQuantity"/>
          </type>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.2"/>
             <comment value="minimumValue"/>
          </mapping>
@@ -504,7 +461,7 @@
             <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-GstdSimpleQuantity"/>
          </type>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.3"/>
             <comment value="maximumValue"/>
          </mapping>
@@ -520,7 +477,7 @@
             <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-GstdSimpleQuantity"/>
          </type>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.4"/>
             <comment value="nominalValue"/>
          </mapping>
@@ -556,7 +513,7 @@
          <definition value="The minimal value of the range. The boundary is inclusive."/>
          <alias value="minimumWaarde"/>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.2"/>
             <comment value="minimumValue"/>
          </mapping>
@@ -567,7 +524,7 @@
          <definition value="The maximum value of the range. The boundary is inclusive."/>
          <alias value="maximumWaarde"/>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.3"/>
             <comment value="maximumValue"/>
          </mapping>
@@ -582,7 +539,7 @@
             <code value="Quantity"/>
          </type>
          <mapping>
-            <identity value="zib-range-v1.0.1-2020EN"/>
+            <identity value="zib-range-v1.0.1-2024EN"/>
             <map value="NL-CM:20.1.4"/>
             <comment value="nominalValue"/>
          </mapping>

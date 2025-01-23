@@ -150,6 +150,10 @@
 ### zib-IllnessPerception.PatientIllnessInsight, nl-core-IllnessPerception.PatientIllnessInsight
 * No significant changes.
 
+## InstructionsForUse
+### zib-InstructionsForUse, nl-core-InstructionsForUse
+* No significant changes.
+
 ## LanguageProficiency (zib-Patient, nl-core-Patient)
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877
 * `.communication.extension:comment` ; extension ; Replaced extension ExtComment with ExtLanguageProficiencyComment. ; ZIBFHIR-97
