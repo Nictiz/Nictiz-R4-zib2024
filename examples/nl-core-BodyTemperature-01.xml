@@ -7,12 +7,7 @@
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
-        <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Vital Signs (vital-signs - HL7 observation-category)">Vital Signs</span>, Status: definitief</caption>
-        <tfoot>
-          <tr>
-            <td colspan="2">Voeten voelen heel koud aan</td>
-          </tr>
-        </tfoot>
+        <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Vital Signs (vital-signs - http://terminology.hl7.org/CodeSystem/observation-category)">Vital Signs</span>, Status: definitief</caption>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
@@ -24,7 +19,7 @@
           </tr>
           <tr>
             <td>
-              <span title="Body temperature (8310-5 - LOINC)">Body temperature</span>
+              <span title="Lichaamstemperatuur (8310-5 - LOINC)">Lichaamstemperatuur</span>
             </td>
             <td>38.6 Cel</td>
           </tr>
@@ -44,7 +39,7 @@
     <coding>
       <system value="http://loinc.org"/>
       <code value="8310-5"/>
-      <display value="Body temperature"/>
+      <display value="Lichaamstemperatuur"/>
     </coding>
     <coding>
       <system value="http://snomed.info/sct"/>
