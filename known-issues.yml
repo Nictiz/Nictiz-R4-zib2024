@@ -200,6 +200,95 @@ zib-HealthProfessional-PractitionerRole:
       - datatype: ContactPoint instead of container
         reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
 
+zib-InstructionsForUse:
+  zib deviations:
+  Dosage.timing:
+  - datatype: Timing instead of container
+    for: NL-CM:9.12.19948 (InstructionsForUse.AdministeringSchedule)
+    reason: AdministeringSchedule in FHIR is represented using the Timing datatype, not as a BackboneElement.
+  Dosage.timing.repeat.count:
+  - datatype: PositiveInt instead of Reference
+    for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
+    reason: A range in FHIR is represented using the positiveInt datatype, not as a separate resource.
+  - datatype: PositiveInt instead of PQ
+    for: NL-CM:20.1.2 (Range.MinimumValue)
+    reason: A value in FHIR is represented using the positiveInt datatype, not as a PQ.
+  - datatype: PositiveInt instead of PQ
+    for: NL-CM:20.1.4 (Range.NominalValue)
+    reason: A value in FHIR is represented using the positiveInt datatype, not as a PQ.
+  Dosage.timing.repeat.countMax:
+  - datatype: PositiveInt instead of Reference
+    for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
+    reason: A range in FHIR is represented using the positiveInt datatype, not as a separate resource.
+  - datatype: PositiveInt instead of Reference
+    for: NL-CM:20.1.3 (Range.MaximumValue)
+    reason: A value in FHIR is represented using the positiveInt datatype, not as a separate resource.
+   Dosage.timing.repeat.duration:
+  - datatype: Decimal instead of Reference
+    for: NL-CM:9.12.23141 (InstructionsForUse.DurationOfAdministration)
+    reason: An interval in FHIR is represented using the decimal datatype, not as a separate resource.
+  Dosage.timing.repeat.durationUnit:
+  - datatype: Code instead of Reference
+    for: NL-CM:9.12.23141 (InstructionsForUse.DurationOfAdministration)
+    reason: An interval in FHIR is represented using the code datatype, not as a separate resource.
+  Dosage.timing.repeat.frequency:
+  - datatype: PositiveInt instead of Reference
+    for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
+    reason: A range in FHIR is represented using the positiveInt datatype, not as a separate resource.
+  - datatype: PositiveInt instead of PQ
+    for: NL-CM:20.1.2 (Range.MinimumValue)
+    reason: A value in FHIR is represented using the positiveInt datatype, not as a PQ.
+  - datatype: PositiveInt instead of PQ
+    for: NL-CM:20.1.4 (Range.NominalValue)
+    reason: A value in FHIR is represented using the positiveInt datatype, not as a PQ.
+  - datatype: PositiveInt instead of PQ
+    for: NL-CM:9.12.19950 (InstructionsForUse.Interval)
+    reason: An interval in FHIR is represented using the positiveInt datatype, not as a PQ.
+  Dosage.timing.repeat.frequencyMax:
+  - datatype: PositiveInt instead of Reference
+    for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
+    reason: A range in FHIR is represented using the positiveInt datatype, not as a separate resource.
+  - datatype: PositiveInt instead of PQ
+    for: NL-CM:20.1.3 (Range.MaximumValue)
+    reason: A value in FHIR is represented using the positiveInt datatype, not as a PQ.
+   Dosage.timing.repeat.period:
+  - datatype: Decimal instead of Reference
+    for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
+    reason: A range in FHIR is represented using the decimal datatype, not as a separate resource.
+  - datatype: Decimal instead of PQ
+    for: NL-CM:9.12.19950 (InstructionsForUse.Frequency)
+    reason: A range in FHIR is represented using the decimal datatype, not as a PQ.
+   Dosage.timing.repeat.periodUnit:
+  - datatype: Code instead of Reference
+    for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
+    reason: A range in FHIR is represented using the code datatype, not as a separate resource.
+  - datatype: Code instead of PQ
+    for: NL-CM:9.12.19950 (InstructionsForUse.Frequency)
+    reason: An interval in FHIR is represented using the code datatype, not as a PQ.
+  Dosage.timing.repeat.timeOfDay:
+  - datatype: Time instead of TS
+    for: NL-CM:9.12.19951 (InstructionsForUse.AdministrationTime)
+    reason: A time in FHIR is represented using the time datatype, not as a TS.
+  Dosage.asNeeded[x]:asNeededCodeableConcept:
+  - cardinality: 0..1 instead of 0..*
+        reason: The value can only occur once, but this profile is also referenced 0..* times via .extension:asNeeded, making the effective cardinality 0..* as required by the zib.
+  Dosage.doseAndRate:
+  - datatype: Element instead of container
+    for: NL-CM:9.12.19935 (InstructionsForUse.Dosage)
+    reason: Dosage in FHIR is represented using the Element datatype, not as a BackboneElement.
+  Dosage.doseAndRate.dose[x]:
+  - datatype: Range instead of Reference
+    for: NL-CM:9.12.19940 (InstructionsForUse.Dose)
+    reason: A range in FHIR is represented using the range datatype, not as a separate resource.
+  Dosage.doseAndRate.rate[x]:
+  - datatype: Range instead of Reference
+    for: NL-CM:9.12.19942 (InstructionsForUse.AdministeringSpeed)
+    reason: A range in FHIR is represented using the ratio datatype, not as a separate resource.
+  Dosage.maxDosePerPeriod:
+  - datatype: Ratio instead of PQ
+    for: NL-CM:9.12.19946 (InstructionsForUse.MaximumDose)
+    reason: A dose in FHIR is represented using the ratio datatype, not as a PQ.
+
 zib-NameInformation:
   zib deviations:
     HumanName.family.extension:*.value[x]:

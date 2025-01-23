@@ -20,6 +20,11 @@
   <purpose value="This extension represents the RepeatPeriodCyclicalSchedule concept for implementations following the information standard [MP9](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Medicatieproces).&#xD;&#xA;&#xD;&#xA;This extension should be used together with the [mp-InstructionsForUse.DosageInstructions](http://nictiz.nl/fhir/StructureDefinition/mp-InstructionsForUse.DosageInstructions) data type profile and [ext-RenderedDosageInstruction](http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction) extension to fully implement the zib InstructionsForUse." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-instructionsforuse-v3.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/InstructionsForUse-v3.0(2024EN)" />
+    <name value="zib InstructionsForUse-v3.0(2024EN)" />
+  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
