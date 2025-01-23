@@ -61,6 +61,16 @@ zib-AddressInformation:
       - cardinality: 1..1 instead of 0..1
         reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
 
+zib-BloodPressure:
+  zib deviations:
+    Observation.bodySite:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:12.4.12 (BloodPressure.AnatomicalLocation)
+        reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+
 zib-BodyHeight:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
@@ -379,6 +389,23 @@ nl-core-*:
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
 
+nl-core-BloodPressure-*:
+  ignored issues:
+    Observation.code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code used is the magic LOINC code for blood pressure, hence this issue should not arise.
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Bloeddruk panel waarvan alle leden optioneel in arterieel vaatstelsel' for http://loinc.org#85354-9. There are no valid display names found for language(s) 'en'. Default display is 'Blood pressure panel with all children optional'
+        reason: A valid Dutch display value is used instead of an English one.
+    Observation.component[*].code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
+    Observation.component[*].code.coding[*].display:
+      - message: Wrong Display Name 'Intravasculaire systolische bloeddruk in arterieel vaatstelsel' for http://loinc.org#8480-6. There are no valid display names found for language(s) 'en'. Default display is 'Systolic blood pressure'
+        reason: A valid Dutch display value is used instead of an English one.
+      - message: Wrong Display Name 'Intravasculaire diastolische bloeddruk in arterieel vaatstelsel' for http://loinc.org#8462-4. There are no valid display names found for language(s) 'en'. Default display is 'Diastolic blood pressure'
+        reason: A valid Dutch display value is used instead of an English one.
+
 nl-core-BodyHeight-*:
   ignored issues:
     Observation.code:
@@ -452,6 +479,16 @@ nl-core-Problem-full-03:
     Condition.bodySite[0]:
       - message: No code provided, and a code should be provided from the value set 'LocatieCodelijsten' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000|2024-04-15T00:00:00)
         reason: This example contains no code on .bodySite, since its functional counterpart contains an AnatomicalLocation for which only the Laterality is specified (which is mapped to the BodyStructure resource referenced here). This is no issue since the binding is extensible.
+
+zib-BloodPressure.AnatomicalLocation-BodyStructure:
+  ignored issues:
+    BodyStructure.location:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The short description is defined on the datatype profile and is not repeated in the differential.
+      - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
+        reason: The definition is defined on the datatype profile and is not repeated in the differential.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The alias is defined on the datatype profile and is not repeated in the differential.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:

@@ -47,6 +47,20 @@
 ### zib-AnatomicalLocation-BodyStructure, nl-core-AnatomicalLocation-BodyStructure
 * New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
 
+## BloodPressure 
+### zib-BloodPressure, nl-core-BloodPressure
+* Changed description of BloodPressure. ; ZIB-2112, ZIB-2589
+* `.bodySite` ; mapping ; Renamed mapping from MeasuringLocation to AnatomicalLocation. ; ZIB-1731
+* `.bodySite` ; terminology ; Changed codes in MeetLocatieCodelijst. ; ZIB-1731, ZIB-1813
+* `.bodySite` ; terminology ; Changed value set from MeetLocatieCodelijst to LocatieCodelijsten. ; ZIBFHIR-192
+* `.bodySite` ; terminology ; Added MeetLocatieCodelijst as minimum allowable value set. ; ZIBFHIR-192
+* `.method` ; terminology ; Changed codes in MeetmethodeCodelijst. ; ZIB-2036
+* `.component:diastolicEndpoint.value[x]` ; terminology ; Changed codes in DiastolischEindpuntCodelijst. ; ZIB-2218
+* `.component:cuffType.value[x]` ; terminology ; Changed codes in ManchetTypeCodelijst. ; ZIB-2218
+
+### zib-BloodPressure.AnatomicalLocation-BodyStructure, nl-core-BloodPressure.AnatomicalLocation-BodyStructure
+* A new profile that applies zib BloodPressure constraints to the Location concept within AnatomicalLocation (ZIB-1731).
+
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
