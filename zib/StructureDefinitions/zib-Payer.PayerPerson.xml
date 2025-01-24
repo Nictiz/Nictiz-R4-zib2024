@@ -36,7 +36,7 @@
     <element id="Coverage">
       <path value="Coverage" />
       <short value="Payer / PayerPerson" />
-      <comment value="The zib Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These two containers cannot be profiled within one profile because they both require mapping different concepts on elements such as `.payor` and `.type`.&#xD;&#xA;&#xD;&#xA;The zib container Payer.PayerPerson is mapped to this Coverage profile and profiles on Patient (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-Patient&gt;), RelatedPerson (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson&gt;) and Organization (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-Payer-Organization&gt;) to capture the PayerName, AddressInformation and ContactInformation. These profiles are referenced using the `.payor` element." />
+      <comment value="The zib Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These two containers cannot be profiled within one profile because they both require mapping different concepts on elements such as `.payor` and `.type`.&#xD;&#xA;&#xD;&#xA;The zib container Payer.PayerPerson is mapped to this Coverage profile and uses the profile [zib-Patient](http://nictiz.nl/fhir/StructureDefinition/zib-Patient), [zib-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson) or [zib-Payer-Organization](http://nictiz.nl/fhir/StructureDefinition/zib-Payer-Organization) to capture the PayerName, AddressInformation and ContactInformation concepts. These profiles are referenced using the `.payor` element." />
       <alias value="Betaler" />
       <alias value="BetalerPersoon" />
       <mapping>
