@@ -92,7 +92,7 @@
       <min value="1" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap TelecomType-to-ContactInformation-TelephoneNumbersSystem to translate terminology from the functional model to profile terminology in ValueSet ContactInformation-TelephoneNumbersSystem." />
+        <description value="Use ConceptMap TelecomType_to_ContactInformation_TelephoneNumbersSystem to translate terminology from the functional model to profile terminology in ValueSet ContactInformationTelephoneNumbersSystem." />
         <valueSet value="http://nictiz.nl/fhir/ValueSet/ContactInformation-TelephoneNumbersSystem">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/TelecomType-to-ContactInformation-TelephoneNumbersSystem" />
@@ -148,7 +148,7 @@
       <alias value="NummerSoort" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap NummerSoortCodelijst-to-ContactInformation-TelephoneNumbersUse to translate terminology from the functional model to profile terminology in ValueSet ContactInformation-TelephoneNumbersUse." />
+        <description value="Use ConceptMap NummerSoortCodelijst_to_ContactInformation_TelephoneNumbersUse to translate terminology from the functional model to profile terminology in ValueSet ContactInformationTelephoneNumbersUse." />
         <valueSet value="http://nictiz.nl/fhir/ValueSet/ContactInformation-TelephoneNumbersUse">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/NummerSoortCodelijst-to-ContactInformation-TelephoneNumbersUse" />
