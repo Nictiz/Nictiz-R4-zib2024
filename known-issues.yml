@@ -79,6 +79,10 @@ zib-BloodPressure:
     Observation.effective[x]:effectiveDateTime:
       - cardinality: 1..1 instead of 0..1
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+  ignored issues:
+    Observation.component:*BP:
+      - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
+        reason: The slice names SystolicBP and DiastolicBP are chosen to align with the HL7 Vital Signs profile.
 
 zib-BodyHeight:
   zib deviations:
@@ -91,6 +95,10 @@ zib-BodyTemperature:
     Observation.effective[x]:effectiveDateTime:
       - cardinality: 1..1 instead of 0..1
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+  ignored issues:
+    Observation.code.coding:BodyTempCode:
+      - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
+        reason: The slice name BodyTempCode is chosen to align with the HL7 Vital Signs profile.
 
 zib-BodyWeight:
   zib deviations:
