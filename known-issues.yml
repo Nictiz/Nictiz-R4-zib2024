@@ -610,9 +610,3 @@ zib-Payer-Organization:
         reason: The short description is defined on the datatype profile and not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and not repeated in the differential.
-
-zib-Payer.InsuranceCompany:
-  ignored issues:
-    Coverage.payor:
-      - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
-        reason: The mapping is to a zib container, which doesn't have a useful description if implemented in a profile.
