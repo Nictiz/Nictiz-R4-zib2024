@@ -178,6 +178,14 @@
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218
 
+## MedicalDevice
+### zib-MedicalDevice, nl-core-MedicalDevice
+* No significant changes
+
+### zib-MedicalDevice.Product, nl-core-MedicalDevice.Product
+* `.type` ; terminology ; Added additional binding to ProductTypeImplantatenCodelijst (using a combined ValueSet) (although it is a subset of the existing ValueSet ProductTypeCodelijst) ; ZIB-1279
+* `.type` ; terminology ; Moved two codes from ProductTypeCodelijst to ProductTypeGeenCodelijst (although the codes are still in the same combined ValueSet bound on this element) ; ZIB-1536
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
