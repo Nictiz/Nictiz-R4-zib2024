@@ -74,7 +74,7 @@
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
-      <comment value="If the resource referenced is conformant to one of the target zib profiles, these profiles provide a mapping to the relevant zib Payer concepts. If it is not conformant to one of these zib profiles, it SHALL have at least the following FHIR elements filled to be compliant with the subsequent zib Payer concepts:&#xD;&#xA;* `.name.text` - PayerPerson.PayerName (NL-CM:1.1.5)&#xD;&#xA;* `.address` - AddressInformation (NL-CM:1.1.17)&#xD;&#xA;* `.telecom` - ContactInformation (NL-CM:1.1.12)" />
+      <comment value="The zib concepts below are found in the referenced resources. This can be a Patient or RelatedPerson resource if the PayerPerson represents a person, or an Organization resource if the PayerPerson represents an organization.&#xA;&#xA;* PayerPerson.PayerName (NL-CM:1.1.5):&#xA;    * `.name.text` for a referenced Patient or RelatedPerson resource&#xA;    * `.name` for a referenced Organization resource&#xA;* AddressInformation (NL-CM:1.1.17) - `.address`&#xA;* ContactInformation (NL-CM:1.1.12) - `.telecom`" />
       <max value="1" />
       <type>
         <code value="Reference" />
