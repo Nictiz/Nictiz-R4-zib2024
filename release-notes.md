@@ -220,7 +220,7 @@
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
 * `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
 
-## SNAQ65+Score (zib-SNAQ65plusScore, nl-core-SNAQ65plusScore)
+## SNAQ65plusScore (zib-SNAQ65plusScore, nl-core-SNAQ65plusScore)
 * `Observation` ; constraint ; Removed zib-SNAQ65PlusScore-1 for WeightLossScore, UpperarmCircumference, AppetiteScore and ExerciseScore. ; ZIB-1668
 * `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-1635, ZIB-1668
 * `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-1635, ZIB-1668
