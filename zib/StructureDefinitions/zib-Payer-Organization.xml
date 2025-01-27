@@ -64,7 +64,7 @@
     <element id="Organization.name">
       <path value="Organization.name" />
       <short value="OrganizationName / PayerName" />
-      <definition value="* Full, official name of the healthcare insurance company. If the UZOVI number is entered as an identification number, this will be the name as listed in the UZOVI register and the name which is returned in the Check for Right to Insurance (COV).&#xD;&#xA;* Full name of the paying person or organization (legal entity)." />
+      <definition value="Full, official name of the healthcare insurance company or paying organization. If the UZOVI number is entered as an identification number, this will be the name as listed in the UZOVI register and the name which is returned in the Check for Right to Insurance (COV)." />
       <alias value="OrganisatieNaam" />
       <alias value="BetalerNaam" />
       <mapping>

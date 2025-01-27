@@ -376,20 +376,11 @@ zib-Payer-Organization:
         for: NL-CM:20.5.1 (AddressInformation)
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
 
-zib-Payer.InsuranceCompany:
-  zib deviations:
-    Coverage.payor:
-      - cardinality: 1..1 instead of 0..1
-        reason: The cardinality of the zib concept InsuranceCompany (0..1) mismatches FHIR (1..1). Between the zib concepts InsuranceCompany and PayerPerson, a minimum of 1 must be selected. If one uses the zib-Payer.InsuranceCompany profile, the choice has been made to apply the InsuranceCompany concept, therefore a cardinality of 1..1 can be used.
-
 zib-Payer.PayerPerson:
   zib deviations:
     Coverage.extension:bankInformation:
       - datatype: Extension instead of container
         reason: The (complex) extension acts as a container for three subextensions that each contain a zib subconcept.
-    Coverage.payor:
-      - cardinality: 1..1 instead of 0..1
-        reason: The cardinality of the zib concept PayerPerson (0..1) mismatches FHIR (1..1). Between the zib concepts InsuranceCompany and PayerPerson, a minimum of 1 must be selected. If one uses the zib-Payer.PayerPerson profile, the choice has been made to apply the PayerPerson concept, therefore a cardinality of 1..1 can be used.
 
 zib-Problem:
   zib deviations:
