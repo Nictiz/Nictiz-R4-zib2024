@@ -107,20 +107,19 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.effective[x]:effectivePeriod">
+    <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
-      <sliceName value="effectivePeriod" />
+      <sliceName value="effectiveDateTime" />
       <short value="SymptomPeriod" />
-      <definition value="The period in which the symptom is (was) present." />
-      <alias value="SymptoomPeriode" />
+      <definition value="Date from which the specification of the symptom applies." />
+      <alias value="SymptoomStatusDatum" />
       <type>
-        <code value="Period" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TimeInterval" />
+        <code value="dateTime" />
       </type>
       <mapping>
         <identity value="zib-symptom-v1.0-2024EN" />
-        <map value="NL-CM:5.5.16" />
-        <comment value="SymptomPeriod" />
+        <map value="NL-CM:5.5.3" />
+        <comment value="SymptomStatusDate" />
       </mapping>
     </element>
     <element id="Observation.note">
@@ -167,6 +166,35 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="Observation.component:symptomPeriod">
+      <path value="Observation.component" />
+      <sliceName value="symptomPeriod" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:symptomPeriod.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="408731000" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:symptomPeriod.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="SymptomPeriod" />
+      <definition value="The period in which the symptom is (was) present." />
+      <alias value="SymptoomPeriode" />
+      <type>
+        <code value="Period" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TimeInterval" />
+      </type>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.16" />
+        <comment value="SymptomPeriod" />
+      </mapping>
+    </element>
     <element id="Observation.component:onset">
       <path value="Observation.component" />
       <sliceName value="onset" />
@@ -202,6 +230,7 @@
     <element id="Observation.component:temporalPattern">
       <path value="Observation.component" />
       <sliceName value="temporalPattern" />
+      <max value="1" />
     </element>
     <element id="Observation.component:temporalPattern.code">
       <path value="Observation.component.code" />
@@ -265,6 +294,7 @@
     <element id="Observation.component:symptomSeverity">
       <path value="Observation.component" />
       <sliceName value="symptomSeverity" />
+      <max value="1" />
     </element>
     <element id="Observation.component:symptomSeverity.code">
       <path value="Observation.component.code" />
