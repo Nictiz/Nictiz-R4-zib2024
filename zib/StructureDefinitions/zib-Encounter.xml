@@ -1,284 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-Encounter" />
+  <id value="zib-Encounter"/>
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
-  <name value="ZibEncounter" />
-  <title value="zib Encounter" />
-  <status value="draft" />
-  <publisher value="Nictiz" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter"/>
+  <name value="ZibEncounter"/>
+  <title value="zib Encounter"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
   <contact>
-    <name value="Nictiz" />
+    <name value="Nictiz"/>
     <telecom>
-      <system value="url" />
-      <value value="https://www.nictiz.nl" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="https://www.nictiz.nl"/>
+      <use value="work"/>
     </telecom>
   </contact>
-  <description value="A contact is any interaction, regardless of the situation, between a patient and the healthcare provider, in which the healthcare provider has primary responsibility for diagnosing, evaluating and treating the patient’s condition and informing the patient. These can be visits, appointments or non face-to-face interactions.&#xD;&#xA;&#xD;&#xA;Contacts can be visits to the general practitioner or other practices, home visits, admissions (in hospitals, nursing homes or care homes, psychiatric institutions or convalescent homes) or other relevant contacts. This includes past and future contacts." />
-  <purpose value="This Encounter resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Encounter v6.0 (2024)](https://zibs.nl/wiki/Encounter-v6.0(2024EN)) and [zib HealthProfessional v4.0 (2024)](https://zibs.nl/wiki/HealthProfessional-v4.0(2024EN))." />
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-  <fhirVersion value="4.0.1" />
+  <description value="A contact is any interaction, regardless of the situation, between a patient and the healthcare provider, in which the healthcare provider has primary responsibility for diagnosing, evaluating and treating the patient’s condition and informing the patient. These can be visits, appointments or non face-to-face interactions.&#xD;&#xA;&#xD;&#xA;Contacts can be visits to the general practitioner or other practices, home visits, admissions (in hospitals, nursing homes or care homes, psychiatric institutions or convalescent homes) or other relevant contacts. This includes past and future contacts."/>
+  <purpose value="This Encounter resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Encounter v6.0 (2024)](https://zibs.nl/wiki/Encounter-v6.0(2024EN)) and [zib HealthProfessional v4.0 (2024)](https://zibs.nl/wiki/HealthProfessional-v4.0(2024EN))."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+  <fhirVersion value="4.0.1"/>
   <mapping>
-    <identity value="zib-encounter-v6.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/Encounter-v6.0(2024EN)" />
-    <name value="zib Encounter-v6.0(2024EN)" />
+    <identity value="zib-encounter-v6.0-2024EN"/>
+    <uri value="https://zibs.nl/wiki/Encounter-v6.0(2024EN)"/>
+    <name value="zib Encounter-v6.0(2024EN)"/>
   </mapping>
   <mapping>
-    <identity value="zib-healthprofessional-v4.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/HealthProfessional-v4.0(2024EN)" />
-    <name value="zib HealthProfessional-v4.0(2024EN)" />
+    <identity value="zib-healthprofessional-v4.0-2024EN"/>
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v4.0(2024EN)"/>
+    <name value="zib HealthProfessional-v4.0(2024EN)"/>
   </mapping>
-  <kind value="resource" />
-  <abstract value="true" />
-  <type value="Encounter" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
-  <derivation value="constraint" />
+  <kind value="resource"/>
+  <abstract value="true"/>
+  <type value="Encounter"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Encounter">
-      <path value="Encounter" />
-      <short value="Encounter" />
-      <alias value="Contact" />
+      <path value="Encounter"/>
+      <short value="Encounter"/>
+      <alias value="Contact"/>
       <constraint>
-        <key value="zib-Encounter-1" />
-        <severity value="error" />
-        <human value="Only one CommentEncounterReason extension may be present according to the zib" />
-        <expression value="reasonCode.extension('http://nictiz.nl/fhir/StructureDefinition/ext-Encounter.CommentEncounterReason').count() + reasonReference.extension('http://nictiz.nl/fhir/StructureDefinition/ext-Encounter.CommentEncounterReason').count() &lt; 2" />
+        <key value="zib-Encounter-1"/>
+        <severity value="error"/>
+        <human value="Only one CommentEncounterReason extension may be present according to the zib"/>
+        <expression value="reasonCode.extension('http://nictiz.nl/fhir/StructureDefinition/ext-Encounter.CommentEncounterReason').count() + reasonReference.extension('http://nictiz.nl/fhir/StructureDefinition/ext-Encounter.CommentEncounterReason').count() &lt; 2"/>
       </constraint>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.1" />
-        <comment value="Encounter" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.1"/>
+        <comment value="Encounter"/>
       </mapping>
     </element>
     <element id="Encounter.status">
-      <path value="Encounter.status" />
-      <comment value="This element is implictly mapped to the zib concept NL-CM:15.1.3 (DateTime). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;* When DateTime is in the future, `.status` will usually be set to _planned_.&#xD;&#xA;* When DateTime is in the past, `.status` will usually be set to _finished_.&#xD;&#xA;* When a system is unable to infer the status from DateTime, `.status` will be set to _unknown_.&#xD;&#xA;&#xD;&#xA;The _unknown_ code is not to be used to convey other statuses.  The _unknown_ code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.&#xA;&#xA;This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." />
+      <path value="Encounter.status"/>
+      <comment value="This element is implictly mapped to the zib concept NL-CM:15.1.3 (DateTime). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;* When DateTime is in the future, `.status` will usually be set to _planned_.&#xD;&#xA;* When DateTime is in the past, `.status` will usually be set to _finished_.&#xD;&#xA;* When a system is unable to infer the status from DateTime, `.status` will be set to _unknown_.&#xD;&#xA;&#xD;&#xA;The _unknown_ code is not to be used to convey other statuses.  The _unknown_ code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.&#xA;&#xA;This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.3" />
-        <comment value="DateTime (implicit, main mapping is on Encounter.period.start)" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.3"/>
+        <comment value="DateTime (implicit, main mapping is on Encounter.period.start)"/>
       </mapping>
     </element>
     <element id="Encounter.class">
-      <path value="Encounter.class" />
-      <short value="EncounterSetting" />
+      <path value="Encounter.class"/>
+      <short value="EncounterSetting"/>
       <definition value="EncounterSetting describes the manner and setting in which the contact takes place." />
-      <alias value="ContactVorm" />
+      <alias value="ContactVorm"/>
       <binding>
-        <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.1.2--20240415000000" />
+        <strength value="extensible"/>
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.1.2--20240415000000"/>
       </binding>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.19" />
-        <comment value="EncounterSetting" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.19"/>
+        <comment value="EncounterSetting"/>
       </mapping>
     </element>
     <element id="Encounter.type">
-      <path value="Encounter.type" />
+      <path value="Encounter.type"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="$this" />
+          <type value="value"/>
+          <path value="$this"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="Encounter.type:encounterType">
-      <path value="Encounter.type" />
-      <sliceName value="encounterType" />
-      <short value="EncounterType" />
-      <definition value="The type of encounter is based on the setting of the encounter and the participants present." />
-      <alias value="ContactType" />
-      <max value="1" />
+      <path value="Encounter.type"/>
+      <sliceName value="encounterType"/>
+      <short value="EncounterType"/>
+      <definition value="The type of encounter is based on the setting of the encounter and the participants present."/>
+      <alias value="ContactType"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.1.1--20240415000000" />
+        <strength value="required"/>
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.1.1--20240415000000"/>
       </binding>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.2" />
-        <comment value="EncounterType" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.2"/>
+        <comment value="EncounterType"/>
       </mapping>
     </element>
     <element id="Encounter.type:reason">
-      <path value="Encounter.type" />
-      <sliceName value="reason" />
-      <short value="Reason" />
-      <definition value="Main reason for the encounter within the context of the health problem." />
-      <alias value="AanleidingContact" />
-      <max value="1" />
+      <path value="Encounter.type"/>
+      <sliceName value="reason"/>
+      <short value="Reason"/>
+      <definition value="Main reason for the encounter within the context of the health problem."/>
+      <alias value="AanleidingContact"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.1.3--20240415000000" />
+        <strength value="required"/>
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.1.3--20240415000000"/>
       </binding>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.20" />
-        <comment value="Reason" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.20"/>
+        <comment value="Reason"/>
       </mapping>
     </element>
     <element id="Encounter.type:reason.text">
-      <path value="Encounter.type.text" />
-      <short value="CommentEncounterReason" />
-      <definition value="Comment on the reason for the encounter, insofar as this cannot be sufficiently expressed in the other elements." />
-      <alias value="ToelichtingRedenContact" />
+      <path value="Encounter.type.text"/>
+      <short value="CommentEncounterReason"/>
+      <definition value="Comment on the reason for the encounter, insofar as this cannot be sufficiently expressed in the other elements."/>
+      <alias value="ToelichtingRedenContact"/>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.17" />
-        <comment value="CommentEncounterReason" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.17"/>
+        <comment value="CommentEncounterReason"/>
       </mapping>
     </element>
     <element id="Encounter.participant">
-      <path value="Encounter.participant" />
+      <path value="Encounter.participant"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="type" />
+          <type value="value"/>
+          <path value="type"/>
         </discriminator>
         <discriminator>
-          <type value="profile" />
-          <path value="individual.resolve()" />
+          <type value="profile"/>
+          <path value="individual.resolve()"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="Encounter.participant:healthProfessional">
-      <path value="Encounter.participant" />
-      <sliceName value="healthProfessional" />
+      <path value="Encounter.participant"/>
+      <sliceName value="healthProfessional"/>
     </element>
     <element id="Encounter.participant:healthProfessional.type">
-      <path value="Encounter.participant.type" />
-      <short value="HealthProfessionalRole" />
-      <definition value="The role the health professional fulfils in the healthcare process. For health professionals, this could be for example attender, referrer or performer." />
-      <alias value="ZorgverlenerRol" />
-      <max value="1" />
+      <path value="Encounter.participant.type"/>
+      <short value="HealthProfessionalRole"/>
+      <definition value="The role the health professional fulfils in the healthcare process. For health professionals, this could be for example attender, referrer or performer."/>
+      <alias value="ZorgverlenerRol"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.5--20240415000000" />
+        <strength value="required"/>
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.5--20240415000000"/>
       </binding>
       <mapping>
-        <identity value="zib-healthprofessional-v4.0-2024EN" />
-        <map value="NL-CM:17.1.5" />
-        <comment value="HealthProfessionalRole" />
+        <identity value="zib-healthprofessional-v4.0-2024EN"/>
+        <map value="NL-CM:17.1.5"/>
+        <comment value="HealthProfessionalRole"/>
       </mapping>
     </element>
     <element id="Encounter.participant:healthProfessional.individual">
-      <path value="Encounter.participant.individual" />
-      <short value="HealthProfessional" />
-      <definition value="The health professional with whom the contact took or will take place. The specialty and role of the health professional can be entered in the HealthProfessional information model." />
-      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [zib-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [zib-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which can be referenced on the `Encounter.participant` element (due to open slicing). Since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
-      <alias value="Zorgverlener" />
+      <path value="Encounter.participant.individual"/>
+      <short value="HealthProfessional"/>
+      <definition value="The health professional with whom the encounter took or will take place. The specialty and role of the health professional can be entered in the HealthProfessional information model."/>
+      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [zib-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [zib-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which can be referenced on the `Encounter.participant` element (due to open slicing). Since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile."/>
+      <alias value="Zorgverlener"/>
       <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole" />
+        <code value="Reference"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole"/>
       </type>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.7" />
-        <comment value="HealthProfessional" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.7"/>
+        <comment value="HealthProfessional"/>
       </mapping>
     </element>
     <element id="Encounter.participant:responsibleHealthProfessional">
-      <path value="Encounter.participant" />
-      <sliceName value="responsibleHealthProfessional" />
-      <max value="1" />
+      <path value="Encounter.participant"/>
+      <sliceName value="responsibleHealthProfessional"/>
+      <max value="1"/>
     </element>
     <element id="Encounter.participant:responsibleHealthProfessional.type">
-      <path value="Encounter.participant.type" />
-      <short value="HealthProfessionalRole" />
-      <definition value="The role the health professional fulfils in the healthcare process. For health professionals, this could be for example attender, referrer or performer." />
-      <alias value="ZorgverlenerRol" />
-      <min value="1" />
-      <max value="1" />
+      <path value="Encounter.participant.type"/>
+      <short value="HealthProfessionalRole"/>
+      <definition value="The role the health professional fulfils in the healthcare process. For health professionals, this could be for example attender, referrer or performer."/>
+      <alias value="ZorgverlenerRol"/>
+      <min value="1"/>
+      <max value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType" />
-          <code value="RESP" />
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+          <code value="RESP"/>
         </coding>
       </patternCodeableConcept>
       <mapping>
-        <identity value="zib-healthprofessional-v4.0-2024EN" />
-        <map value="NL-CM:17.1.5" />
-        <comment value="HealthProfessionalRole" />
+        <identity value="zib-healthprofessional-v4.0-2024EN"/>
+        <map value="NL-CM:17.1.5"/>
+        <comment value="HealthProfessionalRole"/>
       </mapping>
     </element>
     <element id="Encounter.participant:responsibleHealthProfessional.individual">
-      <path value="Encounter.participant.individual" />
-      <short value="ResponsableHealthProfessional" />
-      <definition value="The health professional who is responsible at the time of the encounter for the treatment of the patient's stated health problem." />
-      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [zib-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [zib-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which can be referenced on the `Encounter.participant` element (due to open slicing). Since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
-      <alias value="VerantwoordelijkBehandelaar" />
+      <path value="Encounter.participant.individual"/>
+      <short value="ResponsableHealthProfessional"/>
+      <definition value="The health professional who is responsible at the time of the encounter for the treatment of the patient's stated health problem."/>
+      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [zib-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [zib-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which can be referenced on the `Encounter.participant` element (due to open slicing). Since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile."/>
+      <alias value="VerantwoordelijkBehandelaar"/>
       <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole" />
+        <code value="Reference"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole"/>
       </type>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.18" />
-        <comment value="ResponsableHealthProfessional" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.18"/>
+        <comment value="ResponsableHealthProfessional"/>
       </mapping>
     </element>
     <element id="Encounter.period.start">
-      <path value="Encounter.period.start" />
-      <short value="DateTime" />
-      <definition value="The date and time at which the encounter took or will take place." />
-      <alias value="DatumTijd" />
+      <path value="Encounter.period.start"/>
+      <short value="DateTime"/>
+      <definition value="The date and time at which the encounter took or will take place."/>
+      <alias value="DatumTijd"/>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.3" />
-        <comment value="DateTime" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.3"/>
+        <comment value="DateTime"/>
       </mapping>
     </element>
     <element id="Encounter.reasonReference">
-      <path value="Encounter.reasonReference" />
+      <path value="Encounter.reasonReference"/>
       <slicing>
         <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
+          <type value="profile"/>
+          <path value="resolve()"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="Encounter.reasonReference:problem">
-      <path value="Encounter.reasonReference" />
-      <sliceName value="problem" />
-      <short value="Problem" />
-      <definition value="The main problem to which the encounter relates." />
-      <alias value="Probleem" />
-      <max value="1" />
+      <path value="Encounter.reasonReference"/>
+      <sliceName value="problem"/>
+      <short value="Problem"/>
+      <definition value="The main problem to which the encounter relates."/>
+      <alias value="Probleem"/>
+      <max value="1"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
+        <code value="Reference"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem"/>
       </type>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.6" />
-        <comment value="Problem" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.6"/>
+        <comment value="Problem"/>
       </mapping>
     </element>
     <element id="Encounter.location">
-      <path value="Encounter.location" />
-      <max value="1" />
+      <path value="Encounter.location"/>
+      <max value="1"/>
     </element>
     <element id="Encounter.location.location">
-      <path value="Encounter.location.location" />
-      <short value="Location" />
-      <definition value="The physical location at which the contact took or will take place." />
-      <alias value="Locatie" />
+      <path value="Encounter.location.location"/>
+      <short value="Location"/>
+      <definition value="The physical location at which the encounter took or will take place."/>
+      <alias value="Locatie"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthcareProvider" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthcareProvider"/>
       </type>
       <mapping>
-        <identity value="zib-encounter-v6.0-2024EN" />
-        <map value="NL-CM:15.1.8" />
-        <comment value="Location" />
+        <identity value="zib-encounter-v6.0-2024EN"/>
+        <map value="NL-CM:15.1.8"/>
+        <comment value="Location"/>
       </mapping>
     </element>
   </differential>
