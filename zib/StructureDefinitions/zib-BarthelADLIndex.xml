@@ -19,13 +19,13 @@
     </telecom>
   </contact>
   <description value="The Barthel ADL index is a validated scale used to measure and track patients’ activities of daily living (ADL) and indirectly, the extent to which they are dependent on help.&#xD;&#xA;The list comprises 10 variables: bowels, bladder, grooming, toilet use, feeding, transfers (from chair to bed and vice versa), mobility, dressing, climbing stairs and bathing, which are all given a score.&#xD;&#xA;The total score is the sum of the scores of the 10 variables." />
-  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) BarthelADLIndex v3.1 (2020)](https://zibs.nl/wiki/BarthelADLIndex-v3.1(2020EN))." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) BarthelADLIndex v3.2 (2024)](https://zibs.nl/wiki/BarthelADLIndex-v3.2(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-bartheladlindex-v3.1-2020EN" />
-    <uri value="https://zibs.nl/wiki/BarthelADLIndex-v3.1(2020EN)" />
-    <name value="zib BarthelADLIndex-v3.1(2020EN)" />
+    <identity value="zib-bartheladlindex-v3.2-2024EN" />
+    <uri value="https://zibs.nl/wiki/BarthelADLIndex-v3.2(2024EN)" />
+    <name value="zib BarthelADLIndex-v3.2(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -38,7 +38,7 @@
       <short value="BarthelADLIndex" />
       <alias value="BarthelIndex" />
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.1" />
         <comment value="BarthelADLIndex" />
       </mapping>
@@ -75,7 +75,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="20" />
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.2" />
         <comment value="TotalScore" />
       </mapping>
@@ -117,7 +117,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.1--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.4" />
         <comment value="Bowels" />
       </mapping>
@@ -149,7 +149,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.2--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.3" />
         <comment value="Bladder" />
       </mapping>
@@ -181,7 +181,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.3--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.5" />
         <comment value="Grooming" />
       </mapping>
@@ -213,7 +213,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.4--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.6" />
         <comment value="ToiletUse" />
       </mapping>
@@ -245,7 +245,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.5--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.7" />
         <comment value="Feeding" />
       </mapping>
@@ -277,7 +277,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.6--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.8" />
         <comment value="Transfers" />
       </mapping>
@@ -309,7 +309,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.7--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.9" />
         <comment value="Mobility" />
       </mapping>
@@ -341,7 +341,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.8--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.10" />
         <comment value="Dressing" />
       </mapping>
@@ -373,7 +373,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.9--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.11" />
         <comment value="ManagingStairs" />
       </mapping>
@@ -405,7 +405,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.2.10--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bartheladlindex-v3.1-2020EN" />
+        <identity value="zib-bartheladlindex-v3.2-2024EN" />
         <map value="NL-CM:4.2.12" />
         <comment value="Bathing" />
       </mapping>
