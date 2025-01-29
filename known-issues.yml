@@ -69,7 +69,7 @@ zib-Admission:
     Encounter.participant:responsibleHealthProfessional.type:
       - cardinality: 1..1 instead of 0..1  
         reason: There is only one correct type for the responsibleHealthProfessional, but the use of the responsibleHealthProfessional element itself is optional, making the effective cardinality 0..1 as required by the zib.  
-    Encounter.reasonCode:
+    Encounter.type:triggerForAdmission:
       - short: TriggerForAdmission instead of TiggerForAdmission
         reason: The zib concept name "TiggerForAdmission" is an incorrect translation of the Dutch name into English.
 

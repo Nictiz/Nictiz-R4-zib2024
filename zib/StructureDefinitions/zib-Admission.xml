@@ -75,19 +75,59 @@
         <comment value="AdmissionScope" />
       </mapping>
     </element>
-    <element id="Encounter.serviceType">
-      <path value="Encounter.serviceType" />
+    <element id="Encounter.type">
+      <path value="Encounter.type" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.type:careType">
+      <path value="Encounter.type" />
+      <sliceName value="careType" />
       <short value="CareType" />
       <definition value="The type of care that has been or will be provided to the patient during the (partial) admission. This is related, among other things, to the severity category of the care." />
       <alias value="ZorgType" />
+      <max value="1" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.5--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-admission-v2.0-2024EN" />
         <map value="NL-CM:15.4.2" />
         <comment value="CareType" />
+      </mapping>
+    </element>
+    <element id="Encounter.type:triggerForAdmission">
+      <path value="Encounter.type" />
+      <sliceName value="triggerForAdmission" />
+      <short value="TriggerForAdmission" />
+      <definition value="The specific reason for the admission in relation to the diagnosis and/or treatment of the problem." />
+      <alias value="AanleidingOpname" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.1--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN" />
+        <map value="NL-CM:15.4.7" />
+        <comment value="TriggerForAdmission" />
+      </mapping>
+    </element>
+    <element id="Encounter.type:triggerForAdmission.text">
+      <path value="Encounter.type.text" />
+      <short value="CommentAdmissionReason" />
+      <definition value="Comment on the reason for the (partial) admission, insofar as this cannot be sufficiently expressed in the other elements." />
+      <alias value="ToelichtingRedenOpname" />
+      <mapping>
+        <identity value="zib-admission-v2.0-2024EN" />
+        <map value="NL-CM:15.4.8" />
+        <comment value="CommentAdmissionReason" />
       </mapping>
     </element>
     <element id="Encounter.participant">
@@ -160,33 +200,6 @@
         <identity value="zib-admission-v2.0-2024EN" />
         <map value="NL-CM:15.4.4" />
         <comment value="EndDateTime" />
-      </mapping>
-    </element>
-    <element id="Encounter.reasonCode">
-      <path value="Encounter.reasonCode" />
-      <short value="TriggerForAdmission" />
-      <definition value="The specific reason for the admission in relation to the diagnosis and/or treatment of the problem." />
-      <alias value="AanleidingOpname" />
-      <max value="1" />
-      <binding>
-        <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.15.4.1--20240415000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.7" />
-        <comment value="TriggerForAdmission" />
-      </mapping>
-    </element>
-    <element id="Encounter.reasonCode.text">
-      <path value="Encounter.reasonCode.text" />
-      <short value="CommentAdmissionReason" />
-      <definition value="Comment on the reason for the (partial) admission, insofar as this cannot be sufficiently expressed in the other elements." />
-      <alias value="ToelichtingRedenOpname" />
-      <mapping>
-        <identity value="zib-admission-v2.0-2024EN" />
-        <map value="NL-CM:15.4.8" />
-        <comment value="CommentAdmissionReason" />
       </mapping>
     </element>
     <element id="Encounter.reasonReference">
