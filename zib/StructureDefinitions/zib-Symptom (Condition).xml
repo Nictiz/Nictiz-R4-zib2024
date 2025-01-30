@@ -155,6 +155,10 @@
       </type>
       <isModifier value="false" />
     </element>
+    <element id="Condition.onset[x]:onsetDateTime.extension:relativeStartTime.url">
+      <path value="Condition.onset[x].extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.RelativeStartTime" />
+    </element>
     <element id="Condition.abatement[x]">
       <path value="Condition.abatement[x]" />
       <slicing>
@@ -190,24 +194,50 @@
       </type>
       <isModifier value="false" />
     </element>
-    <element id="Condition.evidence.detail">
-      <path value="Condition.evidence.detail" />
+    <element id="Condition.abatement[x]:abatementDateTime.extension:relativeEndTime.url">
+      <path value="Condition.abatement[x].extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.RelativeEndTime" />
+    </element>
+    <element id="Condition.evidence">
+      <path value="Condition.evidence" />
       <slicing>
         <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
+          <type value="value" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.evidence.detail:symptomCharacteristics">
-      <path value="Condition.evidence.detail" />
+    <element id="Condition.evidence:symptomCharacteristics">
+      <path value="Condition.evidence" />
       <sliceName value="symptomCharacteristics" />
+    </element>
+    <element id="Condition.evidence:symptomCharacteristics.detail">
+      <path value="Condition.evidence.detail" />
       <comment value="The functional model of zib Symptom represents a condition that needs to be tracked over time, but defines point-in-time assessments about the current state of the symptom as well. For this reason, this zib is mapped onto multiple resources: this Condition profile represents the focal resource, while all point-in-time observations are mapped onto Observation profiles. See the comment on the root of this profile for further guidance." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Symptom.Characteristics" />
       </type>
+    </element>
+    <element id="Condition.evidence:condition">
+      <path value="Condition.evidence" />
+      <sliceName value="condition" />
+    </element>
+    <element id="Condition.evidence:condition.detail">
+      <path value="Condition.evidence.detail" />
+      <short value="Condition" />
+      <definition value="The condition of which the symptom is a manifestation." />
+      <alias value="AandoeningOfGesteldheid" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ConditionDiagnosticInsight" />
+      </type>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.14" />
+        <comment value="Condition" />
+      </mapping>
     </element>
     <element id="Condition.note">
       <path value="Condition.note" />
