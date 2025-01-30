@@ -7,13 +7,13 @@
     <name value="Uzovi"/>
     <status value="active"/>
     <kind value="identifier"/>
-    <date value="2017-04-05T13:14:57.478+01:00"/>
+    <date value="2024-04-15T00:00:00"/>
     <publisher value="Nictiz"/>
     <contact>
         <name value="Nictiz"/>
         <telecom>
-            <system value="url" />
-            <value value="https://www.nictiz.nl" />
+            <system value="url"/>
+            <value value="https://www.nictiz.nl"/>
             <use value="work"/>
         </telecom>
     </contact>
