@@ -126,5 +126,202 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Symptom.InfluencingFactors" />
       </type>
     </element>
+     <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:onset">
+      <path value="Observation.component" />
+      <sliceName value="onset" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:onset.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="https://zibs.nl/wiki/Symptom-v1.0(2024EN)" />
+          <code value="NL-CM:5.5.5" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:onset.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="Onset" />
+      <definition value="Indication how fast the symptom presented at first." />
+      <alias value="Ontstaanswijze" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.5.2--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.5" />
+        <comment value="Onset" />
+      </mapping>
+    </element>
+    <element id="Observation.component:temporalPattern">
+      <path value="Observation.component" />
+      <sliceName value="temporalPattern" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:temporalPattern.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="288524001" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:temporalPattern.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TemporalPattern" />
+      <definition value="The temporal pattern with which the symptom presents itself, such as continuous or intermittent." />
+      <alias value="TijdPatroon" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.5.3--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.6" />
+        <comment value="TemporalPattern" />
+      </mapping>
+    </element>
+    <element id="Observation.component:symptomCourse">
+      <path value="Observation.component" />
+      <sliceName value="symptomCourse" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:symptomCourse.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="https://zibs.nl/wiki/Symptom-v1.0(2024EN)" />
+          <code value="NL-CM:5.5.7" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:symptomCourse.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="SymptomCourse" />
+      <definition value="The course of the intensity of the symptom over time, such as increased, unchanged." />
+      <alias value="SymptoomBeloop" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.5.4--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.7" />
+        <comment value="SymptomCourse" />
+      </mapping>
+    </element>
+    <element id="Observation.component:symptomSeverity">
+      <path value="Observation.component" />
+      <sliceName value="symptomSeverity" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:symptomSeverity.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="246112005" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:symptomSeverity.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="SymptomSeverity" />
+      <definition value="Indicates the degree of severity of the symptom at the moment of the SymptomStatusDate." />
+      <alias value="SymptoomErnst" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.5.5--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.8" />
+        <comment value="SymptomSeverity" />
+      </mapping>
+    </element>
+    <element id="Observation.component:durationWhenPresent">
+      <path value="Observation.component" />
+      <sliceName value="durationWhenPresent" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:durationWhenPresent.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="162442009" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:durationWhenPresent.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="DurationWhenPresent" />
+      <definition value="Duration of an intermittent or paroxysmal symptom while it presents." />
+      <alias value="DuurBijOptreden" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <type>
+        <code value="Range" />
+      </type>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.9" />
+        <comment value="DurationWhenPresent" />
+      </mapping>
+    </element>
+    <element id="Observation.component:influencingFactors">
+      <path value="Observation.component" />
+      <sliceName value="influencingFactors" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:influencingFactors.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="https://zibs.nl/wiki/Symptom-v1.0(2024EN)" />
+          <code value="NL-CM:5.5.13" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:influencingFactors.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="InfluencingFactors" />
+      <definition value="Actions, events or circumstances that influence the presentation of the symptom. Generally, this pertains to factors that aggravate or alleviate the symptom." />
+      <alias value="BeïnvloedendeFactoren" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.13" />
+        <comment value="InfluencingFactors" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>
