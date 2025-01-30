@@ -183,6 +183,10 @@
 * No significant changes
 
 ### zib-MedicalDevice.Product, nl-core-MedicalDevice.Product
+* `.identifier:gs1ProductID` ; mapping ; Changed mapping key from NL-CM:10.1.4 to NL-CM:10.1.16 ; ZIB-1535
+* `.identifier:hibcProductID` ; mapping ; Changed mapping key from NL-CM:10.1.4 to NL-CM:10.1.16 ; ZIB-1535
+* `.udiCarrier:gs1UdiCarrier.carrierHRF` ; mapping ; Changed mapping key from NL-CM:10.1.4 to NL-CM:10.1.16 ; ZIB-1535
+* `.udiCarrier:hibcUdiCarrier.carrierHRF` ; mapping ; Changed mapping key from NL-CM:10.1.4 to NL-CM:10.1.16 ; ZIB-1535
 * `.type` ; terminology ; Added additional binding to ProductTypeImplantatenCodelijst (using a combined ValueSet) (although it is a subset of the existing ValueSet ProductTypeCodelijst) ; ZIB-1279
 * `.type` ; terminology ; Moved two codes from ProductTypeCodelijst to ProductTypeGeenCodelijst (although the codes are still in the same combined ValueSet bound on this element) ; ZIB-1536
 
