@@ -18,6 +18,16 @@
 ## AbilityToGroom (zib-AbilityToGroom, nl-core-AbilityToGroom)
 * No significant changes.
 
+## AbilityToPerformMouthcareActivities
+### zib-AbilityToPerformMouthcareActivities, nl-core-AbilityToPerformMouthcareActivities
+* No significant changes.
+
+### zib-AbilityToPerformMouthcareActivities.Prosthesis, nl-core-AbilityToPerformMouthcareActivities.Prosthesis
+* No significant changes.
+
+### zib-AbilityToPerformMouthcareActivities.Prosthesis.Product, nl-core-AbilityToPerformMouthcareActivities.Prosthesis.Product
+* No significant changes.
+
 ## AbilityToUseToilet 
 ### zib-AbilityToUseToilet, nl-core-AbilityToUseToilet
 * No significant changes.
