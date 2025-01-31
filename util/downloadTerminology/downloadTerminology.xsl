@@ -24,7 +24,7 @@
             <xsl:with-param name="type" select="'CodeSystem'" tunnel="yes"/>
         </xsl:call-template>
     </xsl:template>
-    
+
     <!--
         Main template to download ValueSet and CodeSystem resources based on the bindings/references in other
         resources.
@@ -114,7 +114,7 @@
         </xsl:variable>
         <xsl:copy-of select="$references"/>
     </xsl:function>
-    
+
     <!--
         Scan the source dir for all CodeSystem references that we need to include.
         The output is the same as for nf:findValueSetReferences().
