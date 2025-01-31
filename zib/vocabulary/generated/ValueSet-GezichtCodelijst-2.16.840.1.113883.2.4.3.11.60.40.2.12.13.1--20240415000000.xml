@@ -1,6 +1,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.12.13.1--20240415000000"/>
    <meta>
+      <lastUpdated value="2024-11-28T08:35:00Z"/>
       <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -41,7 +42,7 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="GezichtCodelijst"/>
+   <description value="Changes compared to prerelease 2024: &#xA;* Removed: code OTH (NullFlavor)"/>
    <immutable value="false"/>
    <compose>
       <include>
@@ -129,16 +130,6 @@
                </use>
                <value value="Fronst regelmatig tot voortdurend"/>
             </designation>
-         </concept>
-      </include>
-      <include>
-         <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-         <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Anders"/>
-            </extension>
-            <code value="OTH"/>
-            <display value="Other"/>
          </concept>
       </include>
    </compose>
