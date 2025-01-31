@@ -24,7 +24,7 @@
             <xsl:with-param name="type" select="'CodeSystem'" tunnel="yes"/>
         </xsl:call-template>
     </xsl:template>
-
+    
     <!--
         Main template to download ValueSet and CodeSystem resources based on the bindings/references in other
         resources.
@@ -100,7 +100,7 @@
         <xsl:param name="alreadyHandled" as="element(reference)*"/>
 
         <xsl:variable name="urls"
-            select="collection(concat($sourceDir, '?select=*.xml;recurse=yes'))/(f:StructureDefinition//f:binding/f:valueSet | f:ValueSet//f:include/f:valueSet | f:ConceptMap/f:sourceCanonical | f:ConceptMap/f:targetCanonical)/@value[starts-with(., 'http://decor.nictiz.nl/fhir/')]" as="attribute()*"/>
+            select="collection(concat($sourceDir, '?select=*.xml;recurse=yes'))/(f:StructureDefinition//f:binding/f:valueSet | f:StructureDefinition//f:binding/f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet']/f:valueCanonical | f:ValueSet//f:include/f:valueSet | f:ConceptMap/f:sourceCanonical | f:ConceptMap/f:targetCanonical)/@value[starts-with(., 'http://decor.nictiz.nl/fhir/')]" as="attribute()*"/>
 
         <xsl:variable name="references" as="element(reference)*">
             <xsl:for-each-group select="$urls" group-by="string(.)">
@@ -114,7 +114,7 @@
         </xsl:variable>
         <xsl:copy-of select="$references"/>
     </xsl:function>
-
+    
     <!--
         Scan the source dir for all CodeSystem references that we need to include.
         The output is the same as for nf:findValueSetReferences().
