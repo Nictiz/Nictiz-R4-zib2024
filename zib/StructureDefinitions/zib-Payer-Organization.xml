@@ -33,7 +33,7 @@
   <differential>
     <element id="Organization">
       <path value="Organization" />
-      <comment value="The zib Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These profiles can refer to an Organization as a PayerPerson or an InsuranceCompany, respectively. This profile can thus represent either the PayerName or InsuranceCompany concept and both the AddressInformation and ContactInformation concepts of the zib." />
+      <comment value="The zib Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These profiles can refer to an Organization as a PayerPerson or an InsuranceCompany, respectively. This profile can thus represent either the PayerName or InsuranceCompany concept (the latter partly, namely only the underlying OrganizationName and IdentificationNumber concepts) and both the AddressInformation and ContactInformation concepts of the zib." />
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
