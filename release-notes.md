@@ -37,9 +37,45 @@
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
 
+## AnatomicalLocation 
+### zib-AnatomicalLocation, nl-core-AnatomicalLocation
+* `CodeableConcept` ; textual ; Added guidance for Location and Laterality. ; ZIBFHIR-113
+* `CodeableConcept` ; constraint ; Added zib-AnatomicalLocation-01 for Location. ; ZIBFHIR-113
+* `.extension:bodyStructureReference` ; extension ; Replaced ExtAnatomicalLocationLaterality with BodyStructureReference for Laterality. ; ZIBFHIR-113
+* `.extension:bodyStructureReference` ; mapping ; Moved mapping of Laterality to `BodyStructure.locationQualifier`. ; ZIBFHIR-113
+
+### zib-AnatomicalLocation-BodyStructure, nl-core-AnatomicalLocation-BodyStructure
+* New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
+
+## BloodPressure 
+### zib-BloodPressure, nl-core-BloodPressure
+* Changed description of BloodPressure. ; ZIB-2112, ZIB-2589
+* `.bodySite` ; mapping ; Renamed mapping from MeasuringLocation to AnatomicalLocation. ; ZIB-1731
+* `.bodySite` ; terminology ; Changed codes in MeetLocatieCodelijst. ; ZIB-1731, ZIB-1813
+* `.bodySite` ; terminology ; Changed value set from MeetLocatieCodelijst to LocatieCodelijsten. ; ZIBFHIR-192
+* `.bodySite` ; terminology ; Added MeetLocatieCodelijst as minimum allowable value set. ; ZIBFHIR-192
+* `.method` ; terminology ; Changed codes in MeetmethodeCodelijst. ; ZIB-2036
+* `.component:diastolicEndpoint.value[x]` ; terminology ; Changed codes in DiastolischEindpuntCodelijst. ; ZIB-2218
+* `.component:cuffType.value[x]` ; terminology ; Changed codes in ManchetTypeCodelijst. ; ZIB-2218
+
+### zib-BloodPressure.AnatomicalLocation-BodyStructure, nl-core-BloodPressure.AnatomicalLocation-BodyStructure
+* A new profile that applies zib BloodPressure constraints to the Location concept within AnatomicalLocation (ZIB-1731).
+
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
+
+## BodyTemperature (zib-BodyTemperature, nl-core-BodyTemperature)
+* `.value[x]` ; terminology ; Added required binding to BodyTemperatureUnits. ; ZIBFHIR-178
+
+## BodyWeight (zib-BodyWeight, nl-core-BodyWeight)
+* `.value[x]` ; textual ; Changed definition of WeightValue. ; ZIB-1886
+* `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIBFHIR-178
+* `.component:clothing.value[x]` ; terminology ; Changed codes in KledingCodelijst. ; ZIB-1704
+
+## ComfortScale (zib-ComfortScale, nl-core-ComfortScale)
+* `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-1839
+* `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-1839
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
@@ -164,6 +200,11 @@
 ## Nationality (zib-Patient, nl-core-Patient)
 * No significant changes.
 
+## O2Saturation (zib-O2Saturation, nl-core-O2Saturation)
+* `.effective[x]:effectiveDateTime` ; mapping ; Renamed mapping from O2SaturationDateTime to SpO2SaturationDateTime. ; ZIB-1217
+* `.bodySite` ; mapping ; Added mapping of MeasuringLocation. ; ZIB-1217
+* `.component:extraOxygenAdministration.code` ; textual ; Removed guidance for ExtraOxygenAdministration. ; ZIB-1217, ZIB-1476
+
 ## ParticipationInSociety
 ### zib-ParticipationInSociety, nl-core-ParticipationInSociety
 * No significant changes.
@@ -181,3 +222,10 @@
 * `.extension:genderIdentity.value[x]` ; extension ; Added extension genderIdentity for GenderIdentity. ; ZIB-1693
 * `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
+
+## Problem (zib-Problem, nl-core-Problem)
+* `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-1575, ZIB-2087, ZIB-2218
+* `.code.text` ; mapping ; Moved mapping of FurtherSpecificationProblemName from `.code.extension:furtherSpecificationProblemName.value[x]`. ; ZIBFHIR-145
+* `.bodySite` ; cardinality ; Changed max cardinality from 1 to *. ; ZIB-1433
+* `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
+* `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
