@@ -2,10 +2,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-Symptom.Characteristics" />
   <text>
-    <status value="empty" />
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-symptom.Characteristics" />
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Symptom.Characteristics" />
   <name value="ZibSymptomCharacteristics" />
   <title value="zib Symptom.Characteristics" />
   <status value="draft" />
@@ -35,7 +33,16 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <comment value="The functional model of the zib Symptom represents conditions that need to be tracked over time, but define point-in-time assessments about the current state of the symptoms as well. For this reason, this zibs is mapped onto multiple resources: a Condition resource that represents the focal resource, and Observation resources for all observable properties.&#xD;&#xA;&#xD;&#xA;Since multiple observable properties are usually assessed together, all Observation resources resulting from a single assessment are grouped using the current Observation profile. For the Observation resources, this is done using `Observation.hasMember`. It is this grouping Observation that is referenced from the Condition resources, on `Condition.evidence.detail`.&#xD;&#xA;&#xD;&#xA;This model allows to track multiple distinct assessment moments over time in connection with the Condition. For this reason, it is not expected that the Observations for individual outcomes are referenced directly from and to the Condition resources; all references should be referenced through this grouping Observation." />
+      <comment value="The functional model of the zib Symptom represents conditions that need to be tracked over time, but define point-in-time assessments about the current state of the symptoms as well. For this reason, this zib is mapped onto multiple resources: a Condition resource that represents the focal resource, and Observation resources for all observable properties.&#xD;&#xA;&#xD;&#xA;Since multiple observable properties are usually assessed together, all Observation resources resulting from a single assessment are grouped using the current Observation profile. For the Observation resources, this is done using `Observation.hasMember`. It is this grouping Observation that is referenced from the Condition resources, on `Condition.evidence.detail`.&#xD;&#xA;&#xD;&#xA;This model allows to track multiple distinct assessment moments over time in connection with the Condition. For this reason, it is not expected that the Observations for individual outcomes are referenced directly from and to the Condition resources; all references should be referenced through this grouping Observation." />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="TBD" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
@@ -126,7 +133,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Symptom.InfluencingFactors" />
       </type>
     </element>
-     <element id="Observation.component">
+    <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>
         <discriminator>
