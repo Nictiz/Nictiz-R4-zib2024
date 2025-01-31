@@ -271,7 +271,7 @@ zib-InstructionsForUse:
         reason: A time in FHIR is represented using the time datatype, not as a TS.
     Dosage.asNeeded[x]:asNeededCodeableConcept:
       - cardinality: 0..1 instead of 0..*
-            reason: The value can only occur once, but this profile is also referenced 0..* times via .extension:asNeeded, making the effective cardinality 0..* as required by the zib.
+        reason: The value can only occur once, but this profile is also referenced 0..* times via .extension:asNeeded, making the effective cardinality 0..* as required by the zib.
     Dosage.doseAndRate:
       - datatype: Element instead of container
         for: NL-CM:9.12.19935 (InstructionsForUse.Dosage)
