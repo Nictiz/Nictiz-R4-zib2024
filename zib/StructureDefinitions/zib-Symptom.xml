@@ -44,13 +44,16 @@
     <element id="Condition.extension:assertedDate">
       <path value="Condition.extension" />
       <sliceName value="assertedDate" />
-      <short value="SymptomStatusDate" />
-      <definition value="Date from which the specification of the symptom applies." />
-      <alias value="SymptoomStatusDatum" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/condition-assertedDate" />
       </type>
+    </element>
+    <element id="Condition.extension:assertedDate.value[x]">
+      <path value="Condition.extension.value[x]" />
+      <short value="SymptomStatusDate" />
+      <definition value="Date from which the specification of the symptom applies." />
+      <alias value="SymptoomStatusDatum" />
       <mapping>
         <identity value="zib-symptom-v1.0-2024EN" />
         <map value="NL-CM:5.5.3" />
