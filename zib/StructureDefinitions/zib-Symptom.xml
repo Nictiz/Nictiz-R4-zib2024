@@ -60,6 +60,18 @@
         <comment value="SymptomStatusDate" />
       </mapping>
     </element>
+    <element id="Condition.extension:symptomPeriodDuration">
+      <path value="Condition.extension" />
+      <sliceName value="symptomPeriodDuration" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Duration" />
+      </type>
+    </element>
+    <element id="Condition.extension:symptomPeriodDuration.value[x]">
+      <path value="Condition.extension.value[x]" />
+      <definition value="The duration of the period in which the symptom is (was) present in appropriate units of time (e.g. days or hours, etc.)." />
+    </element>
     <element id="Condition.category">
       <path value="Condition.category" />
       <slicing>
@@ -142,7 +154,7 @@
       <path value="Condition.onset[x]" />
       <sliceName value="onsetDateTime" />
       <short value="StartDateTime" />
-      <definition value="The start date and time of the interval." />
+      <definition value="The start date and time of the period in which the symptom is (was) present." />
       <comment value="The zib recognizes both the StartDateTime (dateTime) and RelativeStartTime (string) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if both concepts are present, it is recommended to communicate the StartDateTime as it is more precise." />
       <alias value="StartDatumTijd" />
       <type>
@@ -184,7 +196,7 @@
       <path value="Condition.abatement[x]" />
       <sliceName value="abatementDateTime" />
       <short value="EndDateTime" />
-      <definition value="The end date and time of the interval." />
+      <definition value="The end date and time of the period in which the symptom is (was) present." />
       <alias value="EindDatumTijd" />
       <type>
         <code value="dateTime" />
