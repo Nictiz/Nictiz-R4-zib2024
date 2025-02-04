@@ -1,168 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="nl-core-ApgarScore-1Minute-full-01"/>
-  <meta>
-    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ApgarScore-1Minute"/>
-  </meta>
-  <text>
-    <status value="extensions"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <table>
-        <caption>Observatie/bepaling. Status: definitief</caption>
-        <tfoot>
-          <tr>
-            <td colspan="2">Een hogere score is beter.</td>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <th>Bepalingdatum/tijd</th>
-            <td>12:05:00, 21 december 2016</td>
-          </tr>
-          <tr>
-            <th>Code</th>
-            <th>Waarde</th>
-          </tr>
-          <tr>
-            <td>
-              <span title="1 minute Apgar Score (9272-6 - LOINC)">1 minute Apgar Score</span>
-            </td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>
-              <span title="1 minute Apgar Respiratory effort (32410-3 - LOINC)">1 minute Apgar Respiratory effort</span>
-            </td>
-            <td>
-              <span title="Weak cry; may sound like whimpering, slow or irregular breathing (LA6726-9 - LOINC)">Weak cry; may sound like whimpering, slow or irregular breathing</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span title="1 minute Apgar Color (32406-1 - LOINC)">1 minute Apgar Color</span>
-            </td>
-            <td>
-              <span title="Good color in body with bluish hands or feet (LA6723-6 - LOINC)">Good color in body with bluish hands or feet</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span title="1 minute Apgar Heart rate (32407-9 - LOINC)">1 minute Apgar Heart rate</span>
-            </td>
-            <td>
-              <span title="Fewer than 100 beats per minute (LA6717-8 - LOINC)">Fewer than 100 beats per minute</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span title="1 minute Apgar Reflex irritability (32409-5 - LOINC)">1 minute Apgar Reflex irritability</span>
-            </td>
-            <td>
-              <span title="Grimace during suctioning (LA6720-2 - LOINC)">Grimace during suctioning</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span title="1 minute Apgar Muscle tone (32408-7 - LOINC)">1 minute Apgar Muscle tone</span>
-            </td>
-            <td>
-              <span title="Some flexion of arms and legs (LA6714-5 - LOINC)">Some flexion of arms and legs</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </text>
-  <status value="final"/>
-  <code>
-    <coding>
-      <system value="http://loinc.org"/>
-      <code value="9272-6"/>
-      <display value="1 minute Apgar Score"/>
-    </coding>
-  </code>
-  <effectiveDateTime value="2016-12-21T12:05:00+00:00"/>
-  <valueInteger value="5"/>
-  <note>
-    <text value="Een hogere score is beter."/>
-  </note>
-  <component>
-    <code>
+   <id value="nl-core-ApgarScore-1Minute-full-01"/>
+   <meta>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ApgarScore-1Minute"/>
+   </meta>
+   <status value="final"/>
+   <code>
       <coding>
-        <system value="http://loinc.org"/>
-        <code value="32410-3"/>
-        <display value="1 minute Apgar Respiratory effort"/>
+         <system value="http://loinc.org"/>
+         <code value="9272-6"/>
+         <display value="1 minute Apgar Score"/>
       </coding>
-    </code>
-    <valueCodeableConcept>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="LA6726-9"/>
-        <display value="Weak cry; may sound like whimpering, slow or irregular breathing"/>
-      </coding>
-    </valueCodeableConcept>
-  </component>
-  <component>
-    <code>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="32406-1"/>
-        <display value="1 minute Apgar Color"/>
-      </coding>
-    </code>
-    <valueCodeableConcept>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="LA6723-6"/>
-        <display value="Good color in body with bluish hands or feet"/>
-      </coding>
-    </valueCodeableConcept>
-  </component>
-  <component>
-    <code>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="32407-9"/>
-        <display value="1 minute Apgar Heart rate"/>
-      </coding>
-    </code>
-    <valueCodeableConcept>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="LA6717-8"/>
-        <display value="Fewer than 100 beats per minute"/>
-      </coding>
-    </valueCodeableConcept>
-  </component>
-  <component>
-    <code>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="32409-5"/>
-        <display value="1 minute Apgar Reflex irritability"/>
-      </coding>
-    </code>
-    <valueCodeableConcept>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="LA6720-2"/>
-        <display value="Grimace during suctioning"/>
-      </coding>
-    </valueCodeableConcept>
-  </component>
-  <component>
-    <code>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="32408-7"/>
-        <display value="1 minute Apgar Muscle tone"/>
-      </coding>
-    </code>
-    <valueCodeableConcept>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="LA6714-5"/>
-        <display value="Some flexion of arms and legs"/>
-      </coding>
-    </valueCodeableConcept>
-  </component>
+   </code>
+   <subject>
+      <reference value="Patient/nl-core-Patient-full-01"/>
+      <type value="Patient"/>
+      <display value="Patient, Peter Jan (PeJe) Jansen"/>
+   </subject>
+   <effectiveDateTime value="2016-12-21T12:05:00+00:00"/>
+   <valueInteger value="5"/>
+   <note>
+      <text value="Een hogere score is beter."/>
+   </note>
+   <component>
+      <code>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="32410-3"/>
+            <display value="1 minute Apgar Respiratory effort"/>
+         </coding>
+      </code>
+      <valueCodeableConcept>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6726-9"/>
+            <display value="Weak cry; may sound like whimpering, slow or irregular breathing"/>
+         </coding>
+      </valueCodeableConcept>
+   </component>
+   <component>
+      <code>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="32406-1"/>
+            <display value="1 minute Apgar Color"/>
+         </coding>
+      </code>
+      <valueCodeableConcept>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6723-6"/>
+            <display value="Good color in body with bluish hands or feet"/>
+         </coding>
+      </valueCodeableConcept>
+   </component>
+   <component>
+      <code>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="32407-9"/>
+            <display value="1 minute Apgar Heart rate"/>
+         </coding>
+      </code>
+      <valueCodeableConcept>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6717-8"/>
+            <display value="Fewer than 100 beats per minute"/>
+         </coding>
+      </valueCodeableConcept>
+   </component>
+   <component>
+      <code>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="32409-5"/>
+            <display value="1 minute Apgar Reflex irritability"/>
+         </coding>
+      </code>
+      <valueCodeableConcept>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6720-2"/>
+            <display value="Grimace during suctioning"/>
+         </coding>
+      </valueCodeableConcept>
+   </component>
+   <component>
+      <code>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="32408-7"/>
+            <display value="1 minute Apgar Muscle tone"/>
+         </coding>
+      </code>
+      <valueCodeableConcept>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6714-5"/>
+            <display value="Some flexion of arms and legs"/>
+         </coding>
+      </valueCodeableConcept>
+   </component>
 </Observation>
