@@ -39,7 +39,7 @@
     <element id="Condition">
       <path value="Condition" />
       <short value="Symptom" />
-      <comment value="The functional model of zib Symptom represents a condition that needs to be tracked over time, but defines point-in-time assessments about the current state of the symptom as well. For this reason, this zib is mapped onto multiple resources: this Condition profile represents the focal resource, while all point-in-time properties are mapped onto Observation profiles. Those observable properties, in turn, are grouped using the [zib-Symptom.Characteristics](http://nictiz.nl/fhir/StructureDefinition/zib-Symptom.Characteristics) Observation profile, which can be referenced on `Condition.evidence.detail`.&#xD;&#xA;&#xD;&#xA;This model allows to track multiple distinct assessment moments over time in connection with the Condition. For this reason, it is not expected that the Observations for individual outcomes are referenced from or to this Condition resource directly; all references should be channeled through the zib-Symptom.Characteristics grouping Observation." />
+      <comment value="The functional model of zib Symptom represents a condition that needs to be tracked over time, but defines point-in-time assessments about the current state of the symptom as well. For this reason, this zib is mapped onto multiple resources: this Condition profile represents the focal resource, while all point-in-time properties are grouped using the [zib-Symptom.Characteristics](http://nictiz.nl/fhir/StructureDefinition/zib-Symptom.Characteristics) Observation profile, which can be referenced on `Condition.evidence.detail`. This model allows to track multiple distinct assessment moments over time in connection with the Condition." />
     </element>
     <element id="Condition.extension:assertedDate">
       <path value="Condition.extension" />
@@ -239,7 +239,7 @@
     </element>
     <element id="Condition.evidence:symptomCharacteristics.detail">
       <path value="Condition.evidence.detail" />
-      <comment value="The functional model of zib Symptom represents a condition that needs to be tracked over time, but defines point-in-time assessments about the current state of the symptom as well. For this reason, this zib is mapped onto multiple resources: this Condition profile represents the focal resource, while all point-in-time observations are mapped onto Observation profiles. See the comment on the root of this profile for further guidance." />
+      <comment value="The functional model of zib Symptom represents a condition that needs to be tracked over time, but defines point-in-time assessments about the current state of the symptom as well. For this reason, this zib is mapped onto multiple resources: this Condition profile represents the focal resource, while all point-in-time observations are grouped using an Observation profile. See the comment on the root of this profile for further guidance." />
       <min value="1" />
       <max value="1" />
       <type>
