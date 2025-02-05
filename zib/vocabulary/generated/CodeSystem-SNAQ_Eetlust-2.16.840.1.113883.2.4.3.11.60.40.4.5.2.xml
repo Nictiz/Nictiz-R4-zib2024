@@ -63,6 +63,15 @@
          </use>
          <value value="Appetite"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Eetlust"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -83,6 +92,15 @@
             <display value="Synonym"/>
          </use>
          <value value="NoAppetite"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="GeenEetlust"/>
       </designation>
       <property>
          <code value="status"/>

@@ -63,6 +63,15 @@
          </use>
          <value value="NoSupplementalNutrition"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="GeenVoeding"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -83,6 +92,15 @@
             <display value="Synonym"/>
          </use>
          <value value="SupplementalNutrition"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Voeding"/>
       </designation>
       <property>
          <code value="status"/>
