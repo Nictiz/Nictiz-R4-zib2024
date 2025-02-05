@@ -1,6 +1,6 @@
 # Payer
 
-The zib Payer recognizes different kinds of payers: on the one hand it could be an insurance company (represented by the InsuranceCompany concept, NL-CM:1.1.3), and on the other hand it could be a "person" (represented by the PayerPerson concept, NL-CM:1.1.2). Persons in turn may be natural persons, but they could also be juridical persons, e.g. organizations.
+The zib Payer recognizes different kinds of payers: on the one hand it could be an insurance company (represented by the InsuranceCompany concept, NL-CM:1.1.3), and on the other hand it could be a "person" (represented by the PayerPerson concept, NL-CM:1.1.2). Persons in turn may be natural persons, but they could also be juridical persons, i.e. organizations.
 
 In FHIR, the Coverage resource is the focal resource to represent a payer, but details about the person or organization are communicated using Patient, RelatedPerson or Organization resource, depending on the nature of the payer. These resource are linked to the Coverage resource.
 
