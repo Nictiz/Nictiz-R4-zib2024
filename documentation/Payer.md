@@ -41,8 +41,7 @@ title: Insurance company
 ---
 flowchart TB
     zib-Payer.InsuranceCompany["`**Coverage**
-        (zib-Payer.InsuranceCompany)
-        _Payer as an insurance company_`"]
+        (zib-Payer.InsuranceCompany)`"]
     zib-Payer-Organization["`**Organization**
         (zib-Payer-Organization)
         _Organization details for the insurance company_`"]
@@ -64,8 +63,7 @@ title: Natural person
 ---
 flowchart TB
     zib-Payer.PayerPerson["`**Coverage**
-        (zib-Payer.PayerPerson)
-        _Payer as natural or juridical person_`"]
+        (zib-Payer.PayerPerson)`"]
     zib-Patient["`**Patient**
         (zib-Patient)
         _Personal details when the payer is the patient_`"]
@@ -82,11 +80,10 @@ title: Juridical person
 ---
 flowchart TB
     zib-Payer.PayerPerson["`**Coverage**
-        (zib-Payer.PayerPerson)
-        _Payer as natural or juridical person_`"]
+        (zib-Payer.PayerPerson)`"]
     zib-Payer-Organization["`**Organization**
         (zib-Payer-Organization)
-        _Organization details when the payer is a juridical person_`"]
+        _Organization details for the juridical person_`"]
     zib-Payer.PayerPerson -- .payor --> zib-Payer-Organization
 ```
 
