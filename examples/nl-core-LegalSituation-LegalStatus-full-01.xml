@@ -1,0 +1,59 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-LegalSituation-LegalStatus-full-01"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-LegalSituation-LegalStatus"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Aandoening. Subject: Patient, Peter Jan (PeJe) Jansen. Categorie: <span title="Legal status (8625004 - SNOMED CT)">Legal status</span>, Status: <span title="Inactive (inactive - HL7 condition-clinical)">Inactive</span>
+        </caption>
+        <tbody>
+          <tr>
+            <th>Code</th>
+            <td>
+              <span title="Crisismaatregel (CM - 2.16.840.1.113883.2.4.3.11.60.40.4.23.2)">Crisismaatregel</span>
+            </td>
+          </tr>
+          <tr>
+            <th>Eerste symptomen</th>
+            <td>2 maart 2019</td>
+          </tr>
+          <tr>
+            <th>Oplossing/remissie</th>
+            <td>2 maart 2021</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="inactive"/>
+      <display value="Inactive"/>
+    </coding>
+  </clinicalStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="8625004"/>
+      <display value="Legal status"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.23.2"/>
+      <code value="CM"/>
+      <display value="Crisismaatregel"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-full-01"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </subject>
+  <onsetDateTime value="2019-03-02"/>
+  <abatementDateTime value="2021-03-02"/>
+</Condition>
