@@ -127,6 +127,9 @@
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
 
+## FLACCpainScale (zib-FLACCpainScale, nl-core-FLACCpainScale)
+* No significant changes.
+
 ## FluidBalance
 ### zib-FluidBalance, nl-core-FluidBalance
 * No significant changes.
