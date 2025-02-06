@@ -2,7 +2,7 @@
 
 The zib Payer recognizes different kinds of payers: on the one hand it could be an insurance company (represented by the InsuranceCompany concept, NL-CM:1.1.3), and on the other hand it could be a "person" (represented by the PayerPerson concept, NL-CM:1.1.2). Persons in turn may be natural persons, but they could also be juridical persons, i.e. organizations.
 
-In FHIR, the Coverage resource is the focal resource to represent a payer, but details about the person or organization are communicated using Patient, RelatedPerson or Organization resource, depending on the nature of the payer. These resource are linked to the Coverage resource.
+In FHIR, the Coverage resource is the focal resource to represent a payer, but details about the person or organization are communicated using the Patient, RelatedPerson or Organization resource, depending on the nature of the payer. These resources are linked to the Coverage resource.
 
 This results in two distinct Coverage profiles for zib Payer: one for representing the PayerPerson (NL-CM:1.1.2), and one for representing the InsuranceCompany (NL-CM:1.1.3). These two containers cannot be profiled within one profile because they both require mapping different concepts on elements such as `.payor` and `.type`.
 
@@ -33,7 +33,7 @@ flowchart TB
 ```
 
 ## Payer as an insurance company
-The zib container InsuranceCompany is mapped to the `zib-Payer.InsuranceCompany` profile on the Coverage resource. To capture details about the company (OrganizationName (NL-CM:1.1.16), IdentificationNumber (NL-CM:1.1.7), AddressInformation (NL-CM:1.1.17) and ContactInformation (NL-CM:1.1.12)), the profile `zib-Payer-Organization` on the Organization profile is used. This Organization resource is referenced from `Coverage.payor` in the `zib-Payer.InsuranceCompany` profile.
+The zib container InsuranceCompany is mapped to the `zib-Payer.InsuranceCompany` profile on the Coverage resource. To capture details about the company (OrganizationName (NL-CM:1.1.16), IdentificationNumber (NL-CM:1.1.7), AddressInformation (NL-CM:1.1.17) and ContactInformation (NL-CM:1.1.12)), the profile `zib-Payer-Organization` on the Organization resource is used. This Organization resource is referenced from `Coverage.payor` in the `zib-Payer.InsuranceCompany` profile.
 
 ```mermaid
 ---
