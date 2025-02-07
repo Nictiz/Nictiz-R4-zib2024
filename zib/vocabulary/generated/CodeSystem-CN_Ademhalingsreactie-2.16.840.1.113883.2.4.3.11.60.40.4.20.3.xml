@@ -62,6 +62,15 @@
          </use>
          <value value="No spontaneous respiration"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Geen spontane ademhaling"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -81,6 +90,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Spontaneous respiration on ventilator"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Spontane ademhaling aan de beademing"/>
       </designation>
       <property>
          <code value="status"/>
@@ -102,6 +120,15 @@
          </use>
          <value value="Unrest or resistance to ventilator"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Onrust of verzet tegen de beademing"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -122,6 +149,15 @@
          </use>
          <value value="Actively breathes against ventilator or coughs regularly"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Ademt actief tegen de beademing in of hoest regelmatig"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -141,6 +177,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Fights ventilator"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Vecht tegen de beademing"/>
       </designation>
       <property>
          <code value="status"/>
