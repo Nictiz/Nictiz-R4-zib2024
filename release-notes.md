@@ -76,6 +76,10 @@
 * `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIBFHIR-178
 * `.component:clothing.value[x]` ; terminology ; Changed codes in KledingCodelijst. ; ZIB-1704
 
+## ComfortScale (zib-ComfortScale, nl-core-ComfortScale)
+* `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-1839
+* `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-1839
+
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
 * `ContactPoint` ; textual ; Added guidance for NumberType. ; ZIB-1652
@@ -125,6 +129,9 @@
 
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
+
+## FLACCpainScale (zib-FLACCpainScale, nl-core-FLACCpainScale)
+* No significant changes.
 
 ## FluidBalance
 ### zib-FluidBalance, nl-core-FluidBalance
