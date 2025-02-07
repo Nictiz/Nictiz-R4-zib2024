@@ -83,7 +83,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="SpO2Value" />
-      <definition value="The element contains the value of the indirect, peripheral measured O2 saturation. The O2 saturation gives a percentage expressing the extent to which the blood's hemoglobin is saturated with oxygen, the ratio of oxygen-saturated hemoglobin to hemoglobin. The measurement is done in places where sufficient light can get through the skin, such as a finger, toe or earlobe." />
+      <definition value="The element contains the value of the indirect, peripheral measured O2 saturation.&#xD;&#xA;&#xD;&#xA;The O2 saturation gives a percentage expressing the extent to which the blood's hemoglobin is saturated with oxygen, the ratio of oxygen-saturated hemoglobin to hemoglobin.&#xD;&#xA;&#xD;&#xA;The measurement is done in places where sufficient light can get through the skin, such as a finger, toe or earlobe." />
       <alias value="SpO2Waarde" />
       <type>
         <code value="Quantity" />

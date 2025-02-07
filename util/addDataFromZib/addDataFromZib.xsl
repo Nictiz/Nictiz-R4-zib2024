@@ -251,7 +251,7 @@
                                 <xsl:copy-of select="concat('* ', string-join($definitions/text(), '&#xD;&#xA;* '))"/>
                             </xsl:when>
                             <xsl:otherwise>
-                                <xsl:value-of select="$definitions[1]/text()"/>
+                                <xsl:apply-templates select="$definitions[1]" mode="HTML2Markdown"/>
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:variable> 
@@ -348,4 +348,43 @@
         </xsl:choose>
     </xsl:function>
     
+    <!--
+        Rewrite the HTML input to Markdown. Supported here are line breaks and bullet lists. Line breaks are
+        interpreted as new paragraphs (represented in Markdown as two newlines). Extra line breaks will be
+        removed.
+
+        Since we're in an indenting stylesheet, output of this process will be indented as well, so whitespace cannot
+        be trusted during the formatting process. To handle this, the pipe symbol is used to indicate a newline. In the
+        final step, these pipe symbols will be used to properly format the output.
+    -->
+    <xsl:template match="desc" mode="HTML2Markdown">
+        <xsl:variable name="processed">
+            <xsl:apply-templates mode="HTML2Markdown"/>
+        </xsl:variable>
+        <xsl:variable name="normalized" select="replace(normalize-space($processed), '\s*\|\s*', '|')"/> <!-- Turn output into a single string -->
+        <xsl:variable name="deduplicated" select="replace($normalized, '\|\|\|*', '||')"/> <!-- Remove extra pipes if there are more then two -->
+        <xsl:variable name="renormalized" select="replace($deduplicated, '^\|*(.+?)\|*$', '$1')"/> <!-- Remove pipes at beginning and end -->
+        <xsl:value-of select="replace($renormalized, '\|', '&#xD;&#xA;')"/> <!-- Turn pipes into newlines -->
+    </xsl:template>
+
+    <xsl:template match="br" mode="HTML2Markdown">
+        <xsl:text>||</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="ul" mode="HTML2Markdown">
+        <xsl:text>||</xsl:text>
+        <xsl:apply-templates mode="HTML2Markdown"/>
+    </xsl:template>
+
+    <xsl:template match="li" mode="HTML2Markdown">
+        <xsl:message select="text()"/>
+        <xsl:value-of select="concat('|* ', text())"/>
+    </xsl:template>
+
+    <xsl:template match="@*|node()" mode="HTML2Markdown">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()" mode="HTML2Markdown"/>
+        </xsl:copy>
+    </xsl:template>
+
 </xsl:stylesheet>
