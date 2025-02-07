@@ -241,3 +241,10 @@
 * `.bodySite` ; cardinality ; Changed max cardinality from 1 to *. ; ZIB-1433
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
 * `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
+
+## SOAPReport
+### zib-SOAPReport, nl-core-SOAPReport
+* No significant changes.
+
+### zib-SOAPReport.SOAPLine, nl-core-SOAPReport.SOAPLine
+* No significant changes.
