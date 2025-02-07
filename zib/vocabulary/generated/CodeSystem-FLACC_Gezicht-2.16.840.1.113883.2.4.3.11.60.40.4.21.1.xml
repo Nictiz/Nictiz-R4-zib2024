@@ -63,6 +63,15 @@
          </use>
          <value value="No particular expression"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Geen specifieke expressie of glimlach"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -84,6 +93,15 @@
          </use>
          <value value="Occasional grimace"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Fronst af en toe of trekt een grimas,"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -104,6 +122,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Frequent to constant frown"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Fronst regelmatig tot voortdurend"/>
       </designation>
       <property>
          <code value="status"/>

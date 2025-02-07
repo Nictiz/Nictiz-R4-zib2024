@@ -63,6 +63,15 @@
          </use>
          <value value="Muscles fully relaxed"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Spieren volledig ontspannen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -84,6 +93,15 @@
          </use>
          <value value="Reduced muscle tone"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Verminderde spierspanning"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -103,6 +121,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Normal muscle tone"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Normale spierspanning"/>
       </designation>
       <property>
          <code value="status"/>
@@ -125,6 +152,15 @@
          </use>
          <value value="Increased muscle tone"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Toegenomen spierspanning"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -145,6 +181,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Extreme muscle rigidity"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Extreme spierstijfheid"/>
       </designation>
       <property>
          <code value="status"/>

@@ -60,6 +60,15 @@
          </use>
          <value value="Infant"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Jong kind"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -77,6 +86,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Child"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Kind"/>
       </designation>
       <property>
          <code value="status"/>
@@ -96,6 +114,15 @@
          </use>
          <value value="Large"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Groot"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -113,6 +140,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Neonate"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Neonaat"/>
       </designation>
       <property>
          <code value="status"/>
@@ -132,6 +168,15 @@
          </use>
          <value value="Small"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Klein"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -150,6 +195,15 @@
          </use>
          <value value="Standard"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Standaard"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -167,6 +221,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Extra large"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Extra groot"/>
       </designation>
       <property>
          <code value="status"/>

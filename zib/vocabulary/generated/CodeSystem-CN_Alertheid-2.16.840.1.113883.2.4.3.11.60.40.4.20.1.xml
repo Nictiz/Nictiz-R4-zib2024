@@ -63,6 +63,15 @@
          </use>
          <value value="Deeply asleep"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Diep in slaap"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -83,6 +92,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Lightly asleep"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Licht in slaap"/>
       </designation>
       <property>
          <code value="status"/>
@@ -105,6 +123,15 @@
          </use>
          <value value="Drowsy"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Slaperig"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -126,6 +153,15 @@
          </use>
          <value value="Awake and alert"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Wakker en alert"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -146,6 +182,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Awake and hyperalert"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Wakker en hyper-alert"/>
       </designation>
       <property>
          <code value="status"/>

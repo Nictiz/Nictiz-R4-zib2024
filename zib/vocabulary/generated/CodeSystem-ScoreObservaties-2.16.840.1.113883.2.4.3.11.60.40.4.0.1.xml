@@ -65,6 +65,15 @@
          </use>
          <value value="ComfortScale Alertness"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Alertheid"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -85,6 +94,15 @@
             <display value="Synonym"/>
          </use>
          <value value="ComfortScale Calmness_Agitation"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Kalmte_Agitatie"/>
       </designation>
       <property>
          <code value="status"/>
@@ -107,6 +125,15 @@
          </use>
          <value value="ComfortScale RespiratoryResponse"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Ademhalingsreactie"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -127,6 +154,15 @@
             <display value="Synonym"/>
          </use>
          <value value="ComfortScale Crying"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Huilen"/>
       </designation>
       <property>
          <code value="status"/>
@@ -149,6 +185,15 @@
          </use>
          <value value="ComfortScale BodyMovement"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Lichaamsbeweging"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -169,6 +214,15 @@
             <display value="Synonym"/>
          </use>
          <value value="ComfortScale FacialTone"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Gezichtsspanning"/>
       </designation>
       <property>
          <code value="status"/>
@@ -191,6 +245,15 @@
          </use>
          <value value="ComfortScale BodyMuscleTone"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Spierspanning"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -211,6 +274,15 @@
             <display value="Synonym"/>
          </use>
          <value value="FLACCpainScale Face"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpijnScore Gezicht"/>
       </designation>
       <property>
          <code value="status"/>
@@ -233,6 +305,15 @@
          </use>
          <value value="FLACCpainScale Legs"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpijnScore Benen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -253,6 +334,15 @@
             <display value="Synonym"/>
          </use>
          <value value="FLACCpainScale Activity"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpijnScore Activiteit"/>
       </designation>
       <property>
          <code value="status"/>
@@ -275,6 +365,15 @@
          </use>
          <value value="FLACCpainScale Cry"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpijnScore Huilen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -295,6 +394,15 @@
             <display value="Synonym"/>
          </use>
          <value value="FLACCpainScale Consolability"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpijnScore Troostbaar"/>
       </designation>
       <property>
          <code value="status"/>
@@ -317,6 +425,15 @@
          </use>
          <value value="ChecklistPainBehaviour Face"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Gezicht"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -337,6 +454,15 @@
             <display value="Synonym"/>
          </use>
          <value value="ChecklistPainBehaviour Mouth"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Mond"/>
       </designation>
       <property>
          <code value="status"/>
@@ -359,6 +485,15 @@
          </use>
          <value value="ChecklistPainBehaviour Grimace"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Grimas"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -379,6 +514,15 @@
             <display value="Synonym"/>
          </use>
          <value value="ChecklistPainBehaviour Looking sad"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag VerdrietigeBlik"/>
       </designation>
       <property>
          <code value="status"/>
@@ -401,6 +545,15 @@
          </use>
          <value value="ChecklistPainBehaviour Eyes"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Ogen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -421,6 +574,15 @@
             <display value="Synonym"/>
          </use>
          <value value="ChecklistPainBehaviour Panic"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Paniek"/>
       </designation>
       <property>
          <code value="status"/>
@@ -443,6 +605,15 @@
          </use>
          <value value="ChecklistPainBehaviour Moaning"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Kreunen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -463,6 +634,15 @@
             <display value="Synonym"/>
          </use>
          <value value="ChecklistPainBehaviour Cry"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Huilen"/>
       </designation>
       <property>
          <code value="status"/>
@@ -485,6 +665,15 @@
          </use>
          <value value="ChecklistPainBehaviour SoundsOfRestlessness"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Onrustgeluiden"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -505,6 +694,15 @@
             <display value="Synonym"/>
          </use>
          <value value="ChecklistPainBehaviour Tears"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Tranen"/>
       </designation>
       <property>
          <code value="status"/>
@@ -527,6 +725,15 @@
          </use>
          <value value="DOSScore DozesOff"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore ZaktWeg"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -547,6 +754,15 @@
             <display value="Synonym"/>
          </use>
          <value value="DOSScore EasilyDistracted"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore SnelAfgeleid"/>
       </designation>
       <property>
          <code value="status"/>
@@ -569,6 +785,15 @@
          </use>
          <value value="DOSScore MaintainsAttention"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore HeeftAandacht"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -589,6 +814,15 @@
             <display value="Synonym"/>
          </use>
          <value value="DOSScore UnfinishedQuestionAnswer"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore VraagAntwoordNietAf"/>
       </designation>
       <property>
          <code value="status"/>
@@ -611,6 +845,15 @@
          </use>
          <value value="DOSScore AnswersNoFit"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore AntwoordenNietPassend"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -631,6 +874,15 @@
             <display value="Synonym"/>
          </use>
          <value value="DOSScore ReactsSlowly"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore ReageertTraag"/>
       </designation>
       <property>
          <code value="status"/>
@@ -653,6 +905,15 @@
          </use>
          <value value="DOSScore ThinksSomewhereElse"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore DenktErgensAnders"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -673,6 +934,15 @@
             <display value="Synonym"/>
          </use>
          <value value="DOSScore KnowsPartDay"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore BeseftDagdeel"/>
       </designation>
       <property>
          <code value="status"/>
@@ -695,6 +965,15 @@
          </use>
          <value value="DOSScore RemembersRecent"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore HerinnertRecent"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -715,6 +994,15 @@
             <display value="Synonym"/>
          </use>
          <value value="DOSScore Restless"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore Rusteloos"/>
       </designation>
       <property>
          <code value="status"/>
@@ -737,6 +1025,15 @@
          </use>
          <value value="DOSScore PullsWires"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore TrektDraden"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -757,6 +1054,15 @@
             <display value="Synonym"/>
          </use>
          <value value="DOSScore EasilyEmotional"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore SnelGeemotioneerd"/>
       </designation>
       <property>
          <code value="status"/>
@@ -779,6 +1085,15 @@
          </use>
          <value value="DOSScore Hallucinations"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore Hallucinaties"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -793,6 +1108,15 @@
       <display value="MUSTScore BMIScore"/>
       <designation>
          <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="MUSTScore BMIScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
          <use>
             <system value="http://snomed.info/sct"/>
             <code value="900000000000013009"/>
@@ -821,6 +1145,15 @@
          </use>
          <value value="MUSTScore WeightLossScore"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="MUSTScore GewichtsverliesScore"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -841,6 +1174,15 @@
             <display value="Synonym"/>
          </use>
          <value value="MUSTScore IllnessScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="MUSTScore ZiekteScore"/>
       </designation>
       <property>
          <code value="status"/>
@@ -863,6 +1205,15 @@
          </use>
          <value value="SNAQScore WeightLossScore"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQScore GewichtsverliesScore"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -883,6 +1234,15 @@
             <display value="Synonym"/>
          </use>
          <value value="SNAQScore AppetiteScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQScore EetlustScore"/>
       </designation>
       <property>
          <code value="status"/>
@@ -905,6 +1265,15 @@
          </use>
          <value value="SNAQScore NutritionScore"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQScore VoedingsScore"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -925,6 +1294,15 @@
             <display value="Synonym"/>
          </use>
          <value value="StrongKidsScore WeightLossScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore GewichtsverliesScore"/>
       </designation>
       <property>
          <code value="status"/>
@@ -947,6 +1325,15 @@
          </use>
          <value value="StrongKidsScore ConditionScore"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore ZiekteBeeldScore"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -967,6 +1354,15 @@
             <display value="Synonym"/>
          </use>
          <value value="StrongKidsScore NutritionScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore VoedingsScore"/>
       </designation>
       <property>
          <code value="status"/>
@@ -989,6 +1385,15 @@
          </use>
          <value value="StrongKidsScore NutritionStatusScore"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore VoedingstoestandScore"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1009,6 +1414,15 @@
             <display value="Synonym"/>
          </use>
          <value value="SNAQrcScore WeightLossScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore GewichtsverliesScore"/>
       </designation>
       <property>
          <code value="status"/>
@@ -1031,6 +1445,15 @@
          </use>
          <value value="SNAQrcScore AppetiteScore"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore EetlustScore"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1045,6 +1468,15 @@
       <display value="SNAQrcScore BMIScore"/>
       <designation>
          <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore BMIScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
          <use>
             <system value="http://snomed.info/sct"/>
             <code value="900000000000013009"/>
@@ -1073,6 +1505,15 @@
          </use>
          <value value="SNAQrcScore AssistedEatingScore"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore HulpBijEtenScore"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1093,6 +1534,15 @@
             <display value="Synonym"/>
          </use>
          <value value="SNAQ65+Score WeightLossScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score GewichtsverliesScore"/>
       </designation>
       <property>
          <code value="status"/>
@@ -1115,6 +1565,15 @@
          </use>
          <value value="SNAQ65+Score AppetiteScore"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score EetlustScore"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1135,6 +1594,15 @@
             <display value="Synonym"/>
          </use>
          <value value="SNAQ65+Score ExerciseScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score InspanningsScore"/>
       </designation>
       <property>
          <code value="status"/>
@@ -1157,6 +1625,15 @@
          </use>
          <value value="SNAQ65+Score UpperArmCircumferenceScore"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score BovenarmOmtrekScore"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1177,6 +1654,15 @@
             <display value="Synonym"/>
          </use>
          <value value="BarthelADLIndex Dressing"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex AanUitkleden"/>
       </designation>
       <property>
          <code value="status"/>
@@ -1199,6 +1685,15 @@
          </use>
          <value value="BarthelADLIndex Bathing"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex BadenDouchen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1219,6 +1714,15 @@
             <display value="Synonym"/>
          </use>
          <value value="BarthelADLIndex Bladder"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Blaas"/>
       </designation>
       <property>
          <code value="status"/>
@@ -1241,6 +1745,15 @@
          </use>
          <value value="BarthelADLIndex Bowels"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Darm"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1261,6 +1774,15 @@
             <display value="Synonym"/>
          </use>
          <value value="BarthelADLIndex Feeding"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Eten"/>
       </designation>
       <property>
          <code value="status"/>
@@ -1283,6 +1805,15 @@
          </use>
          <value value="BarthelADLIndex Mobility"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Mobiliteit"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1303,6 +1834,15 @@
             <display value="Synonym"/>
          </use>
          <value value="BarthelADLIndex ToiletUse"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Toiletgebruik"/>
       </designation>
       <property>
          <code value="status"/>
@@ -1325,6 +1865,15 @@
          </use>
          <value value="BarthelADLIndex Transfers"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Transfers"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1346,6 +1895,15 @@
          </use>
          <value value="BarthelADLIndex ManagingStairs"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex TrappenLopen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1366,6 +1924,15 @@
             <display value="Synonym"/>
          </use>
          <value value="BarthelADLIndex Grooming"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex UiterlijkeVerzorging"/>
       </designation>
       <property>
          <code value="status"/>

@@ -63,6 +63,15 @@
          </use>
          <value value="Content"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Tevreden"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -84,6 +93,15 @@
          </use>
          <value value="Consolable, distractable"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Te troosten, af te leiden"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -104,6 +122,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Difficult to console"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Moeilijk te troosten"/>
       </designation>
       <property>
          <code value="status"/>
