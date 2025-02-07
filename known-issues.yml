@@ -16,6 +16,15 @@ nl-core-ContactPerson-full-02:
       - message: value should not start or finish with whitespace ' De Groene Draeck'
         reason: To communicate a HouseNumberAddition without a HouseNumberLetter, a leading space is used.
 
+nl-core-Payer-Organization-02:
+  ignored issues:
+    Organization.telecom[0]:
+      - message: "Constraint failed: org-3: 'The telecom of an organization can never be of use 'home'' (defined in http://hl7.org/fhir/StructureDefinition/Organization)"
+        reason: The zib container Payer.PayerPerson is mapped to a Coverage, as well as either a Patient, RelatedPerson or Organization. Since the zib officially does not support references to the zibs Patient or ContactPerson, a PayerPerson in zib instances is assumed to conform to the nl-core-Payer-Organization profile and is transformed to an Organization resource accordingly. In this case the PayerPerson in the underlying zib instance actually aligns with the nl-core-ContactPerson profile (in which a telecom of 'home' is perfectly valid), resulting in the failed constraint.
+    Organization.address[0]:
+      - message: "Constraint failed: org-2: 'An address of an organization can never be of use 'home'' (defined in http://hl7.org/fhir/StructureDefinition/Organization)"
+        reason: The zib container Payer.PayerPerson is mapped to a Coverage, as well as either a Patient, RelatedPerson or Organization. Since the zib officially does not support references to the zibs Patient or ContactPerson, a PayerPerson in zib instances is assumed to conform to the nl-core-Payer-Organization profile and is transformed to an Organization resource accordingly. In this case the PayerPerson in the underlying zib instance actually aligns with the nl-core-ContactPerson profile (in which an address of 'home' is perfectly valid), resulting in the failed constraint.
+
 pattern-NlCoreHealthProfessionalReference:
   ignored issues:
     StructureDefinition:
@@ -357,6 +366,30 @@ zib-Patient:
       - cardinality: 1..1 instead of 0..1
         reason: The FHIR profiles are expected to implement zib cardinalities as conceptual cardinalities, but FHIR requires the .language element to be present. This aligns with the intention of the zib, as the Language concept is required for zib LanguageProficiency to make sense.
 
+zib-Payer-Organization:
+  zib deviations:
+    Organization.telecom:
+      - cardinality: 0..* instead of 0..1
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+      - datatype: ContactPoint instead of Reference
+        reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+    Organization.telecom:*:
+      - datatype: ContactPoint instead of container
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
+    Organization.address:
+      - datatype: Address instead of Reference
+        for: NL-CM:1.1.17 (Payer.AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+      - datatype: Address instead of rootconcept
+        for: NL-CM:20.5.1 (AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+
+zib-Payer.PayerPerson:
+  zib deviations:
+    Coverage.extension:bankInformation:
+      - datatype: Extension instead of container
+        reason: The (complex) extension acts as a container for three subextensions that each contain a zib subconcept.
+
 zib-Problem:
   zib deviations:
     Condition.bodySite:
@@ -565,6 +598,14 @@ zib-Patient:
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and not repeated in the differential.
     Patient.contact.address:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The short description is defined on the datatype profile and not repeated in the differential.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The alias is defined on the datatype profile and not repeated in the differential.
+
+zib-Payer-Organization:
+  ignored issues:
+    Organization.address:
       - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
         reason: The short description is defined on the datatype profile and not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
