@@ -610,3 +610,25 @@ zib-Payer-Organization:
         reason: The short description is defined on the datatype profile and not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and not repeated in the differential.
+        
+zib-SOAPReport:
+  zib deviations:
+    Composition.author:
+      - cardinality: 1..1 instead of 0..1
+        reason: This is a known difference with the zib. FHIR mandates an author for the Compositions. It seems like a requirement systems can honour.
+    Composition.date:
+      - cardinality: 1..1 instead of 0..1
+        reason: This is a known difference with the zib. FHIR mandates a date for the Compositions. It seems like a requirement systems can honour. 
+    Composition.section:soapLine.code:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of both zib (SOAPLineHeader) and FHIR is 1..1, but because of conceptual cardinality 0..1 is expected.
+  ignored issues:
+    Composition.section:soapLine:
+      - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
+        reason: The mapping is to a zib container, which doesn't have a useful description if implemented in a profile.
+
+zib-SOAPReport.SOAPLine:
+  zib deviations:
+    Observation.code:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of both zib (SOAPLineHeader) and FHIR is 1..1, but because of conceptual cardinality 0..1 is expected. In case of absent data, the profiling guidelines provide guidance.
