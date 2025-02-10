@@ -205,6 +205,9 @@
 * `.bodySite` ; mapping ; Added mapping of MeasuringLocation. ; ZIB-1217
 * `.component:extraOxygenAdministration.code` ; textual ; Removed guidance for ExtraOxygenAdministration. ; ZIB-1217, ZIB-1476
 
+## PainScore (zib-PainScore, nl-core PainScore)
+* No significant changes.
+
 ## ParticipationInSociety
 ### zib-ParticipationInSociety, nl-core-ParticipationInSociety
 * No significant changes.
