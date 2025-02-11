@@ -69,7 +69,7 @@
       <binding>
         <strength value="extensible" />
         <description value="TODO - the ValueSet needs to be adjusted to link to the more specific location codelijsten." />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.148.11.42--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />

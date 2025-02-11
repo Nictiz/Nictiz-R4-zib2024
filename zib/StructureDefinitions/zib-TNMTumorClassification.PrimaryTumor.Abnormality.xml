@@ -63,7 +63,7 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.148.11.42--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
@@ -81,26 +81,6 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumorClassification.PrimaryTumor.Abnormality.Location" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
-      </type>
-    </element>
-    <element id="Observation.hasMember">
-      <path value="Observation.hasMember" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.hasMember:g_HistopathologicalGrading">
-      <path value="Observation.hasMember" />
-      <sliceName value="g_HistopathologicalGrading" />
-      <definition value="The G_HistopathologicalGrading concept (NL-CM:4.27.18) of zib TNMTumorClassification, represented as a distinct Observation resource." />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.Abnormality.GHistoGrade" />
       </type>
     </element>
     <element id="Observation.component">
