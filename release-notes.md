@@ -16,7 +16,7 @@
 * No significant changes.
 
 ## AbilityToGroom (zib-AbilityToGroom, nl-core-AbilityToGroom)
-* No significant changes
+* No significant changes.
 
 ## AbilityToUseToilet 
 ### zib-AbilityToUseToilet, nl-core-AbilityToUseToilet
@@ -39,16 +39,43 @@
 
 ## AnatomicalLocation 
 ### zib-AnatomicalLocation, nl-core-AnatomicalLocation
-* `CodeableConcept` ; textual ; Refined guidance for Location and Laterality ; ZIBFHIR-113
-* `.extension:bodyStructureReference` ; extension ; Replaced ExtAnatomicalLocationLaterality with BodyStructureReference for Laterality ; ZIBFHIR-113
-* `.extension:bodyStructureReference` ; mapping ; Moved mapping of Laterality to `BodyStructure.locationQualifier` ; ZIBFHIR-113
+* `CodeableConcept` ; textual ; Added guidance for Location and Laterality. ; ZIBFHIR-113
+* `CodeableConcept` ; constraint ; Added zib-AnatomicalLocation-01 for Location. ; ZIBFHIR-113
+* `.extension:bodyStructureReference` ; extension ; Replaced ExtAnatomicalLocationLaterality with BodyStructureReference for Laterality. ; ZIBFHIR-113
+* `.extension:bodyStructureReference` ; mapping ; Moved mapping of Laterality to `BodyStructure.locationQualifier`. ; ZIBFHIR-113
 
 ### zib-AnatomicalLocation-BodyStructure, nl-core-AnatomicalLocation-BodyStructure
 * New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
 
+## BloodPressure 
+### zib-BloodPressure, nl-core-BloodPressure
+* Changed description of BloodPressure. ; ZIB-2112, ZIB-2589
+* `.bodySite` ; mapping ; Renamed mapping from MeasuringLocation to AnatomicalLocation. ; ZIB-1731
+* `.bodySite` ; terminology ; Changed codes in MeetLocatieCodelijst. ; ZIB-1731, ZIB-1813
+* `.bodySite` ; terminology ; Changed value set from MeetLocatieCodelijst to LocatieCodelijsten. ; ZIBFHIR-192
+* `.bodySite` ; terminology ; Added MeetLocatieCodelijst as minimum allowable value set. ; ZIBFHIR-192
+* `.method` ; terminology ; Changed codes in MeetmethodeCodelijst. ; ZIB-2036
+* `.component:diastolicEndpoint.value[x]` ; terminology ; Changed codes in DiastolischEindpuntCodelijst. ; ZIB-2218
+* `.component:cuffType.value[x]` ; terminology ; Changed codes in ManchetTypeCodelijst. ; ZIB-2218
+
+### zib-BloodPressure.AnatomicalLocation-BodyStructure, nl-core-BloodPressure.AnatomicalLocation-BodyStructure
+* A new profile that applies zib BloodPressure constraints to the Location concept within AnatomicalLocation (ZIB-1731).
+
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
+
+## BodyTemperature (zib-BodyTemperature, nl-core-BodyTemperature)
+* `.value[x]` ; terminology ; Added required binding to BodyTemperatureUnits. ; ZIBFHIR-178
+
+## BodyWeight (zib-BodyWeight, nl-core-BodyWeight)
+* `.value[x]` ; textual ; Changed definition of WeightValue. ; ZIB-1886
+* `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIBFHIR-178
+* `.component:clothing.value[x]` ; terminology ; Changed codes in KledingCodelijst. ; ZIB-1704
+
+## ComfortScale (zib-ComfortScale, nl-core-ComfortScale)
+* `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-1839
+* `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-1839
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
@@ -75,8 +102,33 @@
 * `.contact.relationship:relationship` ; textual ; Changed definition of Relationship. ; ZIB-1556
 * `.contact.relationship:relationship` ; terminology ; Changed value set from RelatieCodelijst to RelatieSnomedCodelijst. ; ZIB-1180, ZIB-1438, ZIB-1495, ZIB-1486, ZIB-1556, ZIB-1616, ZIB-1770, ZIB-1789, ZIB-1941, ZIB-2008
 
+## DevelopmentChild
+### zib-DevelopmentChild, nl-core-DevelopmentChild
+* No significant changes.
+
+### zib-DevelopmentChild.AgeFirstMenstruation, nl-core-DevelopmentChild.AgeFirstMenstruation
+* No significant changes.
+
+### zib-DevelopmentChild.DevelopmentCognition, nl-core-DevelopmentChild.DevelopmentCognition
+* No significant changes.
+
+### zib-DevelopmentChild.DevelopmentLinguistics, nl-core-DevelopmentChild.DevelopmentLinguistics
+* No significant changes.
+
+### zib-DevelopmentChild.DevelopmentLocomotion, nl-core-DevelopmentChild.DevelopmentLocomotion
+* No significant changes.
+
+### zib-DevelopmentChild.ToiletTrainednessFeces, nl-core-DevelopmentChild.ToiletTrainednessFeces
+* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#275818006 to http://snomed.info/sct#129008009. ; ZIB-1765
+
+### zib-DevelopmentChild.ToiletTrainednessUrine, nl-core-DevelopmentChild.ToiletTrainednessUrine
+* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#275819003 to http://snomed.info/sct#129009001. ; ZIB-2271
+
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
+
+## FLACCpainScale (zib-FLACCpainScale, nl-core-FLACCpainScale)
+* No significant changes.
 
 ## FluidBalance
 ### zib-FluidBalance, nl-core-FluidBalance
@@ -87,6 +139,10 @@
 
 ### zib-FluidBalance.FluidTotalOut, nl-core-FluidBalance.FluidTotalOut
 * No significant changes.
+
+## HeadCircumference (zib-HeadCircumference, nl-core-HeadCircumference)
+* `.value[x]` ; textual ; Changed definition of HeadCircumferenceMeasurement. ; ZIBFHIR-178
+* `.value[x]` ; terminology ; Added required binding to BodyLengthUnits. ; ZIBFHIR-178
 
 ## HealthcareProvider
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
@@ -123,6 +179,9 @@
 * `.communication.extension:comment` ; extension ; Replaced extension ExtComment with ExtLanguageProficiencyComment. ; ZIBFHIR-97
 * `.communication.language` ; terminology ; Changed codes in CommunicatieTaalCodelijst. ; ZIB-2218
 
+## LifeStance (zib-LifeStance, nl-core-LifeStance)
+* `Observation` ; mapping ; Renamed mapping from LifeStanceRC to LifeStance. ; ZIB-2578
+
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218
 
@@ -141,6 +200,11 @@
 ## Nationality (zib-Patient, nl-core-Patient)
 * No significant changes.
 
+## O2Saturation (zib-O2Saturation, nl-core-O2Saturation)
+* `.effective[x]:effectiveDateTime` ; mapping ; Renamed mapping from O2SaturationDateTime to SpO2SaturationDateTime. ; ZIB-1217
+* `.bodySite` ; mapping ; Added mapping of MeasuringLocation. ; ZIB-1217
+* `.component:extraOxygenAdministration.code` ; textual ; Removed guidance for ExtraOxygenAdministration. ; ZIB-1217, ZIB-1476
+
 ## ParticipationInSociety
 ### zib-ParticipationInSociety, nl-core-ParticipationInSociety
 * No significant changes.
@@ -158,3 +222,22 @@
 * `.extension:genderIdentity.value[x]` ; extension ; Added extension genderIdentity for GenderIdentity. ; ZIB-1693
 * `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
+
+## Payer 
+### zib-Payer-Organization, nl-core-Payer-Organization
+* `Organization` ; mapping ; Removed mapping of InsuranceCompany. ; ZIBFHIR-196
+
+### zib-Payer.InsuranceCompany, nl-core-Payer.InsuranceCompany
+* `Coverage` ; mapping ; Moved mapping of InsuranceCompany from `.payor`. ; ZIBFHIR-196
+* `Coverage` ; textual ; Added guidance for Insurance. ; ZIBFHIR-196
+* `.type` ; terminology ; Changed codes in VerzekeringssoortCodelijst. ; ZIB-2218
+
+### zib-Payer.PayerPerson, nl-core-Payer.PayerPerson
+* `Coverage` ; mapping ; Moved mapping of PayerPerson from `.payor`. ; ZIBFHIR-196
+
+## Problem (zib-Problem, nl-core-Problem)
+* `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-1575, ZIB-2087, ZIB-2218
+* `.code.text` ; mapping ; Moved mapping of FurtherSpecificationProblemName from `.code.extension:furtherSpecificationProblemName.value[x]`. ; ZIBFHIR-145
+* `.bodySite` ; cardinality ; Changed max cardinality from 1 to *. ; ZIB-1433
+* `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
+* `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610

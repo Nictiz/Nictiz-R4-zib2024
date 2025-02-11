@@ -1,0 +1,198 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="nl-core-BloodPressure-full-01"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-BloodPressure"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Categorie: <span title="Vital Signs (vital-signs - http://terminology.hl7.org/CodeSystem/observation-category)">Vital Signs</span>, Status: definitief</caption>
+        <tbody>
+          <tr>
+            <th>Bepalingdatum/tijd</th>
+            <td>1 januari 2025</td>
+          </tr>
+          <tr>
+            <th>Methode</th>
+            <td>
+              <span title="Invasief meten van arteriële bloeddruk (99041000146109 - SNOMED CT)">Invasief meten van arteriële bloeddruk</span>
+            </td>
+          </tr>
+          <tr>
+            <th>Deel van lichaam</th>
+            <td>
+              <span title="Structuur van bovenbeen (68367000 - SNOMED CT)">Structuur van bovenbeen</span>
+            </td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <th>Waarde</th>
+          </tr>
+          <tr>
+            <td>
+              <span title="Bloeddruk panel waarvan alle leden optioneel in arterieel vaatstelsel (85354-9 - LOINC)">Bloeddruk panel waarvan alle leden optioneel in arterieel vaatstelsel</span>
+            </td>
+            <td/>
+          </tr>
+          <tr>
+            <td>
+              <span title="Intravasculaire systolische bloeddruk in arterieel vaatstelsel (8480-6 - LOINC)">Intravasculaire systolische bloeddruk in arterieel vaatstelsel</span>
+            </td>
+            <td>137 mmHg</td>
+          </tr>
+          <tr>
+            <td>
+              <span title="Intravasculaire diastolische bloeddruk in arterieel vaatstelsel (8462-4 - LOINC)">Intravasculaire diastolische bloeddruk in arterieel vaatstelsel</span>
+            </td>
+            <td>73 mmHg</td>
+          </tr>
+          <tr>
+            <td>
+              <span title="Korotkofftonen (85549003 - SNOMED CT)">Korotkofftonen</span>
+            </td>
+            <td>
+              <span title="Fase 5 (255272007 - SNOMED CT)">Fase 5</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="bloeddrukmanchet (70665002 - SNOMED CT)">bloeddrukmanchet</span>
+            </td>
+            <td>
+              <span title="Other (OTH - http://terminology.hl7.org/CodeSystem/v3-NullFlavor)">Other</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="gemiddelde bloeddruk (6797001 - SNOMED CT)">gemiddelde bloeddruk</span>
+            </td>
+            <td>94 mmHg</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/observation-bodyPosition">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="34106002"/>
+        <display value="Trendelenburg-ligging"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="85354-9"/>
+      <display value="Bloeddruk panel waarvan alle leden optioneel in arterieel vaatstelsel"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-full-01"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </subject>
+  <effectiveDateTime value="2025-01-01"/>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="68367000"/>
+      <display value="Structuur van bovenbeen"/>
+    </coding>
+  </bodySite>
+  <method>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="99041000146109"/>
+      <display value="Invasief meten van arteriële bloeddruk"/>
+    </coding>
+  </method>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8480-6"/>
+        <display value="Intravasculaire systolische bloeddruk in arterieel vaatstelsel"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="137"/>
+      <unit value="mmHg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8462-4"/>
+        <display value="Intravasculaire diastolische bloeddruk in arterieel vaatstelsel"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="73"/>
+      <unit value="mmHg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="85549003"/>
+        <display value="Korotkofftonen"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="255272007"/>
+        <display value="Fase 5"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="70665002"/>
+        <display value="bloeddrukmanchet"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+        <code value="OTH"/>
+        <display value="Other"/>
+      </coding>
+      <text value="Semi-large"/>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="6797001"/>
+        <display value="gemiddelde bloeddruk"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="94"/>
+      <unit value="mmHg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+  </component>
+</Observation>
