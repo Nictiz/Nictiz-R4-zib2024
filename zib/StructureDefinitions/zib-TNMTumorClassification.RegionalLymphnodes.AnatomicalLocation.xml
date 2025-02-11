@@ -31,12 +31,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
-    <element id="Observation">
-      <path value="Observation" />
-      <short value="AnatomicalLocation" />
-      <definition value="Contains the localization(s) of the positive regional lymph nodes, caused by the primary tumor." />
-      <alias value="AnatomischeLocatie" />
-    </element>
     <element id="Observation.code">
       <path value="Observation.code" />
       <patternCodeableConcept>
@@ -68,7 +62,6 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="TODO - the ValueSet needs to be adjusted to link to the more specific location codelijsten." />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.148.11.42--20240415000000" />
       </binding>
       <mapping>
