@@ -35,7 +35,7 @@
       <path value="Observation" />
       <short value="Abnormality" />
       <definition value="Container of the Abnormality concept.This container contains all data elements of the Abnormality concept." />
-      <comment value="The G_HistopathologicalGrading concept (NL-CM:4.27.18) of zib TNMTumorClassification is represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`.&#xD;&#xA;&#xD;&#xA;The Morphology concept (NL-CM:4.27.17) of zib TNMTumorClassification is represented using distinct BodyStructure resources. These are referenced from this current resource and are referenced on `Observation.bodySite.extension:bodyStructureReference`." />
+      <comment value="The Morphology concept (NL-CM:4.27.17) of zib TNMTumorClassification is represented using distinct BodyStructure resources. These are referenced from this current resource and are referenced on `Observation.bodySite.extension:bodyStructureReference`." />
       <alias value="Afwijking" />
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
@@ -191,6 +191,48 @@
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
         <map value="NL-CM:4.27.16" />
         <comment value="AbnormalityNumber" />
+      </mapping>
+    </element>
+    <element id="Observation.component:g_HistopathologicalGrading">
+      <path value="Observation.component" />
+      <sliceName value="g_HistopathologicalGrading" />
+    </element>
+    <element id="Observation.component:g_HistopathologicalGrading.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="371469007" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:g_HistopathologicalGrading.value[x]">
+      <path value="Observation.component.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:g_HistopathologicalGrading.value[x]:valueCodeableConcept">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <short value="G_HistopathologicalGrading" />
+      <definition value="Staging result of the histopathological grading, the G-category of theTNM classification. The differentiation grade of a tumor is determined by a pathologist." />
+      <alias value="G_DifferentiatiegraadTumor" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.49--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.18" />
+        <comment value="G_HistopathologicalGrading" />
       </mapping>
     </element>
   </differential>
