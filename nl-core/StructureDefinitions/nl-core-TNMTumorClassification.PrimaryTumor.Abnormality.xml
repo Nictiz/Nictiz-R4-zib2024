@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="Container of the Abnormality concept.This container contains all data elements of the Abnormality concept." />
-  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
+  <purpose value="A derived profile from [zib-TNMTumorClassification.PrimaryTumor.Abnormality](http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.Abnormality) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
