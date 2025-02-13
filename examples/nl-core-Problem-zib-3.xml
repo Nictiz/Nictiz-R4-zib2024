@@ -1,0 +1,93 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Problem-zib-3"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Interpretatie van diagnose (282291009 - SNOMED CT)">Interpretatie van diagnose</span>, Status: <span title="Inactive (inactive - http://terminology.hl7.org/CodeSystem/condition-clinical)">Inactive</span> / <span title="Confirmed (confirmed - http://terminology.hl7.org/CodeSystem/condition-ver-status)">Confirmed</span>
+        </caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Gevallen op kunstijsbaan.</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th>Code</th>
+            <td>
+              <span title="Fractuur van overige en niet gespecificeerde delen van pols en hand; gesloten (S62.80 - sid/icd-10-nl)">Fractuur van overige en niet gespecificeerde delen van pols en hand; gesloten</span>
+            </td>
+          </tr>
+          <tr>
+            <th>Eerste symptomen</th>
+            <td>20 april 2011</td>
+          </tr>
+          <tr>
+            <th>Oplossing/remissie</th>
+            <td>7 juni 2011</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="inactive"/>
+      <display value="Inactive"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="410605003"/>
+      <display value="Aanwezigheid bevestigd"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="282291009"/>
+      <display value="Interpretatie van diagnose"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/icd-10-nl"/>
+      <code value="S62.80"/>
+      <display value="Fractuur van overige en niet gespecificeerde delen van pols en hand; gesloten"/>
+    </coding>
+  </code>
+  <bodySite>
+    <extension url="http://hl7.org/fhir/StructureDefinition/bodySite">
+      <valueReference>
+        <reference value="BodyStructure/nl-core-Problem-zib-3-AnatomicalLocation-1"/>
+        <type value="BodyStructure"/>
+        <display value="Anatomical location, Distale radius, Links"/>
+      </valueReference>
+    </extension>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="75129005"/>
+      <display value="Distale radius"/>
+    </coding>
+  </bodySite>
+  <subject>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </subject>
+  <onsetDateTime value="2011-04-20"/>
+  <abatementDateTime value="2011-06-07"/>
+  <note>
+    <text value="Gevallen op kunstijsbaan."/>
+  </note>
+</Condition>
