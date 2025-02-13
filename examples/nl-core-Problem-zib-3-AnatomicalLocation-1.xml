@@ -1,20 +1,20 @@
 <BodyStructure xmlns="http://hl7.org/fhir">
-  <id value="nl-core-BloodPressure-zib-1-AnatomicalLocation"/>
+  <id value="nl-core-Problem-zib-3-AnatomicalLocation-1"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation-BodyStructure"/>
   </meta>
   <location>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="40983000"/>
-      <display value="Structuur van bovenarm"/>
+      <code value="75129005"/>
+      <display value="Distale radius"/>
     </coding>
   </location>
   <locationQualifier>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="24028007"/>
-      <display value="Rechts"/>
+      <code value="7771000"/>
+      <display value="Links"/>
     </coding>
   </locationQualifier>
   <patient>

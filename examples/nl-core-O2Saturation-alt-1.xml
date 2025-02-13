@@ -77,7 +77,7 @@
   <bodySite>
     <extension url="http://hl7.org/fhir/StructureDefinition/bodySite">
       <valueReference>
-        <reference value="BodyStructure/nl-core-O2Saturation-alt-1-AnatomicalLocation"/>
+        <reference value="BodyStructure/nl-core-O2Saturation-alt-1-AnatomicalLocation-1"/>
         <type value="BodyStructure"/>
         <display value="Anatomical location, Vinger, Rechts"/>
       </valueReference>

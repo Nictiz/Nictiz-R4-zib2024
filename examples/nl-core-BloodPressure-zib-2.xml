@@ -89,7 +89,7 @@
   <bodySite>
     <extension url="http://hl7.org/fhir/StructureDefinition/bodySite">
       <valueReference>
-        <reference value="BodyStructure/nl-core-BloodPressure-zib-2-AnatomicalLocation"/>
+        <reference value="BodyStructure/nl-core-BloodPressure-zib-2-AnatomicalLocation-1"/>
         <type value="BodyStructure"/>
         <display value="Anatomical location, Structuur van polsregio, Links"/>
       </valueReference>
