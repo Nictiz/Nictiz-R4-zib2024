@@ -1,0 +1,63 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Problem-alt-3"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Aandoening. Subject: Patient, Peter Jan (PeJe) Jansen. Categorie: <span title="Interpretatie van diagnose (282291009 - SNOMED CT)">Interpretatie van diagnose</span>, Status: <span title="Active (active - http://terminology.hl7.org/CodeSystem/condition-clinical)">Active</span>
+        </caption>
+        <tbody>
+          <tr>
+            <th>Code</th>
+            <td>
+              <span title="Maligne neoplasma van testis (C62 - sid/icd-10-nl)">Maligne neoplasma van testis</span>
+            </td>
+          </tr>
+          <tr>
+            <th>Eerste symptomen</th>
+            <td>1 mei 2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="282291009"/>
+      <display value="Interpretatie van diagnose"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/icd-10-nl"/>
+      <code value="C62"/>
+      <display value="Maligne neoplasma van testis"/>
+    </coding>
+  </code>
+  <bodySite>
+    <extension url="http://hl7.org/fhir/StructureDefinition/bodySite">
+      <valueReference>
+        <reference value="BodyStructure/nl-core-Problem-alt-3-AnatomicalLocation"/>
+        <type value="BodyStructure"/>
+        <display value="Anatomical location, Rechts"/>
+      </valueReference>
+    </extension>
+  </bodySite>
+  <subject>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </subject>
+  <onsetDateTime value="2025-05-01"/>
+</Condition>
