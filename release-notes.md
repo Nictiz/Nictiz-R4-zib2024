@@ -47,14 +47,35 @@
 ### zib-AnatomicalLocation-BodyStructure, nl-core-AnatomicalLocation-BodyStructure
 * New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
 
+## BloodPressure 
+### zib-BloodPressure, nl-core-BloodPressure
+* Changed description of BloodPressure. ; ZIB-2112, ZIB-2589
+* `.bodySite` ; mapping ; Renamed mapping from MeasuringLocation to AnatomicalLocation. ; ZIB-1731
+* `.bodySite` ; terminology ; Changed codes in MeetLocatieCodelijst. ; ZIB-1731, ZIB-1813
+* `.bodySite` ; terminology ; Changed value set from MeetLocatieCodelijst to LocatieCodelijsten. ; ZIBFHIR-192
+* `.bodySite` ; terminology ; Added MeetLocatieCodelijst as minimum allowable value set. ; ZIBFHIR-192
+* `.method` ; terminology ; Changed codes in MeetmethodeCodelijst. ; ZIB-2036
+* `.component:diastolicEndpoint.value[x]` ; terminology ; Changed codes in DiastolischEindpuntCodelijst. ; ZIB-2218
+* `.component:cuffType.value[x]` ; terminology ; Changed codes in ManchetTypeCodelijst. ; ZIB-2218
+
+### zib-BloodPressure.AnatomicalLocation-BodyStructure, nl-core-BloodPressure.AnatomicalLocation-BodyStructure
+* A new profile that applies zib BloodPressure constraints to the Location concept within AnatomicalLocation (ZIB-1731).
+
 ## BodyHeight (zib-BodyHeight, nl-core-BodyHeight)
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
 
+## BodyTemperature (zib-BodyTemperature, nl-core-BodyTemperature)
+* `.value[x]` ; terminology ; Added required binding to BodyTemperatureUnits. ; ZIBFHIR-178
+
 ## BodyWeight (zib-BodyWeight, nl-core-BodyWeight)
 * `.value[x]` ; textual ; Changed definition of WeightValue. ; ZIB-1886
-* `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIB-1886
+* `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIBFHIR-178
 * `.component:clothing.value[x]` ; terminology ; Changed codes in KledingCodelijst. ; ZIB-1704
+
+## ComfortScale (zib-ComfortScale, nl-core-ComfortScale)
+* `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-1839
+* `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-1839
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
@@ -105,6 +126,9 @@
 
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
+
+## FLACCpainScale (zib-FLACCpainScale, nl-core-FLACCpainScale)
+* No significant changes.
 
 ## FluidBalance
 ### zib-FluidBalance, nl-core-FluidBalance
@@ -201,6 +225,18 @@
 * `.extension:genderIdentity.value[x]` ; extension ; Added extension genderIdentity for GenderIdentity. ; ZIB-1693
 * `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
+
+## Payer 
+### zib-Payer-Organization, nl-core-Payer-Organization
+* `Organization` ; mapping ; Removed mapping of InsuranceCompany. ; ZIBFHIR-196
+
+### zib-Payer.InsuranceCompany, nl-core-Payer.InsuranceCompany
+* `Coverage` ; mapping ; Moved mapping of InsuranceCompany from `.payor`. ; ZIBFHIR-196
+* `Coverage` ; textual ; Added guidance for Insurance. ; ZIBFHIR-196
+* `.type` ; terminology ; Changed codes in VerzekeringssoortCodelijst. ; ZIB-2218
+
+### zib-Payer.PayerPerson, nl-core-Payer.PayerPerson
+* `Coverage` ; mapping ; Moved mapping of PayerPerson from `.payor`. ; ZIBFHIR-196
 
 ## Problem (zib-Problem, nl-core-Problem)
 * `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-1575, ZIB-2087, ZIB-2218

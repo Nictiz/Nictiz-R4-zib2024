@@ -60,6 +60,15 @@
          </use>
          <value value="Administration performer not available"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Toediener niet beschikbaar"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -78,6 +87,15 @@
          </use>
          <value value="Forgotten to administer"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Vergeten toe te dienen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -95,6 +113,15 @@
          </use>
          <value value="No religion"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Geen geloof"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -105,6 +132,15 @@
       <display value="Humanist"/>
       <designation>
          <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Humanist"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
          <use>
             <system value="http://snomed.info/sct"/>
             <code value="900000000000013009"/>
@@ -128,6 +164,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Mormon"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Mormoon"/>
       </designation>
       <property>
          <code value="status"/>
