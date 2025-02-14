@@ -144,6 +144,14 @@
     <element id="Observation.component:hoNOSplusQuestions">
       <path value="Observation.component"/>
       <sliceName value="hoNOSplusQuestions"/>
+      <short value="HoNOS+Questions"/>
+      <definition value="Container of the HoNOS+Questions concept.This container contains all data elements of the HoNOS+Questions concept."/>
+      <alias value="HoNOS+Vragen"/>
+      <mapping>
+        <identity value="zib-honosplus-v1.0-2024EN"/>
+        <map value="NL-CM:4.36.6"/>
+        <comment value="HoNOS+Questions"/>
+      </mapping>
     </element>
     <element id="Observation.component:hoNOSplusQuestions.code">
       <path value="Observation.component.code"/>
