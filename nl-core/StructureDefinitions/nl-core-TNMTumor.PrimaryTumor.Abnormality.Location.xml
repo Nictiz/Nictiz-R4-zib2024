@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-TNMTumorClassification.PrimaryTumor.Abnormality.Location" />
+  <id value="nl-core-TNMTumor.PrimaryTumor.Abnormality.Location" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumorClassification.PrimaryTumor.Abnormality.Location" />
-  <name value="NlcoreTNMTumorClassificationPrimaryTumorAbnormalityLocation" />
-  <title value="nl core TNMTumorClassification.PrimaryTumor.Abnormality.Location" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumor.PrimaryTumor.Abnormality.Location" />
+  <name value="NlcoreTNMTumorPrimaryTumorAbnormalityLocation" />
+  <title value="nl core TNMTumor.PrimaryTumor.Abnormality.Location" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="Contains the localization(s) and morphology of the primary tumor, which (i.a.) determines the assignment of the TNM classification to the tumor.&#xD;&#xA;Please note that the id, url, name and title are shortend because of the 64 char constraint." />
-  <purpose value="A derived profile from [zib-TNMTumorClassification.PrimaryTumor.Abnormality.Location](http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.Abnormality.Location) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />  
+  <purpose value="A derived profile from [zib-TNMTumor.PrimaryTumor.Abnormality.Location](http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PrimaryTumor.Abnormality.Location) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />  
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -28,12 +28,12 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="BodyStructure" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.Abnormality.Location" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PrimaryTumor.Abnormality.Location" />
   <derivation value="constraint" />
   <differential>
     <element id="BodyStructure">
       <path value="BodyStructure" />
-      <alias value="nl-core-TNMTumorClassification.PrimaryTumor.Abnormality.Location" />
+      <alias value="nl-core-TNMTumor.PrimaryTumor.Abnormality.Location" />
     </element>
   </differential>
 </StructureDefinition>

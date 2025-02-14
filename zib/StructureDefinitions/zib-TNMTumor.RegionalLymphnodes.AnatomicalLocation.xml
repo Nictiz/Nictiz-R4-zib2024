@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-TNMTumorClassification.LLymphaticInvasion" />
+  <id value="zib-TNMTumor.RegionalLymphnodes.AnatomicalLocation" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.LLymphaticInvasion" />
-  <name value="ZibTNMTumorClassificationLLymphaticInvasion" />
-  <title value="zib TNMTumorClassification.LLymphaticInvasion" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.RegionalLymphnodes.AnatomicalLocation" />
+  <name value="ZibTNMTumorRegionalLymphnodesAnatomicalLocation" />
+  <title value="zib TNMTumor.RegionalLymphnodes.AnatomicalLocation" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Presence or absence of tissue invasion absence of lymphatic invasion, the L-category. It concerns an additional description within the TNM classification that is determined by a pathologist." />
+  <description value="Contains the localization(s) of the positive regional lymph nodes, caused by the primary tumor." />
   <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
@@ -31,16 +31,12 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
-    <element id="Observation">
-      <path value="Observation" />
-      <short value="TNMTumorClassification.LLymphaticInvasion" />
-    </element>
     <element id="Observation.code">
       <path value="Observation.code" />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="395715009" />
+          <code value="397440000" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -57,20 +53,26 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
-      <short value="L_LymphaticInvasion" />
-      <definition value="Presence or absence of tissue invasion absence of lymphatic invasion, the L-category. It concerns an additional description within the TNM classification that is determined by a pathologist." />
-      <alias value="L_LymfatischeInvasie" />
+      <short value="Location / AnatomicalLocation" />
+      <definition value="* Location on/in the body.&#xD;&#xA;* Contains the localization(s) of the positive regional lymph nodes, caused by the primary tumor." />
+      <alias value="AnatomischeLocatie" />
       <type>
         <code value="CodeableConcept" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.53--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.148.11.42--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.6" />
-        <comment value="L_LymphaticInvasion" />
+        <map value="NL-CM:4.27.24" />
+        <comment value="AnatomicalLocation" />
+      </mapping>
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:20.7.4" />
+        <comment value="Location" />
       </mapping>
     </element>
   </differential>

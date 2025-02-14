@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-TNMTumorClassification.PrimaryTumor" />
+  <id value="zib-TNMTumor.DistantMetastasis" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor" />
-  <name value="ZibTNMTumorClassificationPrimaryTumor" />
-  <title value="zib TNMTumorClassification.PrimaryTumor" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.DistantMetastasis" />
+  <name value="ZibTNMTumorDistantMetastasis" />
+  <title value="zib TNMTumor.DistantMetastasis" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Staging result of the size extension of the primary tumor, the T-category of the TNM classification including the prefix and suffix." />
+  <description value="Staging result of the presence or absence of distant metastasis, the M-category of the TNM classification." />
   <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
@@ -33,14 +33,14 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <short value="PrimaryTumor" />
-      <definition value="Container of the PrimaryTumor concept.This container contains all data elements of the PrimaryTumor concept." />
-      <comment value="Several concepts of zib TNMTumorClassification.PrimaryTumor are represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`." />
-      <alias value="PrimaireTumor" />
+      <short value="DistantMetastasis" />
+      <definition value="Container of the DistantMetastasis concept. This container contains all data elements of the DistantMetastasis concept." />
+      <comment value="The AnatomicalLocation concept (NL-CM:4.27.28) of zib TNMTumorClassification is represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`." />
+      <alias value="AfstandsMetastasen" />
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.12" />
-        <comment value="PrimaryTumor" />
+        <map value="NL-CM:4.27.25" />
+        <comment value="DistantMetastasis" />
       </mapping>
     </element>
     <element id="Observation.code">
@@ -48,7 +48,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="78873005" />
+          <code value="277208005" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -65,20 +65,20 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
-      <short value="T_PrimaryTumor" />
-      <definition value="Staging result of the size extension of the primary tumor, the T-category of the TNM classification including the prefix and suffix." />
-      <alias value="T_PrimaireTumor" />
+      <short value="M_DistantMetastasis" />
+      <definition value="Staging result of the presence or absence of distant metastasis, the M-category of the TNM classification." />
+      <alias value="M_AfstandsMetastasen" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.14--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.16--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.14" />
-        <comment value="T_PrimaryTumor" />
+        <map value="NL-CM:4.27.26" />
+        <comment value="M_DistantMetastasis" />
       </mapping>
     </element>
     <element id="Observation.hasMember">
@@ -91,23 +91,13 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.hasMember:abnormality">
+    <element id="Observation.hasMember:anatomicalLocation">
       <path value="Observation.hasMember" />
-      <sliceName value="abnormality" />
-      <definition value="The Abnormality concept (NL-CM:4.27.15) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <sliceName value="anatomicalLocation" />
+      <definition value="The AnatomicalLocation concept (NL-CM:4.27.28) of zib TNMTumorClassification, represented as a distinct Observation resource." />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.Abnormality" />
-      </type>
-    </element>
-    <element id="Observation.hasMember:m_NumberOfPrimaryTumors">
-      <path value="Observation.hasMember" />
-      <sliceName value="m_NumberOfPrimaryTumors" />
-      <definition value="The m_NumberOfPrimaryTumors concept (NL-CM:4.27.13) of zib TNMTumorClassification, represented as a distinct Observation resource." />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.DistantMetastasis.AnatomicalLocation" />
       </type>
     </element>
   </differential>

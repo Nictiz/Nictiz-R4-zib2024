@@ -148,7 +148,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.DistantMetastasis" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.DistantMetastasis" />
       </type>
     </element>
     <element id="Observation.hasMember:regionalLymphnodes">
@@ -158,7 +158,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.RegionalLymphnodes" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.RegionalLymphnodes" />
       </type>
     </element>
     <element id="Observation.hasMember:primaryTumor">
@@ -168,7 +168,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PrimaryTumor" />
       </type>
     </element>
     <element id="Observation.hasMember:l_LymphaticInvasion">
@@ -178,7 +178,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.LLymphaticInvasion" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.LLymphaticInvasion" />
       </type>
     </element>
     <element id="Observation.hasMember:pn_PerineuralInvasion">
@@ -188,7 +188,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PnPerineuralInvasion" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PnPerineuralInvasion" />
       </type>
     </element>
     <element id="Observation.hasMember:v_VenousInvasion">
@@ -198,7 +198,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.VVenousInvasion" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.VVenousInvasion" />
       </type>
     </element>
     <element id="Observation.hasMember:anatomicalStage">
@@ -208,7 +208,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.AnatomicalStage" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.AnatomicalStage" />
       </type>
     </element>
     <element id="Observation.hasMember:prognosticStage">
@@ -218,7 +218,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrognosticStage" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PrognosticStage" />
       </type>
     </element>
     <element id="Observation.hasMember:r_ResidualTumor">
@@ -228,7 +228,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.RResidualTumor" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.RResidualTumor" />
       </type>
     </element>
   </differential>

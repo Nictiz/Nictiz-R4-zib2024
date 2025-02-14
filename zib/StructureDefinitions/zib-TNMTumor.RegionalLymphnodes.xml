@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-TNMTumorClassification.DistantMetastasis" />
+  <id value="zib-TNMTumor.RegionalLymphnodes" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.DistantMetastasis" />
-  <name value="ZibTNMTumorClassificationDistantMetastasis" />
-  <title value="zib TNMTumorClassification.DistantMetastasis" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.RegionalLymphnodes" />
+  <name value="ZibTNMTumorRegionalLymphnodes" />
+  <title value="zib TNMTumor.RegionalLymphnodes" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Staging result of the presence or absence of distant metastasis, the M-category of the TNM classification." />
+  <description value="Staging result of the presence or absence of regional lymph nodes metastasis, the N-category of the TNM classification." />
   <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
@@ -33,14 +33,14 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <short value="DistantMetastasis" />
-      <definition value="Container of the DistantMetastasis concept. This container contains all data elements of the DistantMetastasis concept." />
-      <comment value="The AnatomicalLocation concept (NL-CM:4.27.28) of zib TNMTumorClassification is represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`." />
-      <alias value="AfstandsMetastasen" />
+      <short value="RegionalLymphnodes" />
+      <definition value="Container of the RegionalLymphnodes concept.This container contains all data elements of the RegionalLymphnodes concept." />
+      <comment value="Several concepts of zib TNMTumor.RegionalLymphnodes are represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`." />
+      <alias value="RegionaleLymfeklieren" />
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.25" />
-        <comment value="DistantMetastasis" />
+        <map value="NL-CM:4.27.21" />
+        <comment value="RegionalLymphnodes" />
       </mapping>
     </element>
     <element id="Observation.code">
@@ -48,7 +48,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="277208005" />
+          <code value="301855007" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -65,20 +65,20 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
-      <short value="M_DistantMetastasis" />
-      <definition value="Staging result of the presence or absence of distant metastasis, the M-category of the TNM classification." />
-      <alias value="M_AfstandsMetastasen" />
+      <short value="N_RegionalLymphnodes" />
+      <definition value="Staging result of the presence or absence of regional lymph nodes metastasis, the N-category of the TNM classification." />
+      <alias value="N_RegionaleLymfeklieren" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.16--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.15--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.26" />
-        <comment value="M_DistantMetastasis" />
+        <map value="NL-CM:4.27.22" />
+        <comment value="N_RegionalLymphnodes" />
       </mapping>
     </element>
     <element id="Observation.hasMember">
@@ -94,10 +94,10 @@
     <element id="Observation.hasMember:anatomicalLocation">
       <path value="Observation.hasMember" />
       <sliceName value="anatomicalLocation" />
-      <definition value="The AnatomicalLocation concept (NL-CM:4.27.28) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <definition value="The AnatomicalLocation concept (NL-CM:4.27.24) of zib TNMTumorClassification, represented as a distinct Observation resource." />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.DistantMetastasis.AnatomicalLocation" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.RegionalLymphnodes.AnatomicalLocation" />
       </type>
     </element>
   </differential>

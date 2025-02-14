@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-TNMTumorClassification.AnatomicalStage" />
+  <id value="zib-TNMTumor.PrimaryTumor.Abnormality.Location" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.AnatomicalStage" />
-  <name value="ZibTNMTumorClassificationAnatomicalStage" />
-  <title value="zib TNMTumorClassification.AnatomicalStage" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PrimaryTumor.Abnormality.Location" />
+  <name value="ZibTNMTumorPrimaryTumorAbnormalityLocation" />
+  <title value="zib TNMTumor.PrimaryTumor.Abnormality.Location" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The stage of the disease is the grouping based on the anatomical extent of the disease." />
+  <description value="Contains the localization(s) and morphology of the primary tumor, which (i.a.) determines the assignment of the TNM classification to the tumor.&#xD;&#xA;Please note that the id, url, name and title are shortend because of the 64 char constraint." />
   <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
@@ -27,50 +27,27 @@
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
-  <type value="Observation" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <type value="BodyStructure" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
   <derivation value="constraint" />
   <differential>
-    <element id="Observation">
-      <path value="Observation" />
-      <short value="TNMTumorClassification.AnatomicalStage" />
+    <element id="BodyStructure">
+      <path value="BodyStructure" />
+      <definition value="Contains the localization(s) of the primary tumor, which (i.a.) determines the assignment of the TNM classification to the tumor." />
     </element>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="399390009" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
-    <element id="Observation.value[x]">
-      <path value="Observation.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueCodeableConcept" />
-      <short value="AnatomicalStage" />
-      <definition value="The stage of the disease is the grouping based on the anatomical extent of the disease." />
-      <alias value="AnatomischStadium" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
+    <element id="BodyStructure.morphology">
+      <path value="BodyStructure.morphology" />
+      <short value="Morphology" />
+      <definition value="Behavior of a tumor and cell type expressed in ICD-O-3 morphological or histology code. Describes the cell type (or histology) of the tumor, together with the behavior (malignant or benign). This is determined by a pathologist." />
+      <alias value="Morfologie" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.50--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.16--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
-        <map value="NL-CM:4.27.9" />
-        <comment value="AnatomicalStage" />
+        <map value="NL-CM:4.27.17" />
+        <comment value="Morphology" />
       </mapping>
     </element>
   </differential>

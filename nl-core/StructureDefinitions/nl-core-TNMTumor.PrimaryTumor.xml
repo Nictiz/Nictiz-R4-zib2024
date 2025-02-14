@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-TNMTumorClassification.DistantMetastasis.AnatomicalLocation" />
+  <id value="nl-core-TNMTumor.PrimaryTumor" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumorClassification.DistantMetastasis.AnatomicalLocation" />
-  <name value="NlcoreTNMTumorClassificationDistantMetastasisAnatomicalLocation" />
-  <title value="nl core TNMTumorClassification.DistantMetastasis.AnatomicalLocation" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumor.PrimaryTumor" />
+  <name value="NlcoreTNMTumorPrimaryTumor" />
+  <title value="nl core TNMTumor.PrimaryTumor" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -16,8 +16,8 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Contains the localization(s) of distant metastasis, caused by the primary tumor." />
-  <purpose value="A derived profile from [zib-TNMTumorClassification.DistantMetastasis.AnatomicalLocation](http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.DistantMetastasis.AnatomicalLocation) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />
+  <description value="Staging result of the size extension of the primary tumor, the T-category of the TNM classification including the prefix and suffix." />
+  <purpose value="A derived profile from [zib-TNMTumor.PrimaryTumor](http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PrimaryTumor) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />  
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -28,12 +28,12 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.DistantMetastasis.AnatomicalLocation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PrimaryTumor" />
   <derivation value="constraint" />
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <alias value="nl-core-TNMTumorClassification.DistantMetastasis.AnatomicalLocation" />
+      <alias value="nl-core-TNMTumor.PrimaryTumor" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -46,12 +46,20 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
     </element>
-    <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueCodeableConcept" />
+    <element id="Observation.hasMember:abnormality">
+      <path value="Observation.hasMember" />
+      <sliceName value="abnormality" />
       <type>
-        <code value="CodeableConcept" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation" />
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumor.PrimaryTumor.Abnormality" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:m_NumberOfPrimaryTumors">
+      <path value="Observation.hasMember" />
+      <sliceName value="m_NumberOfPrimaryTumors" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumor.PrimaryTumor.mNumberOfPrimaryTumors" />
       </type>
     </element>
   </differential>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors" />
+  <id value="nl-core-TNMTumor.RResidualTumor" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors" />
-  <name value="NlcoreTNMTumorClassificationPrimaryTumormNumberOfPrimaryTumors" />
-  <title value="nl core TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumor.RResidualTumor" />
+  <name value="NlcoreTNMTumorRResidualTumor" />
+  <title value="nl core TNMTumor.RResidualTumor" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -16,8 +16,8 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The number of existing primary tumors. In the case of multiple primary tumors in one organ, the tumor with the highest T category should be classified and the multiplicity or the number of tumors should be indicated in parenthesis. If multiple primary tumors are present, this is expressed in an addition to the T category in the form of (m) or a (number), e.g. T2 (m) or T2 (2). In case of one primary tumor, m is omitted from the &quot;IntegratedTNMValue&quot;." />
-  <purpose value="A derived profile from [zib-TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors](http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />  
+  <description value="Presence or absence of Residual Tumor after treatment, the R-category. This may relate to the primary tumor and its local or regional spread, but may also include distant metastases.The specific usage should be indicated by the user in the comment field." />
+  <purpose value="A derived profile from [zib-TNMTumor.RResidualTumor](http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.RResidualTumor) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />  
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -28,12 +28,12 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.RResidualTumor" />
   <derivation value="constraint" />
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <alias value="nl-core-TNMTumorClassification.PrimaryTumor.mNumberOfPrimaryTumors" />
+      <alias value="nl-core-TNMTumor.RResidualTumor" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
