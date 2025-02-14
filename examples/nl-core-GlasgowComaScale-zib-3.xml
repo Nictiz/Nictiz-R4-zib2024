@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="nl-core-GlasgowComaScale-02"/>
+  <id value="nl-core-GlasgowComaScale-zib-3"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-GlasgowComaScale"/>
   </meta>
@@ -11,7 +11,7 @@
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
-            <td>11:34:00, 7 februari 2013</td>
+            <td>08:00:00, 7 februari 2013</td>
           </tr>
           <tr>
             <th>Code</th>
@@ -21,14 +21,14 @@
             <td>
               <span title="Glasgow coma scale (35088-4 - LOINC)">Glasgow coma scale</span>
             </td>
-            <td/>
+            <td>3</td>
           </tr>
           <tr>
             <td>
               <span title="score op openen van ogen binnen glasgowcomaschaal (281395000 - SNOMED CT)">score op openen van ogen binnen glasgowcomaschaal</span>
             </td>
             <td>
-              <span title="Spontaan (E4 - 2.16.840.1.113883.2.4.3.11.60.40.4.2.1)">Spontaan</span>
+              <span title="Geen reactie (E1 - 2.16.840.1.113883.2.4.3.11.60.40.4.2.1)">Geen reactie</span>
             </td>
           </tr>
           <tr>
@@ -36,7 +36,7 @@
               <span title="score op motorische respons binnen glasgowcomaschaal (281396004 - SNOMED CT)">score op motorische respons binnen glasgowcomaschaal</span>
             </td>
             <td>
-              <span title="Terugtrekken (M4 - 2.16.840.1.113883.2.4.3.11.60.40.4.2.2)">Terugtrekken</span>
+              <span title="Geen reactie (M1 - 2.16.840.1.113883.2.4.3.11.60.40.4.2.2)">Geen reactie</span>
             </td>
           </tr>
           <tr>
@@ -44,7 +44,7 @@
               <span title="verbale score binnen glasgowcomaschaal (281397008 - SNOMED CT)">verbale score binnen glasgowcomaschaal</span>
             </td>
             <td>
-              <span title="Not applicable (NA - http://terminology.hl7.org/CodeSystem/v3-NullFlavor)">Not applicable</span>
+              <span title="Geen reactie (V1 - 2.16.840.1.113883.2.4.3.11.60.40.4.2.3)">Geen reactie</span>
             </td>
           </tr>
         </tbody>
@@ -60,13 +60,14 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/nl-core-Patient-01"/>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
     <type value="Patient"/>
     <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
   </subject>
-  <effectiveDateTime value="2013-02-07T11:34:00+01:00"/>
+  <effectiveDateTime value="2013-02-07T08:00:00+01:00"/>
+  <valueInteger value="3"/>
   <note>
-    <text value="Patiënt is doof"/>
+    <text value="Zonder spierverslappers na 2 uur reanimatie"/>
   </note>
   <component>
     <code>
@@ -79,8 +80,8 @@
     <valueCodeableConcept>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.1"/>
-        <code value="E4"/>
-        <display value="Spontaan"/>
+        <code value="E1"/>
+        <display value="Geen reactie"/>
       </coding>
     </valueCodeableConcept>
   </component>
@@ -95,8 +96,8 @@
     <valueCodeableConcept>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.2"/>
-        <code value="M4"/>
-        <display value="Terugtrekken"/>
+        <code value="M1"/>
+        <display value="Geen reactie"/>
       </coding>
     </valueCodeableConcept>
   </component>
@@ -110,9 +111,9 @@
     </code>
     <valueCodeableConcept>
       <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-        <code value="NA"/>
-        <display value="Not applicable"/>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.3"/>
+        <code value="V1"/>
+        <display value="Geen reactie"/>
       </coding>
     </valueCodeableConcept>
   </component>
