@@ -33,7 +33,7 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <alias value="nl-core TNMTumorClassification" />
+      <alias value="nl-core-TNMTumorClassification" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
