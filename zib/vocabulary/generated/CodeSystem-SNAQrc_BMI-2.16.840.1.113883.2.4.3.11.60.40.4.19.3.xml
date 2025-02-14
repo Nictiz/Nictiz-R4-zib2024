@@ -63,6 +63,15 @@
          </use>
          <value value="Healthy"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Gezond"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -84,6 +93,15 @@
          </use>
          <value value="Too low"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="TeLicht"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -104,6 +122,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Underweight"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Ondergewicht"/>
       </designation>
       <property>
          <code value="status"/>
