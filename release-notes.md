@@ -254,3 +254,6 @@
 * `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-2058
 * `.component:weightLossScore.value[x]` ; terminology ; Changed codes in SNAQrcGewichtsverliesScoreCodelijst. ; ZIB-2058
 * `.component:assistedEatingScore.value[x]` ; mapping ; Renamed mapping from AssistedEating to AssistedEatingScore. ; ZIB-1633
+
+## SNAQScore (zib-SNAQScore, nl-core-SNAQScore)
+* No significant changes.
