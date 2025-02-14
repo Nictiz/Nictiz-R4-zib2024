@@ -243,5 +243,7 @@
 * `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
 
 ## SNAQrcScore (zib-SNAQrcScore , nl-core-SNAQrcScore)
- * `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-2058
- * `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-2058
+* `.value[x]:valueInteger` ; textual ; Changed definition of TotalScore. ; ZIB-2058
+* `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-2058
+* `.component:weightLossScore.value[x]` ; terminology ; Changed codes in SNAQrcGewichtsverliesScoreCodelijst. ; ZIB-2058
+* `.component:assistedEatingScore.value[x]` ; mapping ; Renamed mapping from AssistedEating to AssistedEatingScore. ; ZIB-1633
