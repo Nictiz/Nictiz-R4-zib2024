@@ -63,6 +63,15 @@
          </use>
          <value value="No response"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Geen reactie"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -83,6 +92,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Extensor response"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Abnormaal strekken"/>
       </designation>
       <property>
          <code value="status"/>
@@ -105,6 +123,15 @@
          </use>
          <value value="Flexor response"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Abnormaal buigen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -125,6 +152,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Withdrawal response"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Terugtrekken"/>
       </designation>
       <property>
          <code value="status"/>
@@ -147,6 +183,15 @@
          </use>
          <value value="Withdraws to pain"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="terugtrekken bij pijn"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -167,6 +212,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Localises pain"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Lokaliseren pijnprikkel"/>
       </designation>
       <property>
          <code value="status"/>
@@ -189,6 +243,15 @@
          </use>
          <value value="Withdraws to touch"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Terugtrekken bij aanraken"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -210,6 +273,15 @@
          </use>
          <value value="Obeys"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Gehoorzamen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -230,6 +302,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Moves spontaneously and purposefully"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Beweegt spontaan en doelbewust"/>
       </designation>
       <property>
          <code value="status"/>

@@ -63,6 +63,15 @@
          </use>
          <value value="No response"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Geen reactie"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -83,6 +92,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Incomprehensible sounds"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Onverstaanbare geluiden"/>
       </designation>
       <property>
          <code value="status"/>
@@ -105,6 +123,15 @@
          </use>
          <value value="Moans"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Kreunt"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -125,6 +152,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Inappropriate speech"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Onsamenhangende antwoorden"/>
       </designation>
       <property>
          <code value="status"/>
@@ -147,6 +183,15 @@
          </use>
          <value value="Cries to pain"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Huilt op pijnprikkel"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -167,6 +212,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Confused"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Verward"/>
       </designation>
       <property>
          <code value="status"/>
@@ -189,6 +243,15 @@
          </use>
          <value value="Irritatable cries"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Huilt geirriteerd"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -210,6 +273,15 @@
          </use>
          <value value="Oriented"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Georiënteerd"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -230,6 +302,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Coos/babbles"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Babbelt, is alert"/>
       </designation>
       <property>
          <code value="status"/>
