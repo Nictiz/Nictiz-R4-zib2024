@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="nl-core-SNAQScore-full-01"/>
+  <id value="nl-core-SNAQScore-alt-1"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-SNAQScore"/>
   </meta>
@@ -60,7 +60,7 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/nl-core-Patient-full-01"/>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
     <type value="Patient"/>
     <display value="Patient, Peter Jan (PeJe) Jansen"/>
   </subject>
