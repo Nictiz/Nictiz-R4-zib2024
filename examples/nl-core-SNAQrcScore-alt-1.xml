@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="nl-core-SNAQrcScore-01"/>
+  <id value="nl-core-SNAQrcScore-alt-1"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-SNAQrcScore"/>
   </meta>
@@ -7,11 +7,11 @@
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
-        <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption>
+        <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
-            <td>27 januari 2013</td>
+            <td>6 februari 2025</td>
           </tr>
           <tr>
             <th>Code</th>
@@ -21,14 +21,14 @@
             <td>
               <span title="Short Nutritional Questionnaire for residential care (108311000146106 - SNOMED CT)">Short Nutritional Questionnaire for residential care</span>
             </td>
-            <td>4</td>
+            <td>5</td>
           </tr>
           <tr>
             <td>
               <span title="SNAQrcScore GewichtsverliesScore (4029003 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQrcScore GewichtsverliesScore</span>
             </td>
             <td>
-              <span title="Gemiddeld verlies (G1 - 2.16.840.1.113883.2.4.3.11.60.40.4.19.1)">Gemiddeld verlies</span>
+              <span title="Veel verlies (G2 - 2.16.840.1.113883.2.4.3.11.60.40.4.19.1)">Veel verlies</span>
             </td>
           </tr>
           <tr>
@@ -36,7 +36,7 @@
               <span title="SNAQrcScore EetlustScore (4029004 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQrcScore EetlustScore</span>
             </td>
             <td>
-              <span title="GeenEetlust (B1 - 2.16.840.1.113883.2.4.3.11.60.40.4.19.2)">GeenEetlust</span>
+              <span title="Eetlust (B0 - 2.16.840.1.113883.2.4.3.11.60.40.4.19.2)">Eetlust</span>
             </td>
           </tr>
           <tr>
@@ -44,7 +44,7 @@
               <span title="SNAQrcScore BMIScore (4029005 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQrcScore BMIScore</span>
             </td>
             <td>
-              <span title="TeLicht (B1 - 2.16.840.1.113883.2.4.3.11.60.40.4.19.3)">TeLicht</span>
+              <span title="Ondergewicht (B2 - 2.16.840.1.113883.2.4.3.11.60.40.4.19.3)">Ondergewicht</span>
             </td>
           </tr>
           <tr>
@@ -52,7 +52,7 @@
               <span title="SNAQrcScore HulpBijEten (4029008 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQrcScore HulpBijEten</span>
             </td>
             <td>
-              <span title="In staat om zelfstandig te eten (165224005 - SNOMED CT)">In staat om zelfstandig te eten</span>
+              <span title="Hulp nodig bij eten (129033007 - SNOMED CT)">Hulp nodig bij eten</span>
             </td>
           </tr>
         </tbody>
@@ -68,12 +68,15 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/nl-core-Patient-01"/>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
     <type value="Patient"/>
-    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
   </subject>
-  <effectiveDateTime value="2013-01-27"/>
-  <valueInteger value="4"/>
+  <effectiveDateTime value="2025-02-06"/>
+  <valueInteger value="5"/>
+  <note>
+    <text value="Scorekleur is rood"/>
+  </note>
   <component>
     <code>
       <coding>
@@ -85,8 +88,8 @@
     <valueCodeableConcept>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.19.1"/>
-        <code value="G1"/>
-        <display value="Gemiddeld verlies"/>
+        <code value="G2"/>
+        <display value="Veel verlies"/>
       </coding>
     </valueCodeableConcept>
   </component>
@@ -101,8 +104,8 @@
     <valueCodeableConcept>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.19.2"/>
-        <code value="B1"/>
-        <display value="GeenEetlust"/>
+        <code value="B0"/>
+        <display value="Eetlust"/>
       </coding>
     </valueCodeableConcept>
   </component>
@@ -117,8 +120,8 @@
     <valueCodeableConcept>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.19.3"/>
-        <code value="B1"/>
-        <display value="TeLicht"/>
+        <code value="B2"/>
+        <display value="Ondergewicht"/>
       </coding>
     </valueCodeableConcept>
   </component>
@@ -133,8 +136,8 @@
     <valueCodeableConcept>
       <coding>
         <system value="http://snomed.info/sct"/>
-        <code value="165224005"/>
-        <display value="In staat om zelfstandig te eten"/>
+        <code value="129033007"/>
+        <display value="Hulp nodig bij eten"/>
       </coding>
     </valueCodeableConcept>
   </component>
