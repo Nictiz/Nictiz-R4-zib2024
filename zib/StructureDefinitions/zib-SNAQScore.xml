@@ -45,7 +45,7 @@
         <key value="zib-SNAQScore-2" />
         <severity value="error" />
         <human value="If the component codes are not all present, the value SHALL be present." />
-        <expression value="value.empty().not() or component.where(code.coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1' and code.coding.code.subsetOf('4006003'|'4006004'|'4006005')).count()=3" />
+        <expression value="component.where(code.coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1' and code.coding.code.subsetOf('4006003'|'4006004'|'4006005')).count()&lt;3 implies value.exists()" />
       </constraint>
       <mapping>
         <identity value="zib-snaqscore-v3.3-2024EN" />
