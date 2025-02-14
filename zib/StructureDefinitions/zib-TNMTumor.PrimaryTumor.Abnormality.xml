@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-TNMTumor.PrimaryTumor.Abnormality" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PrimaryTumor.Abnormality" />
+  <name value="ZibTNMTumorPrimaryTumorAbnormality" />
+  <title value="zib TNMTumor.PrimaryTumor.Abnormality" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Container of the Abnormality concept.This container contains all data elements of the Abnormality concept." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN)" />
+    <name value="zib TNMTumorClassification-v4.0(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="Abnormality" />
+      <definition value="Container of the Abnormality concept.This container contains all data elements of the Abnormality concept." />
+      <comment value="The Morphology concept (NL-CM:4.27.17) of zib TNMTumorClassification is represented using distinct BodyStructure resources. These are referenced from this current resource and are referenced on `Observation.bodySite.extension:bodyStructureReference`." />
+      <alias value="Afwijking" />
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.15" />
+        <comment value="Abnormality" />
+      </mapping>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="372087000" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <short value="AnatomicalLocation / Location" />
+      <definition value="The Morphology concept (NL-CM:4.27.17) of zib TNMTumorClassification is represented using distinct BodyStructure resources because . These are referenced from this current resource and are referenced on `bodySite.extension:bodyStructureReference`." />
+      <alias value="AnatomischeLocatie" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.148.11.42--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.20" />
+        <comment value="AnatomicalLocation" />
+      </mapping>
+    </element>
+    <element id="Observation.bodySite.extension:bodyStructureReference">
+      <path value="Observation.bodySite.extension" />
+      <sliceName value="bodyStructureReference" />
+    </element>
+    <element id="Observation.bodySite.extension:bodyStructureReference.value[x]">
+      <path value="Observation.bodySite.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TNMTumor.PrimaryTumor.Abnormality.Location" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
+      </type>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:isPrimaryTumor">
+      <path value="Observation.component" />
+      <sliceName value="isPrimaryTumor" />
+    </element>
+    <element id="Observation.component:isPrimaryTumor.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="160961000146106" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:isPrimaryTumor.value[x]">
+      <path value="Observation.component.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:isPrimaryTumor.value[x]:valueCodeableConcept">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <short value="IsPrimaryTumor" />
+      <definition value="Indicates whether this abnormality falls within the criteria of the TNM classification and is defined as (part of the) primary tumor and included in the staging of the size of the primary tumor, the T-category" />
+      <alias value="IsPrimaireTumor" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.30--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.29" />
+        <comment value="IsPrimaryTumor" />
+      </mapping>
+    </element>
+    <element id="Observation.component:abnormalityNumber">
+      <path value="Observation.component" />
+      <sliceName value="abnormalityNumber" />
+    </element>
+    <element id="Observation.component:abnormalityNumber.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="TODO" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:abnormalityNumber.value[x]">
+      <path value="Observation.component.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:abnormalityNumber.value[x]:valueInteger">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueInteger" />
+      <short value="AbnormalityNumber" />
+      <definition value="The number assigned to the abnormality, which is necessary in order to be able to clearly indicate to which abnormality the information relates in various examinations.In the case of multiple primary tumors in one organ, the tumor with the highest T category should be classified." />
+      <alias value="AfwijkingNummer" />
+      <type>
+        <code value="integer" />
+      </type>
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.16" />
+        <comment value="AbnormalityNumber" />
+      </mapping>
+    </element>
+    <element id="Observation.component:g_HistopathologicalGrading">
+      <path value="Observation.component" />
+      <sliceName value="g_HistopathologicalGrading" />
+    </element>
+    <element id="Observation.component:g_HistopathologicalGrading.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="371469007" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:g_HistopathologicalGrading.value[x]">
+      <path value="Observation.component.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:g_HistopathologicalGrading.value[x]:valueCodeableConcept">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <short value="G_HistopathologicalGrading" />
+      <definition value="Staging result of the histopathological grading, the G-category of theTNM classification. The differentiation grade of a tumor is determined by a pathologist." />
+      <alias value="G_DifferentiatiegraadTumor" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.49--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.18" />
+        <comment value="G_HistopathologicalGrading" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

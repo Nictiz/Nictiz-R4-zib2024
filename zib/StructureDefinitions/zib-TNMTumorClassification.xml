@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-TNMTumorClassification" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumorClassification" />
+  <name value="ZibTNMTumorClassification" />
+  <title value="zib TNMTumorClassification" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="TNM Classification of Malignant Tumors (TNM) is the cancer staging system developed and is maintained by the Union for International Cancer Control (UICC). It is also used by the American Joint Committee on Cancer (AJCC) and the International Federation of Gynecology and Obstetrics (FIGO). In 1987, the UICC and AJCC staging systems were unified into the single TNM staging system. Nevertheless, there are still some differences between the two systems.&#xD;&#xA;The TNM-classification is developed for solid tumors. TNM is a notation system that describes the stage of a cancer, which originates from a solid tumor, using alphanumeric codes; T describes the size of the original (primary) tumor and whether it has invaded nearby tissue, N describes nearby (regional) lymph nodes that are involved, and M describes distant metastasis (spread of cancer from one part of the body to another). In addition to T, N and M, the classification also contains other parameters that may be relevant." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TNMTumorClassification v4.0 (2024)](https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/TNMTumorClassification-v4.0(2024EN)" />
+    <name value="zib TNMTumorClassification-v4.0(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="TNMTumorClassification" />
+      <comment value="Several concepts of zib TNMTumorClassification are represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`." />
+      <alias value="TNMTumorClassificatie" />
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.1" />
+        <comment value="TNMTumorClassification" />
+      </mapping>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="399390009" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <short value="DateOfTNMClassification" />
+      <definition value="The date on which the TNM Classification (the value) was established. This may be a later date than the date(s) of study(s) on which the classification was determined." />
+      <alias value="DatumTNMClassificatie" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.2" />
+        <comment value="DateOfTNMClassification" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.value[x]:valueString">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueString" />
+      <short value="IntegratedTNMValue" />
+      <definition value="The assigned TNM classification (the value), based on each T, N and M category (optional incl. multiple primary tumors (m) and/or the localization of M)." />
+      <alias value="GeintegreerdeTNMWaarde" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.4" />
+        <comment value="IntegratedTNMValue" />
+      </mapping>
+    </element>
+    <element id="Observation.note">
+      <path value="Observation.note" />
+      <max value="1" />
+    </element>
+    <element id="Observation.note.text">
+      <path value="Observation.note.text" />
+      <short value="Explanation" />
+      <definition value="Comments regarding interpretation of the TNMTumorClassification." />
+      <alias value="Toelichting" />
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.5" />
+        <comment value="Explanation" />
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <short value="TNMVersion" />
+      <definition value="TNM classification version (AJCC or UICC) and edition used (7th, 8th etc.)." />
+      <alias value="TNMVersie" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.6--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-tnmtumorclassification-v4.0-2024EN" />
+        <map value="NL-CM:4.27.3" />
+        <comment value="TNMVersion" />
+      </mapping>
+    </element>
+    <element id="Observation.hasMember">
+      <path value="Observation.hasMember" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.hasMember:distantMetastasis">
+      <path value="Observation.hasMember" />
+      <sliceName value="distantMetastasis" />
+      <definition value="The DistantMetastasis concept (NL-CM:4.27.25) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.DistantMetastasis" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:regionalLymphnodes">
+      <path value="Observation.hasMember" />
+      <sliceName value="regionalLymphnodes" />
+      <definition value="The RegionalLymphnodes concept (NL-CM:4.27.21) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.RegionalLymphnodes" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:primaryTumor">
+      <path value="Observation.hasMember" />
+      <sliceName value="primaryTumor" />
+      <definition value="The PrimaryTumor concept (NL-CM:4.27.12) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PrimaryTumor" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:l_LymphaticInvasion">
+      <path value="Observation.hasMember" />
+      <sliceName value="l_LymphaticInvasion" />
+      <definition value="The L_LymphaticInvasion concept (NL-CM:4.27.6) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.LLymphaticInvasion" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:pn_PerineuralInvasion">
+      <path value="Observation.hasMember" />
+      <sliceName value="pn_PerineuralInvasion" />
+      <definition value="The Pn_PerineuralInvasion concept (NL-CM:4.27.7) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PnPerineuralInvasion" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:v_VenousInvasion">
+      <path value="Observation.hasMember" />
+      <sliceName value="v_VenousInvasion" />
+      <definition value="The V_VenousInvasion concept (NL-CM:4.27.8) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.VVenousInvasion" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:anatomicalStage">
+      <path value="Observation.hasMember" />
+      <sliceName value="anatomicalStage" />
+      <definition value="The AnatomicalStage concept (NL-CM:4.27.9) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.AnatomicalStage" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:prognosticStage">
+      <path value="Observation.hasMember" />
+      <sliceName value="prognosticStage" />
+      <definition value="The PrognosticStage concept (NL-CM:4.27.10) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.PrognosticStage" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:r_ResidualTumor">
+      <path value="Observation.hasMember" />
+      <sliceName value="r_ResidualTumor" />
+      <definition value="The R_ResidualTumor concept (NL-CM:4.27.11) of zib TNMTumorClassification, represented as a distinct Observation resource." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TNMTumor.RResidualTumor" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

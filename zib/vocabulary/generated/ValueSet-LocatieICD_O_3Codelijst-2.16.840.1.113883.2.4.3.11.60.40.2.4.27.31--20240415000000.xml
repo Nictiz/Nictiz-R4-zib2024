@@ -1,0 +1,117 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.27.31--20240415000000"/>
+   <meta>
+      <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
+      <tag>
+         <system value="http://hl7.org/fhir/FHIR-version"/>
+         <code value="4.0.1"/>
+      </tag>
+   </meta>
+   <text>
+      <status value="empty"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+   </text>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2024-04-15T00:00:00+00:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.27.31--20240415000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.27.31"/>
+   </identifier>
+   <version value="2024-04-15T00:00:00"/>
+   <name value="LocatieICD_O_3Codelijst"/>
+   <title value="LocatieICD-O-3Codelijst"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Registratie aan de bron"/>
+   <contact>
+      <name value="Registratie aan de bron"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.registratieaandebron.nl"/>
+      </telecom>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.zibs.nl"/>
+      </telecom>
+   </contact>
+   <description value="LocatieICD-O-3Codelijst"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.6.43.1"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Lymfeklieren van hoofd, aangezicht en hals"/>
+            </extension>
+            <code value="C77.0"/>
+            <display value="Lymfeklieren van hoofd, aangezicht en hals"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Intrathoracale lymfeklieren"/>
+            </extension>
+            <code value="C77.1"/>
+            <display value="Intrathoracale lymfeklieren"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Intra-abdominale lymfeklieren"/>
+            </extension>
+            <code value="C77.2"/>
+            <display value="Intra-abdominale lymfeklieren"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Lymfeklieren van oksel en bovenste extremiteit"/>
+            </extension>
+            <code value="C77.3"/>
+            <display value="Lymfeklieren van oksel en bovenste extremiteit"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Lymfeklieren van lies en onderste extremiteit"/>
+            </extension>
+            <code value="C77.4"/>
+            <display value="Lymfeklieren van lies en onderste extremiteit"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Lymfeklieren van bekken"/>
+            </extension>
+            <code value="C77.5"/>
+            <display value="Lymfeklieren van bekken"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Lymfeklieren verspreid over meer regio’s"/>
+            </extension>
+            <code value="C77.8"/>
+            <display value="Lymfeklieren verspreid over meer regio’s"/>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Lymfeklieren, NNO"/>
+            </extension>
+            <code value="C77.9"/>
+            <display value="Lymfeklieren, NNO"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Anders"/>
+            </extension>
+            <code value="OTH"/>
+            <display value="Other"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>
