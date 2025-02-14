@@ -34,7 +34,9 @@ steps:
   validate zib profiles:
     description: Validate the zib profiles using the profile for zib profiles
     patterns: zib profiles
-    profile: http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions-Zib-Profiles
+    profile:
+    - http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions-Zib-Profiles
+    - http://nictiz.nl/fhir/StructureDefinition/zib2024-PackageChecks
   validate zib extensions:
     description: Validate the zib specific extensions using the profile for zib extensions
     patterns: zib extensions
@@ -71,11 +73,6 @@ steps:
   validate examples:
     description: Validate examples using the generic FHIR validation rules
     patterns: examples
-  additional package checks:
-    description: Additional profile checks specifically for this package
-    patterns:
-    - zib profiles
-    profile: "http://nictiz.nl/fhir/StructureDefinition/zib2024-PackageChecks"
   check zib compliance:
     patterns:
       - zib profiles
