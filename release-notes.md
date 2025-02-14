@@ -141,8 +141,8 @@
 * No significant changes.
 
 ## GlasgowComaScale (zib-GlasgowComaScale, nl-core-GlasgowComaScale)
-* `.component:gcsMotor.value[x]` ; terminology ; Changed codes in GCS_MotorCodelijst, GCS_MotorCodelijstBaby and GCS_MotorCodelijstKleuter. ; ZIB-1314
-* `.component:gcsVerbal.value[x]` ; terminology ; Changed codes in GCS_VerbalCodelijst, GCS_VerbalCodelijstBaby and VerbalCodelijstKleuter. ; ZIB-1314
+* `.component:gcsMotor.value[x]` ; terminology ; Changed codes in GCS_MotorCodelijsten (GCS_MotorCodelijst, GCS_MotorCodelijstBaby and GCS_MotorCodelijstKleuter). ; ZIB-1314
+* `.component:gcsVerbal.value[x]` ; terminology ; Changed codes in GCS_VerbalCodelijsten (GCS_VerbalCodelijst, GCS_VerbalCodelijstBaby and GCS_VerbalCodelijstKleuter). ; ZIB-1314
 
 ## HeadCircumference (zib-HeadCircumference, nl-core-HeadCircumference)
 * `.value[x]` ; textual ; Changed definition of HeadCircumferenceMeasurement. ; ZIBFHIR-178
