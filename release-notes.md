@@ -65,10 +65,17 @@
 * `.value[x]` ; textual ; Changed definition of HeightValue. ; ZIB-1887
 * `.value[x]` ; textual ; Added guidance for HeightValue. ; ZIB-1887
 
+## BodyTemperature (zib-BodyTemperature, nl-core-BodyTemperature)
+* `.value[x]` ; terminology ; Added required binding to BodyTemperatureUnits. ; ZIBFHIR-178
+
 ## BodyWeight (zib-BodyWeight, nl-core-BodyWeight)
 * `.value[x]` ; textual ; Changed definition of WeightValue. ; ZIB-1886
-* `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIB-1886
+* `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIBFHIR-178
 * `.component:clothing.value[x]` ; terminology ; Changed codes in KledingCodelijst. ; ZIB-1704
+
+## ComfortScale (zib-ComfortScale, nl-core-ComfortScale)
+* `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-1839
+* `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-1839
 
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
@@ -119,6 +126,9 @@
 
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
+
+## FLACCpainScale (zib-FLACCpainScale, nl-core-FLACCpainScale)
+* No significant changes.
 
 ## FluidBalance
 ### zib-FluidBalance, nl-core-FluidBalance
@@ -213,6 +223,18 @@
 * `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
 
+## Payer 
+### zib-Payer-Organization, nl-core-Payer-Organization
+* `Organization` ; mapping ; Removed mapping of InsuranceCompany. ; ZIBFHIR-196
+
+### zib-Payer.InsuranceCompany, nl-core-Payer.InsuranceCompany
+* `Coverage` ; mapping ; Moved mapping of InsuranceCompany from `.payor`. ; ZIBFHIR-196
+* `Coverage` ; textual ; Added guidance for Insurance. ; ZIBFHIR-196
+* `.type` ; terminology ; Changed codes in VerzekeringssoortCodelijst. ; ZIB-2218
+
+### zib-Payer.PayerPerson, nl-core-Payer.PayerPerson
+* `Coverage` ; mapping ; Moved mapping of PayerPerson from `.payor`. ; ZIBFHIR-196
+
 ## Problem (zib-Problem, nl-core-Problem)
 * `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-1575, ZIB-2087, ZIB-2218
 * `.code.text` ; mapping ; Moved mapping of FurtherSpecificationProblemName from `.code.extension:furtherSpecificationProblemName.value[x]`. ; ZIBFHIR-145
@@ -220,6 +242,6 @@
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
 * `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
 
- ## SNAQrcScore (zib-SNAQrcScore , nl-core-SNAQrcScore)
+## SNAQrcScore (zib-SNAQrcScore , nl-core-SNAQrcScore)
  * `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-2058
  * `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-2058
