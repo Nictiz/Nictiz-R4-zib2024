@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="nl-core-SNAQ65plusScore-full-02"/>
+  <id value="nl-core-SNAQ65plusScore-alt-4"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-SNAQ65plusScore"/>
   </meta>
@@ -8,11 +8,6 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
         <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
-        <tfoot>
-          <tr>
-            <td colspan="2">De scorekleur is rood.</td>
-          </tr>
-        </tfoot>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
@@ -26,7 +21,7 @@
             <td>
               <span title="'Short Nutritional Questionnaire' voor 65+ (108321000146101 - SNOMED CT)">'Short Nutritional Questionnaire' voor 65+</span>
             </td>
-            <td>3</td>
+            <td>1</td>
           </tr>
           <tr>
             <td>
@@ -41,7 +36,23 @@
               <span title="SNAQ65+Score BovenarmOmtrekScore (4030008 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQ65+Score BovenarmOmtrekScore</span>
             </td>
             <td>
-              <span title="Klein (A1 - 2.16.840.1.113883.2.4.3.11.60.40.4.18.4)">Klein</span>
+              <span title="Normaal (A0 - 2.16.840.1.113883.2.4.3.11.60.40.4.18.4)">Normaal</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="SNAQ65+Score EetlustScore (4030004 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQ65+Score EetlustScore</span>
+            </td>
+            <td>
+              <span title="GeenEetlust (B1 - 2.16.840.1.113883.2.4.3.11.60.40.4.18.2)">GeenEetlust</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="SNAQ65+Score InspanningsScore (4030005 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQ65+Score InspanningsScore</span>
+            </td>
+            <td>
+              <span title="Mogelijk (In0 - 2.16.840.1.113883.2.4.3.11.60.40.4.18.3)">Mogelijk</span>
             </td>
           </tr>
         </tbody>
@@ -57,14 +68,14 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/nl-core-Patient-full-01"/>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
     <type value="Patient"/>
     <display value="Patient, Peter Jan (PeJe) Jansen"/>
   </subject>
   <effectiveDateTime value="2016-01-27"/>
-  <valueInteger value="3"/>
+  <valueInteger value="1"/>
   <note>
-    <text value="De scorekleur is rood."/>
+    <text value="De scorekleur is groen."/>
   </note>
   <component>
     <code>
@@ -93,8 +104,40 @@
     <valueCodeableConcept>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.18.4"/>
-        <code value="A1"/>
-        <display value="Klein"/>
+        <code value="A0"/>
+        <display value="Normaal"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1"/>
+        <code value="4030004"/>
+        <display value="SNAQ65+Score EetlustScore"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.18.2"/>
+        <code value="B1"/>
+        <display value="GeenEetlust"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1"/>
+        <code value="4030005"/>
+        <display value="SNAQ65+Score InspanningsScore"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.18.3"/>
+        <code value="In0"/>
+        <display value="Mogelijk"/>
       </coding>
     </valueCodeableConcept>
   </component>

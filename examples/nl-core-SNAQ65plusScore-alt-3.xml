@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="nl-core-SNAQ65plusScore-full-03"/>
+  <id value="nl-core-SNAQ65plusScore-alt-3"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-SNAQ65plusScore"/>
   </meta>
@@ -8,11 +8,6 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
         <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
-        <tfoot>
-          <tr>
-            <td colspan="2">De scorekleur is oranje.</td>
-          </tr>
-        </tfoot>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
@@ -73,7 +68,7 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/nl-core-Patient-full-01"/>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
     <type value="Patient"/>
     <display value="Patient, Peter Jan (PeJe) Jansen"/>
   </subject>

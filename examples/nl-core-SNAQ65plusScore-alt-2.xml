@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="nl-core-SNAQ65plusScore-full-01"/>
+  <id value="nl-core-SNAQ65plusScore-alt-2"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-SNAQ65plusScore"/>
   </meta>
@@ -8,11 +8,6 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
         <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
-        <tfoot>
-          <tr>
-            <td colspan="2">De scorekleur is rood.</td>
-          </tr>
-        </tfoot>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
@@ -33,7 +28,15 @@
               <span title="SNAQ65+Score GewichtsverliesScore (4030003 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQ65+Score GewichtsverliesScore</span>
             </td>
             <td>
-              <span title="Veel verlies (G2 - 2.16.840.1.113883.2.4.3.11.60.40.4.18.1)">Veel verlies</span>
+              <span title="Weinig verlies (G0 - 2.16.840.1.113883.2.4.3.11.60.40.4.18.1)">Weinig verlies</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="SNAQ65+Score BovenarmOmtrekScore (4030008 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQ65+Score BovenarmOmtrekScore</span>
+            </td>
+            <td>
+              <span title="Klein (A1 - 2.16.840.1.113883.2.4.3.11.60.40.4.18.4)">Klein</span>
             </td>
           </tr>
         </tbody>
@@ -49,7 +52,7 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/nl-core-Patient-full-01"/>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
     <type value="Patient"/>
     <display value="Patient, Peter Jan (PeJe) Jansen"/>
   </subject>
@@ -69,8 +72,24 @@
     <valueCodeableConcept>
       <coding>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.18.1"/>
-        <code value="G2"/>
-        <display value="Veel verlies"/>
+        <code value="G0"/>
+        <display value="Weinig verlies"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1"/>
+        <code value="4030008"/>
+        <display value="SNAQ65+Score BovenarmOmtrekScore"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.18.4"/>
+        <code value="A1"/>
+        <display value="Klein"/>
       </coding>
     </valueCodeableConcept>
   </component>
