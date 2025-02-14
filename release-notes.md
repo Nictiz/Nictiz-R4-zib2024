@@ -161,6 +161,9 @@
 ### zib-HealthProfessional-PractitionerRole, nl-core-HealthProfessional-PractitionerRole
 * `.specialty:specialty` ; terminology ; Changed codes in SpecialismeCodelijsten (SpecialismeAGBCodelijst and SpecialismeUZICodelijst). ; ZIB-2218
 
+## HoNOSplus (zib-HoNOSplus, nl-core-HoNOSplus)
+* New profile.
+
 ## IllnessPerception 
 ### zib-IllnessPerception, nl-core-IllnessPerception 
 * `.code` ; terminology ; Pattern changed from http://snomed.info/sct#363910003 to http://snomed.info/sct#159971000146104. ; ZIB-1600
