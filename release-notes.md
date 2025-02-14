@@ -247,4 +247,4 @@
 * `Observation` ; constraint ; Renamed and adjusted zib-SNAQ65PlusScore-2 to zib-SNAQ65plusScore-1. ; ZIB-1668
 * `.value[x]:valueInteger` ; textual ; Changed definition of TotalScore. ; ZIB-1635, ZIB-1668
 * `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-1635, ZIB-1668
-* `.component:upperArmCircumferenceScore.value[x]` ; textual ; Renamed mapping from UpperarmCircumference to UpperArmCircumferenceScore. ; ZIB-1633
+* `.component:upperArmCircumferenceScore.value[x]` ; mapping ; Renamed mapping from UpperarmCircumference to UpperArmCircumferenceScore. ; ZIB-1633
