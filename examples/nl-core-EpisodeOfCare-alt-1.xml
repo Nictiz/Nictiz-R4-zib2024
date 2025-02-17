@@ -18,7 +18,9 @@
     </div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/note">
-    <valueText value="niet te strak instellen op insuline"/>
+    <valueAnnotation>
+      <text value="niet te strak instellen op insuline"/>
+    </valueAnnotation>
   </extension>
   <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName">
     <valueString value="slecht instelbaar DM, cave hypo's"/>
