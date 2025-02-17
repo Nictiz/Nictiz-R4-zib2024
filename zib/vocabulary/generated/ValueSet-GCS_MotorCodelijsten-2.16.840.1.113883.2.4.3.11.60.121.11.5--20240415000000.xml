@@ -1,7 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.17.1.7--20240415000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.121.11.5--20240415000000"/>
    <meta>
-      <lastUpdated value="2024-11-28T08:35:00Z"/>
       <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -19,18 +18,17 @@
          <start value="2024-04-15T00:00:00+00:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.7--20240415000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.5--20240415000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.17.1.7"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.121.11.5"/>
    </identifier>
    <version value="2024-04-15T00:00:00"/>
-   <name value="SpecialismeAGBCodelijst"/>
-   <title value="SpecialismeAGBCodelijst"/>
+   <name value="GCS_MotorCodelijsten"/>
+   <title value="GCS_MotorCodelijsten"/>
    <status value="active"/>
    <experimental value="false"/>
-   <date value="2024-11-28T08:35:00+01:00"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
       <name value="Registratie aan de bron"/>
@@ -43,11 +41,17 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="COD016-VEKT (Vektis AGB-medische specialismen) - All values. Changes compared to prerelease 2024: &#xA;* Removed: code OTH (NullFlavor)"/>
+   <description value="Value set combining the distinct value sets that the zib nl.zorg.GlasgowComaScale binds to for NL-CM:12.8.4 GCS_Motor. This value set as such does not exist in the zib but facilitates referencing all these value sets at the same time"/>
    <immutable value="false"/>
    <compose>
       <include>
-         <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.2--20240415000000"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.8--20240415000000"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.7--20240415000000"/>
       </include>
    </compose>
 </ValueSet>

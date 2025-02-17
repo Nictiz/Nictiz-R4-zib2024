@@ -140,6 +140,10 @@
 ### zib-FluidBalance.FluidTotalOut, nl-core-FluidBalance.FluidTotalOut
 * No significant changes.
 
+## GlasgowComaScale (zib-GlasgowComaScale, nl-core-GlasgowComaScale)
+* `.component:gcsMotor.value[x]` ; terminology ; Changed codes in GCS_MotorCodelijsten (GCS_MotorCodelijst, GCS_MotorCodelijstBaby and GCS_MotorCodelijstKleuter). ; ZIB-1314
+* `.component:gcsVerbal.value[x]` ; terminology ; Changed codes in GCS_VerbalCodelijsten (GCS_VerbalCodelijst, GCS_VerbalCodelijstBaby and GCS_VerbalCodelijstKleuter). ; ZIB-1314
+
 ## HeadCircumference (zib-HeadCircumference, nl-core-HeadCircumference)
 * `.value[x]` ; textual ; Changed definition of HeadCircumferenceMeasurement. ; ZIBFHIR-178
 * `.value[x]` ; terminology ; Added required binding to BodyLengthUnits. ; ZIBFHIR-178
@@ -203,7 +207,6 @@
 ## O2Saturation (zib-O2Saturation, nl-core-O2Saturation)
 * `.effective[x]:effectiveDateTime` ; mapping ; Renamed mapping from O2SaturationDateTime to SpO2SaturationDateTime. ; ZIB-1217
 * `.bodySite` ; mapping ; Added mapping of MeasuringLocation. ; ZIB-1217
-* `.component:extraOxygenAdministration.code` ; textual ; Removed guidance for ExtraOxygenAdministration. ; ZIB-1217, ZIB-1476
 
 ## ParticipationInSociety
 ### zib-ParticipationInSociety, nl-core-ParticipationInSociety

@@ -1,7 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.10.2--20240415000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.12.8.6--20240415000000"/>
    <meta>
-      <lastUpdated value="2024-11-28T08:35:00Z"/>
       <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -19,18 +18,17 @@
          <start value="2024-04-15T00:00:00+00:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.10.2--20240415000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.6--20240415000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.10.2"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.8.6"/>
    </identifier>
    <version value="2024-04-15T00:00:00"/>
-   <name value="TeWassenLichaamsdeelCodelijst"/>
-   <title value="TeWassenLichaamsdeelCodelijst"/>
+   <name value="ConditiesTijdensMetingCodelijst"/>
+   <title value="ConditiesTijdensMetingCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
-   <date value="2024-11-28T08:35:00+01:00"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
       <name value="Registratie aan de bron"/>
@@ -43,18 +41,28 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="Changes compared to prerelease 2024: &#xA;* Removed: code OTH (NullFlavor)"/>
+   <description value="ConditiesTijdensMetingCodelijst"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="anders"/>
+            </extension>
+            <code value="OTH"/>
+            <display value="other"/>
+         </concept>
+      </include>
+      <include>
          <system value="http://snomed.info/sct"/>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Gehele lichaam"/>
+               <valueString value="gesedeerd"/>
             </extension>
-            <code value="38266002"/>
-            <display value="Gehele lichaam in totaliteit"/>
+            <code value="17971005"/>
+            <display value="Gesedeerd"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -62,7 +70,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Entire body as a whole"/>
+               <value value="Sedated"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -71,15 +79,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Gehele lichaam in totaliteit"/>
+               <value value="Gesedeerd"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Gezicht"/>
+               <valueString value="spierverslappers"/>
             </extension>
-            <code value="302549007"/>
-            <display value="Gehele aangezicht"/>
+            <code value="40241000146103"/>
+            <display value="Paralyse door spierrelaxans"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -87,7 +95,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Entire face"/>
+               <value value="Paralysis caused by skeletal muscle relaxant"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -96,15 +104,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Gehele aangezicht"/>
+               <value value="Paralyse door spierrelaxans"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Bovenlichaam"/>
+               <valueString value="afasie"/>
             </extension>
-            <code value="362874006"/>
-            <display value="Gehele bovenlichaam"/>
+            <code value="87486003"/>
+            <display value="Afasie"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -112,7 +120,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Entire upper body"/>
+               <value value="Aphasia"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -121,15 +129,15 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Gehele bovenlichaam"/>
+               <value value="Afasie"/>
             </designation>
          </concept>
          <concept>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Onderlichaam"/>
+               <valueString value="tube aanwezig"/>
             </extension>
-            <code value="362875007"/>
-            <display value="Gehele onderlichaam"/>
+            <code value="419991009"/>
+            <display value="Endotracheale tube aanwezig"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -137,7 +145,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Entire lower body"/>
+               <value value="Endotracheal tube present"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -146,7 +154,32 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Gehele onderlichaam"/>
+               <value value="Endotracheale tube aanwezig"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="tracheostoma aanwezig"/>
+            </extension>
+            <code value="302108003"/>
+            <display value="Aanwezigheid van tracheostoma"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Tracheostomy present"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Aanwezigheid van tracheostoma"/>
             </designation>
          </concept>
       </include>

@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.4.10.2--20240415000000"/>
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.12.8.4--20240415000000"/>
    <meta>
       <lastUpdated value="2024-11-28T08:35:00Z"/>
       <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
@@ -19,15 +19,15 @@
          <start value="2024-04-15T00:00:00+00:00"/>
       </valuePeriod>
    </extension>
-   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.10.2--20240415000000"/>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.4--20240415000000"/>
    <identifier>
       <use value="official"/>
       <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.10.2"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.8.4"/>
    </identifier>
    <version value="2024-04-15T00:00:00"/>
-   <name value="TeWassenLichaamsdeelCodelijst"/>
-   <title value="TeWassenLichaamsdeelCodelijst"/>
+   <name value="GCS_VerbalCodelijstKleuter"/>
+   <title value="GCS_VerbalCodelijstKleuter"/>
    <status value="active"/>
    <experimental value="false"/>
    <date value="2024-11-28T08:35:00+01:00"/>
@@ -43,18 +43,20 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="Changes compared to prerelease 2024: &#xA;* Removed: code OTH (NullFlavor)"/>
+   <description value="Changes compared to prerelease 2024:         &#xA;* Removed: code OTH (NullFlavor)"/>
    <immutable value="false"/>
-   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
       <include>
-         <system value="http://snomed.info/sct"/>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.3"/>
          <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Gehele lichaam"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="5"/>
             </extension>
-            <code value="38266002"/>
-            <display value="Gehele lichaam in totaliteit"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Adequate woorden en zinnen [Woorden of kleine zinnen in context van de situatie]"/>
+            </extension>
+            <code value="V5"/>
+            <display value="Georiënteerd"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -62,7 +64,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Entire body as a whole"/>
+               <value value="Oriented"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -71,15 +73,18 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Gehele lichaam in totaliteit"/>
+               <value value="Georiënteerd"/>
             </designation>
          </concept>
          <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Gezicht"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="4"/>
             </extension>
-            <code value="302549007"/>
-            <display value="Gehele aangezicht"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Onjuiste woorden [Verwarde woorden]"/>
+            </extension>
+            <code value="V4"/>
+            <display value="Verward"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -87,7 +92,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Entire face"/>
+               <value value="Confused"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -96,15 +101,18 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Gehele aangezicht"/>
+               <value value="Verward"/>
             </designation>
          </concept>
          <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Bovenlichaam"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="3"/>
             </extension>
-            <code value="362874006"/>
-            <display value="Gehele bovenlichaam"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Huilen [Aanhoudend huilen of krijsen]"/>
+            </extension>
+            <code value="V3"/>
+            <display value="Onsamenhangende antwoorden"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -112,7 +120,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Entire upper body"/>
+               <value value="Inappropriate speech"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -121,15 +129,18 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Gehele bovenlichaam"/>
+               <value value="Onsamenhangende antwoorden"/>
             </designation>
          </concept>
          <concept>
-            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-               <valueString value="Onderlichaam"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="2"/>
             </extension>
-            <code value="362875007"/>
-            <display value="Gehele onderlichaam"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Kreunen [Alleen kreunen]"/>
+            </extension>
+            <code value="V2"/>
+            <display value="Onverstaanbare geluiden"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -137,7 +148,7 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Entire lower body"/>
+               <value value="Incomprehensible sounds"/>
             </designation>
             <designation>
                <language value="nl-NL"/>
@@ -146,7 +157,57 @@
                   <code value="900000000000013009"/>
                   <display value="Synonym"/>
                </use>
-               <value value="Gehele onderlichaam"/>
+               <value value="Onverstaanbare geluiden"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="1"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Geen reactie [Geen enkel verbale response]"/>
+            </extension>
+            <code value="V1"/>
+            <display value="Geen reactie"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="No response"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Geen reactie"/>
+            </designation>
+         </concept>
+      </include>
+      <include>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="0"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Not applicable"/>
+            </extension>
+            <code value="NA"/>
+            <display value="Not applicable"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Not applicable"/>
             </designation>
          </concept>
       </include>
