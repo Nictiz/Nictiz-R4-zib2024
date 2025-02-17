@@ -13,9 +13,9 @@
             <th>Participant</th>
             <td>
               <ul>
-                <li> Contact person, Johanna Petronella Maria (Johanna) van Putten</li>
-                <li> Patient, Peter Jan (PeJe) Jansen</li>
-                <li> Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord</li>
+                <li>Contact person, Johanna Petronella Maria (Johanna) van Putten</li>
+                <li>Patient, Peter Jan (PeJe) Jansen</li>
+                <li>Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord</li>
               </ul>
             </td>
           </tr>
@@ -31,6 +31,7 @@
       </table>
     </div>
   </text>
+  <name value="Complexe Ouderenzorg"/>
   <participant>
     <member>
       <reference value="RelatedPerson/nl-core-ContactPerson-alt-1"/>
