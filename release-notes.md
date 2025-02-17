@@ -257,3 +257,6 @@
 
 ## SNAQScore (zib-SNAQScore, nl-core-SNAQScore)
 * No significant changes.
+
+## StrongKidsScore (zib-StrongKidsScore, nl-core-StrongKidsScore)
+* No significant changes.
