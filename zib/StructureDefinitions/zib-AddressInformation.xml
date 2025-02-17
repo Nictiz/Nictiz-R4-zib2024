@@ -57,7 +57,7 @@
       <alias value="AdresSoort" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap AdresSoortCodelijst-to-AddressUse to translate terminology from the functional model to profile terminology in ValueSet AddressUse." />
+        <description value="Use ConceptMap AdresSoortCodelijst_to_AddressUse to translate terminology from the functional model to profile terminology in ValueSet AddressUse." />
         <valueSet value="http://hl7.org/fhir/ValueSet/address-use|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse" />
@@ -77,7 +77,7 @@
       <alias value="AdresSoort" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap AdresSoortCodelijst-to-AddressType to translate terminology from the functional model to profile terminology in ValueSet AddressType." />
+        <description value="Use ConceptMap AdresSoortCodelijst_to_AddressType to translate terminology from the functional model to profile terminology in ValueSet AddressType." />
         <valueSet value="http://hl7.org/fhir/ValueSet/address-type|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType" />
@@ -205,7 +205,7 @@
     <element id="Address.city">
       <path value="Address.city" />
       <short value="PlaceOfResidence" />
-      <definition value="A geographically determined area which forms part of the municipal area. For Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14)." />
+      <definition value="A geographically determined area which forms part of the municipal area.&#xD;&#xA;&#xD;&#xA;For Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14)." />
       <alias value="Woonplaats" />
       <mapping>
         <identity value="zib-addressinformation-v1.2-2024EN" />
@@ -216,7 +216,7 @@
     <element id="Address.district">
       <path value="Address.district" />
       <short value="Municipality" />
-      <definition value="Municipality of residence. For Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14)." />
+      <definition value="Municipality of residence.&#xD;&#xA;&#xD;&#xA;For Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14)." />
       <alias value="Gemeente" />
       <mapping>
         <identity value="zib-addressinformation-v1.2-2024EN" />
@@ -227,7 +227,7 @@
     <element id="Address.postalCode">
       <path value="Address.postalCode" />
       <short value="Postcode" />
-      <definition value="Postcode of the address. In Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15)." />
+      <definition value="Postcode of the address.&#xD;&#xA;&#xD;&#xA;In Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15)." />
       <alias value="Postcode" />
       <mapping>
         <identity value="zib-addressinformation-v1.2-2024EN" />
