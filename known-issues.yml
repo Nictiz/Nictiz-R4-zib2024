@@ -106,6 +106,12 @@ zib-BodyWeight:
       - cardinality: 1..1 instead of 0..1
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
+zib-CareTeam:
+  zib deviations:
+    CareTeam.participant:healthcareProfessional.member:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of each CareTeamMember option is defined by the cardinality of the slices on participant and thus the cardinality requirements of the zib are honored. Because .member is required to discriminate the slices, its cardinality is 1..1.
+
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
     ContactPoint.system:
@@ -446,6 +452,7 @@ nl-core-*:
     Condition.code:
       - message: None of the codings provided are in the value set 'ProbleemNaamCodelijst'
         reason: This ValueSet contains two SNOMED refsets. The terminology servers are unable to determine if a code is part of this refset.
+    Condition.code.coding[*].system:
       - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icd-10-nl' could not be found, so the code cannot be validated
         reason: The CodeSystem is unknown for the terminology server, hence the code cannot be validated.
     Observation:
