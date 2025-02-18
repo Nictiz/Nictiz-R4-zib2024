@@ -1,0 +1,46 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-4"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Zorgverlenerrol. </caption>
+        <tbody>
+          <tr>
+            <th>Zorgverlener</th>
+            <td>
+              <div>Health professional (person), A. Schele</div>
+              <div>Healthcare provider (organization), Franciscus Gasthuis &amp; Vlietland</div>
+            </td>
+          </tr>
+          <tr>
+            <th>Specialisme</th>
+            <td>
+              <span title="Medisch specialisten, inwendige geneeskunde (0313 - AGB-medisch specialisme)">Medisch specialisten, inwendige geneeskunde</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <practitioner>
+    <reference value="Practitioner/nl-core-CareTeam-zib-1-HealthProfessional-Practitioner-4"/>
+    <type value="Practitioner"/>
+    <display value="Health professional (person), A. Schele"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/nl-core-CareTeam-zib-1-HealthcareProvider-Organization-4"/>
+    <type value="Organization"/>
+    <display value="Healthcare provider (organization), Franciscus Gasthuis &amp; Vlietland"/>
+  </organization>
+  <specialty>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+      <code value="0313"/>
+      <display value="Medisch specialisten, inwendige geneeskunde"/>
+    </coding>
+  </specialty>
+</PractitionerRole>

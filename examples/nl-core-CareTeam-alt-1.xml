@@ -1,0 +1,79 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="nl-core-CareTeam-alt-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-CareTeam"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Zorgteam. </caption>
+        <tbody>
+          <tr>
+            <th>Participant</th>
+            <td>
+              <ul>
+                <li>Contact person, Johanna Petronella Maria (Johanna) van Putten</li>
+                <li>Patient, Peter Jan (PeJe) Jansen</li>
+                <li>
+                  <span title="Casemanager (768832004 - SNOMED CT)">Casemanager</span>Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Reden</th>
+            <td>
+              <div>Problem, type: Interpretatie van diagnose, problem name: Vasculaire dementie</div>
+              <div>Problem, type: Interpretatie van diagnose, problem name: Hartfalen</div>
+              <div>Problem, type: Complicatie, problem name: Geneesmiddel-interacties</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <name value="Complexe Ouderenzorg"/>
+  <participant>
+    <member>
+      <reference value="RelatedPerson/nl-core-ContactPerson-alt-1"/>
+      <type value="RelatedPerson"/>
+      <display value="Contact person, Johanna Petronella Maria (Johanna) van Putten"/>
+    </member>
+  </participant>
+  <participant>
+    <member>
+      <reference value="Patient/nl-core-Patient-alt-1"/>
+      <type value="Patient"/>
+      <display value="Patient, Peter Jan (PeJe) Jansen"/>
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="768832004"/>
+        <display value="Casemanager"/>
+      </coding>
+    </role>
+    <member>
+      <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-1"/>
+      <type value="PractitionerRole"/>
+      <display value="Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord"/>
+    </member>
+  </participant>
+  <reasonReference>
+    <reference value="Condition/nl-core-CareTeam-zib-1-Problem-1"/>
+    <type value="Condition"/>
+    <display value="Problem, type: Interpretatie van diagnose, problem name: Vasculaire dementie"/>
+  </reasonReference>
+  <reasonReference>
+    <reference value="Condition/nl-core-CareTeam-zib-1-Problem-2"/>
+    <type value="Condition"/>
+    <display value="Problem, type: Interpretatie van diagnose, problem name: Hartfalen"/>
+  </reasonReference>
+  <reasonReference>
+    <reference value="Condition/nl-core-CareTeam-zib-1-Problem-3"/>
+    <type value="Condition"/>
+    <display value="Problem, type: Complicatie, problem name: Geneesmiddel-interacties"/>
+  </reasonReference>
+</CareTeam>

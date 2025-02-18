@@ -1,0 +1,25 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="nl-core-CareTeam-zib-1-HealthcareProvider-Organization-5"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Organisatie. Id: 02010862 (AGB-Z)</caption>
+        <tbody>
+          <tr>
+            <th>Naam</th>
+            <td>Apotheek Bergweg</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+    <value value="02010862"/>
+  </identifier>
+  <name value="Apotheek Bergweg"/>
+</Organization>

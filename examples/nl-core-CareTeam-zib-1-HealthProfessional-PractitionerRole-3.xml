@@ -1,0 +1,46 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-3"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Zorgverlenerrol. </caption>
+        <tbody>
+          <tr>
+            <th>Zorgverlener</th>
+            <td>
+              <div>Health professional (person), R.M. van Heck</div>
+              <div>Healthcare provider (organization), Erasmus MC</div>
+            </td>
+          </tr>
+          <tr>
+            <th>Specialisme</th>
+            <td>
+              <span title="Medisch specialisten, cardiologie (0320 - AGB-medisch specialisme)">Medisch specialisten, cardiologie</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <practitioner>
+    <reference value="Practitioner/nl-core-CareTeam-zib-1-HealthProfessional-Practitioner-3"/>
+    <type value="Practitioner"/>
+    <display value="Health professional (person), R.M. van Heck"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/nl-core-CareTeam-zib-1-HealthcareProvider-Organization-3"/>
+    <type value="Organization"/>
+    <display value="Healthcare provider (organization), Erasmus MC"/>
+  </organization>
+  <specialty>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+      <code value="0320"/>
+      <display value="Medisch specialisten, cardiologie"/>
+    </coding>
+  </specialty>
+</PractitionerRole>
