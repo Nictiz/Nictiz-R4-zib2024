@@ -13,12 +13,18 @@
             <th>Participant</th>
             <td>
               <ul>
-                <li>Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord</li>
-                <li>Health professional (role), S. Curie, Medisch specialisten, geriatrie, Parnassia Groep Rotterdam</li>
-                <li>Health professional (role), R.M. van Heck, Medisch specialisten, cardiologie, Erasmus MC</li>
-                <li>Health professional (role), A. Schele, Medisch specialisten, inwendige geneeskunde, Franciscus Gasthuis &amp; Vlietland</li>
-                <li>Health professional (role), G.F. de Haan, Apothekers, Apotheek Bergweg</li>
-                <li>Health professional (role), K. van der Linden, Humanitas Thuiszorg</li>
+                <li>
+                  <span title="Casemanager (768832004 - SNOMED CT)">Casemanager</span>Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord</li>
+                <li>
+                  <span title="Performer (PRF - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Performer</span>Health professional (role), S. Curie, Medisch specialisten, geriatrie, Parnassia Groep Rotterdam</li>
+                <li>
+                  <span title="Performer (PRF - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Performer</span>Health professional (role), R.M. van Heck, Medisch specialisten, cardiologie, Erasmus MC</li>
+                <li>
+                  <span title="Performer (PRF - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Performer</span>Health professional (role), A. Schele, Medisch specialisten, inwendige geneeskunde, Franciscus Gasthuis &amp; Vlietland</li>
+                <li>
+                  <span title="Consultant (CON - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Consultant</span>Health professional (role), G.F. de Haan, Apothekers, Apotheek Bergweg</li>
+                <li>
+                  <span title="Other (OTH - http://terminology.hl7.org/CodeSystem/v3-NullFlavor)">Other</span>Health professional (role), K. van der Linden, Humanitas Thuiszorg</li>
               </ul>
             </td>
           </tr>
@@ -36,6 +42,13 @@
   </text>
   <name value="Complexe Ouderenzorg"/>
   <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="768832004"/>
+        <display value="Casemanager"/>
+      </coding>
+    </role>
     <member>
       <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-1"/>
       <type value="PractitionerRole"/>
@@ -43,6 +56,13 @@
     </member>
   </participant>
   <participant>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="PRF"/>
+        <display value="Performer"/>
+      </coding>
+    </role>
     <member>
       <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-2"/>
       <type value="PractitionerRole"/>
@@ -50,6 +70,13 @@
     </member>
   </participant>
   <participant>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="PRF"/>
+        <display value="Performer"/>
+      </coding>
+    </role>
     <member>
       <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-3"/>
       <type value="PractitionerRole"/>
@@ -57,6 +84,13 @@
     </member>
   </participant>
   <participant>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="PRF"/>
+        <display value="Performer"/>
+      </coding>
+    </role>
     <member>
       <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-4"/>
       <type value="PractitionerRole"/>
@@ -64,6 +98,13 @@
     </member>
   </participant>
   <participant>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="CON"/>
+        <display value="Consultant"/>
+      </coding>
+    </role>
     <member>
       <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-5"/>
       <type value="PractitionerRole"/>
@@ -71,6 +112,14 @@
     </member>
   </participant>
   <participant>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+        <code value="OTH"/>
+        <display value="Other"/>
+      </coding>
+      <text value="Vrijwilliger"/>
+    </role>
     <member>
       <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-6"/>
       <type value="PractitionerRole"/>

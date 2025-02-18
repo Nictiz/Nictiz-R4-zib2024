@@ -15,7 +15,8 @@
               <ul>
                 <li>Contact person, Johanna Petronella Maria (Johanna) van Putten</li>
                 <li>Patient, Peter Jan (PeJe) Jansen</li>
-                <li>Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord</li>
+                <li>
+                  <span title="Casemanager (768832004 - SNOMED CT)">Casemanager</span>Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord</li>
               </ul>
             </td>
           </tr>
@@ -47,6 +48,13 @@
     </member>
   </participant>
   <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="768832004"/>
+        <display value="Casemanager"/>
+      </coding>
+    </role>
     <member>
       <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-1"/>
       <type value="PractitionerRole"/>
