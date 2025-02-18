@@ -1,0 +1,76 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-SkinDisorder-alt-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-SkinDisorder"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Aandoening. Subject: Patient, Peter Jan (PeJe) Jansen. Categorie: <span title="aandoening van huid (95320005 - SNOMED CT)">aandoening van huid</span>
+        </caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Intacte velrode huid met glanzend aspect.</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th>Code</th>
+            <td>
+              <span title="Eczeem (43116000 - SNOMED CT)">Eczeem</span>
+            </td>
+          </tr>
+          <tr>
+            <th>Eerste symptomen</th>
+            <td>10 september 2014</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-dueTo">
+    <valueReference>
+      <reference value="Condition/nl-core-Problem-alt-1"/>
+      <type value="Condition"/>
+      <display value="Problem, type: Klinische bevinding, problem name: Tuberculose van overige gespecificeerde organen"/>
+    </valueReference>
+  </extension>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="95320005"/>
+      <display value="aandoening van huid"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="43116000"/>
+      <display value="Eczeem"/>
+    </coding>
+  </code>
+  <bodySite>
+    <extension url="http://hl7.org/fhir/StructureDefinition/bodySite">
+      <valueReference>
+        <reference value="BodyStructure/nl-core-SkinDisorder-alt-1-AnatomicalLocation-1"/>
+        <type value="BodyStructure"/>
+        <display value="Anatomical location, ontvangstgebied, Rechts"/>
+      </valueReference>
+    </extension>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="410611000"/>
+      <display value="ontvangstgebied"/>
+    </coding>
+  </bodySite>
+  <subject>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </subject>
+  <onsetDateTime value="2014-09-10"/>
+  <note>
+    <text value="Intacte velrode huid met glanzend aspect."/>
+  </note>
+</Condition>
