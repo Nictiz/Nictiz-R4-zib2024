@@ -38,15 +38,6 @@
       <comment value="Zib LegalSituation is implemented using two profiles: this profile implements the LegalStatus concept of the zib, while &lt;http://nictiz.nl/fhir/StructureDefinition/nl-core-LegalSituation-Representation&gt; represents the Representation concept of the zib." />
       <alias value="nl-core-LegalSituation-LegalStatus" />
     </element>
-    <element id="Condition.clinicalStatus">
-      <path value="Condition.clinicalStatus" />
-      <comment value="clinicalStatus must be present and set to _inactive_, if DateStop is provided, following core constraint con-4." />
-      <mapping>
-        <identity value="zib-legalsituation-v5.0-2024EN" />
-        <map value="NL-CM:7.17.4" />
-        <comment value="DateStop (implicit, main mapping is on Condition.abatement[x]:abatementDateTime)" />
-      </mapping>
-    </element>
     <element id="Condition.subject">
       <path value="Condition.subject" />
       <type>

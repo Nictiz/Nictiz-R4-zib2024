@@ -44,6 +44,15 @@
         <comment value="LegalSituation" />
       </mapping>
     </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus" />
+      <comment value="Sending systems that don't record an explicit status can use the following guidance to infer a value from the zib:&#xD;&#xA;&#xD;&#xA;* DateStop present and in the past: _inactive_&#xD;&#xA;* DateStop absent: _active_&#xD;&#xA;* DateStop present and in the future - goes against both FHIR and zib definitions, but in a case where this might occur: _active_"/>
+      <mapping>
+        <identity value="zib-legalsituation-v5.0-2024EN" />
+        <map value="NL-CM:7.17.4" />
+        <comment value="DateStop (implicit, main mapping is on Condition.abatement[x]:abatementDateTime)" />
+      </mapping>
+    </element>
     <element id="Condition.category">
       <path value="Condition.category" />
       <slicing>
