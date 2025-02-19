@@ -52,7 +52,7 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/note" />
       </type>
     </element>
-    <element id="EpisodeOfCare.extension:comment.value[x]">
+     <element id="EpisodeOfCare.extension:comment.value[x]">
       <path value="EpisodeOfCare.extension.value[x]" />
     </element>
     <element id="EpisodeOfCare.extension:comment.value[x].text">
@@ -76,7 +76,7 @@
     </element>
     <element id="EpisodeOfCare.status">
       <path value="EpisodeOfCare.status" />
-      <definition value="This element is implictly mapped to the zib concepts NL-CM:16.6.2 (StartDate) and NL-CM:16.6.3 (EndDate). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;* When StartDate is in the future, `.status` will usually be set to _planned_.&#xD;&#xA;* When StartDate is in the past or absent, and EndDate is absent or in the future, `.status` will usually be set to _active_.&#xD;&#xA;* When EndDate is in the past, `.status` will usually be set to _finished_.&#xD;&#xA;* When a system cannot infer the status based on StartDate and EndDate, `.status` will be set to _active_." />
+      <definition value="This element is implictly mapped to the zib concepts NL-CM:16.6.2 (StartDate) and NL-CM:16.6.3 (EndDate). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;* When StartDate is in the future, `.status` will usually be set to _planned_.&#xD;&#xA;* When StartDate is absent or in the past, and EndDate is absent or in the future, `.status` will usually be set to _active_.&#xD;&#xA;* When EndDate is in the past, `.status` will usually be set to _finished_.&#xD;&#xA;* When a system is unable to infer the status from the StartDate and EndDate, `.status` will be set to _active_." />
       <mapping>
         <identity value="zib-episodeofcare-v1.0-2024EN" />
         <map value="NL-CM:16.6.2" />
