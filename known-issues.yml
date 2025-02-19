@@ -522,6 +522,12 @@ nl-core-HealthcareProvider-Organization-*:
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
         reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
 
+nl-core-*HealthProfessional-PractitionerRole-*:
+  ignored issues:
+    PractitionerRole.specialty[*].coding[*].system:
+      - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
+        reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
+
 nl-core-O2Saturation-*:
   ignored issues:
     Observation.code:
@@ -541,6 +547,8 @@ nl-core-*Problem-*:
     Condition.code:
       - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icd-10-nl| was not found
         reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icpc-1-nl| was not found
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
       - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.120.5.1| was not found
         reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
       - message: None of the codings provided are in the value set 'ProbleemNaamCodelijst'
@@ -552,6 +560,12 @@ nl-core-*Problem-*:
         reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.120.5.1' could not be found, so the code cannot be validated
         reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
+
+nl-core-SNAQrcScore-*:
+  ignored issues:
+    Observation.component[*].code.coding[*].display:
+      - message: No valid Display Names found for urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1#4029008 in the language en
+        reason: A valid Dutch display value is used instead of an English one.
 
 zib-BloodPressure.AnatomicalLocation-BodyStructure:
   ignored issues:
