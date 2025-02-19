@@ -106,6 +106,12 @@ zib-BodyWeight:
       - cardinality: 1..1 instead of 0..1
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
+zib-CareTeam:
+  zib deviations:
+    CareTeam.participant:healthcareProfessional.member:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of each CareTeamMember option is defined by the cardinality of the slices on participant and thus the cardinality requirements of the zib are honored. Because .member is required to discriminate the slices, its cardinality is 1..1.
+
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
     ContactPoint.system:
@@ -443,6 +449,12 @@ nl-core-*:
     "*.telecom[*].extension[*].value.ofType(CodeableConcept).coding[*].display":
       - message: Wrong Display Name 'Emergencycontact' for http://terminology.hl7.org/CodeSystem/v3-AddressUse#EC. Valid display is 'emergency contact' (en) (for the language(s) 'en')
         reason: This core display value is redefined by the ValueSet, but this isn't properly recognized by the validator.
+    Condition.code:
+      - message: None of the codings provided are in the value set 'ProbleemNaamCodelijst'
+        reason: This ValueSet contains two SNOMED refsets. The terminology servers are unable to determine if a code is part of this refset.
+    Condition.code.coding[*].system:
+      - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icd-10-nl' could not be found, so the code cannot be validated
+        reason: The CodeSystem is unknown for the terminology server, hence the code cannot be validated.
     Observation:
       - message: "Best Practice Recommendation: In general, all observations should have a performer"
         reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
@@ -552,6 +564,12 @@ zib-BloodPressure.AnatomicalLocation-BodyStructure:
         reason: The definition is defined on the datatype profile and is not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and is not repeated in the differential.
+
+zib-CareTeam:
+  ignored issues:
+    CareTeam.participant:*.member:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice"
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
