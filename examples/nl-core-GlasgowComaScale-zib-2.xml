@@ -1,0 +1,119 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="nl-core-GlasgowComaScale-zib-2"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-GlasgowComaScale"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption>
+        <tbody>
+          <tr>
+            <th>Bepalingdatum/tijd</th>
+            <td>11:34:00, 7 februari 2013</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <th>Waarde</th>
+          </tr>
+          <tr>
+            <td>
+              <span title="Glasgow coma scale (35088-4 - LOINC)">Glasgow coma scale</span>
+            </td>
+            <td/>
+          </tr>
+          <tr>
+            <td>
+              <span title="score op openen van ogen binnen glasgowcomaschaal (281395000 - SNOMED CT)">score op openen van ogen binnen glasgowcomaschaal</span>
+            </td>
+            <td>
+              <span title="Spontaan (E4 - 2.16.840.1.113883.2.4.3.11.60.40.4.2.1)">Spontaan</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="score op motorische respons binnen glasgowcomaschaal (281396004 - SNOMED CT)">score op motorische respons binnen glasgowcomaschaal</span>
+            </td>
+            <td>
+              <span title="Terugtrekken (M4 - 2.16.840.1.113883.2.4.3.11.60.40.4.2.2)">Terugtrekken</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="verbale score binnen glasgowcomaschaal (281397008 - SNOMED CT)">verbale score binnen glasgowcomaschaal</span>
+            </td>
+            <td>
+              <span title="Not applicable (NA - http://terminology.hl7.org/CodeSystem/v3-NullFlavor)">Not applicable</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="35088-4"/>
+      <display value="Glasgow coma scale"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </subject>
+  <effectiveDateTime value="2013-02-07T11:34:00+01:00"/>
+  <note>
+    <text value="Patiënt is doof"/>
+  </note>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="281395000"/>
+        <display value="score op openen van ogen binnen glasgowcomaschaal"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.1"/>
+        <code value="E4"/>
+        <display value="Spontaan"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="281396004"/>
+        <display value="score op motorische respons binnen glasgowcomaschaal"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.2"/>
+        <code value="M4"/>
+        <display value="Terugtrekken"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="281397008"/>
+        <display value="verbale score binnen glasgowcomaschaal"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+        <code value="NA"/>
+        <display value="Not applicable"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>
