@@ -76,7 +76,7 @@
     </element>
     <element id="EpisodeOfCare.status">
       <path value="EpisodeOfCare.status" />
-      <definition value="Sending systems that don't record an explicit status can use the following guidance to infer a value from the zib:&#xD;&#xA;&#xD;&#xA;* No dates known:&#xD;&#xA;    * default value: _active_&#xD;&#xA;&#xD;&#xA;* StartDate present:&#xD;&#xA;    * and StartDate in the future: _planned_ &#xD;&#xA;    * and StartDate in the past:&#xD;&#xA;      * EndDate in the future or absent: _active_&#xD;&#xA;      * EndDate in the past: _finished_&#xD;&#xA;&#xD;&#xA;* StartDate absent:&#xD;&#xA;  * and EndDate in the future: _active_&#xD;&#xA;  * and EnDate in the past: _finished_" />
+      <definition value="This element is implictly mapped to the zib concepts NL-CM:16.6.2 (StartDate) and NL-CM:16.6.3 (EndDate). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;* When StartDate is in the future, `.status` will usually be set to _planned_.&#xD;&#xA;* When StartDate is absent or in the past, and EndDate is absent or in the future, `.status` will usually be set to _active_.&#xD;&#xA;* When EndDate is in the past, `.status` will usually be set to _finished_.&#xD;&#xA;* When a system is unable to infer the status from the StartDate and EndDate, `.status` will be set to _active_." />
       <mapping>
         <identity value="zib-episodeofcare-v1.0-2024EN" />
         <map value="NL-CM:16.6.2" />
