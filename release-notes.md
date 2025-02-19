@@ -33,9 +33,9 @@
 
 ## AddressInformation (zib-AddressInformation, nl-core-AddressInformation)
 * `.line.extension:houseNumberLetter-houseNumberAddition.value[x]` ; textual ; Moved guidance for HouseNumberLetter and HouseNumberAddition from `.definition` to `.comment`, added zib concept definitions to `.definition`. ; ZIBFHIR-142
-* `.line.extension:houseNumberIndication.value[x]` ; textual ; Added guidance for HouseNumberIndication. ; ZIB-2218
-* `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218
-* `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218
+* `.line.extension:houseNumberIndication.value[x]` ; textual ; Added guidance for HouseNumberIndication. ; ZIB-2218, ZIB-2549
+* `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218, ZIB-2549
+* `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218, ZIB-2549
 
 ## AnatomicalLocation 
 ### zib-AnatomicalLocation, nl-core-AnatomicalLocation
@@ -55,8 +55,8 @@
 * `.bodySite` ; terminology ; Changed value set from MeetLocatieCodelijst to LocatieCodelijsten. ; ZIBFHIR-192
 * `.bodySite` ; terminology ; Added MeetLocatieCodelijst as minimum allowable value set. ; ZIBFHIR-192
 * `.method` ; terminology ; Changed codes in MeetmethodeCodelijst. ; ZIB-2036
-* `.component:diastolicEndpoint.value[x]` ; terminology ; Changed codes in DiastolischEindpuntCodelijst. ; ZIB-2218
-* `.component:cuffType.value[x]` ; terminology ; Changed codes in ManchetTypeCodelijst. ; ZIB-2218
+* `.component:diastolicEndpoint.value[x]` ; terminology ; Changed codes in DiastolischEindpuntCodelijst. ; ZIB-2218, ZIB-2549
+* `.component:cuffType.value[x]` ; terminology ; Changed codes in ManchetTypeCodelijst. ; ZIB-2218, ZIB-2549
 
 ### zib-BloodPressure.AnatomicalLocation-BodyStructure, nl-core-BloodPressure.AnatomicalLocation-BodyStructure
 * A new profile that applies zib BloodPressure constraints to the Location concept within AnatomicalLocation (ZIB-1731).
@@ -160,7 +160,7 @@
 
 ### zib-HealthcareProvider-Organization, nl-core-HealthcareProvider-Organization
 * `.type:organizationType` ; terminology ; Changed codes in OrganisatieTypeCodelijst. ; ZIB-1559, ZIB-1927
-* `.type:departmentSpecialty` ; terminology ; Changed codes in AfdelingSpecialismeCodelijst. ; ZIB-2218
+* `.type:departmentSpecialty` ; terminology ; Changed codes in AfdelingSpecialismeCodelijst. ; ZIB-2218, ZIB-2549
 * `.type:departmentSpecialty` ; textual ; Changed definition of DepartmentSpecialty. ; ZIB-1665
 
 ## HealthProfessional 
@@ -169,7 +169,7 @@
 * `.gender` ; textual ; Changed definition of Gender. ; ZIB-1256, ZIB-1368
 
 ### zib-HealthProfessional-PractitionerRole, nl-core-HealthProfessional-PractitionerRole
-* `.specialty:specialty` ; terminology ; Changed codes in SpecialismeCodelijsten (SpecialismeAGBCodelijst and SpecialismeUZICodelijst). ; ZIB-2218
+* `.specialty:specialty` ; terminology ; Changed codes in SpecialismeCodelijsten (SpecialismeAGBCodelijst and SpecialismeUZICodelijst). ; ZIB-2218, ZIB-2549
 
 ## IllnessPerception 
 ### zib-IllnessPerception, nl-core-IllnessPerception 
@@ -187,13 +187,13 @@
 ## LanguageProficiency (zib-Patient, nl-core-Patient)
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877
 * `.communication.extension:comment` ; extension ; Replaced extension ExtComment with ExtLanguageProficiencyComment. ; ZIBFHIR-97
-* `.communication.language` ; terminology ; Changed codes in CommunicatieTaalCodelijst. ; ZIB-2218
+* `.communication.language` ; terminology ; Changed codes in CommunicatieTaalCodelijst. ; ZIB-2218, ZIB-2549
 
 ## LifeStance (zib-LifeStance, nl-core-LifeStance)
 * `Observation` ; mapping ; Renamed mapping from LifeStanceRC to LifeStance. ; ZIB-2578
 
 ## MaritalStatus (zib-Patient, nl-core-Patient)
-* `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218
+* `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218, ZIB-2549
 
 ## NameInformation
 ### zib-NameInformation
@@ -216,6 +216,7 @@
 
 ## PainScore (zib-PainScore, nl-core-PainScore)
 * Changed description of PainScore. ; ZIB-1996
+* `.method` ; terminology ; Changed codes in PijnMeetmethodeCodelijst. ; ZIB-2218, ZIB-2549
 
 ## ParticipationInSociety
 ### zib-ParticipationInSociety, nl-core-ParticipationInSociety
@@ -242,13 +243,13 @@
 ### zib-Payer.InsuranceCompany, nl-core-Payer.InsuranceCompany
 * `Coverage` ; mapping ; Moved mapping of InsuranceCompany from `.payor`. ; ZIBFHIR-196
 * `Coverage` ; textual ; Added guidance for Insurance. ; ZIBFHIR-196
-* `.type` ; terminology ; Changed codes in VerzekeringssoortCodelijst. ; ZIB-2218
+* `.type` ; terminology ; Changed codes in VerzekeringssoortCodelijst. ; ZIB-2218, ZIB-2549
 
 ### zib-Payer.PayerPerson, nl-core-Payer.PayerPerson
 * `Coverage` ; mapping ; Moved mapping of PayerPerson from `.payor`. ; ZIBFHIR-196
 
 ## Problem (zib-Problem, nl-core-Problem)
-* `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-1575, ZIB-2087, ZIB-2218
+* `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-1575, ZIB-2087, ZIB-2218, ZIB-2549
 * `.code.text` ; mapping ; Moved mapping of FurtherSpecificationProblemName from `.code.extension:furtherSpecificationProblemName.value[x]`. ; ZIBFHIR-145
 * `.bodySite` ; cardinality ; Changed max cardinality from 1 to *. ; ZIB-1433
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
