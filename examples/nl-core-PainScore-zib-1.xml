@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="nl-core-PainScore-01"/>
+  <id value="nl-core-PainScore-zib-1"/>
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PainScore"/>
   </meta>
