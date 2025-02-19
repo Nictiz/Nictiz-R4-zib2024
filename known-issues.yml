@@ -449,12 +449,6 @@ nl-core-*:
     "*.telecom[*].extension[*].value.ofType(CodeableConcept).coding[*].display":
       - message: Wrong Display Name 'Emergencycontact' for http://terminology.hl7.org/CodeSystem/v3-AddressUse#EC. Valid display is 'emergency contact' (en) (for the language(s) 'en')
         reason: This core display value is redefined by the ValueSet, but this isn't properly recognized by the validator.
-    Condition.code:
-      - message: None of the codings provided are in the value set 'ProbleemNaamCodelijst'
-        reason: This ValueSet contains two SNOMED refsets. The terminology servers are unable to determine if a code is part of this refset.
-    Condition.code.coding[*].system:
-      - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icd-10-nl' could not be found, so the code cannot be validated
-        reason: The CodeSystem is unknown for the terminology server, hence the code cannot be validated.
     Observation:
       - message: "Best Practice Recommendation: In general, all observations should have a performer"
         reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
@@ -528,6 +522,12 @@ nl-core-HealthcareProvider-Organization-*:
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
         reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
 
+nl-core-*HealthProfessional-PractitionerRole-*:
+  ignored issues:
+    PractitionerRole.specialty[*].coding[*].system:
+      - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
+        reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
+
 nl-core-O2Saturation-*:
   ignored issues:
     Observation.code:
@@ -542,18 +542,30 @@ nl-core-O2Saturation-*:
       - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
         reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
 
-nl-core-Problem-*:
+nl-core-*Problem-*:
   ignored issues:
     Condition.code:
       - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icd-10-nl| was not found
         reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icpc-1-nl| was not found
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
       - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.120.5.1| was not found
         reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
+      - message: None of the codings provided are in the value set 'ProbleemNaamCodelijst'
+        reason: This ValueSet contains two SNOMED refsets. The terminology servers are unable to determine if a code is part of this refset.
     Condition.code.coding[*].system:
       - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icd-10-nl' could not be found, so the code cannot be validated
         reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icpc-1-nl' could not be found, so the code cannot be validated
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.120.5.1' could not be found, so the code cannot be validated
         reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
+
+nl-core-SNAQrcScore-*:
+  ignored issues:
+    Observation.component[*].code.coding[*].display:
+      - message: No valid Display Names found for urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1#4029008 in the language en
+        reason: A valid Dutch display value is used instead of an English one.
 
 zib-BloodPressure.AnatomicalLocation-BodyStructure:
   ignored issues:
