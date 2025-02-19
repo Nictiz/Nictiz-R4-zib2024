@@ -215,7 +215,7 @@
 * `.bodySite` ; mapping ; Added mapping of MeasuringLocation. ; ZIB-1217
 
 ## PainScore (zib-PainScore, nl-core-PainScore)
-* No significant changes.
+* Changed description of PainScore. ; ZIB-1996
 
 ## ParticipationInSociety
 ### zib-ParticipationInSociety, nl-core-ParticipationInSociety
