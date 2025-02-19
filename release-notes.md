@@ -130,6 +130,9 @@
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
 
+## EpisodeOfCare (zib-EpisodeOfCare, nl-core-EpisodeOfCare)
+* `.extension:comment` ; extension ; Replaced Comment for Note. ; ZIBFHIR-97
+
 ## FLACCpainScale (zib-FLACCpainScale, nl-core-FLACCpainScale)
 * No significant changes.
 
