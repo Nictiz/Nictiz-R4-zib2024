@@ -214,7 +214,7 @@
 * `.effective[x]:effectiveDateTime` ; mapping ; Renamed mapping from O2SaturationDateTime to SpO2SaturationDateTime. ; ZIB-1217
 * `.bodySite` ; mapping ; Added mapping of MeasuringLocation. ; ZIB-1217
 
-## PainScore (zib-PainScore, nl-core PainScore)
+## PainScore (zib-PainScore, nl-core-PainScore)
 * No significant changes.
 
 ## ParticipationInSociety
