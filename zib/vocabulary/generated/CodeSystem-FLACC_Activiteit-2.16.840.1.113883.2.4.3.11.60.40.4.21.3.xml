@@ -63,6 +63,15 @@
          </use>
          <value value="Lying quiet"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Ligt rustig"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -84,6 +93,15 @@
          </use>
          <value value="Squirming"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Kronkelt"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -104,6 +122,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Arched"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Overstrekt zich"/>
       </designation>
       <property>
          <code value="status"/>
