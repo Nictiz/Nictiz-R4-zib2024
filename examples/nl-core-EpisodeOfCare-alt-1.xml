@@ -1,0 +1,38 @@
+<EpisodeOfCare xmlns="http://hl7.org/fhir">
+  <id value="nl-core-EpisodeOfCare-alt-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-EpisodeOfCare"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Zorgepisode. Patiënt: Patient, Peter Jan (PeJe) Jansen. Status: voltooid</caption>
+        <tbody>
+          <tr>
+            <th>Periode</th>
+            <td>5 april 2014 - 20 juni 2014</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/note">
+    <valueAnnotation>
+      <text value="niet te strak instellen op insuline"/>
+    </valueAnnotation>
+  </extension>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName">
+    <valueString value="slecht instelbaar DM, cave hypo's"/>
+  </extension>
+  <status value="finished"/>
+  <patient>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </patient>
+  <period>
+    <start value="2014-04-05"/>
+    <end value="2014-06-20"/>
+  </period>
+</EpisodeOfCare>
