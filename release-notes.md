@@ -120,6 +120,9 @@
 ### zib-DevelopmentChild.ToiletTrainednessUrine, nl-core-DevelopmentChild.ToiletTrainednessUrine
 * `.code` ; terminology ; Pattern changed from http://snomed.info/sct#275819003 to http://snomed.info/sct#129009001. ; ZIB-2271
 
+## DOSScore (zib-DOSScore, nl-core-DOSScore)
+* No significant changes.
+
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
 

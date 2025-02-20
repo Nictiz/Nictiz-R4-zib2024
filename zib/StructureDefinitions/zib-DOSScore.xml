@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="The Delirium Observation Screening Scale is a tool to determine whether a patient has delirium. The DOSS includes 13 observations of behavior (verbal and non-verbal) which represent the symptoms of a delirium. These observations can be performed during regular contact with the patient." />
-  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) DOSScore v1.0 (2020)](https://zibs.nl/wiki/DOSScore-v1.2(2024EN))." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) DOSScore v1.2 (2024)](https://zibs.nl/wiki/DOSScore-v1.2(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -43,7 +43,6 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <comment value="The code to identify this concept (SNOMED 160591000146109) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
@@ -135,7 +134,6 @@
     </element>
     <element id="Observation.component:dozesOff.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007006 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
