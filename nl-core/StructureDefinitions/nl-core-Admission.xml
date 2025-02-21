@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A contact is any interaction, regardless of the situation, between a patient and the healthcare provider, in which the healthcare provider has primary responsibility for diagnosing, evaluating and treating the patient’s condition and informing the patient. These can be visits, appointments or non face-to-face interactions.&#xD;&#xA;&#xD;&#xA;Contacts can be visits to the general practitioner or other practices, home visits, admissions (in hospitals, nursing homes or care homes, psychiatric institutions or convalescent homes) or other relevant contacts. This includes past and future contacts." />
+  <description value="The stay of a patient or client in a healthcare facility in the context of a (partial) admission or emergency room visit. A (partial) admission is the entire or partial stay of a patient or client in a department equipped for nursing in a health care institution, for example, an inpatient ward, day care unit, emergency care, or observatory. This HCIM therefore applies to a whole admission, part of an admission, or emergency room visit in both past and present." />
   <purpose value="A derived profile from [zib-Admission](http://nictiz.nl/fhir/StructureDefinition/zib-Admission) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
@@ -53,11 +53,10 @@
       <path value="Encounter.participant" />
       <sliceName value="responsibleHealthProfessional" />
     </element>
-    <element id="Encounter.participant.individual">
+    <element id="Encounter.participant:responsibleHealthProfessional.individual">
       <path value="Encounter.participant.individual" />
       <short value="Persons involved in the encounter other than the patient" />
       <definition value="Persons involved in the encounter other than the patient." />
-      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
