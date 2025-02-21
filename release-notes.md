@@ -37,6 +37,9 @@
 * `.line.extension:houseNumberIndication.value[x]` ; constraint ; Removed houseNumberIndication for HouseNumberIndication. ; ZIB-2218, ZIB-2549
 * `.country.extension:countryCode.value[x]` ; terminology ; Changed codes in LandCodelijsten (LandGBACodelijst and LandISOCodelijst). ; ZIB-2218, ZIB-2549
 
+## Admission (zib-Admission, nl-core-Admission)
+* New profile of zib Admission on resource Encounter.
+
 ## AnatomicalLocation 
 ### zib-AnatomicalLocation, nl-core-AnatomicalLocation
 * `CodeableConcept` ; textual ; Added guidance for Location and Laterality. ; ZIBFHIR-113

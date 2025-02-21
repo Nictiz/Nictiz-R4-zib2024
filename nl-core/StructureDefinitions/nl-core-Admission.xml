@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Admission" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Admission" />
+  <name value="NlcoreAdmission" />
+  <title value="nl core Admission" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="The stay of a patient or client in a healthcare facility in the context of a (partial) admission or emergency room visit. A (partial) admission is the entire or partial stay of a patient or client in a department equipped for nursing in a health care institution, for example, an inpatient ward, day care unit, emergency care, or observatory. This HCIM therefore applies to a whole admission, part of an admission, or emergency room visit in both past and present." />
+  <purpose value="A derived profile from [zib-Admission](http://nictiz.nl/fhir/StructureDefinition/zib-Admission) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-admission-v2.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/Admission-v2.0(2024EN)" />
+    <name value="zib Admission-v2.0(2024EN)" />
+  </mapping>
+  <mapping>
+    <identity value="zib-healthprofessional-v4.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v4.0(2024EN)" />
+    <name value="zib HealthProfessional-v4.0(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Admission" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <alias value="nl-core-Admission" />
+    </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+    </element>
+    <element id="Encounter.participant:responsibleHealthProfessional">
+      <path value="Encounter.participant" />
+      <sliceName value="responsibleHealthProfessional" />
+    </element>
+    <element id="Encounter.participant:responsibleHealthProfessional.individual">
+      <path value="Encounter.participant.individual" />
+      <short value="Persons involved in the encounter other than the patient" />
+      <definition value="Persons involved in the encounter other than the patient." />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+      </type>
+    </element>
+    <element id="Encounter.reasonReference:problem">
+      <path value="Encounter.reasonReference" />
+      <sliceName value="problem" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem" />
+      </type>
+    </element>
+    <element id="Encounter.location.location">
+      <path value="Encounter.location.location" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

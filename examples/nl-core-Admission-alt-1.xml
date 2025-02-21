@@ -1,0 +1,127 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Admission-alt-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Admission"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Contact. Subject: Patient, Peter Jan (PeJe) Jansen. Status: voltooid</caption>
+        <tbody>
+          <tr>
+            <th>Type contact</th>
+            <td>
+              <div>
+                <span title="Gehele opname (TA - 2.16.840.1.113883.2.4.3.11.60.40.4.29.1)">Gehele opname</span>
+              </div>
+              <span title="Verlenen van 'medium care' aan patiënt (180141000146109 - SNOMED CT)">Verlenen van 'medium care' aan patiënt</span>, <span title="Observatie (225308005 - SNOMED CT)">Observatie</span>
+            </td>
+          </tr>
+          <tr>
+            <th>Periode</th>
+            <td>13 januari 2024 - 29 januari 2024</td>
+          </tr>
+          <tr>
+            <th>Participant</th>
+            <td>
+              <div>
+                <span title="Responsible Party (RESP - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Responsible Party</span> - Health professional (role), J.H.R. Peters</div>
+            </td>
+          </tr>
+          <tr>
+            <th>Locatie</th>
+            <td>
+              <div>Healthcare provider (location), Leids Universitair Medisch Centrum</div>
+            </td>
+          </tr>
+          <tr>
+            <th>Opnamegegevens</th>
+            <td>
+              <ul>
+                <li>Opname vanuit: <span title="Ziekenhuis (22232009 - SNOMED CT)">Ziekenhuis</span>
+                </li>
+                <li>Ontslagwijze: <span title="Revalidatieziekenhuis (80522000 - SNOMED CT)">Revalidatieziekenhuis</span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <status value="finished"/>
+  <class>
+    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.29.1"/>
+    <code value="TA"/>
+    <display value="Gehele opname"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="180141000146109"/>
+      <display value="Verlenen van 'medium care' aan patiënt"/>
+    </coding>
+  </type>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="225308005"/>
+      <display value="Observatie"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </subject>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="RESP"/>
+        <display value="Responsible Party"/>
+      </coding>
+    </type>
+    <individual>
+      <reference value="PractitionerRole/nl-core-Admission-alt-1-HealthProfessional-PractitionerRole-1"/>
+      <type value="PractitionerRole"/>
+      <display value="Health professional (role), J.H.R. Peters"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2024-01-13"/>
+    <end value="2024-01-29"/>
+  </period>
+  <reasonCode>
+    <text value="Mogelijke neurovasculaire schade."/>
+  </reasonCode>
+  <reasonReference>
+    <reference value="Condition/nl-core-Admission-alt-1-Problem-1"/>
+    <type value="Condition"/>
+    <display value="Problem, problem name: Fracture of shoulder and upper arm"/>
+  </reasonReference>
+  <hospitalization>
+    <admitSource>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="22232009"/>
+        <display value="Ziekenhuis"/>
+      </coding>
+    </admitSource>
+    <dischargeDisposition>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="80522000"/>
+        <display value="Revalidatieziekenhuis"/>
+      </coding>
+    </dischargeDisposition>
+  </hospitalization>
+  <location>
+    <location>
+      <reference value="Location/nl-core-Admission-alt-1-HealthcareProvider-1"/>
+      <type value="Location"/>
+      <display value="Healthcare provider (location), Leids Universitair Medisch Centrum"/>
+    </location>
+  </location>
+</Encounter>
