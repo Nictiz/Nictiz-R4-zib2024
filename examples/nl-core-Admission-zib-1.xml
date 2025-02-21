@@ -23,13 +23,10 @@
             <td>Vanaf 16 mei 2022</td>
           </tr>
           <tr>
-            <th>Reden</th>
-            <td>Problem, problem name: gebroken been</td>
-          </tr>
-          <tr>
             <th>Participant</th>
             <td>
-              <div>Health professional (role), J.H.R. Peters, Neuroloog</div>
+              <div>
+                <span title="Responsible Party (RESP - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Responsible Party</span> - Health professional (role), J.H.R. Peters, Universitair Medisch Centrum Groningen</div>
             </td>
           </tr>
           <tr>
@@ -77,10 +74,17 @@
     <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
   </subject>
   <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="RESP"/>
+        <display value="Responsible Party"/>
+      </coding>
+    </type>
     <individual>
-      <reference value="PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1"/>
+      <reference value="PractitionerRole/nl-core-Admission-zib-1-HealthProfessional-PractitionerRole-1"/>
       <type value="PractitionerRole"/>
-      <display value="Health professional (role), J.H.R. Peters, Neuroloog"/>
+      <display value="Health professional (role), J.H.R. Peters, Universitair Medisch Centrum Groningen"/>
     </individual>
   </participant>
   <period>

@@ -23,17 +23,10 @@
             <td>13 januari 2024 - 29 januari 2024</td>
           </tr>
           <tr>
-            <th>Reden</th>
-            <td>
-              <div>Mogelijke neurovasculaire schade.</div>
-              <div>Problem, problem name: Fracture of shoulder and upper arm</div>
-            </td>
-          </tr>
-          <tr>
             <th>Participant</th>
             <td>
               <div>
-                <span title="Attender (ATND - HL7 v3-ParticipationType)">Attender</span> - Health professional (role), J.H.R. Peters</div>
+                <span title="Responsible Party (RESP - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Responsible Party</span> - Health professional (role), J.H.R. Peters</div>
             </td>
           </tr>
           <tr>
@@ -86,8 +79,8 @@
     <type>
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
-        <code value="ATND"/>
-        <display value="Attender"/>
+        <code value="RESP"/>
+        <display value="Responsible Party"/>
       </coding>
     </type>
     <individual>
