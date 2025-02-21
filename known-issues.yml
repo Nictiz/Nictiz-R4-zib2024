@@ -77,13 +77,13 @@ zib-Admission:
         reason: Encounter.class is mandatory in FHIR. The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.
     Encounter.participant:responsibleHealthProfessional.type:
       - cardinality: 1..1 instead of 0..1  
-        reason: There is only one correct type for the responsibleHealthProfessional, but the use of the responsibleHealthProfessional element itself is optional, making the effective cardinality 0..1 as required by the zib.  
+        reason: There is only one correct type for the ResponsibleHealthProfessional, but the responsibleHealthProfessional slice on .participant is optional, making the effective cardinality 0..1 as required by the zib.
     Encounter.type:triggerForAdmission:
       - short: TriggerForAdmission instead of TiggerForAdmission
         reason: The zib concept name "TiggerForAdmission" is an incorrect translation of the Dutch name into English.
     Encounter.reasonCode.text:
       - cardinality: 0..* instead of 0..1
-        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*, effective) is explained by open world modeling. The FHIR element can be used to convey information on other concepts than CommentAdmissionReason. 
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*, effective) is explained by open world modeling. The .reasonCode(.text) element can be used to convey information on other concepts than CommentAdmissionReason.
 
 zib-BloodPressure:
   zib deviations:
@@ -469,6 +469,12 @@ nl-core-*:
         reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
+
+nl-core-Admission-*:
+  ignored issues:
+    Encounter.participant[*].type[*]:
+      - message: None of the codings provided are in the value set 'Participant type' (http://hl7.org/fhir/ValueSet/encounter-participant-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code 'RESP' from the v3 ParticipationType code system is not part of the extensible ValueSet bound here, but is needed to reflect the ResponsibleHealthProfessional concept from the zib.
 
 nl-core-BloodPressure-*:
   ignored issues:
