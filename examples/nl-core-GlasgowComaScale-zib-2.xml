@@ -8,6 +8,11 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
         <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Patiënt is doof</td>
+          </tr>
+        </tfoot>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
@@ -44,7 +49,7 @@
               <span title="verbale score binnen glasgowcomaschaal (281397008 - SNOMED CT)">verbale score binnen glasgowcomaschaal</span>
             </td>
             <td>
-              <span title="Not applicable (NA - http://terminology.hl7.org/CodeSystem/v3-NullFlavor)">Not applicable</span>
+              <span title="Not applicable (NA - HL7 v3-NullFlavor)">Not applicable</span>
             </td>
           </tr>
         </tbody>

@@ -6,7 +6,7 @@
   <text>
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <div>Id 999911120 (BSN), Johanna Petronella Maria van Putten-van der Giessen, Vrouw, 28 april 1994, Meerling, <span title="Married (M - http://terminology.hl7.org/CodeSystem/v3-MaritalStatus)">Married</span>
+      <div>Id 999911120 (BSN), Johanna Petronella Maria van Putten-van der Giessen, Vrouw, 28 april 1994, Meerling, <span title="Married (M - HL7 v3-MaritalStatus)">Married</span>
       </div>
       <div>
         <a href="tel:+31611234567">+31611234567</a> (Tel Privé), <a href="mailto:giesput@myweb.nl">giesput@myweb.nl</a> (E-mail Privé)</div>
@@ -20,7 +20,7 @@
       </div>
       <ul>
         <li>
-          <span title="Other (OTH - http://terminology.hl7.org/CodeSystem/v3-NullFlavor)">Other</span>
+          <span title="Other (OTH - HL7 v3-NullFlavor)">Other</span>
         </li>
       </ul>
     </div>

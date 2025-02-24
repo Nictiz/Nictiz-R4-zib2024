@@ -44,7 +44,7 @@
               <span title="verbale score binnen glasgowcomaschaal (281397008 - SNOMED CT)">verbale score binnen glasgowcomaschaal</span>
             </td>
             <td>
-              <span title="Not applicable (NA - http://terminology.hl7.org/CodeSystem/v3-NullFlavor)">Not applicable</span>
+              <span title="Not applicable (NA - HL7 v3-NullFlavor)">Not applicable</span>
             </td>
           </tr>
           <tr>
@@ -68,7 +68,7 @@
               <span title="medische reden voor excluderen van prestatiemeting (271000124103 - SNOMED CT)">medische reden voor excluderen van prestatiemeting</span>
             </td>
             <td>
-              <span title="other (OTH - http://terminology.hl7.org/CodeSystem/v3-NullFlavor)">other</span>
+              <span title="other (OTH - HL7 v3-NullFlavor)">other</span>
             </td>
           </tr>
         </tbody>

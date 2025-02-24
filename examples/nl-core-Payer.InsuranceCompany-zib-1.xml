@@ -24,12 +24,12 @@
             <td>12345678</td>
           </tr>
           <tr>
-            <th>Betaler</th>
-            <td>Payer organization, Menzis Zorgverzekeraar N.V., UZOVI 3332</td>
-          </tr>
-          <tr>
             <th>begunstigde</th>
             <td>Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen</td>
+          </tr>
+          <tr>
+            <th>Betaler</th>
+            <td>Payer organization, Menzis Zorgverzekeraar N.V., UZOVI 3332</td>
           </tr>
         </tbody>
       </table>

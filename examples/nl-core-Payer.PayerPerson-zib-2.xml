@@ -12,16 +12,16 @@
           <tr>
             <th>Type</th>
             <td>
-              <span title="Pay (pay - http://terminology.hl7.org/CodeSystem/coverage-selfpay)">Pay</span>
+              <span title="Pay (pay - HL7 coverage-selfpay)">Pay</span>
             </td>
-          </tr>
-          <tr>
-            <th>Betaler</th>
-            <td>Payer organization, J.P.M. van Putten</td>
           </tr>
           <tr>
             <th>begunstigde</th>
             <td>Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen</td>
+          </tr>
+          <tr>
+            <th>Betaler</th>
+            <td>Payer organization, J.P.M. van Putten</td>
           </tr>
         </tbody>
       </table>

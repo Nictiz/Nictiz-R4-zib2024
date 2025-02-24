@@ -8,7 +8,22 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
         <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Bezoekt activiteitencentrum 2 maal per week.</td>
+          </tr>
+        </tfoot>
         <tbody>
+          <tr>
+            <th>Onderliggende observaties:</th>
+            <td>
+              <ul>
+                <li>Social network, Heeft veel aanloop van buren</li>
+                <li>Hobby, Nordic walking</li>
+                <li>Work situation, ICT-er</li>
+              </ul>
+            </td>
+          </tr>
           <tr>
             <th>Code</th>
             <th>Waarde</th>

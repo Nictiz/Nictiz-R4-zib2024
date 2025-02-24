@@ -8,10 +8,29 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
         <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Ontwikkeling is afgelopen jaar verbeterd.</td>
+          </tr>
+        </tfoot>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
             <td>26 december 2024</td>
+          </tr>
+          <tr>
+            <th>Onderliggende observaties:</th>
+            <td>
+              <ul>
+                <li>Toilet trainedness urine, Volledige blaascontrole op kinderleeftijd uitsluitend overdag</li>
+                <li>Toilet trainedness feces, Incidenteel ontlastingsverlies op kinderleeftijd</li>
+                <li>Age first menstruation, 13 jaar</li>
+                <li>Development locomotion, In staat om zelfstandig te lopen</li>
+                <li>Development social, In staat om vrienden te maken</li>
+                <li>Development linguistics, Spreekt begrijpelijk voor vreemden</li>
+                <li>Development cognition, In staat om abstract te denken</li>
+              </ul>
+            </td>
           </tr>
           <tr>
             <th>Code</th>

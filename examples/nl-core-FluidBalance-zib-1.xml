@@ -14,6 +14,15 @@
             <td>19 december 2016 00:00:00 - 20 december 2016 00:00:00</td>
           </tr>
           <tr>
+            <th>Onderliggende observaties:</th>
+            <td>
+              <ul>
+                <li>Fluid total in, 1400 ml</li>
+                <li>Fluid total out, 1000 ml</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
             <th>Code</th>
             <th>Waarde</th>
           </tr>
