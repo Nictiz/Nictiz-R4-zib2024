@@ -136,6 +136,9 @@
 * `.extension:copyIndicator` ; extension ; Removed ext-copyIndicator. ; ZIBFHIR-152
 
 ### zib-LaboratoryTestResult.Specimen, nl-core-LaboratoryTestResult.Specimen
+* `.subject` ; mapping ; Removed mapping of SpecimenSource ; ZIB-2509
+* `.receivedTime` ; mapping ; Removed mapping of ReceivedDateTime. ; ZIB-2239
+* `.collection.extension:specimenSource` ; extension ; Added ExtLaboratoryTestResultSpecimenSource for SpecimenSource ; ZIB-2509
 * `.collection.collected[x]:collectedDateTime` ; mapping ; Removed mapping of CollectionDateTime. ; ZIB-2239
 * `.collection.collected[x]:collectedPeriod` ; mapping ; Removed mapping of CollectionPeriod. ; ZIB-2239
 * `.collection.duration` ; mapping ; Removed mapping of CollectionPeriod. ; ZIB-2239
@@ -144,7 +147,7 @@
 * `.collection.bodySite.extension:laterality` ; extension ; Removed ExtAnatomicalLocationLaterality. ; ZIBFHIR-113
 * `.collection.bodySite.extension:morphology` ; extension ; Replaced ExtLaboratoryTestResultSpecimenMorphology with BodyStructureReference for Morphology. ; ZIBFHIR-113
 * `.collection.bodySite.extension:morphology` ; mapping ; Moved mapping of Morphology to `BodyStructure.morphology`. ; ZIBFHIR-113
-* `.receivedTime` ; mapping ; Removed mapping of ReceivedDateTime. ; ZIB-2239
+
 
 ### zib-LaboratoryTestResult.Specimen-BodyStructure, nl-core-LaboratoryTestResult.Specimen-BodyStructure
 * New profile that maps morphology to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
