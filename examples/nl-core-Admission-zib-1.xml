@@ -23,10 +23,14 @@
             <td>Vanaf 16 mei 2022</td>
           </tr>
           <tr>
+            <th>Reden</th>
+            <td>Problem, problem name: gebroken been</td>
+          </tr>
+          <tr>
             <th>Participant</th>
             <td>
               <div>
-                <span title="Responsible Party (RESP - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Responsible Party</span> - Health professional (role), J.H.R. Peters, Universitair Medisch Centrum Groningen</div>
+                <span title="Responsible Party (RESP - HL7 v3-ParticipationType)">Responsible Party</span> - Health professional (role), J.H.R. Peters, Universitair Medisch Centrum Groningen</div>
             </td>
           </tr>
           <tr>

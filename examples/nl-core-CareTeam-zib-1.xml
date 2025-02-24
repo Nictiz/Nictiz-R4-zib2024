@@ -14,17 +14,17 @@
             <td>
               <ul>
                 <li>
-                  <span title="Casemanager (768832004 - SNOMED CT)">Casemanager</span>Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord</li>
+                  <span title="Casemanager (768832004 - SNOMED CT)">Casemanager</span> Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord</li>
                 <li>
-                  <span title="Performer (PRF - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Performer</span>Health professional (role), S. Curie, Medisch specialisten, geriatrie, Parnassia Groep Rotterdam</li>
+                  <span title="Performer (PRF - HL7 v3-ParticipationType)">Performer</span> Health professional (role), S. Curie, Medisch specialisten, geriatrie, Parnassia Groep Rotterdam</li>
                 <li>
-                  <span title="Performer (PRF - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Performer</span>Health professional (role), R.M. van Heck, Medisch specialisten, cardiologie, Erasmus MC</li>
+                  <span title="Performer (PRF - HL7 v3-ParticipationType)">Performer</span> Health professional (role), R.M. van Heck, Medisch specialisten, cardiologie, Erasmus MC</li>
                 <li>
-                  <span title="Performer (PRF - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Performer</span>Health professional (role), A. Schele, Medisch specialisten, inwendige geneeskunde, Franciscus Gasthuis &amp; Vlietland</li>
+                  <span title="Performer (PRF - HL7 v3-ParticipationType)">Performer</span> Health professional (role), A. Schele, Medisch specialisten, inwendige geneeskunde, Franciscus Gasthuis &amp; Vlietland</li>
                 <li>
-                  <span title="Consultant (CON - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Consultant</span>Health professional (role), G.F. de Haan, Apothekers, Apotheek Bergweg</li>
+                  <span title="Consultant (CON - HL7 v3-ParticipationType)">Consultant</span> Health professional (role), G.F. de Haan, Apothekers, Apotheek Bergweg</li>
                 <li>
-                  <span title="Other (OTH - http://terminology.hl7.org/CodeSystem/v3-NullFlavor)">Other</span>Health professional (role), K. van der Linden, Humanitas Thuiszorg</li>
+                  <span title="Other (OTH - HL7 v3-NullFlavor)">Other</span> Health professional (role), K. van der Linden, Humanitas Thuiszorg</li>
               </ul>
             </td>
           </tr>

@@ -8,10 +8,24 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
         <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Er is significant meer vocht opgenomen dan verloren.</td>
+          </tr>
+        </tfoot>
         <tbody>
           <tr>
             <th>Bepalingdatum/tijd</th>
             <td>1 november 2024 - 3 november 2024</td>
+          </tr>
+          <tr>
+            <th>Onderliggende observaties:</th>
+            <td>
+              <ul>
+                <li>Fluid total in, 1700 ml</li>
+                <li>Fluid total out, 1250 ml</li>
+              </ul>
+            </td>
           </tr>
           <tr>
             <th>Code</th>
