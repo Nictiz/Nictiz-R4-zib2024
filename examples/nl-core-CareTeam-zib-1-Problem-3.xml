@@ -1,0 +1,57 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-CareTeam-zib-1-Problem-3"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Complicatie (116223007 - SNOMED CT)">Complicatie</span>, Status: <span title="Active (active - HL7 condition-clinical)">Active</span>
+        </caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Huiduitslag met veel jeuk door medicatie</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th>Code</th>
+            <td>
+              <span title="Geneesmiddel-interacties (79899007 - SNOMED CT)">Geneesmiddel-interacties</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="116223007"/>
+      <display value="Complicatie"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="79899007"/>
+      <display value="Geneesmiddel-interacties"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </subject>
+  <note>
+    <text value="Huiduitslag met veel jeuk door medicatie"/>
+  </note>
+</Condition>
