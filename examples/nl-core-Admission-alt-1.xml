@@ -26,7 +26,7 @@
             <th>Reden</th>
             <td>
               <div>Mogelijke neurovasculaire schade.</div>
-              <div>Problem, problem name: Fracture of shoulder and upper arm</div>
+              <div>Problem, problem name: fractuur van schouder en bovenarm</div>
             </td>
           </tr>
           <tr>
@@ -106,7 +106,7 @@
   <reasonReference>
     <reference value="Condition/nl-core-Admission-alt-1-Problem-1"/>
     <type value="Condition"/>
-    <display value="Problem, problem name: Fracture of shoulder and upper arm"/>
+    <display value="Problem, problem name: fractuur van schouder en bovenarm"/>
   </reasonReference>
   <hospitalization>
     <admitSource>
