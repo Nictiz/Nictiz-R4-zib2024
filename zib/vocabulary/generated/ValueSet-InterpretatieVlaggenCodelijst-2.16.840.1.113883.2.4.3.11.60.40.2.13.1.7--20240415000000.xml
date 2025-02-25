@@ -27,7 +27,7 @@
    <version value="2024-04-15T00:00:00"/>
    <name value="InterpretatieVlaggenCodelijst"/>
    <title value="InterpretatieVlaggenCodelijst"/>
-   <status value="draft"/>
+   <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
@@ -62,7 +62,7 @@
                <valueString value="Boven referentiewaarde"/>
             </extension>
             <code value="281302008"/>
-            <display value="Above reference range"/>
+            <display value="Boven referentiebereik"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -87,7 +87,7 @@
                <valueString value="Onder referentiewaarde"/>
             </extension>
             <code value="281300000"/>
-            <display value="Below reference range"/>
+            <display value="Onder referentiebereik"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -112,7 +112,7 @@
                <valueString value="Intermediair"/>
             </extension>
             <code value="11896004"/>
-            <display value="Intermediate"/>
+            <display value="Intermediair"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -137,7 +137,7 @@
                <valueString value="Resistent"/>
             </extension>
             <code value="30714006"/>
-            <display value="Resistant"/>
+            <display value="Resistent"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -162,7 +162,7 @@
                <valueString value="Sensitief"/>
             </extension>
             <code value="131196009"/>
-            <display value="Susceptible"/>
+            <display value="Gevoelig"/>
             <designation>
                <language value="en-US"/>
                <use>

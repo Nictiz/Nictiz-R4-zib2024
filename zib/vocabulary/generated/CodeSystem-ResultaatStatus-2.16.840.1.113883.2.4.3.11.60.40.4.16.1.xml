@@ -60,6 +60,15 @@
          </use>
          <value value="Appended"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Aangevuld"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -77,6 +86,15 @@
          </use>
          <value value="Corrected"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Gecorrigeerd"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -93,6 +111,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Final"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Definitief"/>
       </designation>
       <property>
          <code value="status"/>
@@ -112,6 +139,15 @@
          </use>
          <value value="Pending"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Lopend"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -128,6 +164,15 @@
             <display value="Synonym"/>
          </use>
          <value value="Preliminary"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Voorlopig"/>
       </designation>
       <property>
          <code value="status"/>

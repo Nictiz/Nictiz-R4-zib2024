@@ -27,7 +27,7 @@
    <version value="2024-04-15T00:00:00"/>
    <name value="ResultaatTypeCodelijst"/>
    <title value="ResultaatTypeCodelijst"/>
-   <status value="draft"/>
+   <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
@@ -62,7 +62,7 @@
                <valueString value="Hematologie"/>
             </extension>
             <code value="252275004"/>
-            <display value="Hematology"/>
+            <display value="Hematologisch onderzoek"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -87,7 +87,7 @@
                <valueString value="Klinische chemie"/>
             </extension>
             <code value="275711006"/>
-            <display value="Chemistry"/>
+            <display value="Serumtest"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -112,7 +112,7 @@
                <valueString value="Serologie/ immunologie"/>
             </extension>
             <code value="68793005"/>
-            <display value="Serology"/>
+            <display value="Serologisch onderzoek"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -137,7 +137,7 @@
                <valueString value="Virologie"/>
             </extension>
             <code value="395124008"/>
-            <display value="Virology"/>
+            <display value="Virologisch onderzoek"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -162,7 +162,7 @@
                <valueString value="Toxicologie"/>
             </extension>
             <code value="314076009"/>
-            <display value="Toxicology"/>
+            <display value="Toxicologische test"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -187,7 +187,7 @@
                <valueString value="Microbiologie"/>
             </extension>
             <code value="19851009"/>
-            <display value="Microbiology"/>
+            <display value="Microbiologisch onderzoek"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -212,7 +212,7 @@
                <valueString value="Moleculaire genetica"/>
             </extension>
             <code value="405825005"/>
-            <display value="Molecular genetics"/>
+            <display value="Moleculair genetisch onderzoek"/>
             <designation>
                <language value="en-US"/>
                <use>

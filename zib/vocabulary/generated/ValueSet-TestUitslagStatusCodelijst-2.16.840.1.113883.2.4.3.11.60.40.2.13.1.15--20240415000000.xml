@@ -27,7 +27,7 @@
    <version value="2024-04-15T00:00:00"/>
    <name value="TestUitslagStatusCodelijst"/>
    <title value="TestUitslagStatusCodelijst"/>
-   <status value="draft"/>
+   <status value="active"/>
    <experimental value="false"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
@@ -61,7 +61,7 @@
                <valueString value="Uitslag volgt"/>
             </extension>
             <code value="pending"/>
-            <display value="Pending"/>
+            <display value="Lopend"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -86,7 +86,7 @@
                <valueString value="Voorlopig"/>
             </extension>
             <code value="preliminary"/>
-            <display value="Preliminary"/>
+            <display value="Voorlopig"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -111,7 +111,7 @@
                <valueString value="Definitief"/>
             </extension>
             <code value="final"/>
-            <display value="Final"/>
+            <display value="Definitief"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -136,7 +136,7 @@
                <valueString value="Aanvullend"/>
             </extension>
             <code value="appended"/>
-            <display value="Appended"/>
+            <display value="Aangevuld"/>
             <designation>
                <language value="en-US"/>
                <use>
@@ -161,7 +161,7 @@
                <valueString value="Gecorrigeerd"/>
             </extension>
             <code value="corrected"/>
-            <display value="Corrected"/>
+            <display value="Gecorrigeerd"/>
             <designation>
                <language value="en-US"/>
                <use>
