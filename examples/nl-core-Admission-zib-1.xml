@@ -1,0 +1,118 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Admission-zib-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Admission"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Contact. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: is bezig</caption>
+        <tbody>
+          <tr>
+            <th>Type contact</th>
+            <td>
+              <div>
+                <span title="Gehele opname (TA - 2.16.840.1.113883.2.4.3.11.60.40.4.29.1)">Gehele opname</span>
+              </div>
+              <span title="Verlenen van reguliere verpleegkundige zorg (180121000146103 - SNOMED CT)">Verlenen van reguliere verpleegkundige zorg</span>, <span title="Verrichting (71388002 - SNOMED CT)">Verrichting</span>
+            </td>
+          </tr>
+          <tr>
+            <th>Periode</th>
+            <td>Vanaf 16 mei 2022</td>
+          </tr>
+          <tr>
+            <th>Reden</th>
+            <td>Problem, problem name: gebroken been</td>
+          </tr>
+          <tr>
+            <th>Participant</th>
+            <td>
+              <div>
+                <span title="Responsible Party (RESP - HL7 v3-ParticipationType)">Responsible Party</span> - Health professional (role), J.H.R. Peters, Universitair Medisch Centrum Groningen</div>
+            </td>
+          </tr>
+          <tr>
+            <th>Locatie</th>
+            <td>
+              <div>Healthcare provider (location), Universitair Medisch Centrum Groningen</div>
+            </td>
+          </tr>
+          <tr>
+            <th>Opnamegegevens</th>
+            <td>
+              <ul>
+                <li>Opname vanuit: <span title="Thuis (264362003 - SNOMED CT)">Thuis</span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <status value="in-progress"/>
+  <class>
+    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.29.1"/>
+    <code value="TA"/>
+    <display value="Gehele opname"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="180121000146103"/>
+      <display value="Verlenen van reguliere verpleegkundige zorg"/>
+    </coding>
+  </type>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="71388002"/>
+      <display value="Verrichting"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </subject>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="RESP"/>
+        <display value="Responsible Party"/>
+      </coding>
+    </type>
+    <individual>
+      <reference value="PractitionerRole/nl-core-Admission-zib-1-HealthProfessional-PractitionerRole-1"/>
+      <type value="PractitionerRole"/>
+      <display value="Health professional (role), J.H.R. Peters, Universitair Medisch Centrum Groningen"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2022-05-16"/>
+  </period>
+  <reasonReference>
+    <reference value="Condition/nl-core-Admission-zib-1-Problem-1"/>
+    <type value="Condition"/>
+    <display value="Problem, problem name: gebroken been"/>
+  </reasonReference>
+  <hospitalization>
+    <admitSource>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="264362003"/>
+        <display value="Thuis"/>
+      </coding>
+    </admitSource>
+  </hospitalization>
+  <location>
+    <location>
+      <reference value="Location/nl-core-Admission-zib-1-HealthcareProvider-1"/>
+      <type value="Location"/>
+      <display value="Healthcare provider (location), Universitair Medisch Centrum Groningen"/>
+    </location>
+  </location>
+</Encounter>
