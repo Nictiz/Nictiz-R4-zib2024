@@ -10,6 +10,15 @@
         <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption>
         <tbody>
           <tr>
+            <th>Onderliggende observaties:</th>
+            <td>
+              <ul>
+                <li>Toilet use, In staat om zelfstandig naar toilet te gaan</li>
+                <li>Menstrual care, Hulp nodig bij zorgen voor menstruatiehygiëne</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
             <th>Code</th>
             <th>Waarde</th>
           </tr>

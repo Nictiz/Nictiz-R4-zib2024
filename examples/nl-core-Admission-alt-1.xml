@@ -23,10 +23,17 @@
             <td>13 januari 2024 - 29 januari 2024</td>
           </tr>
           <tr>
+            <th>Reden</th>
+            <td>
+              <div>Mogelijke neurovasculaire schade.</div>
+              <div>Problem, problem name: fractuur van schouder en bovenarm</div>
+            </td>
+          </tr>
+          <tr>
             <th>Participant</th>
             <td>
               <div>
-                <span title="Responsible Party (RESP - http://terminology.hl7.org/CodeSystem/v3-ParticipationType)">Responsible Party</span> - Health professional (role), J.H.R. Peters</div>
+                <span title="Responsible Party (RESP - HL7 v3-ParticipationType)">Responsible Party</span> - Health professional (role), J.H.R. Peters</div>
             </td>
           </tr>
           <tr>
@@ -99,7 +106,7 @@
   <reasonReference>
     <reference value="Condition/nl-core-Admission-alt-1-Problem-1"/>
     <type value="Condition"/>
-    <display value="Problem, problem name: Fracture of shoulder and upper arm"/>
+    <display value="Problem, problem name: fractuur van schouder en bovenarm"/>
   </reasonReference>
   <hospitalization>
     <admitSource>

@@ -12,7 +12,7 @@
           <tr>
             <th>Code</th>
             <td>
-              <span title="Fracture of shoulder and upper arm (S42 - sid/icd-10-nl)">Fracture of shoulder and upper arm</span>
+              <span title="fractuur van schouder en bovenarm (S42 - sid/icd-10-nl)">fractuur van schouder en bovenarm</span>
             </td>
           </tr>
         </tbody>
@@ -23,7 +23,7 @@
     <coding>
       <system value="http://hl7.org/fhir/sid/icd-10-nl"/>
       <code value="S42"/>
-      <display value="Fracture of shoulder and upper arm"/>
+      <display value="fractuur van schouder en bovenarm"/>
     </coding>
   </code>
   <subject>

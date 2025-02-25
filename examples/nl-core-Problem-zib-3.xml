@@ -7,7 +7,7 @@
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
-        <caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Interpretatie van diagnose (282291009 - SNOMED CT)">Interpretatie van diagnose</span>, Status: <span title="Inactive (inactive - http://terminology.hl7.org/CodeSystem/condition-clinical)">Inactive</span> / <span title="Confirmed (confirmed - http://terminology.hl7.org/CodeSystem/condition-ver-status)">Confirmed</span>
+        <caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Interpretatie van diagnose (282291009 - SNOMED CT)">Interpretatie van diagnose</span>, Status: <span title="Inactive (inactive - HL7 condition-clinical)">Inactive</span> / <span title="Confirmed (confirmed - HL7 condition-ver-status)">Confirmed</span>
         </caption>
         <tfoot>
           <tr>
