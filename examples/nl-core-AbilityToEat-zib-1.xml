@@ -10,6 +10,15 @@
         <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption>
         <tbody>
           <tr>
+            <th>Onderliggende observaties:</th>
+            <td>
+              <ul>
+                <li>Eating limitations, Moeite met in stukken snijden van voedsel</li>
+                <li>Eating limitations, Moeite met hanteren van eetgerei bij zelfstandig eten</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
             <th>Code</th>
             <th>Waarde</th>
           </tr>

@@ -70,6 +70,21 @@ zib-AddressInformation:
       - cardinality: 1..1 instead of 0..1
         reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
 
+zib-Admission:
+  zib deviations:
+    Encounter.class:
+      - cardinality: 1..1 instead of 0..1
+        reason: Encounter.class is mandatory in FHIR. The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.
+    Encounter.participant:responsibleHealthProfessional.type:
+      - cardinality: 1..1 instead of 0..1  
+        reason: There is only one correct type for the ResponsibleHealthProfessional, but the responsibleHealthProfessional slice on .participant is optional, making the effective cardinality 0..1 as required by the zib.
+    Encounter.type:triggerForAdmission:
+      - short: TriggerForAdmission instead of TiggerForAdmission
+        reason: The zib concept name "TiggerForAdmission" is an incorrect translation of the Dutch name into English.
+    Encounter.reasonCode.text:
+      - cardinality: 0..* instead of 0..1
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*, effective) is explained by open world modeling. The .reasonCode(.text) element can be used to convey information on other concepts than CommentAdmissionReason.
+
 zib-BloodPressure:
   zib deviations:
     Observation.bodySite:
@@ -105,6 +120,12 @@ zib-BodyWeight:
     Observation.effective[x]:effectiveDateTime:
       - cardinality: 1..1 instead of 0..1
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+
+zib-CareTeam:
+  zib deviations:
+    CareTeam.participant:healthcareProfessional.member:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of each CareTeamMember option is defined by the cardinality of the slices on participant and thus the cardinality requirements of the zib are honored. Because .member is required to discriminate the slices, its cardinality is 1..1.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
@@ -400,6 +421,13 @@ zib-Problem:
         for: NL-CM:20.7.4 (AnatomicalLocation.Location)
         reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the fact that both the ProblemAnatomicalLocation concept from zib Problem and the Location concept from zib AnatomicalLocation are mapped on the same level in FHIR. Setting the cardinality to 0..* allows for multiple instances of AnatomicalLocation, which is in accordance with zib Problem.
 
+zib-SkinDisorder:
+  zib deviations:
+    Condition.bodySite:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:19.3.9 (SkinDisorder.AnatomicalLocation)
+        reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
+
 zib-SNAQ65plusScore:
   ignored issues:
     StructureDefinition.mapping[0]:
@@ -441,6 +469,12 @@ nl-core-*:
         reason: Observation.performer is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
+
+nl-core-Admission-*:
+  ignored issues:
+    Encounter.participant[*].type[*]:
+      - message: None of the codings provided are in the value set 'Participant type' (http://hl7.org/fhir/ValueSet/encounter-participant-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code 'RESP' from the v3 ParticipationType code system is not part of the extensible ValueSet bound here, but is needed to reflect the ResponsibleHealthProfessional concept from the zib.
 
 nl-core-BloodPressure-*:
   ignored issues:
@@ -509,6 +543,12 @@ nl-core-HealthcareProvider-Organization-*:
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
         reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
 
+nl-core-*HealthProfessional-PractitionerRole-*:
+  ignored issues:
+    PractitionerRole.specialty[*].coding[*].system:
+      - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
+        reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
+
 nl-core-O2Saturation-*:
   ignored issues:
     Observation.code:
@@ -523,18 +563,36 @@ nl-core-O2Saturation-*:
       - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
         reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
 
-nl-core-Problem-*:
+nl-core-*Problem-*:
   ignored issues:
     Condition.code:
       - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icd-10-nl| was not found
         reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icpc-1-nl| was not found
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
       - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.120.5.1| was not found
         reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
+      - message: None of the codings provided are in the value set 'ProbleemNaamCodelijst'
+        reason: This ValueSet contains two SNOMED refsets. The terminology servers are unable to determine if a code is part of this refset.
     Condition.code.coding[*].system:
       - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icd-10-nl' could not be found, so the code cannot be validated
         reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icpc-1-nl' could not be found, so the code cannot be validated
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.120.5.1' could not be found, so the code cannot be validated
         reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
+
+nl-core-SNAQrcScore-*:
+  ignored issues:
+    Observation.component[*].code.coding[*].display:
+      - message: No valid Display Names found for urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1#4029008 in the language en
+        reason: A valid Dutch display value is used instead of an English one.
+
+zib-Admission:
+  ignored issues:
+    Encounter.participant:responsibleHealthProfessional.individual:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice."
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
 
 zib-BloodPressure.AnatomicalLocation-BodyStructure:
   ignored issues:
@@ -545,6 +603,12 @@ zib-BloodPressure.AnatomicalLocation-BodyStructure:
         reason: The definition is defined on the datatype profile and is not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and is not repeated in the differential.
+
+zib-CareTeam:
+  ignored issues:
+    CareTeam.participant:*.member:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice"
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:

@@ -10,6 +10,16 @@
         <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption>
         <tbody>
           <tr>
+            <th>Onderliggende observaties:</th>
+            <td>
+              <ul>
+                <li>Patient illness insight, Kan niet overzien wat de ziekte betekent in het dagelijks leven.</li>
+                <li>Coping with illness by patient, Patiënt wil niet praten over de toekomst.</li>
+                <li>Coping with illness by family, Partner heeft veel vragen over hoe de toekomst er uit ziet.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
             <th>Code</th>
             <th>Waarde</th>
           </tr>
