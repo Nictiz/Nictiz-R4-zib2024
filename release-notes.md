@@ -280,7 +280,7 @@
 
 ## SOAPReport
 ### zib-SOAPReport, nl-core-SOAPReport
-* No significant changes.
+* `.author` ; textual ; Changed definition of Author. ; ZIB-1920
 
 ### zib-SOAPReport.SOAPLine, nl-core-SOAPReport.SOAPLine
-* No significant changes.
+* `.extension:soapLineCode.value[x]` ; terminology ; Changed codes in SOEPRegelCodeCodelijst. ; ZIB-2218, ZIB-2549
