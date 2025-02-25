@@ -30,6 +30,7 @@
    <title value="EetBeperkingenCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
+   <date value="2024-11-28T08:35:00+01:00"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
       <name value="Registratie aan de bron"/>
@@ -42,7 +43,7 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="Changes compared to prerelease 2024:         &#xA;* Removed: code OTH (NullFlavor)"/>
+   <description value="Changes compared to prerelease 2024: &#xA;* Removed: code OTH (NullFlavor)"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>

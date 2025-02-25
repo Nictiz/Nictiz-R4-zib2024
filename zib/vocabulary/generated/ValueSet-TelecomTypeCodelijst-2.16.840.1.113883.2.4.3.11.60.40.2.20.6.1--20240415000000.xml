@@ -30,6 +30,7 @@
    <title value="TelecomTypeCodelijst"/>
    <status value="active"/>
    <experimental value="false"/>
+   <date value="2024-11-28T08:35:00+01:00"/>
    <publisher value="Registratie aan de bron"/>
    <contact>
       <name value="Registratie aan de bron"/>
@@ -42,7 +43,7 @@
          <value value="https://www.zibs.nl"/>
       </telecom>
    </contact>
-   <description value="Changes compared to prerelease 2024:         &#xA;* Removed: code OTH (NullFlavor)"/>
+   <description value="Changes compared to prerelease 2024: &#xA;* Removed: code OTH (NullFlavor)"/>
    <immutable value="false"/>
    <compose>
       <include>
