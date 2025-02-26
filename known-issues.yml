@@ -207,7 +207,7 @@ zib-InstructionsForUse:
         for: NL-CM:9.12.19948 (InstructionsForUse.AdministeringSchedule)
         reason: AdministeringSchedule in FHIR is represented using the Timing datatype, not as a BackboneElement.
     Dosage.timing.repeat.count:
-      - datatype: PositiveInt instead of Reference
+      - datatype: positiveInt instead of PositiveInt
         for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
         reason: A range in FHIR is represented using the positiveInt datatype, not as a separate resource.
       - datatype: PositiveInt instead of PQ

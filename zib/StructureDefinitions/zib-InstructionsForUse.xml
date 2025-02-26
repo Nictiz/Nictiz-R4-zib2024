@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-InstructionsForUse" />
   <text>
-      <status value="empty"/>
-      <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-   </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse" />
   <name value="ZibInstructionsForUse" />
   <title value="zib InstructionsForUse" />
@@ -87,7 +85,7 @@
     <element id="Dosage.additionalInstruction">
       <path value="Dosage.additionalInstruction" />
       <short value="AdditionalInstructions" />
-         <definition value="The additional instructions contain extra guidance on the use of the current prescription. &#xD;&#xA;&#xD;&#xA;This includes all instructions for use. The text can come from the original “paper&#34; medication prescription, but can also be generated from the coded information. This concept may contain more information than what is structurally coded, but may not conflict with it. The instructions may not conflict with other components of the request for administration. The instructions can also refer to an existing protocol. The texts in the G-standard that can support this attribute are included in table 362 and are a copy of the texts from the general practitioner' standard 'NHG-tabel Gebruiksvoorschrift' which are included in the CIM. These texts can be used to structure this concept."/>
+      <definition value="The additional instructions contain extra guidance on the use of the current prescription. &#xD;&#xA;&#xD;&#xA;This includes all instructions for use. The text can come from the original “paper&quot; medication prescription, but can also be generated from the coded information. This concept may contain more information than what is structurally coded, but may not conflict with it. The instructions may not conflict with other components of the request for administration. The instructions can also refer to an existing protocol. The texts in the G-standard that can support this attribute are included in table 362 and are a copy of the texts from the general practitioner' standard 'NHG-tabel Gebruiksvoorschrift' which are included in the CIM. These texts can be used to structure this concept." />
       <comment value="Please note that in contrast to the zib, this AdditionalInstructions concept is grouped under the DosingInstructions concept. This `.additionalInstruction` element shall have the same value when there are multiple DosingInstructions." />
       <alias value="AanvullendeInstructies" />
       <binding>
@@ -104,7 +102,7 @@
     <element id="Dosage.timing">
       <path value="Dosage.timing" />
       <short value="AdministeringSchedule" />
-         <definition value="Specifications of the times at which the medication is to be administered. This is indicated as follows:&#xD;&#xA;* Time(s) (16:00) or indications (“before meals”) at which the medication is to be taken each day.&#xD;&#xA;* A specific number of times the medication is to be taken each day (&#34;3x a day&#34;), indicated with the frequency.&#xD;&#xA;* A time interval between consecutive doses (“Every 2 hours”, “every 3 days”), indicated with the word Interval.&#xD;&#xA;* Combined periods with an interval and duration (“1 daily for three out of four weeks: the pill schedule”)&#xD;&#xA;&#xD;&#xA;If a certain medication is not to be taken daily, the aforementioned can be combined with daily indications:&#xD;&#xA;&#xD;&#xA;* One or more week days on which the medication is to be administered (e.g. “Monday, Wednesday, Friday”)&#xD;&#xA;* ”3x a week”, “2x a month”.&#xD;&#xA;&#xD;&#xA;The specified administration “infinite” is automatically to be repeated until:&#xD;&#xA;* The end date and time has been reached&#xD;&#xA;* The total administration duration has been reached (14 days)&#xD;&#xA;* A specific amount of administrations has been reached (“20 doses”), to be entered in the Frequency concept."/>
+      <definition value="Specifications of the times at which the medication is to be administered. This is indicated as follows:&#xD;&#xA;* Time(s) (16:00) or indications (“before meals”) at which the medication is to be taken each day.&#xD;&#xA;* A specific number of times the medication is to be taken each day (&quot;3x a day&quot;), indicated with the frequency.&#xD;&#xA;* A time interval between consecutive doses (“Every 2 hours”, “every 3 days”), indicated with the word Interval.&#xD;&#xA;* Combined periods with an interval and duration (“1 daily for three out of four weeks: the pill schedule”)&#xD;&#xA;&#xD;&#xA;If a certain medication is not to be taken daily, the aforementioned can be combined with daily indications:&#xD;&#xA;&#xD;&#xA;* One or more week days on which the medication is to be administered (e.g. “Monday, Wednesday, Friday”)&#xD;&#xA;* ”3x a week”, “2x a month”.&#xD;&#xA;&#xD;&#xA;The specified administration “infinite” is automatically to be repeated until:&#xD;&#xA;* The end date and time has been reached&#xD;&#xA;* The total administration duration has been reached (14 days)&#xD;&#xA;* A specific amount of administrations has been reached (“20 doses”), to be entered in the Frequency concept." />
       <alias value="Toedieningsschema" />
       <mapping>
         <identity value="zib-instructionsforuse-v3.0-2024EN" />
@@ -270,7 +268,7 @@
     <element id="Dosage.timing.repeat.period">
       <path value="Dosage.timing.repeat.period" />
       <short value="Frequency / Interval" />
-         <definition value="Indicates the duration of time over which repetitions are to occur; e.g. to express &#34;3 times per day&#34;, 3 would be the frequency and &#34;1 day&#34; would be the period. If `.periodMax` is present, this element indicates the lower bound of the allowed range of the period length.&#xD;&#xA;&#xD;&#xA;If the `.extension:timingExact` element is absent or set to _false_, a reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics). &#xA;&#xA;If the `.extension:timingExact` element is present and set to _true_, the times can be chosen freely, but distribution throughout the day is more precise, and the interval between times is important (e.g. in the case of antibiotics). In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)."/>
+      <definition value="Indicates the duration of time over which repetitions are to occur; e.g. to express &quot;3 times per day&quot;, 3 would be the frequency and &quot;1 day&quot; would be the period. If `.periodMax` is present, this element indicates the lower bound of the allowed range of the period length.&#xD;&#xA;&#xD;&#xA;If the `.extension:timingExact` element is absent or set to _false_, a reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics). &#xA;&#xA;If the `.extension:timingExact` element is present and set to _true_, the times can be chosen freely, but distribution throughout the day is more precise, and the interval between times is important (e.g. in the case of antibiotics). In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)." />
       <comment value="Notes on the zib concepts Frequency and Interval:&#xA;1. An interval (in FHIR) is just a normal frequency of 1 (combined with a period based on the interval length) and is represented in FHIR as just another frequency using `.frequency` (set to 1), `.period` and `.periodUnit`. However, the zib differentiates between the two concepts in the timing precision (the Interval concept defines precise intervals while the Frequency concept defines approximate intervals). When the interval is precise, this is communicated using the extension in `.extension:timingExact`.&#xA;2. On the other hand, the zib Frequency concept might be used to express a single-use, non-repeating series by omitting the time unit. In FHIR, this is _not_ represented as a frequency, but with the `.count` element.&#xA;3. Lastly, the Frequency concept may be used to express either a single nominal value or a range. A range is represented by respectively setting the minimum and maximum value to `.frequency` and `.frequencyMax`, or to `.count` and `.countMax` for single-use events. A nominal value is expressed by setting its value to `.frequency` or to `.count` for single-use events, and leaving `.frequencyMax` and `.countMax` unpopulated.&#xA;&#xA;In summary:&#xA;* zib concept Frequency:&#xA;    * With time unit:&#xA;        * Nominal value: `.frequency`, `.period` and `.periodUnit`&#xA;        * Range: `.frequency`, `.frequencyMax`, `.period` and `.periodUnit`&#xA;    * Without time unit:&#xA;        * Nominal value: `.count`&#xA;        * Range: `.count` and `.countMax`&#xA;* zib concept Interval: `.frequency` (set to 1), `.period`, `.periodUnit` and `.extension:timingExact` (set to _true_)" />
       <alias value="Frequentie" />
       <alias value="Interval" />
@@ -444,10 +442,6 @@
       <short value="MinimumValue" />
       <definition value="The minimal value of the range. The boundary is inclusive." />
       <alias value="MinimumWaarde" />
-      <type>
-        <code value="Quantity" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-GstdSimpleQuantity" />
-      </type>
       <mapping>
         <identity value="zib-range-v1.0.1-2024EN" />
         <map value="NL-CM:20.1.2" />
@@ -459,10 +453,6 @@
       <short value="MaximumValue" />
       <definition value="The maximum value of the range. The boundary is inclusive." />
       <alias value="MaximumWaarde" />
-      <type>
-        <code value="Quantity" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-GstdSimpleQuantity" />
-      </type>
       <mapping>
         <identity value="zib-range-v1.0.1-2024EN" />
         <map value="NL-CM:20.1.3" />
@@ -477,7 +467,6 @@
       <alias value="NominaleWaarde" />
       <type>
         <code value="Quantity" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-GstdSimpleQuantity" />
       </type>
       <mapping>
         <identity value="zib-range-v1.0.1-2024EN" />
@@ -557,20 +546,6 @@
         <map value="NL-CM:9.12.19946" />
         <comment value="MaximumDose" />
       </mapping>
-    </element>
-    <element id="Dosage.maxDosePerPeriod.numerator">
-      <path value="Dosage.maxDosePerPeriod.numerator" />
-      <type>
-        <code value="Quantity" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-GstdSimpleQuantity" />
-      </type>
-    </element>
-    <element id="Dosage.maxDosePerPeriod.denominator">
-      <path value="Dosage.maxDosePerPeriod.denominator" />
-      <type>
-        <code value="Quantity" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-GstdSimpleQuantity" />
-      </type>
     </element>
   </differential>
 </StructureDefinition>
