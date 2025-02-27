@@ -588,6 +588,20 @@ nl-core-SNAQrcScore-*:
       - message: No valid Display Names found for urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1#4029008 in the language en
         reason: A valid Dutch display value is used instead of an English one.
 
+nl-core-SOAPReport.SOAPLine-*:
+  ignored issues:
+    Observation.extension[*].value.ofType(CodeableConcept):
+      - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icpc-1-nl' could not be found, so the code cannot be validated
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.6.1--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icpc-1-nl was not found
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
+    Observation.extension[*].value.ofType(CodeableConcept).coding[*]:
+      - message: Resolved system http://hl7.org/fhir/sid/icpc-1-nl (v2015-08-21), but the definition doesn't include any codes, so the code has not been validated
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
+    Observation.extension[*].value.ofType(CodeableConcept).coding[*].system:
+      - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icpc-1-nl' could not be found, so the code cannot be validated
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
+
 zib-Admission:
   ignored issues:
     Encounter.participant:responsibleHealthProfessional.individual:
@@ -674,3 +688,25 @@ zib-Payer-Organization:
         reason: The short description is defined on the datatype profile and not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and not repeated in the differential.
+        
+zib-SOAPReport:
+  zib deviations:
+    Composition.author:
+      - cardinality: 1..1 instead of 0..1
+        reason: This is a known difference with the zib. FHIR mandates an author for the Compositions. It seems like a requirement systems can honour.
+    Composition.date:
+      - cardinality: 1..1 instead of 0..1
+        reason: This is a known difference with the zib. FHIR mandates a date for the Compositions. It seems like a requirement systems can honour. 
+    Composition.section:soapLine.code:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of both zib (SOAPLineHeader) and FHIR is 1..1, but because of conceptual cardinality 0..1 is expected.
+  ignored issues:
+    Composition.section:soapLine:
+      - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
+        reason: The mapping is to a zib container, which doesn't have a useful description if implemented in a profile.
+
+zib-SOAPReport.SOAPLine:
+  zib deviations:
+    Observation.code:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of both zib (SOAPLineHeader) and FHIR is 1..1, but because of conceptual cardinality 0..1 is expected. In case of absent data, the profiling guidelines provide guidance.

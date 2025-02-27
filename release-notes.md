@@ -277,3 +277,10 @@
 
 ## SNAQScore (zib-SNAQScore, nl-core-SNAQScore)
 * No significant changes.
+
+## SOAPReport
+### zib-SOAPReport, nl-core-SOAPReport
+* `.author` ; textual ; Changed definition of Author. ; ZIB-1920
+
+### zib-SOAPReport.SOAPLine, nl-core-SOAPReport.SOAPLine
+* `.extension:soapLineCode.value[x]` ; terminology ; Changed codes in SOEPRegelCodeCodelijst. ; ZIB-2218, ZIB-2549
