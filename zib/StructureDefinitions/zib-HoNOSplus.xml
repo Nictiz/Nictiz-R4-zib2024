@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-HoNOSplus" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-HoNOSplus" />
   <name value="ZibHoNOSplus" />
   <title value="zib HoNOSplus" />
@@ -155,7 +153,7 @@
     <element id="Observation.component:hoNOSplusQuestions.code">
       <path value="Observation.component.code" />
       <short value="HoNOS+Question" />
-      <definition value="The question fo the HoNOS+." />
+      <definition value="The question of the HoNOS+." />
       <alias value="HoNOS+Vraag" />
       <binding>
         <strength value="required" />
