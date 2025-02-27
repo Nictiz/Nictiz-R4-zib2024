@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-ChecklistPainBehavior" />
+  <id value="zib-ChecklistPainBehaviour" />
   <text>
     <status value="empty" />
     <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
   </text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-ChecklistPainBehavior" />
-  <name value="ZibChecklistPainBehavior" />
-  <title value="zib ChecklistPainBehavior" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-ChecklistPainBehaviour" />
+  <name value="ZibChecklistPainBehaviour" />
+  <title value="zib ChecklistPainBehaviour" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -19,13 +19,13 @@
     </telecom>
   </contact>
   <description value="The CPB (Checklist Pain Behaviour) is a pain assessment tool, that is used to assess pain in children with a limited expressive repertoire or with a profound cognitive impairment, by observing their behaviour.&#xD;&#xA;The CPB has ten observations that need to be addressed. The final score indicates whether the observed child suffers pain and 'how much'. The score is often combined with a VAS score that is completed by the nurses on basis of clinical experience." />
-  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) ChecklistPainBehavior v1.2 (2024)](https://zibs.nl/wiki/ChecklistPainBehavior-v1.2(2024EN))." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) ChecklistPainBehaviour v1.2 (2024)](https://zibs.nl/wiki/ChecklistPainBehaviour-v1.2(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
-    <uri value="https://zibs.nl/wiki/ChecklistPainBehavior-v1.2(2024EN)" />
-    <name value="zib ChecklistPainBehavior-v1.2(2024EN)" />
+    <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
+    <uri value="https://zibs.nl/wiki/ChecklistPainBehaviour-v1.2(2024EN)" />
+    <name value="zib ChecklistPainBehaviour-v1.2(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -38,7 +38,7 @@
       <short value="ChecklistPainBehaviour" />
       <alias value="ChecklistPijnGedrag" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.1" />
         <comment value="ChecklistPainBehaviour" />
       </mapping>
@@ -72,7 +72,7 @@
         <code value="dateTime" />
       </type>
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.13" />
         <comment value="ScoreDateTime" />
       </mapping>
@@ -100,7 +100,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="10" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.2" />
         <comment value="TotalScore" />
       </mapping>
@@ -115,7 +115,7 @@
       <definition value="A comment on the circumstances during the measurement." />
       <alias value="Toelichting" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.14" />
         <comment value="Comment" />
       </mapping>
@@ -155,7 +155,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="1" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.3" />
         <comment value="Face" />
       </mapping>
@@ -185,7 +185,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="1" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.4" />
         <comment value="Mouth" />
       </mapping>
@@ -215,7 +215,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="1" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.5" />
         <comment value="Grimace" />
       </mapping>
@@ -245,7 +245,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="1" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.6" />
         <comment value="LookingSad" />
       </mapping>
@@ -275,7 +275,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="1" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.7" />
         <comment value="Eyes" />
       </mapping>
@@ -305,7 +305,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="1" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.8" />
         <comment value="Panic" />
       </mapping>
@@ -335,7 +335,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="1" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.9" />
         <comment value="Moaning" />
       </mapping>
@@ -365,7 +365,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="1" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.10" />
         <comment value="Cry" />
       </mapping>
@@ -395,7 +395,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="1" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.11" />
         <comment value="SoundsOfRestlessness" />
       </mapping>
@@ -425,7 +425,7 @@
       <minValueInteger value="0" />
       <maxValueInteger value="1" />
       <mapping>
-        <identity value="zib-checklistpainbehavior-v1.2-2024EN" />
+        <identity value="zib-checklistpainbehaviour-v1.2-2024EN" />
         <map value="NL-CM:12.17.12" />
         <comment value="Tears" />
       </mapping>
