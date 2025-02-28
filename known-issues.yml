@@ -259,9 +259,6 @@ zib-HoNOSplus:
     Observation.component:hoNOSplusQuestions.code:
       - cardinality: 1..1 instead of 0..1
         reason: The FHIR profiles are expected to implement zib cardinalities as conceptual cardinalities, but FHIR requires the Observation.component:hoNOSplusQuestions.code element to be present. This aligns with the intention of the zib, as the HoNOS+Question concept is required for zib HoNOS+ to make sense.
-    Observation.component:hoNOSplusQuestions.value[x]:
-      - cardinality: 0..* instead of 0..1
-        reason: The concept's cardinality matches that of the zib. The 0..* represents the cardinality of the slice's container element.
   ignored issues:
     StructureDefinition.mapping[0]:
       - message: "Constraint failed: sd-zpg-05: 'The URI for zib mappings should align with the mapping name'"
@@ -658,6 +655,12 @@ zib-HealthProfessional-Practitioner:
         reason: The required short description is given by the datatype profile, so it is absent from the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The required alias is given by the datatype profile, so it is absent from the differential.
+
+zib-HoNOSplus:
+  zib deviations:
+    Observation.component:hoNOSplusQuestions.value[x]:
+      - cardinality: 0..* instead of 0..1
+        reason: The zib cardinality applies to its cardinality within the HoNOS+Questions [six] container, which is also true for the the .value[x] element within the component. However, since the component is allowed to repeat, the conformance tool interprets it as an effective cardinality of 0..*.
 
 zib-NameInformation:
   zib deviations:
