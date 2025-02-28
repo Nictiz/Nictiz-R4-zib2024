@@ -1,0 +1,64 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="ZekerheidStatusCodelijst-to-ConditionVerificationStatus" />
+    <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+        <valueBoolean value="false" />
+    </extension>
+    <url value="http://nictiz.nl/fhir/ConceptMap/ZekerheidStatusCodelijst-to-ConditionVerificationStatus" />
+    <name value="ZekerheidStatusCodelijst_to_ConditionVerificationStatus" />
+    <title value="ZekerheidStatusCodelijst to ConditionVerificationStatus" />
+    <status value="draft" />
+    <publisher value="Nictiz" />
+    <contact>
+        <name value="Nictiz" />
+        <telecom>
+            <system value="url" />
+            <value value="https://www.nictiz.nl" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="Maps DegreeOfCertainty codes as found in the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) DiagnosticInsight v1.0 (2024)](https://zibs.nl/wiki/DiagnosticInsight-v1.0(2024EN)) to &lt;http://hl7.org/fhir/ValueSet/condition-ver-status&gt; as found in `Condition.verificationStatus` in FHIR R4." />
+    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+    <sourceCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.6.3--20240415000000" />
+    <targetCanonical value="http://hl7.org/fhir/ValueSet/condition-ver-status" />
+    <group>
+        <source value="http://snomed.info/sct" />
+        <target value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+        <element>
+            <code value="415684004"/>
+            <display value="Suspected"/>
+            <target>
+                <code value="provisional"/>
+                <display value="Provisional"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="410590009"/>
+            <display value="Known possible"/>
+            <target>
+                <code value="differential"/>
+                <display value="Differential"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="410605003"/>
+            <display value="Confirmed present"/>
+            <target>
+                <code value="confirmed"/>
+                <display value="Confirmed"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="410593006"/>
+            <display value="Probably not present"/>
+            <target>
+                <code value="unconfirmed"/>
+                <display value="Unconfirmed"/>
+                <equivalence value="wider"/>
+                <comment value="'Probably not present' indicates that the diagnostic insight will likely be refuted in the future, while 'unconfirmed' only states that the condition is not yet confirmed."/>
+            </target>
+        </element>
+    </group>
+</ConceptMap>
