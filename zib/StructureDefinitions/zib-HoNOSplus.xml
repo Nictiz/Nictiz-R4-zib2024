@@ -160,7 +160,7 @@
     <element id="Observation.component:hoNOSplusQuestions.code">
       <path value="Observation.component.code" />
       <short value="HoNOS+Question" />
-      <definition value="The question fo the HoNOS+." />
+      <definition value="The question of the HoNOS+." />
       <alias value="HoNOS+Vraag" />
       <binding>
         <strength value="required" />
