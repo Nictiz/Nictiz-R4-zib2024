@@ -280,3 +280,7 @@
 
 ## SNAQScore (zib-SNAQScore, nl-core-SNAQScore)
 * No significant changes.
+
+## TreatmentDirective2 (zib-TreatmentDirective2, nl-core-TreatmentDirective2)
+* `.provision.code` ; terminology ; Changed codes in BehandelingCodelijst. ; ZIB-1562, ZIB-1126
+* `.extension:comment` ; extension ; Added Note for Comment. ; ZIBFHIR-97
