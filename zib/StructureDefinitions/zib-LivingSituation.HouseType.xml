@@ -44,6 +44,31 @@
         </coding>
       </patternCodeableConcept>
     </element>
+     <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <short value="Date" />
+      <definition value="Date of observation of the living situation." />
+      <alias value="Datum" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="zib-livingsituation-v3.4-2024EN" />
+        <map value="NL-CM:7.8.6" />
+        <comment value="Date" />
+      </mapping>
+    </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <slicing>
