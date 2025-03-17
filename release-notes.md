@@ -190,6 +190,12 @@
 * `.type` ; terminology ; Added additional binding to ProductTypeImplantatenCodelijst (using a combined ValueSet) (although it is a subset of the existing ValueSet ProductTypeCodelijst) ; ZIB-1279
 * `.type` ; terminology ; Removed codes for negation of visual aid and hearing aid, and adopted the generic negation codes from the "Absent or Unknown Devices" ValueSet in the IPS/EPS instead ; ZIB-1536, ZIBFHIR-228
 
+### ext-MedicalDevice.HealthProfessional
+* No significant changes
+
+### ext-MedicalDevice.Location
+* No significant changes
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
