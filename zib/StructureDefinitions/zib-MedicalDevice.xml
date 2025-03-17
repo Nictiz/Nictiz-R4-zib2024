@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-MedicalDevice" />
   <text>
-    <status value="empty" />
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice" />
   <name value="ZibMedicalDevice" />
   <title value="zib MedicalDevice" />
@@ -19,23 +17,13 @@
     </telecom>
   </contact>
   <description value="Medical devices are any internally implanted and external devices and/or aids used by the patient (in the past) to reduce the effects of functional limitations in organ systems or to facilitate the treatment of a disease." />
-  <purpose value="This DeviceUseStatement resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) MedicalDevice v4.0 (2024)](https://zibs.nl/wiki/MedicalDevice-v4.0(2024EN))." />
+  <purpose value="This DeviceUseStatement resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) MedicalDevice v4.0 (2024)](https://zibs.nl/wiki/MedicalDevice-v3.4(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="zib-medicaldevice-v4.0-2024EN" />
     <uri value="https://zibs.nl/wiki/MedicalDevice-v4.0(2024EN)" />
     <name value="zib MedicalDevice-v4.0(2024EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-procedure-v5.4.1-2024EN" />
-    <uri value="https://zibs.nl/wiki/Procedure-v5.4.1(2024EN)" />
-    <name value="zib Procedure-v5.4.1(2020EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-wound-v3.6-2024EN" />
-    <uri value="https://zibs.nl/wiki/Wound-v3.6(2024EN)" />
-    <name value="zib Wound-v3.6(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -73,6 +61,15 @@
       <path value="DeviceUseStatement.extension.value[x]" />
       <comment value="Please note that this zib concept (Location::HealthcareProvider) is also mapped on the `Procedure.location` element in profile [zib-Procedure-event](http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-event). The reason for this is that this zib concept aligns with the Location::HealthcareProvider concept in zib Procedure (NL-CM:14.1.5), but only for the situation that the Procedure is about placing the implant which is described using this instance of zib MedicalDevice. In this situation, the current extension is redundant and it is advised to only use `Procedure.location` in profile zib-Procedure-event to represent the Location concept." />
     </element>
+    <element id="DeviceUseStatement.extension:treatmentObjective">
+      <path value="DeviceUseStatement.extension" />
+      <sliceName value="treatmentObjective" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal" />
+      </type>
+      <isModifier value="false" />
+    </element>
     <element id="DeviceUseStatement.status">
       <path value="DeviceUseStatement.status" />
       <comment value="This element is implictly mapped to the zib concepts NL-CM:10.1.11 (StartDate) and NL-CM:10.1.14 (EndDate). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;* When StartDate is in the future, `.status` will usually be set to _intended_.&#xD;&#xA;* When StartDate is in the past and EndDate has a value and in the future or EndDate has no value, `.status` will usually be set to _active_.&#xD;&#xA;* When EndDate has a value and is in the past, `.status` will usually be set to _completed_." />
@@ -97,40 +94,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="DeviceUseStatement.derivedFrom:procedure-request">
-      <path value="DeviceUseStatement.derivedFrom" />
-      <sliceName value="procedure-request" />
-      <short value="Procedure" />
-      <definition value="The procedure which has the purpose of placing this product in or on the body." />
-      <comment value="* Note 1: on a functional level, zib Procedure references zib MedicalDevice, but in FHIR this direction is reversed.&#xD;&#xA;* Note 2: zib Procedure can represent a requested or (to be) performed procedure. This slice represents requested procedures, while slice `procedure-event` represents performed procedures." />
-      <alias value="Verrichting" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-request" />
-      </type>
-      <mapping>
-        <identity value="zib-procedure-v5.4.1-2024EN" />
-        <map value="NL-CM:14.1.7" />
-        <comment value="Reversed reference for zib Procedure.MedicalDevice" />
-      </mapping>
-    </element>
-    <element id="DeviceUseStatement.derivedFrom:procedure-event">
-      <path value="DeviceUseStatement.derivedFrom" />
-      <sliceName value="procedure-event" />
-      <short value="Procedure" />
-      <definition value="The procedure which has the purpose of placing this product in or on the body." />
-      <comment value="* Note 1: on a functional level, zib Procedure references zib MedicalDevice, but in FHIR this direction is reversed.&#xD;&#xA;* Note 2: zib Procedure can represent a requested or (to be) performed procedure. This slice represents performed procedures, while slice `procedure-request` represents requested procedures." />
-      <alias value="Verrichting" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-event" />
-      </type>
-      <mapping>
-        <identity value="zib-procedure-v5.4.1-2024EN" />
-        <map value="NL-CM:14.1.7" />
-        <comment value="Reversed reference for zib Procedure.MedicalDevice" />
-      </mapping>
-    </element>
     <element id="DeviceUseStatement.timing[x]">
       <path value="DeviceUseStatement.timing[x]" />
       <slicing>
@@ -151,7 +114,7 @@
     <element id="DeviceUseStatement.timing[x]:timingPeriod.start">
       <path value="DeviceUseStatement.timing[x].start" />
       <short value="StartDate" />
-      <definition value="The start date of the first use or implant of the medical device. A ‘vague’ date, such as only the year, is permitted." />
+      <definition value="The start date of the first use or implant of the medical device. A &quot;vague&quot; date, such as only the year, is permitted." />
       <alias value="BeginDatum" />
       <mapping>
         <identity value="zib-medicaldevice-v4.0-2024EN" />
@@ -162,7 +125,7 @@
     <element id="DeviceUseStatement.timing[x]:timingPeriod.end">
       <path value="DeviceUseStatement.timing[x].end" />
       <short value="EndDate" />
-      <definition value="The end date of the last use or explant of the medical device. A ‘vague’ date, such as only the year, is permitted." />
+      <definition value="The end date of the last use or explant of the medical device. A &quot;vague&quot; date, such as only the year, is permitted." />
       <alias value="EindDatum" />
       <mapping>
         <identity value="zib-medicaldevice-v4.0-2024EN" />
@@ -204,50 +167,18 @@
         <comment value="Indication" />
       </mapping>
     </element>
-    <element id="DeviceUseStatement.reasonReference:stoma">
-      <path value="DeviceUseStatement.reasonReference" />
-      <sliceName value="stoma" />
-      <short value="Stoma" />
-      <comment value="Please note that on a functional level, zib Stoma references zib MedicalDevice, but in FHIR this direction is reversed." />
-      <alias value="Stoma" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Stoma" />
-      </type>
-      <mapping>
-        <identity value="zib-stoma-v3.3-2020EN" />
-        <map value="NL-CM:5.2.3" />
-        <comment value="Reversed reference for zib Stoma.StomaMaterial" />
-      </mapping>
-    </element>
-    <element id="DeviceUseStatement.reasonReference:wound">
-      <path value="DeviceUseStatement.reasonReference" />
-      <sliceName value="wound" />
-      <short value="Wound" />
-      <comment value="Please note that on a functional level, zib Wound references zib MedicalDevice, but in FHIR this direction is reversed." />
-      <alias value="Wond" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Wound" />
-      </type>
-      <mapping>
-        <identity value="zib-wound-v3.6-2024EN" />
-        <map value="NL-CM:19.2.17" />
-        <comment value="Reversed reference for zib Wound.Drain" />
-      </mapping>
-    </element>
     <element id="DeviceUseStatement.bodySite">
       <path value="DeviceUseStatement.bodySite" />
-      <short value="Location / AnatomicalLocation" />
-      <definition value="Patient’s anatomical location of the medical device used." />
+      <short value="AnatomicalLocation / Location" />
+      <definition value="Patient's anatomical location of the medical device used." />
       <alias value="AnatomischeLocatie" />
       <type>
         <code value="CodeableConcept" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
       </type>
       <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20200901000000" />
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-medicaldevice-v4.0-2024EN" />
