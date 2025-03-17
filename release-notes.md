@@ -188,7 +188,7 @@
 * `.udiCarrier:gs1UdiCarrier.carrierHRF` ; mapping ; Changed mapping key from NL-CM:10.1.4 to NL-CM:10.1.16 ; ZIB-1535
 * `.udiCarrier:hibcUdiCarrier.carrierHRF` ; mapping ; Changed mapping key from NL-CM:10.1.4 to NL-CM:10.1.16 ; ZIB-1535
 * `.type` ; terminology ; Added additional binding to ProductTypeImplantatenCodelijst (using a combined ValueSet) (although it is a subset of the existing ValueSet ProductTypeCodelijst) ; ZIB-1279
-* `.type` ; terminology ; Moved two codes from ProductTypeCodelijst to ProductTypeGeenCodelijst (although the codes are still in the same combined ValueSet bound on this element) ; ZIB-1536
+* `.type` ; terminology ; Removed codes for negation of visual aid and hearing aid, and adopted the generic negation codes from the "Absent or Unknown Devices" ValueSet in the IPS/EPS instead ; ZIB-1536, ZIBFHIR-228
 
 ## NameInformation
 ### zib-NameInformation
