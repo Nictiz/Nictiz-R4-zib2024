@@ -16,6 +16,14 @@ nl-core-ContactPerson-full-02:
       - message: value should not start or finish with whitespace ' De Groene Draeck'
         reason: To communicate a HouseNumberAddition without a HouseNumberLetter, a leading space is used.
 
+nl-core-MedicalDevice.Product:
+  ignored issues:
+    Device:
+      - message: The slice definition for Device.identifier has a maximum of 1 but the slices add up to a maximum of 2. Check that this is what is intended
+        reason: This is indeed what is intended, just one of these slices may be chosen.
+      - message: The slice definition for Device.udiCarrier has a maximum of 1 but the slices add up to a maximum of 2. Check that this is what is intended
+        reason: This is indeed what is intended, just one of these slices may be chosen.
+        
 pattern-NlCoreHealthProfessionalReference:
   ignored issues:
     StructureDefinition:
