@@ -195,9 +195,19 @@
 ## LifeStance (zib-LifeStance, nl-core-LifeStance)
 * `Observation` ; mapping ; Renamed mapping from LifeStanceRC to LifeStance. ; ZIB-2578
 
-## LivingSituation (zib-LivingSituation, nl-core-LivingSituation)
+## LivingSituation 
+### zib-LivingSituation, nl-core-LivingSituation
+* `effective[x]:effectiveDateTime` ; mapping ; Added mapping of Date ; ZIB-1272
+
+### zib-LivingSituation.HomeAdaption, nl-core-LivingSituation.HomeAdaption
+* `effective[x]:effectiveDateTime` ; mapping ; Added mapping of Date ; ZIB-1272
+
+### zib-LivingSituation.HouseType, nl-core-LivingSituation.HouseType
 * `effective[x]:effectiveDateTime` ; mapping ; Added mapping of Date ; ZIB-1272
 * `value[x]:valueCodeableConcept` ; terminology ; Changed codes in TypeOfHomeCodelist ; ZIB-1501, ZIB-1575
+
+### zib-LivingSituation.LivingCondition, nl-core-LivingSituation.LivingCondition
+* `effective[x]:effectiveDateTime` ; mapping ; Added mapping of Date ; ZIB-1272
 
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218, ZIB-2549
