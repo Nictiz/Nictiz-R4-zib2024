@@ -17,13 +17,13 @@
     </telecom>
   </contact>
   <description value="The consistency of the feces indicates the hardness of the stool. The Bristol Stool scale is used to determine this." />
-  <purpose value="This Observation resource represents the DefecationConsistency concept (NL-CM:4.15.9) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) BowelFunction v3.1.1 (2020)](https://zibs.nl/wiki/BowelFunction-v3.1.1(2020EN))." />
+  <purpose value="This Observation resource represents the DefecationConsistency concept (NL-CM:4.15.9) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) BowelFunction v5.0 (2024)](https://zibs.nl/wiki/BowelFunction-v5.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-bowelfunction-v3.1.1-2020EN" />
-    <uri value="https://zibs.nl/wiki/BowelFunction-v3.1.1(2020EN)" />
-    <name value="zib BowelFunction-v3.1.1(2020EN)" />
+    <identity value="zib-bowelfunction-v5.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/BowelFunction-v5.0(2024EN))" />
+    <name value="zib BowelFunction-v5.0(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -33,7 +33,7 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <comment value="This Observation resource represents the DefecationConsistency concept (NL-CM:4.15.9) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) BowelFunction v3.1.1 (2020)](https://zibs.nl/wiki/BowelFunction-v3.1.1(2020EN))." />
+      <comment value="This Observation resource represents the DefecationConsistency concept (NL-CM:4.15.9) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) BowelFunction v5.0 (2024)](https://zibs.nl/wiki/BowelFunction-v5.0(2024EN))." />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
