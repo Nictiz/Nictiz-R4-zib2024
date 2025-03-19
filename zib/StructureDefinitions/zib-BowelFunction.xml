@@ -51,10 +51,6 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-StomaReference" />
       </type>
     </element>
-    <element id="Observation.extension:stoma.url">
-      <path value="Observation.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-StomaReference" />
-    </element>
     <element id="Observation.extension:stoma.value[x]">
       <path value="Observation.extension.value[x]" />
       <short value="Stoma" />
@@ -71,7 +67,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="111989001" />
+          <code value="300373008" />
         </coding>
       </patternCodeableConcept>
     </element>

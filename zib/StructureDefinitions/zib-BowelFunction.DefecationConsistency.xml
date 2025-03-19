@@ -57,7 +57,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.15.2--20200901000000" />
       </binding>
       <mapping>
-        <identity value="zib-bowelfunction-v3.1.1-2020EN" />
+        <identity value="zib-bowelfunction-v5.0-2024EN" />
         <map value="NL-CM:4.15.9" />
         <comment value="DefecationConsistency" />
       </mapping>
