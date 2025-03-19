@@ -76,6 +76,22 @@
 * `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIBFHIR-178
 * `.component:clothing.value[x]` ; terminology ; Changed codes in KledingCodelijst. ; ZIB-1704
 
+## BowelFunction
+### zib-BowelFunction, nl-core-BowelFunction
+* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#111989001 to http://snomed.info/sct#300373008. ; ZIB-1581
+
+### zib-BowelFunction.Frequency, nl-core-BowelFunction.Frequency
+* No significant changes.
+
+### zib-BowelFunction.FecalContinence, nl-core-BowelFunction.FecalContinence
+* No significant changes.
+
+### zib-BowelFunction.DefecationConsistency, nl-core-BowelFunction.DefecationConsistency
+* `.value[x]` ; terminnology ; Changed codes in DefecationConsistencyCodelist. ; ZIB-2129
+
+### zib-BowelFunction.DefecationColor, nl-core-BowelFunction.DefecationColor
+* No significant changes.
+
 ## CareTeam (zib-CareTeam, nl-core-CareTeam) 
 * No significant changes.
 

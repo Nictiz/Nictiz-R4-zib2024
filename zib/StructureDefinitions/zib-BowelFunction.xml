@@ -22,7 +22,7 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="zib-bowelfunction-v5.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/BowelFunction-v5.0(2024EN))" />
+    <uri value="https://zibs.nl/wiki/BowelFunction-v5.0(2024EN)" />
     <name value="zib BowelFunction-v5.0(2024EN)" />
   </mapping>
   <kind value="resource" />
@@ -81,7 +81,7 @@
       <definition value="A comment on the BowelFunction." />
       <alias value="Toelichting" />
       <mapping>
-        <identity value="zib-bowelfunction-v3.1.1-2020EN" />
+        <identity value="zib-bowelfunction-v5.0-2024EN" />
         <map value="NL-CM:4.15.7" />
         <comment value="Comment" />
       </mapping>
