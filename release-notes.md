@@ -141,6 +141,16 @@
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
 * No significant changes.
 
+## HearingFunction
+### zib-HearingFunction, nl-core-HearingFunction
+* No significant changes.
+
+### zib-HearingFunction.HearingAid, nl-core-HearingFunction.HearingAid
+* `.bodySite` ; mapping ; Renamed mapping from DeviceAnatomicalLocation to AnatomicalLocation. ; ZIB-1621
+
+### zib-HearingFunction.HearingAid.Product, nl-core-HearingFunction.HearingAid.Product
+* `.code` ; terminology ; Changed codes in HearingAidTypeCodeList. ; ZIB-1575, ZIBFHIR-228
+
 ### zib-HealthcareProvider-Organization, nl-core-HealthcareProvider-Organization
 * `.type:organizationType` ; terminology ; Changed codes in OrganisatieTypeCodelijst. ; ZIB-1559, ZIB-1927
 * `.type:departmentSpecialty` ; terminology ; Changed codes in AfdelingSpecialismeCodelijst. ; ZIB-2218
