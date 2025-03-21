@@ -47,6 +47,15 @@
         <comment value="Specimen" />
       </mapping>
     </element>
+    <element id="Specimen.extension:submitter">
+      <path value="Specimen.extension" />
+      <sliceName value="submitter" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CollectionData.Submitter" />
+      </type>
+      <isModifier value="false" />
+    </element>
     <element id="Specimen.identifier">
       <path value="Specimen.identifier" />
       <short value="SpecimenId" />
@@ -110,6 +119,33 @@
       </type>
       <isModifier value="false" />
     </element>
+    <element id="Specimen.collection.extension:collectionLocation">
+      <path value="Specimen.collection.extension" />
+      <sliceName value="collectionLocation" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CollectionData.CollectionLocation" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Specimen.collection.collector">
+      <path value="Specimen.collection.collector" />
+      <short value="Collector" />
+      <definition value="Health professional that collected the material from the patient. This can also be the health professional who reviews the material after the patient or contact person submits the material." />
+      <alias value="Afnemer" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole" />
+      </type>
+      <mapping>
+        <identity value="zib-collectiondata-v1.0-2024EN" />
+        <map value="NL-CM:22.3.5" />
+        <comment value="Collector" />
+      </mapping>
+    </element>
     <element id="Specimen.collection.collected[x]">
       <path value="Specimen.collection.collected[x]" />
       <slicing>
@@ -139,9 +175,42 @@
       <path value="Specimen.collection.collected[x]" />
       <sliceName value="collectedPeriod" />
       <short value="CollectionPeriod" />
+      <definition value="If the material has not been collected at a single point in time but over a certain period, this period can be captured in this concept. An example is 24 hour urine." />
+      <alias value="Verzamelperiode" />
       <type>
         <code value="Period" />
       </type>
+      <mapping>
+        <identity value="zib-collectiondata-v1.0-2024EN" />
+        <map value="NL-CM:22.3.4" />
+        <comment value="CollectionPeriod" />
+      </mapping>
+    </element>
+    <element id="Specimen.collection.quantity">
+      <path value="Specimen.collection.quantity" />
+      <short value="CollectedVolume" />
+      <definition value="Total volume of the collected material. If it is necessary to determine the absolute amount of a particular substance in the collected material, the volume thereof must be given." />
+      <alias value="Verzamelvolume" />
+      <mapping>
+        <identity value="zib-collectiondata-v1.0-2024EN" />
+        <map value="NL-CM:22.3.9" />
+        <comment value="CollectedVolume" />
+      </mapping>
+    </element>
+    <element id="Specimen.collection.method">
+      <path value="Specimen.collection.method" />
+      <short value="CollectionMethod" />
+      <definition value="If relevant for the results, the method of obtaining the specimen can be entered." />
+      <alias value="Afnameprocedure" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.22.3.1--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-collectiondata-v1.0-2024EN" />
+        <map value="NL-CM:22.3.6" />
+        <comment value="CollectionMethod" />
+      </mapping>
     </element>
     <element id="Specimen.collection.bodySite">
       <path value="Specimen.collection.bodySite" />
@@ -174,6 +243,24 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen-BodyStructure" />
       </type>
+    </element>
+    <element id="Specimen.collection.fastingStatus[x]">
+      <path value="Specimen.collection.fastingStatus[x]" />
+      <short value="FastingStatus" />
+      <definition value="Status regarding the fasting. Has the patient not eaten and/or drunk as was agreed upon prior to the collection of the material. For some tests, it is important for the patient to be fasting." />
+      <alias value="NuchterStatus" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.22.3.2--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-collectiondata-v1.0-2024EN" />
+        <map value="NL-CM:22.3.10" />
+        <comment value="FastingStatus" />
+      </mapping>
     </element>
     <element id="Specimen.container.extension:specimenNumberExtension">
       <path value="Specimen.container.extension" />
@@ -221,6 +308,11 @@
       <mapping>
         <identity value="zib-laboratorytestresult-v7.0-2024EN" />
         <map value="NL-CM:13.1.19" />
+        <comment value="Comment" />
+      </mapping>
+      <mapping>
+        <identity value="zib-collectiondata-v1.0-2024EN" />
+        <map value="NL-CM:22.3.11" />
         <comment value="Comment" />
       </mapping>
     </element>
