@@ -87,7 +87,7 @@
 * No significant changes.
 
 ### zib-BowelFunction.DefecationConsistency, nl-core-BowelFunction.DefecationConsistency
-* `.value[x]` ; terminnology ; Changed codes in DefecationConsistencyCodelist. ; ZIB-2129
+* `.value[x]` ; terminology ; Changed codes in DefecationConsistencyCodelist. ; ZIB-2129
 
 ### zib-BowelFunction.DefecationColor, nl-core-BowelFunction.DefecationColor
 * No significant changes.
