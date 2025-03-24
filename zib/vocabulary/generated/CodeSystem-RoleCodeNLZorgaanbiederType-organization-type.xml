@@ -25,6 +25,7 @@
    <title value="RoleCodeNL - zorgaanbiedertype (organisaties)"/>
    <status value="active"/>
    <experimental value="false"/>
+   <date value="2024-11-14T22:22:34+01:00"/>
    <publisher value="Nictiz"/>
    <contact>
       <name value="Nictiz"/>
@@ -77,6 +78,15 @@
    <concept>
       <code value="AssignedRoleType"/>
       <display value="Een roltype wordt gebruikt om een entiteit verder aan te duiden, die een rol speelt met AssignedEntity als modelattribuut RoleClass."/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Een roltype wordt gebruikt om een entiteit verder aan te duiden, die een rol speelt met AssignedEntity als modelattribuut RoleClass."/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -269,6 +279,15 @@
    <concept>
       <code value="V4"/>
       <display value="Ziekenhuis"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Ziekenhuis"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -293,6 +312,15 @@
    <concept>
       <code value="V5"/>
       <display value="Universitair Medisch Centrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Universitair Medisch Centrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -305,6 +333,15 @@
    <concept>
       <code value="V6"/>
       <display value="Algemeen ziekenhuis"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Algemeen ziekenhuis"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -317,6 +354,15 @@
    <concept>
       <code value="BRA"/>
       <display value="Brandwondencentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Brandwondencentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -333,6 +379,15 @@
    <concept>
       <code value="Z4"/>
       <display value="Zelfstandig behandelcentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Zelfstandig behandelcentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -345,6 +400,15 @@
    <concept>
       <code value="Z5"/>
       <display value="Diagnostisch centrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Diagnostisch centrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -361,6 +425,15 @@
    <concept>
       <code value="B1"/>
       <display value="Beeldvormende diagnostiek"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Beeldvormende diagnostiek"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -381,6 +454,15 @@
    <concept>
       <code value="B2"/>
       <display value="Echocentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Echocentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -393,6 +475,15 @@
    <concept>
       <code value="X3"/>
       <display value="Verplegings- of verzorgingsinstelling"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Verplegings- of verzorgingsinstelling"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -413,6 +504,15 @@
    <concept>
       <code value="M1"/>
       <display value="Verzorgingstehuis"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Verzorgingstehuis"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -425,6 +525,15 @@
    <concept>
       <code value="R5"/>
       <display value="Verpleeghuis"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Verpleeghuis"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -437,6 +546,15 @@
    <concept>
       <code value="G6"/>
       <display value="Verstandelijk gehandicaptenzorg"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Verstandelijk gehandicaptenzorg"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -449,6 +567,15 @@
    <concept>
       <code value="IN15"/>
       <display value="Zorg voor mensen met een beperking"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Zorg voor mensen met een beperking"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="rejected"/>
@@ -469,6 +596,15 @@
    <concept>
       <code value="IN9"/>
       <display value="Woonvoorziening voor lichamelijk gehandicapten"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Woonvoorziening voor lichamelijk gehandicapten"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -485,6 +621,15 @@
    <concept>
       <code value="IN10"/>
       <display value="Woonvoorziening voor verstandelijk gehandicapten"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Woonvoorziening voor verstandelijk gehandicapten"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -501,6 +646,15 @@
    <concept>
       <code value="IN11"/>
       <display value="Woonvoorziening voor visueel gehandicapten"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Woonvoorziening voor visueel gehandicapten"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -517,6 +671,15 @@
    <concept>
       <code value="IN3"/>
       <display value="Instelling voor lichamelijk gehandicapten"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Instelling voor lichamelijk gehandicapten"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -533,6 +696,15 @@
    <concept>
       <code value="IN13"/>
       <display value="Instelling voor verstandelijk gehandicapten"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Instelling voor verstandelijk gehandicapten"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -549,6 +721,15 @@
    <concept>
       <code value="IN2"/>
       <display value="Instelling voor auditief gehandicapten"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Instelling voor auditief gehandicapten"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -565,6 +746,15 @@
    <concept>
       <code value="IN5"/>
       <display value="Instelling voor visueel gehandicapten"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Instelling voor visueel gehandicapten"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -581,6 +771,15 @@
    <concept>
       <code value="IN7"/>
       <display value="Verpleegkundig kinderdagverblijf"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Verpleegkundig kinderdagverblijf"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -597,6 +796,15 @@
    <concept>
       <code value="PM10"/>
       <display value="Orthoptistenpraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Orthoptistenpraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -613,6 +821,15 @@
    <concept>
       <code value="PM11"/>
       <display value="Podologiepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Podologiepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -629,6 +846,15 @@
    <concept>
       <code value="Z27"/>
       <display value="Pedicurepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Pedicurepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -645,6 +871,15 @@
    <concept>
       <code value="PM12"/>
       <display value="Podotherapiepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Podotherapiepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -661,6 +896,15 @@
    <concept>
       <code value="PM3"/>
       <display value="Diëtistenpraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Diëtistenpraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -677,6 +921,15 @@
    <concept>
       <code value="PM4"/>
       <display value="Ergotherapiepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Ergotherapiepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -693,6 +946,15 @@
    <concept>
       <code value="PM6"/>
       <display value="Huidtherapiepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Huidtherapiepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -709,6 +971,15 @@
    <concept>
       <code value="PM7"/>
       <display value="Logopediepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Logopediepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -725,6 +996,15 @@
    <concept>
       <code value="PM8"/>
       <display value="Oefentherapiepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Oefentherapiepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -741,6 +1021,15 @@
    <concept>
       <code value="PM9"/>
       <display value="Optometriepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Optometriepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -757,6 +1046,15 @@
    <concept>
       <code value="Z10"/>
       <display value="Bloedbank"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Bloedbank"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -773,6 +1071,15 @@
    <concept>
       <code value="A1"/>
       <display value="Apotheekinstelling"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Apotheekinstelling"/>
+      </designation>
       <designation>
          <language value="nl-NL"/>
          <use>
@@ -802,6 +1109,15 @@
    <concept>
       <code value="J8"/>
       <display value="Openbare apotheek"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Openbare apotheek"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -814,6 +1130,15 @@
    <concept>
       <code value="K9"/>
       <display value="Zelfstandig opererende ziekenhuisapotheek"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Zelfstandig opererende ziekenhuisapotheek"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -826,6 +1151,15 @@
    <concept>
       <code value="H1"/>
       <display value="Huisartsinstelling"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Huisartsinstelling"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -853,6 +1187,15 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
          </use>
+         <value value="Huisartspraktijk (zelfstandig of groepspraktijk)"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
          <value value="Huisartsenpraktijk"/>
       </designation>
       <property>
@@ -871,6 +1214,15 @@
    <concept>
       <code value="K3"/>
       <display value="Apotheekhoudende huisartspraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Apotheekhoudende huisartspraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -883,6 +1235,15 @@
    <concept>
       <code value="N6"/>
       <display value="Huisartsenpost (t.b.v. dienstwaarneming)"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Huisartsenpost (t.b.v. dienstwaarneming)"/>
+      </designation>
       <designation>
          <language value="nl-NL"/>
          <use>
@@ -904,6 +1265,15 @@
    <concept>
       <code value="L1"/>
       <display value="Laboratorium"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Laboratorium"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -916,6 +1286,15 @@
    <concept>
       <code value="P4"/>
       <display value="Polikliniek (als onderdeel van een ziekenhuis)"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Polikliniek (als onderdeel van een ziekenhuis)"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -928,6 +1307,15 @@
    <concept>
       <code value="P6"/>
       <display value="Preventieve gezondheidszorg (waaronder Bevolkingsonderzoek)"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Preventieve gezondheidszorg (waaronder Bevolkingsonderzoek)"/>
+      </designation>
       <designation>
          <language value="nl-NL"/>
          <use>
@@ -957,6 +1345,15 @@
    <concept>
       <code value="JGZ"/>
       <display value="Jeugdgezondheidszorg"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Jeugdgezondheidszorg"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -969,6 +1366,15 @@
    <concept>
       <code value="B4"/>
       <display value="Bevolkingsonderzoek kanker"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Bevolkingsonderzoek kanker"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -986,6 +1392,15 @@
       <code value="C3"/>
       <display value="Complementaire zorg"/>
       <definition value="Complementaire zorg is aanvullende zorg, die gegeven wordt naast de reguliere zorg die u krijgt voor uw aandoening. Complementaire zorg gaat uit van een holistische benadering waarbij de zorg de lichamelijke, emotionele, mentale, spirituele en sociale behoeften omvat.&#xA;                        Complementaire zorg kan vermindering geven van klachten zoals pijn, misselijkheid, braken, angst, vermoeidheid en slaapproblemen. Daarnaast richt complementaire zorg zich vooral op het bevorderen van ontspanning en comfort; De zorg is niet klachtgericht maar gezondheidgericht. (Bron V&amp;VN)"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Complementaire zorg"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1002,6 +1417,15 @@
    <concept>
       <code value="G5"/>
       <display value="Geestelijke Gezondheidszorg"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Geestelijke Gezondheidszorg"/>
+      </designation>
       <designation>
          <language value="nl-NL"/>
          <use>
@@ -1035,6 +1459,15 @@
    <concept>
       <code value="G7"/>
       <display value="Psychologiepraktijk en psychotherapiepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Psychologiepraktijk en psychotherapiepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1051,6 +1484,15 @@
    <concept>
       <code value="G8"/>
       <display value="Psychiatriepraktijk zorg"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Psychiatriepraktijk zorg"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1068,6 +1510,15 @@
       <code value="V7"/>
       <display value="PUK / PAAZ afdeling ziekenhuis"/>
       <definition value="Psychiatrische afdeling van het algemeen ziekenhuis (PAAZ) en psychiatrische universitaire kliniek (PUK)"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="PUK / PAAZ afdeling ziekenhuis"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1084,6 +1535,15 @@
    <concept>
       <code value="G9"/>
       <display value="Gemeentelijke gezondheidsdienst"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Gemeentelijke gezondheidsdienst"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1100,6 +1560,15 @@
    <concept>
       <code value="G1"/>
       <display value="Verslavingszorg"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Verslavingszorg"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1112,6 +1581,15 @@
    <concept>
       <code value="T2"/>
       <display value="Thuiszorg"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Thuiszorg"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1124,6 +1602,15 @@
    <concept>
       <code value="K4"/>
       <display value="Kraamzorg"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Kraamzorg"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1140,6 +1627,15 @@
    <concept>
       <code value="H2"/>
       <display value="Hospice"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Hospice"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1163,6 +1659,15 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
          </use>
+         <value value="Verloskundigenpraktijk"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
          <value value="Verloskundepraktijk"/>
       </designation>
       <property>
@@ -1177,6 +1682,15 @@
    <concept>
       <code value="GC"/>
       <display value="Geboortecentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Geboortecentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1193,6 +1707,15 @@
    <concept>
       <code value="JZ"/>
       <display value="Jeugdzorg"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Jeugdzorg"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1209,6 +1732,15 @@
    <concept>
       <code value="F1"/>
       <display value="Fysiotherapiepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Fysiotherapiepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1222,6 +1754,15 @@
       <code value="SC"/>
       <display value="Specialistisch Centrum"/>
       <definition value="Categorale instellingen/ziekenhuizen (MSZ-instellingen voor een specifieke diagnose/ziekte of patiëntengroep). Het zijn geen (algemene) ziekenhuizen en ook geen zelfstandige klinieken (ZBC’s). Voorbeelden: &#xA;                        St Maartenskliniek: behandelt patiënten met aandoeningen aan het bewegingsapparaat&#xA;                        Antonie van Leeuwenziekenhuis: behandelt kankerpatiënten&#xA;                        Prinses Maxima Centrum: behandelt kinderen met kanker&#xA;                        SEIN: behandelt patiënten met epilepsie"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Specialistisch Centrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1338,6 +1879,15 @@
    <concept>
       <code value="Z26"/>
       <display value="Transplantatie organisatie"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Transplantatie organisatie"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1354,6 +1904,15 @@
    <concept>
       <code value="R8"/>
       <display value="Revalidatiecentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Revalidatiecentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1366,6 +1925,15 @@
    <concept>
       <code value="DIA"/>
       <display value="Dialysecentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Dialysecentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1378,6 +1946,15 @@
    <concept>
       <code value="TD"/>
       <display value="Trombosedienst"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Trombosedienst"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1394,6 +1971,15 @@
    <concept>
       <code value="B3"/>
       <display value="Radiotherapeutisch centrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Radiotherapeutisch centrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1410,6 +1996,15 @@
    <concept>
       <code value="Z12"/>
       <display value="Cardiologiecentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Cardiologiecentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1426,6 +2021,15 @@
    <concept>
       <code value="Z14"/>
       <display value="Epilepsiekliniek"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Epilepsiekliniek"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1442,6 +2046,15 @@
    <concept>
       <code value="Z15"/>
       <display value="Esthetisch-medisch centrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Esthetisch-medisch centrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1458,6 +2071,15 @@
    <concept>
       <code value="Z16"/>
       <display value="Flebologiecentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Flebologiecentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1474,6 +2096,15 @@
    <concept>
       <code value="Z17"/>
       <display value="Forensisch centrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Forensisch centrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1490,6 +2121,15 @@
    <concept>
       <code value="Z18"/>
       <display value="Handcentrum en polscentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Handcentrum en polscentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1506,6 +2146,15 @@
    <concept>
       <code value="Z19"/>
       <display value="Kankercentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Kankercentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1522,6 +2171,15 @@
    <concept>
       <code value="Z20"/>
       <display value="Oogkliniek"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Oogkliniek"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1538,6 +2196,15 @@
    <concept>
       <code value="Z21"/>
       <display value="Pijncentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Pijncentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1554,6 +2221,15 @@
    <concept>
       <code value="Z22"/>
       <display value="Psycho-oncologisch centrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Psycho-oncologisch centrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1570,6 +2246,15 @@
    <concept>
       <code value="Z23"/>
       <display value="Sportmedisch centrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Sportmedisch centrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1586,6 +2271,15 @@
    <concept>
       <code value="Z24"/>
       <display value="Trombosedienst"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Trombosedienst"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1602,6 +2296,15 @@
    <concept>
       <code value="Z25"/>
       <display value="IVF-kliniek"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="IVF-kliniek"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1618,6 +2321,15 @@
    <concept>
       <code value="Z6"/>
       <display value="Abortuskliniek"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Abortuskliniek"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1634,6 +2346,15 @@
    <concept>
       <code value="Z7"/>
       <display value="Astmacentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Astmacentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1650,6 +2371,15 @@
    <concept>
       <code value="Z8"/>
       <display value="Audiologisch centrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Audiologisch centrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1666,6 +2396,15 @@
    <concept>
       <code value="Z9"/>
       <display value="Besnijdeniscentrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Besnijdeniscentrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1682,6 +2421,15 @@
    <concept>
       <code value="PM13"/>
       <display value="Centrum voor eetstoornissen"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Centrum voor eetstoornissen"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1698,6 +2446,15 @@
    <concept>
       <code value="PM14"/>
       <display value="Centrum voor orthopedie en beweging"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Centrum voor orthopedie en beweging"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1714,6 +2471,15 @@
    <concept>
       <code value="PM15"/>
       <display value="Dermatologisch centrum"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Dermatologisch centrum"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1730,6 +2496,15 @@
    <concept>
       <code value="TA1"/>
       <display value="Tandartsinstelling"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Tandartsinstelling"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1766,6 +2541,15 @@
    <concept>
       <code value="TA2"/>
       <display value="Tandartspraktijk (zelfstandig of groepspraktijk)"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Tandartspraktijk (zelfstandig of groepspraktijk)"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1782,6 +2566,15 @@
    <concept>
       <code value="TA3"/>
       <display value="Centrum voor bijzondere tandheelkunde"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Centrum voor bijzondere tandheelkunde"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1798,6 +2591,15 @@
    <concept>
       <code value="TA4"/>
       <display value="Tandprotethische praktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Tandprotethische praktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1814,6 +2616,15 @@
    <concept>
       <code value="TA5"/>
       <display value="Orthodontiepraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Orthodontiepraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1830,6 +2641,15 @@
    <concept>
       <code value="TA6"/>
       <display value="Mondhygiënistenpraktijk"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Mondhygiënistenpraktijk"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="draft"/>
@@ -1847,6 +2667,15 @@
       <code value="ZG"/>
       <display value="Zorggroep"/>
       <definition value="Zorggroep &#xA;                        Organisaties die met zorgverzekeraars contracten sluiten om de chronische zorg in een bepaalde regio te coördineren en uit te voeren met als doelstelling de kwaliteit van zorg te verbeteren (definitie van LVG).&#xA;                        Organisatie met rechtspersoonlijkheid waarin zorgaanbieders zijn verenigd. Met de term ‘zorggroep’ wordt de hoofdcontractant van het keten-DBC-contract bedoeld en niet het team van zorgverleners dat de feitelijke zorg verleent (definitie van ZonMw)."/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Zorggroep"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -1863,6 +2692,15 @@
    <concept>
       <code value="AMB"/>
       <display value="Regionale ambulancevoorzieningen"/>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Regionale ambulancevoorzieningen"/>
+      </designation>
       <designation>
          <language value="nl-NL"/>
          <use>
