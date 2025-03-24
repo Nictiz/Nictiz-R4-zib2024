@@ -133,12 +133,6 @@ zib-ContactInformation-TelephoneNumbers:
       - cardinality: 1..1 instead of 0..1
         reason: Although TelecomType and NumberType are optional in the zib, ContactPoint.system is used to identify the TelephoneNumbers concept itself when this datatype is added to a profile. If only a telephone number is given without TelecomType and NumberType, it will fall in the default slice of the sliced element with datatype ContactPoint.
 
-zib-CollectionData:
-  zib deviations:
-    Specimen.collection.collected[x]:collectedPeriod:
-      - datatype: Period instead of a reference
-        reason: Zib TimeInterval is directly mapped onto Specimen.collection.collectedPeriod and Specimen.collection.duration, as this matches the way these concepts are used in FHIR. 
-
 zib-ContactPerson:
   zib deviations:
     RelatedPerson.name:
@@ -283,6 +277,10 @@ zib-LaboratoryTestResult.Specimen:
     Specimen.collection.bodySite:
       - datatype: CodeableConcept instead of a reference
         reason: Zib AnatomicalLocation is implemented as a datatype profile on CodeableConcept, so the datatype is not a Reference.
+    Specimen.collection.collected[x]:collectedPeriod:
+      - datatype: Period instead of Reference
+        for: NL-CM:22.3.4 (CollectionData.CollectionPeriod)
+        reason: Zib TimeInterval is directly mapped onto Specimen.collection.collectedPeriod and Specimen.collection.duration, as this matches the way these concepts are used in FHIR. 
     Specimen.container.extension:specimenNumberExtension.value[x]:
       - cardinality: 1..1 instead of 0..1
         reason: The value in the extension is 1..1, but the extension itself is 0..1, effectively matching the zib cardinality.
