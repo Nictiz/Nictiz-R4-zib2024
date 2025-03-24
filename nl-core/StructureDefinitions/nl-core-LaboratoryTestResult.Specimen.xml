@@ -25,6 +25,11 @@
     <uri value="https://zibs.nl/wiki/LaboratoryTestResult-v7.0(2024EN)" />
     <name value="zib LaboratoryTestResult-v7.0(2024EN)" />
   </mapping>
+  <mapping>
+    <identity value="zib-collectiondata-v1.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/CollectionData-v1.0(2024EN)" />
+    <name value="zib CollectionData-v1.0(2024EN)" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Specimen" />
@@ -54,6 +59,19 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-LaboratoryTestResult.Specimen" />
+      </type>
+    </element>
+    <element id="Specimen.collection.collector">
+      <path value="Specimen.collection.collector" />
+      <short value="A reference from one resource to another" />
+      <definition value="A reference from one resource to another." />
+      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the nl-core-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
       </type>
     </element>
     <element id="Specimen.collection.bodySite">

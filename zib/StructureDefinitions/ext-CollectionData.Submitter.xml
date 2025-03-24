@@ -49,7 +49,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson" />
       </type>
       <mapping>
-        <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+        <identity value="zib-collectiondata-v1.0-2024EN" />
         <map value="NL-CM:22.3.8" />
         <comment value="Submitter" />
       </mapping>
