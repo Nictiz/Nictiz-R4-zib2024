@@ -133,6 +133,12 @@ zib-ContactInformation-TelephoneNumbers:
       - cardinality: 1..1 instead of 0..1
         reason: Although TelecomType and NumberType are optional in the zib, ContactPoint.system is used to identify the TelephoneNumbers concept itself when this datatype is added to a profile. If only a telephone number is given without TelecomType and NumberType, it will fall in the default slice of the sliced element with datatype ContactPoint.
 
+zib-CollectionData:
+  zib deviations:
+    Specimen.collection.collected[x]:collectedPeriod:
+      - datatype: Period instead of a reference
+        reason: Zib TimeInterval is directly mapped onto Specimen.collection.collectedPeriod and Specimen.collection.duration, as this matches the way these concepts are used in FHIR. 
+
 zib-ContactPerson:
   zib deviations:
     RelatedPerson.name:
