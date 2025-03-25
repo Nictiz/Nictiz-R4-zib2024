@@ -306,6 +306,17 @@ zib-NameInformation.GivenName:
       - cardinality: 1..* instead of 0..1
         reason: The GivenName is optional according to the zib, but when this datatype profile is used, a name should be provided.
 
+zib-NutritionAdvice:
+  zib deviations:
+    NutritionOrder.oralDiet.texture.modifier:
+      - datatype: CodeableConcept instead of ST
+        reason: Together with HL7 NL and the zib centre, it has been decided that the flattened string concept from the zib is mapped to multiple coded elements in FHIR. See the comment on this element for details.
+    NutritionOrder.oralDiet.fluidConsistencyType:
+      - datatype: CodeableConcept instead of ST
+        reason: Together with HL7 NL and the zib centre, it has been decided that the flattened string concept from the zib is mapped to multiple coded elements in FHIR. See the comment on this element for details.
+      - cardinality: 0..* instead of 0..1
+        reason: Together with HL7 NL and the zib centre, it has been decided that the flattened string concept from the zib is mapped to multiple coded elements in FHIR. See the comment on this element for details.
+
 zib-O2Saturation:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
