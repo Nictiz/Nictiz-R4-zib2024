@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ext-FreedomRestrictingIntervention.LegallyCapable" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/ext-FreedomRestrictingIntervention.LegallyCapable" />
   <name value="ExtFreedomRestrictingInterventionLegallyCapable" />
   <title value="ext FreedomRestrictingIntervention.LegallyCapable" />
@@ -46,21 +44,9 @@
         <expression value="extension.where(url='legallyCapable').value = false implies extension.where(url='legallyCapableComment').value.exists()" />
       </constraint>
     </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Extension.extension:legallyCapable">
       <path value="Extension.extension" />
       <sliceName value="legallyCapable" />
-      <min value="0" />
       <max value="1" />
       <condition value="zib-FreedomRestrictingIntervention-01" />
     </element>
@@ -86,7 +72,6 @@
     <element id="Extension.extension:legallyCapableComment">
       <path value="Extension.extension" />
       <sliceName value="legallyCapableComment" />
-      <min value="0" />
       <max value="1" />
       <condition value="zib-FreedomRestrictingIntervention-01" />
     </element>
@@ -97,7 +82,7 @@
     <element id="Extension.extension:legallyCapableComment.value[x]">
       <path value="Extension.extension.value[x]" />
       <short value="LegallyCapableComment" />
-      <definition value="Comment on the decisions which the patient is legally capable of making." />
+      <definition value="Comment on the decisions which the patient is legally capable of making. The comment contains at least the reason why the person is incompetent to act for oneself." />
       <alias value="WilsbekwaamToelichting" />
       <type>
         <code value="string" />
