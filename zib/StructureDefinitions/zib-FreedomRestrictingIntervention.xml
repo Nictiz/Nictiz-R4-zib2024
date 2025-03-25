@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-FreedomRestrictingIntervention" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention" />
   <name value="ZibFreedomRestrictingIntervention" />
   <title value="zib FreedomRestrictingIntervention" />
@@ -19,13 +17,13 @@
     </telecom>
   </contact>
   <description value="Freedom restricting interventions are interventions that are used against the will of the person concerned and that consciously restrict the person's freedom to protect the person or his environment. This definition includes many forms of freedom restriction, such as (not exhaustive)&#xD;&#xA;&#xD;&#xA;* Forced administration of fluid and nutrition&#xD;&#xA;* Forced administration of medication&#xD;&#xA;* Performing medical checks or other medical procedures&#xD;&#xA;* Restricting freedom of movement&#xD;&#xA;* Admitting to an accommodation and secluding when admitted to an accommodation.&#xD;&#xA;* Exercising supervision&#xD;&#xA;* Searching of clothing or body&#xD;&#xA;* Restriction of visitors and the use of communication means&#xD;&#xA;&#xD;&#xA;In the hospital, it is usually about restricting the freedom of movement, for example by using bed rails, moving a chair near to the table or using an arm splint for infusion. In combination with freedom-restricting interventions, soothing medication can be administered. In the case of small children, it is often a question of fixing hands, for example, to prevent a stomach tube from being pulled out.&#xD;&#xA;For nurses to use it in hospitals, Dutch Nurses Association (V&amp;VN) published a guideline [ref. 3].&#xD;&#xA;In mental health care, care for the disabled and psychogeriatric care, it always concerns care that is used against the will of the patient.&#xD;&#xA;The legal framework for using these interventions is (per 1-1-2020) governed by two laws, namely:&#xD;&#xA;&#xD;&#xA;* The Wet verplichte ggz (Wvggz: Mandatory Care In Mental Health Act) for people with psychiatric disorders&#xD;&#xA;* The Wet zorg en dwang (Wzd: Care and Compulsion Act) for people with intellectual disabilities and people with a psychogeriatric disorder, such as dementia.&#xD;&#xA;&#xD;&#xA;The Wvggz refers to the term compulsory care, while the Wzd uses the term involuntary care.&#xD;&#xA;A national registration system, the Argus registration, is used to register the interventions in the context of the Wvggz." />
-  <purpose value="This Procedure resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) FreedomRestrictingIntervention v1.0 (2020)](https://zibs.nl/wiki/FreedomRestrictingIntervention-v1.0(2020EN))." />
+  <purpose value="This Procedure resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) FreedomRestrictingIntervention v1.3 (2024)](https://zibs.nl/wiki/FreedomRestrictingIntervention-v1.3(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
-    <uri value="https://zibs.nl/wiki/FreedomRestrictingIntervention-v1.0(2020EN)" />
-    <name value="zib FreedomRestrictingIntervention-v1.0(2020EN)" />
+    <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
+    <uri value="https://zibs.nl/wiki/FreedomRestrictingIntervention-v1.3(2024EN)" />
+    <name value="zib FreedomRestrictingIntervention-v1.3(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -38,7 +36,7 @@
       <short value="FreedomRestrictingIntervention" />
       <alias value="VrijheidsbeperkendeInterventie" />
       <mapping>
-        <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
+        <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
         <map value="NL-CM:14.6.1" />
         <comment value="FreedomRestrictingIntervention" />
       </mapping>
@@ -65,12 +63,12 @@
       <path value="Procedure.status" />
       <comment value="This element is implictly mapped to the zib concepts NL-CM:14.6.8 (Start) and NL-CM:14.6.9 (End). Unless the status is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;* When Start is in the future, `.status` will usually be set to _preparation_.&#xD;&#xA;* When Start is in the past and End is present and in the future, `.status` will usually be set to _in-progress_.&#xD;&#xA;* When End is present and in the past, `.status` will usually be set to _completed_.&#xD;&#xA;* When End is not present, this means it was a point-in-time procedure and `.status` will usually be set to _completed_.&#xD;&#xA;* When a system is unable to infer the status from the Start and End, `.status` will be set to _unknown_.&#xD;&#xA;&#xD;&#xA;The _unknown_ code is not to be used to convey other statuses.  The _unknown_ code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.&#xA;&#xA;This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." />
       <mapping>
-        <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
+        <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
         <map value="NL-CM:14.6.8" />
         <comment value="Start (implicit, main mapping is on `Procedure.performedPeriod`)" />
       </mapping>
       <mapping>
-        <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
+        <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
         <map value="NL-CM:14.6.9" />
         <comment value="End (implicit, main mapping is on `Procedure.performedPeriod`)" />
       </mapping>
@@ -81,7 +79,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="225317005" />
+          <code value="225214000" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -92,10 +90,10 @@
       <alias value="SoortInterventie" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.20--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.20--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
+        <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
         <map value="NL-CM:14.6.5" />
         <comment value="TypeOfIntervention" />
       </mapping>
@@ -123,7 +121,7 @@
       <definition value="The date and time on which the intervention was started for duration registrations." />
       <alias value="Begin" />
       <mapping>
-        <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
+        <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
         <map value="NL-CM:14.6.8" />
         <comment value="Start" />
       </mapping>
@@ -134,7 +132,7 @@
       <definition value="The date and time at which the intervention ended." />
       <alias value="Einde" />
       <mapping>
-        <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
+        <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
         <map value="NL-CM:14.6.9" />
         <comment value="End" />
       </mapping>
@@ -149,7 +147,7 @@
         <code value="dateTime" />
       </type>
       <mapping>
-        <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
+        <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
         <map value="NL-CM:14.6.8" />
         <comment value="Start" />
       </mapping>
@@ -162,10 +160,10 @@
       <max value="1" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.5.4--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.6.4--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
+        <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
         <map value="NL-CM:14.6.6" />
         <comment value="ReasonForUse" />
       </mapping>
@@ -192,7 +190,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-LegalStatus" />
       </type>
       <mapping>
-        <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
+        <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
         <map value="NL-CM:14.6.4" />
         <comment value="LegalSituation" />
       </mapping>
@@ -209,7 +207,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-Representation" />
       </type>
       <mapping>
-        <identity value="zib-freedomrestrictingintervention-v1.0-2020EN" />
+        <identity value="zib-freedomrestrictingintervention-v1.3-2024EN" />
         <map value="NL-CM:14.6.4" />
         <comment value="LegalSituation" />
       </mapping>
