@@ -151,7 +151,7 @@
 
 ## FreedomRestrichtingIntervention (zib-FreedomRestrictingIntervention, nl-core-FreedomRestrictingIntervention)
 * `.category` ; terminology ; Pattern changed from http://snomed.info/sct#225317005 to http://snomed.info/sct#225214000. ; ZIB-1611
-* `.code`; terminology ; Changed codes in TypeOfInterventionCodelist ; ZIB-1826
+* `.code` ; terminology ; Changed codes in TypeOfInterventionCodelist ; ZIB-1826
 * `.extension:legallyCapable.extension:legallyCapableComment.value[x]` ; textual ; Refined guidance for LegallyCapableComment ; ZIB-1297
 
 ## GlasgowComaScale (zib-GlasgowComaScale, nl-core-GlasgowComaScale)
