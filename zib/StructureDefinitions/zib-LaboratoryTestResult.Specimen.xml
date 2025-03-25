@@ -1,182 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-LaboratoryTestResult.Specimen"/>
+  <id value="zib-LaboratoryTestResult.Specimen" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen"/>
-  <name value="ZibLaboratoryTestResultSpecimen"/>
-  <title value="zib LaboratoryTestResult.Specimen"/>
-  <status value="draft"/>
-  <publisher value="Nictiz"/>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen" />
+  <name value="ZibLaboratoryTestResultSpecimen" />
+  <title value="zib LaboratoryTestResult.Specimen" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
   <contact>
-    <name value="Nictiz"/>
+    <name value="Nictiz" />
     <telecom>
-      <system value="url"/>
-      <value value="https://www.nictiz.nl"/>
-      <use value="work"/>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
     </telecom>
   </contact>
-  <description value="Obtained specimen material or a microbial isolate that is used in a laboratory analysis."/>
-  <purpose value="This Specimen resource represents the Specimen concept of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) LaboratoryTestResult v7.0 (2024)](https://zibs.nl/wiki/LaboratoryTestResult-v7.0(2024EN))."/>
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-  <fhirVersion value="4.0.1"/>
+  <description value="Obtained specimen material or a microbial isolate that is used in a laboratory analysis." />
+  <purpose value="This Specimen resource represents the Specimen concept of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) LaboratoryTestResult v7.0 (2024)](https://zibs.nl/wiki/LaboratoryTestResult-v7.0(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-laboratorytestresult-v7.0-2024EN"/>
-    <uri value="https://zibs.nl/wiki/LaboratoryTestResult-v7.0(2024EN)"/>
-    <name value="zib LaboratoryTestResult-v7.0(2024EN)"/>
+    <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/LaboratoryTestResult-v7.0(2024EN)" />
+    <name value="zib LaboratoryTestResult-v7.0(2024EN)" />
   </mapping>
-  <kind value="resource"/>
-  <abstract value="true"/>
-  <type value="Specimen"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
-  <derivation value="constraint"/>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="Specimen" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Specimen" />
+  <derivation value="constraint" />
   <differential>
     <element id="Specimen">
-      <path value="Specimen"/>
-      <short value="Specimen"/>
-      <comment value="The Specimen concept from Dutch zib LaboratoryTestResult contains a concept for SpecimenMaterial and for Microorganism (isolated from the specimen material). These two concepts cannot be represented in the same Specimen resources; if there's a need to communicate both the microorganism and the sample material from which it was isolated, two instances need to be used. The instance representing the microorganism should refer in this case to the instance representing the sample material using `Specimen.parent`. All other zib concepts should be repeated in both resources.&#xD;&#xA;&#xD;&#xA;If the TestCode implicitly also describes a specimen (often the case if coded in LOINC), elements within the concept specimen may not conflict with it. However, if desired, these data can provide a more detailed description.This is in line with the agreements made in the IHE/Nictiz e-Lab programme.&#xD;&#xA;&#xD;&#xA;The following concepts have been moved to zib CollectionData (http://nictiz.nl/fhir/StructureDefinition/zib-CollectionData):&#xD;&#xA;* CollectedVolume (NL-CM:13.1.23)&#xD;&#xA;* CollectionPeriod (NL-CM:13.1.24)&#xD;&#xA;* CollectionDateTime NL-CM:13.1.17)&#xD;&#xA;* ReceivedDateTime (NL-CM:13.1.25)&#xD;&#xA;* CollectionMethod (NL-CM:13.1.18)"/>
-      <alias value="Monster"/>
+      <path value="Specimen" />
+      <short value="Specimen" />
+      <comment value="The Specimen concept from Dutch zib LaboratoryTestResult contains a concept for SpecimenMaterial and for Microorganism (isolated from the specimen material). These two concepts cannot be represented in the same Specimen resources; if there's a need to communicate both the microorganism and the sample material from which it was isolated, two instances need to be used. The instance representing the microorganism should refer in this case to the instance representing the sample material using `Specimen.parent`. All other zib concepts should be repeated in both resources.&#xD;&#xA;&#xD;&#xA;If the TestCode implicitly also describes a specimen (often the case if coded in LOINC), elements within the concept specimen may not conflict with it. However, if desired, these data can provide a more detailed description.This is in line with the agreements made in the IHE/Nictiz e-Lab programme.&#xD;&#xA;&#xD;&#xA;The following concepts have been moved to zib CollectionData (http://nictiz.nl/fhir/StructureDefinition/zib-CollectionData):&#xD;&#xA;* CollectedVolume (NL-CM:13.1.23)&#xD;&#xA;* CollectionPeriod (NL-CM:13.1.24)&#xD;&#xA;* CollectionDateTime NL-CM:13.1.17)&#xD;&#xA;* ReceivedDateTime (NL-CM:13.1.25)&#xD;&#xA;* CollectionMethod (NL-CM:13.1.18)" />
+      <alias value="Monster" />
       <mapping>
-        <identity value="zib-laboratorytestresult-v7.0-2024EN"/>
-        <map value="NL-CM:13.1.2"/>
-        <comment value="Specimen"/>
+        <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+        <map value="NL-CM:13.1.2" />
+        <comment value="Specimen" />
       </mapping>
     </element>
     <element id="Specimen.identifier">
-      <path value="Specimen.identifier"/>
-      <short value="SpecimenId"/>
-      <definition value="Identification number of the material obtained, as a reference for inquiries to the source organization. In a transmural setting, this number will consist of a specimen number including the identification of the issuing organization, to be unique outside of the borders of an organization."/>
-      <alias value="Monsternummer"/>
+      <path value="Specimen.identifier" />
+      <short value="SpecimenId" />
+      <definition value="Identification number of the material obtained, as a reference for inquiries to the source organization. In a transmural setting, this number will consist of a specimen number including the identification of the issuing organization, to be unique outside of the borders of an organization." />
+      <alias value="Monsternummer" />
       <mapping>
-        <identity value="zib-laboratorytestresult-v7.0-2024EN"/>
-        <map value="NL-CM:13.1.15"/>
-        <comment value="SpecimenId"/>
+        <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+        <map value="NL-CM:13.1.15" />
+        <comment value="SpecimenId" />
       </mapping>
     </element>
     <element id="Specimen.type">
-      <path value="Specimen.type"/>
-      <short value="Microorganism / SpecimenMaterial"/>
-      <definition value="* In particular in microbiological determinations the subject of the test is an isolate of a certain microorganism rather then a material. This concept provides the ability to capture information about this microorganism.&#xD;&#xA;* SpecimenMaterial describes the base material taken. For example: Plasma, Urine, Saliva etc. This element refers to the Substance hierarchy in Snomed."/>
-      <comment value="The Specimen concept from Dutch zib LaboratoryTestResult contains a concept for SpecimenMaterial and for Microorganism (isolated from the specimen material). These two concepts cannot be represented in the same Specimen resource; this `Specimen.type` element defines which of the two concepts is represented.&#xD;&#xA;&#xD;&#xA;If there's a need to communicate both the microorganism and the sample material from which it was isolated, two instances need to be used. The instance representing the microorganism should refer in this case to the instance respresenting the sample material using `Specimen.parent`."/>
-      <alias value="Microorganisme"/>
-      <alias value="Monstermateriaal"/>
+      <path value="Specimen.type" />
+      <short value="Microorganism / SpecimenMaterial" />
+      <definition value="* In particular in microbiological determinations the subject of the test is an isolate of a certain microorganism rather then a material. This concept provides the ability to capture information about this microorganism.&#xD;&#xA;* SpecimenMaterial describes the base material taken. For example: Plasma, Urine, Saliva etc. This element refers to the Substance hierarchy in Snomed." />
+      <comment value="The Specimen concept from Dutch zib LaboratoryTestResult contains a concept for SpecimenMaterial and for Microorganism (isolated from the specimen material). These two concepts cannot be represented in the same Specimen resource; this `Specimen.type` element defines which of the two concepts is represented.&#xD;&#xA;&#xD;&#xA;If there's a need to communicate both the microorganism and the sample material from which it was isolated, two instances need to be used. The instance representing the microorganism should refer in this case to the instance respresenting the sample material using `Specimen.parent`." />
+      <alias value="Microorganisme" />
+      <alias value="Monstermateriaal" />
       <binding>
-        <strength value="required"/>
-        <valueSet value="http://nictiz.nl/fhir/ValueSet/Monstermateriaal-en-Microorganisme-Codelijsten"/>
+        <strength value="required" />
+        <valueSet value="http://nictiz.nl/fhir/ValueSet/Monstermateriaal-en-Microorganisme-Codelijsten" />
       </binding>
       <mapping>
-        <identity value="zib-laboratorytestresult-v7.0-2024EN"/>
-        <map value="NL-CM:13.1.16"/>
-        <comment value="SpecimenMaterial"/>
+        <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+        <map value="NL-CM:13.1.16" />
+        <comment value="SpecimenMaterial" />
       </mapping>
       <mapping>
-        <identity value="zib-laboratorytestresult-v7.0-2024EN"/>
-        <map value="NL-CM:13.1.22"/>
-        <comment value="Microorganism"/>
+        <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+        <map value="NL-CM:13.1.22" />
+        <comment value="Microorganism" />
       </mapping>
     </element>
     <element id="Specimen.parent">
-      <path value="Specimen.parent"/>
-      <comment value="When this resource represents a microorganism (that is, `Specimen.type` represents the zib concept Microorganism (NL-CM:13.1.22) and contains a code from MicroorganismeCodelijst), this reference can be used to refer to the source material from which it was isolated. In this case, the referenced resource should have `Specimen.type` represent the zib concept SpecimenMaterial (NL-CM:13.1.16) and contain a code from MonstermateriaalCodelijst."/>
+      <path value="Specimen.parent" />
+      <comment value="When this resource represents a microorganism (that is, `Specimen.type` represents the zib concept Microorganism (NL-CM:13.1.22) and contains a code from MicroorganismeCodelijst), this reference can be used to refer to the source material from which it was isolated. In this case, the referenced resource should have `Specimen.type` represent the zib concept SpecimenMaterial (NL-CM:13.1.16) and contain a code from MonstermateriaalCodelijst." />
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen" />
       </type>
     </element>
     <element id="Specimen.collection.extension:specimenSource">
-      <path value="Specimen.collection.extension"/>
-      <sliceName value="specimenSource"/>
-      <max value="1"/>
+      <path value="Specimen.collection.extension" />
+      <sliceName value="specimenSource" />
+      <comment value="The use of this extension is chosen over `Specimen.subject` because the latter would be excessive for representing SpecimenSource (NL-CM:13.1.29) concept, and the extension provides a simpler, more appropriate mapping." />
+      <max value="1" />
       <type>
-        <code value="Extension"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResult.SpecimenSource"/>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResult.SpecimenSource" />
       </type>
-      <isModifier value="false"/>
-    </element>
-    <element id="Specimen.collection.extension:specimenSource.url">
-      <path value="Specimen.collection.extension.url"/>
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LaboratoryTestResult.SpecimenSource"/>
+      <isModifier value="false" />
     </element>
     <element id="Specimen.collection.bodySite">
-      <path value="Specimen.collection.bodySite"/>
+      <path value="Specimen.collection.bodySite" />
       <short value="Location / AnatomicalLocation" />
       <definition value="Anatomic location where the material is collected, e.g. elbow." />
-      <comment value="In cases where only the location is required, or where laterality is embedded within the location code, this CodeableConcept can be used within the resource. However, when laterality or morphology needs to be explicitly recorded, the BodyStructure resource should be used, referenced through the BodyStructure Reference within this CodeableConcept. If the BodyStructure reference is used, this CodeableConcept should either remain empty or align with the `BodyStructure.location` element.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both this CodeableConcept and the BodyStructure resource, as either mechanism may be employed. The rationale for this is that, in many cases, only the location will be required, simplifying the FHIR recording process for sending systems."/>
-      <alias value="AnatomischeLocatie"/>
+      <comment value="In cases where only the location is required, or where laterality is embedded within the location code, this CodeableConcept can be used within the resource. However, when laterality or morphology needs to be explicitly recorded, the BodyStructure resource should be used, referenced through the BodyStructure Reference within this CodeableConcept. If the BodyStructure reference is used, this CodeableConcept should either remain empty or align with the `BodyStructure.location` element.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both this CodeableConcept and the BodyStructure resource, as either mechanism may be employed. The rationale for this is that, in many cases, only the location will be required, simplifying the FHIR recording process for sending systems." />
+      <alias value="AnatomischeLocatie" />
       <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation"/>
+        <code value="CodeableConcept" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
       </type>
       <binding>
-        <strength value="extensible"/>
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000"/>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-laboratorytestresult-v7.0-2024EN"/>
-        <map value="NL-CM:13.1.36"/>
-        <comment value="AnatomicalLocation"/>
+        <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+        <map value="NL-CM:13.1.36" />
+        <comment value="AnatomicalLocation" />
       </mapping>
     </element>
     <element id="Specimen.collection.bodySite.extension:bodyStructureReference">
-      <path value="Specimen.collection.bodySite.extension"/>
-      <sliceName value="bodyStructureReference"/>
+      <path value="Specimen.collection.bodySite.extension" />
+      <sliceName value="bodyStructureReference" />
     </element>
     <element id="Specimen.collection.bodySite.extension:bodyStructureReference.value[x]">
-      <path value="Specimen.collection.bodySite.extension.value[x]"/>
+      <path value="Specimen.collection.bodySite.extension.value[x]" />
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure"/>
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen-BodyStructure"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult.Specimen-BodyStructure" />
       </type>
     </element>
     <element id="Specimen.container.extension:specimenNumberExtension">
-      <path value="Specimen.container.extension"/>
-      <sliceName value="specimenNumberExtension"/>
+      <path value="Specimen.container.extension" />
+      <sliceName value="specimenNumberExtension" />
       <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/specimen-sequenceNumber"/>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/specimen-sequenceNumber" />
       </type>
     </element>
     <element id="Specimen.container.extension:specimenNumberExtension.value[x]">
-      <path value="Specimen.container.extension.value[x]"/>
-      <short value="SpecimenNumberExtension"/>
+      <path value="Specimen.container.extension.value[x]" />
+      <short value="SpecimenNumberExtension" />
       <definition value="The specimen number extension is used when the collected material is distributed from the original tube or container across multiple tubes. In combination with the specimen Id the extension yield a unique identification of the tube or container." />
-      <alias value="Monstervolgnummer"/>
+      <alias value="Monstervolgnummer" />
       <mapping>
-        <identity value="zib-laboratorytestresult-v7.0-2024EN"/>
-        <map value="NL-CM:13.1.20"/>
-        <comment value="SpecimenNumberExtension"/>
+        <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+        <map value="NL-CM:13.1.20" />
+        <comment value="SpecimenNumberExtension" />
       </mapping>
     </element>
     <element id="Specimen.container.type">
-      <path value="Specimen.container.type"/>
-      <short value="ContainerType"/>
-      <definition value="Container type describes the envelope in which the material is collected or sent. Examples include blood tubes, transport container, possibly including culture medium."/>
-      <alias value="Containertype"/>
+      <path value="Specimen.container.type" />
+      <short value="ContainerType" />
+      <definition value="Container type describes the envelope in which the material is collected or sent. Examples include blood tubes, transport container, possibly including culture medium." />
+      <alias value="Containertype" />
       <binding>
-        <strength value="required"/>
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.9--20240415000000"/>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.13.1.9--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-laboratorytestresult-v7.0-2024EN"/>
-        <map value="NL-CM:13.1.21"/>
-        <comment value="ContainerType"/>
+        <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+        <map value="NL-CM:13.1.21" />
+        <comment value="ContainerType" />
       </mapping>
     </element>
     <element id="Specimen.note">
-      <path value="Specimen.note"/>
-      <max value="1"/>
+      <path value="Specimen.note" />
+      <max value="1" />
     </element>
     <element id="Specimen.note.text">
-      <path value="Specimen.note.text"/>
-      <short value="Comment"/>
-      <definition value="Comments on the specimen , such as drawing material after a (glucose) stimulus or taking medicine."/>
-      <alias value="Toelichting"/>
+      <path value="Specimen.note.text" />
+      <short value="Comment" />
+      <definition value="Comments on the specimen , such as drawing material after a (glucose) stimulus or taking medicine." />
+      <alias value="Toelichting" />
       <mapping>
-        <identity value="zib-laboratorytestresult-v7.0-2024EN"/>
-        <map value="NL-CM:13.1.19"/>
-        <comment value="Comment"/>
+        <identity value="zib-laboratorytestresult-v7.0-2024EN" />
+        <map value="NL-CM:13.1.19" />
+        <comment value="Comment" />
       </mapping>
     </element>
   </differential>
