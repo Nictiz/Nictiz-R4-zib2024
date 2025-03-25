@@ -43,5 +43,15 @@
    </contact>
    <description value="Value set combining the distinct value sets that the zib nl.zorg.FreedomRestrictingIntervention binds to for NL-CM:14.6.5 TypeOfIntervention. This value set as such does not exist in the zib but facilitates referencing all these value sets at the same time"/>
    <immutable value="false"/>
-   <compose/>
-</ValueSet>
+   <compose>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.6.1--20240415000000"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.6.2--20240415000000"/>
+      </include>
+      <include>
+         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.6.3--20240415000000"/>
+      </include>
+   </compose>
+</ValueSet>  
