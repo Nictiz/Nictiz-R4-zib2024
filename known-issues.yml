@@ -134,7 +134,10 @@ zib-Encounter:
     Encounter.participant:responsibleHealthProfessional.type:
       - cardinality: 1..1 instead of 0..1
         reason: The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.   
-        
+    Encounter.period:
+      - datatype: Period instead of TS
+        reason: The zib model has of Encounter has no duration, wheareas an Encounter in FHIR is always modelled with duration. Missing an end date means an ongoing period in FHIR. This deviation is documented in the profile.
+
 zib-HeadCircumference:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
