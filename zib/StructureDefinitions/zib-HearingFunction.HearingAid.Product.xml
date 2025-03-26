@@ -34,9 +34,14 @@
     <element id="Device.type">
       <path value="Device.type" />
       <definition value="The type of product used to help the patient hear." />
+      <alias value="ProductType" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.17.2--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.17.2--20240415000000" >
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/ProductTypeGeenCodelijst-to-AbsentOrUnknownDevicesUvIps" />
+          </extension>
+        </valueSet>
       </binding>
       <mapping>
         <identity value="zib-hearingfunction-v3.3-2024EN" />
