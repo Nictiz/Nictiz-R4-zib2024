@@ -88,10 +88,10 @@
     <element id="Observation.value[x]:valueQuantity">
       <path value="Observation.value[x]" />
       <sliceName value="valueQuantity" />
-      <short value="DecimalVisualAqcuity" />
+      <short value="VisualAqcuity" />
       <definition value="The measured decimal visual acuity." />
       <comment value="Visual acuity is measured a dimensionless decimal. Therefore, a pattern with unit '1' is defined on `.valueQuantity`." />
-      <alias value="DecimaleVisusWaarde" />
+      <alias value="VisusWaarde" />
       <type>
         <code value="Quantity" />
       </type>
@@ -133,6 +133,10 @@
     <element id="Observation.bodySite.extension:laterality">
       <path value="Observation.bodySite.extension" />
       <sliceName value="laterality" />
+    </element>
+    <element id="Observation.bodySite.extension:laterality.url">
+      <path value="Observation.bodySite.extension.url" />
+      <fixedUri value="laterality" />
     </element>
     <element id="Observation.bodySite.extension:laterality.value[x]">
       <path value="Observation.bodySite.extension.value[x]" />
@@ -188,7 +192,7 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.19.2--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.19.2--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-visualacuity-v2.1.1-2024EN" />
@@ -206,7 +210,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="363691001" />
+          <code value="421763006" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -220,7 +224,7 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.19.3--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.19.3--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-visualacuity-v2.1.1-2024EN" />
