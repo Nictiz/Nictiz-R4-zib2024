@@ -88,7 +88,7 @@
     <element id="Observation.value[x]:valueQuantity">
       <path value="Observation.value[x]" />
       <sliceName value="valueQuantity" />
-      <short value="VisualAqcuity" />
+      <short value="VisualAcuity" />
       <definition value="The measured decimal visual acuity." />
       <comment value="Visual acuity is measured a dimensionless decimal. Therefore, a pattern with unit '1' is defined on `.valueQuantity`." />
       <alias value="VisusWaarde" />
