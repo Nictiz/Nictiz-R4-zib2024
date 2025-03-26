@@ -280,3 +280,12 @@
 
 ## SNAQScore (zib-SNAQScore, nl-core-SNAQScore)
 * No significant changes.
+
+## VisualAcuity 
+### zib-VisualAcuity, nl-core-VisualAcuity
+* `.value[x]:valueQuantity` ; textual ; Renamed from DecimalVisualAcuity to VisualAcuity ; ZIB-1567
+* `.component:visualAcuityMeasurementChart` ; terminology ; Changed CodeSystem OID from 2.16.840.1.113883.2.4.3.11.60.40.4.27 to 2.16.840.1.113883.2.4.3.11.60.40.4.27.1 ; ZIB-1595
+* `.component:visualAcuityMeasurementChart.code` ; terminology ; Pattern changed from http://snomed.info/sct#363691001 to http://snomed.info/sct#421763006. ; ZIB-1445
+
+### zib-VisualAcuity.VisualAcuityMeasurementDevice, nl-core-VisualAcuity.VisualAcuityMeasurementDevice
+* `Device.type` ; terminology ; Changed Codes in VisualAcuityMeasurementDeviceCodelist ; ZIB-1412
