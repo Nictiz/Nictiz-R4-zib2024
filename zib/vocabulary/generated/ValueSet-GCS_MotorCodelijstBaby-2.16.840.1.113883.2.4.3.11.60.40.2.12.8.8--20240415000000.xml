@@ -1,0 +1,243 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.12.8.8--20240415000000"/>
+   <meta>
+      <lastUpdated value="2024-11-28T08:35:00Z"/>
+      <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
+      <tag>
+         <system value="http://hl7.org/fhir/FHIR-version"/>
+         <code value="4.0.1"/>
+      </tag>
+   </meta>
+   <text>
+      <status value="empty"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+   </text>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2024-04-15T00:00:00+00:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.8.8--20240415000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.8.8"/>
+   </identifier>
+   <version value="2024-04-15T00:00:00"/>
+   <name value="GCS_MotorCodelijstBaby"/>
+   <title value="GCS_MotorCodelijstBaby"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2024-11-28T08:35:00+01:00"/>
+   <publisher value="Registratie aan de bron"/>
+   <contact>
+      <name value="Registratie aan de bron"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.registratieaandebron.nl"/>
+      </telecom>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.zibs.nl"/>
+      </telecom>
+   </contact>
+   <description value="Changes compared to prerelease 2024:         &#xA;* Removed: code OTH (NullFlavor)"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.2"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="6"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Normaal [beweegt zoals verwacht]"/>
+            </extension>
+            <code value="M6B"/>
+            <display value="Beweegt spontaan en doelbewust"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Moves spontaneously and purposefully"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Beweegt spontaan en doelbewust"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="5"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+            </extension>
+            <code value="M5B"/>
+            <display value="Terugtrekken bij aanraken"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Withdraws to touch"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Terugtrekken bij aanraken"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="4"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+            </extension>
+            <code value="M4B"/>
+            <display value="terugtrekken bij pijn"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Withdraws to pain"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="terugtrekken bij pijn"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="3"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+            </extension>
+            <code value="M3"/>
+            <display value="Abnormaal buigen"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Flexor response"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Abnormaal buigen"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="2"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+            </extension>
+            <code value="M2"/>
+            <display value="Abnormaal strekken"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Extensor response"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Abnormaal strekken"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="1"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+            </extension>
+            <code value="M1"/>
+            <display value="Geen reactie"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="No response"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Geen reactie"/>
+            </designation>
+         </concept>
+      </include>
+      <include>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+               <valueDecimal value="0"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Niet van toepassing"/>
+            </extension>
+            <code value="NA"/>
+            <display value="Not applicable"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Not applicable"/>
+            </designation>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>
