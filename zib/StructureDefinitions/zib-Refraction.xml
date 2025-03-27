@@ -108,7 +108,7 @@
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
       <short value="AnatomicalLocation" />
-      <definition value="The laterality of the eye of which the refraction has been measured." />
+      <definition value="Indication and the laterality of the eye of which the refraction measurement relates to." />
       <comment value="The code on this element is added to make explicit what is implicit in the zib. See [ZIB-1442](https://bits.nictiz.nl/browse/ZIB-1442) for details." />
       <alias value="AnatomischeLocatie" />
       <type>
@@ -193,7 +193,7 @@
     <element id="Observation.component:cylindricalRefractionValue.value[x]">
       <path value="Observation.component.value[x]" />
       <short value="CylindricalRefractionValue" />
-      <definition value="The power of the cylinder needed to correct the cylindrical error (astigmatism), expressed in diopters. When a cylindrical refraction is registered, the axis of the cylinder must also be specified." />
+      <definition value="The power of the cylinder needed to correct the cylindrical error (astigmatism), expressed in diopters, increasing per 0.25D. When a cylindrical refraction is registered, the axis of the cylinder must also be specified." />
       <alias value="CilindrischeRefractieWaarde" />
       <type>
         <code value="Quantity" />
@@ -430,7 +430,7 @@
     <element id="Observation.component:sphericalEquivalent.value[x]">
       <path value="Observation.component.value[x]" />
       <short value="SphericalEquivalent" />
-      <definition value="The spherical power added to half of the cylindrical power. Expressed in diopters, ascending by 0.1D. Some equipment automatically calculates the spherical equivalent." />
+      <definition value="The spherical power added to half of the cylindrical power. Expressed in diopters, with two digits after the decimal point. Some equipment automatically calculates the spherical equivalent." />
       <alias value="SferischEquivalent" />
       <type>
         <code value="Quantity" />
