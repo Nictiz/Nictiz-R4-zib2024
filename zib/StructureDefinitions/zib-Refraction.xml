@@ -17,13 +17,13 @@
     </telecom>
   </contact>
   <description value="The refraction measurement is a measurement with which the refractive error of the eye is determined. During the refraction measurement, the necessary correction is established: the spherical power (in diopters), the cylindrical power (in diopters), the axis direction (in degrees) for any cylindrical correction, the prism (in prism diopters) and any additional power of the reading area (in diopters), the so-called reading addition." />
-  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Refraction v1.0 (2020)](https://zibs.nl/wiki/Refraction-v1.0(2020EN))." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Refraction v2.0 (2024)](https://zibs.nl/wiki/Refraction-v2.0(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-refraction-v1.0-2020EN" />
-    <uri value="https://zibs.nl/wiki/Refraction-v1.0(2020EN)" />
-    <name value="zib Refraction-v1.0(2020EN)" />
+    <identity value="zib-refraction-v2.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/Refraction-v2.0(2024EN)" />
+    <name value="zib Refraction-v2.0(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
@@ -66,7 +66,7 @@
         <expression value="component.code.coding.where(system = 'http://snomed.info/sct' and code = '112881000146107').exists() implies component.code.coding.where(system = 'http://snomed.info/sct' and code = '251795007').exists()" />
       </constraint>
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.1" />
         <comment value="Refraction" />
       </mapping>
@@ -100,7 +100,7 @@
         <code value="dateTime" />
       </type>
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.3" />
         <comment value="RefractionDateTime" />
       </mapping>
@@ -122,7 +122,7 @@
         </coding>
       </patternCodeableConcept>
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.2" />
         <comment value="AnatomicalLocation" />
       </mapping>
@@ -139,10 +139,10 @@
       <path value="Observation.bodySite.extension.value[x]" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.20.2--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.20.2--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.15" />
         <comment value="Laterality" />
       </mapping>
@@ -154,10 +154,10 @@
       <alias value="RefractieMeetMethode" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.20.1--20200901000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.20.1--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.4" />
         <comment value="RefractionMeasurementMethod" />
       </mapping>
@@ -215,7 +215,7 @@
       <condition value="zib-Refraction-1" />
       <condition value="zib-Refraction-2" />
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.11" />
         <comment value="CylindricalRefractionValue" />
       </mapping>
@@ -263,7 +263,7 @@
       <condition value="zib-Refraction-1" />
       <condition value="zib-Refraction-2" />
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.13" />
         <comment value="CylindricalRefractionAxis" />
       </mapping>
@@ -312,7 +312,7 @@
       <condition value="zib-Refraction-3" />
       <condition value="zib-Refraction-4" />
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.6" />
         <comment value="PrismValue" />
       </mapping>
@@ -360,7 +360,7 @@
       <condition value="zib-Refraction-3" />
       <condition value="zib-Refraction-4" />
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.7" />
         <comment value="PrismBase" />
       </mapping>
@@ -405,7 +405,7 @@
       </maxValueQuantity>
       <condition value="zib-Refraction-5" />
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.9" />
         <comment value="SphericalRefractionValue" />
       </mapping>
@@ -451,7 +451,7 @@
       </maxValueQuantity>
       <condition value="zib-Refraction-5" />
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.10" />
         <comment value="SphericalEquivalent" />
       </mapping>
@@ -493,7 +493,7 @@
         <code value="[diop]" />
       </maxValueQuantity>
       <mapping>
-        <identity value="zib-refraction-v1.0-2020EN" />
+        <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.8" />
         <comment value="ReadAddition" />
       </mapping>
