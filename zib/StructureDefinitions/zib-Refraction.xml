@@ -2,9 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-Refraction" />
   <text>
-    <status value="empty"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Refraction" />
   <name value="ZibRefraction" />
   <title value="zib Refraction" />
@@ -78,7 +76,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="251718005" />
+          <code value="366060000" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -132,6 +130,10 @@
     <element id="Observation.bodySite.extension:laterality">
       <path value="Observation.bodySite.extension" />
       <sliceName value="laterality" />
+    </element>
+    <element id="Observation.bodySite.extension:laterality.url">
+      <path value="Observation.bodySite.extension.url" />
+      <fixedUri value="laterality" />
     </element>
     <element id="Observation.bodySite.extension:laterality.value[x]">
       <path value="Observation.bodySite.extension.value[x]" />
@@ -461,11 +463,10 @@
     </element>
     <element id="Observation.component:readAddition.code">
       <path value="Observation.component.code" />
-      <comment value="The DefintionCodes for the concepts Refraction and ReadAddition are identical in the zib Refraction. This is recognized and fixed in future publications in [ZIB-1443](https://bits.nictiz.nl/browse/ZIB-1443). In this profile, the codes are as defined in the 2020 publication." />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="251718005" />
+          <code value="251796008" />
         </coding>
       </patternCodeableConcept>
     </element>
