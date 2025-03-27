@@ -53,6 +53,18 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation" />
       </type>
     </element>
+    <element id="Observation.bodySite.extension:bodyStructureReference">
+      <path value="Observation.bodySite.extension" />
+      <sliceName value="bodyStructureReference" />
+    </element>
+    <element id="Observation.bodySite.extension:bodyStructureReference.value[x]">
+      <path value="Observation.bodySite.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation-BodyStructure" />
+      </type>
+    </element>
     <element id="Observation.device">
       <path value="Observation.device" />
       <type>

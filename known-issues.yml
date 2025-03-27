@@ -445,6 +445,12 @@ zib-SNAQ65plusScore:
       - message: "Constraint failed: sd-zpg-05: 'The URI for zib mappings should align with the mapping name'"
         reason: The discrepancy between uri and name in the mapping stems from the '+' character in the zib name, as this character is not allowed in the mapping name.
 
+zib-VisualAcuity:
+  zib deviations:
+    Observation.bodySite.extension:laterality.value[x]:
+      - datatype: base64Binary instead of Reference
+        reason: The zib implies a reference to AnatomicalLocation::Laterality, but actually references AnatomicalLocation. The reference to AnatomicalLocation is mapped on .bodysite and this extension is to specifiy the laterality.
+
 unmapped zib concepts:
   - NL-CM:17.2.10: HealthcareProvider.LocationNumber
     reason: This zib concept is problematic to map cleanly to FHIR and it has been deemed too uncommon in practice to warrant an extension.
