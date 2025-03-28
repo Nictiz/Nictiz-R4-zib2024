@@ -134,23 +134,19 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
       </binding>
     </element>
-    <element id="Observation.bodySite.extension:laterality">
+    <element id="Observation.bodySite.extension:bodyStructureReference">
       <path value="Observation.bodySite.extension" />
-      <sliceName value="laterality" />
+      <sliceName value="bodyStructureReference" />
     </element>
-    <element id="Observation.bodySite.extension:laterality.url">
-      <path value="Observation.bodySite.extension.url" />
-      <fixedUri value="laterality" />
-    </element>
-    <element id="Observation.bodySite.extension:laterality.value[x]">
+    <element id="Observation.bodySite.extension:bodyStructureReference.value[x]">
       <path value="Observation.bodySite.extension.value[x]" />
       <short value="AnatomicalLocation" />
-      <definition value="The laterality of the eye of which the visual acuity has been measured." />
+      <definition value="Indication and the laterality of the eye of which the visual acuity measurement relates to." />
       <alias value="AnatomischeLocatie" />
       <mapping>
         <identity value="zib-visualacuity-v2.1.1-2024EN" />
         <map value="NL-CM:12.19.5" />
-        <comment value="AnatomicalLocation" />
+        <comment value="AnatomischeLocatie" />
       </mapping>
     </element>
     <element id="Observation.device">
