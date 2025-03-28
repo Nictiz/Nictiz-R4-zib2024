@@ -117,8 +117,10 @@
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
-      <definition value="The laterality of the eye of which the visual acuity has been measured." />
+      <short value="AnatomicalLocation / Location" />
+      <definition value="Indication and the laterality of the eye of which the visual acuity measurement relates to." />
       <comment value="The code on this element is added to make explicit what is implicit in the zib. See [ZIB-1442](https://bits.nictiz.nl/browse/ZIB-1442) for details." />
+      <alias value="AnatomischeLocatie" />
       <type>
         <code value="CodeableConcept" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
@@ -133,20 +135,10 @@
         <strength value="extensible" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
       </binding>
-    </element>
-    <element id="Observation.bodySite.extension:bodyStructureReference">
-      <path value="Observation.bodySite.extension" />
-      <sliceName value="bodyStructureReference" />
-    </element>
-    <element id="Observation.bodySite.extension:bodyStructureReference.value[x]">
-      <path value="Observation.bodySite.extension.value[x]" />
-      <short value="AnatomicalLocation" />
-      <definition value="Indication and the laterality of the eye of which the visual acuity measurement relates to." />
-      <alias value="AnatomischeLocatie" />
       <mapping>
         <identity value="zib-visualacuity-v2.1.1-2024EN" />
         <map value="NL-CM:12.19.5" />
-        <comment value="AnatomischeLocatie" />
+        <comment value="AnatomicalLocation" />
       </mapping>
     </element>
     <element id="Observation.device">
