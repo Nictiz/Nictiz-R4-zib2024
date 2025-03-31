@@ -107,7 +107,7 @@
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
-      <short value="AnatomicalLocation" />
+      <short value="AnatomicalLocation / Location" />
       <definition value="Indication and the laterality of the eye of which the refraction measurement relates to." />
       <comment value="The code on this element is added to make explicit what is implicit in the zib. See [ZIB-1442](https://bits.nictiz.nl/browse/ZIB-1442) for details." />
       <alias value="AnatomischeLocatie" />
@@ -121,30 +121,14 @@
           <code value="81745001" />
         </coding>
       </patternCodeableConcept>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
+      </binding>
       <mapping>
         <identity value="zib-refraction-v2.0-2024EN" />
         <map value="NL-CM:12.20.2" />
         <comment value="AnatomicalLocation" />
-      </mapping>
-    </element>
-    <element id="Observation.bodySite.extension:laterality">
-      <path value="Observation.bodySite.extension" />
-      <sliceName value="laterality" />
-    </element>
-    <element id="Observation.bodySite.extension:laterality.url">
-      <path value="Observation.bodySite.extension.url" />
-      <fixedUri value="laterality" />
-    </element>
-    <element id="Observation.bodySite.extension:laterality.value[x]">
-      <path value="Observation.bodySite.extension.value[x]" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.20.2--20240415000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-refraction-v2.0-2024EN" />
-        <map value="NL-CM:12.20.15" />
-        <comment value="Laterality" />
       </mapping>
     </element>
     <element id="Observation.method">
