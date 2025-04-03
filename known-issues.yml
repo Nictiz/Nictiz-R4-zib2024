@@ -200,7 +200,7 @@ zib-HealthProfessional-PractitionerRole:
       - datatype: ContactPoint instead of container
         reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
 
-zib-InstructionsForUse:
+zib-InstructionsForUse.DosageInstructions:
   zib deviations:
     Dosage.timing:
       - datatype: Timing instead of container
@@ -442,6 +442,26 @@ unmapped zib concepts:
 # These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
 
 issues should occur: false
+
+extension-Dosage.asNeededFor:
+  ignored issues:
+    StructureDefinition:
+      - message: "Constraint failed: sd-pg-12: 'StuctureDefinition.id should start 'ext-' if it defines an Extension'"
+        reason: This concerns a temporary, pre-adopt extension that mirrors the structure and intent of anticipated HL7-published extensions. This extension will be superseded and removed upon the official release of the HL7 version. This extension does not follow the regular profiling guidelines.
+      - message: "Constraint failed: sd-pg-01: 'The canonical URL should conform to the profiling guidelines'" 
+        reason: This concerns a temporary, pre-adopt extension that mirrors the structure and intent of anticipated HL7-published extensions. This extension will be superseded and removed upon the official release of the HL7 version. This extension does not follow the regular profiling guidelines.
+      - message: The fixed value for the extension URL is http://hl7.org/fhir/5.0/StructureDefinition/extension-Dosage.asNeededFor which doesn't match the canonical URL http://nictiz.nl/fhir/5.0/StructureDefinition/extension-Dosage.asNeededFor
+        reason: This concerns a temporary, pre-adopt extension that mirrors the structure and intent of anticipated HL7-published extensions. This extension will be superseded and removed upon the official release of the HL7 version. This extension does not follow the regular profiling guidelines.
+
+extension-*.RenderedDosageInstruction:
+  ignored issues:
+    StructureDefinition:
+      - message: "Constraint failed: sd-pg-12: 'StuctureDefinition.id should start 'ext-' if it defines an Extension'"
+        reason: This concerns a temporary, pre-adopt extension that mirrors the structure and intent of anticipated HL7-published extensions. This extension will be superseded and removed upon the official release of the HL7 version. This extension does not follow the regular profiling guidelines.
+      - message: "Constraint failed: sd-pg-01: 'The canonical URL should conform to the profiling guidelines'"
+        reason: This concerns a temporary, pre-adopt extension that mirrors the structure and intent of anticipated HL7-published extensions. This extension will be superseded and removed upon the official release of the HL7 version. This extension does not follow the regular profiling guidelines.
+      - message: The fixed value for the extension URL is
+        reason: This concerns a temporary, pre-adopt extension that mirrors the structure and intent of anticipated HL7-published extensions. This extension will be superseded and removed upon the official release of the HL7 version. This extension does not follow the regular profiling guidelines.
 
 2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000:
   ignored issues:

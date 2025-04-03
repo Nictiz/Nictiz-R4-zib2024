@@ -25,6 +25,11 @@
     <uri value="https://zibs.nl/wiki/InstructionsForUse-v3.0(2024EN)" />
     <name value="zib InstructionsForUse-v3.0(2024EN)" />
   </mapping>
+    <mapping>
+    <identity value="zib-range-v1.0.1-2024EN" />
+    <uri value="https://zibs.nl/wiki/Range-v1.0.1(2024EN)" />
+    <name value="zib Range-v1.0.1(2024EN)" />
+  </mapping>
   <kind value="complex-type" />
   <abstract value="true" />
   <type value="Dosage" />
