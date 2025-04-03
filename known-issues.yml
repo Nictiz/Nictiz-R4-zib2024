@@ -266,7 +266,7 @@ zib-InstructionsForUse.DosageInstructions:
         for: NL-CM:9.12.19950 (InstructionsForUse.Frequency)
         reason: An interval in FHIR is represented using the code datatype, not as a PQ.
     Dosage.timing.repeat.timeOfDay:
-      - datatype: Time instead of TS
+      - datatype: time instead of TS
         for: NL-CM:9.12.19951 (InstructionsForUse.AdministrationTime)
         reason: A time in FHIR is represented using the time datatype, not as a TS.
     Dosage.asNeeded[x]:asNeededCodeableConcept:
@@ -281,9 +281,9 @@ zib-InstructionsForUse.DosageInstructions:
         for: NL-CM:9.12.19940 (InstructionsForUse.Dose)
         reason: A range in FHIR is represented using the range datatype, not as a separate resource.
     Dosage.doseAndRate.rate[x]:
-      - datatype: Range instead of Reference
+      - datatype: Ratio instead of Range
         for: NL-CM:9.12.19942 (InstructionsForUse.AdministeringSpeed)
-        reason: A range in FHIR is represented using the ratio datatype, not as a separate resource.
+        reason: The mapping is placed to this polymorphic element that also contains the option to give a Ratio datatype. This Ratio datatype is not used by the zib mapping. It is however not removed as option because of the open world modelling principle.
     Dosage.maxDosePerPeriod:
       - datatype: Ratio instead of PQ
         for: NL-CM:9.12.19946 (InstructionsForUse.MaximumDose)
