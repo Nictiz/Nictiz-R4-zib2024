@@ -45,16 +45,12 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
+      <short value="Full representation of the dosage instructions" />
       <definition value="The full representation of the dose of the medication included in all dosage instructions. To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses." />
       <comment value="The content of the rendered dosage instruction must not be different from the dose represented in the dosage instructions content." />
       <type>
         <code value="string" />
       </type>
-      <mapping>
-        <identity value="zib-instructionsforuse-v3.0-2024EN" />
-        <map value="NL-CM:9.12.9581" />
-        <comment value="Description" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>
