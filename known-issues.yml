@@ -472,7 +472,7 @@ extension-*.renderedDosageInstruction:
         reason: The fact that there are multiple matches for the url results in no issue, since the correct version is used nonetheless.
 
 2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4--20240415000000:
-ignored issues:
+  ignored issues:
     ValueSet.compose.include[*]:
       - message: "The code '1022' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (Unable to evaluate based on code system with status = not-present)"
         reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
