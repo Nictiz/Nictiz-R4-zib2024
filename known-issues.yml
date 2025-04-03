@@ -211,17 +211,17 @@ zib-InstructionsForUse.DosageInstructions:
         for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
         reason: A range in FHIR is represented using the positiveInt datatype, not as a separate resource.
       - datatype: PositiveInt instead of PQ
-        for: NL-CM:20.1.2 (Range.MinimumValue)
+        for: NL-CM:20.1.2 (Range.minimumValue)
         reason: A value in FHIR is represented using the positiveInt datatype, not as a PQ.
       - datatype: PositiveInt instead of PQ
-        for: NL-CM:20.1.4 (Range.NominalValue)
+        for: NL-CM:20.1.4 (Range.nominalValue)
         reason: A value in FHIR is represented using the positiveInt datatype, not as a PQ.
     Dosage.timing.repeat.countMax:
       - datatype: PositiveInt instead of Reference
         for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
         reason: A range in FHIR is represented using the positiveInt datatype, not as a separate resource.
       - datatype: PositiveInt instead of Reference
-        for: NL-CM:20.1.3 (Range.MaximumValue)
+        for: NL-CM:20.1.3 (Range.maximumValue)
         reason: A value in FHIR is represented using the positiveInt datatype, not as a separate resource.
     Dosage.timing.repeat.duration:
       - datatype: Decimal instead of Reference
@@ -236,10 +236,10 @@ zib-InstructionsForUse.DosageInstructions:
         for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
         reason: A range in FHIR is represented using the positiveInt datatype, not as a separate resource.
       - datatype: PositiveInt instead of PQ
-        for: NL-CM:20.1.2 (Range.MinimumValue)
+        for: NL-CM:20.1.2 (Range.minimumValue)
         reason: A value in FHIR is represented using the positiveInt datatype, not as a PQ.
       - datatype: PositiveInt instead of PQ
-        for: NL-CM:20.1.4 (Range.NominalValue)
+        for: NL-CM:20.1.4 (Range.nominalValue)
         reason: A value in FHIR is represented using the positiveInt datatype, not as a PQ.
       - datatype: PositiveInt instead of PQ
         for: NL-CM:9.12.19950 (InstructionsForUse.Interval)
@@ -249,7 +249,7 @@ zib-InstructionsForUse.DosageInstructions:
         for: NL-CM:9.12.19949 (InstructionsForUse.Frequency)
         reason: A range in FHIR is represented using the positiveInt datatype, not as a separate resource.
       - datatype: PositiveInt instead of PQ
-        for: NL-CM:20.1.3 (Range.MaximumValue)
+        for: NL-CM:20.1.3 (Range.maximumValue)
         reason: A value in FHIR is represented using the positiveInt datatype, not as a PQ.
     Dosage.timing.repeat.period:
       - datatype: Decimal instead of Reference
@@ -453,7 +453,7 @@ extension-Dosage.asNeededFor:
       - message: The fixed value for the extension URL is http://hl7.org/fhir/5.0/StructureDefinition/extension-Dosage.asNeededFor which doesn't match the canonical URL http://nictiz.nl/fhir/5.0/StructureDefinition/extension-Dosage.asNeededFor
         reason: This concerns a temporary, pre-adopt extension that mirrors the structure and intent of anticipated HL7-published extensions. This extension will be superseded and removed upon the official release of the HL7 version. This extension does not follow the regular profiling guidelines.
 
-extension-*.RenderedDosageInstruction:
+extension-*.renderedDosageInstruction:
   ignored issues:
     StructureDefinition:
       - message: "Constraint failed: sd-pg-12: 'StuctureDefinition.id should start 'ext-' if it defines an Extension'"
@@ -470,6 +470,32 @@ extension-*.RenderedDosageInstruction:
         reason: The fact that there are multiple matches for the url results in no issue, since the correct version is used nonetheless.
       - message: "There are multiple different potential matches for the url 'http://hl7.org/fhir/sid/icf-nl'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '2010-11-16T12:00:00', found versions: 1.0.0, 2010-11-16T12:00:00"
         reason: The fact that there are multiple matches for the url results in no issue, since the correct version is used nonetheless.
+
+2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4--20240415000000:
+ignored issues:
+    ValueSet.compose.include[*]:
+      - message: "The code '1022' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (Unable to evaluate based on code system with status = not-present)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+      - message: "The code '1023' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.5' could not be found, so the code cannot be validated)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+      - message: "The code '1024' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.5' could not be found, so the code cannot be validated)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+      - message: "The code '1028' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.5' could not be found, so the code cannot be validated)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+      - message: "The code '1137' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.5' could not be found, so the code cannot be validated)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+      - message: "The code '1144' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.5' could not be found, so the code cannot be validated)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+      - message: "The code '1145' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.5' could not be found, so the code cannot be validated)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+      - message: "The code '1146' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.5' could not be found, so the code cannot be validated)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+      - message: "The code '1147' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.5' could not be found, so the code cannot be validated)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+      - message: "The code '1387' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.5' could not be found, so the code cannot be validated)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+      - message: "The code '1540' is not valid in the system urn:oid:2.16.840.1.113883.2.4.4.5 (A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.5' could not be found, so the code cannot be validated)"
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
 
 nl-core-*:
   ignored issues:
