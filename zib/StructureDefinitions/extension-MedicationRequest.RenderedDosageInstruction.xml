@@ -17,6 +17,7 @@
     </telecom>
   </contact>
   <description value="Pre-adopt of the `MedicationRequest.renderedDosageInstructions` concept from FHIR R5. It provides a full representation of the dose of the medication included in all dosage instructions. To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses." />
+  <purpose value="This StructureDefinition defines a pre-adopt extension, aligning with the [version conversion extension pattern in the FHIR specification](https://hl7.org/fhir/R4/versions.html#extensions). The `Extension.url` is intentionally set to the HL7 base. This approach aims to minimize the need for implementation changes. Upon the 'official' release of HL7's cross-version extensions, this definition will be deprecated and replaced by a direct dependency on those extensions." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
@@ -34,9 +35,13 @@
       <definition value="Pre-adopt from FHIR R5 of the `MedicationRequest.renderedDosageInstruction` element." />
       <max value="1" />
     </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <max value="0" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction" />
+      <fixedUri value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
