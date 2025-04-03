@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="extension-MedicationStatement.RenderedDosageInstruction" />
+  <id value="extension-MedicationStatement.renderedDosageInstruction" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/5.0/StructureDefinition/extension-MedicationStatement.RenderedDosageInstruction" />
-  <name value="ExtensionMedicationStatementRenderedDosageInstruction" />
-  <title value="extension MedicationStatement.RenderedDosageInstruction" />
+  <url value="http://nictiz.nl/fhir/5.0/StructureDefinition/extension-MedicationStatement.renderedDosageInstruction" />
+  <name value="ExtensionMedicationStatementrenderedDosageInstruction" />
+  <title value="extension MedicationStatement.renderedDosageInstruction" />
   <status value="active" />
   <publisher value="Nictiz" />
   <contact>
@@ -41,7 +41,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.RenderedDosageInstruction" />
+      <fixedUri value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.renderedDosageInstruction" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
