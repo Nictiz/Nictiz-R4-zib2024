@@ -150,9 +150,8 @@
 ### zib-IllnessPerception.PatientIllnessInsight, nl-core-IllnessPerception.PatientIllnessInsight
 * No significant changes.
 
-## InstructionsForUse
-### zib-InstructionsForUse, nl-core-InstructionsForUse
-* No significant changes.
+## InstructionsForUse (zib-InstructionsForUse.DosageInstructions, nl-core-InstructionsForUse.DosageInstructions)
+* New profile based on MP9.
 
 ## LanguageProficiency (zib-Patient, nl-core-Patient)
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877

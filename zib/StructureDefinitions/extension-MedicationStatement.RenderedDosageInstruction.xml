@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="extension-InstructionsForUse.MedicationDispense.RenderedDosageInstruction" />
+  <id value="extension-MedicationStatement.RenderedDosageInstruction" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction" />
-  <name value="ExtensionInstructionsForUseMedicationDispenseRenderedDosageInstruction" />
-  <title value="extension InstructionsForUse.MedicationDispenseRendered.DosageInstruction" />
+  <url value="http://nictiz.nl/fhir/5.0/StructureDefinition/extension-MedicationStatement.RenderedDosageInstruction" />
+  <name value="ExtensionMedicationStatementRenderedDosageInstruction" />
+  <title value="extension MedicationStatement.RenderedDosageInstruction" />
   <status value="active" />
   <publisher value="Nictiz" />
   <contact>
@@ -16,19 +16,11 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Pre-adopt of the `.renderedDosageInstructions` concept from the FHIR R5 medication resources. It provides a full representation of the dose of the medication included in all dosage instructions. To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses." />
+  <description value="Pre-adopt of the `MedicationStatement.renderedDosageInstructions` concept from FHIR R5. It provides a full representation of the dose of the medication included in all dosage instructions. To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <context>
-    <type value="element" />
-    <expression value="MedicationRequest" />
-  </context>
-  <context>
-    <type value="element" />
-    <expression value="MedicationDispense" />
-  </context>
   <context>
     <type value="element" />
     <expression value="MedicationStatement" />
@@ -39,12 +31,12 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <definition value="Pre-adopt from FHIR R5 of the `.renderedDosageInstruction` element found in various medication resources." />
+      <definition value="Pre-adopt from FHIR R5 of the `MedicationStatement.renderedDosageInstruction` element." />
       <max value="1" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction" />
+      <fixedUri value="http://nictiz.nl/fhir/5.0/StructureDefinition/extension-MedicationStatement.RenderedDosageInstruction" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
