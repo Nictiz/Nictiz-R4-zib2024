@@ -112,6 +112,7 @@
     <element id="Specimen.collection.extension:specimenSource">
       <path value="Specimen.collection.extension" />
       <sliceName value="specimenSource" />
+      <comment value="The use of this extension is chosen over `Specimen.subject` because the latter would be excessive for representing SpecimenSource (NL-CM:13.1.29) concept, and the extension provides a simpler, more appropriate mapping." />
       <max value="1" />
       <type>
         <code value="Extension" />

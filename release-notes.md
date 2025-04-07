@@ -220,7 +220,6 @@
 * `.collection.bodySite.extension:morphology` ; extension ; Replaced ExtLaboratoryTestResultSpecimenMorphology with BodyStructureReference for Morphology. ; ZIBFHIR-113
 * `.collection.bodySite.extension:morphology` ; mapping ; Moved mapping of Morphology to `BodyStructure.morphology`. ; ZIBFHIR-113
 
-
 ### zib-LaboratoryTestResult.Specimen-BodyStructure, nl-core-LaboratoryTestResult.Specimen-BodyStructure
 * New profile that maps morphology to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
 
@@ -248,6 +247,9 @@
 * No significant changes.
 
 ## Nationality (zib-Patient, nl-core-Patient)
+* No significant changes.
+
+## NutritionAdvice (zib-NutritionAdvice, nl-core-NutritionAdvice)
 * No significant changes.
 
 ## O2Saturation (zib-O2Saturation, nl-core-O2Saturation)
