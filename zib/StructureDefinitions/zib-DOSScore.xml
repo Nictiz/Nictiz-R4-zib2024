@@ -164,7 +164,6 @@
     </element>
     <element id="Observation.component:easilyDistracted.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007007 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -195,7 +194,6 @@
     </element>
     <element id="Observation.component:maintainsAttention.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007008 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -226,7 +224,6 @@
     </element>
     <element id="Observation.component:unfinishedQuestionAnswer.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007009 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -257,7 +254,6 @@
     </element>
     <element id="Observation.component:answersNoFit.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007010 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -288,7 +284,6 @@
     </element>
     <element id="Observation.component:reactsSlowly.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007011 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -319,7 +314,6 @@
     </element>
     <element id="Observation.component:thinksSomewhereElse.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007012 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -350,7 +344,6 @@
     </element>
     <element id="Observation.component:knowsPartDay.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007013 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -381,7 +374,6 @@
     </element>
     <element id="Observation.component:remembersRecent.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007014 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -412,7 +404,6 @@
     </element>
     <element id="Observation.component:restless.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007015 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -443,7 +434,6 @@
     </element>
     <element id="Observation.component:pullsWires.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007016 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -474,7 +464,6 @@
     </element>
     <element id="Observation.component:easilyEmotional.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007017 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
@@ -505,7 +494,6 @@
     </element>
     <element id="Observation.component:hallucinations.code">
       <path value="Observation.component.code" />
-      <comment value="The code to identify this concept (18007018 in code system urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1) aligns with the next version of the zib, since the current version doesn't provide a code. See [ZIB-1674](https://bits.nictiz.nl/browse/ZIB-1674) for more information." />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1" />
