@@ -83,6 +83,9 @@
 * `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-1839
 * `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-1839
 
+## CollectionData (zib-LaboratoryTestResult.Specimen, nl-core-LaboratoryTestResult.Specimen)
+* New zib CollectionData profiled in Specimen.
+
 ## ContactInformation 
 ### zib-ContactInformation-TelephoneNumbers, nl-core-ContactInformation-TelephoneNumbers
 * `ContactPoint` ; textual ; Added guidance for NumberType. ; ZIB-1652
