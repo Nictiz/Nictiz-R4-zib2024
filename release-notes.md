@@ -261,6 +261,11 @@
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
 * `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
 
+## Refraction (zib-Refraction, nl-core-Refraction)
+* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#251718005 to http://snomed.info/sct#366060000. ; ZIB-1443
+* `.bodySite.extension:laterality` ; extension ; Removed ExtAnatomicalLocationLaterality ; ZIB-1442
+* `.component:readAddition.code` ; terminology ; Pattern changed from http://snomed.info/sct#251718005 to http://snomed.info/sct#251796008. ; ZIB-1443
+
 ## SkinDisorder (zib-SkinDisorder, nl-core-SkinDisorder)
 * `.code` ; terminology ; Changed codes in SoortAandoeningCodelijst. ; ZIB-1572
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
