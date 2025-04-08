@@ -78,7 +78,7 @@
 
 ## BurnWound
 ### zib-BurnWound, nl-core-BurnWound
-* `.bodySite.extension:laterality.value[x]` ; maping ; Removed mapping of Laterality ; ZIB-1951
+* `.bodySite.extension:laterality.value[x]` ; mapping ; Removed mapping of Laterality ; ZIB-1951
 
 ### zib-BurnWound.Extent, nl-core-BurnWound.Extent
 * No significant changes.
