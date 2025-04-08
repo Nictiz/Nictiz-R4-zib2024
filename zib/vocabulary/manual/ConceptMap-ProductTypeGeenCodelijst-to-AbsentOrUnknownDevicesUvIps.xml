@@ -1,0 +1,49 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="ProductTypeGeenCodelijst-to-AbsentOrUnknownDevicesUvIps"/>
+    <text>
+        <status value="empty"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+    </text>
+    <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+        <valueBoolean value="false"/>
+    </extension>
+    <url value="http://nictiz.nl/fhir/ConceptMap/ProductTypeGeenCodelijst-to-AbsentOrUnknownDevicesUvIps"/>
+    <name value="ProductTypeGeenCodelijst_to_AbsentOrUnknownDevicesUvIps"/>
+    <title value="ProductTypeGeenCodelijst to AbsentOrUnknownDevicesUvIps"/>
+    <status value="draft"/>
+    <publisher value="Nictiz"/>
+    <contact>
+      <name value="Nictiz"/>
+      <telecom>
+        <system value="url" />
+        <value value="https://www.nictiz.nl" />
+        <use value="work"/>
+      </telecom>
+    </contact>
+    <description value="Maps ProductTypeGeenCodelijst codes as found in the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) MedicalDevice v4.0 (2024)](https://zibs.nl/wiki/MedicalDevice-v4.0(2024EN)) to AbsentOrUnknownDevicesUvIps as found in [The International Patient Summary v1.1.0](https://hl7.org/fhir/uv/ips/index.html) on `Device.type`."/>
+    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+    <sourceCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.7--20240415000000"/>
+    <targetCanonical value="http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-devices-uv-ips"/>
+    <group>
+        <source value="urn:oid:2.16.840.1.113883.2.4.3.11.22.218"/>
+        <target value="http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips"/>
+        <element>
+            <code value="0"/>
+            <target>
+                <code value="no-known-devices"/>
+                <equivalence value="wider"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="urn:oid:2.16.840.1.113883.2.4.3.11.22.211"/>
+        <target value="http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips"/>
+        <element>
+            <code value="0"/>
+            <target>
+                <code value="no-known-devices"/>
+                <equivalence value="wider"/>
+            </target>
+        </element>
+    </group>
+</ConceptMap>
