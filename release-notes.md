@@ -237,6 +237,14 @@
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218, ZIB-2549
 
+## MedicalDevice
+### zib-MedicalDevice, nl-core-MedicalDevice
+* No significant changes
+
+### zib-MedicalDevice.Product, nl-core-MedicalDevice.Product
+* `.type` ; terminology ; Added additional binding to ProductTypeImplantatenCodelijst (using a combined ValueSet) (although it is a subset of the existing ValueSet ProductTypeCodelijst) ; ZIB-1279
+* `.type` ; terminology ; Removed codes for negation of visual aid and hearing aid, and adopted the generic negation codes from the "Absent or Unknown Devices" ValueSet in the IPS/EPS instead ; ZIB-1536, ZIBFHIR-228
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
