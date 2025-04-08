@@ -1,0 +1,101 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="nl-core-SNAQ65plusScore-alt-2"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-SNAQ65plusScore"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">De scorekleur is rood.</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th>Bepalingdatum/tijd</th>
+            <td>27 januari 2016</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <th>Waarde</th>
+          </tr>
+          <tr>
+            <td>
+              <span title="'Short Nutritional Questionnaire' voor 65+ (108321000146101 - SNOMED CT)">'Short Nutritional Questionnaire' voor 65+</span>
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>
+              <span title="SNAQ65+Score GewichtsverliesScore (4030003 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQ65+Score GewichtsverliesScore</span>
+            </td>
+            <td>
+              <span title="Weinig verlies (G0 - 2.16.840.1.113883.2.4.3.11.60.40.4.18.1)">Weinig verlies</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="SNAQ65+Score BovenarmOmtrekScore (4030008 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)">SNAQ65+Score BovenarmOmtrekScore</span>
+            </td>
+            <td>
+              <span title="Klein (A1 - 2.16.840.1.113883.2.4.3.11.60.40.4.18.4)">Klein</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="108321000146101"/>
+      <display value="'Short Nutritional Questionnaire' voor 65+"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </subject>
+  <effectiveDateTime value="2016-01-27"/>
+  <valueInteger value="3"/>
+  <note>
+    <text value="De scorekleur is rood."/>
+  </note>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1"/>
+        <code value="4030003"/>
+        <display value="SNAQ65+Score GewichtsverliesScore"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.18.1"/>
+        <code value="G0"/>
+        <display value="Weinig verlies"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1"/>
+        <code value="4030008"/>
+        <display value="SNAQ65+Score BovenarmOmtrekScore"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.18.4"/>
+        <code value="A1"/>
+        <display value="Klein"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

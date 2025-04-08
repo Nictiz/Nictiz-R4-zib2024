@@ -1,0 +1,73 @@
+<NutritionOrder xmlns="http://hl7.org/fhir">
+  <id value="nl-core-NutritionAdvice-alt-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-NutritionAdvice"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Voedingsadvies. Patiënt: Patient, Peter Jan (PeJe) Jansen. Status: actief<span style="display: block;">Intentie: aanvraag</span>
+        </caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Patiënt heeft moeite met eten na kaakoperatie.</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th>Aanvraagdatum</th>
+            <td>17:06:06, 25 februari 2025</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table>
+                <caption>Orale voeding</caption>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Texture</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Energie verrijkt</td>
+                    <td>Dikvloeibaar</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/workflow-reasonReference">
+    <valueReference>
+      <reference value="Condition/nl-core-NutritionAdvice-alt-1-Problem-1"/>
+      <type value="Condition"/>
+      <display value="Problem, type: Klinische bevinding, problem name: pijn"/>
+    </valueReference>
+  </extension>
+  <status value="active"/>
+  <intent value="order"/>
+  <patient>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </patient>
+  <dateTime value="2025-02-25T17:06:06.4083919+01:00"/>
+  <oralDiet>
+    <type>
+      <text value="Energie verrijkt"/>
+    </type>
+    <texture>
+      <modifier>
+        <text value="Dikvloeibaar"/>
+      </modifier>
+    </texture>
+  </oralDiet>
+  <note>
+    <text value="Patiënt heeft moeite met eten na kaakoperatie."/>
+  </note>
+</NutritionOrder>

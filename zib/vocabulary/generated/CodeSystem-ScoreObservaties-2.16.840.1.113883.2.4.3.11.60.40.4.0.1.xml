@@ -1,0 +1,1947 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.4.0.1"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/CodeSystem"/>-->
+   </meta>
+   <language value="nl-NL"/>
+   <text>
+      <status value="empty"/>
+      <div xmlns="http://www.w3.org/1999/xhtml" lang="nl-NL" xml:lang="nl-NL">Definitie-resources zijn niet voorzien van een narrative. Een menselijk leesbare versie is te vinden via de implementation guide(s) waarin deze resource gebruikt wordt.</div>
+   </text>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2023-03-06T00:00:00+00:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1"/>
+   </identifier>
+   <version value="2023-03-06T00:00:00"/>
+   <name value="ScoreObservaties"/>
+   <title value="ScoreObservaties"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2024-02-05T09:53:25+01:00"/>
+   <publisher value="Registratie aan de bron"/>
+   <contact>
+      <name value="Registratie aan de bron"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.registratieaandebron.nl"/>
+      </telecom>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.zibs.nl"/>
+      </telecom>
+   </contact>
+   <description value="This zib code system serves to define definition codes for elements in zibs that describe a score instrument. Changes: &#xA;* Version 2023-03-06T00:00:00: Added codes for BarthelADLIndex (ZIB-1692)&#xA;* Version 2022-06-10T00:00:00: Added codes for DOSScore"/>
+   <caseSensitive value="false"/>
+   <content value="complete"/>
+   <count value="63"/>
+   <property>
+      <code value="status"/>
+      <uri value="http://hl7.org/fhir/concept-properties#status"/>
+      <description value="A code that indicates the status of the concept. Values found in this version of the code system are: active, draft"/>
+      <type value="code"/>
+   </property>
+   <property>
+      <code value="effectiveDate"/>
+      <uri value="http://hl7.org/fhir/concept-properties#effectiveDate"/>
+      <description value="The date at which the concept was status was last changed. This is calculated based on the highest of 'creation date', 'expiration date', and 'official release date'"/>
+      <type value="dateTime"/>
+   </property>
+   <concept>
+      <code value="12012003"/>
+      <display value="ComfortScore Alertheid"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScale Alertness"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Alertheid"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12012004"/>
+      <display value="ComfortScore Kalmte_Agitatie"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScale Calmness_Agitation"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Kalmte_Agitatie"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12012005"/>
+      <display value="ComfortScore Ademhalingsreactie"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScale RespiratoryResponse"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Ademhalingsreactie"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12012006"/>
+      <display value="ComfortScore Huilen"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScale Crying"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Huilen"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12012008"/>
+      <display value="ComfortScore Lichaamsbeweging"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScale BodyMovement"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Lichaamsbeweging"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12012009"/>
+      <display value="ComfortScore Gezichtsspanning"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScale FacialTone"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Gezichtsspanning"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12012010"/>
+      <display value="ComfortScore Spierspanning"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScale BodyMuscleTone"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ComfortScore Spierspanning"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12013003"/>
+      <display value="FLACCpijnScore Gezicht"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpainScale Face"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpijnScore Gezicht"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12013004"/>
+      <display value="FLACCpijnScore Benen"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpainScale Legs"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpijnScore Benen"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12013005"/>
+      <display value="FLACCpijnScore Activiteit"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpainScale Activity"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpijnScore Activiteit"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12013006"/>
+      <display value="FLACCpijnScore Huilen"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpainScale Cry"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpijnScore Huilen"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12013009"/>
+      <display value="FLACCpijnScore Troostbaar"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpainScale Consolability"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="FLACCpijnScore Troostbaar"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12017003"/>
+      <display value="ChecklistPijngedrag Gezicht"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPainBehaviour Face"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Gezicht"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12017004"/>
+      <display value="ChecklistPijngedrag Mond"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPainBehaviour Mouth"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Mond"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12017005"/>
+      <display value="ChecklistPijngedrag Grimas"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPainBehaviour Grimace"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Grimas"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12017006"/>
+      <display value="ChecklistPijngedrag VerdrietigeBlik"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPainBehaviour Looking sad"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag VerdrietigeBlik"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12017007"/>
+      <display value="ChecklistPijngedrag Ogen"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPainBehaviour Eyes"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Ogen"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12017008"/>
+      <display value="ChecklistPijngedrag Paniek"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPainBehaviour Panic"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Paniek"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12017009"/>
+      <display value="ChecklistPijngedrag Kreunen"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPainBehaviour Moaning"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Kreunen"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12017010"/>
+      <display value="ChecklistPijngedrag Huilen"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPainBehaviour Cry"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Huilen"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12017011"/>
+      <display value="ChecklistPijngedrag Onrustgeluiden"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPainBehaviour SoundsOfRestlessness"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Onrustgeluiden"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="12017012"/>
+      <display value="ChecklistPijngedrag Tranen"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPainBehaviour Tears"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="ChecklistPijngedrag Tranen"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007006"/>
+      <display value="DOSScore ZaktWeg"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore DozesOff"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore ZaktWeg"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007007"/>
+      <display value="DOSScore SnelAfgeleid"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore EasilyDistracted"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore SnelAfgeleid"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007008"/>
+      <display value="DOSScore HeeftAandacht"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore MaintainsAttention"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore HeeftAandacht"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007009"/>
+      <display value="DOSScore VraagAntwoordNietAf"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore UnfinishedQuestionAnswer"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore VraagAntwoordNietAf"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007010"/>
+      <display value="DOSScore AntwoordenNietPassend"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore AnswersNoFit"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore AntwoordenNietPassend"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007011"/>
+      <display value="DOSScore ReageertTraag"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore ReactsSlowly"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore ReageertTraag"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007012"/>
+      <display value="DOSScore DenktErgensAnders"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore ThinksSomewhereElse"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore DenktErgensAnders"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007013"/>
+      <display value="DOSScore BeseftDagdeel"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore KnowsPartDay"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore BeseftDagdeel"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007014"/>
+      <display value="DOSScore HerinnertRecent"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore RemembersRecent"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore HerinnertRecent"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007015"/>
+      <display value="DOSScore Rusteloos"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore Restless"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore Rusteloos"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007016"/>
+      <display value="DOSScore TrektDraden"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore PullsWires"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore TrektDraden"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007017"/>
+      <display value="DOSScore SnelGeemotioneerd"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore EasilyEmotional"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore SnelGeemotioneerd"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="18007018"/>
+      <display value="DOSScore Hallucinaties"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore Hallucinations"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="DOSScore Hallucinaties"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2022-06-10"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4005003"/>
+      <display value="MUSTScore BMIScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="MUSTScore BMIScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="MUSTScore BMIScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4005004"/>
+      <display value="MUSTScore GewichtsverliesScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="MUSTScore WeightLossScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="MUSTScore GewichtsverliesScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4005005"/>
+      <display value="MUSTScore ZiekteScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="MUSTScore IllnessScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="MUSTScore ZiekteScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4006003"/>
+      <display value="SNAQScore GewichtsverliesScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQScore WeightLossScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQScore GewichtsverliesScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4006004"/>
+      <display value="SNAQScore EetlustScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQScore AppetiteScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQScore EetlustScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4006005"/>
+      <display value="SNAQScore VoedingsScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQScore NutritionScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQScore VoedingsScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4028003"/>
+      <display value="StrongKidsScore GewichtsverliesScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore WeightLossScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore GewichtsverliesScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4028004"/>
+      <display value="StrongKidsScore ZiekteBeeldScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore ConditionScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore ZiekteBeeldScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4028005"/>
+      <display value="StrongKidsScore VoedingsScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore NutritionScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore VoedingsScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4028008"/>
+      <display value="StrongKidsScore VoedingstoestandScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore NutritionStatusScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="StrongKidsScore VoedingstoestandScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4029003"/>
+      <display value="SNAQrcScore GewichtsverliesScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore WeightLossScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore GewichtsverliesScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4029004"/>
+      <display value="SNAQrcScore EetlustScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore AppetiteScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore EetlustScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4029005"/>
+      <display value="SNAQrcScore BMIScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore BMIScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore BMIScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4029008"/>
+      <display value="SNAQrcScore HulpBijEtenScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore AssistedEatingScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQrcScore HulpBijEtenScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4030003"/>
+      <display value="SNAQ65+Score GewichtsverliesScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score WeightLossScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score GewichtsverliesScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4030004"/>
+      <display value="SNAQ65+Score EetlustScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score AppetiteScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score EetlustScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4030005"/>
+      <display value="SNAQ65+Score InspanningsScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score ExerciseScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score InspanningsScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4030008"/>
+      <display value="SNAQ65+Score BovenarmOmtrekScore"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score UpperArmCircumferenceScore"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="SNAQ65+Score BovenarmOmtrekScore"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2020-09-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4002010"/>
+      <display value="BarthelIndex AanUitkleden"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelADLIndex Dressing"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex AanUitkleden"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="draft"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2023-03-06"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4002012"/>
+      <display value="BarthelIndex BadenDouchen"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelADLIndex Bathing"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex BadenDouchen"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="draft"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2023-03-06"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4002003"/>
+      <display value="BarthelIndex Blaas"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelADLIndex Bladder"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Blaas"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="draft"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2023-03-06"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4002004"/>
+      <display value="BarthelIndex Darm"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelADLIndex Bowels"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Darm"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="draft"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2023-03-06"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4002007"/>
+      <display value="BarthelIndex Eten"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelADLIndex Feeding"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Eten"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="draft"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2023-03-06"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4002009"/>
+      <display value="BarthelIndex Mobiliteit"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelADLIndex Mobility"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Mobiliteit"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="draft"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2023-03-06"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4002006"/>
+      <display value="BarthelIndex Toiletgebruik"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelADLIndex ToiletUse"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Toiletgebruik"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="draft"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2023-03-06"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4002008"/>
+      <display value="BarthelIndex Transfers"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelADLIndex Transfers"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex Transfers"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="draft"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2023-03-06"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4002011"/>
+      <display value="BarthelIndex TrappenLopen"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelADLIndex ManagingStairs"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex TrappenLopen"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="draft"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2023-03-06"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4002005"/>
+      <display value="BarthelIndex UiterlijkeVerzorging"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelADLIndex Grooming"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="BarthelIndex UiterlijkeVerzorging"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="draft"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2023-03-06"/>
+      </property>
+   </concept>
+</CodeSystem>

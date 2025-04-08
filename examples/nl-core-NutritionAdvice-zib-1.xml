@@ -1,0 +1,66 @@
+<NutritionOrder xmlns="http://hl7.org/fhir">
+  <id value="nl-core-NutritionAdvice-zib-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-NutritionAdvice"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Voedingsadvies. Patiënt: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: actief<span style="display: block;">Intentie: aanvraag</span>
+        </caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Sinds een week dieet veranderd in energieverrijkt.</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th>Aanvraagdatum</th>
+            <td>17:06:07, 25 februari 2025</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table>
+                <caption>Orale voeding</caption>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Texture</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Energie verrijkt</td>
+                    <td>Dikvloeibaar</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <status value="active"/>
+  <intent value="order"/>
+  <patient>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </patient>
+  <dateTime value="2025-02-25T17:06:07.6456409+01:00"/>
+  <oralDiet>
+    <type>
+      <text value="Energie verrijkt"/>
+    </type>
+    <texture>
+      <modifier>
+        <text value="Dikvloeibaar"/>
+      </modifier>
+    </texture>
+  </oralDiet>
+  <note>
+    <text value="Sinds een week dieet veranderd in energieverrijkt."/>
+  </note>
+</NutritionOrder>
