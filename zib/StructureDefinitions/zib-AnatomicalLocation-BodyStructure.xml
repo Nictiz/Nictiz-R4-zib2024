@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="An anatomical location specifies the location (e.g. foot) and laterality (e.g. left) of a body part." />
-  <purpose value="This BodyStructure resource represents the complete Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) AnatomicalLocation v1.0.3 (2024)](https://zibs.nl/wiki/AnatomicalLocation-v1.0.3(2024EN))." />
+  <purpose value="This BodyStructure resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) AnatomicalLocation v1.0.3 (2024)](https://zibs.nl/wiki/AnatomicalLocation-v1.0.3(2024EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -34,7 +34,7 @@
     <element id="BodyStructure">
       <path value="BodyStructure" />
       <short value="AnatomicalLocation" />
-      <definition value="Zib AnatomicalLocation is mapped to both a profile on CodeableConcept (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation&gt;) and this BodyStructure profile. &#xA;&#xA;When it is required to convey a discrete Laterality (NL-CM:20.7.3) next to (or in absence of) the Location (NL-CM:20.7.4), this BodyStructure profile should be used and referenced from the relevant resource. In cases where Laterality is either unnecessary or embedded within the location code itself, it can be conveyed directly in the relevant resource.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both the BodyStructure resource and the CodeableConcept in host resources, as either mechanism may be employed. Providing systems can select the appropriate mechanism based on their data requirements." />
+      <definition value="The zib AnatomicalLocation is mapped to both a profile on CodeableConcept (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation&gt;) and this BodyStructure profile. &#xA;&#xA;When it is required to convey a discrete Laterality (NL-CM:20.7.3) next to (or in absence of) the Location (NL-CM:20.7.4), this BodyStructure profile should be used and referenced from the relevant resource. In cases where Laterality is either unnecessary or embedded within the location code itself, it can be conveyed directly in the relevant resource.&#xD;&#xA;&#xD;&#xA;**Note**: Receiving systems must support both this BodyStructure resource and the CodeableConcept in host resources, as either mechanism may be employed. Providing systems can select the appropriate mechanism based on their data requirements." />
       <alias value="AnatomischeLocatie" />
       <mapping>
         <identity value="zib-anatomicallocation-v1.0.3-2024EN" />

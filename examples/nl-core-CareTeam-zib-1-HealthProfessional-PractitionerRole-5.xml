@@ -1,0 +1,46 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-5"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Zorgverlenerrol. </caption>
+        <tbody>
+          <tr>
+            <th>Zorgverlener</th>
+            <td>
+              <div>Health professional (person), G.F. de Haan</div>
+              <div>Healthcare provider (organization), Apotheek Bergweg</div>
+            </td>
+          </tr>
+          <tr>
+            <th>Specialisme</th>
+            <td>
+              <span title="Apothekers (0200 - AGB-medisch specialisme)">Apothekers</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <practitioner>
+    <reference value="Practitioner/nl-core-CareTeam-zib-1-HealthProfessional-Practitioner-5"/>
+    <type value="Practitioner"/>
+    <display value="Health professional (person), G.F. de Haan"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/nl-core-CareTeam-zib-1-HealthcareProvider-Organization-5"/>
+    <type value="Organization"/>
+    <display value="Healthcare provider (organization), Apotheek Bergweg"/>
+  </organization>
+  <specialty>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+      <code value="0200"/>
+      <display value="Apothekers"/>
+    </coding>
+  </specialty>
+</PractitionerRole>

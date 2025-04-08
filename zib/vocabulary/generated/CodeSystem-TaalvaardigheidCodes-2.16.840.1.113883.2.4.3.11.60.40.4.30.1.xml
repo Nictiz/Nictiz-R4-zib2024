@@ -59,6 +59,15 @@
          </use>
          <value value="No proficiency"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Geen beheersing"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -76,6 +85,15 @@
          </use>
          <value value="Without difficulty"/>
       </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Moeiteloos"/>
+      </designation>
       <property>
          <code value="status"/>
          <valueCode value="active"/>
@@ -92,6 +110,15 @@
             <display value="Synonym"/>
          </use>
          <value value="With difficulty"/>
+      </designation>
+      <designation>
+         <language value="nl-NL"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Met moeite"/>
       </designation>
       <property>
          <code value="status"/>

@@ -57,7 +57,7 @@
         <rules value="open" />
       </slicing>
       <short value="HealthProfessionalIdentificationNumber" />
-      <definition value="The health professional identification number is a number that uniquely identifies the health professional.&#xD;&#xA;&#xD;&#xA;The following numbers are used in the Netherlands:&#xD;&#xA;1. UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry.&#xD;&#xA;2. VEKTIS AGB-Z. Identifies health professionals and healthcare organizations.&#xD;&#xA;3. BIG-ID. The ID of the health professional listed in the BIG-Register. &#xD;&#xA;&#xD;&#xA;This information is not readily available for foreign health professionals." />
+      <definition value="The health professional identification number is a number that uniquely identifies the health professional.&#xD;&#xA;&#xD;&#xA;The following numbers are used in the Netherlands:&#xD;&#xA;&#xD;&#xA;1. UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry.&#xD;&#xA;2. VEKTIS AGB-Z. Identifies health professionals and healthcare organizations&#xD;&#xA;3. BIG-ID. The ID of the health professional listed in the BIG-Register.&#xD;&#xA;&#xD;&#xA;This information is not readily available for foreign health professionals." />
       <alias value="ZorgverlenerIdentificatienummer" />
       <mapping>
         <identity value="zib-healthprofessional-v4.0-2024EN" />
@@ -181,7 +181,7 @@
       <alias value="Geslacht" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap GeslachtCodelijst-to-AdministrativeGender to translate terminology from the functional model to profile terminology in ValueSet AdministrativeGender. This ConceptMap is based on GeslachtCodelijst as defined in the zib Patient to avoid duplication of ConceptMaps. The GeslachtCodelijst of Patient and HealthProfessional are identical in terms of codes." />
+        <description value="Use ConceptMap GeslachtCodelijst_to_AdministrativeGender to translate terminology from the functional model to profile terminology in ValueSet AdministrativeGender. This ConceptMap is based on GeslachtCodelijst as defined in the zib Patient to avoid duplication of ConceptMaps. The GeslachtCodelijst of Patient and HealthProfessional are identical in terms of codes." />
         <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender" />
