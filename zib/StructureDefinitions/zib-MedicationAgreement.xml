@@ -239,6 +239,7 @@
       <short value="InstructionsForUse" />
       <definition value="Instructions for the use of the medication, e.g. dose and route of administration." />
       <alias value="Gebruiksinstructie" />
+      <max value="1" />
       <type>
         <code value="Dosage" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse" />

@@ -206,6 +206,13 @@ zib-HealthProfessional-PractitionerRole:
       - datatype: ContactPoint instead of container
         reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
 
+zib-MedicationAgreement:
+  zib deviations:
+    MedicationRequest.extension:periodOfUse.value[x]:
+      - datatype: Period instead of a reference
+        for: NL-CM:9.6.19936 (MedicationAgreement.PeriodOfUseTimeInterval)
+        reason: TimeInterval in FHIR is primarily represented using the Period datatype, hence the datatype is not Reference.
+
 zib-NameInformation:
   zib deviations:
     HumanName.family.extension:*.value[x]:
