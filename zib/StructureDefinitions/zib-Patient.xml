@@ -80,16 +80,18 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
       </type>
     </element>
-    <element id="Patient.extension:genderIdentity.extension">
-      <path value="Patient.extension.extension" />
-      <min value="1" />
-    </element>
     <element id="Patient.extension:genderIdentity.extension:value">
       <path value="Patient.extension.extension" />
       <sliceName value="value" />
+    </element>
+    <element id="Patient.extension:genderIdentity.extension:value.value[x]">
+      <path value="Patient.extension.extension.value[x]" />
       <short value="GenderIdentity" />
       <definition value="The gender with which the person identifies." />
       <alias value="Genderidentiteit" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
       <binding>
         <strength value="extensible" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.2--20240415000000" />
@@ -99,6 +101,10 @@
         <map value="NL-CM:0.1.34" />
         <comment value="GenderIdentity" />
       </mapping>
+    </element>
+    <element id="Patient.extension:genderIdentity.url">
+      <path value="Patient.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
     </element>
     <element id="Patient.extension:nationality">
       <path value="Patient.extension" />
