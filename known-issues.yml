@@ -16,11 +16,20 @@ ext-MedicationAgreement.AdditionalInformation:
       - cardinality: 0..1 instead of 0..*
         reason: FHIR restricts Extension.value to a max cardinality of 0..1. To use it more than once, the extension is added 0..* in the hosting element.
 
-nl-core-ContactPerson-full-02:
+nl-core-ContactPerson-alt-2:
   ignored issues:
     RelatedPerson.address[0].line[0].extension[1].value.ofType(string):
       - message: value should not start or finish with whitespace ' De Groene Draeck'
         reason: To communicate a HouseNumberAddition without a HouseNumberLetter, a leading space is used.
+
+nl-core-Payer-Organization-zib-2:
+  ignored issues:
+    Organization.telecom[0]:
+      - message: "Constraint failed: org-3: 'The telecom of an organization can never be of use 'home'' (defined in http://hl7.org/fhir/StructureDefinition/Organization)"
+        reason: The zib container Payer.PayerPerson is mapped to a Coverage, as well as either a Patient, RelatedPerson or Organization. Since the zib officially does not support references to the zibs Patient or ContactPerson, a PayerPerson in zib instances is assumed to conform to the nl-core-Payer-Organization profile and is transformed to an Organization resource accordingly. In this case the PayerPerson in the underlying zib instance actually aligns with the nl-core-ContactPerson profile (in which a telecom of 'home' is perfectly valid), resulting in the failed constraint.
+    Organization.address[0]:
+      - message: "Constraint failed: org-2: 'An address of an organization can never be of use 'home'' (defined in http://hl7.org/fhir/StructureDefinition/Organization)"
+        reason: The zib container Payer.PayerPerson is mapped to a Coverage, as well as either a Patient, RelatedPerson or Organization. Since the zib officially does not support references to the zibs Patient or ContactPerson, a PayerPerson in zib instances is assumed to conform to the nl-core-Payer-Organization profile and is transformed to an Organization resource accordingly. In this case the PayerPerson in the underlying zib instance actually aligns with the nl-core-ContactPerson profile (in which an address of 'home' is perfectly valid), resulting in the failed constraint.
 
 pattern-NlCoreHealthProfessionalReference:
   ignored issues:
@@ -67,17 +76,62 @@ zib-AddressInformation:
       - cardinality: 1..1 instead of 0..1
         reason: The value of the extension is required, but the extension itself is optional, making the effective cardinality 0..1 as required by the zib.
 
+zib-Admission:
+  zib deviations:
+    Encounter.class:
+      - cardinality: 1..1 instead of 0..1
+        reason: Encounter.class is mandatory in FHIR. The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.
+    Encounter.participant:responsibleHealthProfessional.type:
+      - cardinality: 1..1 instead of 0..1  
+        reason: There is only one correct type for the ResponsibleHealthProfessional, but the responsibleHealthProfessional slice on .participant is optional, making the effective cardinality 0..1 as required by the zib.
+    Encounter.type:triggerForAdmission:
+      - short: TriggerForAdmission instead of TiggerForAdmission
+        reason: The zib concept name "TiggerForAdmission" is an incorrect translation of the Dutch name into English.
+    Encounter.reasonCode.text:
+      - cardinality: 0..* instead of 0..1
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*, effective) is explained by open world modeling. The .reasonCode(.text) element can be used to convey information on other concepts than CommentAdmissionReason.
+
+zib-BloodPressure:
+  zib deviations:
+    Observation.bodySite:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:12.4.12 (BloodPressure.AnatomicalLocation)
+        reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+  ignored issues:
+    Observation.component:*BP:
+      - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
+        reason: The slice names SystolicBP and DiastolicBP are chosen to align with the HL7 Vital Signs profile.
+
 zib-BodyHeight:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
       - cardinality: 1..1 instead of 0..1
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
 
+zib-BodyTemperature:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+  ignored issues:
+    Observation.code.coding:BodyTempCode:
+      - message: "Constraint failed: sd-pg-13: 'Slice names should be camelCased starting with a lowercase letter.'"
+        reason: The slice name BodyTempCode is chosen to align with the HL7 Vital Signs profile.
+
 zib-BodyWeight:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
       - cardinality: 1..1 instead of 0..1
         reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+
+zib-CareTeam:
+  zib deviations:
+    CareTeam.participant:healthcareProfessional.member:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of each CareTeamMember option is defined by the cardinality of the slices on participant and thus the cardinality requirements of the zib are honored. Because .member is required to discriminate the slices, its cardinality is 1..1.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
@@ -206,12 +260,27 @@ zib-HealthProfessional-PractitionerRole:
       - datatype: ContactPoint instead of container
         reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
 
+zib-LivingSituation.HomeAdaption:
+  zib deviations:
+      Observation.value[x]:valueCodeableConcept:
+      - cardinality: 0..1 instead of 0..*
+        reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
+
+zib-LivingSituation.LivingCondition:
+  zib deviations:
+      Observation.value[x]:valueCodeableConcept:
+      - cardinality: 0..1 instead of 0..*
+        reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
+
 zib-MedicationAgreement:
   zib deviations:
     MedicationRequest.extension:periodOfUse.value[x]:
       - datatype: Period instead of a reference
         for: NL-CM:9.6.19936 (MedicationAgreement.PeriodOfUseTimeInterval)
         reason: TimeInterval in FHIR is primarily represented using the Period datatype, hence the datatype is not Reference.
+      - datatype: Period instead of rootconcept
+        for: NL-CM:20.3.1 (MedicationAgreement.PeriodOfUseTimeInterval)
+        reason: A period in FHIR is represented using the Period datatype, not as a separate resource.
     MedicationRequest.dosageInstruction:
       - datatype: Dosage instead of a reference
         for: NL-CM:9.6.23240 (MedicationAgreement.InstructionsForUse)
@@ -241,6 +310,27 @@ zib-NameInformation.GivenName:
     HumanName.given:
       - cardinality: 1..* instead of 0..1
         reason: The GivenName is optional according to the zib, but when this datatype profile is used, a name should be provided.
+
+zib-NutritionAdvice:
+  zib deviations:
+    NutritionOrder.oralDiet.texture.modifier:
+      - datatype: CodeableConcept instead of ST
+        reason: Together with HL7 NL and the zib centre, it has been decided that the flattened string concept from the zib is mapped to multiple coded elements in FHIR. See the comment on this element for details.
+    NutritionOrder.oralDiet.fluidConsistencyType:
+      - datatype: CodeableConcept instead of ST
+        reason: Together with HL7 NL and the zib centre, it has been decided that the flattened string concept from the zib is mapped to multiple coded elements in FHIR. See the comment on this element for details.
+      - cardinality: 0..* instead of 0..1
+        reason: Together with HL7 NL and the zib centre, it has been decided that the flattened string concept from the zib is mapped to multiple coded elements in FHIR. See the comment on this element for details.
+
+zib-O2Saturation:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+    Observation.bodySite:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:12.10.6 (O2Saturation.MeasuringLocation)
+        reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
 
 zib-Patient:
   zib deviations:
@@ -340,15 +430,52 @@ zib-Patient:
       - cardinality: 1..1 instead of 0..1
         reason: The FHIR profiles are expected to implement zib cardinalities as conceptual cardinalities, but FHIR requires the .language element to be present. This aligns with the intention of the zib, as the Language concept is required for zib LanguageProficiency to make sense.
 
+zib-Payer-Organization:
+  zib deviations:
+    Organization.telecom:
+      - cardinality: 0..* instead of 0..1
+        reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the missing root element of zib ContactInformation in FHIR. Instead, the two containers of the zib (TelephoneNumbers and EmailAddresses), which both have a cardinality of 0..*, are mapped directly into the resource. Thereby this mapping is still honoring the cardinality requirements of the zib.
+      - datatype: ContactPoint instead of Reference
+        reason: ContactInformation in FHIR is represented using the ContactPoint datatype, not as a separate resource.
+    Organization.telecom:*:
+      - datatype: ContactPoint instead of container
+        reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
+    Organization.address:
+      - datatype: Address instead of Reference
+        for: NL-CM:1.1.17 (Payer.AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+      - datatype: Address instead of rootconcept
+        for: NL-CM:20.5.1 (AddressInformation)
+        reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
+
+zib-Payer.PayerPerson:
+  zib deviations:
+    Coverage.extension:bankInformation:
+      - datatype: Extension instead of container
+        reason: The (complex) extension acts as a container for three subextensions that each contain a zib subconcept.
+
 zib-Problem:
   zib deviations:
     Condition.bodySite:
-      - datatype: CodeableConcept instead of a reference
+      - datatype: CodeableConcept instead of Reference
         for: NL-CM:5.1.14 (Problem.ProblemAnatomicalLocation)
         reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
       - cardinality: 0..* instead of 0..1
         for: NL-CM:20.7.4 (AnatomicalLocation.Location)
         reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the fact that both the ProblemAnatomicalLocation concept from zib Problem and the Location concept from zib AnatomicalLocation are mapped on the same level in FHIR. Setting the cardinality to 0..* allows for multiple instances of AnatomicalLocation, which is in accordance with zib Problem.
+
+zib-SkinDisorder:
+  zib deviations:
+    Condition.bodySite:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:19.3.9 (SkinDisorder.AnatomicalLocation)
+        reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
+
+zib-SNAQ65plusScore:
+  ignored issues:
+    StructureDefinition.mapping[0]:
+      - message: "Constraint failed: sd-zpg-05: 'The URI for zib mappings should align with the mapping name'"
+        reason: The discrepancy between uri and name in the mapping stems from the '+' character in the zib name, as this character is not allowed in the mapping name.
 
 unmapped zib concepts:
   - NL-CM:17.2.10: HealthcareProvider.LocationNumber
@@ -386,6 +513,29 @@ nl-core-*:
       - message: "Best Practice Recommendation: In general, all observations should have an effective[x] ()"
         reason: Observation.effective[x] is only added to the FHIR instance if there is a zib mapping present on that element in the profile and the corresponding zib concept is filled in the corresponding example.
 
+nl-core-Admission-*:
+  ignored issues:
+    Encounter.participant[*].type[*]:
+      - message: None of the codings provided are in the value set 'Participant type' (http://hl7.org/fhir/ValueSet/encounter-participant-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code 'RESP' from the v3 ParticipationType code system is not part of the extensible ValueSet bound here, but is needed to reflect the ResponsibleHealthProfessional concept from the zib.
+
+nl-core-BloodPressure-*:
+  ignored issues:
+    Observation.code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code used is the magic LOINC code for blood pressure, hence this issue should not arise.
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Bloeddruk panel waarvan alle leden optioneel in arterieel vaatstelsel' for http://loinc.org#85354-9. There are no valid display names found for language(s) 'en'. Default display is 'Blood pressure panel with all children optional'
+        reason: A valid Dutch display value is used instead of an English one.
+    Observation.component[*].code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
+    Observation.component[*].code.coding[*].display:
+      - message: Wrong Display Name 'Intravasculaire systolische bloeddruk in arterieel vaatstelsel' for http://loinc.org#8480-6. There are no valid display names found for language(s) 'en'. Default display is 'Systolic blood pressure'
+        reason: A valid Dutch display value is used instead of an English one.
+      - message: Wrong Display Name 'Intravasculaire diastolische bloeddruk in arterieel vaatstelsel' for http://loinc.org#8462-4. There are no valid display names found for language(s) 'en'. Default display is 'Diastolic blood pressure'
+        reason: A valid Dutch display value is used instead of an English one.
+
 nl-core-BodyHeight-*:
   ignored issues:
     Observation.code:
@@ -397,6 +547,15 @@ nl-core-BodyHeight-*:
     Observation.component[*].code:
       - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
         reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
+
+nl-core-BodyTemperature-*:
+  ignored issues:
+    Observation.code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code used is the magic LOINC code for body temperature, hence this issue should not arise.
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Lichaamstemperatuur' for http://loinc.org#8310-5. There are no valid display names found for language(s) 'en'. Default display is 'Body temperature'
+        reason: A valid Dutch display value is used instead of an English one.
 
 nl-core-BodyWeight-*:
   ignored issues:
@@ -427,24 +586,72 @@ nl-core-HealthcareProvider-Organization-*:
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
         reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
 
-nl-core-Problem-*:
+nl-core-*HealthProfessional-PractitionerRole-*:
+  ignored issues:
+    PractitionerRole.specialty[*].coding[*].system:
+      - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated
+        reason: This code system represents the Vektis AGB-medische specialismen, which the default terminology server is unable to check.
+
+nl-core-O2Saturation-*:
+  ignored issues:
+    Observation.code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The code used is the magic LOINC code for O2 saturation, hence this issue should not arise.
+    Observation.code.coding[*].display:
+      - message: Wrong Display Name 'Zuurstofverzadiging in arterieel bloed' for http://loinc.org#2708-6. There are no valid display names found for language(s) 'en'. Default display is 'Oxygen saturation in Arterial blood'
+        reason: A valid Dutch display value is used instead of an English one.
+      - message: Wrong Display Name 'Zuurstofverzadiging in arterieel bloed d.m.v. pulsoxymetrie' for http://loinc.org#59408-5. There are no valid display names found for language(s) 'en'. Default display is 'Oxygen saturation in Arterial blood by Pulse oximetry'
+        reason: A valid Dutch display value is used instead of an English one.
+    Observation.component[*].code:
+      - message: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable)
+        reason: The validator checks all Observations with a vital signs magic LOINC code against the HL7 Vital Signs base profile. Unfortunately, this profile restricts the allowed components to only the use cases identified by HL7, while the zib adds additional data. This has been identified as a bug in het HL7 Vital Signs profile, which will be fixed in the next version. See https://jira.hl7.org/browse/FHIR-43353 for more information.
+
+nl-core-*Problem-*:
   ignored issues:
     Condition.code:
       - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icd-10-nl| was not found
         reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system http://hl7.org/fhir/sid/icpc-1-nl| was not found
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
       - message: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.3--20240415000000|2024-04-15T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.120.5.1| was not found
         reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
+      - message: None of the codings provided are in the value set 'ProbleemNaamCodelijst'
+        reason: This ValueSet contains two SNOMED refsets. The terminology servers are unable to determine if a code is part of this refset.
     Condition.code.coding[*].system:
       - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icd-10-nl' could not be found, so the code cannot be validated
         reason: This code system represents the Dutch translation of ICD-10, which the default terminology server is unable to check.
+      - message: A definition for CodeSystem 'http://hl7.org/fhir/sid/icpc-1-nl' could not be found, so the code cannot be validated
+        reason: This code system represents the Dutch translation of ICPC, which the default terminology server is unable to check.
       - message: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.120.5.1' could not be found, so the code cannot be validated
         reason: This code system represents the DHD Diagnosethesaurus, which the default terminology server is unable to check.
 
-nl-core-Problem-full-03:
+nl-core-SNAQrcScore-*:
   ignored issues:
-    Condition.bodySite[0]:
-      - message: No code provided, and a code should be provided from the value set 'LocatieCodelijsten' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000|2024-04-15T00:00:00)
-        reason: This example contains no code on .bodySite, since its functional counterpart contains an AnatomicalLocation for which only the Laterality is specified (which is mapped to the BodyStructure resource referenced here). This is no issue since the binding is extensible.
+    Observation.component[*].code.coding[*].display:
+      - message: No valid Display Names found for urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1#4029008 in the language en
+        reason: A valid Dutch display value is used instead of an English one.
+
+zib-Admission:
+  ignored issues:
+    Encounter.participant:responsibleHealthProfessional.individual:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice."
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
+
+zib-BloodPressure.AnatomicalLocation-BodyStructure:
+  ignored issues:
+    BodyStructure.location:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The short description is defined on the datatype profile and is not repeated in the differential.
+      - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
+        reason: The definition is defined on the datatype profile and is not repeated in the differential.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The alias is defined on the datatype profile and is not repeated in the differential.
+
+zib-CareTeam:
+  ignored issues:
+    CareTeam.participant:*.member:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice"
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
 
 zib-ContactInformation-TelephoneNumbers:
   zib deviations:
@@ -498,6 +705,14 @@ zib-Patient:
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and not repeated in the differential.
     Patient.contact.address:
+      - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
+        reason: The short description is defined on the datatype profile and not repeated in the differential.
+      - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
+        reason: The alias is defined on the datatype profile and not repeated in the differential.
+
+zib-Payer-Organization:
+  ignored issues:
+    Organization.address:
       - message: "Constraint failed: sd-pg-02: 'If mapping.map exists and the mapping is not implicit, short should exist'"
         reason: The short description is defined on the datatype profile and not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"

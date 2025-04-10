@@ -1,0 +1,144 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="nl-core-CareTeam-zib-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-CareTeam"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Zorgteam. </caption>
+        <tbody>
+          <tr>
+            <th>Participant</th>
+            <td>
+              <ul>
+                <li>
+                  <span title="Casemanager (768832004 - SNOMED CT)">Casemanager</span> Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord</li>
+                <li>
+                  <span title="Performer (PRF - HL7 v3-ParticipationType)">Performer</span> Health professional (role), S. Curie, Medisch specialisten, geriatrie, Parnassia Groep Rotterdam</li>
+                <li>
+                  <span title="Performer (PRF - HL7 v3-ParticipationType)">Performer</span> Health professional (role), R.M. van Heck, Medisch specialisten, cardiologie, Erasmus MC</li>
+                <li>
+                  <span title="Performer (PRF - HL7 v3-ParticipationType)">Performer</span> Health professional (role), A. Schele, Medisch specialisten, inwendige geneeskunde, Franciscus Gasthuis &amp; Vlietland</li>
+                <li>
+                  <span title="Consultant (CON - HL7 v3-ParticipationType)">Consultant</span> Health professional (role), G.F. de Haan, Apothekers, Apotheek Bergweg</li>
+                <li>
+                  <span title="Other (OTH - HL7 v3-NullFlavor)">Other</span> Health professional (role), K. van der Linden, Humanitas Thuiszorg</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Reden</th>
+            <td>
+              <div>Problem, type: Interpretatie van diagnose, problem name: Vasculaire dementie</div>
+              <div>Problem, type: Interpretatie van diagnose, problem name: Hartfalen</div>
+              <div>Problem, type: Complicatie, problem name: Geneesmiddel-interacties</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <name value="Complexe Ouderenzorg"/>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="768832004"/>
+        <display value="Casemanager"/>
+      </coding>
+    </role>
+    <member>
+      <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-1"/>
+      <type value="PractitionerRole"/>
+      <display value="Health professional (role), W. Klaassen, Huisartsen, niet nader gespecificeerd, Gezondheidscentrum Rotterdam Noord"/>
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="PRF"/>
+        <display value="Performer"/>
+      </coding>
+    </role>
+    <member>
+      <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-2"/>
+      <type value="PractitionerRole"/>
+      <display value="Health professional (role), S. Curie, Medisch specialisten, geriatrie, Parnassia Groep Rotterdam"/>
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="PRF"/>
+        <display value="Performer"/>
+      </coding>
+    </role>
+    <member>
+      <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-3"/>
+      <type value="PractitionerRole"/>
+      <display value="Health professional (role), R.M. van Heck, Medisch specialisten, cardiologie, Erasmus MC"/>
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="PRF"/>
+        <display value="Performer"/>
+      </coding>
+    </role>
+    <member>
+      <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-4"/>
+      <type value="PractitionerRole"/>
+      <display value="Health professional (role), A. Schele, Medisch specialisten, inwendige geneeskunde, Franciscus Gasthuis &amp; Vlietland"/>
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="CON"/>
+        <display value="Consultant"/>
+      </coding>
+    </role>
+    <member>
+      <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-5"/>
+      <type value="PractitionerRole"/>
+      <display value="Health professional (role), G.F. de Haan, Apothekers, Apotheek Bergweg"/>
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+        <code value="OTH"/>
+        <display value="Other"/>
+      </coding>
+      <text value="Vrijwilliger"/>
+    </role>
+    <member>
+      <reference value="PractitionerRole/nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-6"/>
+      <type value="PractitionerRole"/>
+      <display value="Health professional (role), K. van der Linden, Humanitas Thuiszorg"/>
+    </member>
+  </participant>
+  <reasonReference>
+    <reference value="Condition/nl-core-CareTeam-zib-1-Problem-1"/>
+    <type value="Condition"/>
+    <display value="Problem, type: Interpretatie van diagnose, problem name: Vasculaire dementie"/>
+  </reasonReference>
+  <reasonReference>
+    <reference value="Condition/nl-core-CareTeam-zib-1-Problem-2"/>
+    <type value="Condition"/>
+    <display value="Problem, type: Interpretatie van diagnose, problem name: Hartfalen"/>
+  </reasonReference>
+  <reasonReference>
+    <reference value="Condition/nl-core-CareTeam-zib-1-Problem-3"/>
+    <type value="Condition"/>
+    <display value="Problem, type: Complicatie, problem name: Geneesmiddel-interacties"/>
+  </reasonReference>
+</CareTeam>
