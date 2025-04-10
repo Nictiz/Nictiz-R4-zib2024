@@ -77,11 +77,16 @@
       <sliceName value="genderIdentity" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
       </type>
     </element>
-    <element id="Patient.extension:genderIdentity.value[x]">
-      <path value="Patient.extension.value[x]" />
+    <element id="Patient.extension:genderIdentity.extension">
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:genderIdentity.extension:value">
+      <path value="Patient.extension.extension" />
+      <sliceName value="value" />
       <short value="GenderIdentity" />
       <definition value="The gender with which the person identifies." />
       <alias value="Genderidentiteit" />
