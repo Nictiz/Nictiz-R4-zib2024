@@ -252,7 +252,7 @@
 * No significant changes.
 
 ## Patient (zib-Patient, nl-core-Patient)
-* `.extension:genderIdentity.value[x]` ; extension ; Added extension genderIdentity for GenderIdentity. ; ZIB-1693
+* `.extension:genderIdentity.value[x]` ; extension ; Added extension individual-genderIdentity for GenderIdentity. ; ZIB-1693, ZIBFHIR-321
 * `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
 

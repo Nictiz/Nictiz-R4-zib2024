@@ -22,14 +22,16 @@
       </ul>
     </div>
   </text>
-  <extension url="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity">
-    <valueCodeableConcept>
-      <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="33791000087105"/>
-        <display value="Non-binaire genderidentiteit"/>
-      </coding>
-    </valueCodeableConcept>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="33791000087105"/>
+          <display value="Non-binaire genderidentiteit"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
   </extension>
   <identifier>
     <system value="http://fhir.nl/fhir/NamingSystem/bsn"/>
