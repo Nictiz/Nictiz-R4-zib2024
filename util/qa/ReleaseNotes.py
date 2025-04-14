@@ -71,7 +71,7 @@ class Zib:
     """
     
     def __init__(self, name, is_multiprofile, profile_names = None):
-        if not re.match("^[A-Z][A-Za-z]+$", name, re.MULTILINE):
+        if not re.match("^[A-Z][A-Za-z0-9]+$", name, re.MULTILINE):
             raise ParserException(f"Invalid zib name: {name}")
         self.name = name
         self.is_multiprofile = is_multiprofile

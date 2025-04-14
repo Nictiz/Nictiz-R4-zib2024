@@ -3,6 +3,7 @@ ignored issues: known-issues.yml
 igs:
   - zib
   - nl-core
+  - util/qa
 script dir: util/qa
 
 patterns:
@@ -33,7 +34,9 @@ steps:
   validate zib profiles:
     description: Validate the zib profiles using the profile for zib profiles
     patterns: zib profiles
-    profile: http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions-Zib-Profiles
+    profile:
+    - http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions-Zib-Profiles
+    - http://nictiz.nl/fhir/StructureDefinition/zib2024-PackageChecks
   validate zib extensions:
     description: Validate the zib specific extensions using the profile for zib extensions
     patterns: zib extensions
@@ -90,6 +93,9 @@ steps:
     patterns: nl-core profiles
     snapshots: json
     script: nl-core-overrides.py
+  check zib mapping inheritance:
+    patterns: nl-core profiles
+    script: inherit-mapping-declarations.py
   check release notes:
     patterns: release notes
     script: ReleaseNotes.py
