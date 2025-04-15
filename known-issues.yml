@@ -274,6 +274,9 @@ zib-MedicationAdministration2:
     MedicationAdministration.effective[x]:effectiveDateTime:
       - cardinality: 1..1 instead of 0..1
         reason: MedicationAdministration.effective[x] is mandatory in FHIR. The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.
+    MedicationAdministration.performer:healthProfessional.actor:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of each Administrator option is defined by the cardinality of the slices on performer and thus the cardinality requirements of the zib are honored. Because .actor is required to discriminate the slices, its cardinality is 1..1.
     MedicationAdministration.dosage.site.extension.value[x]:
       - datatype: CodeableConcept instead of Reference
         for: NL-CM:9.13.23381 (MedicationAdministration2.AdministrationLocation)

@@ -179,17 +179,6 @@
     </element>
     <element id="MedicationAdministration.performer:healthProfessional.function">
       <path value="MedicationAdministration.performer.function" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationAdministration.performer:healthProfessional.function:healthProfessionalRole">
-      <path value="MedicationAdministration.performer.function" />
-      <sliceName value="healthProfessionalRole" />
       <short value="HealthProfessionalRole" />
       <definition value="The role the health professional fulfils in the healthcare process. For health professionals, this could be for example attender, referrer or performer." />
       <alias value="ZorgverlenerRol" />
