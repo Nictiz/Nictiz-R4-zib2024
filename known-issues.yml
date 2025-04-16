@@ -447,6 +447,25 @@ zib-Problem:
         for: NL-CM:20.7.4 (AnatomicalLocation.Location)
         reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the fact that both the ProblemAnatomicalLocation concept from zib Problem and the Location concept from zib AnatomicalLocation are mapped on the same level in FHIR. Setting the cardinality to 0..* allows for multiple instances of AnatomicalLocation, which is in accordance with zib Problem.
 
+zib-PulseRate:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+
+zib-PulseRate.PulseRateValue:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+
+zib-PulseRate.PulseRegularity:
+  zib deviations:
+    Observation.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: In the HL7 Vital Signs profile the .effective[x] element is required, which is adopted in the zib profile as well to align with the former profile as much as possible.
+
+
 zib-SkinDisorder:
   zib deviations:
     Condition.bodySite:
