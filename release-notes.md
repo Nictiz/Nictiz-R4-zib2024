@@ -269,7 +269,7 @@
 * `Coverage` ; mapping ; Moved mapping of PayerPerson from `.payor`. ; ZIBFHIR-196
 
 ## PharmaceuticalProduct (zib-PharmaceuticalProduct, nl-core-PharmaceuticalProduct)
-*`.identifier:gs1` ; mapping ; Added mapping of SerieNumber with NamingSystem 'gs1'. ; ZIB-1651
+*`.identifier:serieNumber` ; mapping ; Added mapping of SerieNumber with NamingSystem 'gs1'. ; ZIB-1651
 *`.code` ; terminology ; Removed bindings SNK, SSK and SNOMED CT. ; ZIB-1743
 *`.ingredient.item[x]:itemCodeableConcept` ; terminology ; Changed value set name from 'KNMP article number' to 'Z index number (ZI number)'. ; ZIB-1743
 *`.batch.lotNumber` ; mapping ; Added mapping of Batch/lotNumber. ; ZIB-1651
