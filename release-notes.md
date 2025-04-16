@@ -275,6 +275,9 @@
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
 * `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
 
+## PulseRate (zib-PulseRate , nl-core-PulseRate)
+* No significant changes.
+
 ## SkinDisorder (zib-SkinDisorder, nl-core-SkinDisorder)
 * `.code` ; terminology ; Changed codes in SoortAandoeningCodelijst. ; ZIB-1572
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
