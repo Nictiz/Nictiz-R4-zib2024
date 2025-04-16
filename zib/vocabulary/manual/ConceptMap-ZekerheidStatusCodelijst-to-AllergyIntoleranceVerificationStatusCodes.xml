@@ -1,0 +1,69 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="ZekerheidStatusCodelijst-to-AllergyIntoleranceVerificationStatusCodes"/>
+  <text>
+    <status value="empty"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+    <valueBoolean value="false"/>
+  </extension>
+  <url value="http://nictiz.nl/fhir/ConceptMap/ZekerheidStatusCodelijst-to-AllergyIntoleranceVerificationStatusCodes"/>
+  <name value="ZekerheidStatusCodelijst_to_AllergyIntoleranceVerificationStatusCodes"/>
+  <title value="ZekerheidStatusCodelijst to AllergyIntoleranceVerificationStatusCodes"/>
+  <status value="draft"/>
+  <publisher value="Nictiz"/>
+  <contact>
+    <name value="Nictiz"/>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Maps DegreeOfCertainty codes as found in the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) HypersensitivityIntolerance v1.0 (2024)](https://zibs.nl/wiki/HypersensitivityIntolerance-v1.0(2024EN)) to &lt;http://hl7.org/fhir/ValueSet/allergyintolerance-verification&gt; as found in `AllergyIntolerance.verificationStatus` in FHIR R4."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <sourceCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.6.2--20240415000000"/>
+  <targetCanonical value="http://hl7.org/fhir/ValueSet/allergyintolerance-verification"/>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="http://hl7.org/fhir/allergyintolerance-verification"/>
+    <element>
+      <code value="415684004"/>
+      <display value="Suspected"/>
+      <target>
+        <code value="unconfirmed"/>
+        <display value="Unconfirmed"/>
+        <equivalence value="wider"/>
+        <comment value="'Suspected' is similar to 'Known possible', but implies a higher level of certainity. 'Unconfirmed' is a broader term that includes both 'Known possible' and 'Suspected'."/>
+      </target>
+    </element>
+    <element>
+      <code value="410590009"/>
+      <display value="Known possible"/>
+      <target>
+        <code value="unconfirmed"/>
+        <display value="Unconfirmed"/>
+        <equivalence value="wider"/>
+        <comment value="'Known possible' is similar to 'Suspected', but implies a lower level of certainity. 'Unconfirmed' is a broader term that includes both 'Known possible' and 'Suspected'."/>
+      </target>
+    </element>
+    <element>
+      <code value="410605003"/>
+      <display value="Confirmed present"/>
+      <target>
+        <code value="confirmed"/>
+        <display value="Confirmed"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+    <element>
+      <code value="410593006"/>
+      <display value="Probably not present"/>
+      <target>
+        <code value="refuted"/>
+        <display value="Refuted"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
