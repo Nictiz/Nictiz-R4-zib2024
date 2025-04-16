@@ -149,6 +149,11 @@
 ### zib-FluidBalance.FluidTotalOut, nl-core-FluidBalance.FluidTotalOut
 * No significant changes.
 
+## FreedomRestrichtingIntervention (zib-FreedomRestrictingIntervention, nl-core-FreedomRestrictingIntervention)
+* `.category` ; terminology ; Pattern changed from http://snomed.info/sct#225317005 to http://snomed.info/sct#225214000. ; ZIB-1611
+* `.code` ; terminology ; Changed codes in TypeOfInterventionCodelist ; ZIB-1826
+* `.extension:legallyCapable.extension:legallyCapableComment.value[x]` ; textual ; Refined guidance for LegallyCapableComment ; ZIB-1297
+
 ## GlasgowComaScale (zib-GlasgowComaScale, nl-core-GlasgowComaScale)
 * `.component:gcsMotor.value[x]` ; terminology ; Changed codes in GCS_MotorCodelijsten (GCS_MotorCodelijst, GCS_MotorCodelijstBaby and GCS_MotorCodelijstKleuter). ; ZIB-1314
 * `.component:gcsVerbal.value[x]` ; terminology ; Changed codes in GCS_VerbalCodelijsten (GCS_VerbalCodelijst, GCS_VerbalCodelijstBaby and GCS_VerbalCodelijstKleuter). ; ZIB-1314

@@ -1,0 +1,70 @@
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="nl-core-FreedomRestrictingIntervention-zib-2"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-FreedomRestrictingIntervention"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Verrichting. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="handeling met betrekking tot beheersing, beperking, afzondering of isolatie (225214000 - SNOMED CT)">handeling met betrekking tot beheersing, beperking, afzondering of isolatie</span>, Status: voltooid</caption>
+        <tbody>
+          <tr>
+            <td>
+              <span title="Geslotendeurprocedure (225210009 - SNOMED CT)">Geslotendeurprocedure</span>
+            </td>
+            <td>
+              <div>Uitgevoerd: 12 april 2020 - 13 april 2020</div>
+            </td>
+          </tr>
+          <tr>
+            <th>Reden</th>
+            <td>
+              <span title="Afwenden van crisissituatie (121491000146107 - SNOMED CT)">Afwenden van crisissituatie</span>, Legal situation, legal status: Crisismaatregel</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-FreedomRestrictingIntervention.LegallyCapable">
+    <extension url="legallyCapable">
+      <valueBoolean value="true"/>
+    </extension>
+  </extension>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="225214000"/>
+      <display value="handeling met betrekking tot beheersing, beperking, afzondering of isolatie"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="225210009"/>
+      <display value="Geslotendeurprocedure"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </subject>
+  <performedPeriod>
+    <start value="2020-04-12"/>
+    <end value="2020-04-13"/>
+  </performedPeriod>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="121491000146107"/>
+      <display value="Afwenden van crisissituatie"/>
+    </coding>
+  </reasonCode>
+  <reasonReference>
+    <reference value="Condition/nl-core-FreedomRestrictingIntervention-zib-2-Le-LegalStatus-1"/>
+    <type value="Condition"/>
+    <display value="Legal situation, legal status: Crisismaatregel"/>
+  </reasonReference>
+</Procedure>
