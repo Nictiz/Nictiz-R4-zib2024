@@ -437,6 +437,19 @@ zib-Payer.PayerPerson:
       - datatype: Extension instead of container
         reason: The (complex) extension acts as a container for three subextensions that each contain a zib subconcept.
 
+zib-PharmaceuticalProduct:
+  zib deviations:
+    Medication.identifier:serieNumber:
+      - datatype: Identifier instead of ST
+        for: NL-CM:9.7.22280 (SerieNumber)
+        reason: A serial unique identifier in FHIR is represented using the Identifier datatype, not as a string.
+    Medication.ingredient.item[x]:itemCodeableConcept:
+      - cardinality: 1..1 instead of 0..1
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
+    Medication.ingredient.strength:
+      - datatype: Ratio instead of Container
+        reason: The .ingredient.strength acts as a container for the two child elements and can thus be correctly mapped to the zib Concentration container.
+
 zib-Problem:
   zib deviations:
     Condition.bodySite:

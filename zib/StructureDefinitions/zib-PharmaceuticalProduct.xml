@@ -72,7 +72,7 @@
          <alias value="SerieNummer"/>
          <max value="1"/>
          <patternIdentifier>
-            <system value="http://hl7.org/fhir/NamingSystem/gs1"/>
+            <system value="http://fhir.nl/fhir/NamingSystem/gs1"/>
          </patternIdentifier>
          <mapping>
             <identity value="zib-pharmaceuticalproduct-v2.2.1-2024EN"/>
@@ -125,8 +125,8 @@
          <path value="Medication.ingredient"/>
          <short value="Ingredient"/>
          <definition value="Container of the Ingredient concept. This container contains all data elements of the Ingredient concept.&#xD;&#xA;&#xD;&#xA;A product contains one or more active substances and excipients. These are usually determined by the product code. For medication prepared or compounded by the local pharmacy, each ingredient must be entered separately.&#xD;&#xA;&#xD;&#xA;The active substances play an important role, as they:&#xD;&#xA;&#xD;&#xA;a) determine the pharmacotherapeutic effect of the medication and&#xD;&#xA;&#xD;&#xA;b) serve as the basis for the indication of the strength of the medication (e.g. 200 mg)."/>
-         <alias value="Ingredient"/>
          <comment value="If the Medication.code does not fully specify the Medication (i.e. own preparation), all known ingredients by the source system must be conveyed."/>
+         <alias value="Ingredient"/>
          <mapping>
             <identity value="zib-pharmaceuticalproduct-v2.2.1-2024EN"/>
             <map value="NL-CM:9.7.19932"/>
