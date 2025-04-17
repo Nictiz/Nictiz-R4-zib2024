@@ -277,7 +277,7 @@ zib-MedicationAdministration2:
     MedicationAdministration.performer:healthProfessional.actor:
       - cardinality: 1..1 instead of 0..1
         reason: The cardinality of each Administrator option is defined by the cardinality of the slices on performer and thus the cardinality requirements of the zib are honored. Because .actor is required to discriminate the slices, its cardinality is 1..1.
-    MedicationAdministration.dosage.site.extension.value[x]:
+    MedicationAdministration.dosage.site:
       - datatype: CodeableConcept instead of Reference
         for: NL-CM:9.13.23381 (MedicationAdministration2.AdministrationLocation)
         reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
