@@ -187,6 +187,9 @@
 ### zib-IllnessPerception.PatientIllnessInsight, nl-core-IllnessPerception.PatientIllnessInsight
 * No significant changes.
 
+## InstructionsForUse (zib-InstructionsForUse.DosageInstructions, nl-core-InstructionsForUse.DosageInstructions)
+* New profile based on MP9.
+
 ## LanguageProficiency (zib-Patient, nl-core-Patient)
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877
 * `.communication.extension:comment` ; extension ; Replaced extension ExtComment with ExtLanguageProficiencyComment. ; ZIBFHIR-97
@@ -294,3 +297,9 @@
 
 ## SNAQScore (zib-SNAQScore, nl-core-SNAQScore)
 * No significant changes.
+
+## TimeInterval (zib-TimeInterval, nl-core-TimeInterval)
+* `.start.extension:relativeStartTime.value[x]` ; mapping ; Added mapping of RelativeStartTime. ; ZIB-2148
+* `.start` ; textual ; Renamed from startDateTime to StartDateTime. ; ZIB-1756
+* `.end.extension:relativeEndTime.value[x]` ; mapping ; Added mapping of RelativeEndTime. ; ZIB-2148
+* `.end` ; textual ; Renamed from endDateTime to EndDateTime. ; ZIB-1756
