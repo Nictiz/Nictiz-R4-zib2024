@@ -255,7 +255,7 @@
 * No significant changes.
 
 ## Patient (zib-Patient, nl-core-Patient)
-* `.extension:genderIdentity.value[x]` ; extension ; Added extension genderIdentity for GenderIdentity. ; ZIB-1693
+* `.extension:genderIdentity.value[x]` ; extension ; Added extension individual-genderIdentity for GenderIdentity. ; ZIB-1693, ZIBFHIR-321
 * `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
 
@@ -297,3 +297,9 @@
 
 ## SNAQScore (zib-SNAQScore, nl-core-SNAQScore)
 * No significant changes.
+
+## TimeInterval (zib-TimeInterval, nl-core-TimeInterval)
+* `.start.extension:relativeStartTime.value[x]` ; mapping ; Added mapping of RelativeStartTime. ; ZIB-2148
+* `.start` ; textual ; Renamed from startDateTime to StartDateTime. ; ZIB-1756
+* `.end.extension:relativeEndTime.value[x]` ; mapping ; Added mapping of RelativeEndTime. ; ZIB-2148
+* `.end` ; textual ; Renamed from endDateTime to EndDateTime. ; ZIB-1756
