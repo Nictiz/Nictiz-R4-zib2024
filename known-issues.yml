@@ -281,6 +281,9 @@ zib-MedicationAgreement:
       - datatype: Period instead of rootconcept
         for: NL-CM:20.3.1 (MedicationAgreement.PeriodOfUseTimeInterval)
         reason: A period in FHIR is represented using the Period datatype, not as a separate resource.
+    MedicationRequest.medication[x]:medicationReference:
+      - cardinality: 1..1 instead of 0..1
+        reason: MedicationRequest.medication[x] is mandatory in FHIR. The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.
     MedicationRequest.dosageInstruction:
       - datatype: Dosage instead of a reference
         for: NL-CM:9.6.23240 (MedicationAgreement.InstructionsForUse)
