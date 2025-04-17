@@ -227,42 +227,42 @@
     </element>
     <element id="MedicationAdministration.dosage.site">
       <path value="MedicationAdministration.dosage.site" />
-      <short value="Location" />
-      <definition value="Location from AnatomicalLocation." />
-      <alias value="Locatie" />
+      <short value="Location / AdministrationLocation" />
+      <definition value="Location on or in the body where the medication was administered. Usually used to indicate the location at which a patient was administered an injection or patch was applied. The value list PrikPlakLocationCodelijst list can serve as a starting point for coding these concepts. If both the anatomical location and administration route are filled, they should be aligned." />
+      <alias value="Toedienlocatie" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
+      </type>
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet">
+          <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.4--20240415000000" />
+        </extension>
         <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.4--20240415000000" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
       </binding>
       <mapping>
         <identity value="zib-medicationadministration2-v3.0-2024EN" />
         <map value="NL-CM:20.7.4" />
         <comment value="Location" />
       </mapping>
-    </element>
-    <element id="MedicationAdministration.dosage.site.extension:bodyStructureReference">
-      <path value="MedicationAdministration.dosage.site.extension" />
-      <sliceName value="bodyStructureReference" />
-    </element>
-    <element id="MedicationAdministration.dosage.site.extension:bodyStructureReference.url">
-      <path value="MedicationAdministration.dosage.site.extension.url" />
-      <fixedUri value="bodyStructureReference" />
-    </element>
-    <element id="MedicationAdministration.dosage.site.extension:bodyStructureReference.value[x]">
-      <path value="MedicationAdministration.dosage.site.extension.value[x]" />
-      <short value="AdministrationLocation" />
-      <definition value="Location on or in the body where the medication was administered. Usually used to indicate the location at which a patient was administered an injection or patch was applied. The value list PrikPlakLocationCodelijst list can serve as a starting point for coding these concepts. If both the anatomical location and administration route are filled, they should be aligned." />
-      <alias value="Toedienlocatie" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
-      </type>
       <mapping>
         <identity value="zib-medicationadministration2-v3.0-2024EN" />
         <map value="NL-CM:9.13.23381" />
         <comment value="AdministrationLocation" />
       </mapping>
+    </element>
+    <element id="MedicationAdministration.dosage.site.extension:bodyStructureReference">
+      <path value="MedicationAdministration.dosage.site.extension" />
+      <sliceName value="bodyStructureReference" />
+    </element>
+    <element id="MedicationAdministration.dosage.site.extension:bodyStructureReference.value[x]">
+      <path value="MedicationAdministration.dosage.site.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration2.AdministrationLocation-BodyStructure" />
+      </type>
     </element>
     <element id="MedicationAdministration.dosage.route">
       <path value="MedicationAdministration.dosage.route" />
@@ -283,11 +283,8 @@
       <path value="MedicationAdministration.dosage.dose" />
       <short value="AdministeredAmount" />
       <definition value="Amount of the administered product." />
+      <comment value="If the administration is not instantaneous (rate is present), this can be specified to convey the total amount administered over period of time of a single administration." />
       <alias value="ToegediendeHoeveelheid" />
-      <type>
-        <code value="Quantity" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Quantity" />
-      </type>
       <mapping>
         <identity value="zib-medicationadministration2-v3.0-2024EN" />
         <map value="NL-CM:9.13.21194" />

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-MedicationAdministration2.AdministrationLocation-BodyStructure" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration2.AdministrationLocation-BodyStructure" />
+  <name value="ZibMedicationAdministration2AdministrationLocationBodyStructure" />
+  <title value="zib MedicationAdministration2.AnatomicalLocation BodyStructure" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Location on or in the body where the medication was administered. Usually used to indicate the location at which a patient was administered an injection or patch was applied. The value list PrikPlakLocationCodelijst list can serve as a starting point for coding these concepts. If both the anatomical location and administration route are filled, they should be aligned." />
+  <purpose value="This BodyStructure resource represents the AdministrationLocation concept (NL-CM:9.13.23381) of Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) MedicationAdministration2 v3.0 (2024)](https://zibs.nl/wiki/MedicationAdministration2-v3.0(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-medicationadministration2-v3.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/MedicationAdministration2-v3.0(2024EN)" />
+    <name value="zib MedicationAdministration2-v3.0(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="BodyStructure" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="BodyStructure.location">
+      <path value="BodyStructure.location" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet">
+          <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.4--20240415000000" />
+        </extension>
+        <strength value="required" />
+      </binding>
+      <mapping>
+        <identity value="zib-medicationadministration2-v3.0-2024EN" />
+        <map value="NL-CM:9.13.23381" />
+        <comment value="AdministrationLocation" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
