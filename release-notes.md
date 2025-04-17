@@ -270,7 +270,7 @@
 
 ## PharmaceuticalProduct (zib-PharmaceuticalProduct, nl-core-PharmaceuticalProduct)
 *`.identifier:serieNumber` ; mapping ; Added mapping of SerieNumber with NamingSystem 'gs1'. ; ZIB-1651
-*`.code` ; terminology ; Removed bindings SNK, SSK and SNOMED CT. ; ZIB-1743
+*`.code` ; terminology ; Removed bindings SNK and SSK. ; ZIB-1743, ZIB-2214
 *`.ingredient.item[x]:itemCodeableConcept` ; terminology ; Changed value set name from 'KNMP article number' to 'Z index number (ZI number)'. ; ZIB-1743
 *`.batch.lotNumber` ; mapping ; Added mapping of Batch/lotNumber. ; ZIB-1651
 
