@@ -261,7 +261,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration2.AdministrationLocation-BodyStructure" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration2.AnatomicalLocation-BodyStructure" />
       </type>
     </element>
     <element id="MedicationAdministration.dosage.route">
