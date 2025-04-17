@@ -84,16 +84,6 @@
         <comment value="EndDate (implicit, main mapping is on DeviceUseStatement.timingPeriod.end)" />
       </mapping>
     </element>
-    <element id="DeviceUseStatement.derivedFrom">
-      <path value="DeviceUseStatement.derivedFrom" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="DeviceUseStatement.timing[x]">
       <path value="DeviceUseStatement.timing[x]" />
       <slicing>
