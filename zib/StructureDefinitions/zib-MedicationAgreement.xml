@@ -242,7 +242,7 @@
       <max value="1" />
       <type>
         <code value="Dosage" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse.DosageInstructions" />
       </type>
       <mapping>
         <identity value="zib-medicationagreement-v3.0-2024EN" />
