@@ -1,0 +1,27 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="nl-core-MedicalDevice-alt-1-HealthProfessiona-PractitionerRole-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Zorgverlenerrol. </caption>
+        <tbody>
+          <tr>
+            <th>Zorgverlener</th>
+            <td>
+              <div>Health professional (person), J. Smit</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <practitioner>
+    <reference value="Practitioner/nl-core-MedicalDevice-alt-1-HealthProfessiona-Practitioner-1"/>
+    <type value="Practitioner"/>
+    <display value="Health professional (person), J. Smit"/>
+  </practitioner>
+</PractitionerRole>
