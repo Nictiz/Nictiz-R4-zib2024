@@ -262,6 +262,18 @@ zib-HealthProfessional-PractitionerRole:
       - datatype: ContactPoint instead of container
         reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
 
+zib-LivingSituation.HomeAdaption:
+  zib deviations:
+      Observation.value[x]:valueCodeableConcept:
+      - cardinality: 0..1 instead of 0..*
+        reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
+
+zib-LivingSituation.LivingCondition:
+  zib deviations:
+      Observation.value[x]:valueCodeableConcept:
+      - cardinality: 0..1 instead of 0..*
+        reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
+
 zib-MedicalDevice.Product:
   zib deviations:
     Device.identifier:*ProductID:
@@ -331,6 +343,9 @@ zib-Patient:
     Patient.extension:nationality.extension:code.value[x]:
       - cardinality: 1..1 instead of 0..1
         reason: Zib Nationality is implemented using the complex core extension patient-nationality. The .value[x] element representing the concept Nationality has a 1..1 cardinality, but the "code" part of the extension itself is 0..1, making the cardinality effectively 0..1 as required by the zib.
+    Patient.extension:genderIdentity.extension:value.value[x]:
+      - cardinality: 1..1 instead of 0..1
+        reason: The GenderIdentity concept is implemented using the complex core extension individual-genderIdentity. The .value element representing the concept GenderIdentity itself has a 1..1 cardinality, but the extension itself is 0..*. This makes the cardinality effectively 0..* rather then 1..1, which still differs from the zib. However, the extension offers the possibility to be define gender identity's over different time periods, which is more advanced than the zib concept. In order to allow this advanced use, the extension is not constrained.
     Patient.name:
       - cardinality: 0..* instead of 0..1
         reason: The name information according to zib NameInformation may be split up over multiple instances of Patient.name.
