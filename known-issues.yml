@@ -4,6 +4,15 @@
 
 issues should occur: true
 
+2.16.840.1.113883.2.4.3.11.60.40.2.10.1.7--20240415000000:
+  ignored issues:
+    ValueSet.compose.include[0].concept[0]:
+      - message: The code '0' is not valid in the system urn:oid:2.16.840.1.113883.2.4.3.11.22.218 (Unable to evaluate based on code system with status = not-present)
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+    ValueSet.compose.include[2].concept[0]:
+      - message: The code '0' is not valid in the system urn:oid:2.16.840.1.113883.2.4.3.11.22.211 (Unable to evaluate based on code system with status = not-present)
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+        
 ext-LanguageProficiency.CommunicationDetails:
   zib deviations:
     Extension.value[x]:
@@ -50,6 +59,21 @@ pattern-ZibHealthProfessionalReference:
     StructureDefinition:
       - message: "Constraint failed: sd-pg-08: 'The title of the StructureDefinition should conform to the profiling guidelines'"
         reason: The title is shown in the hosting profiles as the name of the datatype. Since the title according to the profiling guidelines ("pattern ZibHealthProfessionalReference") is deemed confusing in some cases, the title is simply "Reference". See https://bits.nictiz.nl/browse/MM-3854.
+
+ProductTypeGeenCodelijst-to-AbsentOrUnknownDevicesUvIps:
+  ignored issues:
+    ConceptMap.group[0].element[0].code:
+      - message: The code '0' comes from the system urn:oid:2.16.840.1.113883.2.4.3.11.22.218 which could not be found, so it's not known whether it's valid in the value set
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+    ConceptMap.group[1].element[0].code:
+      - message: The code '0' comes from the system urn:oid:2.16.840.1.113883.2.4.3.11.22.211 which could not be found, so it's not known whether it's valid in the value set
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+    ConceptMap.group[0].source:
+      - message: Source Code System urn:oid:2.16.840.1.113883.2.4.3.11.22.218 doesn't have all content (content = not-present), so the source codes cannot be checked
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
+    ConceptMap.group[1].source:
+      - message: Source Code System urn:oid:2.16.840.1.113883.2.4.3.11.22.211 doesn't have all content (content = not-present), so the source codes cannot be checked
+        reason: It's a deliberate choice not to include the codes from this externally maintained code system in the package.
 
 zib-AbilityToDrink.DrinkingLimitations:
   zib deviations:
