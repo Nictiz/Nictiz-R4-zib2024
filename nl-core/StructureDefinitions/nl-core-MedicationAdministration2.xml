@@ -35,18 +35,6 @@
       <path value="MedicationAdministration" />
       <alias value="nl-core-MedicationAdministration2" />
     </element>
-    <element id="MedicationAdministration.dosage.site.extension:bodyStructureReference">
-      <path value="MedicationAdministration.dosage.site.extension" />
-      <sliceName value="bodyStructureReference" />
-    </element>
-    <element id="MedicationAdministration.dosage.site.extension:bodyStructureReference.value[x]">
-      <path value="MedicationAdministration.dosage.site.extension.value[x]" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-MedicationAdministration2.AnatomicalLocation-BodyStructure" />
-      </type>
-    </element>
     <element id="MedicationAdministration.medication[x]:medicationReference">
       <path value="MedicationAdministration.medication[x]" />
       <sliceName value="medicationReference" />
