@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://example.org/fhir/StructureDefinition/zib-Diagnosis" />
+  <name value="ZibDiagnosis" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ClinicalImpression" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ClinicalImpression.effective[x]">
+      <path value="ClinicalImpression.effective[x]" />
+      <short value="DiagnosticInsightDate" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.assessor">
+      <path value="ClinicalImpression.assessor" />
+      <short value="HealthProfessional" />
+    </element>
+    <element id="ClinicalImpression.problem">
+      <path value="ClinicalImpression.problem" />
+      <short value="Condition" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.investigation.code">
+      <path value="ClinicalImpression.investigation.code" />
+      <short value="MethodOfConfirmation" />
+    </element>
+    <element id="ClinicalImpression.finding.itemCodeableConcept">
+      <path value="ClinicalImpression.finding.itemCodeableConcept" />
+      <short value="DiagnosisName" />
+    </element>
+    <element id="ClinicalImpression.finding.itemCodeableConcept.text">
+      <path value="ClinicalImpression.finding.itemCodeableConcept.text" />
+      <short value="FurtherSpecificationDiagnosisName" />
+    </element>
+    <element id="ClinicalImpression.prognosisCodeableConcept">
+      <path value="ClinicalImpression.prognosisCodeableConcept" />
+      <short value="DegreeOfCertainty" />
+    </element>
+    <element id="ClinicalImpression.note.text">
+      <path value="ClinicalImpression.note.text" />
+      <short value="Comment" />
+    </element>
+  </differential>
+</StructureDefinition>
