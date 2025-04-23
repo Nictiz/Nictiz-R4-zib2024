@@ -477,6 +477,10 @@
         <comment value="Reversed reference for Symptom.Condition" />
       </mapping>
     </element>
+    <element id="Condition.note">
+      <path value="Condition.note" />
+      <max value="1" />
+    </element>
     <element id="Condition.note.text">
       <path value="Condition.note.text" />
       <short value="Comment" />
