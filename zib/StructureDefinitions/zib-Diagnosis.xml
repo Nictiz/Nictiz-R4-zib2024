@@ -48,6 +48,13 @@
     <element id="ClinicalImpression.note.text">
       <path value="ClinicalImpression.note.text" />
       <short value="Comment" />
+      <definition value="A comment in free text with respect to the diagnostic insight, that is not represented by the other data elements in the information model." />
+      <alias value="Toelichting" />
+      <mapping>
+        <identity value="zib-diagnosticinsight-v1.0-2024EN" />
+        <map value="NL-CM:5.6.11" />
+        <comment value="Comment" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
