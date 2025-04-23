@@ -61,7 +61,6 @@
       <path value="ClinicalImpression.assessor" />
       <short value="Diagnostician" />
       <definition value="The care professional that acquired the diagnostic insight. This can be a different individual than the person who recorded the diagnostic insight." />
-      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [zib-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [zib-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
       <alias value="DiagnoseSteller" />
       <type>
         <code value="Reference" />
@@ -70,26 +69,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
       </type>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
-      </mapping>
-      <mapping>
-        <identity value="workflow" />
-        <map value="Event.performer.actor" />
-      </mapping>
-      <mapping>
-        <identity value="w5" />
-        <map value="FiveWs.author" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="ROL-4" />
-      </mapping>
       <mapping>
         <identity value="zib-diagnosis-v1.0-2024EN" />
         <map value="NL-CM:5.6.2" />
@@ -101,6 +80,7 @@
       <short value="Condition" />
       <definition value="The Condition to which the DiagnosticInsight applies." />
       <alias value="AandoeningOfGesteldheid" />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Condition-Diagnosis" />
@@ -111,6 +91,10 @@
         <map value="NL-CM:5.6.10" />
         <comment value="Condition" />
       </mapping>
+    </element>
+    <element id="ClinicalImpression.investigation">
+      <path value="ClinicalImpression.investigation" />
+      <max value="1" />
     </element>
     <element id="ClinicalImpression.investigation.code">
       <path value="ClinicalImpression.investigation.code" />
@@ -158,6 +142,7 @@
       <short value="DegreeOfCertainty" />
       <definition value="Indicates the conviction of the care professional with respect to the diagnostic insight as interpretation of the condition." />
       <alias value="ZekerheidStatus" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.6.3--20240415000000" />
