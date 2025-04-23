@@ -1,0 +1,33 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="nl-core-CareTeam-zib-1-HealthProfessional-PractitionerRole-6"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Zorgverlenerrol. </caption>
+        <tbody>
+          <tr>
+            <th>Zorgverlener</th>
+            <td>
+              <div>Health professional (person), K. van der Linden</div>
+              <div>Healthcare provider (organization), Humanitas Thuiszorg</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <practitioner>
+    <reference value="Practitioner/nl-core-CareTeam-zib-1-HealthProfessional-Practitioner-6"/>
+    <type value="Practitioner"/>
+    <display value="Health professional (person), K. van der Linden"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/nl-core-CareTeam-zib-1-HealthcareProvider-Organization-6"/>
+    <type value="Organization"/>
+    <display value="Healthcare provider (organization), Humanitas Thuiszorg"/>
+  </organization>
+</PractitionerRole>
