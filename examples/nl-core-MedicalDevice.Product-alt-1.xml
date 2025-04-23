@@ -7,7 +7,7 @@
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
-        <caption>Apparaat/Systeem. Id: (01)08023279277098(17)221231(10)1234AB(21)12345XYZ(11)010101</caption>
+        <caption>Apparaat/Systeem. Patiënt: Patient, Peter Jan (PeJe) Jansen. Id: (01)08023279277098(17)221231(10)1234AB(21)12345XYZ(11)010101</caption>
         <tfoot>
           <tr>
             <td colspan="2">Dit is een model uit 1998.</td>
@@ -34,6 +34,11 @@
       <display value="rolstoel"/>
     </coding>
   </type>
+  <patient>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </patient>
   <note>
     <text value="Dit is een model uit 1998."/>
   </note>

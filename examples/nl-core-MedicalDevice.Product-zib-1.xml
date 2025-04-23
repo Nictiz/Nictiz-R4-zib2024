@@ -7,7 +7,7 @@
     <status value="extensions"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <table>
-        <caption>Apparaat/Systeem. Id: (01)08023279277098(17)221231(10)1234AB(21)12345XYZ(11)010101</caption>
+        <caption>Apparaat/Systeem. Patiënt: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Id: (01)08023279277098(17)221231(10)1234AB(21)12345XYZ(11)010101</caption>
         <tbody>
           <tr>
             <th>Type</th>
@@ -29,4 +29,9 @@
       <display value="rolstoel"/>
     </coding>
   </type>
+  <patient>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </patient>
 </Device>

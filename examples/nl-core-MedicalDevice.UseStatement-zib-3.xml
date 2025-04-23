@@ -1,7 +1,7 @@
 <DeviceUseStatement xmlns="http://hl7.org/fhir">
-  <id value="nl-core-MedicalDevice-zib-3"/>
+  <id value="nl-core-MedicalDevice.UseStatement-zib-3"/>
   <meta>
-    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-MedicalDevice"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-MedicalDevice.UseStatement"/>
   </meta>
   <text>
     <status value="extensions"/>
