@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ext-RegistrationData.AcquisitionMethod" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ext-RegistrationData.AcquisitionMethod" />
+  <name value="ExtRegistrationDataAcquisitionMethod" />
+  <title value="ext RegistrationData.AcquisitionMethod" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An extension to specify the method by which the patient record holder obtains the information." />
+  <purpose value="This extension represents the AcquisitionMethod concept of the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) RegistrationData v1.1.1 (2024)](https://zibs.nl/wiki/RegistrationData-v1.1.1(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-registrationdata-v1.1.1-2024EN" />
+    <uri value="https://zibs.nl/wiki/RegistrationData-v1.1.1(2024EN)" />
+    <name value="zib RegistrationData-v1.1.1(2024EN)" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Provenance" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-RegistrationData.AcquisitionMethod" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="AcquisitionMethod" />
+      <definition value="The way in which the information is obtained by the patient record holder." />
+      <alias value="WijzeVanVerkrijgen" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.8" />
+        <comment value="AcquisitionMethod" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
