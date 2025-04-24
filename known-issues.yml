@@ -259,6 +259,9 @@ zib-HoNOSplus:
     Observation.component:hoNOSplusQuestions.code:
       - cardinality: 1..1 instead of 0..1
         reason: The FHIR profiles are expected to implement zib cardinalities as conceptual cardinalities, but FHIR requires the Observation.component:hoNOSplusQuestions.code element to be present. This aligns with the intention of the zib, as the HoNOS+Question concept is required for zib HoNOS+ to make sense.
+    Observation.component:hoNOSplusQuestions.value[x]:
+      - cardinality: 0..* instead of 0..1
+        reason: The tool assumes the effective cardinality to be 0..* because .component itself is 0..*. However, the cardinality within the slice, where it can be related to a HoNOS+ question, is 0..1, which aligns with the zib.
   ignored issues:
     StructureDefinition.mapping[0]:
       - message: "Constraint failed: sd-zpg-05: 'The URI for zib mappings should align with the mapping name'"
