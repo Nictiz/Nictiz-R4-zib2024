@@ -40,12 +40,6 @@
       <path value="Encounter" />
       <short value="Encounter" />
       <alias value="Contact" />
-      <constraint>
-        <key value="zib-Encounter-1" />
-        <severity value="error" />
-        <human value="Only one CommentEncounterReason extension may be present according to the zib" />
-        <expression value="reasonCode.extension('http://nictiz.nl/fhir/StructureDefinition/ext-Encounter.CommentEncounterReason').count() + reasonReference.extension('http://nictiz.nl/fhir/StructureDefinition/ext-Encounter.CommentEncounterReason').count() &lt; 2" />
-      </constraint>
       <mapping>
         <identity value="zib-encounter-v6.0-2024EN" />
         <map value="NL-CM:15.1.1" />
