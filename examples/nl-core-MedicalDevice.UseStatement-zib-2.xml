@@ -26,7 +26,7 @@
           </tr>
           <tr>
             <th>Gebruiksperiode</th>
-            <td>Vanaf 1 januari 2007</td>
+            <td>Vanaf 2007</td>
           </tr>
           <tr>
             <th>Reden</th>
@@ -52,7 +52,7 @@
     <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
   </subject>
   <timingPeriod>
-    <start value="2007-01-01"/>
+    <start value="2007"/>
   </timingPeriod>
   <device>
     <reference value="Device/nl-core-MedicalDevice.Product-zib-2"/>
