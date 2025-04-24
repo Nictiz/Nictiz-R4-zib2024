@@ -1,0 +1,215 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.4.23.3"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/CodeSystem"/>-->
+   </meta>
+   <language value="nl-NL"/>
+   <text>
+      <status value="empty"/>
+      <div xmlns="http://www.w3.org/1999/xhtml" lang="nl-NL" xml:lang="nl-NL">Definitie-resources zijn niet voorzien van een narrative. Een menselijk leesbare versie is te vinden via de implementation guide(s) waarin deze resource gebruikt wordt.</div>
+   </text>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2024-04-15T00:00:00+00:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.23.3"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.23.3"/>
+   </identifier>
+   <version value="2024-04-15T00:00:00"/>
+   <name value="JuridischeVertegenwoordiging"/>
+   <title value="JuridischeVertegenwoordiging"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Registratie aan de bron"/>
+   <contact>
+      <name value="Registratie aan de bron"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.registratieaandebron.nl"/>
+      </telecom>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.zibs.nl"/>
+      </telecom>
+   </contact>
+   <description value="JuridischeVertegenwoordiging"/>
+   <caseSensitive value="false"/>
+   <content value="complete"/>
+   <count value="10"/>
+   <property>
+      <code value="status"/>
+      <uri value="http://hl7.org/fhir/concept-properties#status"/>
+      <description value="A code that indicates the status of the concept. Values found in this version of the code system are: active"/>
+      <type value="code"/>
+   </property>
+   <concept>
+      <code value="10"/>
+      <display value="Zaakwaarneming"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Agency of necessity"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="20"/>
+      <display value="Volmacht zorg en behandeling"/>
+      <definition value="Volmacht zorg en behandeling (benoemd in schriftelijke verklaring)"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Health care power of attorney"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="21"/>
+      <display value="Vertegenwoordiging op basis van relatie"/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="22"/>
+      <display value="Volmacht financieel"/>
+      <definition value="Volmacht financieel (benoemd in schriftelijke verklaring)"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Financial power of attorney"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="25"/>
+      <display value="Wettelijke vertegenwoordiging op grond van ouderlijk gezag"/>
+      <definition value="Wettelijke vertegenwoordiging op basis van ouderlijk gezag"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Legal representation based on parental authority"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="30"/>
+      <display value="Vertegenwoordiging bij wilsonbekwaamheid"/>
+      <definition value="Vertegenwoordiging bij wilsombekwaamheid"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Representation in case of mental incapacity"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="6"/>
+      <display value="Voogdij"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Custody"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="7"/>
+      <display value="Bewindvoering"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Property and financial affairs deputyship"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="8"/>
+      <display value="Mentorschap"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Personal welfare deputyship"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="9"/>
+      <display value="Onder curatele stelling"/>
+      <designation>
+         <language value="en-US"/>
+         <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+         </use>
+         <value value="Legal guardianship"/>
+      </designation>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+</CodeSystem>

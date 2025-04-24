@@ -190,6 +190,14 @@
 ### zib-IllnessPerception.PatientIllnessInsight, nl-core-IllnessPerception.PatientIllnessInsight
 * No significant changes.
 
+## LegalSituation 
+### zib-LegalSituation-LegalStatus, nl-core-LegalSituation-LegalStatus
+* `.category:legalStatusCode` ; terminology ; Pattern changed from http://snomed.info/sct#303186005 to http://snomed.info/sct#8625004. ; ZIB-2272
+* `.code` ; terminology ; Changed codes in LegalStatusCodelist. ; ZIB-1357, ZIB-1504, ZIB-2218
+
+### zib-LegalSituation-Representation, nl-core-LegalSituation-Representation
+* `.code` ; terminology ; Changed codes in RepresentationCodelist. ; ZIB-1480, ZIB-2099, ZIB-2218
+
 ## LanguageProficiency (zib-Patient, nl-core-Patient)
 * `.communication.extension:languageControl.extension:level.value[x]` ; terminology ; Changed codes in TaalvaardigheidBegrijpenCodelijst, TaalvaardigheidLezenCodelijst and TaalvaardigheidSprekenCodelijst, changed value set from v3.LanguageAbilityProficiency to TaalvaardigheidCodelijsten. ; ZIB-1877
 * `.communication.extension:comment` ; extension ; Replaced extension ExtComment with ExtLanguageProficiencyComment. ; ZIBFHIR-97
@@ -197,6 +205,20 @@
 
 ## LifeStance (zib-LifeStance, nl-core-LifeStance)
 * `Observation` ; mapping ; Renamed mapping from LifeStanceRC to LifeStance. ; ZIB-2578
+
+## LivingSituation 
+### zib-LivingSituation, nl-core-LivingSituation
+* `effective[x]:effectiveDateTime` ; mapping ; Added mapping of Date ; ZIB-1272
+
+### zib-LivingSituation.HomeAdaption, nl-core-LivingSituation.HomeAdaption
+* `effective[x]:effectiveDateTime` ; mapping ; Added mapping of Date ; ZIB-1272
+
+### zib-LivingSituation.HouseType, nl-core-LivingSituation.HouseType
+* `effective[x]:effectiveDateTime` ; mapping ; Added mapping of Date ; ZIB-1272
+* `value[x]:valueCodeableConcept` ; terminology ; Changed codes in TypeOfHomeCodelist ; ZIB-1501, ZIB-1575
+
+### zib-LivingSituation.LivingCondition, nl-core-LivingSituation.LivingCondition
+* `effective[x]:effectiveDateTime` ; mapping ; Added mapping of Date ; ZIB-1272
 
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218, ZIB-2549
@@ -214,6 +236,9 @@
 * No significant changes.
 
 ## Nationality (zib-Patient, nl-core-Patient)
+* No significant changes.
+
+## NutritionAdvice (zib-NutritionAdvice, nl-core-NutritionAdvice)
 * No significant changes.
 
 ## O2Saturation (zib-O2Saturation, nl-core-O2Saturation)
@@ -238,7 +263,7 @@
 * No significant changes.
 
 ## Patient (zib-Patient, nl-core-Patient)
-* `.extension:genderIdentity.value[x]` ; extension ; Added extension genderIdentity for GenderIdentity. ; ZIB-1693
+* `.extension:genderIdentity.value[x]` ; extension ; Added extension individual-genderIdentity for GenderIdentity. ; ZIB-1693, ZIBFHIR-321
 * `.gender` ; terminology ; Changed code description in GeslachtCodelijst. ; ZIB-1239
 * `.multipleBirth[x]:multipleBirthInteger` ; mapping ; Added mapping of MultipleBirthSequence. ; ZIB-1670
 

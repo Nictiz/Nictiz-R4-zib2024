@@ -253,7 +253,7 @@ zib-HealthProfessional-PractitionerRole:
     PractitionerRole.telecom*:
       - datatype: ContactPoint instead of container
         reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
-        
+
 zib-HoNOSplus:
   zib deviations:
     Observation.component:hoNOSplusQuestions.code:
@@ -265,8 +265,32 @@ zib-HoNOSplus:
         reason: The discrepancy between uri and name in the mapping stems from the '+' character in the zib name, as this character is not allowed in the mapping name.
     Observation.component:hoNOSplusQuestions:     
       - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
-        reason: The mapping is to a zib container, which doesn't have a useful description if implemented in a profile.    
+        reason: The mapping is to a zib container, which doesn't have a useful description if implemented in a profile.
+
+zib-LegalSituation-LegalStatus:
+  zib deviations:
+    Condition.code:
+      - cardinality: 1..1 instead of 0..1
+        reason: The zib requires either a LegalStatus or a Representation to be present. This profile represents the former concept, so the LegalStatus (in Condition.code) is required.
+
+zib-LegalSituation-Representation:
+  zib deviations:
+    Condition.code:
+      - cardinality: 1..1 instead of 0..1
+        reason: The zib requires either a LegalStatus or a Representation to be present. This profile represents the latter concept, so the Representation (in Condition.code) is required.
         
+zib-LivingSituation.HomeAdaption:
+  zib deviations:
+      Observation.value[x]:valueCodeableConcept:
+      - cardinality: 0..1 instead of 0..*
+        reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
+
+zib-LivingSituation.LivingCondition:
+  zib deviations:
+      Observation.value[x]:valueCodeableConcept:
+      - cardinality: 0..1 instead of 0..*
+        reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
+
 zib-NameInformation:
   zib deviations:
     HumanName.family.extension:*.value[x]:
@@ -292,6 +316,17 @@ zib-NameInformation.GivenName:
       - cardinality: 1..* instead of 0..1
         reason: The GivenName is optional according to the zib, but when this datatype profile is used, a name should be provided.
 
+zib-NutritionAdvice:
+  zib deviations:
+    NutritionOrder.oralDiet.texture.modifier:
+      - datatype: CodeableConcept instead of ST
+        reason: Together with HL7 NL and the zib centre, it has been decided that the flattened string concept from the zib is mapped to multiple coded elements in FHIR. See the comment on this element for details.
+    NutritionOrder.oralDiet.fluidConsistencyType:
+      - datatype: CodeableConcept instead of ST
+        reason: Together with HL7 NL and the zib centre, it has been decided that the flattened string concept from the zib is mapped to multiple coded elements in FHIR. See the comment on this element for details.
+      - cardinality: 0..* instead of 0..1
+        reason: Together with HL7 NL and the zib centre, it has been decided that the flattened string concept from the zib is mapped to multiple coded elements in FHIR. See the comment on this element for details.
+
 zib-O2Saturation:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
@@ -307,6 +342,9 @@ zib-Patient:
     Patient.extension:nationality.extension:code.value[x]:
       - cardinality: 1..1 instead of 0..1
         reason: Zib Nationality is implemented using the complex core extension patient-nationality. The .value[x] element representing the concept Nationality has a 1..1 cardinality, but the "code" part of the extension itself is 0..1, making the cardinality effectively 0..1 as required by the zib.
+    Patient.extension:genderIdentity.extension:value.value[x]:
+      - cardinality: 1..1 instead of 0..1
+        reason: The GenderIdentity concept is implemented using the complex core extension individual-genderIdentity. The .value element representing the concept GenderIdentity itself has a 1..1 cardinality, but the extension itself is 0..*. This makes the cardinality effectively 0..* rather then 1..1, which still differs from the zib. However, the extension offers the possibility to be define gender identity's over different time periods, which is more advanced than the zib concept. In order to allow this advanced use, the extension is not constrained.
     Patient.name:
       - cardinality: 0..* instead of 0..1
         reason: The name information according to zib NameInformation may be split up over multiple instances of Patient.name.
@@ -655,12 +693,6 @@ zib-HealthProfessional-Practitioner:
         reason: The required short description is given by the datatype profile, so it is absent from the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The required alias is given by the datatype profile, so it is absent from the differential.
-
-zib-HoNOSplus:
-  zib deviations:
-    Observation.component:hoNOSplusQuestions.value[x]:
-      - cardinality: 0..* instead of 0..1
-        reason: The zib cardinality applies to its cardinality within the HoNOS+Questions [six] container, which is also true for the the .value[x] element within the component. However, since the component is allowed to repeat, the conformance tool interprets it as an effective cardinality of 0..*.
 
 zib-NameInformation:
   zib deviations:
