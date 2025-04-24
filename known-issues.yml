@@ -254,6 +254,22 @@ zib-HealthProfessional-PractitionerRole:
       - datatype: ContactPoint instead of container
         reason: Contact information in FHIR is represented using the ContactPoint datatype, not as a BackboneElement.
 
+zib-HoNOSplus:
+  zib deviations:
+    Observation.component:hoNOSplusQuestions.code:
+      - cardinality: 1..1 instead of 0..1
+        reason: The FHIR profiles are expected to implement zib cardinalities as conceptual cardinalities, but FHIR requires the Observation.component:hoNOSplusQuestions.code element to be present. This aligns with the intention of the zib, as the HoNOS+Question concept is required for zib HoNOS+ to make sense.
+    Observation.component:hoNOSplusQuestions.value[x]:
+      - cardinality: 0..* instead of 0..1
+        reason: The tool assumes the effective cardinality to be 0..* because .component itself is 0..*. However, the cardinality within the slice, where it can be related to a HoNOS+ question, is 0..1, which aligns with the zib.
+  ignored issues:
+    StructureDefinition.mapping[0]:
+      - message: "Constraint failed: sd-zpg-05: 'The URI for zib mappings should align with the mapping name'"
+        reason: The discrepancy between uri and name in the mapping stems from the '+' character in the zib name, as this character is not allowed in the mapping name.
+    Observation.component:hoNOSplusQuestions:     
+      - message: "Constraint failed: sd-pg-03: 'If mapping.map exists and the mapping is not implicit and the element is not the root element, definition should exist.'"
+        reason: The mapping is to a zib container, which doesn't have a useful description if implemented in a profile.
+
 zib-LegalSituation-LegalStatus:
   zib deviations:
     Condition.code:

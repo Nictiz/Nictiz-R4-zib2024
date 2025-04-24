@@ -1,0 +1,41 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="nl-core-HoNOSplus-alt-1-HealthProfessional-Practitioner-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <div>Id 01001314 (AGB-Z), A. Visser, Man</div>
+    </div>
+  </text>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+    <value value="01001314"/>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <text value="A. Visser"/>
+    <family value="Visser">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Visser"/>
+      </extension>
+    </family>
+    <given value="A.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="IN"/>
+      </extension>
+    </given>
+  </name>
+  <gender value="male">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"/>
+          <code value="M"/>
+          <display value="Male"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </gender>
+</Practitioner>
