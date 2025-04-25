@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "db6e1876-5879-49a5-bb62-c811020bd664",
+		"name": "ConditionAndDiagnosis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21396221"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "Check Admin database",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/administration/StructureDefinition/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"administration",
+								"StructureDefinition",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset DB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/administration/$reset",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"administration",
+								"$reset"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create initial supporting resources",
+			"item": [
+				{
+					"name": "Patient",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n  <id value=\"nl-core-Patient-alt-1\"/>\r\n  <meta>\r\n    <profile value=\"http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient\"/>\r\n  </meta>\r\n  <text>\r\n    <status value=\"extensions\"/>\r\n    <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n      <div>Id 111222333 (BSN), <span title=\"Naamsamenstelling: Eigennaam\">Peter Jan Jansen</span>, anders, 28 april 1934, <i>Overleden 28 maart 2024</i>, Meerling</div>\r\n      <div>\r\n        <a href=\"tel:0031688228822\">0031688228822</a> (Tel Privé)</div>\r\n      <div>\r\n        <span title=\"Eerste contactpersoon (300481000146102 - SNOMED CT)\">Eerste contactpersoon</span>, <span title=\"Dochter (66089001 - SNOMED CT)\">Dochter</span>\r\n        <span title=\"Naamsamenstelling: Eigennaam\">Johanna Petronella Maria van Putten</span>\r\n        <div>\r\n          <a href=\"tel:+31611234567\">+31611234567</a> (Tel Werk), <a href=\"mailto:giesput@myweb.nl\">giesput@myweb.nl</a> (E-mail Werk), 1e Jacob van Campenstr by 15 B bis, 1012 NX Hoogmade Kaag en Braassem, Nederland (Privé Post / Bezoek)</div>\r\n      </div>\r\n      <ul>\r\n        <li>\r\n          <span title=\"Other (OTH - HL7 v3-NullFlavor)\">Other</span>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </text>\r\n  <extension url=\"http://hl7.org/fhir/StructureDefinition/individual-genderIdentity\">\r\n    <extension url=\"value\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"http://snomed.info/sct\"/>\r\n          <code value=\"33791000087105\"/>\r\n          <display value=\"Non-binaire genderidentiteit\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n  </extension>\r\n  <identifier>\r\n    <system value=\"http://fhir.nl/fhir/NamingSystem/bsn\"/>\r\n    <value value=\"111222333\"/>\r\n  </identifier>\r\n  <name>\r\n    <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-assembly-order\">\r\n      <valueCode value=\"NL1\"/>\r\n    </extension>\r\n    <use value=\"official\"/>\r\n    <text value=\"Peter Jan Jansen\"/>\r\n    <family value=\"Jansen\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-own-name\">\r\n        <valueString value=\"Jansen\"/>\r\n      </extension>\r\n    </family>\r\n    <given value=\"Peter\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"BR\"/>\r\n      </extension>\r\n    </given>\r\n    <given value=\"Jan\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"BR\"/>\r\n      </extension>\r\n    </given>\r\n  </name>\r\n  <name>\r\n    <use value=\"official\"/>\r\n    <text value=\"P.\"/>\r\n    <given value=\"P.\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"IN\"/>\r\n      </extension>\r\n    </given>\r\n  </name>\r\n  <name>\r\n    <use value=\"usual\"/>\r\n    <given value=\"PeJe\"/>\r\n  </name>\r\n  <telecom>\r\n    <extension url=\"http://hl7.org/fhir/StructureDefinition/contactpoint-comment\">\r\n      <valueString value=\"'s Ochtends niet bereikbaar.\"/>\r\n    </extension>\r\n    <system value=\"phone\">\r\n      <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n        <valueCodeableConcept>\r\n          <coding>\r\n            <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n            <code value=\"MC\"/>\r\n            <display value=\"Mobile Contact\"/>\r\n          </coding>\r\n        </valueCodeableConcept>\r\n      </extension>\r\n    </system>\r\n    <value value=\"0031688228822\"/>\r\n    <use value=\"home\"/>\r\n  </telecom>\r\n  <gender value=\"other\">\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender\"/>\r\n          <code value=\"UN\"/>\r\n          <display value=\"Undifferentiated\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n  </gender>\r\n  <birthDate value=\"1934-04-28\"/>\r\n  <deceasedDateTime value=\"2024-03-28\"/>\r\n  <multipleBirthInteger value=\"2\"/>\r\n  <contact>\r\n    <extension url=\"http://hl7.org/fhir/StructureDefinition/patient-relatedPerson\">\r\n      <valueReference>\r\n        <reference value=\"RelatedPerson/nl-core-ContactPerson-alt-1\"/>\r\n        <type value=\"RelatedPerson\"/>\r\n        <display value=\"Contact person, Johanna Petronella Maria (Johanna) van Putten\"/>\r\n      </valueReference>\r\n    </extension>\r\n    <relationship>\r\n      <coding>\r\n        <system value=\"http://snomed.info/sct\"/>\r\n        <code value=\"300481000146102\"/>\r\n        <display value=\"Eerste contactpersoon\"/>\r\n      </coding>\r\n    </relationship>\r\n    <relationship>\r\n      <coding>\r\n        <system value=\"http://snomed.info/sct\"/>\r\n        <code value=\"66089001\"/>\r\n        <display value=\"Dochter\"/>\r\n      </coding>\r\n    </relationship>\r\n    <name>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-assembly-order\">\r\n        <valueCode value=\"NL1\"/>\r\n      </extension>\r\n      <use value=\"official\"/>\r\n      <text value=\"Johanna Petronella Maria van Putten\"/>\r\n      <family value=\"van Putten\">\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-own-prefix\">\r\n          <valueString value=\"van\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-own-name\">\r\n          <valueString value=\"Putten\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix\">\r\n          <valueString value=\"van der\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-partner-name\">\r\n          <valueString value=\"Giessen\"/>\r\n        </extension>\r\n      </family>\r\n      <given value=\"Johanna\">\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n          <valueCode value=\"BR\"/>\r\n        </extension>\r\n      </given>\r\n      <given value=\"Petronella\">\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n          <valueCode value=\"BR\"/>\r\n        </extension>\r\n      </given>\r\n      <given value=\"Maria\">\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n          <valueCode value=\"BR\"/>\r\n        </extension>\r\n      </given>\r\n      <prefix value=\"Dr.\"/>\r\n    </name>\r\n    <telecom>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/contactpoint-comment\">\r\n        <valueString value=\"Alleen tijdens kantooruren bellen.\"/>\r\n      </extension>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/contactpoint-purpose\">\r\n        <valueCodeableConcept>\r\n          <coding>\r\n            <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n            <code value=\"EC\"/>\r\n            <display value=\"Emergencycontact\"/>\r\n          </coding>\r\n        </valueCodeableConcept>\r\n      </extension>\r\n      <system value=\"phone\">\r\n        <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n          <valueCodeableConcept>\r\n            <coding>\r\n              <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n              <code value=\"MC\"/>\r\n              <display value=\"Mobile Contact\"/>\r\n            </coding>\r\n          </valueCodeableConcept>\r\n        </extension>\r\n      </system>\r\n      <value value=\"+31611234567\"/>\r\n      <use value=\"work\"/>\r\n    </telecom>\r\n    <telecom>\r\n      <system value=\"email\"/>\r\n      <value value=\"giesput@myweb.nl\"/>\r\n      <use value=\"work\"/>\r\n    </telecom>\r\n    <address>\r\n      <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType\">\r\n        <valueCodeableConcept>\r\n          <coding>\r\n            <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n            <code value=\"HP\"/>\r\n            <display value=\"Primary Home\"/>\r\n          </coding>\r\n        </valueCodeableConcept>\r\n      </extension>\r\n      <use value=\"home\"/>\r\n      <type value=\"both\"/>\r\n      <line value=\"1e Jacob van Campenstr by 15 B bis\">\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName\">\r\n          <valueString value=\"1e Jacob van Campenstr\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber\">\r\n          <valueString value=\"15\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix\">\r\n          <valueString value=\"B bis\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator\">\r\n          <valueString value=\"by\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID\">\r\n          <valueString value=\"Het vrijstaande huis tegenover de kerk.\"/>\r\n        </extension>\r\n      </line>\r\n      <city value=\"Hoogmade\"/>\r\n      <district value=\"Kaag en Braassem\"/>\r\n      <postalCode value=\"1012 NX\"/>\r\n      <country value=\"Nederland\">\r\n        <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n          <valueCodeableConcept>\r\n            <coding>\r\n              <system value=\"urn:iso:std:iso:3166\"/>\r\n              <code value=\"NL\"/>\r\n              <display value=\"Nederland\"/>\r\n            </coding>\r\n          </valueCodeableConcept>\r\n        </extension>\r\n      </country>\r\n    </address>\r\n  </contact>\r\n  <communication>\r\n    <extension url=\"http://hl7.org/fhir/StructureDefinition/patient-proficiency\">\r\n      <extension url=\"level\">\r\n        <valueCoding>\r\n          <system value=\"urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1\"/>\r\n          <code value=\"MOEITE\"/>\r\n          <display value=\"Met moeite\"/>\r\n        </valueCoding>\r\n      </extension>\r\n      <extension url=\"type\">\r\n        <valueCoding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode\"/>\r\n          <code value=\"RSP\"/>\r\n          <display value=\"Received spoken\"/>\r\n        </valueCoding>\r\n      </extension>\r\n    </extension>\r\n    <extension url=\"http://hl7.org/fhir/StructureDefinition/patient-proficiency\">\r\n      <extension url=\"level\">\r\n        <valueCoding>\r\n          <system value=\"urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1\"/>\r\n          <code value=\"MOEITE\"/>\r\n          <display value=\"Met moeite\"/>\r\n        </valueCoding>\r\n      </extension>\r\n      <extension url=\"type\">\r\n        <valueCoding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode\"/>\r\n          <code value=\"ESP\"/>\r\n          <display value=\"Expressed spoken\"/>\r\n        </valueCoding>\r\n      </extension>\r\n    </extension>\r\n    <extension url=\"http://hl7.org/fhir/StructureDefinition/patient-proficiency\">\r\n      <extension url=\"level\">\r\n        <valueCoding>\r\n          <system value=\"urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1\"/>\r\n          <code value=\"GEEN\"/>\r\n          <display value=\"Geen beheersing\"/>\r\n        </valueCoding>\r\n      </extension>\r\n      <extension url=\"type\">\r\n        <valueCoding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode\"/>\r\n          <code value=\"RWR\"/>\r\n          <display value=\"Received written\"/>\r\n        </valueCoding>\r\n      </extension>\r\n    </extension>\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.CommunicationDetails\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"http://snomed.info/sct\"/>\r\n          <code value=\"442389001\"/>\r\n          <display value=\"Gebarentaal\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.CommunicationDetails\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"http://snomed.info/sct\"/>\r\n          <code value=\"445510001\"/>\r\n          <display value=\"Braille\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.CommunicationDetails\">\r\n      <valueCodeableConcept>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor\">\r\n          <valueCode value=\"OTH\"/>\r\n        </extension>\r\n        <text value=\"Slecht gehoor, moet met veel volume gesproken worden.\"/>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.Comment\">\r\n      <valueString value=\"Gebarentaal werkt het best.\"/>\r\n    </extension>\r\n    <language>\r\n      <coding>\r\n        <system value=\"http://terminology.hl7.org/CodeSystem/v3-NullFlavor\"/>\r\n        <code value=\"OTH\"/>\r\n        <display value=\"Other\"/>\r\n      </coding>\r\n      <text value=\"Nederlands\"/>\r\n    </language>\r\n  </communication>\r\n</Patient>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/Patient/nl-core-Patient-alt-1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"Patient",
+								"nl-core-Patient-alt-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient 2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n  <id value=\"nl-core-Patient-zib-1\"/>\r\n  <meta>\r\n    <profile value=\"http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient\"/>\r\n  </meta>\r\n  <text>\r\n    <status value=\"extensions\"/>\r\n    <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n      <div>Id 999911120 (BSN), Johanna Petronella Maria van Putten-van der Giessen, Vrouw, 28 april 1994, Meerling, <span title=\"Married (M - HL7 v3-MaritalStatus)\">Married</span>\r\n      </div>\r\n      <div>\r\n        <a href=\"tel:+31611234567\">+31611234567</a> (Tel Privé), <a href=\"mailto:giesput@myweb.nl\">giesput@myweb.nl</a> (E-mail Privé)</div>\r\n      <div>1e Jacob van Campenstr 15, 1012 NX Hoogmade Kaag en Braassem, Nederland (Privé Bezoek)<br/>Stationsstraat 11, 2406 AB Alphen aan den Rijn (Privé Post / Bezoek)<br/>\r\n      </div>\r\n      <div>Nationaliteit: <span title=\"Nederlandse (0001 - 2.16.840.1.113883.2.4.4.16.32)\">Nederlandse</span>\r\n      </div>\r\n      <div>\r\n        <span title=\"Eerste contactpersoon (300481000146102 - SNOMED CT)\">Eerste contactpersoon</span>, <span title=\"Dochter (66089001 - SNOMED CT)\">Dochter</span> J.P.M. van Putten-van der Giessen<div>\r\n          <a href=\"tel:+31611234567\">+31611234567</a> (Tel Privé), <a href=\"mailto:giesput@myweb.nl\">giesput@myweb.nl</a> (E-mail Werk), 1e Jacob van Campenstr 15, 1012 NX Hoogmade Kaag en Braassem, Nederland (Privé Post / Bezoek)</div>\r\n      </div>\r\n      <ul>\r\n        <li>\r\n          <span title=\"Other (OTH - HL7 v3-NullFlavor)\">Other</span>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </text>\r\n  <extension url=\"http://hl7.org/fhir/StructureDefinition/patient-nationality\">\r\n    <extension url=\"code\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"urn:oid:2.16.840.1.113883.2.4.4.16.32\"/>\r\n          <code value=\"0001\"/>\r\n          <display value=\"Nederlandse\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n  </extension>\r\n  <identifier>\r\n    <system value=\"http://fhir.nl/fhir/NamingSystem/bsn\"/>\r\n    <value value=\"999911120\"/>\r\n  </identifier>\r\n  <name>\r\n    <use value=\"official\"/>\r\n    <text value=\"Johanna Petronella Maria van Putten-van der Giessen\"/>\r\n    <family value=\"van Putten-van der Giessen\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-own-prefix\">\r\n        <valueString value=\"van\"/>\r\n      </extension>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-own-name\">\r\n        <valueString value=\"Putten\"/>\r\n      </extension>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix\">\r\n        <valueString value=\"van der\"/>\r\n      </extension>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-partner-name\">\r\n        <valueString value=\"Giessen\"/>\r\n      </extension>\r\n    </family>\r\n    <given value=\"Johanna\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"BR\"/>\r\n      </extension>\r\n    </given>\r\n    <given value=\"Petronella\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"BR\"/>\r\n      </extension>\r\n    </given>\r\n    <given value=\"Maria\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"BR\"/>\r\n      </extension>\r\n    </given>\r\n  </name>\r\n  <name>\r\n    <use value=\"usual\"/>\r\n    <given value=\"Jo\"/>\r\n  </name>\r\n  <telecom>\r\n    <system value=\"phone\">\r\n      <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n        <valueCodeableConcept>\r\n          <coding>\r\n            <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n            <code value=\"MC\"/>\r\n            <display value=\"Mobile Contact\"/>\r\n          </coding>\r\n        </valueCodeableConcept>\r\n      </extension>\r\n    </system>\r\n    <value value=\"+31611234567\"/>\r\n    <use value=\"home\"/>\r\n  </telecom>\r\n  <telecom>\r\n    <system value=\"email\"/>\r\n    <value value=\"giesput@myweb.nl\"/>\r\n    <use value=\"home\"/>\r\n  </telecom>\r\n  <gender value=\"female\">\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender\"/>\r\n          <code value=\"F\"/>\r\n          <display value=\"Female\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n  </gender>\r\n  <birthDate value=\"1994-04-28\"/>\r\n  <deceasedBoolean value=\"false\"/>\r\n  <address>\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n          <code value=\"PHYS\"/>\r\n          <display value=\"Visit Address\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n    <use value=\"home\"/>\r\n    <type value=\"physical\"/>\r\n    <line value=\"1e Jacob van Campenstr 15\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName\">\r\n        <valueString value=\"1e Jacob van Campenstr\"/>\r\n      </extension>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber\">\r\n        <valueString value=\"15\"/>\r\n      </extension>\r\n    </line>\r\n    <city value=\"Hoogmade\"/>\r\n    <district value=\"Kaag en Braassem\"/>\r\n    <postalCode value=\"1012 NX\"/>\r\n    <country value=\"Nederland\">\r\n      <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n        <valueCodeableConcept>\r\n          <coding>\r\n            <system value=\"urn:iso:std:iso:3166\"/>\r\n            <code value=\"NL\"/>\r\n            <display value=\"Nederland\"/>\r\n          </coding>\r\n        </valueCodeableConcept>\r\n      </extension>\r\n    </country>\r\n  </address>\r\n  <address>\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n          <code value=\"HP\"/>\r\n          <display value=\"Primary Home\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n    <use value=\"home\"/>\r\n    <type value=\"both\"/>\r\n    <line value=\"Stationsstraat 11\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName\">\r\n        <valueString value=\"Stationsstraat\"/>\r\n      </extension>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber\">\r\n        <valueString value=\"11\"/>\r\n      </extension>\r\n    </line>\r\n    <city value=\"Alphen aan den Rijn\"/>\r\n    <postalCode value=\"2406 AB\"/>\r\n  </address>\r\n  <maritalStatus>\r\n    <coding>\r\n      <system value=\"http://terminology.hl7.org/CodeSystem/v3-MaritalStatus\"/>\r\n      <code value=\"M\"/>\r\n      <display value=\"Married\"/>\r\n    </coding>\r\n  </maritalStatus>\r\n  <multipleBirthBoolean value=\"true\"/>\r\n  <contact>\r\n    <extension url=\"http://hl7.org/fhir/StructureDefinition/patient-relatedPerson\">\r\n      <valueReference>\r\n        <reference value=\"RelatedPerson/nl-core-ContactPerson-zib-1\"/>\r\n        <type value=\"RelatedPerson\"/>\r\n        <display value=\"Contact person, J.P.M. van Putten-van der Giessen\"/>\r\n      </valueReference>\r\n    </extension>\r\n    <relationship>\r\n      <coding>\r\n        <system value=\"http://snomed.info/sct\"/>\r\n        <code value=\"300481000146102\"/>\r\n        <display value=\"Eerste contactpersoon\"/>\r\n      </coding>\r\n    </relationship>\r\n    <relationship>\r\n      <coding>\r\n        <system value=\"http://snomed.info/sct\"/>\r\n        <code value=\"66089001\"/>\r\n        <display value=\"Dochter\"/>\r\n      </coding>\r\n    </relationship>\r\n    <name>\r\n      <use value=\"official\"/>\r\n      <text value=\"J.P.M. van Putten-van der Giessen\"/>\r\n      <family value=\"van Putten-van der Giessen\">\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-own-prefix\">\r\n          <valueString value=\"van\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-own-name\">\r\n          <valueString value=\"Putten\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix\">\r\n          <valueString value=\"van der\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-partner-name\">\r\n          <valueString value=\"Giessen\"/>\r\n        </extension>\r\n      </family>\r\n      <given value=\"J.\">\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n          <valueCode value=\"IN\"/>\r\n        </extension>\r\n      </given>\r\n      <given value=\"P.\">\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n          <valueCode value=\"IN\"/>\r\n        </extension>\r\n      </given>\r\n      <given value=\"M.\">\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n          <valueCode value=\"IN\"/>\r\n        </extension>\r\n      </given>\r\n    </name>\r\n    <telecom>\r\n      <system value=\"phone\">\r\n        <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n          <valueCodeableConcept>\r\n            <coding>\r\n              <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n              <code value=\"MC\"/>\r\n              <display value=\"Mobile Contact\"/>\r\n            </coding>\r\n          </valueCodeableConcept>\r\n        </extension>\r\n      </system>\r\n      <value value=\"+31611234567\"/>\r\n      <use value=\"home\"/>\r\n    </telecom>\r\n    <telecom>\r\n      <system value=\"email\"/>\r\n      <value value=\"giesput@myweb.nl\"/>\r\n      <use value=\"work\"/>\r\n    </telecom>\r\n    <address>\r\n      <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType\">\r\n        <valueCodeableConcept>\r\n          <coding>\r\n            <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n            <code value=\"HP\"/>\r\n            <display value=\"Primary Home\"/>\r\n          </coding>\r\n        </valueCodeableConcept>\r\n      </extension>\r\n      <use value=\"home\"/>\r\n      <type value=\"both\"/>\r\n      <line value=\"1e Jacob van Campenstr 15\">\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName\">\r\n          <valueString value=\"1e Jacob van Campenstr\"/>\r\n        </extension>\r\n        <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber\">\r\n          <valueString value=\"15\"/>\r\n        </extension>\r\n      </line>\r\n      <city value=\"Hoogmade\"/>\r\n      <district value=\"Kaag en Braassem\"/>\r\n      <postalCode value=\"1012 NX\"/>\r\n      <country value=\"Nederland\">\r\n        <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n          <valueCodeableConcept>\r\n            <coding>\r\n              <system value=\"urn:iso:std:iso:3166\"/>\r\n              <code value=\"NL\"/>\r\n              <display value=\"Nederland\"/>\r\n            </coding>\r\n          </valueCodeableConcept>\r\n        </extension>\r\n      </country>\r\n    </address>\r\n  </contact>\r\n  <communication>\r\n    <extension url=\"http://hl7.org/fhir/StructureDefinition/patient-proficiency\">\r\n      <extension url=\"level\">\r\n        <valueCoding>\r\n          <system value=\"urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1\"/>\r\n          <code value=\"MLOOS\"/>\r\n          <display value=\"Moeiteloos\"/>\r\n        </valueCoding>\r\n      </extension>\r\n      <extension url=\"type\">\r\n        <valueCoding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode\"/>\r\n          <code value=\"RSP\"/>\r\n          <display value=\"Received spoken\"/>\r\n        </valueCoding>\r\n      </extension>\r\n    </extension>\r\n    <extension url=\"http://hl7.org/fhir/StructureDefinition/patient-proficiency\">\r\n      <extension url=\"level\">\r\n        <valueCoding>\r\n          <system value=\"urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1\"/>\r\n          <code value=\"MOEITE\"/>\r\n          <display value=\"Met moeite\"/>\r\n        </valueCoding>\r\n      </extension>\r\n      <extension url=\"type\">\r\n        <valueCoding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode\"/>\r\n          <code value=\"ESP\"/>\r\n          <display value=\"Expressed spoken\"/>\r\n        </valueCoding>\r\n      </extension>\r\n    </extension>\r\n    <extension url=\"http://hl7.org/fhir/StructureDefinition/patient-proficiency\">\r\n      <extension url=\"level\">\r\n        <valueCoding>\r\n          <system value=\"urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.30.1\"/>\r\n          <code value=\"GEEN\"/>\r\n          <display value=\"Geen beheersing\"/>\r\n        </valueCoding>\r\n      </extension>\r\n      <extension url=\"type\">\r\n        <valueCoding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode\"/>\r\n          <code value=\"RWR\"/>\r\n          <display value=\"Received written\"/>\r\n        </valueCoding>\r\n      </extension>\r\n    </extension>\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.Comment\">\r\n      <valueString value=\"Bij gesprek met arts zoon uitnodigen voor vertalen\"/>\r\n    </extension>\r\n    <language>\r\n      <coding>\r\n        <system value=\"http://terminology.hl7.org/CodeSystem/v3-NullFlavor\"/>\r\n        <code value=\"OTH\"/>\r\n        <display value=\"Other\"/>\r\n      </coding>\r\n      <text value=\"Nederlands\"/>\r\n    </language>\r\n  </communication>\r\n</Patient>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/Patient/nl-core-Patient-zib-1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"Patient",
+								"nl-core-Patient-zib-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HealthProfessional Practitioner",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<Practitioner xmlns=\"http://hl7.org/fhir\">\r\n  <id value=\"nl-core-HealthProfessional-Practitioner-alt-1\"/>\r\n  <meta>\r\n    <profile value=\"http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner\"/>\r\n  </meta>\r\n  <text>\r\n    <status value=\"extensions\"/>\r\n    <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n      <div>Id 21870932 (AGB-Z), J.H.R. Peters, Vrouw</div>\r\n      <div>\r\n        <a href=\"tel:+3715828282\">+3715828282</a> (Tel Werk), <a href=\"mailto:j.peters@hospital.nl\">j.peters@hospital.nl</a> (E-mail Werk)</div>\r\n      <div>Simon Smitweg 1, 2353 GA Leiderdorp, Nederland (Werk)</div>\r\n    </div>\r\n  </text>\r\n  <identifier>\r\n    <system value=\"http://fhir.nl/fhir/NamingSystem/agb-z\"/>\r\n    <value value=\"21870932\"/>\r\n  </identifier>\r\n  <name>\r\n    <use value=\"official\"/>\r\n    <text value=\"J.H.R. Peters\"/>\r\n    <family value=\"Peters\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-own-name\">\r\n        <valueString value=\"Peters\"/>\r\n      </extension>\r\n    </family>\r\n    <given value=\"J.\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"IN\"/>\r\n      </extension>\r\n    </given>\r\n    <given value=\"H.\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"IN\"/>\r\n      </extension>\r\n    </given>\r\n    <given value=\"R.\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"IN\"/>\r\n      </extension>\r\n    </given>\r\n  </name>\r\n  <telecom>\r\n    <system value=\"phone\"/>\r\n    <value value=\"+3715828282\"/>\r\n    <use value=\"work\"/>\r\n  </telecom>\r\n  <telecom>\r\n    <system value=\"email\"/>\r\n    <value value=\"j.peters@hospital.nl\"/>\r\n    <use value=\"work\"/>\r\n  </telecom>\r\n  <address>\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n          <code value=\"WP\"/>\r\n          <display value=\"Work Place\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n    <use value=\"work\"/>\r\n    <line value=\"Simon Smitweg 1\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName\">\r\n        <valueString value=\"Simon Smitweg\"/>\r\n      </extension>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber\">\r\n        <valueString value=\"1\"/>\r\n      </extension>\r\n    </line>\r\n    <city value=\"Leiderdorp\"/>\r\n    <postalCode value=\"2353 GA\"/>\r\n    <country value=\"Nederland\">\r\n      <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n        <valueCodeableConcept>\r\n          <coding>\r\n            <system value=\"urn:oid:2.16.840.1.113883.2.4.4.16.34\"/>\r\n            <code value=\"6030\"/>\r\n            <display value=\"Nederland\"/>\r\n          </coding>\r\n        </valueCodeableConcept>\r\n      </extension>\r\n    </country>\r\n  </address>\r\n  <gender value=\"female\">\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender\"/>\r\n          <code value=\"F\"/>\r\n          <display value=\"Female\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n  </gender>\r\n</Practitioner>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/Practitioner/nl-core-HealthProfessional-Practitioner-alt-1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"Practitioner",
+								"nl-core-HealthProfessional-Practitioner-alt-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HealthProfessional PractitionerRole",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<PractitionerRole xmlns=\"http://hl7.org/fhir\">\r\n  <id value=\"nl-core-HealthProfessional-PractitionerRole-alt-1\"/>\r\n  <meta>\r\n    <profile value=\"http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole\"/>\r\n  </meta>\r\n  <text>\r\n    <status value=\"extensions\"/>\r\n    <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n      <table>\r\n        <caption>Zorgverlenerrol. </caption>\r\n        <tbody>\r\n          <tr>\r\n            <th>Zorgverlener</th>\r\n            <td>\r\n              <div>Health professional (person), J.H.R. Peters</div>\r\n              <div>Healthcare provider (organization), Amsterdam UMC</div>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <th>Specialisme</th>\r\n            <td>\r\n              <span title=\"Neuroloog (01.026 - http://fhir.nl/fhir/NamingSystem/uzi-rolcode)\">Neuroloog</span>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <th>Contactgegevens</th>\r\n            <td>\r\n              <div>\r\n                <a href=\"tel:+3715828282\">+3715828282</a> (Tel Werk)</div>\r\n              <div>\r\n                <a href=\"mailto:j.peters@hospital.nl\">j.peters@hospital.nl</a> (E-mail Werk)</div>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n  </text>\r\n  <practitioner>\r\n    <reference value=\"Practitioner/nl-core-HealthProfessional-Practitioner-alt-1\"/>\r\n    <type value=\"Practitioner\"/>\r\n    <display value=\"Health professional (person), J.H.R. Peters\"/>\r\n  </practitioner>\r\n  <organization>\r\n    <reference value=\"Organization/nl-core-HealthProfessional-alt-1-HealthcareProvid-Organization-1\"/>\r\n    <type value=\"Organization\"/>\r\n    <display value=\"Healthcare provider (organization), Amsterdam UMC\"/>\r\n  </organization>\r\n  <specialty>\r\n    <coding>\r\n      <system value=\"http://fhir.nl/fhir/NamingSystem/uzi-rolcode\"/>\r\n      <code value=\"01.026\"/>\r\n      <display value=\"Neuroloog\"/>\r\n    </coding>\r\n  </specialty>\r\n  <telecom>\r\n    <system value=\"phone\"/>\r\n    <value value=\"+3715828282\"/>\r\n    <use value=\"work\"/>\r\n  </telecom>\r\n  <telecom>\r\n    <system value=\"email\"/>\r\n    <value value=\"j.peters@hospital.nl\"/>\r\n    <use value=\"work\"/>\r\n  </telecom>\r\n</PractitionerRole>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/PractitionerRole/nl-core-HealthProfessional-PractitionerRole-alt-1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"PractitionerRole",
+								"nl-core-HealthProfessional-PractitionerRole-alt-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HealthProfessional PractitionerRole 2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<PractitionerRole xmlns=\"http://hl7.org/fhir\">\r\n  <id value=\"nl-core-HealthProfessional-PractitionerRole-zib-1\"/>\r\n  <meta>\r\n    <profile value=\"http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole\"/>\r\n  </meta>\r\n  <text>\r\n    <status value=\"extensions\"/>\r\n    <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n      <table>\r\n        <caption>Zorgverlenerrol. </caption>\r\n        <tbody>\r\n          <tr>\r\n            <th>Zorgverlener</th>\r\n            <td>\r\n              <div>Health professional (person), J.H.R. Peters</div>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <th>Specialisme</th>\r\n            <td>\r\n              <span title=\"Neuroloog (01.026 - http://fhir.nl/fhir/NamingSystem/uzi-rolcode)\">Neuroloog</span>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <th>Contactgegevens</th>\r\n            <td>\r\n              <div>\r\n                <a href=\"tel:+3715828282\">+3715828282</a> (Tel Werk)</div>\r\n              <div>\r\n                <a href=\"mailto:j.peters@hospital.nl\">j.peters@hospital.nl</a> (E-mail Werk)</div>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n  </text>\r\n  <practitioner>\r\n    <reference value=\"Practitioner/nl-core-HealthProfessional-Practitioner-zib-1\"/>\r\n    <type value=\"Practitioner\"/>\r\n    <display value=\"Health professional (person), J.H.R. Peters\"/>\r\n  </practitioner>\r\n  <specialty>\r\n    <coding>\r\n      <system value=\"http://fhir.nl/fhir/NamingSystem/uzi-rolcode\"/>\r\n      <code value=\"01.026\"/>\r\n      <display value=\"Neuroloog\"/>\r\n    </coding>\r\n  </specialty>\r\n  <telecom>\r\n    <system value=\"phone\"/>\r\n    <value value=\"+3715828282\"/>\r\n    <use value=\"work\"/>\r\n  </telecom>\r\n  <telecom>\r\n    <system value=\"email\"/>\r\n    <value value=\"j.peters@hospital.nl\"/>\r\n    <use value=\"work\"/>\r\n  </telecom>\r\n</PractitionerRole>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"PractitionerRole",
+								"nl-core-HealthProfessional-PractitionerRole-zib-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HealthProfessional Practitioner 2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<Practitioner xmlns=\"http://hl7.org/fhir\">\r\n  <id value=\"nl-core-HealthProfessional-Practitioner-zib-1\"/>\r\n  <meta>\r\n    <profile value=\"http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner\"/>\r\n  </meta>\r\n  <text>\r\n    <status value=\"extensions\"/>\r\n    <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n      <div>Id 21870932 (UZI-NR-PERS), J.H.R. Peters</div>\r\n      <div>\r\n        <a href=\"tel:+3715828282\">+3715828282</a> (Tel Werk), <a href=\"mailto:j.peters@hospital.nl\">j.peters@hospital.nl</a> (E-mail Werk)</div>\r\n      <div>Simon Smitweg 1, 2353 GA Leiderdorp, Nederland (Werk)</div>\r\n    </div>\r\n  </text>\r\n  <identifier>\r\n    <system value=\"http://fhir.nl/fhir/NamingSystem/uzi-nr-pers\"/>\r\n    <value value=\"21870932\"/>\r\n  </identifier>\r\n  <name>\r\n    <use value=\"official\"/>\r\n    <text value=\"J.H.R. Peters\"/>\r\n    <family value=\"Peters\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/humanname-own-name\">\r\n        <valueString value=\"Peters\"/>\r\n      </extension>\r\n    </family>\r\n    <given value=\"J.\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"IN\"/>\r\n      </extension>\r\n    </given>\r\n    <given value=\"H.\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"IN\"/>\r\n      </extension>\r\n    </given>\r\n    <given value=\"R.\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier\">\r\n        <valueCode value=\"IN\"/>\r\n      </extension>\r\n    </given>\r\n  </name>\r\n  <telecom>\r\n    <system value=\"phone\"/>\r\n    <value value=\"+3715828282\"/>\r\n    <use value=\"work\"/>\r\n  </telecom>\r\n  <telecom>\r\n    <system value=\"email\"/>\r\n    <value value=\"j.peters@hospital.nl\"/>\r\n    <use value=\"work\"/>\r\n  </telecom>\r\n  <address>\r\n    <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType\">\r\n      <valueCodeableConcept>\r\n        <coding>\r\n          <system value=\"http://terminology.hl7.org/CodeSystem/v3-AddressUse\"/>\r\n          <code value=\"WP\"/>\r\n          <display value=\"Work Place\"/>\r\n        </coding>\r\n      </valueCodeableConcept>\r\n    </extension>\r\n    <use value=\"work\"/>\r\n    <line value=\"Simon Smitweg 1\">\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName\">\r\n        <valueString value=\"Simon Smitweg\"/>\r\n      </extension>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber\">\r\n        <valueString value=\"1\"/>\r\n      </extension>\r\n    </line>\r\n    <city value=\"Leiderdorp\"/>\r\n    <postalCode value=\"2353 GA\"/>\r\n    <country value=\"Nederland\">\r\n      <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification\">\r\n        <valueCodeableConcept>\r\n          <coding>\r\n            <system value=\"urn:oid:2.16.840.1.113883.2.4.4.16.34\"/>\r\n            <code value=\"6030\"/>\r\n            <display value=\"Nederland\"/>\r\n          </coding>\r\n        </valueCodeableConcept>\r\n      </extension>\r\n    </country>\r\n  </address>\r\n</Practitioner>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/Practitioner/nl-core-HealthProfessional-Practitioner-zib-1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"Practitioner",
+								"nl-core-HealthProfessional-Practitioner-zib-1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "scenario 1",
+			"item": [
+				{
+					"name": "New ConditionAndDiagnosis-1",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Condition xmlns=\"http://hl7.org/fhir\">\r\n   <id value=\"nl-core-ConditionAndDiagnosis-zib-1\"/>\r\n   <meta>\r\n      <profile value=\"http://nictiz.nl/fhir/StructureDefinition/nl-core-ConditionAndDiagnosis\"/>\r\n   </meta>\r\n   <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-Condition.StatusDate\">\r\n      <valuedateTime value=\"2023-03-01\"/>\r\n   </extension>\r\n   <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-Diagnosis.MethodOfConfirmation\">\r\n      <valueCodeableConcept>\r\n         <coding>\r\n            <system value=\"http://snomed.info/sct\"/>\r\n            <code value=\"63332003\"/>\r\n            <display value=\"Anamnese en lichamelijk onderzoek\"/>\r\n         </coding>\r\n      </valueCodeableConcept>\r\n   </extension>\r\n   <severity>\r\n      <coding>\r\n         <system value=\"http://snomed.info/sct\"/>\r\n         <code value=\"255604002\"/>\r\n         <display value=\"Licht\"/>\r\n      </coding>\r\n   </severity>\r\n   <code>\r\n      <coding>\r\n         <system value=\"http://snomed.info/sct\"/>\r\n         <code value=\"32398004\"/>\r\n         <display value=\"Bronchitis (disorder)\"/>\r\n      </coding>\r\n   </code>\r\n   <subject>\r\n      <reference value=\"Patient/nl-core-Patient-alt-1\"/>\r\n      <type value=\"Patient\"/>\r\n      <display value=\"Patient, Peter Jan (PeJe) Jansen\"/>\r\n   </subject>\r\n   <asserter>\r\n      <reference value=\"PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1\"/>\r\n      <type value=\"PractitionerRole\"/>\r\n      <display value=\"Health professional (role), J.H.R. Peters, Neuroloog\"/>\r\n   </asserter>\r\n</Condition>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/Condition/nl-core-ConditionAndDiagnosis-zib-1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"Condition",
+								"nl-core-ConditionAndDiagnosis-zib-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New ClinicalImpression-1",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<ClinicalImpression xmlns=\"http://hl7.org/fhir\">\r\n   <id value=\"nl-core-ConditionAndDiagnosis-ClinicalImpression-zib-1\"/>\r\n   <meta>\r\n      <profile value=\"http://nictiz.nl/fhir/StructureDefinition/nl-core-ConditionAndDiagnosis-ClinicalImpression\"/>\r\n   </meta>\r\n   <status value=\"completed\"/>\r\n   <subject>\r\n      <reference value=\"Patient/nl-core-Patient-alt-1\"/>\r\n      <type value=\"Patient\"/>\r\n      <display value=\"Patient, Peter Jan (PeJe) Jansen\"/>\r\n   </subject>\r\n   <effectiveDateTime value=\"2023-03-01\"/>\r\n   <assessor>\r\n      <reference value=\"PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1\"/>\r\n      <type value=\"PractitionerRole\"/>\r\n      <display value=\"Health professional (role), J.H.R. Peters, Neuroloog\"/>\r\n   </assessor>\r\n   <investigation>\r\n      <code>\r\n         <coding>\r\n            <system value=\"http://snomed.info/sct\"/>\r\n            <code value=\"63332003\"/>\r\n            <display value=\"Anamnese en lichamelijk onderzoek\"/>\r\n         </coding>\r\n      </code>\r\n   </investigation>\r\n   <finding>\r\n      <itemCodeableConcept>\r\n         <coding>\r\n            <system value=\"http://snomed.info/sct\"/>\r\n            <code value=\"32398004\"/>\r\n            <display value=\"Bronchitis (disorder)\"/>\r\n         </coding>\r\n      </itemCodeableConcept>\r\n   </finding>\r\n   <prognosisCodeableConcept>\r\n      <coding>\r\n         <system value=\"http://snomed.info/sct\"/>\r\n         <code value=\"415684004\"/>\r\n         <display value=\"Vermoedelijk\"/>\r\n      </coding>\r\n   </prognosisCodeableConcept>\r\n</ClinicalImpression>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/ClinicalImpression/nl-core-ConditionAndDiagnosis-ClinicalImpression-zib-1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ClinicalImpression",
+								"nl-core-ConditionAndDiagnosis-ClinicalImpression-zib-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ConditionAndDiagnosis-1",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Condition xmlns=\"http://hl7.org/fhir\">\r\n   <id value=\"nl-core-ConditionAndDiagnosis-zib-1\"/>\r\n   <meta>\r\n      <profile value=\"http://nictiz.nl/fhir/StructureDefinition/nl-core-ConditionAndDiagnosis\"/>\r\n   </meta>\r\n   <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-Condition.StatusDate\">\r\n      <valuedateTime value=\"2023-03-05\"/>\r\n   </extension>\r\n   <extension url=\"http://nictiz.nl/fhir/StructureDefinition/ext-Diagnosis.MethodOfConfirmation\">\r\n      <valueCodeableConcept>\r\n         <coding>\r\n            <system value=\"http://snomed.info/sct\"/>\r\n            <code value=\"14736009\"/>\r\n            <display value=\"Anamnese en lichamelijk onderzoek met evaluatie en management van patiënt\"/>\r\n         </coding>\r\n      </valueCodeableConcept>\r\n   </extension>\r\n   <extension url=\"http://hl7.org/fhir/StructureDefinition/condition-diseaseCourse\">\r\n      <valueCodeableConcept>\r\n         <coding>\r\n            <system value=\"http://snomed.info/sct\"/>\r\n            <code value=\"231877006\"/>\r\n            <display value=\"Verslechterd\"/>\r\n         </coding>\r\n      </valueCodeableConcept>\r\n   </extension>\r\n   <severity>\r\n      <coding>\r\n         <system value=\"http://snomed.info/sct\"/>\r\n         <code value=\"6736007\"/>\r\n         <display value=\"Matig\"/>\r\n      </coding>\r\n   </severity>\r\n   <code>\r\n      <coding>\r\n         <system value=\"http://snomed.info/sct\"/>\r\n         <code value=\"205237003\"/>\r\n         <display value=\"Pneumonitis (disorder)\"/>\r\n      </coding>\r\n   </code>\r\n   <bodySite>\r\n      <extension url=\"http://hl7.org/fhir/StructureDefinition/bodySite\">\r\n         <valueReference>\r\n            <reference value=\"BodyStructure/nl-core-ConditionAndDiagnosis-zib-2-AnatomicalLocation-1\"/>\r\n            <type value=\"BodyStructure\"/>\r\n            <display value=\"Anatomical location, Structure of parenchyma of lung (body structure), Links\"/>\r\n         </valueReference>\r\n      </extension>\r\n      <coding>\r\n         <system value=\"http://snomed.info/sct\"/>\r\n         <code value=\"113255004\"/>\r\n         <display value=\"Structure of parenchyma of lung (body structure)\"/>\r\n      </coding>\r\n   </bodySite>\r\n   <subject>\r\n      <reference value=\"Patient/nl-core-Patient-alt-1\"/>\r\n      <type value=\"Patient\"/>\r\n      <display value=\"Patient, Peter Jan (PeJe) Jansen\"/>\r\n   </subject>\r\n   <asserter>\r\n      <reference value=\"PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1\"/>\r\n      <type value=\"PractitionerRole\"/>\r\n      <display value=\"Health professional (role), J.H.R. Peters, Neuroloog\"/>\r\n   </asserter>\r\n</Condition>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/Condition/nl-core-ConditionAndDiagnosis-zib-1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"Condition",
+								"nl-core-ConditionAndDiagnosis-zib-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New ClinicalImpression-2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<ClinicalImpression xmlns=\"http://hl7.org/fhir\">\r\n   <id value=\"nl-core-ConditionAndDiagnosis-ClinicalImpression-zib-2\"/>\r\n   <meta>\r\n      <profile value=\"http://nictiz.nl/fhir/StructureDefinition/nl-core-ConditionAndDiagnosis-ClinicalImpression\"/>\r\n   </meta>\r\n    <status value=\"completed\"/>\r\n   <subject>\r\n      <reference value=\"Patient/nl-core-Patient-alt-1\"/>\r\n      <type value=\"Patient\"/>\r\n      <display value=\"Patient, Peter Jan (PeJe) Jansen\"/>\r\n   </subject>\r\n   <effectiveDateTime value=\"2023-03-05\"/>\r\n   <assessor>\r\n      <reference value=\"PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1\"/>\r\n      <type value=\"PractitionerRole\"/>\r\n      <display value=\"Health professional (role), J.H.R. Peters, Neuroloog\"/>\r\n   </assessor>\r\n   <investigation>\r\n      <code>\r\n         <coding>\r\n            <system value=\"http://snomed.info/sct\"/>\r\n            <code value=\"14736009\"/>\r\n            <display value=\"Anamnese en lichamelijk onderzoek met evaluatie en management van patiënt\"/>\r\n         </coding>\r\n      </code>\r\n   </investigation>\r\n   <finding>\r\n      <itemCodeableConcept>\r\n         <coding>\r\n            <system value=\"http://snomed.info/sct\"/>\r\n            <code value=\"205237003\"/>\r\n            <display value=\"Pneumonitis (disorder)\"/>\r\n         </coding>\r\n      </itemCodeableConcept>\r\n   </finding>\r\n   <prognosisCodeableConcept>\r\n      <coding>\r\n         <system value=\"http://snomed.info/sct\"/>\r\n         <code value=\"410605003\"/>\r\n         <display value=\"Aanwezigheid bevestigd\"/>\r\n      </coding>\r\n   </prognosisCodeableConcept>\r\n</ClinicalImpression>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/ClinicalImpression/nl-core-ConditionAndDiagnosis-ClinicalImpression-zib-2",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ClinicalImpression",
+								"nl-core-ConditionAndDiagnosis-ClinicalImpression-zib-2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all Conditions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+json; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/Condition",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"Condition"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all ClinicalImpressions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json; fhirVersion=4.0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+json; fhirVersion=4.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/ClinicalImpression",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ClinicalImpression"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:4080",
+			"type": "string"
+		}
+	]
+}
