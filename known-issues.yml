@@ -459,6 +459,28 @@ zib-Problem:
         for: NL-CM:20.7.4 (AnatomicalLocation.Location)
         reason: The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the fact that both the ProblemAnatomicalLocation concept from zib Problem and the Location concept from zib AnatomicalLocation are mapped on the same level in FHIR. Setting the cardinality to 0..* allows for multiple instances of AnatomicalLocation, which is in accordance with zib Problem.
 
+zib-RegistrationData:
+  zib deviations:
+    Provenance.occurred[x]:
+      - short: AcquisitionDateTime / DateTimeOfClosure instead of AcquisitionDateTime / DatTimeOfClosure
+        reason: The concept DateTimeOfClosure is incorrectly referred to as "DatTimeOfClosure" in the zib.
+      - alias: AfsluitDatumTijd,DatumTijdVanVerkrijgen instead of DatumTijdVanVerkrijgen
+        reason: This element is mapped to two zib concepts, AcquisitionDateTime and DateTimeOfClosure.
+    Provenance.recorded:
+      - datatype: instant instead of TS
+        reason: This is the result of the FHIR Provenance resource requiring an instant for recorded events. As a result, the zib concept RegistrationDateTime with a Timestamp datatype is mapped to a FHIR instant datatype.
+      - cardinality: 1..1 instead of 0..1
+        reason: Provenance.recorded is mandatory in FHIR. The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.
+    Provenance.reason.text:
+      - cardinality: 0..* instead of 0..1
+        reason: The cardinality of RegistrationReason and ReasonForClosing is defined by the cardinality of the main `.reason` element and thus the cardinality requirements of the zib are honored. 
+    Provenance.agent:author.who:
+      - cardinality: 1..1 instead of 0..1
+        reason: Provenance.agent:author.who is mandatory in FHIR. The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.
+    Provenance.agent:informationSource.who:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality for InformationSource is defined by the cardinality of the informationSource slice and thus the cardinality requirements of the zib are honored. Because .who is required to identify the slices, its cardinality is 1..1.
+
 zib-SkinDisorder:
   zib deviations:
     Condition.bodySite:
@@ -712,3 +734,12 @@ zib-Payer-Organization:
         reason: The short description is defined on the datatype profile and not repeated in the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The alias is defined on the datatype profile and not repeated in the differential.
+
+zib-RegistrationData:
+  ignored issues:
+    Provenance.agent:author.who:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice."
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
+    Provenance.agent:informationSource.who:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice."
+        reason: The restriction is set on a slice, but this cannot be automatically checked.

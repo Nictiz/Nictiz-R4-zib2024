@@ -71,7 +71,7 @@
       <definition value="This can be either the date and time of acquisition or the date and time of closure. The date and time of acquisition indicate when the information became available, which may be earlier than when it was entered into the patient record. The date and time of closure indicate when it was recorded in the patient record that the information is no longer relevant, for example, because it is outdated or no longer requires attention." />
          <comment value="Both AcquisitionDateTime and DateTimeOfClosure are mapped to `.occurredDateTime`. Each RegistrationData contains information about either the date and time when the information became available or when it was determined to be no longer relevant, but never both. Therefore, AcquisitionDateTime and DateTimeOfClosure will never appear together within the same RegistrationData instance."/>
       <alias value="AfsluitDatumTijd" />
-         <alias value="DatumTijdVanVerkrijgen "/>
+         <alias value="DatumTijdVanVerkrijgen"/>
          <type>
             <code value="dateTime"/>
          </type>

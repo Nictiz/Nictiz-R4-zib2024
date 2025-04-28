@@ -31,6 +31,17 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
   <derivation value="constraint" />
   <differential>
+    <element id="Identifier">
+      <path value="Identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="Identificatienummer" />
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.12" />
+        <comment value="IdentificationNumber" />
+      </mapping>
+    </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
       <min value="1" />
@@ -44,18 +55,7 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <fixedUri value="oid:AssigningAuthorityOID" />
-    </element>
-    <element id="Identifier.value">
-      <path value="Identifier.value" />
-      <short value="IdentificationNumber" />
-      <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
-      <alias value="Identificatienummer" />
-      <mapping>
-        <identity value="zib-registrationdata-v1.1.1-2024EN" />
-        <map value="NL-CM:22.1.12" />
-        <comment value="IdentificationNumber" />
-      </mapping>
+      <patternUri value="oid:AssigningAuthorityOID" />
     </element>
   </differential>
 </StructureDefinition>
