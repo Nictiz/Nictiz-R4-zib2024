@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-RegistrationData" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-RegistrationData" />
+  <name value="NlcoreRegistrationData" />
+  <title value="nl core RegistrationData" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Registration data contains the information that originates during the registration process of data in the patient record, such as, for instance, when and by whom the information was registered." />
+  <purpose value="A derived profile from [zib-RegistrationData](http://nictiz.nl/fhir/StructureDefinition/zib-RegistrationData) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-registrationdata-v1.1.1-2024EN" />
+    <uri value="https://zibs.nl/wiki/RegistrationData-v1.1.1(2024EN)" />
+    <name value="zib RegistrationData-v1.1.1(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Provenance" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-RegistrationData" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Provenance">
+      <path value="Provenance" />
+      <alias value="nl-core-RegistrationData" />
+    </element>
+    <element id="Provenance.agent:author">
+      <path value="Provenance.agent" />
+      <sliceName value="author" />
+    </element>
+    <element id="Provenance.agent:author.who">
+      <path value="Provenance.agent.who" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+      </type>
+    </element>
+    <element id="Provenance.agent:informationSource">
+      <path value="Provenance.agent" />
+      <sliceName value="informationSource" />
+    </element>
+    <element id="Provenance.agent:informationSource.who">
+      <path value="Provenance.agent.who" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
