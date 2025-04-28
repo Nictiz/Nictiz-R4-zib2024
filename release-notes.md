@@ -283,6 +283,9 @@
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
 * `.note.text` ; textual ; Changed definition of Comment. ; ZIB-1610
 
+## RegistrationData (zib-RegistrationData, nl-core-RegistrationData)
+* New profile of zib RegistrationData on resource Provenance.
+
 ## SkinDisorder (zib-SkinDisorder, nl-core-SkinDisorder)
 * `.code` ; terminology ; Changed codes in SoortAandoeningCodelijst. ; ZIB-1572
 * `.bodySite` ; terminology ; Binding strength changed from required to extensible. ; ZIBFHIR-113
