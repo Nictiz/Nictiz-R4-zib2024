@@ -94,7 +94,7 @@
       <path value="Observation.bodySite" />
       <short value="PainLocation / Location" />
       <definition value="Anatomic location and laterality of the pain." />
-      <alias value="Pijnlocatie" />
+      <alias value="PijnLocatie" />
       <type>
         <code value="CodeableConcept" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
