@@ -51,7 +51,7 @@
           </tr>
           <tr>
             <td>
-              <span title="pijnbeloop (364631310951000146102005 - SNOMED CT)">pijnbeloop</span>
+              <span title="pijnbeloop (310951000146102 - SNOMED CT)">pijnbeloop</span>
             </td>
             <td>
               <span title="Stijgend (260369004 - SNOMED CT)">Stijgend</span>
@@ -137,7 +137,7 @@
     <code>
       <coding>
         <system value="http://snomed.info/sct"/>
-        <code value="364631310951000146102005"/>
+        <code value="310951000146102"/>
         <display value="pijnbeloop"/>
       </coding>
     </code>
