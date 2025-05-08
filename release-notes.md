@@ -166,6 +166,16 @@
 ### zib-HealthcareProvider, nl-core-HealthcareProvider
 * No significant changes.
 
+## HearingFunction
+### zib-HearingFunction, nl-core-HearingFunction
+* No significant changes.
+
+### zib-HearingFunction.HearingAid, nl-core-HearingFunction.HearingAid
+* `.bodySite` ; mapping ; Renamed mapping from DeviceAnatomicalLocation to AnatomicalLocation. ; ZIB-1621
+
+### zib-HearingFunction.HearingAid.Product, nl-core-HearingFunction.HearingAid.Product
+* `.code` ; terminology ; Changed codes in HearingAidTypeCodeList. ; ZIB-1575, ZIBFHIR-228
+
 ### zib-HealthcareProvider-Organization, nl-core-HealthcareProvider-Organization
 * `.type:organizationType` ; terminology ; Changed codes in OrganisatieTypeCodelijst. ; ZIB-1559, ZIB-1927
 * `.type:departmentSpecialty` ; terminology ; Changed codes in AfdelingSpecialismeCodelijst. ; ZIB-2218, ZIB-2549
@@ -227,6 +237,14 @@
 
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218, ZIB-2549
+
+## MedicalDevice
+### zib-MedicalDevice, nl-core-MedicalDevice
+* No significant changes
+
+### zib-MedicalDevice.Product, nl-core-MedicalDevice.Product
+* `.type` ; terminology ; Added additional binding to ProductTypeImplantatenCodelijst (using a combined ValueSet) (although it is a subset of the existing ValueSet ProductTypeCodelijst) ; ZIB-1279
+* `.type` ; terminology ; Removed codes for negation of visual aid and hearing aid, and adopted the generic negation codes from the "Absent or Unknown Devices" ValueSet in the IPS/EPS instead ; ZIB-1536, ZIBFHIR-228
 
 ## NameInformation
 ### zib-NameInformation

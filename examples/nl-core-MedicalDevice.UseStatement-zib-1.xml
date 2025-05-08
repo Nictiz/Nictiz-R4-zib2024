@@ -1,0 +1,56 @@
+<DeviceUseStatement xmlns="http://hl7.org/fhir">
+  <id value="nl-core-MedicalDevice.UseStatement-zib-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-MedicalDevice.UseStatement"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Beschrijving apparaatgebruik. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: actief</caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Kan korte afstanden lopen</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th>Apparaat/Systeem</th>
+            <td>Type: Device.  Device/nl-core-MedicalDevice.Product-zib-1</td>
+          </tr>
+          <tr>
+            <th>Gebruiksperiode</th>
+            <td>Vanaf 8 maart 2012</td>
+          </tr>
+          <tr>
+            <th>Reden</th>
+            <td>
+              <div>Problem, problem name: Multiple sclerose</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <status value="active"/>
+  <subject>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </subject>
+  <timingPeriod>
+    <start value="2012-03-08"/>
+  </timingPeriod>
+  <device>
+    <reference value="Device/nl-core-MedicalDevice.Product-zib-1"/>
+    <type value="Device"/>
+  </device>
+  <reasonReference>
+    <reference value="Condition/nl-core-MedicalDevice-zib-1-Problem-1"/>
+    <type value="Condition"/>
+    <display value="Problem, problem name: Multiple sclerose"/>
+  </reasonReference>
+  <note>
+    <text value="Kan korte afstanden lopen"/>
+  </note>
+</DeviceUseStatement>
