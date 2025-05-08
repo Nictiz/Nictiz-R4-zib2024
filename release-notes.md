@@ -310,3 +310,9 @@
 
 ## SNAQScore (zib-SNAQScore, nl-core-SNAQScore)
 * No significant changes.
+
+## TimeInterval (zib-TimeInterval, nl-core-TimeInterval)
+* `.start.extension:relativeStartTime.value[x]` ; mapping ; Added mapping of RelativeStartTime. ; ZIB-2148
+* `.start` ; textual ; Renamed from startDateTime to StartDateTime. ; ZIB-1756
+* `.end.extension:relativeEndTime.value[x]` ; mapping ; Added mapping of RelativeEndTime. ; ZIB-2148
+* `.end` ; textual ; Renamed from endDateTime to EndDateTime. ; ZIB-1756

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-Symptom" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Symptom" />
+  <name value="ZibSymptom" />
+  <title value="zib Symptom" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A phenomenon with which a condition in the patient presents itself. This also includes a complaint or a finding, but not additional research, such as laboratory tests, function tests and imaging studies." />
+  <purpose value="This Condition resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Symptom v1.0 (2024)](https://zibs.nl/wiki/Symptom-v1.0(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-symptom-v1.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/Symptom-v1.0(2024EN)" />
+    <name value="zib Symptom-v1.0(2024EN)" />
+  </mapping>
+  <mapping>
+    <identity value="zib-timeinterval-v1.3-2024EN" />
+    <uri value="https://zibs.nl/wiki/TimeInterval-v1.3(2024EN)" />
+    <name value="zib TimeInterval-v1.3(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition">
+      <path value="Condition" />
+      <short value="Symptom" />
+      <comment value="The functional model of zib Symptom represents a condition that needs to be tracked over time, but defines point-in-time assessments about the current state of the symptom as well. For this reason, this zib is mapped onto multiple resources: this Condition profile represents the focal resource, while all point-in-time properties are grouped using the [zib-Symptom.Characteristics](http://nictiz.nl/fhir/StructureDefinition/zib-Symptom.Characteristics) Observation profile, which can be referenced on `Condition.evidence.detail`. This model allows to track multiple distinct assessment moments over time in connection with the Condition." />
+    </element>
+    <element id="Condition.extension:assertedDate">
+      <path value="Condition.extension" />
+      <sliceName value="assertedDate" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/condition-assertedDate" />
+      </type>
+    </element>
+    <element id="Condition.extension:assertedDate.value[x]">
+      <path value="Condition.extension.value[x]" />
+      <short value="SymptomStatusDate" />
+      <definition value="Date from which the specification of the symptom applies." />
+      <alias value="SymptoomStatusDatum" />
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.3" />
+        <comment value="SymptomStatusDate" />
+      </mapping>
+    </element>
+    <element id="Condition.extension:symptomPeriodDuration">
+      <path value="Condition.extension" />
+      <sliceName value="symptomPeriodDuration" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Duration" />
+      </type>
+    </element>
+    <element id="Condition.extension:symptomPeriodDuration.value[x]">
+      <path value="Condition.extension.value[x]" />
+      <definition value="The duration of the period in which the symptom is (was) present in appropriate units of time (e.g. days or hours, etc.)." />
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Condition.category:symptomCode">
+      <path value="Condition.category" />
+      <sliceName value="symptomCode" />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="162408000" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
+      <short value="SymptomName" />
+      <definition value="Name and code of the symptom via selection from a code list, based on a standardised coding system." />
+      <alias value="SymptoomNaam" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.5.8--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.10" />
+        <comment value="SymptomName" />
+      </mapping>
+    </element>
+    <element id="Condition.code.text">
+      <path value="Condition.code.text" />
+      <short value="FurtherSpecificationSymptomName" />
+      <definition value="More detailed specification of the SymptomName that has been selected from the code list, because that list does not (yet) contain the required level of detail." />
+      <alias value="NadereSpecificatieSymptoomNaam" />
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.11" />
+        <comment value="FurtherSpecificationSymptomName" />
+      </mapping>
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+      <short value="AnatomicalLocation / Location" />
+      <definition value="The location(s) on or in the body where the symptom presents itself." />
+      <alias value="AnatomischeLocatie" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.12" />
+        <comment value="AnatomicalLocation" />
+      </mapping>
+    </element>
+    <element id="Condition.onset[x]">
+      <path value="Condition.onset[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.onset[x]:onsetDateTime">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetDateTime" />
+      <short value="StartDateTime" />
+      <definition value="The start date and time of the period in which the symptom is (was) present." />
+      <comment value="The zib recognizes both the StartDateTime (dateTime) and RelativeStartTime (string) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if both concepts are present, it is recommended to communicate the StartDateTime as it is more precise." />
+      <alias value="StartDatumTijd" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="zib-timeinterval-v1.3-2024EN" />
+        <map value="NL-CM:20.3.2" />
+        <comment value="StartDateTime" />
+      </mapping>
+    </element>
+    <element id="Condition.onset[x]:onsetString">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetString" />
+      <short value="RelativeStartTime" />
+      <definition value="Textual representation of the start time of the period in which the symptom is (was) present, associated with an event for which the time is not fixed or known. For example &quot;Start the day after discharge from hospital&quot;." />
+      <comment value="The zib recognizes both the StartDateTime (dateTime) and RelativeStartTime (string) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if both concepts are present, it is recommended to communicate the StartDateTime as it is more precise." />
+      <alias value="RelatieveStartTijd" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="zib-timeinterval-v1.3-2024EN" />
+        <map value="NL-CM:20.3.7" />
+        <comment value="RelativeStartTime" />
+      </mapping>
+    </element>
+    <element id="Condition.abatement[x]">
+      <path value="Condition.abatement[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.abatement[x]:abatementDateTime">
+      <path value="Condition.abatement[x]" />
+      <sliceName value="abatementDateTime" />
+      <short value="EndDateTime" />
+      <definition value="The end date and time of the period in which the symptom is (was) present." />
+      <alias value="EindDatumTijd" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="zib-timeinterval-v1.3-2024EN" />
+        <map value="NL-CM:20.3.3" />
+        <comment value="EndDateTime" />
+      </mapping>
+    </element>
+    <element id="Condition.abatement[x]:abatementString">
+      <path value="Condition.abatement[x]" />
+      <sliceName value="abatementString" />
+      <short value="RelativeEndTime" />
+      <definition value="Textual representation of the end time of the period in which the symptom is (was) present, associated with an event for which the timing is not yet fixed. For example &quot;Stop the day before operation&quot;." />
+      <comment value="The zib recognizes both the EndDateTime (dateTime) and RelativeEndTime (string) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if both concepts are present, it is recommended to communicate the EndDateTime as it is more precise." />
+      <alias value="RelatieveEindTijd" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="zib-timeinterval-v1.3-2024EN" />
+        <map value="NL-CM:20.3.8" />
+        <comment value="RelativeEndTime" />
+      </mapping>
+    </element>
+    <element id="Condition.evidence">
+      <path value="Condition.evidence" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="detail.resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.evidence:symptomCharacteristics">
+      <path value="Condition.evidence" />
+      <sliceName value="symptomCharacteristics" />
+    </element>
+    <element id="Condition.evidence:symptomCharacteristics.detail">
+      <path value="Condition.evidence.detail" />
+      <comment value="The functional model of zib Symptom represents a condition that needs to be tracked over time, but defines point-in-time assessments about the current state of the symptom as well. For this reason, this zib is mapped onto multiple resources: this Condition profile represents the focal resource, while all point-in-time observations are grouped using an Observation profile. See the comment on the root of this profile for further guidance." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Symptom.Characteristics" />
+      </type>
+    </element>
+    <element id="Condition.note">
+      <path value="Condition.note" />
+      <max value="1" />
+    </element>
+    <element id="Condition.note.text">
+      <path value="Condition.note.text" />
+      <short value="Comment" />
+      <definition value="A comment in free text with respect to the symptom, that is not represented by the other data elements in the information model." />
+      <alias value="Toelichting" />
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.15" />
+        <comment value="Comment" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
