@@ -79,6 +79,9 @@
 ## CareTeam (zib-CareTeam, nl-core-CareTeam) 
 * No significant changes.
 
+## ChecklistPainBehaviour (zib-ChecklistPainBehaviour, nl-core-ChecklistPainBehaviour)
+* No significant changes.
+
 ## ComfortScale (zib-ComfortScale, nl-core-ComfortScale)
 * `.value[x]:valueInteger` ; textual ; Refined guidance for TotalScore. ; ZIB-1839
 * `.value[x]:valueInteger` ; constraint ; Adjusted maxValueInteger value for TotalScore. ; ZIB-1839
