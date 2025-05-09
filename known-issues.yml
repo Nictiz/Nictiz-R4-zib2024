@@ -177,6 +177,21 @@ zib-ContactPerson:
         for: NL-CM:20.5.1 (AddressInformation)
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
 
+zib-Encounter:
+  zib deviations:
+    Encounter.class:
+      - cardinality: 1..1 instead of 0..1
+        reason: Encounter.class is mandatory in FHIR. The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.
+    Encounter.participant:healthProfessional.individual:
+      - cardinality: 0..1 instead of 0..*
+        reason: The cardinality mismatch between the zib (0..*) and FHIR (0..1) is explained by the parent participant element that may exist 0..* times, thereby this mapping is still honoring the cardinality requirements of the zib.
+    Encounter.participant:responsibleHealthProfessional.type:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.   
+    Encounter.period:
+      - datatype: Period instead of TS
+        reason: The zib model has of Encounter has no duration, wheareas an Encounter in FHIR is always modelled with duration. Missing an end date means an ongoing period in FHIR. This deviation is documented in the profile.
+
 zib-HeadCircumference:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
@@ -586,6 +601,15 @@ nl-core-DevelopmentChild.AgeFirstMenstruation-*:
       - message: Wrong Display Name 'Leeftijd bij eerste menstruatie' for http://loinc.org#42798-9. There are no valid display names found for language(s) 'en'. Default display is 'Age at menarche'
         reason: A valid Dutch display value is used instead of an English one.
 
+zib-Encounter:
+  ignored issues:
+    Encounter.participant:healthProfessional.individual:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice."
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
+    Encounter.participant:responsibleHealthProfessional.individual:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice."
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
+        
 nl-core-HealthcareProvider-Organization-*:
   ignored issues:
     Organization.type[*]:
