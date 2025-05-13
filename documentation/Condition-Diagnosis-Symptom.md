@@ -44,12 +44,19 @@ flowchart TB
 
 ## General rules
 
-* When recording a new symptom, an instance of the zib-ConditionAndDiagnosis, zib-Symptom and zib-Symptom.Characteristics profiles must be present/created. 
-* Subsequent recordings about the symptom can be tracked by creating zib-Symptom.Characteristics or by updating the zib-Symptom instance.
+* When recording a new symptom, an instance of the zib-Symptom, zib-Symptom.Characteristics, and zib-ConditionAndDiagnosis profiles must be created/present. 
 * When recording a new diagnosis, an instance is of the zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles are created.
+* When modifying a symptom instance, all concepts may be updated, except for the _SymptomName_. A change to the _SymptomName_ is considered a new symptom and therefore requires a new instance of both the zib-Symptom and zib-Symptom.Characteristics profiles.
+* When modifying a diagnosis instance, all concepts may be updated, except for the _DiagnosisName_. A change to the _DiagnosisName_ is considered a new diagnosis and therefore requires a new instance of both the zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles.
 
-* TODO: When modifying a Symptom, if the SymptomName is changed, a new instance of the Condition is create.
-* TODO: When modifying a diagnosis, if DiagnosisName is changed, a new instance of the Condition is created that contains a reference to the previous Condition. 
+## Specific guidelines
+
+* When a diagnosis is ruled out based on clinical judgment, the `.verificationStatus` is set to _refuted_. 
+* When the condition is resolved (i.e. the patient no longer experiences it), the `.clinicalStatus` is set to _inactive_ and the `.abatement[x]` is included.
+* Diagnosis concepts are mapped in both zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles. However, the concepts _Comment_ (NL-CM:5.6.11) and _Condition_ (NL-CM:5.6.10) are mapped only in zib-ConditionAndDiagnosis. Conversely, the concepts in the _Reason_ container (NL-CM:5.6.13), _IsComplication_ (NL-CM:5.6.12), _AnatomicalLocation_ (NL-CM:5.6.9), and _DiagnosisStatus_ (NL-CM:5.6.4) are mapped only in zib-ConditionAndDiagnosis-ClinicalImpression.
+* When a single diagnosis is refuted and replaced by another, the `extension:condition-occurredFollowing` is included in the new zib-ConditionAndDiagnosis instance to reference the refuted diagnosis. This creates a clear, traceable sequence between the diagnosis instances.
+* When a differential diagnosis is added, the `.extension:condition-related` is included in the zib-ConditionAndDiagnosis instance to reference the other related differential diagnoses. This establishes a link between them.
+* When a differential diagnosis is refuted, the `.extension:condition-ruledOut` is included in the remaining differential diagnoses to indicate the refuted diagnosis.
 
 ## Technical Scenario's regarding instances
 
@@ -150,7 +157,7 @@ NewSymptom_C["`New recording of existing Symptom C`"]
     S_C["`**Condition**
         (zib-Symptom)
         .id = _3SC_
-        .evidence.detail = _4SC_`"]
+        .evidence.detail = _4SCC_`"]
     SC_C["`
         **Observation**
         (zib-Symptom.Characteristics)
@@ -166,27 +173,23 @@ NewSymptom_C -- create --> SC_C
 ```
 
 
-### 5. Healthprofessional updates the anatomical location of symptom A (not the SymptomName)
+### 5. Healthprofessional updates the anatomical location of symptom A
 ```mermaid
 flowchart TB
 
 UpdateSymptom_A["`Update Symptom A`"]
-    CD_A["`**Condition**
-        (zib-ConditionAndDiagnosis)
-        .id = _1CDA_`"] 
     S_A["`**Condition**
         (zib-Symptom)
-        .id = _1SA_`"]
+        .id = _5SA_
+        .bodySite = [Anatomical location]`"]
     
     S_A:::Ash
-    CD_A:::Ash
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 
-UpdateSymptom_A -- update --> CD_A
 UpdateSymptom_A -- update --> S_A
 ```
 
-### 5. Symptom A is finished and patient gets a new Symptom D for Condition A 
+### 6. Symptom A has resolved and patient gets a new Symptom D for Condition A 
 
 ```mermaid
 flowchart TB
@@ -204,7 +207,8 @@ CloseSymptom_A -.-> NewSymptom_D
 
     CD_A["`**Condition**
         (zib-ConditionAndDiagnosis)
-        .id = _1CDA_`"] 
+        .id = _1CDA_
+        .evidence.detail = _5SD_`"] 
 
     S_D["`**Condition**
         (zib-Symptom)
@@ -226,14 +230,14 @@ NewSymptom_D -- update --> CD_A
 
 ```
 
-### 6. Symptom A is closed and there is a new Diagnosis B for Condition A
+### 7. Symptom A has resolved and there is a new Diagnosis B for Condition A 
 
 
 ```mermaid
 flowchart TB
 
 CloseSymptom_A["`Close Symptom A`"]
-NewDiagnosis_B["`New Diagnosis B related to Condition A`"]
+NewDiagnosis_B["`New Diagnosis B related to Condition A (.id = 1CDA)`"]
 
 CloseSymptom_A -.-> NewDiagnosis_B
 
@@ -262,13 +266,13 @@ NewDiagnosis_B -- create --> CDCI_B
 ```
 
 
-### 7. Existing symptom A and related condition A are closed 
+### 8. Symptom A has resolved along with the related condition A
 
 ```mermaid
 flowchart TB
 
 UpdateSymptom_A["`Update Symptom A`"]
-UpdateDiagnosis_B["`Update Diagnosis B related to Condition A`"]
+UpdateDiagnosis_B["`Update Condition A`"]
 
 UpdateSymptom_A -.-> UpdateDiagnosis_B
 
@@ -298,9 +302,40 @@ UpdateDiagnosis_B -- update --> CD_B
 
 ```
 
-### 8. Healthprofessional rules out a Symptom
+### 9. Healthprofessional rules out Symptom B for Condition A?
 
-TODO
+```mermaid
+flowchart TB
+
+UpdateSymptom_A["`Update Symptom B`"]
+UpdateDiagnosis_B["`Update Condition A`"]
+
+UpdateSymptom_A -.-> UpdateDiagnosis_B
+
+    S_A["`
+        **Condition**
+        (zib-Symptom)
+        .id = _1SA_
+        .verificationStatus = _refuted_
+        `"]    
+
+    CD_B["`
+        **Condition**
+        (zib-ConditionAndDiagnosis)
+        .id = _6CDB_
+        .extension.condition-course = 'niet meer aanwezig'
+        .clinicalStatus = _inactive_|_resolved_
+        .abatement[x] = [past date]
+        `"] 
+   
+    S_A:::Ash
+    CD_B:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+UpdateSymptom_A -- update --> S_A
+UpdateDiagnosis_B -- update --> CD_B
+
+```
 
 ### 9. Healthprofessional modifies a single diagnosis 'Bronchitus' to a 'Longonsteking'
 
