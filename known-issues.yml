@@ -294,6 +294,29 @@ zib-LivingSituation.LivingCondition:
       - cardinality: 0..1 instead of 0..*
         reason: The value can only occur once, but this profile is referenced 0..* times via .hasMember, making the effective cardinality 0..* as required by the zib.
 
+zib-MedicationAdministration2:
+  zib deviations:
+    MedicationAdministration.medication[x]:medicationReference:
+      - cardinality: 1..1 instead of 0..1
+        reason: MedicationAdministration.medication[x] is mandatory in FHIR. The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.
+    MedicationAdministration.effective[x]:effectiveDateTime:
+      - cardinality: 1..1 instead of 0..1
+        reason: MedicationAdministration.effective[x] is mandatory in FHIR. The cardinality matches the cardinality in the zib, however, it does not match with the conceptual cardinality concept. This should not be a major problem.
+    MedicationAdministration.performer:healthProfessional.actor:
+      - cardinality: 1..1 instead of 0..1
+        reason: The cardinality of each Administrator option is defined by the cardinality of the slices on performer and thus the cardinality requirements of the zib are honored. Because .actor is required to discriminate the slices, its cardinality is 1..1.
+    MedicationAdministration.dosage.site:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:9.13.23381 (MedicationAdministration2.AdministrationLocation)
+        reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
+
+zib-MedicationAdministration2.AnatomicalLocati-BodyStructure:
+  zib deviations:
+    BodyStructure.location:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:9.13.23381 (MedicationAdministration2.AdministrationLocation)
+        reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
+
 zib-NameInformation:
   zib deviations:
     HumanName.family.extension:*.value[x]:
@@ -696,6 +719,13 @@ zib-HealthProfessional-Practitioner:
         reason: The required short description is given by the datatype profile, so it is absent from the differential.
       - message: "Constraint failed: sd-pg-04: 'If mapping.map exists and the mapping is not implicit, alias should exist.'"
         reason: The required alias is given by the datatype profile, so it is absent from the differential.
+
+
+zib-MedicationAdministration2:
+  ignored issues:
+    MedicationAdministration.performer:*.actor:
+      - message: "Constraint failed: sd-zpg-03: 'References to other resource profiles should be added next to the HL7 base references, unless they are added on a slice"
+        reason: The restriction is set on a slice, but this cannot be automatically checked.
 
 zib-NameInformation:
   zib deviations:
