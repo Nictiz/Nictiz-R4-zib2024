@@ -282,7 +282,7 @@ zib-MedicationAdministration2:
         for: NL-CM:9.13.23381 (MedicationAdministration2.AdministrationLocation)
         reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
 
-zib-MedicationAdministration2.AnatomicalLocation-BodyStructure:
+zib-MedicationAdministration2.AnatomicalLocati-BodyStructure:
   zib deviations:
     BodyStructure.location:
       - datatype: CodeableConcept instead of Reference
