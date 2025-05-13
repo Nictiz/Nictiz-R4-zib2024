@@ -44,9 +44,9 @@ flowchart TB
 
 ## General rules
 
-* When recording a new symptom, always an instance is created of the zib-ConditionAndDiagnosis, zib-Symptom and zib-Symptom.Characteristics profiles. 
-* Subsequent recordings about the this symptom can be tracked added using zib-Symptom.Characteristics or by updating the zib-Symptom instance.
-* When recording a new Diagnose, always an instance is created of zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profile.
+* When recording a new symptom, an instance of the zib-ConditionAndDiagnosis, zib-Symptom and zib-Symptom.Characteristics profiles are always created. 
+* Subsequent recordings about the symptom can be tracked by adding zib-Symptom.Characteristics or by updating the zib-Symptom instance.
+* When recording a new diagnosis, an instance is of the zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles are always created.
 
 
 ## Technical Scenario's regarding instances
@@ -154,7 +154,7 @@ UpdateSymptom_A -- update --> CD_A
 UpdateSymptom_A -- update --> S_A
 ```
 
-### 5. Symptom A is finished and new Symptom D for Condition A 
+### 5. Symptom A is finished and patient gets a new Symptom D for Condition A 
 
 ```mermaid
 flowchart TB
@@ -189,12 +189,12 @@ CloseSymptom_A -.-> NewSymptom_D
 
 CloseSymptom_A -- update --> S_A
 NewSymptom_D -- create --> S_D
-NewSymptom_D -- update --> SC_D
+NewSymptom_D -- create --> SC_D
 NewSymptom_D -- update --> CD_A
 
 ```
 
-### 6. Symptom A is closed and there is new Diagnosis B for the Condition A
+### 6. Symptom A is closed and there is a new Diagnosis B for Condition A
 
 
 ```mermaid
@@ -214,7 +214,7 @@ CloseSymptom_A -.-> NewDiagnosis_B
     CD_B["`**Condition**
         (zib-ConditionAndDiagnosis)
         .id = _6CDB_
-        TODO - reference to Condition A -- extension?`"] 
+        .extension:occuredFollowing = _1CDA_`"] 
     CDCI_B["`**ClinicalImpression**
         (zib-ConditionAndDiagnosis-ClinicalImpression)
         .id = _6CDCIB_`"] 
