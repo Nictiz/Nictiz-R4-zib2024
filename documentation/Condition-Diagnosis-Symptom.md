@@ -44,10 +44,10 @@ flowchart TB
 
 ## General rules
 
-* When recording a new symptom, an instance of the zib-ConditionAndDiagnosis, zib-Symptom and zib-Symptom.Characteristics profiles are always created. 
-* Subsequent recordings about the symptom can be tracked by adding zib-Symptom.Characteristics or by updating the zib-Symptom instance.
-* When recording a new diagnosis, an instance is of the zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles are always created.
-
+* When recording a new symptom, always an instance is created of the zib-ConditionAndDiagnosis, zib-Symptom and zib-Symptom.Characteristics profiles. 
+* Subsequent recordings about the this symptom can be tracked added using zib-Symptom.Characteristics or by updating the zib-Symptom instance.
+* When recording a new Diagnose, always an instance is created of zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profile.
+* When recording modifying a diagnosis, if DiagnosisName is changed, a new instance of the Condition is created that contains a reference to the previous. 
 
 ## Technical Scenario's regarding instances
 
@@ -253,7 +253,7 @@ UpdateSymptom_A -.-> UpdateDiagnosis_B
         (zib-ConditionAndDiagnosis)
         .id = _6CDB_
         .extension.condition-course = 'niet meer aanwezig'
-        .clinidalStatus = _inactive_|_resolved_
+        .clinicalStatus = _inactive_|_resolved_
         .abatement[x] = [past date]
         `"] 
    
@@ -266,13 +266,134 @@ UpdateDiagnosis_B -- update --> CD_B
 
 ```
 
-### 8. Healthprofessional rules out an Symptom
+### 8. Healthprofessional rules out a Symptom
 
-### 9. Healthprofessional modifies an single diagnosis 'Bronchitus' to a 'Longonsteking'
+TODO
+
+### 9. Healthprofessional modifies a single diagnosis 'Bronchitus' to a 'Longonsteking'
+
+```mermaid
+flowchart TB
+
+UpdateDiagnosis_A["`Update Bronchitus diagnosis`"]
+CreateDiagnosis_B["`Create Longonsteking diagnosis`"]
+
+UpdateDiagnosis_A -.-> CreateDiagnosis_B
+
+    CD_Bronchitus["`
+            **Condition**
+            (zib-ConditionAndDiagnosis)
+            .id = _9CDBronchitus_
+            .clinicalStatus = _inactive_|_resolved_
+        `"] 
+    CD_Longonsteking["`
+            **Condition**
+            (zib-ConditionAndDiagnosis)
+            .id = _9CDBLongonsteking_
+            .condition-occuredFollowing = _9CDBronchitus_
+        `"] 
+    CDCI_Longonsteking["`
+        **ClinicalImpression**
+        (zib-ConditionAndDiagnosis-ClinicalImpression)
+        .id = _9CDCILongonsteking_
+        `"] 
+   
+    CD_Bronchitus:::Ash
+    CD_Longonsteking:::Ash
+    CDCI_Longonsteking:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+UpdateDiagnosis_A -- update --> CD_Bronchitus
+CreateDiagnosis_B -- create --> CD_Longonsteking
+CreateDiagnosis_B -- create --> CDCI_Longonsteking
+
+```
 
 ### 10. Healthprofessional ruled out the DD disagnosis Bronchitus and made from the DD 'Longonsteking' the diagnosis.
 
+```mermaid
+flowchart TB
+
+UpdateDiagnosis_A["`Update Bronchitus diagnosis`"]
+CreateDiagnosis_B["`Create Longonsteking diagnosis`"]
+
+UpdateDiagnosis_A -.-> CreateDiagnosis_B
+
+    CD_Bronchitus["`
+            **Condition**
+            (zib-ConditionAndDiagnosis)
+            .id = _9CDBronchitus_
+            .verificationStatus = _refuted_
+        `"] 
+    CD_Longonsteking["`
+            **Condition**
+            (zib-ConditionAndDiagnosis)
+            .id = _9CDBLongonsteking_
+            .condition-occuredFollowing = _9CDBronchitus_
+        `"] 
+    CDCI_Longonsteking["`
+        **ClinicalImpression**
+        (zib-ConditionAndDiagnosis-ClinicalImpression)
+        .id = _9CDCILongonsteking_
+        `"] 
+   
+    CD_Bronchitus:::Ash
+    CD_Longonsteking:::Ash
+    CDCI_Longonsteking:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+UpdateDiagnosis_A -- update --> CD_Bronchitus
+CreateDiagnosis_B -- create --> CD_Longonsteking
+CreateDiagnosis_B -- create --> CDCI_Longonsteking
+
+```
+
 ### 11. Healthprofessional creates two DD disagnoses.
+
+```mermaid
+flowchart TB
+
+CreateDiagnosis["`Create two DD diagnosis`"]
+
+    CD_DD1["`
+            **Condition**
+            (zib-ConditionAndDiagnosis)
+            .id = _11CD_DD1_
+            .condition-related  = #11C
+            .verificationStatus = _differential_
+        `"] 
+    CD_DD2["`
+            **Condition**
+            (zib-ConditionAndDiagnosis)
+            .id = _11CD_DD2_
+            .condition-related  = #11C
+            .verificationStatus = _differential_
+        `"] 
+    CDCI_DD1["`
+        **ClinicalImpression**
+        (zib-ConditionAndDiagnosis-ClinicalImpression)
+        .id = _11CDCI_DD1_
+        `"] 
+    CDCI_DD2["`
+        **ClinicalImpression**
+        (zib-ConditionAndDiagnosis-ClinicalImpression)
+        .id = _11CDCI_DD2_
+        `"] 
+   
+    CD_DD1:::Ash
+    CDCI_DD1:::Ash
+    CD_DD2:::Ash
+    CDCI_DD2:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+CreateDiagnosis -- create --> CD_DD1
+CreateDiagnosis -- create --> CDCI_DD1
+CreateDiagnosis -- create --> CD_DD2
+CreateDiagnosis -- create --> CDCI_DD2
+
+
+```
+
 
 ### 12. Healthprofessional establishes an new single Diagnosis and no Symptoms are recorded (e.g. first aid).
 
