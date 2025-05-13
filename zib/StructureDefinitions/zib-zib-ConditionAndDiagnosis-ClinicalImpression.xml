@@ -137,22 +137,6 @@
         <comment value="DiagnosisName" />
       </mapping>
     </element>
-    <element id="ClinicalImpression.prognosisCodeableConcept">
-      <path value="ClinicalImpression.prognosisCodeableConcept" />
-      <short value="DegreeOfCertainty" />
-      <definition value="Indicates the conviction of the care professional with respect to the diagnostic insight as interpretation of the condition." />
-      <alias value="ZekerheidStatus" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.6.3--20240415000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
-        <map value="NL-CM:5.6.4" />
-        <comment value="DegreeOfCertainty" />
-      </mapping>
-    </element>
     <element id="ClinicalImpression.note">
       <path value="ClinicalImpression.note" />
       <max value="1" />

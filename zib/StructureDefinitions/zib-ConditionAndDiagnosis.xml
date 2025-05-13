@@ -82,14 +82,6 @@
       <path value="Condition.extension.value[x]" />
       <definition value="The duration of the period in which the condition is (was) present in appropriate units of time (e.g. days or hours, etc.)." />
     </element>
-    <element id="Condition.extension:methodOfConfirmation">
-      <path value="Condition.extension" />
-      <sliceName value="methodOfConfirmation" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-Diagnosis.MethodOfConfirmation" />
-      </type>
-    </element>
     <element id="Condition.extension:course">
       <path value="Condition.extension" />
       <sliceName value="course" />
