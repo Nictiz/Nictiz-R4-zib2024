@@ -44,10 +44,12 @@ flowchart TB
 
 ## General rules
 
-* When recording a new symptom, always an instance is created of the zib-ConditionAndDiagnosis, zib-Symptom and zib-Symptom.Characteristics profiles. 
-* Subsequent recordings about the this symptom can be tracked added using zib-Symptom.Characteristics or by updating the zib-Symptom instance.
-* When recording a new Diagnose, always an instance is created of zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profile.
-* When recording modifying a diagnosis, if DiagnosisName is changed, a new instance of the Condition is created that contains a reference to the previous. 
+* When recording a new symptom, an instance of the zib-ConditionAndDiagnosis, zib-Symptom and zib-Symptom.Characteristics profiles must be present/created. 
+* Subsequent recordings about the symptom can be tracked by creating zib-Symptom.Characteristics or by updating the zib-Symptom instance.
+* When recording a new diagnosis, an instance is of the zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles are created.
+
+* TODO: When modifying a Symptom, if the SymptomName is changed, a new instance of the Condition is create.
+* TODO: When modifying a diagnosis, if DiagnosisName is changed, a new instance of the Condition is created that contains a reference to the previous Condition. 
 
 ## Technical Scenario's regarding instances
 
@@ -116,12 +118,17 @@ NewSymptom_C["`New Symptom C related to Condition A`"]
     S_C["`**Condition**
         (zib-Symptom)
         .id = _3SC_`"]
-    SC_C["`**Observation**
+    SC_C["`
+        **Observation**
         (zib-Symptom.Characteristics)
-        .id = _3SCC_`"]    
-    CD_A["`**Condition**
+        .id = _3SCC_
+        `"]    
+    CD_A["`
+        **Condition**
         (zib-ConditionAndDiagnosis)
-        .id = _1CDA_`"] 
+        .id = _1CDA_
+        .evidence.detail = _3SC_
+        `"] 
     
     S_C:::Ash
     SC_C:::Ash
@@ -134,7 +141,32 @@ NewSymptom_C -- create --> SC_C
 NewSymptom_C -- update --> CD_A
 ```
 
-### 4. Healthprofessional updates symptom A (not the SymptomName)
+### 4. Healthprofessional adds new recording/observation of an existing Symptom C.
+```mermaid
+flowchart TB
+
+NewSymptom_C["`New recording of existing Symptom C`"]
+
+    S_C["`**Condition**
+        (zib-Symptom)
+        .id = _3SC_
+        .evidence.detail = _4SC_`"]
+    SC_C["`
+        **Observation**
+        (zib-Symptom.Characteristics)
+        .id = _4SCC_
+        `"]     
+    
+    S_C:::Ash
+    SC_C:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+NewSymptom_C -- update --> S_C
+NewSymptom_C -- create --> SC_C
+```
+
+
+### 5. Healthprofessional updates the anatomical location of symptom A (not the SymptomName)
 ```mermaid
 flowchart TB
 
@@ -412,3 +444,5 @@ CreateDiagnosis -- create --> CDCI_DD2
 ### 19. Healthprofessional modifies an existing DD disagnosis (the coment) without changing the number of Diagnoses or the Diagnosis Name.
 
 ### 20. Healthprofessional adds an DD disagnosis to an existing Diagnosis (other DD disagnoses already exist).
+
+
