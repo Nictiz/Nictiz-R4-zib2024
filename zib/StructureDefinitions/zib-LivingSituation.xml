@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-LivingSituation" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation" />
+  <name value="ZibLivingSituation" />
+  <title value="zib LivingSituation" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="The living situation is the physical environment in which the patient normally lives, sleeps, keeps their clothing, etc." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) LivingSituation v3.4 (2024)](https://zibs.nl/wiki/LivingSituation-v3.4(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-livingsituation-v3.4-2024EN" />
+    <uri value="https://zibs.nl/wiki/LivingSituation-v3.4(2024EN)" />
+    <name value="zib LivingSituation-v3.4(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="LivingSituation" />
+      <comment value="Several concepts of zib LivingSituation are represented using distinct Observation resources. These are grouped using the current resource and are referenced on `Observation.hasMember`:&#xD;&#xA;&#xD;&#xA;* HouseType (NL-CM:7.8.3): [zib-LivingSituation.HouseType](http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation.HouseType)&#xD;&#xA;* HomeAdaption (NL-CM:7.8.5): [zib-LivingSituation.HomeAdaption ](http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation.HomeAdaption)&#xD;&#xA;* LivingCondition (NL-CM:7.8.4): [zib-LivingSituation.LivingCondition ](http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation.LivingCondition)" />
+      <alias value="Woonsituatie" />
+      <mapping>
+        <identity value="zib-livingsituation-v3.4-2024EN" />
+        <map value="NL-CM:7.8.1" />
+        <comment value="LivingSituation" />
+      </mapping>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="365508006" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <short value="Date" />
+      <definition value="Date of observation of the living situation." />
+      <alias value="Datum" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="zib-livingsituation-v3.4-2024EN" />
+        <map value="NL-CM:7.8.6" />
+        <comment value="Date" />
+      </mapping>
+    </element>
+    <element id="Observation.note">
+      <path value="Observation.note" />
+      <max value="1" />
+    </element>
+    <element id="Observation.note.text">
+      <path value="Observation.note.text" />
+      <short value="Comment" />
+      <definition value="Comments in free text on problems or details of the patient’s living situation that may be relevant." />
+      <alias value="Toelichting" />
+      <mapping>
+        <identity value="zib-livingsituation-v3.4-2024EN" />
+        <map value="NL-CM:7.8.2" />
+        <comment value="Comment" />
+      </mapping>
+    </element>
+    <element id="Observation.hasMember">
+      <path value="Observation.hasMember" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.hasMember:houseType">
+      <path value="Observation.hasMember" />
+      <sliceName value="houseType" />
+      <definition value="The HouseType concept (NL-CM:7.8.3) of zib LivingSituation, represented as a distinct Observation resource." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation.HouseType" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:homeAdaption">
+      <path value="Observation.hasMember" />
+      <sliceName value="homeAdaption" />
+      <definition value="The HomeAdaption concept (NL-CM:7.8.5) of zib LivingSituation, represented as a distinct Observation resource." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation.HomeAdaption" />
+      </type>
+    </element>
+    <element id="Observation.hasMember:livingCondition">
+      <path value="Observation.hasMember" />
+      <sliceName value="livingCondition" />
+      <definition value="The LivingCondition concept (NL-CM:7.8.4) of zib LivingSituation, represented as a distinct Observation resource." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation.LivingCondition" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,171 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="nl-core-HoNOSplus-zib-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HoNOSplus"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief<span style="display: block;">Uitvoerende: Health professional (role), H.A. Janszens</span>
+        </caption>
+        <tbody>
+          <tr>
+            <th>Bepalingdatum/tijd</th>
+            <td>11 mei 2022</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <th>Waarde</th>
+          </tr>
+          <tr>
+            <td>
+              <span title="HoNOS+ (180171000146104 - SNOMED CT)">HoNOS+</span>
+            </td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>
+              <span title="HoNOS+ Gedrag (H+V01 - 2.16.840.1.113883.2.4.3.11.60.40.4.28.1)">HoNOS+ Gedrag</span>
+            </td>
+            <td>
+              <span title="Ondergeschikt probleem, vereist geen actie (1 - 2.16.840.1.113883.2.4.3.11.60.40.4.28.2)">Ondergeschikt probleem, vereist geen actie</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="HoNOS+ Zelfverwonding (H+V02 - 2.16.840.1.113883.2.4.3.11.60.40.4.28.1)">HoNOS+ Zelfverwonding</span>
+            </td>
+            <td>
+              <span title="Licht probleem, maar duidelijk aanwezig (2 - 2.16.840.1.113883.2.4.3.11.60.40.4.28.2)">Licht probleem, maar duidelijk aanwezig</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="HoNOS+ Drank- drugsgebruik (H+V03 - 2.16.840.1.113883.2.4.3.11.60.40.4.28.1)">HoNOS+ Drank- drugsgebruik</span>
+            </td>
+            <td>
+              <span title="Ondergeschikt probleem, vereist geen actie (1 - 2.16.840.1.113883.2.4.3.11.60.40.4.28.2)">Ondergeschikt probleem, vereist geen actie</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="HoNOS+ Cognitief (H+V04 - 2.16.840.1.113883.2.4.3.11.60.40.4.28.1)">HoNOS+ Cognitief</span>
+            </td>
+            <td>
+              <span title="Ernstig tot zeer ernstig probleem (4 - 2.16.840.1.113883.2.4.3.11.60.40.4.28.2)">Ernstig tot zeer ernstig probleem</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="HoNOS+ Lichamelijk (H+V05 - 2.16.840.1.113883.2.4.3.11.60.40.4.28.1)">HoNOS+ Lichamelijk</span>
+            </td>
+            <td>
+              <span title="Geen probleem (0 - 2.16.840.1.113883.2.4.3.11.60.40.4.28.2)">Geen probleem</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="180171000146104"/>
+      <display value="HoNOS+"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </subject>
+  <effectiveDateTime value="2022-05-11"/>
+  <performer>
+    <reference value="PractitionerRole/nl-core-HoNOSplus-zib-1-HealthProfessional-PractitionerRole-1"/>
+    <type value="PractitionerRole"/>
+    <display value="Health professional (role), H.A. Janszens"/>
+  </performer>
+  <valueInteger value="8"/>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.28.1"/>
+        <code value="H+V01"/>
+        <display value="HoNOS+ Gedrag"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.28.2"/>
+        <code value="1"/>
+        <display value="Ondergeschikt probleem, vereist geen actie"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.28.1"/>
+        <code value="H+V02"/>
+        <display value="HoNOS+ Zelfverwonding"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.28.2"/>
+        <code value="2"/>
+        <display value="Licht probleem, maar duidelijk aanwezig"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.28.1"/>
+        <code value="H+V03"/>
+        <display value="HoNOS+ Drank- drugsgebruik"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.28.2"/>
+        <code value="1"/>
+        <display value="Ondergeschikt probleem, vereist geen actie"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.28.1"/>
+        <code value="H+V04"/>
+        <display value="HoNOS+ Cognitief"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.28.2"/>
+        <code value="4"/>
+        <display value="Ernstig tot zeer ernstig probleem"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.28.1"/>
+        <code value="H+V05"/>
+        <display value="HoNOS+ Lichamelijk"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.28.2"/>
+        <code value="0"/>
+        <display value="Geen probleem"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

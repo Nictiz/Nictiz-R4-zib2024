@@ -19,7 +19,7 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
-  <abstract value="false" />
+  <abstract value="true" />
   <type value="StructureDefinition" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/StructureDefinition" />
   <derivation value="constraint" />
@@ -37,6 +37,12 @@
         <severity value="error" />
         <human value="When applying datatype profile zib-AnatomicalLocation, the associated ValueSet should have binding strength extensible." />
         <expression value="'http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation' in type.profile implies binding.strength = 'extensible'" />
+      </constraint>
+      <constraint>
+        <key value="Zib2020PackageChecks-03" />
+        <severity value="warning" />
+        <human value="When referencing the zib-HealthProfessional-PractitionerRole profile, the default explanation should be added to the comment." />
+        <expression value="'http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole' in type.targetProfile implies comment.contains('Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources:')" />
       </constraint>
     </element>
   </differential>
