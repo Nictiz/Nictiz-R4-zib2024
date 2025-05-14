@@ -74,7 +74,7 @@ flowchart TB
         Hoest"] & SC_Hoest["**Observation**
         (zib-Symptom.Characteristics)
         --------------------
-        Hoest"] & CD["**Condition**
+        Hoest"] & CD_Bronchitis["**Condition**
         (zib-ConditionAndDiagnosis)
         --------------------"]
     Symptom_Rhonci -- create --> S_Rhonci["**Condition**
@@ -84,12 +84,12 @@ flowchart TB
         (zib-Symptom.Characteristics)
         --------------------
         Rhonci"]
-    Symptom_Rhonci -- update --> CD
+    Symptom_Rhonci -- update --> CD_Bronchitis
     Diagnosis_Bronchitis -- create --> CDCI_Bronchitis["**Condition**
         (zib-ConditionAndDiagnosis-ClinicalImpression)
         --------------------
         Bronchitis"]
-    Diagnosis_Bronchitis -- update --> CD
+    Diagnosis_Bronchitis -- update --> CD_Bronchitis
     Symptom_Koorts -- create --> S_Koorts["**Condition**
         (zib-Symptom)
         --------------------
@@ -97,29 +97,37 @@ flowchart TB
         (zib-Symptom.Characteristics)
         --------------------
         Koorts"]
-    Symptom_Koorts -- update --> CD
-    T4 --> Diagnosis_Longontsteking["New Diagnosis: Pneumonia"]
-    Diagnosis_Longontsteking -- create --> CDCI_Pneumonia["**Condition**
+    Symptom_Koorts -- update --> CD_Bronchitis
+    T4 --> Diagnosis_Longontsteking["New Diagnosis: Longonsteking"]
+    Diagnosis_Longontsteking -- create --> CDCI_Longonsteking["**ClinicalImpression**
         (zib-ConditionAndDiagnosis-ClinicalImpression)
         --------------------
-        Pneumonia"]
-    Diagnosis_Longontsteking -- update --> CD
-    CD -. evidence_detail .-> S_Hoest & S_Rhonci & S_Koorts
+        Longonsteking"]
+    Diagnosis_Longontsteking -- create --> CD_Longonsteking["**Condition**
+        (zib-ConditionAndDiagnosis)
+        --------------------
+        Longonsteking"]
+    Diagnosis_Longontsteking -- update --> CD_Bronchitis
+    CD_Bronchitis -. evidence_detail .-> S_Hoest & S_Rhonci
+    CD_Longonsteking -. evidence_detail .-> S_Hoest & S_Rhonci & S_Koorts
+
     S_Hoest -. evidence_detail .-> SC_Hoest
     S_Rhonci -. evidence_detail .- SC_Rhonci
-    CDCI_Bronchitis -. problem .- CD
-    CDCI_Pneumonia -. problem .-> CD
+    CDCI_Bronchitis -. problem .- CD_Bronchitis
+    CDCI_Longonsteking -. problem .-> CD_Longonsteking
     S_Koorts -. evidence_detail .- SC_Koorts
 
      S_Hoest:::Ash
      SC_Hoest:::Ash
-     CD:::Ash
+     CD_Bronchitis:::Ash
+     CD_Longonsteking:::Ash
      S_Rhonci:::Ash
      SC_Rhonci:::Ash
      CDCI_Bronchitis:::Ash
+     CDCI_Longonsteking:::Ash
      S_Koorts:::Ash
      SC_Koorts:::Ash
-     CDCI_Pneumonia:::Ash
+
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 ```
 
