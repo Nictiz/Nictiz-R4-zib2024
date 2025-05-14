@@ -1,0 +1,37 @@
+<Device xmlns="http://hl7.org/fhir">
+  <id value="nl-core-MedicalDevice.Product-zib-3"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-MedicalDevice.Product"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Apparaat/Systeem. Patiënt: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Id: +A99912345/$$52001510X3/16D20111212/S77DEFG457</caption>
+        <tbody>
+          <tr>
+            <th>Type</th>
+            <td>
+              <span title="pacemaker (14106009 - SNOMED CT)">pacemaker</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <identifier>
+    <value value="+A99912345/$$52001510X3/16D20111212/S77DEFG457"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="14106009"/>
+      <display value="pacemaker"/>
+    </coding>
+  </type>
+  <patient>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </patient>
+</Device>
