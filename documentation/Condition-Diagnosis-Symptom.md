@@ -51,13 +51,14 @@ flowchart TB
 
 ## Specific guidelines
 
-* When a diagnosis is ruled out based on clinical judgment, the `.verificationStatus` is set to _refuted_. 
 * When the condition is resolved (i.e. the patient no longer experiences it), the `.clinicalStatus` is set to _inactive_ and the `.abatement[x]` is included.
-* Diagnosis concepts are mapped in both zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles. However, the concepts _Comment_ (NL-CM:5.6.11) and _Condition_ (NL-CM:5.6.10) are mapped only in zib-ConditionAndDiagnosis. Conversely, the concepts in the _Reason_ container (NL-CM:5.6.13), _IsComplication_ (NL-CM:5.6.12), _AnatomicalLocation_ (NL-CM:5.6.9), and _DiagnosisStatus_ (NL-CM:5.6.4) are mapped only in zib-ConditionAndDiagnosis-ClinicalImpression.
+* Diagnosis concepts are mapped in both zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles. However, the concepts _MethodOfConfirmation_ (NL-CM:5.6.5), _Comment_ (NL-CM:5.6.11), and _Condition_ (NL-CM:5.6.10) are mapped only in zib-ConditionAndDiagnosis. Conversely, the concepts in the _Reason_ container (NL-CM:5.6.13), _IsComplication_ (NL-CM:5.6.12), _AnatomicalLocation_ (NL-CM:5.6.9), and _DiagnosisStatus_ (NL-CM:5.6.4) are mapped only in zib-ConditionAndDiagnosis-ClinicalImpression.
+* When a diagnosis is ruled out based on clinical judgment, the `.verificationStatus` is set to _refuted_. 
 * When a single diagnosis is refuted and replaced by another, the `extension:condition-occurredFollowing` is included in the new zib-ConditionAndDiagnosis instance to reference the refuted diagnosis. This creates a clear, traceable sequence between the diagnosis instances.
+* When two or more differential diagnoses are added, multiple zib-ConditionAndDiagnosis instances are created, one for each differential diagnosis,  as well as a single instance of zib-ConditionAndDiagnosis-ClinicalImpression. In this ClinicalImpression `.problem` references the differential diagnoses, while `.finding` includes their names (DiagnosisName). If additional differential diagnoses are added later, new zib-ConditionAndDiagnosis instances are created accordingly, and one zib-ConditionAndDiagnosis-ClinicalImpression instance is added. This new ClinicalImpression again uses `.problem` and `.finding` to reference and describe the newly added differential diagnoses.
 * When a differential diagnosis is added, the `.extension:condition-related` is included in the zib-ConditionAndDiagnosis instance to reference the other related differential diagnoses. This establishes a link between them.
 * When a differential diagnosis is refuted, the `.extension:condition-ruledOut` is included in the remaining differential diagnoses to indicate the refuted diagnosis.
-
+* TODO Symptom uitsluiten en aflsuiten
 
 ## General example of clinical flow with 4 moments of recordings
 
@@ -97,17 +98,17 @@ flowchart TB
         --------------------
         Koorts"]
     Symptom_Koorts -- update --> CD
-    T4 --> Diagnosis_Longontsteking["New Diagnosis: Longonsteking"]
-    Diagnosis_Longontsteking -- create --> CDCI_Longonsteking["**Condition**
+    T4 --> Diagnosis_Longontsteking["New Diagnosis: Pneumonia"]
+    Diagnosis_Longontsteking -- create --> CDCI_Pneumonia["**Condition**
         (zib-ConditionAndDiagnosis-ClinicalImpression)
         --------------------
-        Longonsteking"]
+        Pneumonia"]
     Diagnosis_Longontsteking -- update --> CD
     CD -. evidence_detail .-> S_Hoest & S_Rhonci & S_Koorts
     S_Hoest -. evidence_detail .-> SC_Hoest
     S_Rhonci -. evidence_detail .- SC_Rhonci
     CDCI_Bronchitis -. problem .- CD
-    CDCI_Longonsteking -. problem .-> CD
+    CDCI_Pneumonia -. problem .-> CD
     S_Koorts -. evidence_detail .- SC_Koorts
 
      S_Hoest:::Ash
@@ -118,7 +119,7 @@ flowchart TB
      CDCI_Bronchitis:::Ash
      S_Koorts:::Ash
      SC_Koorts:::Ash
-     CDCI_Longonsteking:::Ash
+     CDCI_Pneumonia:::Ash
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 ```
 
@@ -136,17 +137,17 @@ NewSymptom_A["`New Symptom A`"]
     CD_A["`**Condition**
         (zib-ConditionAndDiagnosis)
         --------------------
-        .id = _1CDA_`"] 
+        .id = _1CD_A_`"] 
 
     S_A["`**Condition**
         (zib-Symptom)
         --------------------
-        .id = _1SA_`"]
+        .id = _1S_A_`"]
 
     SC_A["`**Observation**
         (zib-Symptom.Characteristics)
         --------------------
-        .id = _1SCA_`"]    
+        .id = _1SC_A_`"]    
 
     CD_A:::Ash
     S_A:::Ash
@@ -167,15 +168,15 @@ NewSymptom_B["`New Symptom B`"]
     CD_B["`**Condition**
         (zib-ConditionAndDiagnosis)
         --------------------
-        .id = _2CDB_`"] 
+        .id = _2CD_B_`"] 
     S_B["`**Condition**
         (zib-Symptom)
         --------------------
-        .id = _2SB_`"]
+        .id = _2S_B_`"]
     SC_B["`**Observation**
         (zib-Symptom.Characteristics)
         --------------------
-        .id = _2SCB_`"]
+        .id = _2SC_B_`"]
 
     CD_B:::Ash
     S_B:::Ash
@@ -197,19 +198,19 @@ NewSymptom_C["`New Symptom C related to Condition A`"]
     S_C["`**Condition**
         (zib-Symptom)
         --------------------
-        .id = _3SC_`"]
+        .id = _3S_C_`"]
     SC_C["`
         **Observation**
         (zib-Symptom.Characteristics)
         --------------------
-        .id = _3SCC_
+        .id = _3SC_C_
         `"]    
     CD_A["`
         **Condition**
         (zib-ConditionAndDiagnosis)
         --------------------
-        .id = _1CDA_
-        .evidence.detail = _3SC_
+        .id = _1CD_A_
+        .evidence.detail = _3S_C_
         `"] 
     
     S_C:::Ash
@@ -232,13 +233,13 @@ NewSymptom_C["`New recording of existing Symptom C`"]
     S_C["`**Condition**
         (zib-Symptom)
         --------------------
-        .id = _3SC_
-        .evidence.detail = _4SCC_`"]
+        .id = _3S_C_
+        .evidence.detail = _4SC_C_`"]
     SC_C["`
         **Observation**
         (zib-Symptom.Characteristics)
         --------------------
-        .id = _4SCC_
+        .id = _4SC_C_
         `"]     
     
     S_C:::Ash
@@ -258,7 +259,7 @@ UpdateSymptom_A["`Update Symptom A`"]
     S_A["`**Condition**
         (zib-Symptom)
         --------------------
-        .id = _5SA_
+        .id = _5S_A_
         .bodySite = [Anatomical location]`"]
   
     S_A:::Ash
@@ -280,24 +281,24 @@ CloseSymptom_A -.-> NewSymptom_D
     S_A["`**Condition**
         (zib-Symptom)
         --------------------
-        .id = _1SA_
+        .id = _6S_A_
         .clinicalStatus = _inactive_|_resolved_
         .abatement[x] = [past date]`"]    
 
     CD_A["`**Condition**
         (zib-ConditionAndDiagnosis)
         --------------------
-        .id = _1CDA_
-        .evidence.detail = _5SD_`"] 
+        .id = _1CD_A_
+        .evidence.detail = _6S_D_`"] 
 
     S_D["`**Condition**
         (zib-Symptom)
         --------------------
-        .id = _5SD_`"]
+        .id = _6S_D_`"]
     SC_D["`**Observation**
         (zib-Symptom.Characteristics)
         --------------------
-        .id = _5SCD_`"]    
+        .id = _6SC_D_`"]    
 
     S_A:::Ash
     CD_A:::Ash
@@ -317,38 +318,46 @@ NewSymptom_D -- update --> CD_A
 flowchart TB
 
 CloseSymptom_A["`Close Symptom A`"]
-NewDiagnosis_B["`New Diagnosis B related to Condition A (.id = 1CDA)`"]
+NewDiagnosis_B["`New Diagnosis B related to Condition A`"]
 
 CloseSymptom_A -.-> NewDiagnosis_B
 
     S_A["`**Condition**
         (zib-Symptom)
         --------------------
-        .id = _1SA_
+        .id = _7S_A_
         .clinicalStatus = _inactive_|_resolved_
         .abatement[x] = [past date]`"]    
+
+CD_A["`**Condition**
+        (zib-ConditionAndDiagnosis)
+        --------------------
+        .id = _7CD_A_
+        .verificationStatus = _refuted_`"]
 
     CD_B["`**Condition**
         (zib-ConditionAndDiagnosis)
         --------------------
-        .id = _6CDB_
-        .extension:occuredFollowing = _1CDA_`"] 
+        .id = _7CD_B_
+        .extension:occuredFollowing = _7CD_A_`"] 
     CDCI_B["`**ClinicalImpression**
         (zib-ConditionAndDiagnosis-ClinicalImpression)
         --------------------
-        .id = _6CDCIB_`"] 
+        .id = _7CDCI_B_`"] 
 
     S_A:::Ash
+    CD_A:::Ash
     CD_B:::Ash
     CDCI_B:::Ash
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 
 CloseSymptom_A -- update --> S_A
+NewDiagnosis_B -- update --> CD_A
 NewDiagnosis_B -- create --> CD_B
 NewDiagnosis_B -- create --> CDCI_B
 ```
 
-### 8. Symptom A has resolved along with the related condition A
+### 8. Symptom A has resolved along with the related condition A?
 
 ```mermaid
 flowchart TB
@@ -362,7 +371,7 @@ UpdateSymptom_A -.-> UpdateDiagnosis_B
         **Condition**
         (zib-Symptom)
         --------------------
-        .id = _1SA_
+        .id = _8S_A_
         .clinicalStatus = _inactive_|_resolved_
         .abatement[x] = [past date]
         `"]    
@@ -371,7 +380,7 @@ UpdateSymptom_A -.-> UpdateDiagnosis_B
         **Condition**
         (zib-ConditionAndDiagnosis)
         --------------------
-        .id = _6CDB_
+        .id = _8CD_A_
         .extension.condition-course = 'niet meer aanwezig'
         .clinicalStatus = _inactive_|_resolved_
         .abatement[x] = [past date]
@@ -385,48 +394,35 @@ UpdateSymptom_A -- update --> S_A
 UpdateDiagnosis_B -- update --> CD_B
 ```
 
-### 9. Healthprofessional rules out Symptom B for Condition A
+### 9. Healthprofessional rules out Symptom B for Condition A?
 
 ```mermaid
 flowchart TB
 
 UpdateSymptom_A["`Update Symptom B`"]
-UpdateDiagnosis_B["`Update Condition A`"]
-
-UpdateSymptom_A -.-> UpdateDiagnosis_B
 
     S_A["`
         **Condition**
         (zib-Symptom)
-        .id = _1SA_
+        .id = _9S_A_
         .verificationStatus = _refuted_
         `"]    
-
-    CD_B["`
-        **Condition**
-        (zib-ConditionAndDiagnosis)
-        .id = _6CDB_
-        .extension.condition-course = 'niet meer aanwezig'
-        .clinicalStatus = _inactive_|_resolved_
-        .abatement[x] = [past date]
-        `"] 
    
     S_A:::Ash
-    CD_B:::Ash
+
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 
 UpdateSymptom_A -- update --> S_A
-UpdateDiagnosis_B -- update --> CD_B
 
 ```
 
-### 10. Healthprofessional modifies a single diagnosis 'Bronchitus' to a 'Longonsteking'
+### 10. Healthprofessional modifies a single diagnosis 'Bronchitus' to a Pneumonia
 
 ```mermaid
 flowchart TB
 
 UpdateDiagnosis_A["`Update Bronchitus diagnosis`"]
-CreateDiagnosis_B["`Create Longonsteking diagnosis`"]
+CreateDiagnosis_B["`Create Pneumonia diagnosis`"]
 
 UpdateDiagnosis_A -.-> CreateDiagnosis_B
 
@@ -434,172 +430,161 @@ UpdateDiagnosis_A -.-> CreateDiagnosis_B
             **Condition**
             (zib-ConditionAndDiagnosis)
             --------------------
-            .id = _9CDBronchitus_
-            .clinicalStatus = _inactive_|_resolved_
-        `"] 
-    CD_Longonsteking["`
-            **Condition**
-            (zib-ConditionAndDiagnosis)
-            --------------------
-            .id = _9CDBLongonsteking_
-            .condition-occuredFollowing = _9CDBronchitus_
-        `"] 
-    CDCI_Longonsteking["`
-        **ClinicalImpression**
-        (zib-ConditionAndDiagnosis-ClinicalImpression)
-        --------------------
-        .id = _9CDCILongonsteking_
-        `"] 
-   
-    CD_Bronchitus:::Ash
-    CD_Longonsteking:::Ash
-    CDCI_Longonsteking:::Ash
-    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
-
-UpdateDiagnosis_A -- update --> CD_Bronchitus
-CreateDiagnosis_B -- create --> CD_Longonsteking
-CreateDiagnosis_B -- create --> CDCI_Longonsteking
-
-```
-
-### 11. Healthprofessional ruled out the DD  diagnosis Bronchitus and made from the DD 'Longonsteking' the diagnosis.
-
-```mermaid
-flowchart TB
-
-UpdateDiagnosis_A["`Update Bronchitus diagnosis`"]
-CreateDiagnosis_B["`Create Longonsteking diagnosis`"]
-
-UpdateDiagnosis_A -.-> CreateDiagnosis_B
-
-    CD_Bronchitus["`
-            **Condition**
-            (zib-ConditionAndDiagnosis)
-            --------------------
-            .id = _9CDBronchitus_
+            .id = _10CD_Bronchitus_
             .verificationStatus = _refuted_
         `"] 
-    CD_Longonsteking["`
+    CD_Pneumonia["`
             **Condition**
             (zib-ConditionAndDiagnosis)
             --------------------
-            .id = _9CDBLongonsteking_
-            .condition-occuredFollowing = _9CDBronchitus_
+            .id = _10CD_Pneumonia_
+            .condition-occuredFollowing = _10CD_Bronchitus_
         `"] 
-    CDCI_Longonsteking["`
+    CDCI_Pneumonia["`
         **ClinicalImpression**
         (zib-ConditionAndDiagnosis-ClinicalImpression)
         --------------------
-        .id = _9CDCILongonsteking_
+        .id = _10CDCI_Pneumonia_
         `"] 
    
     CD_Bronchitus:::Ash
-    CD_Longonsteking:::Ash
-    CDCI_Longonsteking:::Ash
+    CD_Pneumonia:::Ash
+    CDCI_Pneumonia:::Ash
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 
 UpdateDiagnosis_A -- update --> CD_Bronchitus
-CreateDiagnosis_B -- create --> CD_Longonsteking
-CreateDiagnosis_B -- create --> CDCI_Longonsteking
+CreateDiagnosis_B -- create --> CD_Pneumonia
+CreateDiagnosis_B -- create --> CDCI_Pneumonia
 
 ```
 
-### 12. Healthprofessional creates two DD disagnoses.
+### 11. Healthprofessional ruled out the DD Bronchitus and made from the DD Pneumonia the diagnosis.
 
 ```mermaid
 flowchart TB
 
-CreateDiagnosis["`Create two DD diagnosis`"]
+UpdateDiagnosis_A["`Update Bronchitus diagnosis`"]
+UpdateDiagnosis_B["`Update Pneumonia diagnosis`"]
+
+UpdateDiagnosis_A -.-> UpdateDiagnosis_B
+
+    CD_Bronchitus["`
+            **Condition**
+            (zib-ConditionAndDiagnosis)
+            --------------------
+            .id = _11CD_Bronchitus_
+            .verificationStatus = _refuted_
+        `"] 
+    CD_Pneumonia["`
+            **Condition**
+            (zib-ConditionAndDiagnosis)
+            --------------------
+            .id = _11CD_Pneumonia_
+            .condition-ruledOut = _11CD_Bronchitus_
+            .verificationStatus = _confirmed_
+        `"] 
+   
+    CD_Bronchitus:::Ash
+    CD_Pneumonia:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+UpdateDiagnosis_A -- update --> CD_Bronchitus
+UpdateDiagnosis_B -- update --> CD_Pneumonia
+
+```
+
+### 12. Healthprofessional creates two differential disagnoses.
+
+```mermaid
+flowchart TB
+
+CreateDiagnosis["`Create two differential diagnosis`"]
 
     CD_DD1["`
             **Condition**
             (zib-ConditionAndDiagnosis)
             --------------------
-            .id = _11CD_DD1_
-            .condition-related  = #11C
+            .id = _12CD_DD1_
+            .condition-related  = _12CD_DD2_
             .verificationStatus = _differential_
         `"] 
     CD_DD2["`
             **Condition**
             (zib-ConditionAndDiagnosis)
             --------------------
-            .id = _11CD_DD2_
-            .condition-related  = #11C
+            .id = _12CD_DD2_
+            .condition-related  = _12CD_DD1_
             .verificationStatus = _differential_
         `"] 
     CDCI_DD1["`
         **ClinicalImpression**
         (zib-ConditionAndDiagnosis-ClinicalImpression)
         --------------------
-        .id = _11CDCI_DD1_
+        .id = _12CDCI_DD1_
+        .problem = _12CD_DD1_
+        .problem = _12CD_DD2_
+        .finding = Bronchitus
+        .finding = Pneumonia
         `"] 
-    CDCI_DD2["`
-        **ClinicalImpression**
-        (zib-ConditionAndDiagnosis-ClinicalImpression)
-        --------------------
-        .id = _11CDCI_DD2_
-        `"] 
-   
+
     CD_DD1:::Ash
     CDCI_DD1:::Ash
     CD_DD2:::Ash
-    CDCI_DD2:::Ash
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 
-CreateDiagnosis -- create --> CD_DD1
 CreateDiagnosis -- create --> CDCI_DD1
+CreateDiagnosis -- create --> CD_DD1
 CreateDiagnosis -- create --> CD_DD2
-CreateDiagnosis -- create --> CDCI_DD2
 ```
 
-### 13. Healthprofessional establishes a new single Diagnosis C and no Symptoms are recorded (e.g. first aid).
+### 13. Healthprofessional establishes a new single Diagnosis A and no Symptoms are recorded (there are no previous diagnoses).
 
 ```mermaid
 flowchart TB
 
 CreateDiagnosis["`Create new single diagnosis`"]
 
-    CD_C["`
+    CD_A["`
             **Condition**
             (zib-ConditionAndDiagnosis)
             --------------------
-            .id = _13CDC_
+            .id = _13CD_A_
         `"] 
-    CDCI_C["`
+    CDCI_A["`
         **ClinicalImpression**
         (zib-ConditionAndDiagnosis-ClinicalImpression)
         --------------------
-        .id = _13CDCIC_
+        .id = _13CDCI_A_
         `"] 
 
    
-    CD_C:::Ash
-    CDCI_C:::Ash
+    CD_A:::Ash
+    CDCI_A:::Ash
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 
-CreateDiagnosis -- create --> CD_C
-CreateDiagnosis -- create --> CDCI_C
+CreateDiagnosis -- create --> CD_A
+CreateDiagnosis -- create --> CDCI_A
 ```
 
-### 14. Healthprofessional establishes a new DD  diagnosis E and no Symptoms are recorded (this is the first DD  diagnosis).
+### 14. Healthprofessional establishes a new DD E and no Symptoms are recorded (there are no related DD).
 
 ```mermaid
 flowchart TB
 
-CreateDiagnosis["`Create new single DD diagnosis`"]
+CreateDiagnosis["`Create new differential diagnosis`"]
 
     CD_E["`
             **Condition**
             (zib-ConditionAndDiagnosis)
             --------------------
-            .id = _14CDE_
+            .id = _14CD_E_
             .verificationStatus = _differential_ 
         `"] 
     CDCI_E["`
             **ClinicalImpression**
             (zib-ConditionAndDiagnosis-ClinicalImpression)
             --------------------
-            .id = _14CDCIE_
+            .id = _14CDCI_E_
         `"] 
 
    
@@ -627,4 +612,6 @@ TODO
 
 ### 21. Healthprofessional adds a DD  diagnosis to a existing Diagnosis (other DD disagnoses already exist).
 
+
+### 23. Scneario's of Astrid (pp)
 
