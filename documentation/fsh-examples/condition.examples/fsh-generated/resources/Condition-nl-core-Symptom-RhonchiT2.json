@@ -1,0 +1,61 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-Symptom-RhonchiT2",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Symptom"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Condition.StatusDate",
+      "valueDateTime": "2023-03-05"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "162408000",
+          "system": "http://snomed.info/sct",
+          "display": "Algemene symptoombeschrijving"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "9763007",
+        "system": "http://snomed.info/sct",
+        "display": "expiratoire piepende ademhaling (bevinding)"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "code": "89187006",
+          "system": "http://snomed.info/sct",
+          "display": "Airway structure (body structure)"
+        }
+      ]
+    }
+  ],
+  "onsetDateTime": "2023-03-01",
+  "subject": {
+    "reference": "Patient/nl-core-Patient-alt-1",
+    "display": "Patient, Peter Jan (PeJe) Jansen"
+  },
+  "evidence": [
+    {
+      "detail": [
+        {
+          "reference": "Observation/nl-core-Symptom.Characteristics-RhonchiT2",
+          "display": "Symptom characteristics - RhonchiT2"
+        }
+      ]
+    }
+  ]
+}

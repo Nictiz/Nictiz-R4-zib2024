@@ -1,0 +1,76 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-ConditionAndDiagnosis-LongonstekingT4",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-ConditionAndDiagnosis"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Condition.StatusDate",
+      "valueDateTime": "2023-03-05"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/condition-diseaseCourse",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "231877006",
+            "system": "http://snomed.info/sct",
+            "display": "Verslechterd"
+          }
+        ]
+      }
+    }
+  ],
+  "severity": {
+    "coding": [
+      {
+        "code": "6736007",
+        "system": "http://snomed.info/sct",
+        "display": "Matig"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "205237003",
+        "system": "http://snomed.info/sct",
+        "display": "Pneumonitis (disorder)"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bodySite",
+          "valueReference": {
+            "reference": "BodyStructure/nl-core-ConditionAndDiagnosis-zib-2-AnatomicalLocation-1",
+            "display": "Anatomical location, Structure of parenchyma of lung (body structure), Links",
+            "type": "BodyStructure"
+          }
+        }
+      ],
+      "coding": [
+        {
+          "code": "113255004",
+          "system": "http://snomed.info/sct",
+          "display": "Structure of parenchyma of lung (body structure)"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/nl-core-Patient-alt-1",
+    "display": "Patient, Peter Jan (PeJe) Jansen",
+    "type": "Patient"
+  },
+  "asserter": {
+    "reference": "PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1",
+    "display": "Health professional (role), J.H.R. Peters, Neuroloog",
+    "type": "PractitionerRole"
+  }
+}

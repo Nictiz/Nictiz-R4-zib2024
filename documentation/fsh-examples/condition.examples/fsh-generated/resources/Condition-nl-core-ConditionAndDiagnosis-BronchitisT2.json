@@ -1,0 +1,43 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-ConditionAndDiagnosis-BronchitisT2",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-ConditionAndDiagnosis"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Condition.StatusDate",
+      "valueDateTime": "2023-03-01"
+    }
+  ],
+  "severity": {
+    "coding": [
+      {
+        "code": "255604002",
+        "system": "http://snomed.info/sct",
+        "display": "Licht"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "32398004",
+        "system": "http://snomed.info/sct",
+        "display": "Bronchitis (disorder)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-alt-1",
+    "display": "Patient, Peter Jan (PeJe) Jansen",
+    "type": "Patient"
+  },
+  "asserter": {
+    "reference": "PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1",
+    "display": "Health professional (role), J.H.R. Peters, Neuroloog",
+    "type": "PractitionerRole"
+  }
+}

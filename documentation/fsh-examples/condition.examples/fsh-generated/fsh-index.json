@@ -1,0 +1,98 @@
+[
+  {
+    "outputFile": "ClinicalImpression-nl-core-ConditionAndDiagnosis-ClinicalImpression-BronchitisT2.json",
+    "fshName": "nl-core-ConditionAndDiagnosis-ClinicalImpression-BronchitisT2",
+    "fshType": "Instance",
+    "fshFile": "ConditionAndDiagnosis.fsh",
+    "startLine": 17,
+    "endLine": 29
+  },
+  {
+    "outputFile": "ClinicalImpression-nl-core-ConditionAndDiagnosis-ClinicalImpression-LongonstekingT4.json",
+    "fshName": "nl-core-ConditionAndDiagnosis-ClinicalImpression-LongonstekingT4",
+    "fshType": "Instance",
+    "fshFile": "ConditionAndDiagnosis.fsh",
+    "startLine": 51,
+    "endLine": 63
+  },
+  {
+    "outputFile": "Condition-nl-core-ConditionAndDiagnosis-BronchitisT2.json",
+    "fshName": "nl-core-ConditionAndDiagnosis-BronchitisT2",
+    "fshType": "Instance",
+    "fshFile": "ConditionAndDiagnosis.fsh",
+    "startLine": 4,
+    "endLine": 15
+  },
+  {
+    "outputFile": "Condition-nl-core-ConditionAndDiagnosis-LongonstekingT4.json",
+    "fshName": "nl-core-ConditionAndDiagnosis-LongonstekingT4",
+    "fshType": "Instance",
+    "fshFile": "ConditionAndDiagnosis.fsh",
+    "startLine": 32,
+    "endLine": 49
+  },
+  {
+    "outputFile": "Condition-nl-core-Symptom-HoestT1.json",
+    "fshName": "nl-core-Symptom-HoestT1",
+    "fshType": "Instance",
+    "fshFile": "Symptom.fsh",
+    "startLine": 2,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Condition-nl-core-Symptom-HoestT2.json",
+    "fshName": "nl-core-Symptom-HoestT2",
+    "fshType": "Instance",
+    "fshFile": "Symptom.fsh",
+    "startLine": 110,
+    "endLine": 130
+  },
+  {
+    "outputFile": "Condition-nl-core-Symptom-KoortsT3.json",
+    "fshName": "nl-core-Symptom-KoortsT3",
+    "fshType": "Instance",
+    "fshFile": "Symptom.fsh",
+    "startLine": 80,
+    "endLine": 90
+  },
+  {
+    "outputFile": "Condition-nl-core-Symptom-RhonchiT2.json",
+    "fshName": "nl-core-Symptom-RhonchiT2",
+    "fshType": "Instance",
+    "fshFile": "Symptom.fsh",
+    "startLine": 52,
+    "endLine": 63
+  },
+  {
+    "outputFile": "Observation-nl-core-Symptom.Characteristics-HoestT1.json",
+    "fshName": "nl-core-Symptom.Characteristics-HoestT1",
+    "fshType": "Instance",
+    "fshFile": "Symptom.fsh",
+    "startLine": 24,
+    "endLine": 49
+  },
+  {
+    "outputFile": "Observation-nl-core-Symptom.Characteristics-HoestT2.json",
+    "fshName": "nl-core-Symptom.Characteristics-HoestT2",
+    "fshType": "Instance",
+    "fshFile": "Symptom.fsh",
+    "startLine": 133,
+    "endLine": 150
+  },
+  {
+    "outputFile": "Observation-nl-core-Symptom.Characteristics-KoortsT3.json",
+    "fshName": "nl-core-Symptom.Characteristics-KoortsT3",
+    "fshType": "Instance",
+    "fshFile": "Symptom.fsh",
+    "startLine": 92,
+    "endLine": 103
+  },
+  {
+    "outputFile": "Observation-nl-core-Symptom.Characteristics-RhonchiT2.json",
+    "fshName": "nl-core-Symptom.Characteristics-RhonchiT2",
+    "fshType": "Instance",
+    "fshFile": "Symptom.fsh",
+    "startLine": 66,
+    "endLine": 77
+  }
+]

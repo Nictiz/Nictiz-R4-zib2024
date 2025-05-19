@@ -1,0 +1,80 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-Symptom-HoestT1",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Symptom"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Condition.StatusDate",
+      "valueDateTime": "2023-03-01"
+    },
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Symptom.PeriodDuration",
+      "valueQuantity": {
+        "value": 7,
+        "unit": "dagen"
+      }
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "162408000",
+          "system": "http://snomed.info/sct",
+          "display": "Algemene symptoombeschrijving"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "49727002",
+        "system": "http://snomed.info/sct",
+        "display": "Cough (finding)"
+      }
+    ],
+    "text": "Droge hoest"
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "code": "89187006",
+          "system": "http://snomed.info/sct",
+          "display": "Airway structure (body structure)"
+        }
+      ]
+    }
+  ],
+  "onsetDateTime": "2023-02-22",
+  "subject": {
+    "reference": "Patient/nl-core-Patient-alt-1",
+    "display": "Patient, Peter Jan (PeJe) Jansen",
+    "type": "Patient"
+  },
+  "asserter": {
+    "reference": "PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1",
+    "display": "Health professional (role), J.H.R. Peters, Neuroloog",
+    "type": "PractitionerRole"
+  },
+  "evidence": [
+    {
+      "detail": [
+        {
+          "reference": "Observation/nl-core-Symptom.Characteristics-HoestT1",
+          "display": "Symptom characteristics - Hoest1"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Dit is het toelichtings veld van de zib."
+    }
+  ]
+}

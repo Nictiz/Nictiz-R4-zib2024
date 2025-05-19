@@ -1,0 +1,66 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-Symptom.Characteristics-RhonchiT2",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Symptom.Characteristics"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "exam",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Exam"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "162408000",
+        "system": "http://snomed.info/sct",
+        "display": "Algemene symptoombeschrijving"
+      }
+    ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "9763007",
+        "system": "http://snomed.info/sct",
+        "display": "expiratoire piepende ademhaling (bevinding)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-alt-1",
+    "display": "Patient, Peter Jan (PeJe) Jansen"
+  },
+  "effectiveDateTime": "2023-03-01",
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "246112005",
+            "system": "http://snomed.info/sct",
+            "display": "Severity (attribute)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "255604002",
+            "system": "http://snomed.info/sct",
+            "display": "Mild (qualifier value)"
+          }
+        ]
+      }
+    }
+  ]
+}

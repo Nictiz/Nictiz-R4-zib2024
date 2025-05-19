@@ -1,0 +1,58 @@
+{
+  "resourceType": "ClinicalImpression",
+  "id": "nl-core-ConditionAndDiagnosis-ClinicalImpression-BronchitisT2",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-ConditionAndDiagnosis-ClinicalImpression"
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/nl-core-Patient-alt-1",
+    "display": "Patient, Peter Jan (PeJe) Jansen",
+    "type": "Patient"
+  },
+  "effectiveDateTime": "2023-03-01",
+  "assessor": {
+    "reference": "PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1",
+    "display": "Health professional (role), J.H.R. Peters, Neuroloog",
+    "type": "PractitionerRole"
+  },
+  "investigation": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "63332003",
+            "system": "http://snomed.info/sct",
+            "display": "Anamnese en lichamelijk onderzoek"
+          }
+        ]
+      }
+    }
+  ],
+  "finding": [
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "32398004",
+            "system": "http://snomed.info/sct",
+            "display": "Bronchitis (disorder)"
+          }
+        ]
+      }
+    }
+  ],
+  "prognosisCodeableConcept": [
+    {
+      "coding": [
+        {
+          "code": "415684004",
+          "system": "http://snomed.info/sct",
+          "display": "Vermoedelijk"
+        }
+      ]
+    }
+  ]
+}

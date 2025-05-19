@@ -1,5 +1,6 @@
-# Condition, Diagnosis, and Symptom
+# The zibs Condition, Diagnosis, and Symptom
 
+## Introduction
 This document outlines the FHIR mapping strategy for the zibs Condition, Diagnosis, and Symptom. These concepts are closely related and require a structured approach in FHIR to capture both their persistent nature and point-in-time assessments accurately.
 
 Four distinct FHIR profiles based on the `Condition`, `ClinicalImpression`, and `Observation` resources represent these zibs, separating the core record of a condition, diagnosis, or symptom from specific temporal recordings or assessments.
@@ -45,21 +46,27 @@ flowchart TB
 ## General rules
 
 * When recording a new symptom, an instance of the zib-Symptom, zib-Symptom.Characteristics, and zib-ConditionAndDiagnosis profiles must be created/present. 
+    * DISCUSSION: a condition for every symptom feels a bit of overkill... Or not?
+    * DISCUSSION: when just registring a sympton... no diagnosis yet, what will be in the ConditionAndDiagnosis Condition?
 * When recording a new diagnosis, an instance is of the zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles are created.
 * When modifying a symptom instance, all concepts may be updated, except for the _SymptomName_. A change to the _SymptomName_ is considered a new symptom and therefore requires a new instance of both the zib-Symptom and zib-Symptom.Characteristics profiles.
 * When modifying a diagnosis instance, all concepts may be updated, except for the _DiagnosisName_. A change to the _DiagnosisName_ is considered a new diagnosis and therefore requires a new instance of both the zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles.
 
-## Specific guidelines
+### Specific guidelines
 
 * When a symptom is resolved, the `.component:symptomCourse.valueCodeableConcept` is set to _no longer present_, the `.clinicalStatus` is set to _inactive_, and the `.abatement[x]` is included.
 * When a symptom is ruled out based on clinical judgment, the `.verificationStatus` is set to _refuted_.
-* When the condition is resolved (i.e. the patient no longer experiences it), the `.clinicalStatus` is set to _inactive_ and the `.abatement[x]` is included.
+* When the condition is resolved (i.e. the patient no longer experiences it), the `.clinicalStatus` is set to _inactive_ and the `.abatement[x]` is included if known.
 * Diagnosis concepts are mapped in both zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles. However, the concepts _MethodOfConfirmation_ (NL-CM:5.6.5), _Comment_ (NL-CM:5.6.11), and _Condition_ (NL-CM:5.6.10) are mapped only in zib-ConditionAndDiagnosis. Conversely, the concepts in the _Reason_ container (NL-CM:5.6.13), _IsComplication_ (NL-CM:5.6.12), _AnatomicalLocation_ (NL-CM:5.6.9), and _DiagnosisStatus_ (NL-CM:5.6.4) are mapped only in zib-ConditionAndDiagnosis-ClinicalImpression.
 * When a diagnosis is ruled out based on clinical judgment, the `.verificationStatus` is set to _refuted_. 
 * When a single diagnosis is refuted and replaced by another, the `extension:condition-occurredFollowing` is included in the new zib-ConditionAndDiagnosis instance to reference the refuted diagnosis. This creates a clear, traceable sequence between the diagnosis instances.
 * When two or more differential diagnoses are added, multiple zib-ConditionAndDiagnosis instances are created, one for each differential diagnosis,  as well as a single instance of zib-ConditionAndDiagnosis-ClinicalImpression. In this ClinicalImpression `.problem` references the differential diagnoses, while `.finding` includes their names (DiagnosisName). If additional differential diagnoses are added later, new zib-ConditionAndDiagnosis instances are created accordingly, and one zib-ConditionAndDiagnosis-ClinicalImpression instance is added. This new ClinicalImpression again uses `.problem` and `.finding` to reference and describe the newly added differential diagnoses.
 * When a differential diagnosis is added, the `.extension:condition-related` is included in the zib-ConditionAndDiagnosis instance to reference the other related differential diagnoses. This establishes a link between them.
 * When a differential diagnosis is refuted, the `.extension:condition-ruledOut` is included in the remaining differential diagnoses to indicate the refuted diagnosis.
+
+## Current questions/problems AT:
+
+
 
 ## General example of clinical flow with 4 moments of recordings
 

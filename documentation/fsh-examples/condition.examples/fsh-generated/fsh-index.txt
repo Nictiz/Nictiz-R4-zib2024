@@ -1,0 +1,13 @@
+Output File                                                                               Name                                                              Type      FSH File                   Lines
+ClinicalImpression-nl-core-ConditionAndDiagnosis-ClinicalImpression-BronchitisT2.json     nl-core-ConditionAndDiagnosis-ClinicalImpression-BronchitisT2     Instance  ConditionAndDiagnosis.fsh  17 - 29
+ClinicalImpression-nl-core-ConditionAndDiagnosis-ClinicalImpression-LongonstekingT4.json  nl-core-ConditionAndDiagnosis-ClinicalImpression-LongonstekingT4  Instance  ConditionAndDiagnosis.fsh  51 - 63
+Condition-nl-core-ConditionAndDiagnosis-BronchitisT2.json                                 nl-core-ConditionAndDiagnosis-BronchitisT2                        Instance  ConditionAndDiagnosis.fsh  4 - 15
+Condition-nl-core-ConditionAndDiagnosis-LongonstekingT4.json                              nl-core-ConditionAndDiagnosis-LongonstekingT4                     Instance  ConditionAndDiagnosis.fsh  32 - 49
+Condition-nl-core-Symptom-HoestT1.json                                                    nl-core-Symptom-HoestT1                                           Instance  Symptom.fsh                2 - 21
+Condition-nl-core-Symptom-HoestT2.json                                                    nl-core-Symptom-HoestT2                                           Instance  Symptom.fsh                110 - 130
+Condition-nl-core-Symptom-KoortsT3.json                                                   nl-core-Symptom-KoortsT3                                          Instance  Symptom.fsh                80 - 90
+Condition-nl-core-Symptom-RhonchiT2.json                                                  nl-core-Symptom-RhonchiT2                                         Instance  Symptom.fsh                52 - 63
+Observation-nl-core-Symptom.Characteristics-HoestT1.json                                  nl-core-Symptom.Characteristics-HoestT1                           Instance  Symptom.fsh                24 - 49
+Observation-nl-core-Symptom.Characteristics-HoestT2.json                                  nl-core-Symptom.Characteristics-HoestT2                           Instance  Symptom.fsh                133 - 150
+Observation-nl-core-Symptom.Characteristics-KoortsT3.json                                 nl-core-Symptom.Characteristics-KoortsT3                          Instance  Symptom.fsh                92 - 103
+Observation-nl-core-Symptom.Characteristics-RhonchiT2.json                                nl-core-Symptom.Characteristics-RhonchiT2                         Instance  Symptom.fsh                66 - 77

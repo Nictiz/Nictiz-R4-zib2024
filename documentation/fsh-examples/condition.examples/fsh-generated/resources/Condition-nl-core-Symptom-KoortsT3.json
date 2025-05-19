@@ -1,0 +1,50 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-Symptom-KoortsT3",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Symptom"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Condition.StatusDate",
+      "valueDateTime": "2023-03-06"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "386661006",
+          "system": "http://snomed.info/sct",
+          "display": "Algemene symptoombeschrijving"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "9763007",
+        "system": "http://snomed.info/sct",
+        "display": "Fever (finding)"
+      }
+    ]
+  },
+  "onsetDateTime": "2023-03-05",
+  "subject": {
+    "reference": "Patient/nl-core-Patient-alt-1",
+    "display": "Patient, Peter Jan (PeJe) Jansen"
+  },
+  "evidence": [
+    {
+      "detail": [
+        {
+          "reference": "Observation/nl-core-Symptom.Characteristics-KoortsT3",
+          "display": "Symptom characteristics - KoortsT3"
+        }
+      ]
+    }
+  ]
+}
