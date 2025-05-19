@@ -40,7 +40,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="TBD" />
+          <code value="162408000" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -67,6 +67,35 @@
         <identity value="zib-symptom-v1.0-2024EN" />
         <map value="NL-CM:5.5.3" />
         <comment value="SymptomStatusDate" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <short value="SymptomName" />
+      <definition value="Name and code of the symptom via selection from a code list, based on a standardised coding system." />
+      <alias value="SymptoomNaam" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.5.8--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.10" />
+        <comment value="SymptomName" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x].text">
+      <path value="Observation.value[x].text" />
+      <short value="FurtherSpecificationSymptomName" />
+      <definition value="More detailed specification of the symptomName that has been selected from the code list, because that list does not (yet) contain the required level of detail." />
+      <alias value="NadereSpecificatieSymptoomNaam" />
+      <mapping>
+        <identity value="zib-symptom-v1.0-2024EN" />
+        <map value="NL-CM:5.5.11" />
+        <comment value="FurtherSpecificationSymptomName" />
       </mapping>
     </element>
     <element id="Observation.component">
