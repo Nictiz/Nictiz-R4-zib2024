@@ -1,0 +1,812 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.40.2.9.13.4--20240415000000"/>
+   <meta>
+      <source value="http://acceptance.art-decor.org/fhir/4.0/zib2024bbr-"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
+      <tag>
+         <system value="http://hl7.org/fhir/FHIR-version"/>
+         <code value="4.0.1"/>
+      </tag>
+   </meta>
+   <text>
+      <status value="empty"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+   </text>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2024-04-15T00:00:00+00:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.4--20240415000000"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.9.13.4"/>
+   </identifier>
+   <version value="2024-04-15T00:00:00"/>
+   <name value="PrikPlakLocatieCodelijst"/>
+   <title value="PrikPlakLocatieCodelijst"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Registratie aan de bron"/>
+   <contact>
+      <name value="Registratie aan de bron"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.registratieaandebron.nl"/>
+      </telecom>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.zibs.nl"/>
+      </telecom>
+   </contact>
+   <description value="PrikPlakLocatieCodelijst"/>
+   <immutable value="false"/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <compose>
+      <include>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="Anders"/>
+            </extension>
+            <code value="OTH"/>
+            <display value="Other"/>
+         </concept>
+      </include>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van bovenste gedeelte van lumbale regio van wand van abdomen"/>
+            </extension>
+            <code value="160531000146108"/>
+            <display value="Structuur van bovenste gedeelte van lumbale regio van wand van abdomen"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of upper part of lumbar region of abdominal wall"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van bovenste gedeelte van lumbale regio van wand van abdomen"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van onderste gedeelte van lumbale regio van wand van abdomen"/>
+            </extension>
+            <code value="160481000146106"/>
+            <display value="Structuur van onderste gedeelte van lumbale regio van wand van abdomen"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of lower part of lumbar region of abdominal wall"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van onderste gedeelte van lumbale regio van wand van abdomen"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van rechter gedeelte van supra-umbilicale regio"/>
+            </extension>
+            <code value="160501000146103"/>
+            <display value="Structuur van rechter gedeelte van supra-umbilicale regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of right part of supraumbilical region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van rechter gedeelte van supra-umbilicale regio"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van linker gedeelte van infra-umbilicale regio"/>
+            </extension>
+            <code value="160441000146104"/>
+            <display value="Structuur van linker gedeelte van infra-umbilicale regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of left part of infra-umbilical region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van linker gedeelte van infra-umbilicale regio"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van linker gedeelte van supra-umbilicale regio"/>
+            </extension>
+            <code value="160451000146101"/>
+            <display value="Structuur van linker gedeelte van supra-umbilicale regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of left part of supraumbilical region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van linker gedeelte van supra-umbilicale regio"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van rechter gedeelte van infra-umbilicale regio"/>
+            </extension>
+            <code value="160491000146108"/>
+            <display value="Structuur van rechter gedeelte van infra-umbilicale regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of right part of infra-umbilical region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van rechter gedeelte van infra-umbilicale regio"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van weke delen van laterale bovenkwadrant van anterieur oppervlak van bovenbeen"/>
+            </extension>
+            <code value="160521000146106"/>
+            <display value="Structuur van weke delen van laterale bovenkwadrant van anterieur oppervlak van bovenbeen"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of soft tissue of upper outer quadrant of anterior surface of thigh"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van weke delen van laterale bovenkwadrant van anterieur oppervlak van bovenbeen"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van weke delen van mediale bovenkwadrant van anterieur oppervlak van bovenbeen"/>
+            </extension>
+            <code value="160511000146101"/>
+            <display value="Structuur van weke delen van mediale bovenkwadrant van anterieur oppervlak van bovenbeen"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of soft tissue of upper inner quadrant of anterior surface of thigh"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van weke delen van mediale bovenkwadrant van anterieur oppervlak van bovenbeen"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van weke delen van laterale onderkwadrant van anterieur oppervlak van bovenbeen"/>
+            </extension>
+            <code value="160471000146109"/>
+            <display value="Structuur van weke delen van laterale onderkwadrant van anterieur oppervlak van bovenbeen"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of soft tissue of lower outer quadrant of anterior surface of thigh"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van weke delen van laterale onderkwadrant van anterieur oppervlak van bovenbeen"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van weke delen van mediale onderkwadrant van anterieur oppervlak van bovenbeen"/>
+            </extension>
+            <code value="160461000146103"/>
+            <display value="Structuur van weke delen van mediale onderkwadrant van anterieur oppervlak van bovenbeen"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of soft tissue of lower inner quadrant of anterior surface of thigh"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van weke delen van mediale onderkwadrant van anterieur oppervlak van bovenbeen"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van laterale bovenkwadrant van regio glutealis"/>
+            </extension>
+            <code value="703712000"/>
+            <display value="Structuur van laterale bovenkwadrant van regio glutealis"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of upper outer quadrant of buttock"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van laterale bovenkwadrant van regio glutealis"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van mediale bovenkwadrant van regio glutealis"/>
+            </extension>
+            <code value="160541000146100"/>
+            <display value="Structuur van mediale bovenkwadrant van regio glutealis"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of upper inner quadrant of buttock"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van mediale bovenkwadrant van regio glutealis"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van laterale onderkwadrant van regio glutealis"/>
+            </extension>
+            <code value="160431000146107"/>
+            <display value="Structuur van laterale onderkwadrant van regio glutealis"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of lower outer quadrant of buttock"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van laterale onderkwadrant van regio glutealis"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van mediale onderkwadrant van regio glutealis"/>
+            </extension>
+            <code value="160421000146105"/>
+            <display value="Structuur van mediale onderkwadrant van regio glutealis"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of lower inner quadrant of buttock"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van mediale onderkwadrant van regio glutealis"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van regio clavicularis"/>
+            </extension>
+            <code value="91009005"/>
+            <display value="Structuur van huid van regio clavicularis"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of clavicular region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van regio clavicularis"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van linker gedeelte van achterzijde van bovenste gedeelte van thoracale regio"/>
+            </extension>
+            <code value="160371000146104"/>
+            <display value="Structuur van huid van linker gedeelte van achterzijde van bovenste gedeelte van thoracale regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of left part of back of upper thoracic region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van linker gedeelte van achterzijde van bovenste gedeelte van thoracale regio"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van rechter gedeelte van achterzijde van bovenste gedeelte van thoracale regio"/>
+            </extension>
+            <code value="160391000146100"/>
+            <display value="Structuur van huid van rechter gedeelte van achterzijde van bovenste gedeelte van thoracale regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure left part of back of upper thoracic region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van rechter gedeelte van achterzijde van bovenste gedeelte van thoracale regio"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van linker gedeelte van achterzijde van onderste gedeelte van thoracale regio"/>
+            </extension>
+            <code value="160361000146105"/>
+            <display value="Structuur van huid van linker gedeelte van achterzijde van onderste gedeelte van thoracale regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of left part of back of lower thoracic region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van linker gedeelte van achterzijde van onderste gedeelte van thoracale regio"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van rechter gedeelte van achterzijde van onderste gedeelte van thoracale regio"/>
+            </extension>
+            <code value="160381000146102"/>
+            <display value="Structuur van huid van rechter gedeelte van achterzijde van onderste gedeelte van thoracale regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of right part of back of lower thoracic region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van rechter gedeelte van achterzijde van onderste gedeelte van thoracale regio"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van linker gedeelte van lumbosacrale regio"/>
+            </extension>
+            <code value="160401000146102"/>
+            <display value="Structuur van huid van linker gedeelte van lumbosacrale regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of left part of lumbosacral region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van linker gedeelte van lumbosacrale regio"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van rechter gedeelte van lumbosacrale regio"/>
+            </extension>
+            <code value="160411000146100"/>
+            <display value="Structuur van huid van rechter gedeelte van lumbosacrale regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of right part of lumbosacral region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van rechter gedeelte van lumbosacrale regio"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van anterieur oppervlak van bovenarm"/>
+            </extension>
+            <code value="45981001"/>
+            <display value="Structuur van huid van anterieur oppervlak van bovenarm"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of anterior surface of upper arm"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van anterieur oppervlak van bovenarm"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van posterieur oppervlak van bovenarm"/>
+            </extension>
+            <code value="15703000"/>
+            <display value="Structuur van posterieur oppervlak van bovenarm"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of posterior surface of upper arm"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van posterieur oppervlak van bovenarm"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van musculus deltoideus"/>
+            </extension>
+            <code value="35259002"/>
+            <display value="Structuur van musculus deltoideus"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structure of deltoid muscle"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van musculus deltoideus"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van rechter bovenkwadrant van voorzijde van thorax"/>
+            </extension>
+            <code value="160561000146104"/>
+            <display value="Structuur van huid van rechter bovenkwadrant van voorzijde van thorax"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of right upper quadrant of anterior surface of thorax"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van rechter bovenkwadrant van voorzijde van thorax"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van linker bovenkwadrant van voorzijde van thorax"/>
+            </extension>
+            <code value="160551000146102"/>
+            <display value="Structuur van huid van linker bovenkwadrant van voorzijde van thorax"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of left upper quadrant of anterior surface of thorax"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van linker bovenkwadrant van voorzijde van thorax"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van rechter onderkwadrant van voorzijde van thorax"/>
+            </extension>
+            <code value="160581000146107"/>
+            <display value="Structuur van huid van rechter onderkwadrant van voorzijde van thorax"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of right lower quadrant of anterior surface of thorax"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van rechter onderkwadrant van voorzijde van thorax"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van linker onderkwadrant van voorzijde van thorax"/>
+            </extension>
+            <code value="160571000146105"/>
+            <display value="Structuur van huid van linker onderkwadrant van voorzijde van thorax"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of left lower quadrant of anterior surface of thorax"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van linker onderkwadrant van voorzijde van thorax"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van regio scapularis"/>
+            </extension>
+            <code value="45980000"/>
+            <display value="Structuur van huid van regio scapularis"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of scapular region of back"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van regio scapularis"/>
+            </designation>
+         </concept>
+         <concept>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+               <valueString value="structuur van huid van postauriculaire regio"/>
+            </extension>
+            <code value="24483006"/>
+            <display value="Structuur van huid van postauriculaire regio"/>
+            <designation>
+               <language value="en-US"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Skin structure of postauricular region"/>
+            </designation>
+            <designation>
+               <language value="nl-NL"/>
+               <use>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="900000000000013009"/>
+                  <display value="Synonym"/>
+               </use>
+               <value value="Structuur van huid van postauriculaire regio"/>
+            </designation>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

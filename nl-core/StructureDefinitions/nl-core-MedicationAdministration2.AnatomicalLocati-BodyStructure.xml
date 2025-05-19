@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-MedicationAdministration2.AnatomicalLocati-BodyStructure" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-MedicationAdministration2.AnatomicalLocati-BodyStructure" />
+  <name value="NlcoreMedicationAdministration2AnatomicalLocatiBodyStructure" />
+  <title value="nl core MedicationAdministration2.AnatomicalLocati BodyStructure" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Anatomical location where the medication was administered." />
+  <purpose value="A derived profile from [zib-MedicationAdministration2.AnatomicalLocati-BodyStructure](http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAdministration2.AnatomicalLocati-BodyStructure) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+ <mapping>
+    <identity value="zib-medicationadministration2-v3.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/MedicationAdministration2-v3.0(2024EN)" />
+    <name value="zib MedicationAdministration2-v3.0(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="BodyStructure" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation-BodyStructure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="BodyStructure">
+      <path value="BodyStructure" />
+      <definition value="AnatomicalLocation is mapped to both a profile on CodeableConcept (&lt;http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation&gt;) and this BodyStructure profile. &#xA;&#xA;When it is required to convey a discrete Laterality (NL-CM:20.7.3) next to (or in absence of) the Location (NL-CM:20.7.4), this BodyStructure profile should be used and referenced from the relevant resource. In cases where Laterality is either unnecessary or embedded within the location code itself, it can be conveyed directly in the relevant resource.&#xD;&#xA;&#xD;&#xA;**Note:** Receiving systems must support both the BodyStructure resource and the CodeableConcept in host resources, as either mechanism may be employed. Providing systems can select the appropriate mechanism based on their data requirements." />
+      <alias value="nl-core-MedicationAdministration2.AnatomicalLocati-BodyStructure" />
+    </element>
+  </differential>
+</StructureDefinition>
