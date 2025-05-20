@@ -35,7 +35,9 @@
   <differential>
     <element id="Device.type">
       <path value="Device.type" />
+      <short value="ProductType"/>
       <definition value="The type of product used to help the patient see." />
+      <alias value="ProductType" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="purpose">
