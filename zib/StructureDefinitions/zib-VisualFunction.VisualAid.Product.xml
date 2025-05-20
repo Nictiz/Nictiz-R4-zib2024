@@ -47,7 +47,7 @@
             <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.16.2--20240415000000"/>
           </extension>
         </extension>
-        <strength value="extensible" />
+        <strength value="required" />
       </binding>
       <mapping>
         <identity value="zib-visualfunction-v4.0-2024EN" />
