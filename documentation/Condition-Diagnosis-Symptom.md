@@ -70,7 +70,7 @@ flowchart TB
 
 ## General example of clinical flow with 4 moments of recordings
 
-
+### Flavor 1: With relation between FHIR resources
 ```mermaid
 flowchart TB
     T1(["T1"]) --> T2(["T2"]) & Symptom_Hoest["New Symptom: Hoest"]
@@ -110,6 +110,9 @@ flowchart TB
     Diagnosis_Longontsteking -- create --> CDCI_Pneumonia["**Condition**
         (zib-ConditionAndDiagnosis-ClinicalImpression)
         --------------------
+        Pneumonia"]  & CD_Pneumonia["**Condition**
+        (zib-ConditionAndDiagnosis)
+        --------------------
         Pneumonia"]
     Diagnosis_Longontsteking -- update --> CD
     CD -. evidence_detail .-> S_Hoest & S_Rhonci & S_Koorts
@@ -127,10 +130,150 @@ flowchart TB
      CDCI_Bronchitis:::Ash
      S_Koorts:::Ash
      SC_Koorts:::Ash
+     CD_Pneumonia:::Ash
      CDCI_Pneumonia:::Ash
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 ```
 
+### Flavor 2: No relation betwewwn FHIR resources.
+
+```mermaid
+graph LR
+    T0(["Symptoms, Conditions and Diagnosis"]) --> T1 & T2 & T3 & T4
+    T1 -->  Symptom_Hoest["New Symptom: Hoest"]
+    T2 -->  Symptom_Rhonci["New Symptom: Rhonchi"] & Diagnosis_Bronchitis["New Diagnosis: Bronchitis"]
+    T3 -->  Symptom_Koorts["New Symptom: Koorts"]
+    T4 -->  Diagnosis_Longontsteking["New Diagnosis: Pneumonia"]
+
+    Symptom_Hoest -- create --> 
+        S_Hoest["**Condition**
+        (zib-Symptom)
+        --------------------
+        Hoest"] & SC_Hoest["**Observation**
+        (zib-Symptom.Characteristics)
+        --------------------
+        Hoest"] & CD["**Condition**
+        (zib-ConditionAndDiagnosis)
+        --------------------"]
+   
+    Symptom_Rhonci -- create --> S_Rhonci["**Condition**
+        (zib-Symptom)
+        --------------------
+        Rhonci"] & SC_Rhonci["**Observation**
+        (zib-Symptom.Characteristics)
+        --------------------
+        Rhonci"]
+    Symptom_Rhonci -- update --> CD
+    
+    Diagnosis_Bronchitis -- create --> CDCI_Bronchitis["**Condition**
+        (zib-ConditionAndDiagnosis-ClinicalImpression)
+        --------------------
+        Bronchitis"]
+    Diagnosis_Bronchitis -- update --> CD
+
+    Symptom_Koorts -- create --> S_Koorts["**Condition**
+        (zib-Symptom)
+        --------------------
+        Koorts"] & SC_Koorts["**Observation**
+        (zib-Symptom.Characteristics)
+        --------------------
+        Koorts"]
+    Symptom_Koorts -- update --> CD
+    
+    Diagnosis_Longontsteking -- create --> CDCI_Pneumonia["**Condition**
+        (zib-ConditionAndDiagnosis-ClinicalImpression)
+        --------------------
+        Pneumonia"] & CD_Pneumonia["**Condition**
+        (zib-ConditionAndDiagnosis)
+        --------------------
+        Pneumonia"]
+        Diagnosis_Longontsteking -- update --> CD
+
+     S_Hoest:::Ash
+     SC_Hoest:::Ash
+     CD:::Ash
+     S_Rhonci:::Ash
+     SC_Rhonci:::Ash
+     CDCI_Bronchitis:::Ash
+     S_Koorts:::Ash
+     SC_Koorts:::Ash
+     CD_Pneumonia:::Ash
+     CDCI_Pneumonia:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+```
+
+
+### Flavor 3: no relation between FHIR resources, but more action descriptions
+```mermaid
+graph LR
+    T0(["Symptoms, Conditions and Diagnosis"]) --> T1(["T1: New Symptom Hoest"]) & T2(["T2: New Symptom Rhonci and new Diagnosis Bronchitis"]) & T3(["T3: New Symptom Koorts"]) & T4(["T4: New Diagnosis Pneumonia"])
+    T1 -->  Symptom_Hoest["Create Symptom resources and ConditionAndDiagnosis"] & Initial_CD["Create initial ConditionAndDiagnosis"]
+    T2 -->  Symptom_Rhonci["Create Symptom resources"] & Diagnosis_Bronchitis_CI["Create Diagnosis ClinicalImpression"] & Diagnosis_Bronchitis["Add diagnosis and reference to Rhonci Symptom"]
+    T3 -->  Symptom_Koorts["Create Symptom resources"] & Symptom_Koorts_Reference["Add reference to Koorts Symptom"]
+    T4 -->  Diagnosis_Longontsteking["Create Diagnosis resources that link to previous Bronchitis ConditionAndDiagnosis"] & Close_Bronchitis["Close Bronchitis ConditionAndDiagnosis"]
+
+    Symptom_Hoest -- create --> 
+        S_Hoest["**Condition**
+        (zib-Symptom)
+        --------------------
+        Hoest"] & SC_Hoest["**Observation**
+        (zib-Symptom.Characteristics)
+        --------------------
+        Hoest"] 
+    Initial_CD -- create --> CD["**Condition**
+        (zib-ConditionAndDiagnosis)
+        --------------------"]
+   
+    Symptom_Rhonci -- create --> S_Rhonci["**Condition**
+        (zib-Symptom)
+        --------------------
+        Rhonci"] & SC_Rhonci["**Observation**
+        (zib-Symptom.Characteristics)
+        --------------------
+        Rhonci"]
+
+    
+    Diagnosis_Bronchitis_CI -- create --> CDCI_Bronchitis["**Condition**
+        (zib-ConditionAndDiagnosis-ClinicalImpression)
+        --------------------
+        Bronchitis"]
+    Diagnosis_Bronchitis -- update --> CD
+
+
+
+    Symptom_Koorts -- create --> S_Koorts["**Condition**
+        (zib-Symptom)
+        --------------------
+        Koorts"] & SC_Koorts["**Observation**
+        (zib-Symptom.Characteristics)
+        --------------------
+        Koorts"]
+
+    Symptom_Koorts_Reference -- update --> CD
+    
+    Diagnosis_Longontsteking -- create --> CDCI_Pneumonia["**Condition**
+        (zib-ConditionAndDiagnosis-ClinicalImpression)
+        --------------------
+        Pneumonia"] & CD_Pneumonia["**Condition**
+        (zib-ConditionAndDiagnosis)
+        --------------------
+        Pneumonia"]
+        Close_Bronchitis -- update --> CD
+
+     S_Hoest:::Ash
+     SC_Hoest:::Ash
+     CD:::Ash
+     S_Rhonci:::Ash
+     SC_Rhonci:::Ash
+     CDCI_Bronchitis:::Ash
+     S_Koorts:::Ash
+     SC_Koorts:::Ash
+     CD_Pneumonia:::Ash
+     CDCI_Pneumonia:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+```
 
 
 ## Technical Scenario's regarding instances
