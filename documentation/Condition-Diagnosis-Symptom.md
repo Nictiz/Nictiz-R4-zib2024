@@ -70,7 +70,7 @@ flowchart TB
 
 ## General example of clinical flow with 4 moments of recordings
 
-### Flavor 1: With relation between FHIR resources
+### Flavor 1: Includes relationships between FHIR resources
 ```mermaid
 flowchart TB
     T1(["T1"]) --> T2(["T2"]) & Symptom_Hoest["New Symptom: Hoest"]
@@ -135,7 +135,7 @@ flowchart TB
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 ```
 
-### Flavor 2: No relation betwewwn FHIR resources.
+### Flavor 2: No relationships between FHIR resources
 
 ```mermaid
 graph LR
@@ -204,7 +204,7 @@ graph LR
 ```
 
 
-### Flavor 3: no relation between FHIR resources, but more action descriptions
+### Flavor 3: No relationships between FHIR resources, with action descriptions
 ```mermaid
 graph LR
     T0(["Symptoms, Conditions and Diagnosis"]) --> T1(["T1: New Symptom Hoest"]) & T2(["T2: New Symptom Rhonci and new Diagnosis Bronchitis"]) & T3(["T3: New Symptom Koorts"]) & T4(["T4: New Diagnosis Pneumonia"])

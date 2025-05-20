@@ -21,19 +21,19 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-condition-v1.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/Condition-v1.0(2024EN)" />
-    <name value="zib Condition-v1.0(2024EN)" />
+    <identity value="zib-condition-v1.2-2024EN" />
+    <uri value="https://zibs.nl/wiki/Condition-v1.2(2024EN)" />
+    <name value="zib Condition-v1.2(2024EN)" />
   </mapping>
   <mapping>
-    <identity value="zib-diagnosis-v1.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/Diagnosis-v1.0(2024EN)" />
-    <name value="zib Diagnosis-v1.0(2024EN)" />
+    <identity value="zib-diagnosis-v2.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/Diagnosis-v2.0(2024EN)" />
+    <name value="zib Diagnosis-v2.0(2024EN)" />
   </mapping>
   <mapping>
-    <identity value="zib-symptom-v1.0-2024EN" />
-    <uri value="https://zibs.nl/wiki/Symptom-v1.0(2024EN)" />
-    <name value="zib Symptom-v1.0(2024EN)" />
+    <identity value="zib-symptom-v2.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/Symptom-v2.0(2024EN)" />
+    <name value="zib Symptom-v2.0(2024EN)" />
   </mapping>
   <mapping>
     <identity value="zib-timeinterval-v1.3-2024EN" />
@@ -52,12 +52,12 @@
       <alias value="AandoeningOfGesteldheid" />
       <alias value="DiagnostischInzicht" />
       <mapping>
-        <identity value="zib-condition-v1.0-2024EN" />
+        <identity value="zib-condition-v1.1-2024EN" />
         <map value="NL-CM:5.4.1" />
         <comment value="Condition" />
       </mapping>
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.1" />
         <comment value="Diagnosis" />
       </mapping>
@@ -104,7 +104,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.4.1--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-condition-v1.0-2024EN" />
+        <identity value="zib-condition-v1.1-2024EN" />
         <map value="NL-CM:5.4.5" />
         <comment value="Course" />
       </mapping>
@@ -123,7 +123,7 @@
       <definition value="Date (and time) at which the care professional obtained the diagnostic insight." />
       <alias value="DiagnostischInzichtDatum" />
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.3" />
         <comment value="DiagnosisDate" />
       </mapping>
@@ -150,7 +150,7 @@
       <definition value="Container of the Reason concept. This container contains all data elements of the Reason concept." />
       <alias value="Aanleiding" />
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.13" />
         <comment value="Reason" />
       </mapping>
@@ -169,7 +169,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.6.1--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.14" />
         <comment value="Incident" />
       </mapping>
@@ -187,12 +187,12 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure-event" />
       </type>
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.15" />
         <comment value="Procedure" />
       </mapping>
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.16" />
         <comment value="Diagnosis" />
       </mapping>
@@ -201,29 +201,29 @@
       <path value="Condition.clinicalStatus" />
       <comment value="This element is implictly mapped to the zib concept NL-CM:5.4.5 (Course). Unless the clinical status of the condition is explicitly recorded, the following guidance applies:&#xD;&#xA;&#xD;&#xA;* When the value of Course is _NTB_, _385425000_, _231877006_, _260388006_, _255314001_ or _NTB_, `.clinicalStatus` will usually be set to _active_.&#xD;&#xA;* When the value of Course is _350361000146109_, `.clinicalStatus` will usually be set to _inactive_.&#xD;&#xA;* When the value Course is 'OTH' or it attains any other value, `.clinicalStatus` has to be determined manually." />
       <mapping>
-        <identity value="zib-condition-v1.0-2024EN" />
+        <identity value="zib-condition-v1.1-2024EN" />
         <map value="NL-CM:5.4.5" />
         <comment value="Course (implicit, main mapping is on Condition.extension:course.valueCodeableConcept)" />
       </mapping>
     </element>
     <element id="Condition.verificationStatus">
       <path value="Condition.verificationStatus" />
-      <short value="DegreeOfCertainty" />
+      <short value="DiagnosisStatus" />
       <definition value="Indicates the conviction of the care professional with respect to the diagnostic insight as interpretation of the condition." />
-      <alias value="ZekerheidStatus" />
+      <alias value="DiagnoseStatus" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap ZekerheidStatusCodelijst_to_ConditionVerificationStatus to translate terminology from the functional model to profile terminology in ValueSet ConditionVerificationStatus." />
+        <description value="Use ConceptMap DiagnoseStatusCodelijst_to_ConditionVerificationStatus to translate terminology from the functional model to profile terminology in ValueSet ConditionVerificationStatus." />
         <valueSet value="http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/ZekerheidStatusCodelijst_to_ConditionVerificationStatus" />
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/DiagnoseStatusCodelijst_to_ConditionVerificationStatus" />
           </extension>
         </valueSet>
       </binding>
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.4" />
-        <comment value="DegreeOfCertainty" />
+        <comment value="DiagnosisStatus" />
       </mapping>
     </element>
     <element id="Condition.verificationStatus.coding">
@@ -244,7 +244,7 @@
       <max value="1" />
       <binding>
         <strength value="required" />
-        <description value="In addition to a coding from this ValueSet, the corresponding coding from the FHIR base ValueSet SHALL be communicated. The ConceptMap &lt;http://nictiz.nl/fhir/ConceptMap/ZekerheidsStatusCodelijst-to-ConditionVerificationStatus&gt; can be used to relate these two ValueSets." />
+        <description value="In addition to a coding from this ValueSet, the corresponding coding from the FHIR base ValueSet SHALL be communicated. The ConceptMap &lt;http://nictiz.nl/fhir/ConceptMap/DiagnoseStatusCodelijst-to-ConditionVerificationStatus&gt; can be used to relate these two ValueSets." />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.6.3--20240415000000" />
       </binding>
     </element>
@@ -273,7 +273,7 @@
         </coding>
       </patternCodeableConcept>
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.12" />
         <comment value="IsComplication" />
       </mapping>
@@ -288,7 +288,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.4.3--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-condition-v1.0-2024EN" />
+        <identity value="zib-condition-v1.1-2024EN" />
         <map value="NL-CM:5.4.6" />
         <comment value="Severity" />
       </mapping>
@@ -303,7 +303,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.6.4--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.7" />
         <comment value="DiagnosisName" />
       </mapping>
@@ -314,7 +314,7 @@
       <definition value="A more detailed description of the DiagnosisName in free text, when this detail is not available in the used code list." />
       <alias value="NadereSpecificatieDiagnoseNaam" />
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.8" />
         <comment value="FurtherSpecificationDiagnosisName" />
       </mapping>
@@ -333,7 +333,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20240415000000" />
       </binding>
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.9" />
         <comment value="AnatomicalLocation" />
       </mapping>
@@ -348,7 +348,7 @@
         <rules value="open" />
       </slicing>
       <mapping>
-        <identity value="zib-condition-v1.0-2024EN" />
+        <identity value="zib-condition-v1.1-2024EN" />
         <map value="NL-CM:5.4.8" />
         <comment value="PeriodPresent" />
       </mapping>
@@ -395,7 +395,7 @@
         <rules value="open" />
       </slicing>
       <mapping>
-        <identity value="zib-condition-v1.0-2024EN" />
+        <identity value="zib-condition-v1.1-2024EN" />
         <map value="NL-CM:5.4.8" />
         <comment value="PeriodPresent" />
       </mapping>
@@ -447,7 +447,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole" />
       </type>
       <mapping>
-        <identity value="zib-diagnosis-v1.0-2024EN" />
+        <identity value="zib-diagnosis-v2.0-2024EN" />
         <map value="NL-CM:5.6.2" />
         <comment value="Diagnostician" />
       </mapping>
@@ -480,7 +480,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Symptom" />
       </type>
       <mapping>
-        <identity value="zib-symptom-v1.0-2024EN" />
+        <identity value="zib-symptom-v2.0-2024EN" />
         <map value="NL-CM:5.5.1" />
         <comment value="Reversed reference for Symptom.Condition" />
       </mapping>
@@ -495,7 +495,7 @@
       <definition value="A comment in free text with respect to the condition, that is not represented by the other data elements in the information model." />
       <alias value="Toelichting" />
       <mapping>
-        <identity value="zib-condition-v1.0-2024EN" />
+        <identity value="zib-condition-v1.1-2024EN" />
         <map value="NL-CM:5.4.7" />
         <comment value="Comment" />
       </mapping>
