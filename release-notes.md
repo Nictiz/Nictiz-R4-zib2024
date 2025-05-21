@@ -310,3 +310,14 @@
 
 ## SNAQScore (zib-SNAQScore, nl-core-SNAQScore)
 * No significant changes.
+
+## VisualFunction 
+### zib-VisualFunction, nl-core-VisualFunction
+* No significant changes.
+
+### zib-VisualFunction.VisualAid, nl-core-VisualFunction.VisualAid
+* `.bodySite` ; mapping ; Added mapping of AnatomicalLocation. ; ZIB-1709
+* `.bodySite` ; terminology ; Added LocatieZienHulpmiddelCodelijst as required value set. ; ZIB-1709
+
+### zib-VisualFunction.VisualAid.Product, nl-core-VisualFunction.VisualAid.Product
+* No significant changes.

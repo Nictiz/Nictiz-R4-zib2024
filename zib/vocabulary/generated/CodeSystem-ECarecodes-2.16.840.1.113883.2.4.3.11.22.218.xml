@@ -1,0 +1,26 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.22.218"/>
+   <language value="en-US"/>
+   <text>
+      <status value="empty"/>
+      <div xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+   </text>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2025-05-15T16:28:43+00:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="urn:oid:2.16.840.1.113883.2.4.3.11.22.218"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.22.218"/>
+   </identifier>
+   <version value="2025-05-15T16:28:43"/>
+   <name value="ECarecodes"/>
+   <title value="eCare codes"/>
+   <status value="unknown"/>
+   <publisher value="ART-DECOR"/>
+   <description value="eCare codes"/>
+   <content value="not-present"/>
+</CodeSystem>
