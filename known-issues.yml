@@ -177,6 +177,12 @@ zib-ContactPerson:
         for: NL-CM:20.5.1 (AddressInformation)
         reason: An address in FHIR is represented using the Address datatype, not as a separate resource.
 
+zib-FeedingPatternInfant:
+  zib deviations:
+    Observation.component:feedingSupplement.value[x]:
+      - datatype: CodeableConcept instead of ST
+        reason: This is a concious deviation from the zib that has been decided by HL7 Netherlands and the zib centre. The zib model of using a single string is deemed too restrictive for some real-world systems, hence coded information is allowed as well. This deviation is documented in the profile.
+
 zib-HeadCircumference:
   zib deviations:
     Observation.effective[x]:effectiveDateTime:
