@@ -149,6 +149,9 @@
 ### zib-FluidBalance.FluidTotalOut, nl-core-FluidBalance.FluidTotalOut
 * No significant changes.
 
+## FeedingPatternInfant (zib-FeedingPatternInfant, nl-core-FeedingPatternInfant)
+* `.component:feedingType.value[x]` ; terminology ; Changed codes in VoedingSoortCodelijst. ; ZIB-1575
+
 ## FreedomRestrichtingIntervention (zib-FreedomRestrictingIntervention, nl-core-FreedomRestrictingIntervention)
 * `.category` ; terminology ; Pattern changed from http://snomed.info/sct#225317005 to http://snomed.info/sct#225214000. ; ZIB-1611
 * `.code` ; terminology ; Changed codes in TypeOfInterventionCodelist ; ZIB-1826
