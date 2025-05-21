@@ -72,6 +72,32 @@
       <path value="Condition.extension.value[x]" />
       <definition value="The duration of the period in which the symptom is (was) present in appropriate units of time (e.g. days or hours, etc.)." />
     </element>
+    <element id="Condition.extension:symptomCourse">
+      <path value="Condition.extension" />
+      <sliceName value="symptomCourse" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/condition-diseaseCourse" />
+      </type>
+    </element>
+    <element id="Condition.extension:symptomCourse.url">
+      <path value="Condition.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/condition-diseaseCourse" />
+    </element>
+    <element id="Condition.extension:symptomCourse.value[x]">
+      <path value="Condition.extension.value[x]" />
+      <short value="SymptomCourse" />
+      <definition value="The course of the intensity of the symptom over time, such as increased, unchanged." />
+      <alias value="SymptoomBeloop" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mapping>
+        <identity value="zib-condition-v1.1-2024EN" />
+        <map value="NL-CM:5.5.7" />
+        <comment value="SymptomCourse" />
+      </mapping>
+    </element>
     <element id="Condition.category">
       <path value="Condition.category" />
       <slicing>
@@ -94,6 +120,21 @@
           <code value="162408000" />
         </coding>
       </patternCodeableConcept>
+    </element>
+    <element id="Condition.severity">
+      <path value="Condition.severity" />
+      <short value="SymptomSeverity" />
+      <definition value="Indicates the degree of severity of the symptom at the moment of the SymptomStatusDate." />
+      <alias value="SymptoomErnst" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.5.5--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-symptom-v2.0-2024EN" />
+        <map value="NL-CM:5.5.8" />
+        <comment value="SymptomSeverity" />
+      </mapping>
     </element>
     <element id="Condition.code">
       <path value="Condition.code" />
