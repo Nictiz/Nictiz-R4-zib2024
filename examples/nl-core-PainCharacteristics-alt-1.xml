@@ -1,0 +1,186 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="nl-core-PainCharacteristics-alt-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PainCharacteristics"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Observatie/bepaling. Subject: Patient, Peter Jan (PeJe) Jansen. Status: definitief</caption>
+        <tfoot>
+          <tr>
+            <td colspan="2">Roken verzacht de pijn tijdelijk.</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th>Bepalingdatum/tijd</th>
+            <td>11 augustus 2020</td>
+          </tr>
+          <tr>
+            <th>Onderliggende observaties:</th>
+            <td>Pain score, measurement date 2013-02-08T06:43:00, score 7</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <th>Waarde</th>
+          </tr>
+          <tr>
+            <td>
+              <span title="bevinding betreffende pijn en/of sensatie (276435006 - SNOMED CT)">bevinding betreffende pijn en/of sensatie</span>
+            </td>
+            <td/>
+          </tr>
+          <tr>
+            <td>
+              <span title="aard van pijn (364632003 - SNOMED CT)">aard van pijn</span>
+            </td>
+            <td>
+              <span title="Knellende pijn (162505000 - SNOMED CT)">Knellende pijn</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="duur van klacht bij optreden (162442009 - SNOMED CT)">duur van klacht bij optreden</span>
+            </td>
+            <td>2 h</td>
+          </tr>
+          <tr>
+            <td>
+              <span title="patroon van pijn (364631005 - SNOMED CT)">patroon van pijn</span>
+            </td>
+            <td>
+              <span title="Paroxismaal (26593000 - SNOMED CT)">Paroxismaal</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="pijnbeloop (310951000146102 - SNOMED CT)">pijnbeloop</span>
+            </td>
+            <td>
+              <span title="Stijgend (260369004 - SNOMED CT)">Stijgend</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span title="klachtverlichtende factoren (162483007 - SNOMED CT)">klachtverlichtende factoren</span>
+            </td>
+            <td>Roken</td>
+          </tr>
+          <tr>
+            <td>
+              <span title="datum van gebeurtenis (439771001 - SNOMED CT)">datum van gebeurtenis</span>
+            </td>
+            <td>12 augustus 2020</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="276435006"/>
+      <display value="bevinding betreffende pijn en/of sensatie"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-alt-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Peter Jan (PeJe) Jansen"/>
+  </subject>
+  <effectiveDateTime value="2020-08-11"/>
+  <note>
+    <text value="Roken verzacht de pijn tijdelijk."/>
+  </note>
+  <hasMember>
+    <reference value="Observation/nl-core-PainScore-zib-1"/>
+    <type value="Observation"/>
+    <display value="Pain score, measurement date 2013-02-08T06:43:00, score 7"/>
+  </hasMember>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="364632003"/>
+        <display value="aard van pijn"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="162505000"/>
+        <display value="Knellende pijn"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="162442009"/>
+        <display value="duur van klacht bij optreden"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="2"/>
+      <unit value="h"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="h"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="364631005"/>
+        <display value="patroon van pijn"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26593000"/>
+        <display value="Paroxismaal"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="310951000146102"/>
+        <display value="pijnbeloop"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="260369004"/>
+        <display value="Stijgend"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="162483007"/>
+        <display value="klachtverlichtende factoren"/>
+      </coding>
+    </code>
+    <valueString value="Roken"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="439771001"/>
+        <display value="datum van gebeurtenis"/>
+      </coding>
+    </code>
+    <valueDateTime value="2020-08-12"/>
+  </component>
+</Observation>

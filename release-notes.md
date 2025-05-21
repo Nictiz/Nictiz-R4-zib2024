@@ -250,6 +250,10 @@
 * `.effective[x]:effectiveDateTime` ; mapping ; Renamed mapping from O2SaturationDateTime to SpO2SaturationDateTime. ; ZIB-1217
 * `.bodySite` ; mapping ; Added mapping of MeasuringLocation. ; ZIB-1217
 
+## PainCharacteristics (zib-PainCharacteristics , nl-core-PainCharacteristics )
+* `.component:painCourse.code` ; terminology ; Added definition code 310951000146102. ; ZIB-2044
+* `.component:painPattern.value[x]` ; terminology ; Changed codes in PijnPatroonCodelijst. ; ZIB-1907 
+
 ## PainScore (zib-PainScore, nl-core-PainScore)
 * Changed description of PainScore. ; ZIB-1996
 * `.method` ; terminology ; Changed codes in PijnMeetmethodeCodelijst. ; ZIB-2218, ZIB-2549

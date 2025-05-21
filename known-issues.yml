@@ -340,6 +340,13 @@ zib-O2Saturation:
         for: NL-CM:12.10.6 (O2Saturation.MeasuringLocation)
         reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
 
+zib-PainCharacteristics:
+  zib deviations:
+    Observation.bodySite:
+      - datatype: CodeableConcept instead of Reference
+        for: NL-CM:12.21.3 (PainCharacteristics.PainLocation)
+        reason: AnatomicalLocation in FHIR is primarily represented using the CodeableConcept datatype (and secondarily as a reference to BodyStructure within that CodeableConcept), hence the datatype is not Reference.
+
 zib-Patient:
   zib deviations:
     Patient.extension:nationality.extension:code.value[x]:
