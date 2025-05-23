@@ -1,0 +1,47 @@
+name: Deploy Koppeltaal IG
+
+on:
+  on: [pull_request]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Run IG builder
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup JDK version
+        uses: actions/setup-java@v4.0.0
+        with:
+          java-version: 21
+          distribution: temurin
+
+      - name: Install GraphViz and Jekyll
+        run: sudo apt update; sudo apt install graphviz jekyll
+
+      - name: Checkout IG files
+        uses: actions/checkout@v4
+
+      - name: Get IG Publisher jar
+        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
+
+      - name: Use Node.js '20.x'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Get sushi
+        run: npm install -g fsh-sushi
+
+      - name: Run the IG Builder
+        run: |
+          cd IG
+          java -jar publisher.jar -ig ig.ini
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          # Upload output 
+          path: 'IG/output'

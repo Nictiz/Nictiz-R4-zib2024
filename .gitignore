@@ -1,1 +1,8 @@
 .simplifier
+IG/fsh-generated
+IG/input/resources
+IG/input/vocabulary
+IG/input-cache
+IG/temp
+IG/template
+IG/output
