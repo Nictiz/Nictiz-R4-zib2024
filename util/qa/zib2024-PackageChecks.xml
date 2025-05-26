@@ -38,6 +38,12 @@
         <human value="When applying datatype profile zib-AnatomicalLocation, the associated ValueSet should have binding strength extensible." />
         <expression value="'http://nictiz.nl/fhir/StructureDefinition/zib-AnatomicalLocation' in type.profile implies binding.strength = 'extensible'" />
       </constraint>
+      <constraint>
+        <key value="Zib2020PackageChecks-03" />
+        <severity value="warning" />
+        <human value="When referencing the zib-HealthProfessional-PractitionerRole profile, the default explanation should be added to the comment." />
+        <expression value="'http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole' in type.targetProfile implies comment.contains('Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources:')" />
+      </constraint>
     </element>
   </differential>
 </StructureDefinition>

@@ -1,0 +1,42 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-FreedomRestrictingIntervention-zib-2-Le-LegalStatus-1"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-LegalSituation-LegalStatus"/>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title="Legal status (8625004 - SNOMED CT)">Legal status</span>
+        </caption>
+        <tbody>
+          <tr>
+            <th>Code</th>
+            <td>
+              <span title="Crisismaatregel (CM - 2.16.840.1.113883.2.4.3.11.60.40.4.23.2)">Crisismaatregel</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="8625004"/>
+      <display value="Legal status"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.23.2"/>
+      <code value="CM"/>
+      <display value="Crisismaatregel"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-zib-1"/>
+    <type value="Patient"/>
+    <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+  </subject>
+</Condition>

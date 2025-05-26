@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-HoNOSplus" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-HoNOSplus" />
+  <name value="ZibHoNOSplus" />
+  <title value="zib HoNOSplus" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="The Health of the Nation Outcome Scales + (HoNOS+) is an extension of HoNOS that was developed by the UK Department of Health (Wing et al. 1998), with the aim of assessing mental health status and social status in a simple, reliable and valid way mental patients." />
+  <purpose value="This Observation resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) HoNOS+ v1.0 (2024)](https://zibs.nl/wiki/HoNOS%2B-v1.0(2024EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-honosplus-v1.0-2024EN" />
+    <uri value="https://zibs.nl/wiki/HoNOS%2B-v1.0(2024EN)" />
+    <name value="zib HoNOSplus-v1.0(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="HoNOS+" />
+      <alias value="HoNOS+" />
+      <mapping>
+        <identity value="zib-honosplus-v1.0-2024EN" />
+        <map value="NL-CM:4.36.1" />
+        <comment value="HoNOS+" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <short value="DateAcquiring" />
+      <definition value="Date of taking of the HoNOS+." />
+      <alias value="DatumAfname" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="zib-honosplus-v1.0-2024EN" />
+        <map value="NL-CM:4.36.2" />
+        <comment value="DateAcquiring" />
+      </mapping>
+    </element>
+    <element id="Observation.performer">
+      <path value="Observation.performer" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.performer:recipient">
+      <path value="Observation.performer" />
+      <sliceName value="recipient" />
+      <short value="Recipient" />
+      <definition value="Health professional who is responsible for taking of the HoNOS+." />
+      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [zib-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [zib-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
+      <alias value="Afnemer" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole" />
+      </type>
+      <mapping>
+        <identity value="zib-honosplus-v1.0-2024EN" />
+        <map value="NL-CM:4.36.3" />
+        <comment value="Recipient" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.value[x]:valueInteger">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueInteger" />
+      <short value="TotalScoreHoNOS+" />
+      <definition value="The total score is the sum of the individual questions." />
+      <alias value="TotaleScoreHoNOS+" />
+      <type>
+        <code value="integer" />
+      </type>
+      <mapping>
+        <identity value="zib-honosplus-v1.0-2024EN" />
+        <map value="NL-CM:4.36.4" />
+        <comment value="TotalScoreHoNOS+" />
+      </mapping>
+    </element>
+    <element id="Observation.note">
+      <path value="Observation.note" />
+      <max value="1" />
+    </element>
+    <element id="Observation.note.text">
+      <path value="Observation.note.text" />
+      <short value="CommentQuestionPhysicalProblems" />
+      <definition value="An explanation of the question about psychological problems." />
+      <alias value="ToelichtingVraagPsychischeProblemen" />
+      <mapping>
+        <identity value="zib-honosplus-v1.0-2024EN" />
+        <map value="NL-CM:4.36.5" />
+        <comment value="CommentQuestionPhysicalProblems" />
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:hoNOSplusQuestions">
+      <path value="Observation.component" />
+      <sliceName value="hoNOSplusQuestions" />
+      <short value="HoNOS+Questions" />
+      <alias value="HoNOS+Vragen" />
+      <mapping>
+        <identity value="zib-honosplus-v1.0-2024EN" />
+        <map value="NL-CM:4.36.6" />
+        <comment value="HoNOS+Questions" />
+      </mapping>
+    </element>
+    <element id="Observation.component:hoNOSplusQuestions.code">
+      <path value="Observation.component.code" />
+      <short value="HoNOS+Question" />
+      <definition value="The question of the HoNOS+." />
+      <alias value="HoNOS+Vraag" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.36.1--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-honosplus-v1.0-2024EN" />
+        <map value="NL-CM:4.36.7" />
+        <comment value="HoNOS+Question" />
+      </mapping>
+    </element>
+    <element id="Observation.component:hoNOSplusQuestions.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="HoNOS+Answer" />
+      <definition value="The answer of the individual question of the HoNOS+." />
+      <alias value="HoNOS+Antwoord" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.4.36.2--20240415000000" />
+      </binding>
+      <mapping>
+        <identity value="zib-honosplus-v1.0-2024EN" />
+        <map value="NL-CM:4.36.8" />
+        <comment value="HoNOS+Answer" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
