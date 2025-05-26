@@ -1,4 +1,4 @@
-name: Deploy Koppeltaal IG
+name: Build IG of affected artifacts
 
 on: [pull_request]
 
@@ -33,7 +33,7 @@ jobs:
       - name: Run the IG Builder
         run: |
           cd IG
-          java -jar publisher.jar -ig ig.ini
+          java -jar ../publisher.jar -ig ig.ini
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
