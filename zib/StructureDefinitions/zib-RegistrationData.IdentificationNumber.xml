@@ -49,13 +49,8 @@
         <coding>
           <system value="http://snomed.info/sct" />
           <code value="396278008" />
-          <display value="identificatienummer" />
         </coding>
       </patternCodeableConcept>
-    </element>
-    <element id="Identifier.system">
-      <path value="Identifier.system" />
-      <patternUri value="oid:AssigningAuthorityOID" />
     </element>
   </differential>
 </StructureDefinition>
