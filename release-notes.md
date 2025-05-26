@@ -179,6 +179,13 @@
 ### zib-HealthProfessional-PractitionerRole, nl-core-HealthProfessional-PractitionerRole
 * `.specialty:specialty` ; terminology ; Changed codes in SpecialismeCodelijsten (SpecialismeAGBCodelijst and SpecialismeUZICodelijst). ; ZIB-2218, ZIB-2549
 
+## HeartRate
+### zib-HeartRate, nl-core-HeartRate
+* `.method` ; terminology ; Changed codes in MeetMethodeCodelijst. ; ZIB-1575
+
+### zib-HeartRate.HeartbeatRegularity, nl-core-HeartRate.HeartbeatRegularity
+* `.value[x]` ; terminology ; Changed codes in HartslagRegelmatigheidCodelijst. ; ZIB-1575
+
 ## HoNOSplus (zib-HoNOSplus, nl-core-HoNOSplus)
 * New profile.
 
