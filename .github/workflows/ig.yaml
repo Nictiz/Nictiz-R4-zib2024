@@ -13,8 +13,8 @@ jobs:
           java-version: 21
           distribution: temurin
 
-      # - name: Install GraphViz and Jekyll
-      #   run: sudo apt update; sudo apt install graphviz jekyll
+      - name: Install GraphViz and Jekyll
+        run: sudo apt update; sudo apt install graphviz jekyll
 
       - name: Checkout repo
         uses: actions/checkout@v4
