@@ -23,7 +23,7 @@
   <mapping>
     <identity value="zib-heartrate-v3.4.1-2024EN" />
     <uri value="https://zibs.nl/wiki/HeartRate-v3.4.1(2024EN)" />
-    <name value="zib HeartRate-v3.4.1-2024EN" />
+    <name value="zib HeartRate-v3.4.1(2024EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="true" />
