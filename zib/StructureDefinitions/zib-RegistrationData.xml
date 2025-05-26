@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="zib-RegistrationData" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-RegistrationData" />
+  <name value="ZibRegistrationData" />
+  <title value="zib RegistrationData" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Registration data contains the information that originates during the registration process of data in the patient record, such as, for instance, when and by whom the information was registered." />
+  <purpose value="This Provenance resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) RegistrationData v1.1.1 (2024)](https://zibs.nl/wiki/RegistrationData-v1.1.1(2024EN)). This profile also includes the concepts IdentificationNumber and CopyIndicator. In FHIR, these elements are handled in different resources, which are referenced via `.target`. Specifically, IdentificationNumber is represented using the Identifier datatype and mapped to `Resource.identifier`, while CopyIndicator is mapped to `Resource.meta.tag`. To implement this profile, the Provenance resource should be used in conjunction with the referenced resources where the IdentificationNumber and CopyIndicator concepts are present." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-registrationdata-v1.1.1-2024EN" />
+    <uri value="https://zibs.nl/wiki/RegistrationData-v1.1.1(2024EN)" />
+    <name value="zib RegistrationData-v1.1.1(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="Provenance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Provenance">
+      <path value="Provenance" />
+      <short value="RegistrationData" />
+      <comment value="## Mapping RegistrationData &quot;events&quot; to Provenance&#xD;&#xA;The zib RegistrationData is represented by one or more FHIR Provenance resources. This one-to-many mapping approach is necessary due to a fundamental difference in granularity between the source model and the FHIR standard.&#xD;&#xA;&#xD;&#xA;The zib RegistrationData consolidates information about multiple, distinct events that occur during a registration's lifecycle (e.g., its initial acquisition, registration to the patient record, and final closure) into a single logical record. In contrast, the FHIR Provenance resource is designed to describe a single, specific event or activity. For example, if a single RegistrationData record contains both AcquisitionDateTime and a DatTimeOfClosure, it will result in at least two separate Provenance resources:&#xD;&#xA;&#xD;&#xA;1. One Provenance resource for the &quot;acquisition event&quot;, where `Provenance.occurredDateTime` is populated from AcquisitionDateTime.&#xD;&#xA;2. Another Provenance resource for the &quot;closure event&quot;, where `Provenance.occurredDateTime` is populated from DatTimeOfClosure.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;## RegistrationData concepts mapped to all resources&#xD;&#xA;The IdentificationNumber (NL-CM:22.1.12) and CopyIndicator (NL-CM:22.1.11) concepts are not mapped to the Provenance resource but rather to elements present on all resources.&#xD;&#xA;&#xD;&#xA;The IdentificationNumber is mapped to a slice of all resource's `.identifier` element. The CopyIndicator is mapped to the resources' `.meta.tag` element. The presence of a specific coding in the `.meta.tag` list signifies that the CopyIndicator is `true`. The absence of this tag signifies `false`.&#xD;&#xA; &#xD;&#xA;&#xD;&#xA;## Overlapping Provenance information&#xD;&#xA;Many FHIR resources include elements that capture information about the resource's origin and handling, which can overlap with the purpose of the Provenance resource. For instance, `AllergyIntolerance.recordedDate` mirrors the function of `Provenance.recorded`, and `DeviceUseStatement.source` is analogous to an agent in `Provenance.agent`.&#xD;&#xA;&#xD;&#xA;When creating a FHIR resource, prioritize populating its own specific elements for tracking origin and handling. For example, use `AllergyIntolerance.recordedDate` rather than relying solely on the Provenance resource. The Provenance resource may then be used to provide a more comprehensive audit trail." />
+      <alias value="RegistratieGegevens" />
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.1" />
+        <comment value="RegistrationData" />
+      </mapping>
+    </element>
+    <element id="Provenance.extension">
+      <path value="Provenance.extension" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.extension:reasonDataAbsent">
+      <path value="Provenance.extension" />
+      <sliceName value="reasonDataAbsent" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-RegistrationData.ReasonDataAbsent" />
+      </type>
+    </element>
+    <element id="Provenance.extension:acquisitionMethod">
+      <path value="Provenance.extension" />
+      <sliceName value="acquisitionMethod" />
+      <min value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-RegistrationData.AcquisitionMethod" />
+      </type>
+    </element>
+    <element id="Provenance.occurred[x]">
+      <path value="Provenance.occurred[x]" />
+      <short value="AcquisitionDateTime / DateTimeOfClosure" />
+      <definition value="This can be either the date and time of acquisition or the date and time of closure. The date and time of acquisition indicate when the information became available, which may be earlier than when it was entered into the patient record. The date and time of closure indicate when it was recorded in the patient record that the information is no longer relevant, for example, because it is outdated or no longer requires attention." />
+      <comment value="Because a Provenance resource represents a single event, it contains either the AcquisitionDateTime and DatTimeOfClosure, but not both." />
+      <alias value="AfsluitDatumTijd" />
+      <alias value="DatumTijdVanVerkrijgen" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.9" />
+        <comment value="AcquisitionDateTime" />
+      </mapping>
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.5" />
+        <comment value="DateTimeOfClosure" />
+      </mapping>
+    </element>
+    <element id="Provenance.recorded">
+      <path value="Provenance.recorded" />
+      <short value="RegistrationDateTime" />
+      <definition value="Date and time when the information was recorded in the patient record." />
+      <alias value="RegistratieDatumTijd" />
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.3" />
+        <comment value="RegistrationDateTime" />
+      </mapping>
+    </element>
+    <element id="Provenance.reason.text">
+      <path value="Provenance.reason.text" />
+      <short value="RegistrationReason / ReasonForClosing" />
+      <definition value="Description of the reason for including the information in the patient record or the reason why updating the information, or following changes in the the concept in question is no longer considered relevant. For example, in the case of a condition, this does not mean that the disease is no longer present, but merely that the holder of the patients record no longer considers the condition as an aspect to be taken into account during care provision." />
+      <comment value="Both RegistrationReason and ReasonForClosing are mapped to `.reason.text`. Because a Provenance resource represents a single event, it contains either a change in the registration process or the closure of it, but not both." />
+      <alias value="RedenVanVastleggen" />
+      <alias value="RedenVanAfsluiten" />
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.4" />
+        <comment value="RegistrationReason" />
+      </mapping>
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.6" />
+        <comment value="ReasonForClosing" />
+      </mapping>
+    </element>
+    <element id="Provenance.agent">
+      <path value="Provenance.agent" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Provenance.agent:author">
+      <path value="Provenance.agent" />
+      <sliceName value="author" />
+      <min value="1" />
+      <max value="1" />
+      <condition value="zib-RegistrationData-2" />
+    </element>
+    <element id="Provenance.agent:author.type">
+      <path value="Provenance.agent.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
+          <code value="author" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Provenance.agent:author.who">
+      <path value="Provenance.agent.who" />
+      <short value="Author" />
+      <definition value="The person who has is responsible for entering the information in de patient's record. It concerns not only own observations, but also information received from third parties. The author has decided to include the information in the file if necessary with source reference." />
+      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [zib-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [zib-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
+      <alias value="Auteur" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole" />
+      </type>
+      <condition value="zib-RegistrationData-2" />
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.2" />
+        <comment value="Author" />
+      </mapping>
+    </element>
+    <element id="Provenance.agent:informationSource">
+      <path value="Provenance.agent" />
+      <sliceName value="informationSource" />
+      <max value="1" />
+    </element>
+    <element id="Provenance.agent:informationSource.type">
+      <path value="Provenance.agent.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
+          <code value="informant" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Provenance.agent:informationSource.who">
+      <path value="Provenance.agent.who" />
+      <short value="ContactPerson / HealthProfessional / Patient" />
+      <definition value="If the recorded information has not been assessed by the attending physician, the source of the information can be recorded. The source of information can be the health professional, the contact person or the patient." />
+      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [zib-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [zib-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
+      <alias value="Contactpersoon" />
+      <alias value="Patient" />
+      <alias value="Zorgverlener" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Patient" />
+      </type>
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.15" />
+        <comment value="ContactPerson" />
+      </mapping>
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.14" />
+        <comment value="HealthProfessional" />
+      </mapping>
+      <mapping>
+        <identity value="zib-registrationdata-v1.1.1-2024EN" />
+        <map value="NL-CM:22.1.16" />
+        <comment value="Patient" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
