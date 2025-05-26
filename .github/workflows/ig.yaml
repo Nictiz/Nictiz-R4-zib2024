@@ -13,14 +13,14 @@ jobs:
           java-version: 21
           distribution: temurin
 
-      - name: Install GraphViz and Jekyll
-        run: sudo apt update; sudo apt install graphviz jekyll
+      # - name: Install GraphViz and Jekyll
+      #   run: sudo apt update; sudo apt install graphviz jekyll
 
-      - name: Checkout IG files
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Get IG Publisher jar
-        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
+        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o IG/publisher.jar
 
       - name: Use Node.js '20.x'
         uses: actions/setup-node@v3
@@ -33,7 +33,8 @@ jobs:
       - name: Run the IG Builder
         run: |
           cd IG
-          java -jar ../publisher.jar -ig ig.ini
+          pwd
+          java -jar publisher.jar -ig ig.ini
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
