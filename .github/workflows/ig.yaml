@@ -33,7 +33,7 @@ jobs:
       - name: Run the IG Builder
         run: |
           cd IG
-          pwd
+          sushi .
           java -jar publisher.jar -ig ig.ini
 
       - name: Upload artifact
