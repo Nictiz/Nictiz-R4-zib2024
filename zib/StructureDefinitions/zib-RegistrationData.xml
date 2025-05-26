@@ -34,7 +34,7 @@
     <element id="Provenance">
       <path value="Provenance" />
       <short value="RegistrationData" />
-      <comment value="Many FHIR resources include elements that capture information about the resource's origin and handling, which can overlap with the purpose of the Provenance resource. For instance, `AllergyIntolerance.recordedDate` mirrors the function of `Provenance.recorded`, and `DeviceUseStatement.source` is analogous to an agent in `Provenance.agent`.&#xD;&#xA;&#xD;&#xA;When creating a FHIR resource, prioritize populating its own specific elements for tracking origin and handling. For example, use `AllergyIntolerance.recordedDate` rather than relying solely on the Provenance resource. The Provenance resource may then be used to provide a more comprehensive audit trail." />
+      <comment value="The zib RegistrationData is represented by one or more FHIR Provenance resources. This one-to-many mapping approach is necessary due to a fundamental difference in granularity between the source model and the FHIR standard.&#xD;&#xA;&#xD;&#xA;The zib RegistrationData consolidates information about multiple, distinct events that occur during a registration's lifecycle (e.g., its initial acquisition, registration to the patient record, and final closure) into a single logical record. In contrast, the FHIR Provenance resource is designed to describe a single, specific event or activity. For example, if a single RegistrationData record contains both AcquisitionDateTime and a DatTimeOfClosure, it will result in at least two separate Provenance resources:&#xA;&#xA;1. One Provenance resource for the &quot;acquisition event&quot;, where `Provenance.occurredDateTime` is populated from AcquisitionDateTime.&#xA;2. Another Provenance resource for the &quot;closure event&quot;, where `Provenance.occurredDateTime` is populated from DatTimeOfClosure.&#xD;&#xA;&#xD;&#xA;Many FHIR resources include elements that capture information about the resource's origin and handling, which can overlap with the purpose of the Provenance resource. For instance, `AllergyIntolerance.recordedDate` mirrors the function of `Provenance.recorded`, and `DeviceUseStatement.source` is analogous to an agent in `Provenance.agent`.&#xD;&#xA;&#xD;&#xA;When creating a FHIR resource, prioritize populating its own specific elements for tracking origin and handling. For example, use `AllergyIntolerance.recordedDate` rather than relying solely on the Provenance resource. The Provenance resource may then be used to provide a more comprehensive audit trail." />
       <alias value="RegistratieGegevens" />
       <mapping>
         <identity value="zib-registrationdata-v1.1.1-2024EN" />
@@ -67,7 +67,7 @@
       <path value="Provenance.occurred[x]" />
       <short value="AcquisitionDateTime / DateTimeOfClosure" />
       <definition value="This can be either the date and time of acquisition or the date and time of closure. The date and time of acquisition indicate when the information became available, which may be earlier than when it was entered into the patient record. The date and time of closure indicate when it was recorded in the patient record that the information is no longer relevant, for example, because it is outdated or no longer requires attention." />
-      <comment value="Both AcquisitionDateTime and DateTimeOfClosure are mapped to `.occurredDateTime`. Each RegistrationData contains information about either the date and time when the information became available or when it was determined to be no longer relevant, but never both. Therefore, AcquisitionDateTime and DateTimeOfClosure will never appear together within the same RegistrationData instance." />
+      <comment value="Because a Provenance resource represents a single event, it contains either the AcquisitionDateTime and DatTimeOfClosure, but not both." />
       <alias value="AfsluitDatumTijd" />
       <alias value="DatumTijdVanVerkrijgen" />
       <type>
@@ -99,7 +99,7 @@
       <path value="Provenance.reason.text" />
       <short value="RegistrationReason / ReasonForClosing" />
       <definition value="Description of the reason for including the information in the patient record or the reason why updating the information, or following changes in the the concept in question is no longer considered relevant. For example, in the case of a condition, this does not mean that the disease is no longer present, but merely that the holder of the patients record no longer considers the condition as an aspect to be taken into account during care provision." />
-      <comment value="Both RegistrationReason and ReasonForClosing are mapped to `.reason.text`. Each RegistrationData instance represents either a change in the registration process or the closure of it, but not both. Therefore, RegistrationReason and ReasonForClosing will never appear together within the same RegistrationData instance." />
+      <comment value="Both RegistrationReason and ReasonForClosing are mapped to `.reason.text`. Because a Provenance resource represents a single event, it contains either a change in the registration process or the closure of it, but not both." />
       <alias value="RedenVanVastleggen" />
       <alias value="RedenVanAfsluiten" />
       <mapping>
