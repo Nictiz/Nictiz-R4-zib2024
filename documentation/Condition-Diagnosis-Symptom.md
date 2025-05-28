@@ -68,7 +68,7 @@ flowchart TB
     * For the zib-Symptom profile: the `.status` is set to _final_ and `component:symptomPeriod.extension:extTimeIntervalPeriod.value[x].end` is included.
     * For the zib-Symptom-Condition: the `.component:symptomCourse.valueCodeableConcept` is set to _no longer present_, the `.clinicalStatus` is set to _inactive_, and the `.abatement[x]` is included.
 * When a symptom is ruled out based on clinical judgment:
-    * DISCUSSION For the zib-Symptom profile: `.interpretation` is set to _Negative_.
+    * DISCUSSION For the zib-Symptom profile: `.interpretation` is set to _Negative_ (+ .status=final?).
     * For the zib-Symptom-Condition: the `.verificationStatus` is set to _refuted_.
 * When the condition is resolved (i.e. the patient no longer experiences it), the `.clinicalStatus` is set to _inactive_ and the `.abatement[x]` is included if known.
 * Diagnosis concepts are mapped in both zib-ConditionAndDiagnosis and zib-ConditionAndDiagnosis-ClinicalImpression profiles. However, the concepts _MethodOfConfirmation_ (NL-CM:5.6.5), _Comment_ (NL-CM:5.6.11), and _Condition_ (NL-CM:5.6.10) are mapped only in zib-ConditionAndDiagnosis. Conversely, the concepts in the _Reason_ container (NL-CM:5.6.13), _IsComplication_ (NL-CM:5.6.12), _AnatomicalLocation_ (NL-CM:5.6.9), and _DiagnosisStatus_ (NL-CM:5.6.4) are mapped only in zib-ConditionAndDiagnosis-ClinicalImpression.
@@ -554,7 +554,7 @@ NewSymptom_C -- create --> SO_C
 NewSymptom_C -- update --> CD_A
 ```
 
-### 5. Healthprofessional updates the anatomical location of symptom A
+### 5a. Healthprofessional adds the anatomical location of symptom A (Condition)
 ```mermaid
 flowchart TB
 
@@ -562,7 +562,7 @@ UpdateSymptom_A["`Update Symptom A`"]
     S_A["`**Condition**
         (zib-Symptom-Condition)
         --------------------
-        .id = _5S_A_
+        .id = _5AS_A_
         .bodySite = [Anatomical location]`"]
   
     S_A:::Ash
@@ -571,7 +571,41 @@ UpdateSymptom_A["`Update Symptom A`"]
 UpdateSymptom_A -- update --> S_A
 ```
 
-### 6. Symptom A has resolved and patient gets a new Symptom D for Condition A 
+### 5b. Healthprofessional adds the anatomical location of symptom A (Observation)
+```mermaid
+flowchart TB
+
+UpdateSymptom_A["`Update Symptom A`"]
+    S_A["`**Observation**
+        (zib-Symptom)
+        --------------------
+        .id = _5BS_A2_
+        .bodySite = [Anatomical location]`"]
+  
+    S_A:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+UpdateSymptom_A -- create --> S_A
+```
+
+### 5c. Healthprofessional adds a second anatomical location of symptom A (Observation)
+```mermaid
+flowchart TB
+
+UpdateSymptom_A["`Update Symptom A`"]
+    S_A["`**Observation**
+        (zib-Symptom)
+        --------------------
+        .id = _5BS_A3_
+        .extension:anatomicalLocation = [Anatomical location]`"]
+  
+    S_A:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+UpdateSymptom_A -- create --> S_A
+```
+
+### 6a. Symptom A (Condition) has resolved and patient gets a new Symptom D (Condition) for Condition A 
 
 ```mermaid
 flowchart TB
@@ -586,7 +620,7 @@ CloseSymptom_A -.-> NewSymptom_D
         --------------------
         .id = _6S_A_
         .clinicalStatus = _inactive_|_resolved_
-        .abatement[x] = [past date]`"]    
+        .abatement[x] = [end event]`"]    
 
     SC_B["`**Observation**
         (zib-Symptom.Characteristics)
@@ -624,7 +658,46 @@ NewSymptom_D -- create --> SC_D
 NewSymptom_D -- update --> CD_A
 ```
 
-### 7. Symptom A has resolved and there is a new Diagnosis B for Condition A 
+### 6b. Symptom A (Observation) has resolved and patient gets a new Symptom D (Observation) for Condition A 
+
+```mermaid
+flowchart TB
+
+CloseSymptom_A["`Close Symptom A`"]
+NewSymptom_D["`New Symptom D related to Condition A`"]
+
+CloseSymptom_A -.-> NewSymptom_D
+
+    S_A["`**Observation**
+        (zib-Symptom)
+        --------------------
+        .id = _6S_A2_
+        .status = _final_
+        .component:symptomCourse = _no longer present_
+        .component:symptomPeriod = [end event]`"]           
+
+    CD_A["`**Condition**
+        (zib-ConditionAndDiagnosis)
+        --------------------
+        .id = _6CD_A_
+        .evidence.detail = _6S_D_`"] 
+
+    S_D["`**Observation**
+        (zib-Symptom)
+        --------------------
+        .id = _6S_D_`"]   
+
+    S_A:::Ash
+    CD_A:::Ash
+    S_D:::Ash
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+CloseSymptom_A -- create --> S_A
+NewSymptom_D -- create --> S_D
+NewSymptom_D -- update --> CD_A
+```
+
+### 7. Symptom A (Condition) has resolved and there is a new Diagnosis B for Condition A 
 
 ```mermaid
 flowchart TB
@@ -639,7 +712,7 @@ CloseSymptom_A -.-> NewDiagnosis_B
         --------------------
         .id = _7S_A_
         .clinicalStatus = _inactive_|_resolved_
-        .abatement[x] = [past date]`"]    
+        .abatement[x] = [end event]`"]    
 
     SC_B["`**Observation**
         (zib-Symptom.Characteristics)
@@ -678,7 +751,7 @@ NewDiagnosis_B -- create --> CD_B
 NewDiagnosis_B -- create --> CDCI_B
 ```
 
-### 8. Symptom A has resolved along with the related condition A
+### 8. Symptom A (Condition) has resolved along with the related condition A
 
 ```mermaid
 flowchart TB
@@ -694,7 +767,7 @@ CloseSymptom_A -.-> CloseDiagnosis_B
         --------------------
         .id = _8S_A_
         .clinicalStatus = _inactive_|_resolved_
-        .abatement[x] = [past date]
+        .abatement[x] = [end event]
         `"]    
 
     SC_B["`**Observation**
@@ -711,7 +784,7 @@ CloseSymptom_A -.-> CloseDiagnosis_B
         .id = _8CD_A_
         .extension.condition-course = 'niet meer aanwezig'
         .clinicalStatus = _inactive_|_resolved_
-        .abatement[x] = [past date]
+        .abatement[x] = [end event]
         `"] 
    
     S_A:::Ash
@@ -724,7 +797,7 @@ CloseSymptom_A -- create --> SC_B
 CloseDiagnosis_B -- update --> CD_B
 ```
 
-### 9. Healthprofessional rules out Symptom B for Condition A
+### 9a. Healthprofessional rules out Symptom B (Condition) for Condition A
 
 ```mermaid
 flowchart TB
@@ -734,7 +807,7 @@ UpdateSymptom_A["`Update Symptom B`"]
     S_A["`
         **Condition**
         (zib-Symptom-Condition)
-        .id = _9S_A_
+        .id = _9S_B_
         .verificationStatus = _refuted_
         `"]    
    
@@ -743,6 +816,29 @@ UpdateSymptom_A["`Update Symptom B`"]
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
 
 UpdateSymptom_A -- update --> S_A
+
+```
+
+### 9b. Healthprofessional rules out Symptom B (Observation) for Condition A
+
+```mermaid
+flowchart TB
+
+UpdateSymptom_A["`Update Symptom B`"]
+
+    S_A["`
+        **Observation**
+        (zib-Symptom)
+        .id = _9S_B_
+        .status = _final_
+        .interpretation = _negative_
+        `"]    
+   
+    S_A:::Ash
+
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+UpdateSymptom_A -- create --> S_A
 
 ```
 
@@ -1070,5 +1166,5 @@ UpdateClinicalImpression -- update --> CDCI_A
 
 ### 20. All scenario's with inactivating -> RegistrationData
 
-### 23. Scneario's of Astrid (pp)
+### 21. Adjust scenario's to include hcim Exclusion
 
