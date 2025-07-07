@@ -18,6 +18,9 @@
 ## AbilityToGroom (zib-AbilityToGroom, nl-core-AbilityToGroom)
 * No significant changes.
 
+## AbilityToManageMedication (zib-AbilityToManageMedication, nl-core-AbilityToManageMedication)
+* No significant changes
+
 ## AbilityToUseToilet 
 ### zib-AbilityToUseToilet, nl-core-AbilityToUseToilet
 * No significant changes.
