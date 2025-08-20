@@ -133,6 +133,22 @@
 ## Education (zib-Education, nl-core-Education)
 * `.value[x]` ; terminology ; Changed value set from SchooltypeCodelijsten to SchooltypeCBSCodelijst. ; ZIB-1575
 
+## Encounter (zib-Encounter, nl-core-Encounter)
+* Zib Encounter has been refined and several concepts have been moved to the new zib Admission. ; ZIB-1545, ZIB-1104
+* `.status` ; textual ; Refined guidance for DateTime. ; ZIB-1545, ZIB-1104
+* `.class` ; mapping ; Added mapping of EncounterSetting. ; ZIB-1545, ZIB-1104
+* `.type:encounterType` ; slicing ; Added EncounterType to a slice. ; ZIB-1545, ZIB-1104
+* `.type:encounterType` ; terminology ; Changed codes in EncounterTypeCodelist. ; ZIB-1906
+* `.type:reason` ; slicing ; Added mapping of Reason. ; ZIB-1545, ZIB-1104
+* `.type:reason.text` ; mapping ; Moved mapping of CommentEncounterReason from `.reasonCode.extension:commentEncounterReason` and `.reasonReference.extension:commentContactReason`. ; ZIB-1545, ZIB-1104
+* `.participant:responsibleHealthProfessional.individual` ; slicing ; Added ResponsibleHealthProfessional to a slice. ; ZIB-1545, ZIB-1104
+* `.period.start` ; textual ; Renamed from StartDateTime to DateTime. ; ZIB-1545, ZIB-1104
+* `.period.end` ; mapping ; Removed mapping of EndDateTime. ; ZIB-1545, ZIB-1104
+* `.reasonCode:deviatingResult` ; mapping ; Removed mapping of DeviatingResult. ; ZIB-1545, ZIB-1104
+* `.reasonReference:procedure` ; mapping ; Removed mapping of Procedure. ; ZIB-1545, ZIB-1104
+* `.hospitalization.admitSource` ; mapping ; Removed mapping of Origin. ; ZIB-1545, ZIB-1104
+* `.hospitalization.dischargeDisposition` ; mapping ; Removed mapping of Destination. ; ZIB-1545, ZIB-1104, ZIB-1824
+
 ## EpisodeOfCare (zib-EpisodeOfCare, nl-core-EpisodeOfCare)
 * `.extension:comment` ; extension ; Replaced extension ExtComment with Note. ; ZIBFHIR-97
 
