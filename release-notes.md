@@ -228,6 +228,25 @@
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218, ZIB-2549
 
+## Mobility
+### zib-Mobility, nl-core-Mobility 
+* No significant changes.
+
+### zib-Mobility.ChangingPosition, nl-core-Mobility.ChangingPosition
+* No significant changes.
+
+### zib-Mobility.ClimbingStairs, nl-core-Mobility.ClimbingStairs
+* No significant changes.
+
+### zib-Mobility.MaintainingPosition, nl-core-Mobility.MaintainingPosition
+* No significant changes.
+
+### zib-Mobility.Transfer, nl-core-Mobility.Transfer
+* `.value[x]` ; terminology ; Changed codes in TransferCodelist. ; ZIB-1575
+
+### zib-Mobility.Walking, nl-core-Mobility.Walking
+* No significant changes.
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
