@@ -6,7 +6,8 @@
 	"description": "NL package of FHIR R4 conformance resources for zib (Zorginformatiebouwstenen, Clinical Information Models) release 2024.",
 	"dependencies": {
 		"hl7.fhir.r4.core": "4.0.x",
-		"nictiz.fhir.nl.r4.2024.zib": "0.0.1-beta.1"
+		"nictiz.fhir.nl.r4.2024.zib": "0.0.1-beta.1",
+		"hl7.fhir.uv.ips": "1.1.0"
 	},
 	"fhirVersions": [
 		"4.0.0"

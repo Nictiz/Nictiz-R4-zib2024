@@ -76,6 +76,31 @@
 * `.value[x]` ; terminology ; Changed value set from ZibBodyWeightUnits to BodyWeightUnits. ; ZIBFHIR-178
 * `.component:clothing.value[x]` ; terminology ; Changed codes in KledingCodelijst. ; ZIB-1704
 
+## BurnWound
+### zib-BurnWound, nl-core-BurnWound
+* `.bodySite.extension:laterality.value[x]` ; mapping ; Removed mapping of Laterality ; ZIB-1951
+
+### zib-BurnWound.Extent, nl-core-BurnWound.Extent
+* No significant changes.
+
+### zib-wounds.WoundCharacteristics, nl-core-wounds.WoundCharacteristics
+* No significant changes.
+
+### zib-wounds.WoundWidth, nl-core-wounds.WoundWidth
+* No significant changes.
+
+### zib-wounds.WoundLength, nl-core-wounds.WoundLength
+* No significant changes.
+
+### zib-wounds.WoundImage, nl-core-wounds.WoundImage
+* No significant changes.
+
+### zib-wounds.WoundDepth, nl-core-wounds.WoundDepth
+* No significant changes.
+
+### zib-wounds.DateOfLastDressingChange, nl-core-wounds.DateOfLastDressingChange
+* No significant changes.
+
 ## CareTeam (zib-CareTeam, nl-core-CareTeam) 
 * No significant changes.
 
@@ -228,6 +253,14 @@
 ## MaritalStatus (zib-Patient, nl-core-Patient)
 * `.maritalStatus` ; terminology ; Changed codes in BurgerlijkeStaatCodelijst. ; ZIB-2218, ZIB-2549
 
+## MedicalDevice
+### zib-MedicalDevice, nl-core-MedicalDevice
+* No significant changes
+
+### zib-MedicalDevice.Product, nl-core-MedicalDevice.Product
+* `.type` ; terminology ; Added additional binding to ProductTypeImplantatenCodelijst (using a combined ValueSet) (although it is a subset of the existing ValueSet ProductTypeCodelijst) ; ZIB-1279
+* `.type` ; terminology ; Removed codes for negation of visual aid and hearing aid, and adopted the generic negation codes from the "Absent or Unknown Devices" ValueSet in the IPS/EPS instead ; ZIB-1536, ZIBFHIR-228
+
 ## NameInformation
 ### zib-NameInformation
 * No significant changes.
@@ -284,6 +317,29 @@
 ### zib-Payer.PayerPerson, nl-core-Payer.PayerPerson
 * `Coverage` ; mapping ; Moved mapping of PayerPerson from `.payor`. ; ZIBFHIR-196
 
+## PressureUlcer
+### zib-PressureUlcer, nl-core-PressureUlcer
+* `.code` ; terminology ; Pattern changed from http://snomed.info/sct#399912005 to http://snomed.info/sct#1163215007. ; ZIB-1765
+* `.stage.summary` ; terminology ; Changed codes in DecubitusCategorieCodelijst. ; ZIB-1482, ZIB-2218
+
+### zib-wounds.WoundCharacteristics, nl-core-wounds.WoundCharacteristics
+* No significant changes.
+
+### zib-wounds.WoundWidth, nl-core-wounds.WoundWidth
+* No significant changes.
+
+### zib-wounds.WoundLength, nl-core-wounds.WoundLength
+* No significant changes.
+
+### zib-wounds.WoundImage, nl-core-wounds.WoundImage
+* No significant changes.
+
+### zib-wounds.WoundDepth, nl-core-wounds.WoundDepth
+* No significant changes.
+
+### zib-wounds.DateOfLastDressingChange, nl-core-wounds.DateOfLastDressingChange
+* No significant changes.
+
 ## Problem (zib-Problem, nl-core-Problem)
 * `.code` ; terminology ; Changed codes in ProbleemNaamCodelijst. ; ZIB-1477, ZIB-1575, ZIB-2087, ZIB-2218, ZIB-2549
 * `.code.text` ; mapping ; Moved mapping of FurtherSpecificationProblemName from `.code.extension:furtherSpecificationProblemName.value[x]`. ; ZIBFHIR-145
@@ -309,4 +365,44 @@
 * `.component:assistedEatingScore.value[x]` ; mapping ; Renamed mapping from AssistedEating to AssistedEatingScore. ; ZIB-1633
 
 ## SNAQScore (zib-SNAQScore, nl-core-SNAQScore)
+* No significant changes.
+
+## Wound
+### zib-Wound, nl-core-Wound
+* `.code` ; terminology ; Changed codes in WondSoortCodelijst. ; ZIB-2042
+
+### zib-Wound.WoundTissue, nl-core-Wound.WoundTissue
+* No significant changes.
+
+### zib-Wound.WoundMoisture, nl-core-Wound.WoundMoisture
+* No significant changes.
+
+### zib-Wound.WoundInfection, nl-core-Wound.WoundInfection
+* No significant changes.
+
+### zib-Wound.Drain, nl-core-Wound.Drain
+* No significant changes.
+
+### zib-Wound.Drain.Product, nl-core-Wound.Drain.Product
+* No significant changes.
+
+### zib-Wound.WoundEdge, nl-core-Wound.WoundEdge
+* No significant changes.
+
+### zib-wounds.WoundCharacteristics, nl-core-wounds.WoundCharacteristics
+* No significant changes.
+
+### zib-wounds.WoundWidth, nl-core-wounds.WoundWidth
+* No significant changes.
+
+### zib-wounds.WoundLength, nl-core-wounds.WoundLength
+* No significant changes.
+
+### zib-wounds.WoundImage, nl-core-wounds.WoundImage
+* No significant changes.
+
+### zib-wounds.WoundDepth, nl-core-wounds.WoundDepth
+* No significant changes.
+
+### zib-wounds.DateOfLastDressingChange, nl-core-wounds.DateOfLastDressingChange
 * No significant changes.
