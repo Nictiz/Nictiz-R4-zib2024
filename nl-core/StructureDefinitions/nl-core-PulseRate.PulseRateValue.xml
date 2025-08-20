@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-PulseRate.PulseRateValue" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PulseRate.PulseRateValue" />
+  <name value="NlcorePulseRatePulseRateValue" />
+  <title value="nl core PulseRate.PulseRateValue" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="The value of the pulse rate measured. The pulse rate is expressed in the number of tangible pulsations of an artery per minute, usually the a. radialis, a. carotis or a. femoralis." />
+  <purpose value="A derived profile from [zib-PulseRate.PulseRateValue](http://nictiz.nl/fhir/StructureDefinition/zib-PulseRate.PulseRateValue) to provide a version better suited for implementation purposes. This profile augments the base profile with elements found in the various use cases that have adopted the zib." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-pulserate-v3.3-2024EN" />
+    <uri value="https://zibs.nl/wiki/PulseRate-v3.3(2024EN)" />
+    <name value="zib PulseRate-v3.3(2024EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-PulseRate.PulseRateValue" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <comment value="This Observation resource represents the PulseRateValue concept (NL-CM:12.7.2) of zib PulseRate. It can be used together with the [nl-core-PulseRate](http://nictiz.nl/fhir/StructureDefinition/nl-core-PulseRate) profile on the Observation resource, which groups references to the current and other resources on `Observation.hasMember`." />
+      <alias value="nl-core-PulseRate.PulseRateValue" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
