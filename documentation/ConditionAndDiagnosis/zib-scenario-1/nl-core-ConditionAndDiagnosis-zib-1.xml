@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
+   <id value="nl-core-ConditionAndDiagnosis-zib-1"/>
+   <meta>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ConditionAndDiagnosis"/>
+   </meta>
+   <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Condition.StatusDate">
+      <valuedateTime value="2023-03-01"/>
+   </extension>
+   <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Diagnosis.MethodOfConfirmation">
+      <valueCodeableConcept>
+         <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="63332003"/>
+            <display value="Anamnese en lichamelijk onderzoek"/>
+         </coding>
+      </valueCodeableConcept>
+   </extension>
+   <severity>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="255604002"/>
+         <display value="Licht"/>
+      </coding>
+   </severity>
+   <code>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="32398004"/>
+         <display value="Bronchitis (disorder)"/>
+      </coding>
+   </code>
+   <subject>
+      <reference value="Patient/nl-core-Patient-alt-1"/>
+      <type value="Patient"/>
+      <display value="Patient, Peter Jan (PeJe) Jansen"/>
+   </subject>
+   <asserter>
+      <reference value="PractitionerRole/nl-core-HealthProfessional-PractitionerRole-zib-1"/>
+      <type value="PractitionerRole"/>
+      <display value="Health professional (role), J.H.R. Peters, Neuroloog"/>
+   </asserter>
+</Condition>
