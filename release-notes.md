@@ -50,6 +50,9 @@
 ### zib-AnatomicalLocation-BodyStructure, nl-core-AnatomicalLocation-BodyStructure
 * New profile that maps Laterality to a native FHIR element inside the BodyStructure resource instead of a custom extension. ; ZIBFHIR-113
 
+## BarthelADLIndex (zib-BarthelADLIndex, nl-core-BarthelADLIndex)
+* No significant changes.
+
 ## BloodPressure 
 ### zib-BloodPressure, nl-core-BloodPressure
 * Changed description of BloodPressure. ; ZIB-2112, ZIB-2589
