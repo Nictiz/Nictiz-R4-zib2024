@@ -43,7 +43,6 @@ Profiles that have passed validation at HL7 Netherlands are published with a bet
 
 ### AddressInformation v1.2
 * Profile: zib-AddressInformation
-* Status: in progress
 * Status: rejected
 
 ### AdministrationAgreement v3.0
