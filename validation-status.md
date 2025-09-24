@@ -44,6 +44,7 @@ Profiles that have passed validation at HL7 Netherlands are published with a bet
 ### AddressInformation v1.2
 * Profile: zib-AddressInformation
 * Status: in progress
+* Status: rejected
 
 ### AdministrationAgreement v3.0
 * Status: not submitted for validation
@@ -118,13 +119,13 @@ Profiles that have passed validation at HL7 Netherlands are published with a bet
 * Profiles:
     * zib-ContactInformation-EmailAddresses
     * zib-ContactInformation-TelephoneNumbers
-* Status: in progress
+* Status: validated
 
 ### ContactPerson v4.1
 * Profiles:
     * zib-ContactPerson
     * zib-Patient
-* Status: in progress
+* Status: validated
 
 ### DAS v1.1
 * Status: not submitted for validation
@@ -146,7 +147,7 @@ Profiles that have passed validation at HL7 Netherlands are published with a bet
 
 ### Education v3.3
 * Profile: zib-Education
-* Status: in progress
+* Status: validated
 
 ### Encounter v6.0
 * Status: not submitted for validation
@@ -197,13 +198,13 @@ Profiles that have passed validation at HL7 Netherlands are published with a bet
 * Profiles:
     * zib-HealthcareProvider
     * zib-HealthcareProvider-Organization
-* Status: in progress
+* Status: validated
 
 ### HealthProfessional v4.0
 * Profiles:
     * zib-HealthProfessional-Practitioner
     * zib-HealthProfessional-PractitionerRole
-* Status: in progress
+* Status: validated
 
 ### HearingFunction v3.3
 * Status: not submitted for validation
@@ -237,7 +238,7 @@ Profiles that have passed validation at HL7 Netherlands are published with a bet
 
 ### LanguageProficiency v4.0
 * Profiles: zib-Patient
-* Status: in progress
+* Status: validated
 * Remark: This zib is modeled inline in the zib-Patient profile.
 
 ### LegalSituation v5.0
@@ -251,7 +252,7 @@ Profiles that have passed validation at HL7 Netherlands are published with a bet
 
 ### MaritalStatus v3.2
 * Profiles: zib-Patient
-* Status: in progress
+* Status: validated
 * Remark: This zib is modeled inline in the zib-Patient profile.
 
 ### MedicalDevice v4.0
@@ -285,11 +286,11 @@ Profiles that have passed validation at HL7 Netherlands are published with a bet
 * Profiles:
     * zib-NameInformation
     * zib-NameInformation.GivenName
-* Status: in progress
+* Status: validated
 
 ### Nationality v3.0
 * Profiles: zib-Patient
-* Status: in progress
+* Status: validated
 * Remark: This zib is modeled inline in the zib-Patient profile.
 
 ### NursingIntervention v4.1
@@ -318,7 +319,7 @@ Profiles that have passed validation at HL7 Netherlands are published with a bet
 
 ### Patient v4.3
 * Profiles: zib-Patient
-* Status: in progress
+* Status: validated
 
 ### Payer v4.1
 * Status: not submitted for validation
